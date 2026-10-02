@@ -1,0 +1,6 @@
+data/.cookies
+# universe daily bars are re-fetchable with `python fetch.py --universe`;
+# MU files (incl. the irreplaceable option-chain snapshot) are kept
+data/*_1d.json
+!data/MU_1d.json
+__pycache__/
