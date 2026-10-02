@@ -142,6 +142,30 @@ Starting point: 351 moments in uptrend channels (39 stocks) where price sat at t
 
 **The levels carry almost no information beyond volatility.** Jumps between levels are just volatility measured in band-widths. For options, this moves the edge from *which level* to *realized vs implied volatility* and pin-vs-trend behaviour, where dealer gamma positioning is the candidate predictor (see §7).
 
+## 4c. MSFT's two big up-weeks: what free data says (`week_forensics.py`)
+
+There is no free historical open-interest data, so positioning *then* is inferred from the calendar, the VIX complex and price/volume. The current chain (2026-10-01) is a real snapshot.
+
+| | Week of 13 Apr 2026 | Week of 27 Jul 2026 |
+|---|---|---|
+| MSFT / QQQ | +13.1% / +6.0% | +19.7% / +0.6% |
+| Trigger | **Monthly opex week** (17 Apr), no event | **Earnings** (29 Jul after close): +11.4% gap, 3.3× volume |
+| Shape | Five steady up days, small gaps, 1.0–1.4× volume (hedge unwinding) | Gap, then follow-through (+3.0%, +4.8% the next days) |
+| MSFT drawdown before | −32% from high | −30% from high |
+| VIX | 31 → 19 in prior 3 weeks, 17.5 by Friday | 18.6 → 16.0 |
+| Read | Vanna/charm rally into opex: after the March shock, puts and hedges are crushed by falling IV and time, and dealers buy back short hedges. MSFT, the most washed-out mega-cap, rebounds most | Short squeeze after an under-owned print: low expectations, gap through the walls, dealers chase calls; IV crush releases put hedges |
+
+Common pattern: a ~30% drawdown (under-owned, hedged), vol falling, and a forced-flow date (opex or earnings).
+
+**Now (2026-10-01, MSFT 512.80):**
+
+* **The setup is not the same.**
+  - MSFT is up 38% from its June low, so it is not washed out.
+  - VIX is 16 in contango, so there is little vol left to crush (little vanna fuel).
+  - Positioning is already call-heavy (put/call OI 0.54).
+* **The calendar does rhyme with July.** Oct 16 opex holds most of the near-term gamma: 62k 550 calls, 40k 510 calls, about $518M of the ~$1.16B per 1% across expiries ≤60d under the classic sign. Earnings are **Oct 28 after close**. After the 16th the pin falls away right before the event, so the **week of Oct 26 is the candidate "elevator" week**.
+* **The upside case needs more than the options price.** Implied earnings move is ±6.0% (from the Oct 23 vs Oct 30 IV jump). Getting to the upper line (~585–600) is roughly a 2–2.5σ event move. MSFT moved ≥10% in two of its last four reports.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
