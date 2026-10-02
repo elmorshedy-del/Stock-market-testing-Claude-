@@ -338,6 +338,29 @@ Each rung is a condition, from today's state to the full signal. Events are the 
   - Most rung CIs overlap the base.
   - Events overlap across rungs.
 
+## 4j. Multiverse test: is the gamma result real or a lucky choice? (`multiverse.py`)
+
+**Setup:** 216 specifications, every combination of:
+
+* GEX threshold: 0.1 / 0.2 / 0.3 / 0.4
+* DIX filter: none / > 0.5 / > 0.8
+* horizon: 10 / 20 / 30 days
+* era: 2012+ / 2019Q4+ / 2022-05+
+* outcome: excess S&P return / P(up-leg)
+
+**Null:** circularly shift the GEX/DIX series in time (this keeps their persistence and destroys their timing), rerun all 216, and repeat 300×.
+
+| Outcome | Specs positive | Specs p < 0.05 (luck ≈ 5%) |
+|---|---|---|
+| P(up-leg within H) | **99%** | **91%** |
+| Excess S&P return | 65% | 6% (≈ luck) |
+
+* Joint p-value < 0.003 (0 of 300 shifted multiverses matched); 105 of 216 specs survive FDR 10%.
+* Lower GEX thresholds and a DIX filter strengthen the effect: P(leg) lift is +26 pts at GEX ≤ 0.1, +26 pts with DIX > 0.8, and +13 pts with no DIX filter.
+* It holds in every era (+16 / +19 / +23 pts).
+
+**Conclusion:** low gamma robustly predicts *that a big up-leg starts* (movement). It does **not** predict a higher *average* return, because the downside widens too. This is why structure (spreads) and confirmation (DIX, the VIX crush) matter for direction.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -422,6 +445,7 @@ python earnings.py            # earnings repricing vs positioning proxies (secti
 python strategy.py            # gamma-release rule, walk-forward (section 4f); last line = live state
 python forecast.py            # gamma path analogs from today + confirmations (section 4h)
 python ladder.py              # entry ladder; last lines = which rungs are ON today (section 4i)
+python multiverse.py          # 216-spec multiverse vs time-shifted nulls (section 4j)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
