@@ -288,6 +288,30 @@ Parameters were picked on 2012–2018 only, from a 72-point grid (`arm` × `k` �
 
 The strategy is different. The edge from the VIX crush (`k = 0.25`) grows over time: mean excess −0.01% → +0.53% → +1.49% per trade. But the 0DTE era has only 5 trades (4 wins, calls +64% median), far too few to fit on. So old data is kept for the *relationship* and weighted toward recent eras for *expectations*. Parameters are never refit on the 0DTE era alone.
 
+## 4h. Forecasting the gamma path from today (`forecast.py`)
+
+**Setup:** today (Oct 1) is GEX pct 0.44, VIX 16.4, VIX/VIX3M 0.88, DIX pct 0.81, SPX at its 50-day average, 9 days after opex. I took the 80 closest historical days (de-clustered, 2012–2026) and tracked the next 30 trading days.
+
+| | Analogs of today | Random day |
+|---|---|---|
+| GEX reaches bottom quintile within 30d | 66% (median **5 days**, IQR 2–13) | 72% |
+| SPX on the way there | median **−1.1%**, 83% negative | |
+| An up-leg starts within 30d | 60% (start day median **11**, IQR 4–18) | 64% |
+| ...if GEX hit the bottom quintile first | 68% | |
+| SPX 30d | median +3.0%, 71% up | +2.1%, 70% up |
+
+**Opex cycle:** GEX percentile builds into monthly opex (0.52 → 0.63) and drops about 17 points on expiry day (0.46). The 0DTE era looks the same.
+
+**Confirmations, measured on their own:**
+
+* **DIX × GEX.** P(up-leg in the next 10 days), normally 10%:
+  - mid GEX with DIX > 80th pct (**today's cell**): **15%** (n = 444)
+  - mid GEX with DIX < 50th pct: 6%
+  - low GEX: 22–26% for any DIX
+* **Midterm-year Q4.** +5.0% mean vs +2.9% in other years since 1970, but the same 79% hit rate (n = 14; 2018 was −15%). Not a real edge.
+
+**Reading:** today's state does **not** raise the odds of a leg beyond normal. The way a leg usually starts from here is a small dip (≈1%) that knocks gamma into the bottom quintile within about 1–2 weeks. Typical timing is Oct 7–27, centred on Oct 16 opex. The leg follows after that. High DIX (dark-pool buying) is the one live tilt in favour.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -370,6 +394,7 @@ python fetch.py --index       # S&P/VIX history + SqueezeMetrics GEX/DIX
 python release.py             # what frees the index (section 4d)
 python earnings.py            # earnings repricing vs positioning proxies (section 4e)
 python strategy.py            # gamma-release rule, walk-forward (section 4f); last line = live state
+python forecast.py            # gamma path analogs from today + confirmations (section 4h)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
