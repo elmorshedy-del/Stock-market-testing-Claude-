@@ -216,6 +216,30 @@ For options, realized minus VIX is −2.4 vol pts at low GEX vs −7.9 at high G
 
 **Now (Oct 1):** GEX $5.6B, 44th percentile, down from $9.6B at Sep 18 opex. VIX is 16.4, mid tercile. The historical P(elevator) for this cell is ~4%. Not freed. Watch for GEX dropping into the bottom quintile around Oct 16 opex, the Oct 21 VIX settlement and earnings season.
 
+## 4e. Earnings: does pre-event positioning decide how a surprise is priced? (`earnings.py`)
+
+**Events:** 690 earnings reactions across 38 stocks, 2017–2026. Each is the highest-volume day of its quarter with ≥ 2.5× volume and a gap ≥ 2σ.
+
+**What is measured:** each reaction is split into the day-0 move and a market-adjusted drift over days 1–10, signed in the day-0 direction:
+* **D10 > 0** means under-priced on day 0: it kept going.
+* **D10 < 0** means over-priced: it faded.
+
+Overall: +50 bp, with 53% of reactions continuing.
+
+| Positioning proxy | Result |
+|---|---|
+| **Surprise vs prior 40-day trend** (crowding proxy) | **Against a big trend** (beat after a drawdown, miss after a run-up): **+175 bp, 62% continue** [CI +44, +300]. **With a big trend:** −7 bp, 49%. Same direction under looser and stricter detectors, but the size is unstable (+46 to +131 bp) and the CI often includes zero. Strongest for the biggest surprises |
+| Day-0 close location | Day 0 closing weak relative to the surprise → more later drift (regression t = −2.4). The day-0 under-reaction gets finished over the following week. Not robust to the detector threshold |
+| Gap faded intraday | Gap 100–150% of the day's move: +128 bp continuation. Gap faded by more than half: −93 bp (reversal) |
+| Days to monthly opex | **No effect** (+44 to +64 bp in every bucket) |
+| S&P dealer gamma | Weak, and opposite to the index result (t = 1.5) |
+
+**Reading:** your thesis survives at the one thing price data can see, how crowded the stock was going in.
+* **Under-owned + surprise:** repricing is slow. Shorts and hedges unwind, and underweight holders chase for days. MSFT in July is the example: −30% drawdown, beat, +22% over five days.
+* **Crowded + surprise:** it is priced on day 0 or sold on the news.
+
+The options-specific parts cannot be tested with free data: implied move vs actual, call/put OI concentration at the strikes the gap jumps through, skew, and dealer gamma by strike. Testing them needs per-stock historical chains: ORATS / Cboe end-of-day, or start snapshotting chains before each report.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -296,6 +320,7 @@ python fetch.py MU            # MU daily/5m/1m + full option chain
 python fetch.py --universe    # daily bars for the 40-name universe
 python fetch.py --index       # S&P/VIX history + SqueezeMetrics GEX/DIX
 python release.py             # what frees the index (section 4d)
+python earnings.py            # earnings repricing vs positioning proxies (section 4e)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
