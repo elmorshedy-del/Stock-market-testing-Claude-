@@ -240,6 +240,34 @@ Overall: +50 bp, with 53% of reactions continuing.
 
 The options-specific parts cannot be tested with free data: implied move vs actual, call/put OI concentration at the strikes the gap jumps through, skew, and dealer gamma by strike. Testing them needs per-stock historical chains: ORATS / Cboe end-of-day, or start snapshotting chains before each report.
 
+## 4f. A tradable rule: gamma release + vol crush (`strategy.py`)
+
+**Rules** (fixed in advance; S&P 500 index, GEX from SqueezeMetrics):
+
+* **ARMED:** GEX percentile ≤ 5% at some point in the last 15 days.
+* **IGNITION:** VIX ≥ 25% below its 10-day max, first such day while armed.
+* **ENTRY:** next day's close.
+* **EXIT:** GEX percentile ≥ 95% (pinned) or 20 days.
+
+Parameters were picked on 2012–2018 only, from a 72-point grid (`arm` × `k` × `pin` × `maxhold`), and tested untouched on 2019–2026.
+
+| | Trades | Hit | S&P per trade | Same-length random hold | 30-day ATM call: mean / median / hit | Call vs random entries |
+|---|---|---|---|---|---|---|
+| In 2012–18 | 19 | 68% | +1.0% | +0.6% | +6% / +15% / 58% | 87th percentile |
+| **Out 2019–26** | **15** | **73%** | **+2.9%** | +1.0% | **+17% / +0.5% / 53%** | 84th percentile |
+
+**How robust it is:**
+
+* Out of sample, 81% of the 72 grid configurations beat the same-length random hold (67% in sample).
+* The `k = 0.25` (deep VIX crush) rows are a plateau out of sample: excess +0.2% to +1.9% in all 18 configurations.
+* **In sample the same plateau averaged ~0**, so the edge is stronger in the 2019–2026 V-shaped-recovery regime and is not proven stable.
+* Call returns are lumpy: 2020-03 +96%, 2025-04 +256%, but 2025-03-18 −104% (armed too early, before the April crash).
+* Neither period clears the 95th percentile against random-entry calls.
+* About 2.4 signals a year.
+* IV is set to VIX; real ATM IV usually sits a bit below VIX, so the call numbers are conservative.
+
+**Now (Oct 1):** GEX percentile 0.44 (15-day minimum 0.22). **Not armed.**
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -321,6 +349,7 @@ python fetch.py --universe    # daily bars for the 40-name universe
 python fetch.py --index       # S&P/VIX history + SqueezeMetrics GEX/DIX
 python release.py             # what frees the index (section 4d)
 python earnings.py            # earnings repricing vs positioning proxies (section 4e)
+python strategy.py            # gamma-release rule, walk-forward (section 4f); last line = live state
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
