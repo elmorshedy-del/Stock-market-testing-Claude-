@@ -268,6 +268,26 @@ Parameters were picked on 2012–2018 only, from a 72-point grid (`arm` × `k` �
 
 **Now (Oct 1):** GEX percentile 0.44 (15-day minimum 0.22). **Not armed.**
 
+## 4g. Has the options market changed too much for old data? (`era_check.py`)
+
+**What the sources say:**
+
+* Commissions went to zero in Oct 2019.
+* Retail's share of Cboe volume jumped from 35% to 47% in March 2020, and retail is ~25% of all US option contracts.
+* SPX gained expiries every weekday in 2022. 0DTE went from ~20% of SPX volume in 2020 to 59% in 2025, and ~63% in early 2026; retail is 50–60% of it.
+* Research on whether 0DTE positioning dampens or amplifies index vol is mixed.
+* The data itself has a hole: **SqueezeMetrics-style GEX is built from end-of-day open interest, so it cannot see 0DTE positions.**
+
+| Era | corr(GEX pct, next-10d RV) | P(elevator): lowest → highest GEX quintile |
+|---|---|---|
+| 2012 – 2019Q3 | −0.48 | 20% → 1% |
+| 2019Q4 – 2022-05 (zero commission, retail boom) | −0.41 | 32% → 3% |
+| 2022-05 → now (0DTE) | −0.48 | 25% → 2% |
+
+**The core gamma → realized vol / up-leg relationship did not break.** It is equally strong in every era, even though GEX is blind to 0DTE. Multi-day open-interest gamma still drives multi-day legs.
+
+The strategy is different. The edge from the VIX crush (`k = 0.25`) grows over time: mean excess −0.01% → +0.53% → +1.49% per trade. But the 0DTE era has only 5 trades (4 wins, calls +64% median), far too few to fit on. So old data is kept for the *relationship* and weighted toward recent eras for *expectations*. Parameters are never refit on the 0DTE era alone.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
