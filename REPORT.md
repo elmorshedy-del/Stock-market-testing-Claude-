@@ -312,6 +312,32 @@ The strategy is different. The edge from the VIX crush (`k = 0.25`) grows over t
 
 **Reading:** today's state does **not** raise the odds of a leg beyond normal. The way a leg usually starts from here is a small dip (≈1%) that knocks gamma into the bottom quintile within about 1–2 weeks. Typical timing is Oct 7–27, centred on Oct 16 opex. The leg follows after that. High DIX (dark-pool buying) is the one live tilt in favour.
 
+## 4i. Entry ladder: the earliest point where odds tilt (`ladder.py`)
+
+Each rung is a condition, from today's state to the full signal. Events are the first day it turns on, at least 10 days apart. Outcomes are over the next 20 trading days.
+
+| Rung | P(up-leg starts ≤20d), 2012–26 / 2019Q4–26 | Lead to leg (median days) | 60-DTE ATM call | 60-DTE ATM/105% call spread, 2012–26 / 2019Q4–26 |
+|---|---|---|---|---|
+| any day | 50% / 58% | 7 | −1% | +9.5% / +12.4% |
+| R0 mid GEX + DIX > 0.8 (**today**) | 59% / 70% | 5–6 | −3% | +10% / +19% |
+| R1 GEX ≤ 0.30 | 61% / 72% | 6 | −3% | +12% / +13% |
+| **R2 GEX ≤ 0.30 + DIX > 0.5** | **65% / 79%** | 5 | −1% | **+15% / +16%** |
+| R3 GEX ≤ 0.20 | 65% / 73% | 5 | −6% | +13% / +10% |
+| R4 GEX ≤ 0.20 + S&P ≥ 2% off its 10-day high | 70% / 74% | 4–5 | −4% | +17% / +11% |
+| R5 R4 + DIX > 0.5 | 74% / 83% | 3–5 | −3% | +18% / +11% |
+| R7 low GEX + VIX ≥ 25% off its 10-day max | 46% / 52% | 6–8 | **+5% / +10%** | +17% / +21% |
+
+**Reading:**
+
+* P(leg) climbs steadily along the ladder, but **naked calls bought early do not pay more**. Low gamma comes with high VIX, so you buy expensive vol, and the leg arrives with a vol crush.
+* The call spread neutralises most of that vega, and R2 onward beats "any day".
+* Naked calls only win once the vol crush has happened (R7), which is later.
+* **The earliest rung with a clear tilt is R2 (GEX ≤ 30th pct with DIX > 50th):** about 5 days of lead, with a spread rather than a naked call.
+* Caveats:
+  - Option prices use flat vol at VIX with no skew, so compare rungs with "any day", not with zero.
+  - Most rung CIs overlap the base.
+  - Events overlap across rungs.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -395,6 +421,7 @@ python release.py             # what frees the index (section 4d)
 python earnings.py            # earnings repricing vs positioning proxies (section 4e)
 python strategy.py            # gamma-release rule, walk-forward (section 4f); last line = live state
 python forecast.py            # gamma path analogs from today + confirmations (section 4h)
+python ladder.py              # entry ladder; last lines = which rungs are ON today (section 4i)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
