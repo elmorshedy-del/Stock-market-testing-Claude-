@@ -129,6 +129,19 @@ break threshold).
 * **Volatility expanding:** helps (coefficient +0.39). The "squeeze" story, a compressed range before a breakout, does not show up at this horizon.
 * **Volume at the touch:** high volume slightly favours rejection (−0.27). That is the absorption signature: big volume at the line without progress.
 
+## 4b. Level hopping: do the lines predict which level is hit next? (`level_hits.py`)
+
+Starting point: 351 moments in uptrend channels (39 stocks) where price sat at the lower line, like MU now. The benchmark is a driftless random walk with trailing 20-day realized vol; its barrier distances include the drift of the rising lines.
+
+| Target within 20 bars | Hit | Random walk | Excess (95% CI, month-clustered) |
+|---|---|---|---|
+| Mid line | 23% | 24% | −1 pt (−7, +6) |
+| Upper line | 6% | 7% | −1 pt (−4, +3) |
+| Half a band below | 77% | 84% | −7 pt (−13, −1) |
+| Next level down | 52% | 50% | +2 pt (−5, +9) |
+
+**The levels carry almost no information beyond volatility.** Jumps between levels are just volatility measured in band-widths. For options, this moves the edge from *which level* to *realized vs implied volatility* and pin-vs-trend behaviour, where dealer gamma positioning is the candidate predictor (see §7).
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
