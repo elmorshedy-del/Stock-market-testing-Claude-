@@ -2,6 +2,7 @@
 
 Usage: python fetch.py MU [NVDA ...]      (options + intraday for the first symbol)
        python fetch.py --universe          (daily bars for the backtest universe)
+       python fetch.py --index             (S&P/VIX complex full history + SqueezeMetrics GEX/DIX)
 """
 import json
 import subprocess
@@ -35,7 +36,9 @@ def curl(url, out=None, cookies=None):
 
 
 def chart(sym, rng="10y", interval="1d"):
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range={rng}&interval={interval}&includePrePost=false"
+    # range=max silently downsamples to monthly bars; use explicit epoch bounds instead
+    span = f"period1=0&period2={int(time.time())}" if rng == "max" else f"range={rng}"
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?{span}&interval={interval}&includePrePost=false"
     curl(url, DATA / f"{sym}_{interval}.json")
 
 
@@ -54,9 +57,20 @@ def options(sym):
     jar.unlink(missing_ok=True)
 
 
+def squeeze_dix():
+    """SqueezeMetrics' free daily S&P dealer-gamma (GEX) and dark-pool (DIX) history."""
+    curl("https://squeezemetrics.com/monitor/static/DIX.csv", DATA / "DIX.csv")
+
+
 if __name__ == "__main__":
     DATA.mkdir(exist_ok=True)
-    if sys.argv[1:] == ["--universe"]:
+    if sys.argv[1:] == ["--index"]:
+        for s in ("^GSPC", "^VIX", "^VIX3M", "^VIX9D", "^VVIX"):
+            chart(s, "max")
+        for s in ("QQQ", "^SKEW"):
+            chart(s, "10y")
+        squeeze_dix()
+    elif sys.argv[1:] == ["--universe"]:
         for s in UNIVERSE:
             chart(s)
             print("daily", s)

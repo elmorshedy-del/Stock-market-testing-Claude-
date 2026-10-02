@@ -4,3 +4,5 @@ data/.cookies
 data/*_1d.json
 !data/MU_1d.json
 __pycache__/
+data/^*
+data/DIX.csv

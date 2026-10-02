@@ -166,6 +166,56 @@ Common pattern: a ~30% drawdown (under-owned, hedged), vol falling, and a forced
 * **The calendar does rhyme with July.** Oct 16 opex holds most of the near-term gamma: 62k 550 calls, 40k 510 calls, about $518M of the ~$1.16B per 1% across expiries ≤60d under the classic sign. Earnings are **Oct 28 after close**. After the 16th the pin falls away right before the event, so the **week of Oct 26 is the candidate "elevator" week**.
 * **The upside case needs more than the options price.** Implied earnings move is ±6.0% (from the Oct 23 vs Oct 30 IV jump). Getting to the upper line (~585–600) is roughly a 2–2.5σ event move. MSFT moved ≥10% in two of its last four reports.
 
+## 4d. What "frees" the market: S&P 500 dealer gamma (`release.py`)
+
+Data: SqueezeMetrics' free daily S&P dealer-gamma estimate (GEX, from 2011) and DIX, plus the S&P 500 and the VIX complex from 1990. Outcome: the next 10-day S&P move. An "elevator" leg is a top-decile up move (base rate 10%).
+
+**Calendar and VIX triggers alone barely matter.** Lift on P(elevator):
+
+| Trigger | Lift |
+|---|---|
+| Day after monthly opex | 1.07× |
+| Day after quarterly opex | 1.03× |
+| VIX settlement | 0.82× |
+| VIX crush | 1.13× |
+| Term structure out of backwardation | 1.41× (n = 71, CI includes 1) |
+| 2–3 triggers stacked | ~1.1× |
+
+The first month of a quarter has the best 10-day returns (47–62 bp vs 8–24 bp), which fits earnings season and buyback windows reopening. That is about 2σ.
+
+**Dealer gamma is the variable that matters.** GEX is ranked against its trailing year:
+
+| GEX quintile | P(elevator) | P(top-decile move either way) | next-10d realized vol |
+|---|---|---|---|
+| 0 (lowest) | **24%** | 24% | 20.9% |
+| 1 | 13% | 12% | 14.7% |
+| 2 | 8% | 6% | 12.5% |
+| 3 | 3% | 5% | 11.1% |
+| 4 (highest) | **2%** | 3% | 9.8% |
+| GEX < 0 | **33%** | 33% | 26.9% |
+
+It survives three checks:
+
+* **Controlling for VIX.** Within high-VIX days, P(elevator) runs 29% → 5% from low to high GEX. In low-VIX markets it is ~0 whatever GEX does: the index cannot sprint without vol.
+* **Non-overlapping samples:** 22.5% → 4%.
+* **2020 onward:** 28% → 3%.
+
+For options, realized minus VIX is −2.4 vol pts at low GEX vs −7.9 at high GEX (high-VIX days). Index options are much closer to fairly priced when gamma is low. Selling vol earns most when gamma is high.
+
+**The 2026 legs:**
+
+* **April:**
+  - GEX fell negative from the Mar 18 VIX settlement through the quarterly opex. It bottomed at **−$7.2B on Mar 27 (0th percentile)**, the low.
+  - The rally began at that trough.
+  - Gamma rebuilt as price rose, reaching the 99th percentile on Apr 16–17 opex, and the leg stalled.
+* **July/August:**
+  - GEX dropped to the 10th–20th percentile on Jul 23–28, after Jul 20 opex and around the Jul 22 VIX settlement.
+  - The leg ran through earnings and stalled once GEX hit the 99th percentile on Aug 5.
+
+**The mechanism:** a leg starts when dealer gamma is low or negative (price is "free") and ends when the rally rebuilds gamma to an extreme (price is pinned).
+
+**Now (Oct 1):** GEX $5.6B, 44th percentile, down from $9.6B at Sep 18 opex. VIX is 16.4, mid tercile. The historical P(elevator) for this cell is ~4%. Not freed. Watch for GEX dropping into the bottom quintile around Oct 16 opex, the Oct 21 VIX settlement and earnings season.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -244,6 +294,8 @@ conventions. Signed trade data (see §7) is what settles it.
 pip install -r requirements.txt
 python fetch.py MU            # MU daily/5m/1m + full option chain
 python fetch.py --universe    # daily bars for the 40-name universe
+python fetch.py --index       # S&P/VIX history + SqueezeMetrics GEX/DIX
+python release.py             # what frees the index (section 4d)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
