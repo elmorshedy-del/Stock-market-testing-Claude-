@@ -380,6 +380,27 @@ Each rung is a condition, from today's state to the full signal. Events are the 
   - TSLA is +13.5% over 40 days but 23.5% below its 52-week high (490, Dec 2025).
   - The auto log channel does not fit (R² 0.56, price below its lower line), so there is no channel to trade.
 
+## 4l. Tesla burst check, event by event (`burst_check.py TSLA 2024-01-01`)
+
+**Definitions.** Burst = +5% in 1 day or +9% over 2 days; 36 up-bursts and 35 down-bursts since 2024. A signal "catches" a burst if it first fired 1–10 days before.
+
+**The windows asked about:**
+
+* **Caught:** 2025-04-23 (R6/R7/R4s/R5s, the vol crush after the April crash), 2025-05-27, 2025-11-24, and late Jul 2024.
+* **Missed:** 2024-07-01/02 (+15.6%), 2025-09-11/12 (+13%), 2025-10-06 and 2025-10-13. All of them came in calm, high-gamma markets: S&P GEX at the 69th–89th pct, VIX 12–17. These were Tesla-specific catalysts, which market-wide data cannot see.
+* **Weak:** 2025-05-12 (only R0).
+
+**Precision vs the base rate** (any day: 47% up / 45% down within 10 days):
+
+| Signal | Fired | Up-burst followed | Down-burst followed |
+|---|---|---|---|
+| R7 (vol crush) | 11 | **82%** (p = 0.02) | 45% |
+| R5s | 12 | 75% (p = 0.05) | 58% |
+| R2 | 22 | 64% (p = 0.09) | 50% |
+| others | | 42–61% | 36–55% |
+
+Most signals precede down-bursts about as often as up-bursts: they flag Tesla *volatility*, not direction. R7 is the only directional one, and with 10 signals tested its p-value does not survive correction (≈0.2 Bonferroni).
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -466,6 +487,7 @@ python forecast.py            # gamma path analogs from today + confirmations (s
 python ladder.py              # entry ladder; last lines = which rungs are ON today (section 4i)
 python multiverse.py          # 216-spec multiverse vs time-shifted nulls (section 4j)
 python single_name.py TSLA    # S&P gamma studies with a stock as the target (section 4k)
+python burst_check.py TSLA 2024-01-01   # event-by-event bursts vs signals, false positives (4l)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
