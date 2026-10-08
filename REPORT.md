@@ -361,6 +361,25 @@ Each rung is a condition, from today's state to the full signal. Events are the 
 
 **Conclusion:** low gamma robustly predicts *that a big up-leg starts* (movement). It does **not** predict a higher *average* return, because the downside widens too. This is why structure (spreads) and confirmation (DIX, the VIX crush) matter for direction.
 
+## 4k. Tesla: does the S&P gamma signal carry over? (`single_name.py TSLA`)
+
+**Data:** single-stock gamma history is a premium Alpha Vantage endpoint (not on the connected key) and not free elsewhere. So the predictors stay market-wide (S&P GEX/DIX, VIX), and the target is Tesla's own top-decile 10-day up-leg.
+
+* **No.** Multiverse with TSLA as the target: joint p = 0.74. 0% of 216 specs are significant; P(leg) effect +1 pt on average; excess return is negative in 86% of specs. P(TSLA up-leg) is flat at 9–13% across S&P GEX quintiles in every era.
+* **What S&P gamma does do to Tesla:**
+  - **Volatility:** next-10d realized vol is 65% at the lowest S&P GEX vs 49% at the highest.
+  - **Coupling:** correlation with the S&P is 0.62 at low GEX vs 0.35 at high GEX. Beta falls (1.49 vs 1.98) as correlation rises, and idiosyncratic vol is 57% vs 47%.
+  - Low S&P gamma turns Tesla into a market-beta instrument; high gamma leaves it trading on its own story.
+* **Ladder:** no rung beats "any day" on P(leg) (38% / 44%).
+  - Buying calls into a Tesla-specific dip during low S&P gamma (R4s/R5s) was the worst entry: −25% to −27% vs +12% / +22% any day.
+  - Only the vol-crush rung (R7) helps option P&L (spread +33% vs +13% since 2019Q4, n = 27).
+  - The "today-like" R0 row looks strong (n = 46), but the multiverse says S&P-gamma conditioning has no robust effect on TSLA, so treat it as noise.
+* **Snapshot (Oct 8, TSLA 375):**
+  - Earnings **Oct 21**; implied earnings move ±6.0% (ATM IV 39% → 49% across it).
+  - Classic gamma flip ≈ 362; largest gamma strikes 372.5–400; the call OI wall is **400** (79k); put OI sits at 350/370; max pain 370 for every expiry through Nov.
+  - TSLA is +13.5% over 40 days but 23.5% below its 52-week high (490, Dec 2025).
+  - The auto log channel does not fit (R² 0.56, price below its lower line), so there is no channel to trade.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -446,6 +465,7 @@ python strategy.py            # gamma-release rule, walk-forward (section 4f); l
 python forecast.py            # gamma path analogs from today + confirmations (section 4h)
 python ladder.py              # entry ladder; last lines = which rungs are ON today (section 4i)
 python multiverse.py          # 216-spec multiverse vs time-shifted nulls (section 4j)
+python single_name.py TSLA    # S&P gamma studies with a stock as the target (section 4k)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
