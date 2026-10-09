@@ -516,6 +516,17 @@ Definitions: leg = top-decile 10-day S&P return (≥ +3.5%); reset = GEX pct ≤
 * Read: lower odds of a real leg through late October, chop or consolidation more likely. The next reset typically comes ~5–19 days after the build, roughly Oct 13–30, around Oct 16 opex and the Oct 21 VIX settlement. A leg typically follows it.
 * High DIX is the one counterweight: in the matching state *with* DIX > 0.8, P(leg) was 47% (n = 17) vs 33% without the filter.
 
+## 4q. Scorecard: calls since Oct 1 vs what happened (`dashboard_data.py`, dashboard "S&P gamma cycle")
+
+Through the Oct 8 close: 6 calls held, 3 held partly, 1 missed, 3 are still open.
+
+* **Held:** S&P had no up-leg from the Oct 1 state; DIX tilt up (S&P +1.3%); MU broke its rising channel line on Oct 2; MU never accepted above 1,100; MSFT stayed in or just above the 510–525 pin zone.
+* **Partly:** gamma built into expiry and is fading ahead of Oct 16; MU chopped, a little lower than called (1,036–1,088); MU lost 1,070 but has not reached the 1,011 flip.
+* **Missed:** the usual path, "a ~1% dip pushes gamma down within ~5 days". The S&P rose 2% instead, and gamma ran to its 91st percentile. That miss is what triggered the "gamma ran without price" signal in §4p.
+* **Not yet:** R2 (56% by Oct 16).
+
+The dashboard (`out/dashboard/index.html` + CSVs) charts the S&P cycle, the gamma and DIX percentiles with the reset and pinned zones, the next-20-day odds by state, the scorecard, and the MU and MSFT tracks.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)

@@ -1,0 +1,14 @@
+market,made,call,outcome,verdict,id
+SPX,Oct 2,Today's state does not raise the odds of an up-leg,No leg yet: S&P +1.3% Oct 1 to Oct 8 (a leg needs +3.5% in 10 days),Consistent,c1
+SPX,Oct 2,"Entry rung R2 likely by the Oct 16 expiry (28% by Oct 2, 44% by Oct 9, 56% by Oct 16)",Not on yet: lowest gamma since Oct 1 was the 44th percentile,Not yet,c2
+SPX,Oct 2,Usual path: a ~1% dip pushes gamma down within about 5 days,Opposite: S&P rose 2% to Oct 6 and gamma ran to the 91st percentile,Missed,c3
+SPX,Oct 2,"Gamma builds into monthly expiry, then drops","Rose to Oct 6, fading since; the Oct 16 expiry is still ahead",Partly,c4
+SPX,Oct 2,High dark-pool buying (DIX above 80th) is a mild tilt up,DIX stayed 81st-97th; S&P drifted up 1.3%,Consistent,c5
+SPX,Oct 9,"Gamma ran without price (Oct 2-6): consolidation first, the next leg after a reset",Open: check by early November,Open,c6
+MU,Oct 1,"Rising lower channel line (1,070, +0.8% a day) breaks within ~3 days if price stalls","Closed below it on Oct 2 (1,075 vs 1,078) and stayed below",Played out,c7
+MU,Oct 1,"A breakout needs acceptance above 1,100","No close above 1,100 (highest 1,088)",Consistent,c8
+MU,Oct 1,"Most likely chop between 1,045 and 1,150","Range 1,036 to 1,088: chop, a little lower than called",Partly,c9
+MU,Oct 1,"Breakdown path: lose 1,070, then the gamma flip near 1,011","Lost 1,070 on Oct 5; low close 1,036; 1,011 not reached",Partly,c10
+MSFT,Oct 2,Pinned near 510-525 into the Oct 16 expiry,Closes 517.5 to 529.8: in or just above the zone,Mostly,c11
+MSFT,Oct 2,Earnings Oct 28 is the candidate breakout week,Pending,Open,c12
+TSLA,Oct 9,"Pinned chop 370-385 into the Oct 16 expiry, then the Oct 21 report",Pending (375 on Oct 8),Open,c13

@@ -1,0 +1,6 @@
+market,level,value
+MU,Upside trigger (largest gamma strike),1100
+MU,Gamma flip,1011
+MSFT,Pin zone low,510
+MSFT,Pin zone high,525
+MSFT,Call wall,550

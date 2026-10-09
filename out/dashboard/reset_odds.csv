@@ -1,0 +1,13 @@
+era,order,state,p_leg_20d,p_consolidation,n,base_leg,base_consolidation
+2012+,1,Any day,43.7,30.0,3612,43.7,30.0
+2012+,2,Gamma reset in the prior 20 days,57.1,16.7,42,43.7,30.0
+2012+,3,No reset in the prior 20 days,38.1,40.5,42,43.7,30.0
+2012+,4,Gamma ran up without price,27.4,36.3,113,43.7,30.0
+2012+,5,Leg ended with gamma pinned,35.0,55.0,20,43.7,30.0
+2012+,6,Leg ended unpinned,46.0,19.0,63,43.7,30.0
+Since late 2019,1,Any day,50.8,19.3,1745,50.8,19.3
+Since late 2019,2,Gamma reset in the prior 20 days,68.4,15.8,19,50.8,19.3
+Since late 2019,3,No reset in the prior 20 days,38.9,27.8,18,50.8,19.3
+Since late 2019,4,Gamma ran up without price,40.0,27.3,55,50.8,19.3
+Since late 2019,5,Leg ended with gamma pinned,36.4,36.4,11,50.8,19.3
+Since late 2019,6,Leg ended unpinned,62.2,13.5,37,50.8,19.3
