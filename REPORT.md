@@ -401,6 +401,32 @@ Each rung is a condition, from today's state to the full signal. Events are the 
 
 Most signals precede down-bursts about as often as up-bursts: they flag Tesla *volatility*, not direction. R7 is the only directional one, and with 10 signals tested its p-value does not survive correction (≈0.2 Bonferroni).
 
+## 4m. Tesla today and three trader observations (`stock_now.py TSLA`, data to Oct 8 2026)
+
+**State:** TSLA 375; S&P GEX pct 0.62, DIX pct 0.91, VIX 15.4. **No ladder rung has fired in 10 days.** This is a calm, mid-to-high-gamma market, the regime where Tesla's bursts came from its own catalysts.
+
+| Observation | Test | Result |
+|---|---|---|
+| Bursts come going **into** opex week | up-bursts by week vs monthly opex, 2012+ / 2019Q4+ | **Not supported.** Opex week lift 1.03 / 1.04; the week before is 0.87 / 0.83 (fewer); the week after is 1.08 / 1.19 (not significant) |
+| Tesla makes its year in 1–2 bursts, often late | top-2 2-day bursts vs the full-year return | **Partly.** The top-2 bursts made ≥ half the gain in 8 of 12 up years, but that is the fat-tail norm for a 50%-vol stock (they sum to +18 to +53% every year, up or down). A Q4 burst is in the top 2 in 5 of 14 years (25% by chance) |
+| Catches up with SPY by year end | Q4 relative return when TSLA lagged SPY by >10 pts at Sep 30 | **Supported, small n.** 5 of 5 lagging years beat SPY in Q4 (2012, 16, 18, 19, 24), mean +28.7 pts vs −10.3 in other years (base rate 53%; p ≈ 0.04). 2026 gap: **−30.8 pts** YTD |
+| Grind-up like Jul–Aug 2025 → burst | 40 nearest analogs on 40d return, vol, vol ratio, drawdown, trend R², up-day share | The setup really is similar (ret40 +13.5% vs +11.3%; vol ratio 0.60 vs 0.51; drawdown −1.5% vs −1.1%). **But up-burst odds were not higher:** 38% vs 41% base. Down-bursts were rarer: 28% vs 41% |
+
+**Earnings: the dominant burst source.**
+
+* Within ±1 day of 39 reports: up-burst 31%, down-burst 51%, vs 13% for any 3-day window.
+* The 11 detected October (Q3) reactions: five ≥ +5% (2014, 2018, 2019, 2021, 2024) and two ≤ −5%.
+* Next report **Oct 21**; options price ±6.0% for the event.
+
+**Oct 16 monthly expiry** (36% of ≤45d call OI):
+
+* call OI: 400 (31k), 380, 420
+* put OI: 380, 360, 340
+* largest gamma strikes: 400, 385
+* max pain: 370
+
+The pin releases five days before earnings.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -488,6 +514,7 @@ python ladder.py              # entry ladder; last lines = which rungs are ON to
 python multiverse.py          # 216-spec multiverse vs time-shifted nulls (section 4j)
 python single_name.py TSLA    # S&P gamma studies with a stock as the target (section 4k)
 python burst_check.py TSLA 2024-01-01   # event-by-event bursts vs signals, false positives (4l)
+python stock_now.py TSLA      # today's state + opex-timing, catch-up, grind-analog, earnings tests (4m)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
