@@ -427,6 +427,49 @@ Most signals precede down-bursts about as often as up-bursts: they flag Tesla *v
 
 The pin releases five days before earnings.
 
+## 4n. Anatomy of Tesla's Q4 catch-ups (`q4_forensics.py TSLA`)
+
+**Catch-up years** (TSLA lagging SPY by > 10 pts at Sep 30): 2012, 2016, 2018, 2019, 2024. For each Q4 up-burst and the year's best 10-day leg relative to SPY, the analysis records:
+
+* calendar position: day of month, opex bucket, Q3 report (published dates), US election
+* the burst itself: gap share, follow-through
+* Tesla's own state
+* the S&P state: GEX, DIX, VIX, term structure
+
+Control group: Q4 bursts in other years. Full table: `out/q4_forensics_TSLA.csv`.
+
+| Year | Main catch-up leg (best 10d vs SPY) | What drove it | S&P GEX pct at the bursts |
+|---|---|---|---|
+| 2012 | Oct 26 → early Nov, +16.9 | Nov 5 +8.6% on the eve of the Q3 report **and** the election (Nov 6) | 15–20 |
+| 2016 | Dec 12 → Dec 23, +13.2 | Q3 report fizzled (−7.4 rel over 10d); a December grind into quad witching instead, no burst | 97 |
+| 2018 | Oct 19 (opex day) → Nov 2, +30.3 | Oct 23 +12% two days before the Q3 report, then +8.7% on it | 1–5 (Oct 2018 selloff) |
+| 2019 | Oct 11 → Oct 25, +26.3 | Q3 report Oct 24 +16.3%, 97% of it in the gap; Dec 16 burst in Dec opex week | 44–54; Dec 97 |
+| 2024 | Dec 3 → Dec 17, +31.1 | Q3 report Oct 24 +19.8%, election Nov 6 +13.8% (+13.5% the next 5d), then a December leg into quad witching | 28–37; Dec 96–99 |
+
+**Common factors:**
+
+1. **The Q3 report is the anchor** in 4 of 5 years. 10-day return vs SPY after the Q3 report:
+   - lagging years: +6.3, +13.1, +22.5, +27.8 (2016: −7.4); mean +12.5 pts
+   - other years: mean −1.4 (range −35 to +31)
+   - This is the earnings-crowding result (§4e): under-owned + surprise → multi-day drift.
+2. **December continuation into quad witching** in 3 of 5 years (2016, 2019, 2024). It came at *high* S&P gamma (96–99th pct): a grind, not a burst.
+3. **Opex:** the "week after October opex" is over-represented (39% vs 26%) only because that is where the Q3 report falls. With the report removed, there is no opex effect.
+4. **S&P gamma is not the common factor.** October bursts came at low-to-mid GEX (1–54th pct); December legs at high GEX.
+5. **Tesla was 19–35% below its 52-week high** before every October catch-up burst.
+6. **Elections:** bursts at the 2012 and 2024 presidential elections; nothing in 2016 or 2018. n = 2.
+7. Catch-up bursts **kept going**: median next-5d +5.1% vs +1.1% for other Q4 bursts. Earnings bursts were made **in the opening gap** (68–97%), so positioning has to be in place before.
+
+**2026 vs the template:**
+
+| Factor | Now | Template |
+|---|---|---|
+| Gap vs SPY | −30.8 pts | lagging > 10 pts |
+| Below 52-week high | −23% | 19–35% below |
+| Q3 report | Oct 21 (after close) | week after October opex |
+| 40-day return | +14% | only 2019 (+17%) was this high going in; the others were flat or negative, so part of the move may already be priced |
+| US midterm | Nov 3 | election bursts in 2012 and 2024 (n = 2) |
+| Dec quad witching | Dec 18 | December continuation in 3 of 5 years |
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -515,6 +558,7 @@ python multiverse.py          # 216-spec multiverse vs time-shifted nulls (secti
 python single_name.py TSLA    # S&P gamma studies with a stock as the target (section 4k)
 python burst_check.py TSLA 2024-01-01   # event-by-event bursts vs signals, false positives (4l)
 python stock_now.py TSLA      # today's state + opex-timing, catch-up, grind-analog, earnings tests (4m)
+python q4_forensics.py TSLA   # anatomy of Q4 catch-up legs vs controls (4n)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
