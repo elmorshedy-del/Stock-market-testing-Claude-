@@ -470,6 +470,32 @@ Control group: Q4 bursts in other years. Full table: `out/q4_forensics_TSLA.csv`
 | US midterm | Nov 3 | election bursts in 2012 and 2024 (n = 2) |
 | Dec quad witching | Dec 18 | December continuation in 3 of 5 years |
 
+## 4o. Tesla options regime: pre-2020 vs 2020+ (`tsla_eras.py`)
+
+Tesla options changed character around 2020: retail inflows, the Aug 2020 split, heavy short-dated OTM call buying, then the 0DTE era. Every options-related Tesla test is re-run by era.
+
+| Test | pre-2020 | 2020+ |
+|---|---|---|
+| Up / down bursts per year | 8.1 / 8.8 | **15.1 / 14.4** (vol 50% → 64%) |
+| Up-bursts in opex week / week after (lift) | 1.05 / 0.95 | 1.02 / 1.16 (n.s.) |
+| **Up-bursts on Monday** (lift, p) | 1.72, p = 0.007 | **1.95, p < 0.001** (2.02 excl. report days) |
+| Up-bursts on Friday (weekly expiry) | 0.15 | **0.44** |
+| Down-bursts Monday / Friday | 0.83 / 0.92 | 0.89 / 1.04 |
+| Q3 report: mean abs move day 0 | 8.1% | 7.1% |
+| Q3 report: day 0 ≥ +5% / ≤ −5% | 38% / 25% | 17% / 33% |
+| Q3 report: drift after, signed by day 0 | +82 bp | **+706 bp** (n = 6) |
+| All reports 2020+ (n = 24): continue in the day-0 direction | | 62.5%, mean +350 bp (t = 1.78, p ≈ 0.15) |
+| Grind-up analogs: P(up-burst 10d) vs base | 38% vs 41% (full pool) | **32% vs 52%** (2020+ pool); down 24% vs 49% |
+| Q4 catch-up years (lag > 10 at Sep 30) | 2012, 2016, 2018, 2019 (4 of 4 beat SPY) | **2024 only** (+41.3); mild lags 2021 (+20.8) and 2025 (−1.2) |
+
+**Reading:**
+
+* **The Monday effect is the most robust new finding.** It is up-only (Monday down-bursts are below average) and mostly made intraday (median gap share 0.37), so it is not simply weekend-news volatility. Friday up-bursts are suppressed. That fits weekly-expiry mechanics: Friday's expiring short-dated calls pin, and fresh weeklies bought on Monday put dealers short gamma. It replicates in both eras and survives correction for 20 tests.
+* The Thursday down-burst excess (1.59) is mostly earnings reactions (8 of 31; 1.35 and p = 0.07 without them).
+* Post-2020 reports reprice more slowly (continuation after day 0), consistent with options-driven hedging after the event; n is small.
+* The grind-up state is a *low-burst* state in the 2020+ era: fewer bursts both ways.
+* Catch-up evidence in the new regime is only 1–2 years.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -559,6 +585,7 @@ python single_name.py TSLA    # S&P gamma studies with a stock as the target (se
 python burst_check.py TSLA 2024-01-01   # event-by-event bursts vs signals, false positives (4l)
 python stock_now.py TSLA      # today's state + opex-timing, catch-up, grind-analog, earnings tests (4m)
 python q4_forensics.py TSLA   # anatomy of Q4 catch-up legs vs controls (4n)
+python tsla_eras.py           # Tesla options-regime split pre-2020 vs 2020+ (4o)
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
