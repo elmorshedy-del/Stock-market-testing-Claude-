@@ -9,3 +9,5 @@ data/DIX.csv
 data/finra/
 data/dolt/
 data/thetadata/
+out/td_gamma_*.csv
+out/stock_gamma_frame_*.csv

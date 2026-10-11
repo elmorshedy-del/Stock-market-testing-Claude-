@@ -567,6 +567,37 @@ Four sources were tested, each against something known to be true.
 * **Customer direction:** needs the exchange open/close feeds, or the free Cboe samples for spot checks.
 * **Not worth buying:** Databento's per-contract OI ("statistics" schema) costs $140–445 per ticker for 2023–2026, more than the archive.
 
+## 4s. Tesla's OWN option gamma, 2021–2026 (`td_pull.py`, `td_gamma.py`, `stock_gamma.py TSLA`)
+
+![TSLA own gamma](out/stock_gamma_TSLA.png)
+
+**Data and checks.**
+* **Source:** ThetaData Value (one month, $40): end-of-day quotes and open interest for every TSLA option within 120 days of expiry, 2020-01 to 2026-10. All 1,701 trading days are present.
+* **Method:** spot is backed out of put-call parity; IV is solved from out-of-the-money mids; gamma uses the same code as §5.
+* **Cross-check:** for Jul–Dec 2022, TSLA gamma rebuilt from ThetaData tracks the independent HistoricalData.net sample at 0.99 correlation (flip level 1.00).
+
+**What TSLA's own gamma does.** The analysis covers 1,449 days (2021-01 to 2026-10). A burst is ±5% in a day or ±9% in two days, measured over the next 3 sessions. Controls are past 5- and 20-day volatility, past 20-day return and S&P gamma. P-values come from circularly shifting the gamma series.
+
+* **Below TSLA's own gamma flip:** down-bursts follow 26% of the time vs 14–17% above it. Controlled odds ratio 2.5 (p < 0.001).
+  * It holds in both halves: 30% vs 17% in 2021–mid-2023, and 21% vs 13% from mid-2023 to 2026.
+  * This is the dealer short-gamma mechanism working on the downside.
+* **Put-heavy gamma** (low own-gamma percentile, i.e. near-the-money put gamma outweighs call gamma) doubles down-burst odds (odds ratio 2.1) and roughly halves up-burst odds (0.5).
+* **Up-bursts are not a call squeeze in this data.** Call-heavy days have 17% up-burst odds, the same as any day (17%).
+  * Tesla's up-bursts come from the calendar and events: Mondays (§4o), reports, and the Q4 catch-up.
+  * Their only option-positioning requirement is *not* being put-heavy or below the flip.
+* **Next-session move size:** a little larger when own gamma is low (rank correlation −0.10; −0.05 controlled, p = 0.02). Smaller than in the 2022 sample, which was a bear market.
+* **Monday effect, tested against the gamma expiring the Friday before:**
+  * Monday up-burst odds are 11%, 10% and 12% for little, mid and lots of expiring gamma, so the Friday roll-off does not explain Tesla's Monday bursts.
+  * After big Friday expiries, Monday down-bursts were rare (1 of 83 vs 4–8), which fits less gamma pinning.
+
+**Now (Oct 9 close 382.7):**
+* **Flip:** TSLA is 5.1% **above** its own gamma flip (364). Own-gamma percentile is 0.65, neither put- nor call-heavy.
+* **Walls:** call wall 400, put wall 350.
+* **Similar past days** (above the flip, percentile 0.50–0.80; n = 427): up-burst 17.8% vs 16.6% on all days, down-burst 15.5% vs 17.2%. Neutral to slightly favorable.
+* **The level that changes the odds is 364:** a close below it historically doubles the chance of a down-burst.
+* **Upside:** 400 is the largest near-term call strike, the obvious magnet and cap into the Oct 16 expiry.
+* **Timing:** the Oct 21 report is priced at a 4.9% move (§4r).
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -663,6 +694,8 @@ python finra_dpi.py fetch && python finra_dpi.py test TSLA MSFT MU   # per-stock
 python earnings_implied.py    # Tesla implied vs actual earnings moves from DoltHub chains (4r)
 python td_pull.py 2021-01 2026-10 TSLA SPY QQQ MSFT MU NVDA   # ThetaData chains + OI (Value tier for OI; Python 3.12 venv)
 python td_gamma.py TSLA SPY   # daily gamma per stock from the ThetaData pull -> out/td_gamma_{SYM}.csv
+python stock_gamma.py TSLA    # own-gamma tests: next-day move, bursts by flip side / tercile, Monday effect (4s)
+python stock_gamma_fig.py TSLA   # figure for 4s
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv

@@ -98,16 +98,35 @@ def burst_table(x):
     return t, f
 
 
+def burst_logit(x, target, feature, seed=2, n=500):
+    """Logit of a 3-day burst on an own-gamma feature with controls (past 5/20d vol, past 20d
+    return, S&P gamma pct); p from circular shifts of the feature, which keep its persistence."""
+    from backtest import logit_fit
+    ctrl = ["rv5_past", "rv20_past", "ret20_past", "spx_gex_pct"]
+    z = x[x.index >= START].dropna(subset=[feature] + ctrl)
+    C = z[ctrl].to_numpy()
+    C = (C - C.mean(0)) / C.std(0)
+    f = z[feature].to_numpy(float)
+    y = z[target].to_numpy(float)
+    coef = lambda ff: logit_fit(np.c_[ff, C], y, lam=1e-6)[1]
+    obs = coef(f)
+    rng = np.random.default_rng(seed)
+    null = np.array([coef(np.roll(f, s)) for s in rng.integers(60, len(z) - 60, n)])
+    p = float(np.mean(null >= obs)) if obs > 0 else float(np.mean(null <= obs))
+    return {"odds_ratio": float(np.exp(obs)), "shifted_null_p": p}
+
+
 def monday_test(x):
+    """Share of gamma that expires on Friday, measured on the Thursday row (contracts within
+    1 trading day), vs the following Monday."""
     z = x[x.index >= START].copy()
-    fri = z[z.weekday == "Friday"]
+    idx = z.index
     rows = []
-    for d, row in fri.iterrows():
-        nxt = z.index[z.index > d]
-        if len(nxt) and nxt[0].day_name() == "Monday":
-            mon = z.loc[nxt[0]]
-            rows.append({"friday": d, "fri_share1": row.share1, "fri_g_pct": row.g_pct, "mon_up": bool(mon.up0),
-                         "mon_dn": bool(mon.dn0), "mon_ret": mon.ret0, "mon_g_pct": mon.g_pct})
+    for i, d in enumerate(idx[:-2]):
+        if d.day_name() == "Thursday" and idx[i + 1].day_name() == "Friday" and idx[i + 2].day_name() == "Monday":
+            mon = z.loc[idx[i + 2]]
+            rows.append({"thursday": d, "fri_share1": z.share1.iloc[i], "mon_up": bool(mon.up0), "mon_dn": bool(mon.dn0),
+                         "mon_ret": mon.ret0, "mon_g_pct": mon.g_pct})
     m = pd.DataFrame(rows).dropna(subset=["fri_share1"])
     m["expiring"] = pd.qcut(m.fri_share1, 3, labels=["little gamma expired Fri", "mid", "lots of gamma expired Fri"])
     return m.groupby("expiring", observed=True).agg(mondays=("mon_up", "size"), up_bursts=("mon_up", "sum"),
@@ -139,6 +158,13 @@ if __name__ == "__main__":
         t, f = burst_table(x)
         print("2. bursts within 3 sessions by own-gamma tercile\n" + t.round(3).to_string())
         print("   by side of the stock's own gamma flip\n" + f.round(3).to_string())
+        x["low_g"] = (x.g_pct <= 1 / 3).astype(float)
+        for tgt in ("dn3", "up3"):
+            for feat in ("below", "low_g"):
+                x[feat] = x[feat].astype(float)
+                r = burst_logit(x, tgt, feat)
+                print(f"2b. {tgt} ~ {feat} + past vol + past 20d return + S&P gamma: odds ratio {r['odds_ratio']:.2f}, "
+                      f"shifted-null p {r['shifted_null_p']:.3f}")
         print("3. Monday after Friday expiry, by share of gamma that expired Friday\n" + monday_test(x).round(3).to_string())
         now = x.iloc[-1]
         print(f"NOW {x.index[-1].date()}: spot {now.spot:.2f}, own gamma pct {now.g_pct:.2f}, flip {now.flip:.1f} "
