@@ -6,3 +6,5 @@ data/*_1d.json
 __pycache__/
 data/^*
 data/DIX.csv
+data/finra/
+data/dolt/

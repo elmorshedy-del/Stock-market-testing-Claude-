@@ -527,6 +527,46 @@ Through the Oct 8 close: 6 calls held, 3 held partly, 1 missed, 3 are still open
 
 The dashboard (`out/dashboard/index.html` + CSVs) charts the S&P cycle, the gamma and DIX percentiles with the reset and pinned zones, the next-20-day odds by state, the scorecard, and the MU and MSFT tracks.
 
+## 4r. Free and cheap data, tested before paying (`hd_gamma.py`, `finra_dpi.py`, `earnings_implied.py`, `data_checks_fig.py`)
+
+![data checks](out/data_checks.png)
+
+Four sources were tested, each against something known to be true.
+
+1. **Gamma rebuilt from open interest is trustworthy.**
+   - **Data:** HistoricalData.net's free sample (TSLA, SPY, SPX/SPXW, Jul–Dec 2022, end-of-day chains with OI and IV), run through the same exposure code as §5.
+   - **S&P check:** the rebuilt S&P gamma tracks SqueezeMetrics' published GEX at a correlation of 0.96 (0.90 on daily changes) under the classic dealer convention. The "dealers short both" convention gets −0.34.
+   - **Implication:** gamma built from any stock's OI history is a credible input.
+2. **TSLA's own gamma matters for the next session's move.**
+   - **Evidence:** across the 127 sample days, low TSLA gamma (net, scaled by OI) went with larger next-session moves:
+     - **Raw:** rank correlation −0.24.
+     - **Controlled:** −0.28 after controlling for the past 5- and 20-day volatility, the past 20-day return and S&P gamma (circularly shifted null p < 0.001).
+     - **Below TSLA's own gamma flip:** average move 3.9% vs 2.2%; 16 of the 26 moves larger than 5% came on the 48 days below the flip.
+   - **What it does not show:** the 5-day volatility effect fades with the controls (null p = 0.17). Six months is one regime (2022 bear market).
+   - **Contrast:** S&P gamma alone barely relates to TSLA's move in the same window (−0.01).
+   - **Next step:** this is the result that justifies buying OI history.
+3. **Signing trades from tick data fails.**
+   - **Data:** Databento OPRA trades with the quote at each print, for 2025-03-28 (TSLA $10.83, SPY $19.99 from the free credit). These were matched series by series to the Cboe Open-Close sample for the same day. Volumes reconcile exactly (Cboe's exchange volume counts both sides).
+   - **TSLA calls:** customers net bought 19.4k calls on Cboe; the quote-rule rebuild says they net sold 4.7k (2.1k using only prints at the bid or ask). Volume-weighted sign agreement per series is 55–60%.
+   - **SPY:** the rebuild gets the puts' direction but not the calls'.
+   - **Why it fails:** about half of TSLA's Cboe volume prints inside the spread (auctions, price improvement, spreads), where the aggressor is invisible.
+   - **Implication:** customer direction needs open/close data; tick feeds don't substitute.
+4. **Per-stock dark-pool index (FINRA short volume, free, Aug 2018–today) is weak.**
+   - **TSLA:** the top-tercile DPI (vs the trailing year) was followed by +5.6% over 20 days vs +2.5% for the bottom tercile, and 60% vs 49% odds of an up-burst within 10 days. Both are only borderline under a circularly shifted null (p = 0.19 and 0.07).
+   - **Other names:** MSFT, MU, QQQ and NVDA show no edge; SPY p = 0.07.
+   - **Implication:** keep it as a minor tilt at most. DIX works for the index, where aggregation removes noise.
+5. **Tesla earnings are priced fairly on average.**
+   - **Method:** event variance backed out of the first two post-report expiries in DoltHub's free chains (18 reports 2021–2025).
+   - **Average:** implied earnings-day move 8.0%, actual 7.6%, median actual/implied 0.96, with 9 of 18 bigger than priced.
+   - **After the report:** when the move beat the price, the next 10 days continued its direction 6 of 9 times vs 4 of 9 otherwise (too few to call).
+   - **Next report:** the Oct 21, 2026 report is priced at 4.9% (Oct 9 chains), the cheapest in the set.
+
+**Data plan after these checks:**
+* **Buy:** OI history (HistoricalData.net archive, one-time) to extend items 1–2 across 2016–2026.
+* **Skip:** tick-level trade data; it only mattered for signing, which fails.
+* **Customer direction:** needs the exchange open/close feeds, or the free Cboe samples for spot checks.
+* **Not worth buying:** Databento's per-contract OI ("statistics" schema) costs $140–445 per ticker for 2023–2026, more than the archive.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -618,6 +658,10 @@ python stock_now.py TSLA      # today's state + opex-timing, catch-up, grind-ana
 python q4_forensics.py TSLA   # anatomy of Q4 catch-up legs vs controls (4n)
 python tsla_eras.py           # Tesla options-regime split pre-2020 vs 2020+ (4o)
 python reset.py               # topping/consolidation after legs and the gamma reset (4p)
+python hd_gamma.py <sample_dir> <out.csv>   # daily gamma per underlying from HistoricalData.net-format chains (4r)
+python finra_dpi.py fetch && python finra_dpi.py test TSLA MSFT MU   # per-stock dark-pool index (4r)
+python earnings_implied.py    # Tesla implied vs actual earnings moves from DoltHub chains (4r)
+python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
 python report.py              # figures + out/report_numbers.json
