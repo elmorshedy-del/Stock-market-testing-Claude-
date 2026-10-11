@@ -661,6 +661,8 @@ python reset.py               # topping/consolidation after legs and the gamma r
 python hd_gamma.py <sample_dir> <out.csv>   # daily gamma per underlying from HistoricalData.net-format chains (4r)
 python finra_dpi.py fetch && python finra_dpi.py test TSLA MSFT MU   # per-stock dark-pool index (4r)
 python earnings_implied.py    # Tesla implied vs actual earnings moves from DoltHub chains (4r)
+python td_pull.py 2021-01 2026-10 TSLA SPY QQQ MSFT MU NVDA   # ThetaData chains + OI (Value tier for OI; Python 3.12 venv)
+python td_gamma.py TSLA SPY   # daily gamma per stock from the ThetaData pull -> out/td_gamma_{SYM}.csv
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv

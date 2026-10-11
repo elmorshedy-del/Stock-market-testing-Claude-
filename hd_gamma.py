@@ -50,9 +50,9 @@ def flip(g, S, lo=0.8, hi=1.2, n=81):
     return grid[i] - tot[i] * (grid[i + 1] - grid[i]) / (tot[i + 1] - tot[i])
 
 
-def day_metrics(d, day):
+def day_metrics(d, day, groups=None):
     rows = []
-    for name, unds in GROUPS.items():
+    for name, unds in (groups or GROUPS).items():
         g = d[d.underlying.isin(unds) & (d.oi > 0)]
         if g.empty:
             continue
