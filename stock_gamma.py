@@ -49,6 +49,10 @@ def frame(sym):
     fwd = lambda s, k: s[::-1].rolling(k, min_periods=1).max()[::-1].reindex(x.index)
     x["up3"], x["dn3"] = fwd(up, 3).astype(bool), fwd(dn, 3).astype(bool)
     x["any3"] = x.up3 | x.dn3
+    # volatility-scaled bursts: a day beyond 2x the stock's own prior 60-day daily vol (comparable across tickers)
+    sig = r.rolling(60).std().shift(1)
+    sup, sdn = (r >= 2 * sig).astype(float), (r <= -2 * sig).astype(float)
+    x["sup3"], x["sdn3"] = fwd(sup, 3).astype(bool), fwd(sdn, 3).astype(bool)
     x["rv5_past"] = (r.rolling(5).std() * np.sqrt(252)).shift(1).reindex(x.index)
     x["rv20_past"] = (r.rolling(20).std() * np.sqrt(252)).shift(1).reindex(x.index)
     x["ret20_past"] = np.log(c).diff(20).shift(1).reindex(x.index)
@@ -159,12 +163,16 @@ if __name__ == "__main__":
         print("2. bursts within 3 sessions by own-gamma tercile\n" + t.round(3).to_string())
         print("   by side of the stock's own gamma flip\n" + f.round(3).to_string())
         x["low_g"] = (x.g_pct <= 1 / 3).astype(float)
-        for tgt in ("dn3", "up3"):
+        for tgt in ("dn3", "up3", "sdn3", "sup3"):
             for feat in ("below", "low_g"):
                 x[feat] = x[feat].astype(float)
                 r = burst_logit(x, tgt, feat)
                 print(f"2b. {tgt} ~ {feat} + past vol + past 20d return + S&P gamma: odds ratio {r['odds_ratio']:.2f}, "
                       f"shifted-null p {r['shifted_null_p']:.3f}")
+        z = x[x.index >= START].dropna(subset=["g_pct"])
+        print("2c. vol-scaled bursts (day beyond 2x own 60d vol) within 3 sessions:\n" +
+              z.groupby(np.where(z.below.astype(bool), "below own flip", "above own flip")).agg(
+                  days=("sup3", "size"), p_up=("sup3", "mean"), p_dn=("sdn3", "mean")).round(3).to_string())
         print("3. Monday after Friday expiry, by share of gamma that expired Friday\n" + monday_test(x).round(3).to_string())
         now = x.iloc[-1]
         print(f"NOW {x.index[-1].date()}: spot {now.spot:.2f}, own gamma pct {now.g_pct:.2f}, flip {now.flip:.1f} "
