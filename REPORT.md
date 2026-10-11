@@ -598,6 +598,28 @@ Four sources were tested, each against something known to be true.
 * **Upside:** 400 is the largest near-term call strike, the obvious magnet and cap into the Oct 16 expiry.
 * **Timing:** the Oct 21 report is priced at a 4.9% move (§4r).
 
+**Same test on MSFT, MU and NVDA** (`stock_gamma_summary.py`). Bursts here are volatility-scaled, a day beyond 2× the stock's own 60-day volatility, so stocks of different volatility compare fairly.
+
+![own gamma across stocks](out/stock_gamma_summary.png)
+
+* **The rule that holds across all four stocks:** when a stock's own gamma is **put-heavy** (bottom third of its trailing-year percentile):
+  * **Down-bursts:** odds rise 1.5–2.6× (TSLA, NVDA p < 0.01; MU p < 0.05; MSFT p = 0.07).
+  * **Up-bursts:** odds fall to 0.3–0.7× (MSFT p < 0.01; MU p < 0.05).
+* **Being below the flip** is a strong signal only for TSLA (down-bursts 2.5×). For MU it mostly halves up-bursts.
+* **Call-heavy positioning** never raised up-burst odds in any of the four.
+* **Monday-after-expiry:** no effect for any of them.
+
+**Where each stands (Oct 9):**
+
+| Stock | Close | Own-gamma percentile | Own flip | Call wall | Put wall | Read |
+|---|---|---|---|---|---|---|
+| TSLA | 382.7 | 0.65 | 364 (5% below) | 400 | 350 | neutral; 364 is the line to hold |
+| MSFT | 535.2 | 0.98 | 442 (17% below) | 550 | 500 | heavily call-weighted, pinned below 550; no put-heavy drag |
+| MU | 1,028 | 0.46 | 997 (3% below) | 1,100 | 1,000 | balanced, close to its flip; a close below ~1,000 removes upside odds |
+| NVDA | 229.4 | 0.52 | 208 (9% below) | 240 | 200 | balanced, far above its flip |
+
+None of the four is put-heavy today, so none carries the elevated down-burst risk.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -696,6 +718,7 @@ python td_pull.py 2021-01 2026-10 TSLA SPY QQQ MSFT MU NVDA   # ThetaData chains
 python td_gamma.py TSLA SPY   # daily gamma per stock from the ThetaData pull -> out/td_gamma_{SYM}.csv
 python stock_gamma.py TSLA    # own-gamma tests: next-day move, bursts by flip side / tercile, Monday effect (4s)
 python stock_gamma_fig.py TSLA   # figure for 4s
+python stock_gamma_summary.py TSLA MSFT MU NVDA   # cross-stock odds ratios + figure (4s)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
