@@ -12,7 +12,7 @@ The metrics are those of hd_gamma.day_metrics (GEX, vanna, charm, flip, walls).
 Usage: python td_gamma.py TSLA [SPY ...]      -> out/td_gamma_{SYM}.csv
 """
 import sys
-from pathlib import Path
+from multiprocessing import Pool
 
 import numpy as np
 import pandas as pd
@@ -23,6 +23,7 @@ from hd_gamma import day_metrics
 
 DIR = DATA / "thetadata"
 R = 0.04
+MAX_DTE = 120          # same cap as td_pull.py; older files pulled with a wider cap are trimmed to it
 
 
 def read(sym, kind):
@@ -94,7 +95,12 @@ def chain_day(g):
     return g.dropna(subset=["iv"])
 
 
-def build(sym):
+def _day(args):
+    day, g, sym = args
+    return day_metrics(chain_day(g), day, {sym: [sym]})
+
+
+def build(sym, procs=4):
     eod, oi = read(sym, "eod"), read(sym, "oi")
     if oi.empty:
         raise SystemExit(f"{sym}: no open-interest files in {DIR} (needs the ThetaData Value tier; run td_pull.py)")
@@ -103,10 +109,10 @@ def build(sym):
     key = ["date", "expiration", "strike", "cp"]
     d = eod.merge(oi[key + [oic]].rename(columns={oic: "oi"}), on=key, how="left")
     d["oi"] = d.oi.fillna(0)
-    rows = []
-    for day, g in d.groupby("date"):
-        rows += day_metrics(chain_day(g), day, {sym: [sym]})
-    return pd.DataFrame(rows)
+    d = d[(d.expiration - d.date).dt.days <= MAX_DTE]
+    with Pool(procs) as p:
+        rows = p.map(_day, [(day, g, sym) for day, g in d.groupby("date")], chunksize=8)
+    return pd.DataFrame([r for day_rows in rows for r in day_rows])
 
 
 if __name__ == "__main__":

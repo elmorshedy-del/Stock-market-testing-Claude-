@@ -67,7 +67,7 @@ def day_metrics(d, day, groups=None):
         tdays = np.busday_count(np.full(len(g), np.datetime64(day.date())), g.expiration.values.astype("datetime64[D]"))
         row["gamma_share_1d"] = absg[tdays <= 1].sum() / absg.sum()
         row["gamma_share_5d"] = absg[tdays <= 5].sum() / absg.sum()
-        near = g[g["T"] * 365 <= 45]
+        near = g[(g["T"] * 365 <= 45) & g.K.between(0.75 * S, 1.25 * S)]   # walls: strikes that can matter
         cn, pn = near[near.cp == "C"].groupby("K").oi.sum(), near[near.cp == "P"].groupby("K").oi.sum()
         row["call_wall"] = float(cn.idxmax()) if len(cn) else np.nan
         row["put_wall"] = float(pn.idxmax()) if len(pn) else np.nan

@@ -6,18 +6,19 @@ Value tier ($40/mo): open interest and EOD quotes from Jan 2020.
 Files: data/thetadata/{SYM}_{YYYY-MM}_{eod|oi}.csv.gz (gitignored).
 
 Needs the `thetadata` package (Python >= 3.12) and THETADATA_API_KEY in the environment.
-Usage: python td_pull.py 2021-01 2026-10 TSLA SPY QQQ MSFT MU NVDA
+Usage: python td_pull.py 2020-01 2026-10 TSLA MSFT MU NVDA SPY QQQ   (TD_MAX_DTE overrides the 120-day cap)
 """
 import os
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import pandas as pd
 from thetadata import ThetaClient
 
 DIR = Path(__file__).resolve().parent / "data" / "thetadata"
-MAX_DTE = 400
+MAX_DTE = int(os.environ.get("TD_MAX_DTE", 120))   # >120 DTE adds <1% to the gamma signal (checked on the 2022 sample)
 
 
 def month_ranges(a, b):
@@ -54,7 +55,8 @@ if __name__ == "__main__":
     a, b, *syms = sys.argv[1:]
     DIR.mkdir(parents=True, exist_ok=True)
     c = ThetaClient(api_key=os.environ["THETADATA_API_KEY"], dataframe_type="pandas")
-    for sym in syms:
-        for m, start, end in month_ranges(a, b):
-            res = {k: pull(c, sym, m, start, end, k) for k in ("eod", "oi")}
-            print(sym, m, res, flush=True)
+    with ThreadPoolExecutor(2) as ex:                      # Value tier allows 2 concurrent requests per session
+        for sym in syms:
+            for m, start, end in month_ranges(a, b):
+                fut = {k: ex.submit(pull, c, sym, m, start, end, k) for k in ("eod", "oi")}
+                print(sym, m, {k: f.result() for k, f in fut.items()}, flush=True)
