@@ -1082,6 +1082,26 @@ Every outcome starts the session **after** the reading. **Null:** slide the posi
   * **The signal is the release** (≤ 1/3): 50% / 74% within 10 / 20 sessions, +2.7%.
   * **From an extreme pin, the release came within 5 / 10 / 20 sessions 14% / 30% / 55% of the time.** That is slower than from 0.50–0.75 (33% / 53% / 74%). It now looks more likely to come around or after the Oct 28 report than before it.
 
+## 4ab. Does Google's TimesFM help? (`timesfm_check.py`)
+
+**Setup.**
+* TimesFM 2.5 (200M, zero-shot, CPU), 248 daily origins from Oct 2025 to Oct 2026. These come after the model's release, so its pretraining could not have seen the outcomes.
+* Each job is scored against the simple baseline it has to beat.
+
+| Job | TimesFM | Baseline to beat |
+|---|---|---|
+| 10-session direction, TSLA / MSFT / SPY | hit rate 43% / 54% / 55%; correlation −0.05 / 0.29 / 0.06 | always long: 46% / 46% / 56% |
+| next-10-session volatility (correlation with what happened) | TSLA −0.03, MSFT 0.26, SPY −0.16 | **the options' own IV: 0.18, 0.58, 0.55** |
+| S&P gamma reaches its bottom third within 10 sessions | AUC 0.58, Brier 0.40 | frequency for today's level: AUC 0.62, Brier 0.21 |
+
+**Reading.**
+* **No help on any of the three jobs.**
+  * **Direction:** not usable. MSFT's 0.29 rests on about 25 independent 10-day windows, which is within luck.
+  * **Volatility:** the options market already prices future volatility far better.
+  * **Release timing:** a one-line frequency table beats it.
+* **Why:** TimesFM extends patterns in a single series. The edges in this report come from structure that is not in a price series: who holds which strikes, when contracts expire, and dealer gamma.
+* Fine-tuning on about 1,500 days per stock would mostly fit noise.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -1196,6 +1216,7 @@ python own_multiverse.py TSLA MSFT NVDA MU   # 2,016-spec multiverse on own posi
 python own_multiverse_fig.py TSLA MSFT        # figure for 4z
 python held_back.py MSFT AAPL AMZN GOOGL META NVDA AVGO   # leader held back by a pinned market? (4aa)
 python held_back_fig.py        # figure for 4aa
+tfm_env/bin/python timesfm_check.py   # TimesFM 2.5 zero-shot vs simple baselines, post-release origins (4ab)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
