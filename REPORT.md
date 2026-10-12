@@ -636,6 +636,53 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
 * **New information:** put-heavy SPY gamma doubles S&P down-burst odds **after controlling for SqueezeMetrics' gamma** (odds ratio 2.0, p = 0.002). Below-flip adds nothing once SqueezeMetrics is in, and nothing predicts up-bursts.
 * **Now:** SPY closed Oct 9 at 778.6, just above its own flip (775). Own-gamma percentile 0.85, not put-heavy. Call wall 800, put wall 740.
 
+## 4t. The Tesla up-bursts, one by one, against Tesla's own options (`burst_gamma.py`, `burst_gamma_fig.py`)
+
+![TSLA bursts and near-money OI](out/burst_gamma_TSLA.png)
+
+**Method.**
+* **Events:** all 80 TSLA up-bursts since 2021 (+5% in a day or +9% in two). Each is matched with the stock's own option positioning the day before; the full table is in `out/burst_gamma_TSLA.csv`.
+* **The variable that separates them is how much open interest sits near the price:** the share of all OI within ±5% of spot in expiries up to 45 days, ranked against the trailing year. When it is low, little hedging is tied to the current price, so the price is **"freed"**.
+
+**Results.**
+* **Before up-bursts:** 50% of up-bursts started from the bottom third ("freed") vs 28% of all days.
+* **Controls:** with recent moves (|5d|, |20d|), past volatility, trend, S&P gamma, own put-heaviness **and 30-day implied vol** controlled, freed days carry 1.9× the up-burst odds for TSLA (p = 0.003).
+  * MSFT 3.6× (p = 0.02) and NVDA (volatility-scaled) 2.4× (p < 0.001) hold too; MU does not.
+  * The implied-vol control matters because high IV mechanically lowers gamma; the OI-share measure is IV-free by construction.
+* **Freed means bigger moves both ways; positioning picks the direction.** Volatility-scaled bursts within 3 sessions:
+
+| | TSLA up / down | MSFT up / down | MU up / down | NVDA up / down |
+|---|---|---|---|---|
+| freed + not put-heavy + above own flip | **9% / 7%** | **12% / 7%** | **14% / 6%** | **14% / 4%** |
+| freed + put-heavy or below own flip | 11% / 23% | 7% / 11% | 7% / 12% | 10% / 14% |
+| not freed | 5% / 7% | 6% / 8% | 8% / 8% | 6% / 6% |
+
+**The bursts you named.** For each one: near-money OI (low/mid/high), positioning, and what happened.
+
+**Missed by the S&P signals in §4l:**
+* **2024-07-01, +15.6% in 2 days:** low OI near the price, call-heavy, 10% above the flip. The call wall (200) sat 0.9% above the price; TSLA closed through it and the wall rolled up to 300. A call-wall breakout.
+* **2025-09-11, +13% in 2 days:** high OI near the price, call-heavy, IV at the 16th percentile. Not explained by the freed state.
+* **2025-10-06:** low OI near the price, balanced, 14.5% above the flip.
+* **2025-10-13:** mid OI near the price, balanced, 9% above the flip.
+* **Takeaway:** all four were above their own flip and not put-heavy (positioning allowed them). Two of the four started freed.
+
+**Caught by the S&P signals:**
+* 2025-04-23 (report day), 2025-05-27 and 2025-11-24 all started freed.
+* 2025-04-23 and 2025-04-09 (+20% tariff-pause day) were put-heavy short-covering bursts from below the flip.
+
+**Q4 catch-ups:**
+* **2024-10-24 report, +20%:** freed.
+* **2024-11-06 election, +14%:** mid OI near the price, call-heavy.
+* **2021-10-25 Hertz, +12%:** mid OI near the price, call-heavy.
+
+**By year:** in 2022 and 2025, 63% and 59% of up-bursts came while put-heavy (bear-market short-covering). In 2023–2024, 75–87% came from above the flip.
+
+**Now (Oct 9).**
+* **TSLA:** near-money OI at the 48th percentile, not freed. It was freed all through late September (4th–22nd percentile) before the Oct 2 +4.6% day.
+* **NVDA:** **freed (25th percentile) with supportive positioning** (balanced, 10% above its flip) and 30-day IV at the 8th percentile. That is the up-tilted setup, with cheap options.
+* **MSFT:** not freed (43rd percentile).
+* **MU:** not freed (68th percentile, IV at the 1st percentile), pinned.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -735,6 +782,8 @@ python td_gamma.py TSLA SPY   # daily gamma per stock from the ThetaData pull ->
 python stock_gamma.py TSLA    # own-gamma tests: next-day move, bursts by flip side / tercile, Monday effect (4s)
 python stock_gamma_fig.py TSLA   # figure for 4s
 python stock_gamma_summary.py TSLA MSFT MU NVDA   # cross-stock odds ratios + figure (4s)
+python burst_gamma.py TSLA    # every up-burst since 2021 vs own positioning the day before (4t)
+python burst_gamma_fig.py TSLA MSFT MU NVDA      # figure for 4t
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv

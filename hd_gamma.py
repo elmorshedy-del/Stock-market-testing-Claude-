@@ -72,6 +72,10 @@ def day_metrics(d, day, groups=None):
         row["call_wall"] = float(cn.idxmax()) if len(cn) else np.nan
         row["put_wall"] = float(pn.idxmax()) if len(pn) else np.nan
         row["flip_classic"] = flip(g, S)
+        # IV-free concentration: share of all OI sitting within +-5% of spot in expiries <= 45 days
+        row["near_oi_share"] = near[near.K.between(0.95 * S, 1.05 * S)].oi.sum() / g.oi.sum()
+        m30 = g[(g["T"] * 365).between(20, 45)]
+        row["atm_iv_30d"] = float(m30.iloc[(m30.K - S).abs().argsort()[:4]].iv.median()) if len(m30) else np.nan
         rows.append(row)
     return rows
 
