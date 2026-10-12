@@ -851,6 +851,27 @@ None of the four is put-heavy today. After the §4z correction that no longer im
 * **Below the flip (364 now, about 355 after Friday):** not a down signal on TSLA's own history (§4z). It is where moves get bigger and snap-backs more common. The thesis breaks on price, not on this line; the 350 put strike sits just below.
 * **Midterm:** VIX is flat at 15.4, so no event premium has built for Nov 3 yet.
 
+**Update, Oct 12 intraday (`tsla_live.py`: today's open interest at 379.84, IVs from the Oct 9 close).**
+
+| | Oct 9 close | Oct 12, 379.84 | after Oct 16 expiry |
+|---|---|---|---|
+| own flip | 364 (+5.2%) | **371 (+2.4%)** | 358 (+6.2%) |
+| dealer gamma at the price | $377M per 1% | **$154M** | $145M |
+| own-gamma percentile | 0.64 | **0.32** (put-heavy) | 0.39 |
+| near-price OI percentile | 0.48 | **0.35** (edge of freed) | **0.00** |
+| call wall / put wall | 400 / 350 | 400 / **380** | 400 / 350 |
+
+* **Friday's +2% day:**
+  * Holders added calls at 390 (+22%) and 420 (+29%), and puts at 380 (+21%).
+  * Next-month calls rose 7% and puts 5%.
+  * The 380 puts sit at the money, so the pin at the price fell by about 60%.
+* **After Friday's expiry the near-price OI share would be 0.045.** That is lower than 91% of the first sessions after a monthly expiry since 2021. It means a strongly freed TSLA by Oct 19, two sessions before the Oct 21 report, unless new open interest builds near the price.
+* **Freed is the one reading with a robust up-tilt (§4z):** up-bursts 1.8×, no extra down-bursts.
+* **Put-heavy and the closer flip carry no down signal** after §4z. Below the flip, moves get bigger and lean to snap-backs.
+* **TSLA leads SPY** (20-day, 75th percentile), but the §4aa release does not apply to TSLA: S&P gamma has no effect (joint p 0.53).
+* **S&P dealer gamma jumped to its 99th percentile on Oct 9.** The market is pinned.
+* **TSLA's own dark-pool index** was at its 17th percentile on Oct 9; Oct 12 is published after the close.
+
 ## 4x. MSFT continuation and the S&P Q4 window, by analogs (`outlook.py`)
 
 ![outlook](out/outlook_msft_spx.png)
@@ -1143,6 +1164,7 @@ python episodes.py           # the named TSLA moves as given, aligned on their s
 python legs_fig.py            # anatomy and path figures for the named moves (4v)
 python elections.py           # S&P/VIX/gamma/TSLA around every election since 1992, scatter (4v)
 python tsla_now.py            # what the Oct 16 expiry removes, TSLA dark-pool index vs the named moves, calendar (4w)
+python tsla_live.py 2026-10-12 379.84   # intraday status: today's OI (ThetaData, per expiry) at a live price (4w update)
 python outlook.py             # MSFT and S&P analog outlook with luck and robustness checks; Q4 seasonality (4x)
 python mech_book.py SPY MSFT  # dealer hedge book per day from the ThetaData chains -> out/mech_book_{SYM}.csv (4y)
 python mechanics.py           # which mechanics push price (own data), today's readings, Q4 check (4y)
