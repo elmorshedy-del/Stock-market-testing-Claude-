@@ -12,6 +12,7 @@ Per day, with spot S and every contract's IV from td_gamma.chain_day:
                 actually realising (20-day), every IV scaled by realised / 30-day ATM IV
   decay_call, release_call   the same for the call side (sign depends on the convention, kept apart)
   atm_iv, rv20, adv          30-day ATM IV, 20-day realised vol, 20-day average $ volume
+  near2, near5               share of all OI within +-2% / +-5% of spot in expiries <= 45 days
 Usage: python mech_book.py SPY MSFT      -> out/mech_book_{SYM}.csv
 """
 import sys
@@ -51,6 +52,9 @@ def day_book(g, rv):
     atm_iv = float(atm.iv.median()) if len(atm) else float(g.iv[(g.K / S).between(0.97, 1.03)].median())
     d2 = delta(S, K, T, iv * rv / atm_iv, call) if np.isfinite(rv) and atm_iv > 0 else np.full(len(g), np.nan)
     out = {"date": day, "spot": S, "atm_iv": atm_iv, "rv20": rv}
+    short = (g["T"] * 365 <= 45).to_numpy()
+    for k in (2, 5):    # share of all OI within +-k% of spot in expiries <= 45 days (the "freed" gauge, as hd_gamma)
+        out[f"near{k}"] = float(g.oi[short & (np.abs(K / S - 1) <= k / 100)].sum() / g.oi.sum())
     for side, m in (("put", ~call), ("call", call)):
         out[f"{side}_hedge"] = float(np.sum(np.abs(n[m] * d0[m])) * S)
         out[f"decay_{side}"] = float(-np.sum(n[m] * (d1[m] - d0[m])) * S)

@@ -984,6 +984,59 @@ Every outcome starts the session **after** the reading. **Null:** slide the posi
 * **TSLA:** no reading is on. It is 5.2% above its flip, own gamma is at 0.65 and near-price OI at 0.48. The one reading with a robust up-tilt is **freed**. Watch whether near-price OI falls into its bottom third after Friday's Oct 16 expiry.
 * **MSFT:** no reading is on (21% above flip, own gamma 0.98, near-price OI 0.43).
 
+## 4aa. Is MSFT held back by a pinned market? (`held_back.py`, `held_back_fig.py`, data to the Oct 9 close)
+
+![held back](out/held_back.png)
+
+**Your thesis (Oct 12).** MSFT wants to break up but the wider market holds it back; once SPY is "freed" the move carries. Today (11:30 ET) fits the description: MSFT +1.2% to 541.7, SPY flat at 778.0, QQQ −0.7% and under its own flip (749), TSLA −1.1%, MU −3.9%.
+
+**Setup.**
+* **Leader:** MSFT's return minus SPY's over 10 / 20 / 40 sessions, in the top third of its own trailing year.
+* **SPY freed:** bottom third of its trailing year on one gauge:
+  * SPY open interest near its price (±2% or ±5%, expiries ≤ 45 days; 2021+)
+  * S&P dealer gamma (SqueezeMetrics GEX; MSFT history from 2017)
+* **Outcomes:** MSFT up-leg starts within 5 / 10 / 20 sessions (a 10-day return in its own top decile), its down-leg, its forward return, and SPY's forward return.
+* **Release** = leader with SPY freed minus leader with SPY pinned.
+* **Specific** = release minus the same contrast on non-leader days. A freed market may move everything; this checks that leaders gain more.
+* **Null:** the SPY gauges slid in time against MSFT, 300×. 27 specifications per gauge, outcome and day type.
+
+**Result: supported, with S&P dealer gamma as the trigger.**
+
+| MSFT, 20-day lead, 10 sessions ahead, 2017–2026 | up-leg | down-leg | return | days |
+|---|---|---|---|---|
+| leading SPY, S&P gamma low | **50%** | 29% | **+2.7%** | 207 |
+| leading SPY, S&P gamma not low | 24% | 29% | −0.1% | 610 |
+| not leading, S&P gamma low | 43% | 38% | +1.1% | 514 |
+| not leading, S&P gamma not low | 28% | 23% | +1.0% | 1,182 |
+
+* **Release, across specifications (in state):**
+  * up-legs +27 pts (89% of specifications beyond luck, joint p < 0.003)
+  * return +2.1 pts (p 0.01)
+  * down-legs unchanged (p 0.79)
+  * The first day it turns on: up-legs +15 pts (p 0.02); 46 separate episodes.
+* **Specific to leaders:** return +1.6 pts (p 0.003). Laggards get more down-legs under low gamma (38% vs 23%); leaders don't.
+* **Holds in both eras** (2017–20 and 2021+, stronger since 2021), at every lookback and horizon.
+* **SPY open interest near its price shows nothing** (joint p 0.34–0.94). "Freed" in this thesis means S&P dealers being short gamma, not little open interest at SPY's price.
+* **Carry-on to SPY:** SPY's own return is higher in the release state (+1.1% vs +0.3% over 10 sessions), but not reliably (p 0.25). That part is §4j's S&P result (low gamma → S&P up-legs), not something MSFT adds.
+* **Other mega-caps,** same test (bars to Oct 1):
+  * GOOGL agrees (up-legs +13 pts, p 0.02; specific return +1.6, p 0.01).
+  * AMZN: up-legs +21, p < 0.003.
+  * AVGO: up-legs +9, p 0.04.
+  * NVDA and META just move more both ways.
+  * AAPL gets more down-legs (+17, p < 0.003).
+  * It is a property of some leaders, strongest in MSFT, not a law.
+
+**In 2026.** The setup was on Jul 17–29, just before the Jul 29 report and the +18% move. It was on again in late August and mid-September, before MSFT's climb from ~480 to ~535.
+
+**Now.**
+* **MSFT leads on all three lookbacks.**
+* **S&P dealer gamma is not low:** 62nd percentile on Oct 8, down from 91st. The release setup is **off**.
+* **Odds the trigger arrives:**
+  * From readings of 0.50–0.75 it reached the bottom third within 5 / 10 / 20 sessions **33% / 53% / 74%** of the time.
+  * Across monthly expiries it falls a median 17 points (68% of the time).
+  * **Friday's Oct 16 expiry removes 78% of SPY's own dealer gamma** ($4.7B → $1.0B per 1%). SPY sits just above its own flip (775).
+* **What to watch:** S&P gamma into its bottom third while MSFT still leads, before the Oct 28 report.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -1095,6 +1148,8 @@ python mech_book.py SPY MSFT  # dealer hedge book per day from the ThetaData cha
 python mechanics.py           # which mechanics push price (own data), today's readings, Q4 check (4y)
 python own_multiverse.py TSLA MSFT NVDA MU   # 2,016-spec multiverse on own positioning + controlled logits (4z)
 python own_multiverse_fig.py TSLA MSFT        # figure for 4z
+python held_back.py MSFT AAPL AMZN GOOGL META NVDA AVGO   # leader held back by a pinned market? (4aa)
+python held_back_fig.py        # figure for 4aa
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
