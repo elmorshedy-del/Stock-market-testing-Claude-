@@ -683,6 +683,37 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
 * **MSFT:** not freed (43rd percentile).
 * **MU:** not freed (68th percentile, IV at the 1st percentile), pinned.
 
+## 4u. Today vs the run-up to past Tesla up-bursts (`burst_compare.py TSLA`)
+
+![run-up vs today](out/burst_compare_paths_TSLA.png)
+![fingerprint vs today](out/burst_compare_table_TSLA.png)
+
+**The typical run-up** (median of 80 up-bursts since 2021):
+* **Price:** a pullback, −5.8% over the 30 sessions before.
+* **OI near the price:** sinks into the burst, to the 33rd percentile the day before vs 57th on a typical day.
+* **Positioning:** balanced (44th percentile), about 2.6% above the own flip, with 30-day IV elevated (56th percentile).
+
+**The last 30 sessions (to Oct 9) differ:**
+* **Price:** a grind up, +9.7% over 30 sessions.
+* **OI near the price:** freed through late September (4th–22nd percentile), now back to the 48th.
+* **Positioning:** 65th percentile, 5.2% above the flip.
+* **IV:** cheap, 27th percentile.
+
+**The bursts named in the conversation, side by side with today.** The distance uses OI near the price, own gamma, flip distance, IV and the 20-day return.
+* **Closest:** Jun '24 (distance 1.44), Oct '25 b (1.50) and Sep '25 (1.57). Today is closer to these than 78–85% of all days are. Their 2-day outcomes were +4%, +4% and +13%.
+* **Allowed but not freed:** none of the three started freed, and two of them (Jun '24, Oct '25 b) were the smallest bursts on the list.
+* **Shared calendar:**
+  * Jun '24, May '25 and Oct '25 b all came 4 sessions before monthly opex, like Monday Oct 12.
+  * Four of the named bursts were Mondays.
+  * TSLA lags SPY by 29 points year to date, like the 2024 catch-up year (−35 at the Oct '24 report).
+  * The opex-week effect was not significant across all bursts (§4m), so treat these as context, not signals.
+* **Unusual today:** S&P DIX at the 91st percentile (only late May '25 was as high) and cheap IV (only Sep '25 and Nov '25 were as low).
+
+**Reading.**
+* **Positioning already allows an up-burst:** above the flip, not put-heavy.
+* **The missing piece is the "freed" state.** The up-tilted setup turns on if OI near the price falls back into its bottom third (≤ 0.33) while TSLA holds above its flip (364).
+* **The call wall at 400 (4.5% above):** the two named bursts that started within 1% of their call wall (Jul '24, May '25) broke through it.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -784,6 +815,7 @@ python stock_gamma_fig.py TSLA   # figure for 4s
 python stock_gamma_summary.py TSLA MSFT MU NVDA   # cross-stock odds ratios + figure (4s)
 python burst_gamma.py TSLA    # every up-burst since 2021 vs own positioning the day before (4t)
 python burst_gamma_fig.py TSLA MSFT MU NVDA      # figure for 4t
+python burst_compare.py TSLA  # run-up to past up-bursts vs the last 30 sessions; named bursts vs today (4u)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
