@@ -578,7 +578,7 @@ Four sources were tested, each against something known to be true.
 
 **What TSLA's own gamma does.** The analysis covers 1,449 days (2021-01 to 2026-10). A burst is ±5% in a day or ±9% in two days, measured over the next 3 sessions. Controls are past 5- and 20-day volatility, past 20-day return and S&P gamma. P-values come from circularly shifting the gamma series.
 
-* **Below TSLA's own gamma flip:** down-bursts follow 26% of the time vs 14–17% above it. Controlled odds ratio 2.5 (p < 0.001).
+* **Below TSLA's own gamma flip:** down-bursts follow 26% of the time vs 14–17% above it. Controlled odds ratio 2.5 (p < 0.001); 2.7 after the §4v fix that reads a missing flip by the sign of net gamma.
   * It holds in both halves: 30% vs 17% in 2021–mid-2023, and 21% vs 13% from mid-2023 to 2026.
   * This is the dealer short-gamma mechanism working on the downside.
 * **Put-heavy gamma** (low own-gamma percentile, i.e. near-the-money put gamma outweighs call gamma) doubles down-burst odds (odds ratio 2.1) and roughly halves up-burst odds (0.5).

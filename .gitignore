@@ -11,3 +11,4 @@ data/dolt/
 data/thetadata/
 out/stock_gamma_frame_*.csv
 out/stock_gamma_summary.csv
+out/legs_daily_*.csv
