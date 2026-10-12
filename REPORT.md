@@ -714,105 +714,101 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
 * **The missing piece is the "freed" state.** The up-tilted setup turns on if OI near the price falls back into its bottom third (≤ 0.33) while TSLA holds above its flip (364).
 * **The call wall at 400 (4.5% above):** the two named bursts that started within 1% of their call wall (Jul '24, May '25) broke through it.
 
-## 4v. Tesla's multi-week legs: signature, trigger, top, and what runs underneath (`legs.py`, `leg_stages.py`, `elections.py`, `legs_fig.py`)
+## 4v. The Tesla moves you named, taken as given: what TSLA's own options did through each (`episodes.py`, `legs_fig.py`, `elections.py`)
 
-**Redefining a burst as a leg.**
-* **Definition:** ≥ +25% within 20 sessions, starting at the last low before take-off and ending at the high before the first 10% give-back.
-* **Count:** 20 legs since 2021 (`out/legs_TSLA.csv`), about 3.5 a year.
-* **Named moves:** all seven named moves are among them: Oct 2021, Jan 2023, May 2023, Jun–Jul 2024, Oct–Nov 2024, Apr–May 2025 and Sep 2025.
-* **Weekly shapes:**
+**No detection rule.** The seven moves are the ones you named. Start (the base close it launched from) and top (the last high before it rolled over) were picked by hand from the daily closes:
 
-| Move | Weekly closes, % | Shape |
-|---|---|---|
-| Oct 2021 | +6, +8, **+20**, +10 | step-up |
-| Jan 2023 | +2, +8, +9, **+29**, +7 | step-up from the bottom |
-| May 2023 | +5, −1, +7, +7, +10, **+13**, +6 | stair-step |
-| Jun–Jul 2024 | +4, +3, +8, **+24** | step-up |
-| Sep 2025 | +6, −2, +5, **+12**, +7 | step-up |
-| Oct–Nov 2024 | **+23**, −8, **+25**, +9 | big, red, big |
-| Apr–May 2025 | **+17**, +1, +4, **+16** | bounce, then a second thrust |
+| Move | Start | Top | Note |
+|---|---|---|---|
+| Oct 2021 | Fri Oct 8 | Thu Nov 4 | flat base the week before your Oct 11 week; Hertz day Oct 25 |
+| Jan 2023 | Fri Jan 6 | Wed Feb 15 | off the bottom; the burst is Jan 9–27 (report Jan 25 after the close), then a slower climb |
+| May 2023 | Mon May 15 | Tue Jun 20 | stair-step; ran 5 weeks, longer than the others |
+| Jun–Jul 2024 | Mon Jun 24 | Wed Jul 10 | smaller week, then the big week |
+| Oct–Nov 2024 | Wed Oct 23 | Mon Nov 11 | report, red week, election |
+| Apr–May 2025 | Mon Apr 21 | Tue May 27 | bounce after the crash: big, small, small, big |
+| Sep 2025 | Tue Sep 2 | Wed Oct 1 | smaller week (Sep 1–5), then the big week |
+| **Today** | **Tue Sep 29** | ? | lowest close of the late-September base |
 
+**Alignment.** Each move is aligned on its start and read in 5-session blocks. Values are shown as they are, with no cutoffs.
+
+![episodes](out/episodes_TSLA.png)
+![episodes daily](out/episodes_daily_TSLA.png)
 ![anatomy](out/legs_anatomy_TSLA.png)
+![path](out/legs_path_TSLA.png)
 
-**Two families, different plumbing.**
-* **Trend legs (10)** start at TSLA's own gamma flip: 60% within ±3% vs 38% of all days, and 80% with put-leaning positioning.
-  * Implied vol **rises** during the leg (+0.20 percentile, median): a call chase.
-  * 90% top ≥12% above the flip (12% of days), 70% very call-heavy (18% of days).
-* **Bounce legs (10, after a ≥25% drawdown)** start put-heavy (all 10) with implied vol near the top of its range (91st percentile).
-  * Implied vol **falls** as they run: the crash premium unwinds.
-* **In both:** the largest call strike rolls up during the leg (e.g. 200 → 300 in Jun–Jul 2024, 750 → 1,200 in Oct 2021), and the top usually lands just under the new wall.
+**What is common, move by move.**
+* **The start sits at TSLA's own gamma flip.**
+  * Five of seven started 0.7–4.3% above it: Oct 2021 +2.9, May 2023 +0.7, Jun 2024 +4.3, Oct 2024 +3.0, Sep 2025 +1.7.
+  * The two bounces started about 10% below it: Jan 2023 −10.9, Apr 2025 −9.1.
+* **The start is usually a dip into the flip.** The 5 sessions into the start were down in five of seven: −3.2 to −10.4%.
+  * Oct 2021 and Jun 2024 instead sat in a flat base.
+* **Own gamma is flushed by that dip, then snaps back.** Own-gamma percentile, the block before → the start → the first block:
 
-**The step-up anatomy.** This is the shape of Oct 2021, May 2023, Jun–Jul 2024 and Sep 2025, and of Jan 2023 once it reclaimed its flip.
-1. **Base:** price at the flip, put-leaning gamma, cheap IV.
-2. **Lead-in week (+3–8%):** 5–10% above the flip; own gamma turns call-heavy (0.6–0.85).
-3. **Big week (+12–29%):** starts very call-heavy about 10% above the flip, with the call wall **about 1% above** the price (Oct 2021: 900, 1% away; Jun–Jul 2024: 200, 0.9%; May 2025: 300, 0.5%). The wall breaks.
-4. **Top:** 15–24% above the flip; the wall has rolled up; implied vol jumps.
+| Move | Before | Start | First block |
+|---|---|---|---|
+| May 2023 | 0.78 | 0.53 | 0.91 |
+| Oct–Nov 2024 | 0.62 | 0.37 | 0.70 |
+| Sep 2025 | 0.93 | 0.28 | 0.71 |
+| Jan 2023 | 0.58 | 0.23 | 0.43 |
+| Apr–May 2025 | 0.22 | 0.06 | 0.52 |
+| Oct 2021 (no flush) | 0.32 | 0.63 | 0.81 |
+| Jun 2024 (no flush) | 0.34 | 0.80 | 0.98 |
+
+  The dip clears call-heaviness at the flip, and the move starts as it rebuilds: the same "reset first" you described for SPY, on one stock.
+* **The biggest block is usually not the first.** In five of seven a smaller block came first:
+  * Oct 2021: +7, +8, then **+20**.
+  * Jun 2024: +14, then **+22**.
+  * Sep 2025: +5, then **+19**.
+  * May 2023: +13, +6, +10, then **+16**.
+  * Jan 2023: +8, then **+16**.
+  * The two exceptions opened with their biggest block, on a report (Oct 2024) and on short covering (Apr 2025).
+* **The largest call strike is crossed during the big blocks and then rolls higher.** Price goes above it (negative cells) in the big blocks: Oct 2021 −11/−19, May 2023 −1/−3, Apr 2025 −6, Sep 2025 −5. The wall then resets 6–17% above.
+* **At the top, price is 6–22% above the flip** (most 15–22%; Oct 2021 +6%).
+* **Call-heaviness peaks one to two blocks *before* the price top and is already fading at the top.**
+  * Clear in four: Oct 2021 0.85 → 0.46, May 2023 0.94 → 0.71, Oct 2024 0.99 → 0.74, Jan 2023 0.86 → 0.74.
+  * Mild in two: Sep 2025 0.91 → 0.84, Jun 2024 0.98 → 0.95.
+  * Flat in Apr 2025: 0.85 → 0.84.
+  * Price makes its last high while call positioning is already rolling over.
 
 **Patterns within the pattern.**
-* **Oct–Nov 2024 (the red week).**
-  * The report jump (+20%) pushed own gamma to 0.91 and price more than 20% above the flip.
-  * The red week was a **mini-reset**: own gamma fell to 0.62 and the flip distance to +10.7%.
-  * The election then hit with S&P gamma at the 21st percentile and a call wall 4% above.
-  * This is the same "reset before the next leg" seen in the S&P (§4p), on one stock.
-* **Apr–May 2025 (bounce then thrust).**
-  * The first big week was short covering: 7.6% below the flip, gamma 0.08, IV 0.94, S&P gamma at 0.05.
-  * Two quiet weeks then turned positioning balanced (0.44) and cooled IV (0.94 → 0.55).
-  * The second big week was a textbook wall break (wall 300, 0.5% above).
-  * The bounce reloaded into a step-up.
-* **Jan 2023:** the climb back to the flip (−11% → −3%) was the lead-in. The +29% report week started 3.5% *above* the flip.
-* **Tops come in two types.**
-  * **2024–25, spot-up/vol-up exhaustion:** IV pct ≥ 0.9 while ≥ 15% above the flip.
-  * **2021–23, pin into a fresh pile of open interest at the new wall:** near-money OI at the 67th–70th percentile in Feb and Jun 2023.
+* **Two implied-vol families.**
+  * **Cheap-IV starts:** Oct 2021 (0.22), May 2023 (0.06), Sep 2025 (0.07). IV *rises* through the move to 0.5–0.65 near the top; spot up, vol up is the call chase.
+  * **High-IV starts:** Jan 2023 (0.96), Oct 2024 (0.82), Apr 2025 (0.97), Jun 2024 (0.69). These are event or bounce moves.
+    * IV stays high: Jan 2023, Oct 2024.
+    * Or rises further: Jun 2024, to 1.00.
+    * Or falls as the fear premium unwinds: Apr 2025, 0.97 → 0.47.
+* **Two ways of topping.**
+  * **Stall into a fresh pile of open interest near the price, at or right after the top:** May 2023 (near-OI percentile 0.94), Jan 2023 (0.62–0.66), Sep 2025 (0.88 the block after), Apr 2025 (0.70 the block after). Gradual.
+  * **Abrupt, with little OI near the price:** Oct 2021 (0.14), Jun 2024 (0.31), Oct 2024 (0.15). Ended by a sharp down day.
+* **OI near the price at the start is not common.**
+  * Low: Oct 2024 0.06, Apr 2025 0.03, Jan 2023 0.20.
+  * High: May 2023 0.89, Sep 2025 0.83, Jun 2024 0.75, Oct 2021 0.73.
+  * The earlier "freed" result (§4t) is a tendency across all bursts, not a feature of these seven.
+* **Market-wide S&P gamma and DIX are not common to the seven either.** For example, DIX was 0.13 at the Jun 2024 start and 0.82 at Oct 2021. TSLA's own positioning is what lines up.
+* **Oct–Nov 2024's red week was a second flush.** Own gamma went 0.91 (Oct 25) → 0.62 (Nov 1), and the flip distance from more than +20% back to +10.7%, before the election block.
+* **Apr–May 2025:** the bounce block came from deep put-heaviness (0.06, 9% below the flip). The two small blocks turned positioning balanced (0.34) and cooled IV (0.97 → 0.47). The second big block crossed the call wall (−6%).
 
-![path map](out/legs_path_TSLA.png)
+**Today, on the same rows.**
+* **Start (Sep 29):** **at the flip (+0.1%)** after a **−7.1% dip** that flushed own gamma **0.86 → 0.16**, the largest flush in the set.
+* **First block:** **+7.6%**, own gamma back to **0.90**, call wall 400 about 5% above. That matches May 2023 (block +1: +13%, gamma 0.91, wall +6%) and Jun 2024 (+14%, 0.98, wall +5%).
+* **Implied vol:** 0.26–0.34, between the cheap-IV and high-IV families.
+* **Differences from the moves that followed:**
+  * Call OI is not building: −1% in the first block and about −10% in the partial second block, vs +7–16% by the first block in five of seven.
+  * Block +2 so far (3 sessions) is +0.5%.
+* **Calendar:** in the step-up moves the biggest block came at blocks +2 to +4.
+  * For today: block +2 ends Oct 13, block +3 holds the Oct 16 expiry, and block +4 holds the Oct 22 report reaction.
 
-**Tested on all days 2021–2026, not just the named legs.** Episodes are counted once; significance is a binomial test vs all days.
+**Elections, each one as a point** (no grouping cutoffs).
 
-| Stage | Episodes | +15% within 15 sessions | −10% within 10 sessions | 10-session average |
-|---|---|---|---|---|
-| all days | | 20% | 26% | +0.2% |
-| 1 base | 94 | 1% | 24% | −1.8% |
-| 2 lead-in | 128 | 25% | 17% | +1.4% |
-| 3 wall test | 30 | **37%** (p = 0.03) | 7% | +3.9% |
-| top signal | 11 | 9% | **64%** (p = 0.01) | −4.8% |
+![elections scatter](out/elections_scatter.png)
 
-**How to read the stages.**
-* **Base and lead-in are not triggers.** Most bases never launch, and the lead-in mainly removes downside.
-* **The wall test is not momentum.** With the same prior 10-day gain (+5–15%), a wall within 2% above gives 45% +15% runs vs 18% when the wall is far, and 5% −10% drops vs 20%. It holds in both halves of the period.
-* **Wall breaks vs wall holds:**
-  * **Breaks** had less OI near the price (0.44 vs 0.70), higher IV (0.62 vs 0.42), call OI building (+7% in 10 days vs +4%) and higher DIX (0.62 vs 0.39).
-  * **Every wall test in 2023 (6) and 2026 (5) held:** these were range years.
-* **The top signal** fails while calls are still being chased (own gamma ≥ 0.85, +22% in 10 days) and works once own gamma rolls over (median 0.76).
-* **Timing:** 9 of 10 trend legs had a lead-in day. The biggest 5-session run came a median of **10 sessions** later (range −2 to 21), and the top 18 sessions later.
+* **Across 17 elections since 1992,** the VIX change over the 10 sessions into the vote and its change over the 5 sessions after correlate at **−0.77**: the more hedging was bought into the vote, the harder VIX fell after it.
+* **The S&P link is weaker:** +0.50, or +0.28 without 2008.
+* **The largest run-ups are 2016, 2020 and 2024,** all presidential and in the retail-options era. They had the biggest VIX falls (−5 to −11 points) and S&P gains (+2 to +7% in 10 sessions). TSLA gained +34% (2020) and +42% (2024) in 20 sessions.
+* **Midterms mostly had VIX falling into the vote** (left of zero) and small moves after.
+* **The 2026 midterm:** VIX is 15.4 and −0.3 over the last 10 sessions, with the vote 18 sessions away. Whether VIX builds into it is what decides if there is anything to release.
 
-![elections](out/elections.png)
-
-**Elections (`elections.py`, S&P and VIX since 1992).**
-* **Presidential elections with a VIX run-up into the vote** (≥ 2 points over the prior 10 sessions; 2016, 2020, 2024), 3 of 3:
-  * VIX fell 5–11 points within 5 sessions and the S&P rose 2–5% in 5 sessions.
-  * S&P gamma jumped afterwards (0.19 → 0.77 in 2020, 0.37 → 0.55 in 2024).
-  * TSLA rose +34% (2020) and +42% (2024) over the next 20 sessions.
-  * **Mechanism:** hedges bought into the event are dumped once the result is known, and dealers buy back their own hedges.
-* **Presidential elections without a run-up** (1992–2012) were mixed: 2000 and 2012 fell, and 2008 was a crash.
-* **Midterms:** VIX usually *fell* into the vote (5 of 8), and the S&P was flat over 5–10 sessions before 2020.
-  * The only 2020+ midterm (2022) rallied on the CPI print two days later, not on the vote.
-* **TSLA's own positioning on election day matched the leg rules:**
-  * 2020: 7.7% above the flip, freed (near-money OI 0.16), cheap IV → leg.
-  * 2024: 10.4% above the flip, gamma 0.70 → leg.
-  * 2022: put-heavy and 8.9% below the flip → −9%.
-* **Era control:** the pattern rests on 2016, 2020 and 2024, i.e. the high-retail-options years. Earlier presidential elections without an event premium show none of it.
-
-**Where TSLA is now (Oct 9).**
-* **Stages so far:**
-  * **Sep 28–30, stage 1:** at the flip (0–2% above), gamma 0.16–0.31, near-money OI 0.04–0.11 (freed).
-  * **Oct 2 (+4.6%), stage 2:** 5.8% above the flip, gamma 0.65. Stage 2 has held since, with the flip at 364 and gamma 0.65.
-* **Stage 3 needs** a close within 2% of the 400 call wall (about 392+) with own gamma ≥ 0.75.
-* **Today's wall-break readings:**
-  * For: DIX at the 91st percentile.
-  * Against or not yet: near-money OI 0.48, IV 0.27, call OI only +2% in 10 days.
-* **Triggers in the window:** the Oct 16 expiry; the Oct 22 report reaction, priced at 4.9%, which falls 14 sessions after the lead-in began; and the Nov 3 midterm.
-* **The midterm:** VIX is 15.4 and flat over 10 sessions, so there's no event premium to unwind yet. Watch whether VIX builds 2+ points into Nov 3.
-* **Caveats:** most lead-ins do not become legs, and 2026's walls have all held so far.
+*An earlier draft of this section found moves with a rule (≥ 25% in ≤ 20 sessions) and tested fixed stage cutoffs (`legs.py`, `leg_stages.py`). It is kept in the code for reference, but nothing above depends on it.*
 
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
@@ -916,10 +912,9 @@ python stock_gamma_summary.py TSLA MSFT MU NVDA   # cross-stock odds ratios + fi
 python burst_gamma.py TSLA    # every up-burst since 2021 vs own positioning the day before (4t)
 python burst_gamma_fig.py TSLA MSFT MU NVDA      # figure for 4t
 python burst_compare.py TSLA  # run-up to past up-bursts vs the last 30 sessions; named bursts vs today (4u)
-python legs.py TSLA           # multi-week up-legs: start, trigger, top, top trigger, weekly shape, options state (4v)
-python leg_stages.py TSLA     # the leg stages tested on all days; wall breaks vs holds; top signal (4v)
-python elections.py           # S&P/VIX/gamma/TSLA around presidential and midterm elections since 1992 (4v)
-python legs_fig.py            # figures for 4v
+python episodes.py           # the named TSLA moves as given, aligned on their start: options state block by block (4v)
+python legs_fig.py            # anatomy and path figures for the named moves (4v)
+python elections.py           # S&P/VIX/gamma/TSLA around every election since 1992, scatter (4v)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv

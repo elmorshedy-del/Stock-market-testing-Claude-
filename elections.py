@@ -73,6 +73,50 @@ def table():
     return E, B, f
 
 
+def scatter_fig(E, fr):
+    """Each election as a point: VIX change over the 10 sessions into the vote vs what came after. No cutoffs."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    plt.rcParams.update({"font.size": 9, "axes.edgecolor": "#52514e", "axes.labelcolor": "#52514e", "xtick.color": "#52514e",
+                         "ytick.color": "#52514e", "axes.grid": True, "grid.color": "#e6e5e0", "grid.linewidth": 0.6,
+                         "axes.spines.top": False, "axes.spines.right": False, "figure.facecolor": "#fcfcfb",
+                         "axes.facecolor": "#fcfcfb", "legend.frameon": False})
+    cols = {"presidential": "#eb6834", "midterm": "#2a78d6"}
+    f, axs = plt.subplots(1, 3, figsize=(15, 4.6))
+    for a, (y, lab) in zip(axs, (("vix_5d_pts", "VIX change, 5 sessions after the vote (points)"),
+                                 ("spx_10d_%", "S&P 500, 10 sessions after the vote (%)"),
+                                 ("tsla_20d_%", "TSLA, 20 sessions after the vote (%)"))):
+        for kind, g in E.groupby("kind"):
+            g = g.dropna(subset=[y])
+            filled = g.index.str[:4].astype(int) >= 2016
+            a.scatter(g.vix_runup_10d_pts[filled], g[y][filled], s=60, color=cols[kind], edgecolor="#fcfcfb", lw=1.2, zorder=3,
+                      label=f"{kind}, 2016+")
+            a.scatter(g.vix_runup_10d_pts[~filled], g[y][~filled], s=60, facecolor="#fcfcfb", edgecolor=cols[kind], lw=1.6, zorder=3,
+                      label=f"{kind}, before 2016")
+            for d, row in g.iterrows():
+                a.annotate(d[:4], (row.vix_runup_10d_pts, row[y]), xytext=(4, 3), textcoords="offset points", fontsize=7.5, color="#0b0b0b")
+        a.axhline(0, color="#52514e", lw=0.8)
+        a.axvline(0, color="#52514e", lw=0.8)
+        a.set_xlabel("VIX change over the 10 sessions INTO the vote (points)")
+        a.set_title(lab, loc="left", fontsize=9.5, color="#0b0b0b")
+    v = fr.VIX
+    for a in axs:
+        a.axvline(v.iloc[-1] - v.iloc[-11], color="#1baf7a", lw=1.6, ls="--")
+    axs[0].annotate(f"VIX's last 10 sessions: {v.iloc[-1] - v.iloc[-11]:+.1f}\n(midterm Nov 3 is 18 sessions away)",
+                    (v.iloc[-1] - v.iloc[-11], axs[0].get_ylim()[1]), xytext=(5, -24), textcoords="offset points", fontsize=8, color="#1baf7a")
+    axs[0].legend(loc="lower left", fontsize=7.5)
+    f.suptitle("Every US election since 1992: the more hedging was bought into the vote, the bigger the release after it "
+               "(2008 = financial crisis)", x=0.01, ha="left", fontsize=10.5, color="#0b0b0b")
+    f.tight_layout()
+    f.savefig("out/elections_scatter.png", dpi=150)
+    r = E[["vix_runup_10d_pts", "vix_5d_pts", "spx_10d_%"]].corr().loc["vix_runup_10d_pts"]
+    ex = E.drop(index="2008-11-04")
+    r2 = ex[["vix_runup_10d_pts", "vix_5d_pts", "spx_10d_%"]].corr().loc["vix_runup_10d_pts"]
+    print(f"corr(VIX run-up, VIX 5d after) {r.vix_5d_pts:+.2f} (ex-2008 {r2.vix_5d_pts:+.2f}); corr(VIX run-up, S&P 10d) "
+          f"{r['spx_10d_%']:+.2f} (ex-2008 {r2['spx_10d_%']:+.2f}); n={len(E)}")
+
+
 if __name__ == "__main__":
     pd.set_option("display.width", 250)
     pd.set_option("display.max_columns", 40)
@@ -93,3 +137,5 @@ if __name__ == "__main__":
     if own_cols:
         print("\nTSLA's own positioning on election day (2020+)")
         print(E[own_cols].dropna().round(2).to_string())
+
+    scatter_fig(E, f)
