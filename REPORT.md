@@ -872,6 +872,22 @@ None of the four is put-heavy today. After the §4z correction that no longer im
 * **S&P dealer gamma jumped to its 99th percentile on Oct 9.** The market is pinned.
 * **TSLA's own dark-pool index** was at its 17th percentile on Oct 9; Oct 12 is published after the close.
 
+**Burst-up criteria and where TSLA sits (`tsla_live.ladder`).** These are the two own-positioning criteria that survived §4z, on TSLA's 2021–26 history, strictly forward:
+
+| criteria on | days | up-burst, next 3 sessions | down-burst, next 3 | up-burst, next 10 | down-burst, next 10 |
+|---|---|---|---|---|---|
+| neither (**today**) | 835 | 12% | 16% | 37% | 43% |
+| below own flip only | 202 | 13% | 15% | 55% | 41% |
+| freed only (**from Oct 19** at any price 350–400) | 254 | 20% | 23% | 60% | 61% |
+| **freed and below own flip** | 155 | **39%** | 17% | **76%** | 67% |
+| all days | 1,446 | 17% | 17% | 48% | 49% |
+
+* **The combined setup:** up-bursts +23 pts over all days, and +22 pts over down-bursts. Both p < 0.001 against 2,000 time-shifted nulls; 59 separate episodes.
+* **Price map with today's open interest:**
+  * **This week, a close under ~370** turns both criteria on: near-price OI falls to the 30th percentile or lower, and price is under the 371 flip.
+  * From 375 to 400, neither is on.
+  * **After the Oct 16 expiry, freed is on at every price** from 350 to 400, unless new open interest builds near the price. Below 358, both are on.
+
 ## 4x. MSFT continuation and the S&P Q4 window, by analogs (`outlook.py`)
 
 ![outlook](out/outlook_msft_spx.png)

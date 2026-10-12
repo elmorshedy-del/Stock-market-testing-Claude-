@@ -65,6 +65,24 @@ def status(sym, day, price, expiry):
     return pd.DataFrame(rows), flow, k
 
 
+def ladder(sym="TSLA", h=10):
+    """Next-h-session burst odds by which of the two own-positioning criteria that survived §4z are on:
+    freed (near-price OI in the bottom third of its trailing year) and below the own gamma flip."""
+    from burst_gamma import state
+    from stock_gamma import START, frame
+    from stock_now import burst_days
+    from common import load_bars
+    x = frame(sym).join(state(sym)[["near_pct"]])
+    c = load_bars(sym).close
+    nxt = lambda m: pd.Series(m, index=c.index).shift(-1)[::-1].rolling(h, min_periods=h).max()[::-1].reindex(x.index)
+    x["up"], x["dn"] = nxt(burst_days(c, 1)), nxt(burst_days(c, -1))
+    x = x[x.index >= START].dropna(subset=["near_pct", "up"])
+    fr, bl = x.near_pct <= 1 / 3, x.below.astype(bool)
+    cells = [("neither", ~fr & ~bl), ("below flip only", ~fr & bl), ("freed only", fr & ~bl), ("freed and below flip", fr & bl), ("all days", fr | ~fr)]
+    return pd.DataFrame([{"criteria on": k, "days": int(m.sum()), f"up-burst in {h} %": 100 * x.up[m].mean(),
+                          f"down-burst in {h} %": 100 * x.dn[m].mean()} for k, m in cells])
+
+
 if __name__ == "__main__":
     pd.set_option("display.width", 200)
     day, price = pd.Timestamp(sys.argv[1]), float(sys.argv[2])
@@ -74,3 +92,5 @@ if __name__ == "__main__":
     print(s.round(3).to_string(index=False))
     print("\nopen interest since the last close, by expiry bucket\n" + flow.round(1).to_string())
     print("\nby strike (old -> new)\n" + k.astype(int).to_string())
+    for h in (3, 10):
+        print(f"\n{sym} burst odds by criteria on (own history, next {h} sessions)\n" + ladder(sym, h).round(1).to_string(index=False))
