@@ -887,6 +887,10 @@ None of the four is put-heavy today. After the §4z correction that no longer im
   * **This week, a close under ~370** turns both criteria on: near-price OI falls to the 30th percentile or lower, and price is under the 371 flip.
   * From 375 to 400, neither is on.
   * **After the Oct 16 expiry, freed is on at every price** from 350 to 400, unless new open interest builds near the price. Below 358, both are on.
+* **Dip during the week of a monthly expiry (Mon–Thu) vs other weeks:**
+  * Below the flip: up-burst within 10 sessions 71% vs 63%; within 3 sessions 22% vs 25%.
+  * Below the flip and freed in expiry week: 32% up vs 14% down (3 sessions), 79% vs 61% (10 sessions).
+  * Only 18 episodes. The expiry-week timing adds little beyond the combined setup itself.
 
 ## 4x. MSFT continuation and the S&P Q4 window, by analogs (`outlook.py`)
 
