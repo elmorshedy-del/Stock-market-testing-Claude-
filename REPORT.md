@@ -630,6 +630,12 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
   * **Conclusion:** use each stock's own gamma; Nasdaq gamma is for trading QQQ itself.
 * **Now:** QQQ closed Oct 9 at 751.2, **on its gamma flip (749)**, with the call wall at 760 and the put wall at 700. A close below ~749 puts the Nasdaq-100 in its negative-gamma regime, where moves get larger both ways.
 
+**SPY gamma, same method, vs SqueezeMetrics.**
+* **Agreement:** SPY gamma tracks SqueezeMetrics' S&P gamma at 0.67 over 2021–2026 (0.59–0.92 by year). As percentiles, the inputs the ladder and reset rules use, they correlate at 0.83, and the "reset zone" reading (≤ 0.30) agrees on 85% of days.
+* **Why it's lower than the 0.96 for S&P index options in §4r:** SPY options have a different owner base.
+* **New information:** put-heavy SPY gamma doubles S&P down-burst odds **after controlling for SqueezeMetrics' gamma** (odds ratio 2.0, p = 0.002). Below-flip adds nothing once SqueezeMetrics is in, and nothing predicts up-bursts.
+* **Now:** SPY closed Oct 9 at 778.6, just above its own flip (775). Own-gamma percentile 0.85, not put-heavy. Call wall 800, put wall 740.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
