@@ -39,7 +39,7 @@ def frame(sym):
     x["spot"] = m.spot
     x["g_norm"] = m.gex_classic / (m.spot * (m.call_oi + m.put_oi) * 100)
     x["g_pct"] = x.g_norm.rolling(252, min_periods=120).rank(pct=True)
-    x["below"] = m.spot < m.flip_classic
+    x["below"] = (m.spot < m.flip_classic) | (m.flip_classic.isna() & (m.gex_classic <= 0))   # no flip in range + negative gamma
     x["flip"], x["call_wall"], x["put_wall"] = m.flip_classic, m.call_wall, m.put_wall
     x["share1"] = m.gamma_share_1d
     x["ret0"] = r.reindex(x.index)

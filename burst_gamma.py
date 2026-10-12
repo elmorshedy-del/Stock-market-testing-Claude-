@@ -33,7 +33,8 @@ def state(sym):
     s["g_pct"] = (m.gex_classic / (m.spot * (m.call_oi + m.put_oi) * 100)).rolling(252, min_periods=120).rank(pct=True)
     s["tot_pct"] = (-m.gex_short / (m.spot * (m.call_oi + m.put_oi) * 100)).rolling(252, min_periods=120).rank(pct=True)
     s["flip"], s["call_wall"], s["put_wall"] = m.flip_classic, m.call_wall, m.put_wall
-    s["to_flip_pct"] = 100 * (m.spot / m.flip_classic - 1)
+    # no flip within +-20% of spot: the whole local profile has one sign -> far above (+20) or far below (-20)
+    s["to_flip_pct"] = (100 * (m.spot / m.flip_classic - 1)).fillna(pd.Series(np.where(m.gex_classic > 0, 20.0, -20.0), index=m.index))
     s["to_call_wall_pct"] = 100 * (m.call_wall / m.spot - 1)
     s["exp5_share"] = m.gamma_share_5d
     if "near_oi_share" in m:

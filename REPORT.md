@@ -714,6 +714,106 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
 * **The missing piece is the "freed" state.** The up-tilted setup turns on if OI near the price falls back into its bottom third (≤ 0.33) while TSLA holds above its flip (364).
 * **The call wall at 400 (4.5% above):** the two named bursts that started within 1% of their call wall (Jul '24, May '25) broke through it.
 
+## 4v. Tesla's multi-week legs: signature, trigger, top, and what runs underneath (`legs.py`, `leg_stages.py`, `elections.py`, `legs_fig.py`)
+
+**Redefining a burst as a leg.**
+* **Definition:** ≥ +25% within 20 sessions, starting at the last low before take-off and ending at the high before the first 10% give-back.
+* **Count:** 20 legs since 2021 (`out/legs_TSLA.csv`), about 3.5 a year.
+* **Named moves:** all seven named moves are among them: Oct 2021, Jan 2023, May 2023, Jun–Jul 2024, Oct–Nov 2024, Apr–May 2025 and Sep 2025.
+* **Weekly shapes:**
+
+| Move | Weekly closes, % | Shape |
+|---|---|---|
+| Oct 2021 | +6, +8, **+20**, +10 | step-up |
+| Jan 2023 | +2, +8, +9, **+29**, +7 | step-up from the bottom |
+| May 2023 | +5, −1, +7, +7, +10, **+13**, +6 | stair-step |
+| Jun–Jul 2024 | +4, +3, +8, **+24** | step-up |
+| Sep 2025 | +6, −2, +5, **+12**, +7 | step-up |
+| Oct–Nov 2024 | **+23**, −8, **+25**, +9 | big, red, big |
+| Apr–May 2025 | **+17**, +1, +4, **+16** | bounce, then a second thrust |
+
+![anatomy](out/legs_anatomy_TSLA.png)
+
+**Two families, different plumbing.**
+* **Trend legs (10)** start at TSLA's own gamma flip: 60% within ±3% vs 38% of all days, and 80% with put-leaning positioning.
+  * Implied vol **rises** during the leg (+0.20 percentile, median): a call chase.
+  * 90% top ≥12% above the flip (12% of days), 70% very call-heavy (18% of days).
+* **Bounce legs (10, after a ≥25% drawdown)** start put-heavy (all 10) with implied vol near the top of its range (91st percentile).
+  * Implied vol **falls** as they run: the crash premium unwinds.
+* **In both:** the largest call strike rolls up during the leg (e.g. 200 → 300 in Jun–Jul 2024, 750 → 1,200 in Oct 2021), and the top usually lands just under the new wall.
+
+**The step-up anatomy.** This is the shape of Oct 2021, May 2023, Jun–Jul 2024 and Sep 2025, and of Jan 2023 once it reclaimed its flip.
+1. **Base:** price at the flip, put-leaning gamma, cheap IV.
+2. **Lead-in week (+3–8%):** 5–10% above the flip; own gamma turns call-heavy (0.6–0.85).
+3. **Big week (+12–29%):** starts very call-heavy about 10% above the flip, with the call wall **about 1% above** the price (Oct 2021: 900, 1% away; Jun–Jul 2024: 200, 0.9%; May 2025: 300, 0.5%). The wall breaks.
+4. **Top:** 15–24% above the flip; the wall has rolled up; implied vol jumps.
+
+**Patterns within the pattern.**
+* **Oct–Nov 2024 (the red week).**
+  * The report jump (+20%) pushed own gamma to 0.91 and price more than 20% above the flip.
+  * The red week was a **mini-reset**: own gamma fell to 0.62 and the flip distance to +10.7%.
+  * The election then hit with S&P gamma at the 21st percentile and a call wall 4% above.
+  * This is the same "reset before the next leg" seen in the S&P (§4p), on one stock.
+* **Apr–May 2025 (bounce then thrust).**
+  * The first big week was short covering: 7.6% below the flip, gamma 0.08, IV 0.94, S&P gamma at 0.05.
+  * Two quiet weeks then turned positioning balanced (0.44) and cooled IV (0.94 → 0.55).
+  * The second big week was a textbook wall break (wall 300, 0.5% above).
+  * The bounce reloaded into a step-up.
+* **Jan 2023:** the climb back to the flip (−11% → −3%) was the lead-in. The +29% report week started 3.5% *above* the flip.
+* **Tops come in two types.**
+  * **2024–25, spot-up/vol-up exhaustion:** IV pct ≥ 0.9 while ≥ 15% above the flip.
+  * **2021–23, pin into a fresh pile of open interest at the new wall:** near-money OI at the 67th–70th percentile in Feb and Jun 2023.
+
+![path map](out/legs_path_TSLA.png)
+
+**Tested on all days 2021–2026, not just the named legs.** Episodes are counted once; significance is a binomial test vs all days.
+
+| Stage | Episodes | +15% within 15 sessions | −10% within 10 sessions | 10-session average |
+|---|---|---|---|---|
+| all days | | 20% | 26% | +0.2% |
+| 1 base | 94 | 1% | 24% | −1.8% |
+| 2 lead-in | 128 | 25% | 17% | +1.4% |
+| 3 wall test | 30 | **37%** (p = 0.03) | 7% | +3.9% |
+| top signal | 11 | 9% | **64%** (p = 0.01) | −4.8% |
+
+**How to read the stages.**
+* **Base and lead-in are not triggers.** Most bases never launch, and the lead-in mainly removes downside.
+* **The wall test is not momentum.** With the same prior 10-day gain (+5–15%), a wall within 2% above gives 45% +15% runs vs 18% when the wall is far, and 5% −10% drops vs 20%. It holds in both halves of the period.
+* **Wall breaks vs wall holds:**
+  * **Breaks** had less OI near the price (0.44 vs 0.70), higher IV (0.62 vs 0.42), call OI building (+7% in 10 days vs +4%) and higher DIX (0.62 vs 0.39).
+  * **Every wall test in 2023 (6) and 2026 (5) held:** these were range years.
+* **The top signal** fails while calls are still being chased (own gamma ≥ 0.85, +22% in 10 days) and works once own gamma rolls over (median 0.76).
+* **Timing:** 9 of 10 trend legs had a lead-in day. The biggest 5-session run came a median of **10 sessions** later (range −2 to 21), and the top 18 sessions later.
+
+![elections](out/elections.png)
+
+**Elections (`elections.py`, S&P and VIX since 1992).**
+* **Presidential elections with a VIX run-up into the vote** (≥ 2 points over the prior 10 sessions; 2016, 2020, 2024), 3 of 3:
+  * VIX fell 5–11 points within 5 sessions and the S&P rose 2–5% in 5 sessions.
+  * S&P gamma jumped afterwards (0.19 → 0.77 in 2020, 0.37 → 0.55 in 2024).
+  * TSLA rose +34% (2020) and +42% (2024) over the next 20 sessions.
+  * **Mechanism:** hedges bought into the event are dumped once the result is known, and dealers buy back their own hedges.
+* **Presidential elections without a run-up** (1992–2012) were mixed: 2000 and 2012 fell, and 2008 was a crash.
+* **Midterms:** VIX usually *fell* into the vote (5 of 8), and the S&P was flat over 5–10 sessions before 2020.
+  * The only 2020+ midterm (2022) rallied on the CPI print two days later, not on the vote.
+* **TSLA's own positioning on election day matched the leg rules:**
+  * 2020: 7.7% above the flip, freed (near-money OI 0.16), cheap IV → leg.
+  * 2024: 10.4% above the flip, gamma 0.70 → leg.
+  * 2022: put-heavy and 8.9% below the flip → −9%.
+* **Era control:** the pattern rests on 2016, 2020 and 2024, i.e. the high-retail-options years. Earlier presidential elections without an event premium show none of it.
+
+**Where TSLA is now (Oct 9).**
+* **Stages so far:**
+  * **Sep 28–30, stage 1:** at the flip (0–2% above), gamma 0.16–0.31, near-money OI 0.04–0.11 (freed).
+  * **Oct 2 (+4.6%), stage 2:** 5.8% above the flip, gamma 0.65. Stage 2 has held since, with the flip at 364 and gamma 0.65.
+* **Stage 3 needs** a close within 2% of the 400 call wall (about 392+) with own gamma ≥ 0.75.
+* **Today's wall-break readings:**
+  * For: DIX at the 91st percentile.
+  * Against or not yet: near-money OI 0.48, IV 0.27, call OI only +2% in 10 days.
+* **Triggers in the window:** the Oct 16 expiry; the Oct 22 report reaction, priced at 4.9%, which falls 14 sessions after the lead-in began; and the Nov 3 midterm.
+* **The midterm:** VIX is 15.4 and flat over 10 sessions, so there's no event premium to unwind yet. Watch whether VIX builds 2+ points into Nov 3.
+* **Caveats:** most lead-ins do not become legs, and 2026's walls have all held so far.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -816,6 +916,10 @@ python stock_gamma_summary.py TSLA MSFT MU NVDA   # cross-stock odds ratios + fi
 python burst_gamma.py TSLA    # every up-burst since 2021 vs own positioning the day before (4t)
 python burst_gamma_fig.py TSLA MSFT MU NVDA      # figure for 4t
 python burst_compare.py TSLA  # run-up to past up-bursts vs the last 30 sessions; named bursts vs today (4u)
+python legs.py TSLA           # multi-week up-legs: start, trigger, top, top trigger, weekly shape, options state (4v)
+python leg_stages.py TSLA     # the leg stages tested on all days; wall breaks vs holds; top signal (4v)
+python elections.py           # S&P/VIX/gamma/TSLA around presidential and midterm elections since 1992 (4v)
+python legs_fig.py            # figures for 4v
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
