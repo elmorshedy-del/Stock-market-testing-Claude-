@@ -707,8 +707,7 @@ None of the four is put-heavy today. After the §4z correction that no longer im
 * **Closest:** Jun '24 (distance 1.44), Oct '25 b (1.50) and Sep '25 (1.57). Today is closer to these than 78–85% of all days are. Their 2-day outcomes were +4%, +4% and +13%.
 * **Allowed but not freed:** none of the three started freed, and two of them (Jun '24, Oct '25 b) were the smallest bursts on the list.
 * **Shared calendar:**
-  * Jun '24, May '25 and Oct '25 b all came 4 sessions before monthly opex, like Monday Oct 12.
-  * Four of the named bursts were Mondays.
+  * *(Retracted, §4ac: two lines here counted the Monday of each week you named as the burst day. Those were "came 4 sessions before monthly opex" and "four of the named bursts were Mondays".)*
   * TSLA lags SPY by 29 points year to date, like the 2024 catch-up year (−35 at the Oct '24 report).
   * The opex-week effect was not significant across all bursts (§4m), so treat these as context, not signals.
 * **Unusual today:** S&P DIX at the 91st percentile (only late May '25 was as high) and cheap IV (only Sep '25 and Nov '25 were as low).
@@ -1102,6 +1101,40 @@ Every outcome starts the session **after** the reading. **Null:** slide the posi
 * **Why:** TimesFM extends patterns in a single series. The edges in this report come from structure that is not in a price series: who holds which strikes, when contracts expire, and dealer gamma.
 * Fine-tuning on about 1,500 days per stock would mostly fit noise.
 
+## 4ac. The named TSLA moves, day by day, and what the Monday result does and does not say (`named_weeks.py`)
+
+![named weeks](out/named_weeks_TSLA.png)
+
+**Correction.**
+* The dates you gave were the Monday of the week each move happened, not the burst day.
+* §4u treated them as burst days ("four of the named bursts were Mondays"), and those lines are retracted.
+* The event-level tests in §4l and §4t used the actual burst days and stand.
+
+**Each move, day by day** (the calendar above, from the week before your week to the end of the move):
+
+| Move | Day that made it | What it was |
+|---|---|---|
+| Oct 2021 | Mon Oct 25, +12.7% | Hertz order news; built by small gains from Oct 11 |
+| Jan 2023 | Thu Jan 26 / Fri Jan 27, +11.0% each | report reaction |
+| May 2023 | Mon May 22, +4.8% | no single burst; a 6-week grind of 1–5% days |
+| Jun–Jul 2024 | Tue Jul 2, +10.2% | Q2 deliveries; inside a +27% week |
+| Oct–Nov 2024 | Thu Oct 24, +21.9% | report; then Wed Nov 6, +14.8% (election) |
+| Apr–May 2025 | Fri Apr 25, +9.8% | report week (Apr 23 reaction +5.4%); then Mon May 12, +6.7% |
+| Sep 2025 | Fri Sep 12, +7.4% | after Thu Sep 11, +6.0% |
+| Oct 2025 (window asked about) | Mon Oct 6 and Mon Oct 13, +5.4% each | rebounds inside a choppy month |
+
+* **The biggest day of each move fell on:** Monday 3, Tuesday 1, Thursday 1, Friday 3 (Jan 2023 ties Thu/Fri).
+* **It was usually an event:** a report, deliveries, the election, or company news.
+* **The move's first real up day was usually Tuesday to Thursday:** Jun 25–26 '24, Oct 24 '24, Apr 22 '25, Sep 11 '25. Jan 9 '23 was a Monday.
+* **Days of +5% or more inside these windows:** Mon 10, Tue 3, Wed 4, Thu 3, Fri 4. Eleven of the 24 were the first session of their week.
+
+**What the Monday result is.**
+* It comes from all TSLA days, independent of your dates (§4o).
+* Since 2020, 16.7% of Mondays closed up 5% or more, vs 8.8 / 7.4 / 6.1 / 5.3% on Tuesday to Friday. Since 2023 it is 13.6% vs 4.8–6.1%.
+* The average Monday is +0.81%: +0.21% from the weekend gap and +0.60% during the session.
+* **So big up days do cluster on Mondays, but they did not time your moves.** The start and the day that made each move came on any weekday, mostly from an event.
+* **For the next move, watch events and positioning, not the weekday:** the Oct 21 report (reaction Thursday Oct 22), and freed plus below-flip (§4w update).
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -1217,6 +1250,7 @@ python own_multiverse_fig.py TSLA MSFT        # figure for 4z
 python held_back.py MSFT AAPL AMZN GOOGL META NVDA AVGO   # leader held back by a pinned market? (4aa)
 python held_back_fig.py        # figure for 4aa
 tfm_env/bin/python timesfm_check.py   # TimesFM 2.5 zero-shot vs simple baselines, post-release origins (4ab)
+python named_weeks.py          # the named TSLA moves as a day-by-day calendar (4ac)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
