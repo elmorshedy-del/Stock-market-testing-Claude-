@@ -1077,6 +1077,10 @@ Every outcome starts the session **after** the reading. **Null:** slide the posi
   * Across monthly expiries it falls a median 17 points (68% of the time).
   * **Friday's Oct 16 expiry removes 78% of SPY's own dealer gamma** ($4.7B → $1.0B per 1%). SPY sits just above its own flip (775).
 * **What to watch:** S&P gamma into its bottom third while MSFT still leads, before the Oct 28 report.
+* **Update with the Oct 9 reading** (SqueezeMetrics, fetched Oct 12): S&P gamma jumped to the **99th percentile**, an extreme pin.
+  * **The pin itself is not the signal.** While MSFT led under an extreme pin (≥ 0.9, 148 days): up-leg within 10 sessions 23%, 10-day return −0.1%. That is the same as under an ordinary pin and below MSFT's all-day 32% / +0.9%.
+  * **The signal is the release** (≤ 1/3): 50% / 74% within 10 / 20 sessions, +2.7%.
+  * **From an extreme pin, the release came within 5 / 10 / 20 sessions 14% / 30% / 55% of the time.** That is slower than from 0.50–0.75 (33% / 53% / 74%). It now looks more likely to come around or after the Oct 28 report than before it.
 
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
