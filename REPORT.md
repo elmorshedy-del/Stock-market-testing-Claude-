@@ -847,6 +847,31 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
 * **Break:** a close back under the flip (364 now, about 355 after Friday). In §4s that is where down-bursts doubled; the 350 put strike sits just below.
 * **Midterm:** VIX is flat at 15.4, so no event premium has built for Nov 3 yet.
 
+## 4x. MSFT continuation and the S&P Q4 window, by analogs (`outlook.py`)
+
+![outlook](out/outlook_msft_spx.png)
+
+**Method.** No hand-set cutoffs; each asset is read on its own data only.
+* **Analogs:** the K days most like today across several readings (z-scored), at least 10 sessions apart, excluding the last 30 sessions.
+* **Luck check:** compared with 4,000 random sets of K days under the same spacing.
+* **Robustness:** K = 15/25/40, and each reading dropped in turn.
+* **A "big rise":** a run-up in the asset's own top quarter of days.
+
+**MSFT** (own options state: flip distance, own gamma, OI near the price, call-wall gap, IV, 20-day return; 30 sessions ahead).
+* **Days like today** (far above the flip, very call-heavy, just under 550) were followed by a big rise only **7–8%** of the time vs **25%** normally.
+  * Below chance: p = 0.02 at K = 25.
+  * Median 30-session return −1.3% to 0.0% vs +1.5%.
+  * Every drop-one variant stays under 25% (0–20%).
+* **Days like Jul 24, before the July move,** had a big rise 36% of the time.
+* **Reading:** a continuation leg is not set up; the next leg needs a reset first, or a break of 550 on earnings.
+
+**S&P** (SqueezeMetrics gamma, DIX, VIX, VIX/VIX3M, 20-day return; 40 sessions ahead).
+* **Today's state is neutral:** the median 40-session return is +1.9% to +2.8% vs +2.6% for all days, and the big-rise share is 10–20% vs 25%.
+* **Seasonality is the tailwind.** S&P from Oct 12 to Dec 31 since 1990:
+  * **+4.9% on average** (90% CI +3.5% to +6.4%), up **86%** of years, vs +1.9% for any window of the same length.
+  * 2020–2025: +6.2%, 6 of 6 up.
+  * Midterm years: +5.6%, 6 of 8 up.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -953,6 +978,7 @@ python episodes.py           # the named TSLA moves as given, aligned on their s
 python legs_fig.py            # anatomy and path figures for the named moves (4v)
 python elections.py           # S&P/VIX/gamma/TSLA around every election since 1992, scatter (4v)
 python tsla_now.py            # what the Oct 16 expiry removes, TSLA dark-pool index vs the named moves, calendar (4w)
+python outlook.py             # MSFT and S&P analog outlook with luck and robustness checks; Q4 seasonality (4x)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
