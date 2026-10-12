@@ -810,6 +810,43 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
 
 *An earlier draft of this section found moves with a rule (≥ 25% in ≤ 20 sessions) and tested fixed stage cutoffs (`legs.py`, `leg_stages.py`). It is kept in the code for reference, but nothing above depends on it.*
 
+## 4w. TSLA now: expiry, dark pools, and the calendar ahead (`tsla_now.py`, data to the Oct 9 close)
+
+![tsla now](out/tsla_now.png)
+
+**Where it is in the pattern of the named moves.** Session 8 from the Sep 29 base.
+* **Done:** base at the own flip, the flush (own gamma 0.86 → 0.16), and the snap-back block (+7.6%, own gamma 0.90).
+* **Now:** block +2 has gone flat at 375–383.
+
+**Expiry (TSLA is pre-expiration).**
+* **What expires:** Friday Oct 16, together with this week's daily expiries, holds **46% of TSLA's near-term gamma**.
+* **After Friday:** net dealer gamma drops from about $377M to **$159M per 1% move**, and the own flip from 364 to about **355**.
+* **The pin:** the 380 strike is heavy in both calls and puts, which is the pin TSLA has been sitting on.
+* **The walls:** 400 stays the largest call strike after expiry, with about half its open interest; 350 stays the largest put strike.
+* **In the named moves, the expiry cycle itself does not line up:** the strongest stretch began 1–6 sessions after a monthly expiry in 2 of 7 (29% of days, p = 0.64).
+* **What does line up is the report:** Tesla reports about 4 sessions after the monthly expiry. In Jan 2023, Oct 2024 and Apr 2025 that reaction was the move's biggest day, 4–5 sessions after expiry. This October has the same layout: expiry Fri Oct 16, reaction Thu Oct 22.
+
+**Dark pools.**
+* **S&P DIX** has been at the 80th–97th percentile for two weeks, a supportive market backdrop.
+* **TSLA's own dark-pool index** (FINRA) fell from the 94th percentile in late September to the **17th** during the bounce.
+  * In 6 of the 7 named moves it was high or rising in the first week.
+  * Across all days its signal is only borderline (§4b, p ≈ 0.07–0.19), so treat this as a soft divergence.
+* **The other divergence is call OI:** it is not building (about −10% in the current block) vs +7–16% by the first block in 5 of 7 moves.
+
+**Timing, from the named moves.**
+* **Strongest 5 sessions:** began 4–15 sessions after the start (median 9), i.e. by about Oct 20.
+* **Tops:** came 11–27 sessions after the start (median 21), i.e. **Oct 14 – Nov 5, median about Oct 28**.
+* **Price at the top:** 15–22% above the own flip in most moves, roughly 410–445 on today's flip.
+
+**What would confirm, what would break it.**
+* **Confirmation, in the direction the named moves took:**
+  * call OI building again after Friday
+  * TSLA's own dark-pool index turning up
+  * IV rising with price
+  * price crossing and holding above 400, after which the wall rolled up in the named moves
+* **Break:** a close back under the flip (364 now, about 355 after Friday). In §4s that is where down-bursts doubled; the 350 put strike sits just below.
+* **Midterm:** VIX is flat at 15.4, so no event premium has built for Nov 3 yet.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -915,6 +952,7 @@ python burst_compare.py TSLA  # run-up to past up-bursts vs the last 30 sessions
 python episodes.py           # the named TSLA moves as given, aligned on their start: options state block by block (4v)
 python legs_fig.py            # anatomy and path figures for the named moves (4v)
 python elections.py           # S&P/VIX/gamma/TSLA around every election since 1992, scatter (4v)
+python tsla_now.py            # what the Oct 16 expiry removes, TSLA dark-pool index vs the named moves, calendar (4w)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
