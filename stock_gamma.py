@@ -44,18 +44,22 @@ def frame(sym):
     x["share1"] = m.gamma_share_1d
     x["ret0"] = r.reindex(x.index)
     x["abs0"] = x.ret0.abs()
+    x["abs1"] = x.abs0.shift(-1)          # next session's |move|: the state is read at the close of t
     up, dn = pd.Series(burst_days(c, 1), index=c.index), pd.Series(burst_days(c, -1), index=c.index)
     x["up0"], x["dn0"] = up.reindex(x.index), dn.reindex(x.index)
-    fwd = lambda s, k: s[::-1].rolling(k, min_periods=1).max()[::-1].reindex(x.index)
+    # bursts in sessions t+1..t+k only: the state uses day t's close, so a burst ON day t is what put it there
+    fwd = lambda s, k: s.shift(-1)[::-1].rolling(k, min_periods=1).max()[::-1].reindex(x.index).fillna(0)
     x["up3"], x["dn3"] = fwd(up, 3).astype(bool), fwd(dn, 3).astype(bool)
     x["any3"] = x.up3 | x.dn3
     # volatility-scaled bursts: a day beyond 2x the stock's own prior 60-day daily vol (comparable across tickers)
     sig = r.rolling(60).std().shift(1)
     sup, sdn = (r >= 2 * sig).astype(float), (r <= -2 * sig).astype(float)
     x["sup3"], x["sdn3"] = fwd(sup, 3).astype(bool), fwd(sdn, 3).astype(bool)
-    x["rv5_past"] = (r.rolling(5).std() * np.sqrt(252)).shift(1).reindex(x.index)
-    x["rv20_past"] = (r.rolling(20).std() * np.sqrt(252)).shift(1).reindex(x.index)
-    x["ret20_past"] = np.log(c).diff(20).shift(1).reindex(x.index)
+    # controls known at the close of t (outcomes start at t+1)
+    x["rv5_past"] = (r.rolling(5).std() * np.sqrt(252)).reindex(x.index)
+    x["rv20_past"] = (r.rolling(20).std() * np.sqrt(252)).reindex(x.index)
+    x["ret20_past"] = np.log(c).diff(20).reindex(x.index)
+    x["abs5_past"] = np.log(c).diff(5).abs().reindex(x.index)
     f = spx_frame()
     x["spx_gex_pct"] = f.gex_pct.reindex(x.index).ffill(limit=3)
     x["weekday"] = x.index.day_name()
@@ -77,21 +81,21 @@ def shifted_null(a, b, n=2000, seed=1):
 
 
 def test_moves(x):
-    ctrl = ["rv5_past", "rv20_past", "ret20_past", "spx_gex_pct"]
-    z = x[x.index >= START].dropna(subset=["g_pct", "abs0"] + ctrl)
-    rk = z[["g_pct", "abs0"] + ctrl].rank()
-    raw = rk.g_pct.corr(rk.abs0)
-    pc, a, b = partial_corr(rk, "g_pct", "abs0", ctrl)
+    ctrl = CTRL
+    z = x[x.index >= START].dropna(subset=["g_pct", "abs1"] + ctrl)
+    rk = z[["g_pct", "abs1"] + ctrl].rank()
+    raw = rk.g_pct.corr(rk.abs1)
+    pc, a, b = partial_corr(rk, "g_pct", "abs1", ctrl)
     return {"days": len(z), "raw_rank_corr": raw, "controlled": pc, "shifted_null_p": shifted_null(a.to_numpy(), b.to_numpy())}
 
 
 def burst_table(x):
     z = x[x.index >= START].dropna(subset=["g_pct"]).copy()
     z["gamma"] = pd.qcut(z.g_pct, 3, labels=["low own gamma", "mid", "high own gamma"])
-    t = z.groupby("gamma", observed=True).agg(days=("abs0", "size"), avg_move_pct=("abs0", lambda s: 100 * s.mean()),
+    t = z.groupby("gamma", observed=True).agg(days=("abs1", "size"), avg_move_pct=("abs1", lambda s: 100 * s.mean()),
                                               p_up_burst_3d=("up3", "mean"), p_dn_burst_3d=("dn3", "mean"))
     f = z.groupby(np.where(z.below, "below own flip", "above own flip")).agg(
-        days=("abs0", "size"), avg_move_pct=("abs0", lambda s: 100 * s.mean()), p_up_burst_3d=("up3", "mean"),
+        days=("abs1", "size"), avg_move_pct=("abs1", lambda s: 100 * s.mean()), p_up_burst_3d=("up3", "mean"),
         p_dn_burst_3d=("dn3", "mean"))
     # binomial: are bursts over-represented on low-gamma days?
     for col in ("up3", "dn3"):
@@ -102,11 +106,13 @@ def burst_table(x):
     return t, f
 
 
-def burst_logit(x, target, feature, seed=2, n=500):
-    """Logit of a 3-day burst on an own-gamma feature with controls (past 5/20d vol, past 20d
-    return, S&P gamma pct); p from circular shifts of the feature, which keep its persistence."""
+CTRL = ["rv5_past", "rv20_past", "ret20_past", "abs5_past", "spx_gex_pct"]
+
+
+def burst_logit(x, target, feature, seed=2, n=500, ctrl=CTRL):
+    """Logit of a burst in the next 3 sessions on an own-gamma feature with controls (5/20d vol and
+    |5d| move through day t, past 20d return, S&P gamma pct); p from circular shifts of the feature."""
     from backtest import logit_fit
-    ctrl = ["rv5_past", "rv20_past", "ret20_past", "spx_gex_pct"]
     z = x[x.index >= START].dropna(subset=[feature] + ctrl)
     C = z[ctrl].to_numpy()
     C = (C - C.mean(0)) / C.std(0)

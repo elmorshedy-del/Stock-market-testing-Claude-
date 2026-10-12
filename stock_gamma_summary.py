@@ -57,11 +57,12 @@ def fig(s):
         ticks = [0.25, 0.5, 1, 2, 4]
         a.set_xticks(np.log2(ticks), [f"x{t:g}" for t in ticks])
         a.set_xlim(np.log2(0.2), np.log2(5))
-        a.set_xlabel("change in odds of a burst within 3 sessions (controlled)")
+        a.set_xlabel("change in odds of a burst in the next 3 sessions (controlled)")
         a.set_title(f"when the stock is {cond}", loc="left", fontsize=9.5, color=INK)
         a.grid(axis="y", visible=False)
     ax[1].legend(loc="upper right", fontsize=8)
-    f.suptitle("Each stock's own option gamma, 2021-2026: put-heavy positioning raises down-burst odds and lowers up-burst odds\n"
+    f.suptitle("Each stock's own option gamma, 2021-2026, bursts in the next 3 sessions: once recent volatility is controlled, neither put-heavy "
+               "nor below-flip raises down-burst odds\n"
                "burst = a day beyond 2x the stock's own 60-day vol; controls: past 5/20d vol, past 20d return, S&P gamma; "
                "* p<0.05, ** p<0.01 (shifted null)", x=0.01, ha="left", fontsize=9.5, color=INK)
     f.tight_layout()

@@ -576,16 +576,19 @@ Four sources were tested, each against something known to be true.
 * **Method:** spot is backed out of put-call parity; IV is solved from out-of-the-money mids; gamma uses the same code as §5.
 * **Cross-check:** for Jul–Dec 2022, TSLA gamma rebuilt from ThetaData tracks the independent HistoricalData.net sample at 0.99 correlation (flip level 1.00).
 
-**What TSLA's own gamma does.** The analysis covers 1,449 days (2021-01 to 2026-10). A burst is ±5% in a day or ±9% in two days, measured over the next 3 sessions. Controls are past 5- and 20-day volatility, past 20-day return and S&P gamma. P-values come from circularly shifting the gamma series.
+**What TSLA's own gamma does.** The analysis covers 1,449 days (2021-01 to 2026-10). A burst is ±5% in a day or ±9% in two days, counted in the **next 3 sessions** (t+1 to t+3). Controls are known at the close of t: 5- and 20-day volatility, the |5-day| move, the 20-day return and S&P gamma. P-values come from circularly shifting the gamma series.
 
-* **Below TSLA's own gamma flip:** down-bursts follow 26% of the time vs 14–17% above it. Controlled odds ratio 2.5 (p < 0.001); 2.7 after the §4v fix that reads a missing flip by the sign of net gamma.
-  * It holds in both halves: 30% vs 17% in 2021–mid-2023, and 21% vs 13% from mid-2023 to 2026.
-  * This is the dealer short-gamma mechanism working on the downside.
-* **Put-heavy gamma** (low own-gamma percentile, i.e. near-the-money put gamma outweighs call gamma) doubles down-burst odds (odds ratio 2.1) and roughly halves up-burst odds (0.5).
-* **Up-bursts are not a call squeeze in this data.** Call-heavy days have 17% up-burst odds, the same as any day (17%).
-  * Tesla's up-bursts come from the calendar and events: Mondays (§4o), reports, and the Q4 catch-up.
-  * Their only option-positioning requirement is *not* being put-heavy or below the flip.
-* **Next-session move size:** a little larger when own gamma is low (rank correlation −0.10; −0.05 controlled, p = 0.02). Smaller than in the 2022 sample, which was a bear market.
+> **Corrected (§4z).** The first version of this section counted bursts from day t itself. The positioning is read at day t's close, so a −5% day that pushed TSLA under its flip was counted as a down-burst "after" being below the flip. That produced the earlier "down-bursts ×2.5–2.7 below the flip" and "put-heavy doubles down-bursts". Both disappear once the window starts the next session.
+
+* **Below TSLA's own gamma flip:**
+  * **Down-bursts are not more likely:** 16% vs 18% above the flip. Controlled odds 0.82 (p 0.19).
+  * **Up-bursts are:** 25% vs 14%. Controlled odds 1.45 (p 0.04).
+  * It holds in both halves: up 25% / 24% vs 15% / 13%; down 20% / 12% vs 22% / 15%.
+  * On the volatility-scaled version, both directions are higher raw (up 10% vs 5%, down 13% vs 7%), and neither survives the volatility controls.
+  * **Reading:** below the flip moves get bigger, and the extra big moves are snap-backs, not breakdowns. This matches the named moves in §4v, which launched from the flip after a flush.
+* **Put-heavy gamma:** no effect once recent volatility is controlled (up 0.91, down 0.95; both p > 0.25).
+* **Up-bursts are not a call squeeze.** Call-heavy days have 11% up-burst odds, vs 17% for all days.
+* **Next-session move size:** a little larger when own gamma is low (rank correlation −0.10; −0.05 controlled, p = 0.02).
 * **Monday effect, tested against the gamma expiring the Friday before:**
   * Monday up-burst odds are 11%, 10% and 12% for little, mid and lots of expiring gamma, so the Friday roll-off does not explain Tesla's Monday bursts.
   * After big Friday expiries, Monday down-bursts were rare (1 of 83 vs 4–8), which fits less gamma pinning.
@@ -593,19 +596,19 @@ Four sources were tested, each against something known to be true.
 **Now (Oct 9 close 382.7):**
 * **Flip:** TSLA is 5.1% **above** its own gamma flip (364). Own-gamma percentile is 0.65, neither put- nor call-heavy.
 * **Walls:** call wall 400, put wall 350.
-* **Similar past days** (above the flip, percentile 0.50–0.80; n = 427): up-burst 17.8% vs 16.6% on all days, down-burst 15.5% vs 17.2%. Neutral to slightly favorable.
-* **The level that changes the odds is 364:** a close below it historically doubles the chance of a down-burst.
+* **Similar past days** (above the flip, percentile 0.50–0.80; n = 432): up-burst 15.7% vs 16.6% on all days, down-burst 17.8% vs 17.2%. Neutral.
+* **What 364 means:** below it, moves get bigger and snap-backs more common. It is not a down-burst trigger.
 * **Upside:** 400 is the largest near-term call strike, the obvious magnet and cap into the Oct 16 expiry.
 * **Timing:** the Oct 21 report is priced at a 4.9% move (§4r).
 
-**Same test on MSFT, MU and NVDA** (`stock_gamma_summary.py`). Bursts here are volatility-scaled, a day beyond 2× the stock's own 60-day volatility, so stocks of different volatility compare fairly.
+**Same test on MSFT, MU and NVDA** (`stock_gamma_summary.py`). Bursts here are volatility-scaled, a day beyond 2× the stock's own 60-day volatility, so stocks of different volatility compare fairly. Next 3 sessions, same controls.
 
 ![own gamma across stocks](out/stock_gamma_summary.png)
 
-* **The rule that holds across all four stocks:** when a stock's own gamma is **put-heavy** (bottom third of its trailing-year percentile):
-  * **Down-bursts:** odds rise 1.5–2.6× (TSLA, NVDA p < 0.01; MU p < 0.05; MSFT p = 0.07).
-  * **Up-bursts:** odds fall to 0.3–0.7× (MSFT p < 0.01; MU p < 0.05).
-* **Being below the flip** is a strong signal only for TSLA (down-bursts 2.5×). For MU it mostly halves up-bursts.
+* **No stock shows more down-bursts when put-heavy or below its flip** once recent volatility is controlled. Odds ratios are 0.5–1.4 and none reaches p < 0.05.
+  * This replaces the earlier "put-heavy raises down-bursts 1.5–2.6× in all four", which was the same-day artifact (§4z).
+* **MSFT put-heavy is calmer:** fewer up-bursts (0.46×, p 0.004) and fewer down-bursts (0.63×, p 0.09).
+* **Below the flip, the fixed-size up-bursts rise** for TSLA (1.45×, p 0.04) and NVDA (2.1×, p 0.01).
 * **Call-heavy positioning** never raised up-burst odds in any of the four.
 * **Monday-after-expiry:** no effect for any of them.
 
@@ -613,27 +616,28 @@ Four sources were tested, each against something known to be true.
 
 | Stock | Close | Own-gamma percentile | Own flip | Call wall | Put wall | Read |
 |---|---|---|---|---|---|---|
-| TSLA | 382.7 | 0.65 | 364 (5% below) | 400 | 350 | neutral; 364 is the line to hold |
-| MSFT | 535.2 | 0.98 | 442 (17% below) | 550 | 500 | heavily call-weighted, pinned below 550; no put-heavy drag |
-| MU | 1,028 | 0.46 | 997 (3% below) | 1,100 | 1,000 | balanced, close to its flip; a close below ~1,000 removes upside odds |
+| TSLA | 382.7 | 0.65 | 364 (5% below) | 400 | 350 | neutral; below 364 moves get bigger |
+| MSFT | 535.2 | 0.98 | 442 (17% below) | 550 | 500 | heavily call-weighted, pinned below 550 |
+| MU | 1,028 | 0.46 | 997 (3% below) | 1,100 | 1,000 | balanced, close to its flip |
 | NVDA | 229.4 | 0.52 | 208 (9% below) | 240 | 200 | balanced, far above its flip |
 
-None of the four is put-heavy today, so none carries the elevated down-burst risk.
+None of the four is put-heavy today. After the §4z correction that no longer implies a down-burst risk either way.
 
 **QQQ (Nasdaq-100) gamma, same method.**
-* **Below its own flip** (54% of days, since index funds carry heavy hedging puts): big moves in **both** directions.
-  * Volatility-scaled up-bursts 9.4% vs 4.9% above the flip; down-bursts 16.0% vs 5.2% (controlled odds 1.65× for down, p = 0.02).
-  * This is the same negative-gamma behavior as S&P gamma (§4j).
-* **Put-heavy QQQ:** down-burst odds 2.0× (p = 0.01).
+* **Below its own flip** (54% of days, since index funds carry heavy hedging puts): bigger moves.
+  * Volatility-scaled up-bursts 11.7% vs 2.2% above the flip; down-bursts 14.1% vs 7.5%.
+  * Controlled, the up-bursts survive (3.8×, p < 0.001) and the down-bursts don't (1.3×, p 0.12).
+  * Like S&P gamma (§4j): low gamma predicts movement, and the extra movement leans to rebounds.
+* **Put-heavy QQQ:** no reliable effect (down 1.3×, p 0.18).
 * **QQQ gamma adds no consistent signal for the stocks:**
-  * Added on top of each stock's own gamma and S&P gamma, only 4 of 16 tests reach p < 0.05, and their signs disagree. For example, TSLA's down-bursts rise 1.6× when QQQ is below its flip, yet fall when QQQ is put-heavy.
+  * Added on top of each stock's own gamma and S&P gamma, only 4 of 16 tests reach p < 0.05, and their signs disagree (run with the pre-§4z window; not rerun). For example, TSLA's down-bursts rise 1.6× when QQQ is below its flip, yet fall when QQQ is put-heavy.
   * **Conclusion:** use each stock's own gamma; Nasdaq gamma is for trading QQQ itself.
-* **Now:** QQQ closed Oct 9 at 751.2, **on its gamma flip (749)**, with the call wall at 760 and the put wall at 700. A close below ~749 puts the Nasdaq-100 in its negative-gamma regime, where moves get larger both ways.
+* **Now:** QQQ closed Oct 9 at 751.2, **on its gamma flip (749)**, with the call wall at 760 and the put wall at 700. A close below ~749 puts the Nasdaq-100 in its negative-gamma regime, where moves get larger and rebounds more common.
 
 **SPY gamma, same method, vs SqueezeMetrics.**
 * **Agreement:** SPY gamma tracks SqueezeMetrics' S&P gamma at 0.67 over 2021–2026 (0.59–0.92 by year). As percentiles, the inputs the ladder and reset rules use, they correlate at 0.83, and the "reset zone" reading (≤ 0.30) agrees on 85% of days.
 * **Why it's lower than the 0.96 for S&P index options in §4r:** SPY options have a different owner base.
-* **New information:** put-heavy SPY gamma doubles S&P down-burst odds **after controlling for SqueezeMetrics' gamma** (odds ratio 2.0, p = 0.002). Below-flip adds nothing once SqueezeMetrics is in, and nothing predicts up-bursts.
+* **After the §4z correction:** put-heavy SPY gamma no longer predicts down-bursts (1.0×, p 0.45). Below the flip, SPY's up-bursts rise (2.8×, p < 0.001) and its down-bursts don't (0.7×, p 0.13).
 * **Now:** SPY closed Oct 9 at 778.6, just above its own flip (775). Own-gamma percentile 0.85, not put-heavy. Call wall 800, put wall 740.
 
 ## 4t. The Tesla up-bursts, one by one, against Tesla's own options (`burst_gamma.py`, `burst_gamma_fig.py`)
@@ -646,16 +650,16 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
 
 **Results.**
 * **Before up-bursts:** 50% of up-bursts started from the bottom third ("freed") vs 28% of all days.
-* **Controls:** with recent moves (|5d|, |20d|), past volatility, trend, S&P gamma, own put-heaviness **and 30-day implied vol** controlled, freed days carry 1.9× the up-burst odds for TSLA (p = 0.003).
-  * MSFT 3.6× (p = 0.02) and NVDA (volatility-scaled) 2.4× (p < 0.001) hold too; MU does not.
+* **Controls** (rerun strictly forward in §4z): with recent volatility, the |5-day| move, the 20-day return, S&P gamma, own gamma **and 30-day implied vol** controlled, freed days carry **1.8×** the up-burst odds for TSLA (p < 0.01). The volatility-scaled version gives 1.9× (p 0.02). Down-bursts are not raised (0.8×, p 0.18).
+  * NVDA (volatility-scaled) 1.8× (p 0.02) and MSFT 1.5× (p 0.12) point the same way; MU does not.
   * The implied-vol control matters because high IV mechanically lowers gamma; the OI-share measure is IV-free by construction.
-* **Freed means bigger moves both ways; positioning picks the direction.** Volatility-scaled bursts within 3 sessions:
+* **Freed means bigger moves; with volatility controlled, the extra moves are up-moves.** Raw volatility-scaled bursts in the next 3 sessions (the supportive / not split does not separate direction once the window starts the next session):
 
 | | TSLA up / down | MSFT up / down | MU up / down | NVDA up / down |
 |---|---|---|---|---|
-| freed + not put-heavy + above own flip | **9% / 7%** | **12% / 7%** | **14% / 6%** | **14% / 4%** |
-| freed + put-heavy or below own flip | 11% / 23% | 7% / 11% | 7% / 12% | 10% / 14% |
-| not freed | 5% / 7% | 6% / 8% | 8% / 8% | 6% / 6% |
+| freed + not put-heavy + above own flip | 6% / 9% | 11% / 10% | 10% / 6% | 11% / 5% |
+| freed + put-heavy or below own flip | 15% / 18% | 9% / 7% | 7% / 9% | 13% / 9% |
+| not freed | 5% / 7% | 5% / 8% | 9% / 9% | 6% / 7% |
 
 **The bursts you named.** For each one: near-money OI (low/mid/high), positioning, and what happened.
 
@@ -679,7 +683,7 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
 
 **Now (Oct 9).**
 * **TSLA:** near-money OI at the 48th percentile, not freed. It was freed all through late September (4th–22nd percentile) before the Oct 2 +4.6% day.
-* **NVDA:** **freed (25th percentile) with supportive positioning** (balanced, 10% above its flip) and 30-day IV at the 8th percentile. That is the up-tilted setup, with cheap options.
+* **NVDA:** **freed (25th percentile)**, the state with higher up-burst odds (1.8× for NVDA, controlled), and 30-day IV at the 8th percentile, so options are cheap.
 * **MSFT:** not freed (43rd percentile).
 * **MU:** not freed (68th percentile, IV at the 1st percentile), pinned.
 
@@ -710,7 +714,7 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
 * **Unusual today:** S&P DIX at the 91st percentile (only late May '25 was as high) and cheap IV (only Sep '25 and Nov '25 were as low).
 
 **Reading.**
-* **Positioning already allows an up-burst:** above the flip, not put-heavy.
+* **Positioning:** above the flip, not put-heavy. After the §4z correction neither condition blocks up-bursts, so this is neutral.
 * **The missing piece is the "freed" state.** The up-tilted setup turns on if OI near the price falls back into its bottom third (≤ 0.33) while TSLA holds above its flip (364).
 * **The call wall at 400 (4.5% above):** the two named bursts that started within 1% of their call wall (Jul '24, May '25) broke through it.
 
@@ -844,7 +848,7 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
   * TSLA's own dark-pool index turning up
   * IV rising with price
   * price crossing and holding above 400, after which the wall rolled up in the named moves
-* **Break:** a close back under the flip (364 now, about 355 after Friday). In §4s that is where down-bursts doubled; the 350 put strike sits just below.
+* **Below the flip (364 now, about 355 after Friday):** not a down signal on TSLA's own history (§4z). It is where moves get bigger and snap-backs more common. The thesis breaks on price, not on this line; the 350 put strike sits just below.
 * **Midterm:** VIX is flat at 15.4, so no event premium has built for Nov 3 yet.
 
 ## 4x. MSFT continuation and the S&P Q4 window, by analogs (`outlook.py`)
@@ -920,6 +924,65 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
   * The July move was not a dealer unwind. Before the Jul 29 report its own dark-pool share sat at the 8th percentile. It jumped to the top right after the gap and has stayed high (about 0.7–1.0 trailing-year percentile).
   * Buyers are still there. Call OI is a record (100%). Put hedge is in its bottom third (23%).
   * **Read: no flow is set to push a continuation leg before the Oct 28 report (after the close).** The report is the trigger; until then, heavy call OI leans against it.
+
+## 4z. Multiverse on each stock's OWN positioning, and a correction (`own_multiverse.py`, `own_multiverse_fig.py`)
+
+![own multiverse](out/own_multiverse.png)
+
+**Why.**
+* The multiverse in §4j tested S&P gamma. In §4k, S&P gamma said nothing about TSLA (joint p 0.74).
+* The TSLA findings since then (§4s, §4t) use TSLA's own chain, but each was tested under one set of choices. This runs every reasonable choice.
+
+**Setup.** 2,016 specifications per stock, every combination of:
+* **Signal:**
+  * % above own flip ≤ +2 / 0 / −3 / −6
+  * own-gamma percentile ≤ 0.1–0.4 (put-heavy)
+  * near-price OI percentile ≤ 0.1–0.4 (freed)
+* **Move:** fixed burst (±5% day / ±9% two days), volatility-scaled burst (2× own 60-day σ), or decile 10-day leg.
+* **Direction:** up / down, plus the plain forward return.
+* **Horizon:** 3 / 5 / 10 / 20 sessions.
+* **Era:** 2021+ / 2021–23 / 2024+.
+* **Days:** "turn-on" (first day the signal is on, ≥ 10 sessions apart, as §4j) or "in state" (every day it is on, as §4s).
+
+Every outcome starts the session **after** the reading. **Null:** slide the positioning frame against prices, 300 times. By luck, about 5% of specifications land beyond each 5% tail.
+
+**The correction it found.**
+* The multiverse disagreed with §4s. The cause: §4s counted bursts from day t itself, while the positioning is read at day t's close. A −5% day that pushed TSLA under its flip was scored as a down-burst "after" being below the flip.
+* Fixed in `stock_gamma.py`: bursts now start at t+1, controls include day t, and the next-session move is the next session.
+* §4s and §4t are rewritten with the corrected numbers:
+  * The "below the flip → down-bursts ×2.5–2.7" result is gone.
+  * So is "put-heavy doubles down-bursts across four stocks".
+  * The "freed" result survives.
+* §4j (S&P) is unaffected; its outcomes already started the next session.
+
+**TSLA (2021-01 to 2026-10).**
+
+| Reading | In state: up-moves | In state: down-moves | Turn-on | Forward return |
+|---|---|---|---|---|
+| Below own flip | **63% of specs beyond luck**, +12 pts, joint p < 0.003 | 20%, p 0.22 | weak (p 0.11–0.19) | none (p 0.66–0.96) |
+| Put-heavy | 43%, +6 pts, p 0.003 | 13%, p 0.52 | slightly *fewer* down-moves (p 0.06) | none |
+| Freed | **65%, +11 pts, p < 0.003** | 48%, +9 pts, p < 0.003 | both up (p < 0.003) | none (p 0.32–0.47) |
+
+**With recent volatility controlled** (logits, next 3 sessions):
+* **Freed → up-bursts 1.8×** (p < 0.01); volatility-scaled 1.9× (p 0.02). Down-bursts are not raised.
+* **Below flip → up-bursts 1.45×** (p 0.04). Down-bursts 0.82× (p 0.19).
+* **Put-heavy:** nothing.
+
+**MSFT.**
+* **Freed, in state:** more up-moves (51% of specs beyond luck, p < 0.003) and a higher forward return (+0.6 pts median, p 0.02). Controlled: 1.5× (p 0.12).
+* **Below flip, turn-on:** more up-moves (p 0.03).
+* **Put-heavy:** calmer (fewer bursts both ways).
+
+**Reading.**
+* **Positioning predicts movement, not direction.** No reading moves forward returns robustly for TSLA.
+* **Being in the state matters more than the day it turns on.**
+* **The extra big moves lean up:** snap-backs from below the flip, and up-bursts from the freed state. Breakdowns don't increase.
+* **This agrees with §4j for the S&P:** low gamma predicts that a big up-leg starts, not a higher average return.
+* **It agrees with the named moves (§4v),** which launched from the flip after a flush.
+
+**Now (Oct 9).**
+* **TSLA:** no reading is on. It is 5.2% above its flip, own gamma is at 0.65 and near-price OI at 0.48. The one reading with a robust up-tilt is **freed**. Watch whether near-price OI falls into its bottom third after Friday's Oct 16 expiry.
+* **MSFT:** no reading is on (21% above flip, own gamma 0.98, near-price OI 0.43).
 
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
@@ -1030,6 +1093,8 @@ python tsla_now.py            # what the Oct 16 expiry removes, TSLA dark-pool i
 python outlook.py             # MSFT and S&P analog outlook with luck and robustness checks; Q4 seasonality (4x)
 python mech_book.py SPY MSFT  # dealer hedge book per day from the ThetaData chains -> out/mech_book_{SYM}.csv (4y)
 python mechanics.py           # which mechanics push price (own data), today's readings, Q4 check (4y)
+python own_multiverse.py TSLA MSFT NVDA MU   # 2,016-spec multiverse on own positioning + controlled logits (4z)
+python own_multiverse_fig.py TSLA MSFT        # figure for 4z
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv

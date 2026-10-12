@@ -31,8 +31,8 @@ def main(sym):
     fig, ax = plt.subplots(1, 2, figsize=(12, 4.8), gridspec_kw={"width_ratios": [1, 1.25]})
     a = ax[0]
     xs = np.arange(len(t))
-    a.bar(xs - 0.2, 100 * t.dn, width=0.38, color=C2, label="down-burst within 3 days")
-    a.bar(xs + 0.2, 100 * t.up, width=0.38, color=C3, label="up-burst within 3 days")
+    a.bar(xs - 0.2, 100 * t.dn, width=0.38, color=C2, label="down-burst in the next 3 sessions")
+    a.bar(xs + 0.2, 100 * t.up, width=0.38, color=C3, label="up-burst in the next 3 sessions")
     for i, (d, u) in enumerate(zip(t.dn, t.up)):
         a.annotate(f"{100 * d:.0f}%", (i - 0.2, 100 * d), ha="center", va="bottom", fontsize=8, color=INK, xytext=(0, 2), textcoords="offset points")
         a.annotate(f"{100 * u:.0f}%", (i + 0.2, 100 * u), ha="center", va="bottom", fontsize=8, color=INK, xytext=(0, 2), textcoords="offset points")
@@ -43,8 +43,8 @@ def main(sym):
     a.set_ylim(0, 100 * max(t.dn.max(), t.up.max()) * 1.25)
     a.legend(loc="upper right", fontsize=8)
     a.grid(axis="x", visible=False)
-    a.set_title(f"{sym} 2021-2026: its own option gamma vs what follows\nput-heavy / below the flip -> down-bursts; "
-                "calls don't 'squeeze' it up", loc="left", fontsize=9.5, color=INK)
+    a.set_title(f"{sym} 2021-2026: its own option gamma vs bursts in the NEXT 3 sessions\nbelow the flip -> more up-bursts (snap-backs), "
+                "not more down-bursts; calls don't 'squeeze' it up", loc="left", fontsize=9.5, color=INK)
     a.annotate("above-flip days split into terciles of own-gamma percentile; dotted = all days", (0, -0.2),
                xycoords="axes fraction", fontsize=7.5, color=MUTED)
 
@@ -52,7 +52,7 @@ def main(sym):
     z = x[x.index >= x.index[-1] - pd.Timedelta(days=180)]
     c = load_bars(sym).close.reindex(z.index)
     a.plot(z.index, c, color=INK, lw=2, label=f"{sym} close")
-    a.plot(z.index, z.flip, color=C2, lw=2, label="own gamma flip (below = down-burst odds x2.5)")
+    a.plot(z.index, z.flip, color=C2, lw=2, label="own gamma flip (below = bigger moves, more snap-backs)")
     a.step(z.index, z.call_wall, where="post", color=C3, lw=1.5, label="call wall (largest near-term call OI)")
     a.step(z.index, z.put_wall, where="post", color=C1, lw=1.5, label="put wall (largest near-term put OI)")
     a.fill_between(z.index, c, z.flip, where=c < z.flip, color=C2, alpha=0.12, lw=0)
