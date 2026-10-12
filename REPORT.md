@@ -872,6 +872,55 @@ None of the four is put-heavy today, so none carries the elevated down-burst ris
   * 2020–2025: +6.2%, 6 of 6 up.
   * Midterm years: +5.6%, 6 of 8 up.
 
+## 4y. The mechanics that push price, measured (`mech_book.py`, `mechanics.py`, data to the Oct 9 close)
+
+![mechanics](out/mechanics.png)
+
+**Question.** Seasonality is a proxy. Which flows actually push the S&P and MSFT, and are they loaded now? Each asset is read on its own data only.
+
+**The flows.** Each one can be computed before it happens.
+* **Dealer put decay (charm + expiry).** Dealers short the puts customers hold are short stock as a hedge. If spot and IV stay put, they buy it back as the puts lose delta and expire. Measured as dealer delta now vs 20 sessions later, contract by contract (SPY and MSFT chains, 2020+). Expressed in days of the asset's own dollar volume.
+* **Dealer put release (vanna).** The same book, if implied vol fell to the vol actually being realised (20-day).
+* **Hedge build.** VIX vs its own 6-month median: how much protection has been bought (S&P, 1990+).
+* **Vol-control re-leveraging.** Exposure change already scheduled for funds that size by realised vol, as old days leave the 63-day window and new days arrive at the VIX rate (S&P, 1990+).
+* **Dark-pool buying.** DIX (S&P, 2012+) and each asset's own FINRA off-exchange short share (2018+).
+
+**Test.** Forward 20-session return in each gauge's top third minus its bottom third. The null slides the gauge against returns by at least 60 sessions (keeps both series' persistence).
+
+**Result: dealer re-hedging does not push price.**
+* **S&P / SPY:**
+  * Put decay: top third −1.6 points vs bottom third (p 0.15). Its sign is negative in every year 2020–26, and stays negative net of the past 20-day return.
+  * Put release: +0.3 (p 0.76).
+  * Hedge build: +0.5 (p 0.26).
+  * Vol-control: −0.5 (p 0.23).
+* **Size check:** the scheduled SPY put decay averages about half a day of SPY volume spread over 20 sessions, roughly 2–3% of daily volume.
+* **MSFT:** none of its own dealer flows clears luck (p 0.47–0.86).
+
+**What has the right sign is buying.**
+* **DIX:** +0.9 points (p 0.06).
+* **SPY's own dark-pool share:** +0.9 (p 0.21).
+* **MSFT's own:** +0.8 (p 0.52).
+* **TSLA's own (same test):** top third beats bottom third too.
+* Each alone is weak; the direction agrees across all four.
+* **MSFT's record call OI** has come before weaker months: −1.6 points (p 0.25). This matches 4x.
+
+**Q4 is not a mechanic we can see.**
+* **Dark-pool buying is lower in Oct–Nov:** trailing-year percentile 0.44 vs 0.52 in other windows. Adding DIX to a Q4 regression leaves the Q4 effect unchanged.
+* **Hedge build doesn't matter for Q4:** Q4 was up 88% of years with a build into Oct 12 and 83% without. Correlation with the Q4 return: −0.05.
+* **Not the buyback calendar:** Q1–Q3 are weakest in weeks 5–9, inside the open buyback window (weeks 5–11). Q4's strength sits in weeks 1–6.
+
+**Now (Oct 9 close).**
+* **S&P:**
+  * DIX in its top third (89%): the one supportive flow.
+  * SPY's own dark-pool share fell to its bottom third over the last 3 sessions (27%).
+  * Hedge build in the middle (38%): there is little protection to release, and no election hedge build (4v).
+  * The dealer flows are in their top third, but they carry no push.
+  * **Read: mild up-lean from buyers, no mechanical accelerant.** Confirmation would be SPY's own dark-pool share rejoining DIX in the top third.
+* **MSFT:**
+  * The July move was not a dealer unwind. Before the Jul 29 report its own dark-pool share sat at the 8th percentile. It jumped to the top right after the gap and has stayed high (about 0.7–1.0 trailing-year percentile).
+  * Buyers are still there. Call OI is a record (100%). Put hedge is in its bottom third (23%).
+  * **Read: no flow is set to push a continuation leg before the Oct 28 report (after the close).** The report is the trigger; until then, heavy call OI leans against it.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -979,6 +1028,8 @@ python legs_fig.py            # anatomy and path figures for the named moves (4v
 python elections.py           # S&P/VIX/gamma/TSLA around every election since 1992, scatter (4v)
 python tsla_now.py            # what the Oct 16 expiry removes, TSLA dark-pool index vs the named moves, calendar (4w)
 python outlook.py             # MSFT and S&P analog outlook with luck and robustness checks; Q4 seasonality (4x)
+python mech_book.py SPY MSFT  # dealer hedge book per day from the ThetaData chains -> out/mech_book_{SYM}.csv (4y)
+python mechanics.py           # which mechanics push price (own data), today's readings, Q4 check (4y)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
