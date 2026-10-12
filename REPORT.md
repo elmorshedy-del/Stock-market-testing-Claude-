@@ -620,6 +620,16 @@ Four sources were tested, each against something known to be true.
 
 None of the four is put-heavy today, so none carries the elevated down-burst risk.
 
+**QQQ (Nasdaq-100) gamma, same method.**
+* **Below its own flip** (54% of days, since index funds carry heavy hedging puts): big moves in **both** directions.
+  * Volatility-scaled up-bursts 9.4% vs 4.9% above the flip; down-bursts 16.0% vs 5.2% (controlled odds 1.65× for down, p = 0.02).
+  * This is the same negative-gamma behavior as S&P gamma (§4j).
+* **Put-heavy QQQ:** down-burst odds 2.0× (p = 0.01).
+* **QQQ gamma adds no consistent signal for the stocks:**
+  * Added on top of each stock's own gamma and S&P gamma, only 4 of 16 tests reach p < 0.05, and their signs disagree. For example, TSLA's down-bursts rise 1.6× when QQQ is below its flip, yet fall when QQQ is put-heavy.
+  * **Conclusion:** use each stock's own gamma; Nasdaq gamma is for trading QQQ itself.
+* **Now:** QQQ closed Oct 9 at 751.2, **on its gamma flip (749)**, with the call wall at 760 and the put wall at 700. A close below ~749 puts the Nasdaq-100 in its negative-gamma regime, where moves get larger both ways.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
