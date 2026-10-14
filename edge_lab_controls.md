@@ -56,7 +56,7 @@ Real data: TSLA 2021-01-01 .. 2026-10-09.
 
 ## Proving each check can fail
 
-* **F1:** in P1, swap the inequality in the p-value (count shifts with a smaller lift). The calibration check must fail.
+* **F1 (amended before the first run, see below):** in P1, replace the time-shift null with an iid null that draws signal days at random and ignores their persistence. The calibration check must fail: false-positive rate above 8%.
 * **F2:** in P3, plant with a k that can fall on day t (k ∈ {0, 1, 2}). Recovery against the forward-window expectation must miss by more than 2 pts.
 
 ## Applying the gate to real results
@@ -64,3 +64,10 @@ Real data: TSLA 2021-01-01 .. 2026-10-09.
 The real "freed and below flip" lift (§4w) is placed on the profile (a) power curve, and the 7 named moves on profile (c).
 * A real result counts as **robust** only if its lift exceeds profile (a)'s 80%-power lift and its p < 0.05.
 * Anything below that lift is **unresolved**, not "confirmed".
+
+## Amendment log
+
+* **2026-10-14, before any run of `edge_lab.py`:** F1 as first written (swap the p-value inequality) could not fail.
+  * With no true effect, both one-sided p-values are uniform, so the false-positive rate stays near 5% either way. It was a check that cannot fail (planted-truth §5).
+  * Replaced by an iid-null break, which ignores the signal's persistence and should inflate false positives.
+  * No result had been seen when this was changed.
