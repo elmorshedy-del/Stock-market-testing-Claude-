@@ -1135,6 +1135,57 @@ Every outcome starts the session **after** the reading. **Null:** slide the posi
 * **So big up days do cluster on Mondays, but they did not time your moves.** The start and the day that made each move came on any weekday, mostly from an event.
 * **For the next move, watch events and positioning, not the weekday:** the Oct 21 report (reaction Thursday Oct 22), and freed plus below-flip (§4w update).
 
+## 4ad. How big must an edge be before a backtest can see it? A BootLoops-protocol experiment (`edge_lab.py`, `edge_lab_controls.md`)
+
+![edge lab](out/edge_lab.png)
+
+**What BootLoops contributed.** Its toolkit (github.com/BootLoops-ai/bootloops) is for exact physics calculations. Its protocol library (github.com/BootLoops-ai/skills) is general. Two protocols were followed:
+* **`planted-truth`:** plant a known answer and demand the method recovers it, catch deliberately corrupted inputs, and prove every check can fail.
+* **`acceptance-gate`:** a result is done only after it survives a check that could have failed.
+
+The controls and pass criteria were written and committed before the run (`edge_lab_controls.md`, commit 4caf9bf). One was amended before the first run because, as written, it could not fail; the amendment log records why.
+
+**Setup.**
+* Production path under test: the TSLA burst pipeline of §4w/§4z. Daily closes → bursts → up-burst in the next h sessions → lift on signal days → time-shifted luck check.
+* Plants: after signal days, with probability q, one of the next sessions gets a +6% day. The expected lift is computed by a separate, simpler implementation.
+* Each scenario ran 200–400 times, through the same code path as the real result.
+
+**Results.**
+
+| Control | Result | Verdict |
+|---|---|---|
+| Luck check, false alarms with no true edge (time-shifted signal) | 2.75% of 400 | pass (well calibrated, slightly conservative) |
+| Same, with prices resampled in blocks | 5.0% of 400 | pass |
+| A naive luck check that ignores the signal's persistence | 8.75% false alarms | breaks, as it should; naive tests overstate edges |
+| Same-day timing leak (the §4z bug) on a "dip today" signal | fake +40-pt down-burst edge, p < 0.001; the true forward effect is −9 pts | leak detector fires; clean twin silent |
+| Week-start dates read as event days (the §4ac mistake) | 100% of dates on one weekday vs 37.5% for the actual days | detector fires; actual dates silent |
+| Machinery nulls (no signal, all days, all-zero outcome) | no events / exactly 0 / exactly 0 | pass |
+| **Plant recovery** | recovered lift 9, 15, 18 pts vs planted 13, 24, 34 | **fired**, see below |
+
+**The control that fired.**
+* Plant recovery fell short, so the protocol stopped the run until the root cause was found.
+* **The cause:** `burst_days` counts a new burst only if no big day came in the previous 3 sessions. So it measures "a new burst starts", not "a big up day happens".
+  * In TSLA 2021–26 this hides 23 of 103 big up days.
+  * With that rule switched off, the plants come back exactly (12.7 for 12.7, 33.8 for 33.8).
+* **Consequence:**
+  * Edges whose extra big days cluster are under-measured, by roughly 30–50% in these plants.
+  * The real freed-and-below-flip result barely moves without the rule (+22.8 → +21.5 pts, p < 0.001), so it is not an artefact of it.
+* The frozen criterion stays failed; the diagnosis is recorded beside it in `out/edge_lab.json`.
+
+**The deliverable: detection limits on a TSLA-like stock** (power curves above):
+
+| Signal like | Episodes | Edge needed to be seen 80% of the time |
+|---|---|---|
+| freed and below own flip (about 150 days) | about 60 | **+17 pts** in 3-session up-burst odds (base 17%) |
+| freed (about 400 days) | about 120 | **+10 pts** |
+| 7 hand-picked events (like the named moves), 10-session window | 7 | **never reached:** a true +22-pt edge is flagged only 22% of the time |
+
+**Reading.**
+* **The real freed-and-below-flip edge (+22.8 pts, p < 0.001) clears its detection limit (+17 pts) and passes the gate: robust.**
+* **Freed alone (+10.5 pts, p < 0.001) sits right at its limit (+10 pts): real, but only just resolvable.**
+* **Seven hand-picked examples cannot confirm or refute a pattern, however clear it looks on a chart.** That is why the named moves (§4v) were turned into rules with many events before testing.
+* **The biggest danger is timing, not noise.** A one-day leak manufactured a +40-pt fake edge, larger than any real one found here. The strictly-forward check catches it.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -1251,6 +1302,7 @@ python held_back.py MSFT AAPL AMZN GOOGL META NVDA AVGO   # leader held back by 
 python held_back_fig.py        # figure for 4aa
 tfm_env/bin/python timesfm_check.py   # TimesFM 2.5 zero-shot vs simple baselines, post-release origins (4ab)
 python named_weeks.py          # the named TSLA moves as a day-by-day calendar (4ac)
+python edge_lab.py             # planted-truth power curves and controls, frozen in edge_lab_controls.md (4ad); --quick for a timing run
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
