@@ -11,7 +11,9 @@ For each trading day it gives:
 
 A live tool redraws the map intraday from today's OI.
 
-The source is `research/log_channels` in the `genovy` repo, where every result built on it is written up.
+It was built in [`research/microstructure`](../../research/microstructure), where every result that uses it is written up.
+
+**Check it yourself before relying on it:** `python verify.py` runs 5 checks against synthetic chains with known answers. Add `--study ../../research/microstructure` for 3 more checks on real data: it reproduces the saved output, confirms OI timing, and confirms the dealer sign against SqueezeMetrics.
 
 ## Files
 
@@ -22,7 +24,8 @@ The source is `research/log_channels` in the `genovy` repo, where every result b
 | `hd_gamma.py` | `day_metrics()`: the per-day metrics (GEX, flip, walls, shares). Also holds an older builder for HistoricalData.net CSV samples. |
 | `options_flow.py` | Black-Scholes greeks, `exposures()` (the GEX formula and sign convention) and `gex_profile()`. Its Yahoo functions (`load_chain`, `summary`) need `fetch.py` from the source repo. |
 | `common.py` | Paths (`data/`, `out/`) and a Yahoo daily-bar loader. |
-| `live_check.py` | Intraday: today's OI at a live price, the flip now vs after the next expiry, and OI changes by strike. Called `tsla_live.py` in the source repo. |
+| `live_check.py` | Intraday: today's OI at a live price, the flip now vs after the next expiry, and OI changes by strike. Called `tsla_live.py` in the study. |
+| `verify.py` | Independent checks of everything above (see *What is verified*). Exit code 1 if any fail. |
 
 ## Setup
 
@@ -89,12 +92,19 @@ print(m[["spot", "flip_classic", "below_flip", "near_pct", "freed"]].tail())
 
 ## What is verified, and what is not
 
-* **Verified:**
-  * The exposure code reproduces SqueezeMetrics' published S&P GEX at a correlation of 0.96 (0.90 on daily changes), using a 2022 SPX end-of-day sample. The all-short convention gets −0.34.
-  * SPY gamma from this engine tracks SqueezeMetrics at 0.67 in levels and 0.83 as percentiles (2021–2026).
-  * This folder reproduces the source repo's TSLA output exactly (Sep–Oct 2026 test).
+* **Verified (run `verify.py` to see each one yourself):**
+  * A1–A5 use synthetic chains with known answers:
+    * implied-vol round trip
+    * spot from put-call parity (within 0.1%; parity ignores discounting)
+    * calls add and puts subtract gamma
+    * the GEX units equal the finite-difference change in dealer delta
+    * the flip sits between the put and call walls with a sign change across it
+  * B1: rebuilding from the raw files reproduces the saved output exactly.
+  * B2: OI dated t is the prior close. The change in OI from t to t+1 tracks day t's volume (rank correlation 0.93), not day t+1's (0.77).
+  * B3: the classic sign agrees with the published benchmark. SPY gamma tracks SqueezeMetrics' published S&P GEX at 0.67 in levels and 0.83 as percentiles (2021–2026); the all-short convention gets −0.38.
+  * Earlier, not re-runnable here: on a licensed 2022 SPX sample, the same exposure code matched SqueezeMetrics at 0.96 (0.90 on daily changes).
 * **Assumed, not tested:**
-  * The dealer sign. There are no signed (buy/sell) option trades, so who is long or short is assumed.
+  * The dealer sign for single stocks. B3 supports the classic sign for SPY, but SqueezeMetrics makes the same assumption. Without signed (buy/sell) option trades, who is long or short in TSLA or MSFT options is not observed.
   * 0DTE positions are invisible, because OI is end-of-day.
   * Where an expiry has fewer than 3 usable IVs, it falls back to the expiry's (or the day's) median IV.
 * **Use outcomes strictly forward.** Positioning on row t is known at t's close, so outcomes must start at t+1. Counting day t's own move produced fake effects in the research (since corrected).

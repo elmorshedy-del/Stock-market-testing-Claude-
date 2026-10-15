@@ -3,6 +3,7 @@ Planted-truth and acceptance-gate protocols from BootLoops (github.com/BootLoops
 to the TSLA burst pipeline. The controls and pass criteria were frozen in edge_lab_controls.md
 (committed before this file ran); this script runs exactly that battery and prints counts with denominators.
 Usage: python edge_lab.py [--quick]      -> out/edge_lab.json, out/edge_lab_power.csv, out/edge_lab.png
+       (--quick: 20 replicates, about 10 seconds, writes the same files with a _quick suffix)
 """
 import json
 import sys
@@ -16,6 +17,7 @@ from stock_gamma import START, frame
 from stock_now import burst_days
 
 QUICK = "--quick" in sys.argv
+TAG = "_quick" if QUICK else ""        # a quick run never overwrites the full results
 NSHIFT, MINSHIFT = 1000, 60
 REPS = {"P1": 400, "P2": 400, "P3": 200, "P4": 300}
 if QUICK:
@@ -217,7 +219,7 @@ def main():
             rows.append({"profile": name, "q": q, "true lift (pts)": 100 * float(np.mean(exps)), "detected %": 100 * float(np.mean(det)),
                          "recovered lift (pts)": 100 * float(np.mean(lifts)), "reps": len(det)})
     pw = pd.DataFrame(rows)
-    pw.to_csv(OUT / "edge_lab_power.csv", index=False)
+    pw.to_csv(OUT / f"edge_lab_power{TAG}.csv", index=False)
     mdl = {}
     for name, g in pw.groupby("profile", sort=False):
         g = g.sort_values("true lift (pts)")
@@ -251,7 +253,7 @@ def main():
     thr = mdl[a]
     res["gate: real freed&below"] = {"lift pts": 100 * real["lift"], "p": real["p"], "80%-power lift pts": thr,
                                      "verdict": "robust" if (thr is not None and 100 * real["lift"] > thr and real["p"] < 0.05) else "unresolved"}
-    (OUT / "edge_lab.json").write_text(json.dumps(res, indent=1, default=float))
+    (OUT / f"edge_lab{TAG}.json").write_text(json.dumps(res, indent=1, default=float))
     return res, pw
 
 
@@ -288,7 +290,7 @@ def figure(res, pw):
                 f"like freed {fmt(m[next(k for k in m if k.startswith('b:'))])}, "
                 f"7 hand-picked events {fmt(m[next(k for k in m if k.startswith('c:'))])}", loc="left", fontsize=10, color=INK)
     f.tight_layout()
-    f.savefig(OUT / "edge_lab.png", dpi=150)
+    f.savefig(OUT / f"edge_lab{TAG}.png", dpi=150)
 
 
 if __name__ == "__main__":
@@ -298,4 +300,4 @@ if __name__ == "__main__":
     print(pw.round(1).to_string(index=False))
     if not QUICK:
         figure(res, pw)
-        print("saved", OUT / "edge_lab.png")
+        print("saved", OUT / f"edge_lab{TAG}.png")

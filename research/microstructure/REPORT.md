@@ -1465,7 +1465,8 @@ python held_back.py MSFT AAPL AMZN GOOGL META NVDA AVGO   # leader held back by 
 python held_back_fig.py        # figure for 4aa
 tfm_env/bin/python timesfm_check.py   # TimesFM 2.5 zero-shot vs simple baselines, post-release origins (4ab)
 python named_weeks.py          # the named TSLA moves as a day-by-day calendar (4ac)
-python edge_lab.py             # planted-truth power curves and controls, frozen in edge_lab_controls.md (4ad); --quick for a timing run
+python edge_lab.py             # planted-truth power curves and controls, frozen in edge_lab_controls.md (4ad); --quick writes *_quick files
+python rule_checks.py          # re-tests the rules in docs/conventions.md on this data (timing leak, null, power, dates, SPY dividend)
 python status_fig.py 2026-10-15 362.58 2026-10-16   # status of the TSLA and MSFT setups from the latest data (4ae)
 python intraday_check.py SCRATCH_DIR 2026-10-16 TSLA MSFT SPY   # today-so-far from live chains (4ae)
 python expiry_week.py 2026-10-15 "^GSPC=7811.54,7727.5" "QQQ=751.27,724.5" "TSLA=382.70,362.5" "MSFT=535.07,537.9"   # weak week into expiry (4ae)
