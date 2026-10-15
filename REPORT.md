@@ -1299,6 +1299,30 @@ This week, Monday to Thursday so far: S&P −1.1% (19th percentile of expiry wee
 * **Expiry Friday rarely carries the up-burst for TSLA after a weak week** (0 of 65), so the window's weight falls on Monday and Tuesday.
 * **Positions change daily, so the map is recomputed each morning** (`tsla_live.py`).
 
+**TSLA's low dark-pool buying: what it means** (FINRA short share of off-exchange volume, 5-day mean, percentile vs trailing year; TSLA 2021–Oct 14 2026)
+
+* **The data are clean, and the reading is real.**
+  * The short share was 0.395–0.410 on Oct 12–14 (one-year range 0.356–0.680, median 0.485).
+  * Off-exchange volume also fell, to 9–14M shares a day from 12–24M.
+  * The 5-day percentile is at the 2nd.
+* **It recovers in weeks, not months:** from a reading at the 5th percentile or below, the measure was back above the 33rd percentile after a median of 13 sessions (6–27).
+* **On its own, very low (bottom tenth) dark-pool buying does not cut TSLA's up-bursts** (+2.7 pts within 10 sessions, p 0.41). **It adds down-bursts:**
+  * +19 pts within 10 sessions (68% vs 48%, p 0.049)
+  * +10 pts within 3 sessions (p 0.056)
+  * 10-day return −3.0 pts (p 0.10)
+
+| Freed and below flip (the full setup) | up-burst 3 | down-burst 3 | up-burst 10 | down-burst 10 | 10-day return |
+|---|---|---|---|---|---|
+| any dark-pool reading (155 days) | 39% | 17% | 76% | 67% | −1.0% |
+| with dark-pool share in its bottom third (78 days) | 45% | 21% | 73% | 73% | 0.0% |
+| with dark-pool share in its bottom tenth (33 days, 13 episodes) | 36% | 24% | 76% | 73% | −2.3% |
+| with dark-pool share not low (77 days) | 34% | 14% | 79% | 60% | −2.0% |
+
+* **Reading:**
+  * Low dark-pool buying does not remove the setup's early up-lean (p 0.86 for a reduction).
+  * It does make the setup more two-sided, with more down-bursts over 10 sessions.
+  * The 13 episodes are below what the method can resolve (§4ad), so treat the extra downside as a caution, not a measured effect.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
