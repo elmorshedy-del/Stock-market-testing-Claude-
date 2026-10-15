@@ -52,6 +52,44 @@ def table(sym, asof, prev_fri, now_px, rng):
     return pd.DataFrame(out).set_index("set"), now, (d.monthu < now).mean(), d.index[0]
 
 
+def micro(etf, px_sym, asof, rng):
+    """Same expiry weeks, 2020+, split by the ETF's own option positioning at Thursday's close
+    (td_gamma_{etf}.csv): below its own gamma flip, and the share of its gamma expiring on Friday."""
+    m = pd.read_csv(f"out/td_gamma_{etf}.csv", parse_dates=["date"]).set_index("date")
+    c = load_bars(px_sym).close
+    c = c[c.index < asof]
+    idx, rows = c.index, []
+    for o in sorted(third_fridays(idx)):
+        if o not in idx or o < m.index[0] + pd.Timedelta(days=30):
+            continue
+        i = idx.get_loc(o)
+        if i + 10 >= len(idx):
+            continue
+        thu, prevfri = idx[i - 1], idx[idx < o - pd.Timedelta(days=4)][-1]
+        if thu not in m.index:
+            continue
+        r = m.loc[thu]
+        sd = np.log(c).diff().iloc[i - 21:i - 1].std()
+        rows.append({"opex": o, "monthu": c[thu] / c[prevfri] - 1, "z": np.log(c[o] / c[thu]) / sd, "fri": c[o] / c[thu] - 1,
+                     "wk1": c.iloc[i + 5] / c[o] - 1, "below": r.spot < r.flip_classic, "exp_share": r.gamma_share_1d})
+    d = pd.DataFrame(rows).set_index("opex")
+    weak = d.monthu <= d.monthu.quantile(1 / 3)
+    big_exp = d.exp_share >= d.exp_share.median()
+    sets = {"all expiry weeks": weak | ~weak, "below own flip Thu": d.below, "above own flip Thu": ~d.below,
+            "weak week + below flip": weak & d.below, "weak week + above flip": weak & ~d.below,
+            "below flip + big share expiring Fri": d.below & big_exp, "below flip + small share expiring": d.below & ~big_exp}
+    out = []
+    for lab, mk in sets.items():
+        x = d[mk]
+        if len(x) < 3:
+            continue
+        null = np.array([d.wk1.sample(len(x), random_state=int(s)).mean() for s in rng.integers(1e9, size=2000)])
+        out.append({"set": lab, "n": len(x), "Fri up %": 100 * (x.fri > 0).mean(), "Fri big up %": 100 * (x.z > 1).mean(),
+                    "Fri big down %": 100 * (x.z < -1).mean(), "next wk mean %": 100 * x.wk1.mean(),
+                    "p next wk": float(np.mean(null >= x.wk1.mean())), "next wk up %": 100 * (x.wk1 > 0).mean()})
+    return pd.DataFrame(out).set_index("set"), d
+
+
 if __name__ == "__main__":
     pd.set_option("display.width", 230)
     asof = pd.Timestamp(sys.argv[1])

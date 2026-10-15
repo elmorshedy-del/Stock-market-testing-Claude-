@@ -1263,6 +1263,26 @@ This week, Monday to Thursday so far: S&P −1.1% (19th percentile of expiry wee
 * **The reliable rebound is the week after expiry**, for the S&P, QQQ and TSLA alike.
 * **By start year (S&P weak weeks, next-week mean):** +0.10% from 1970, +0.53% from 1983, +0.70% from 1990, +1.11% from 2005, +1.40% from 2015. Near zero before index options existed and growing since, which fits an expiry mechanism rather than a calendar quirk.
 
+**Adding SPY and QQQ positioning** (`expiry_week.micro`; their own option gamma at Thursday's close, 80 monthly expiries, 2020–2026; S&P index returns for SPY).
+
+| Thursday-close state | Expiry Friday: big up / big down | Next week: mean, % up |
+|---|---|---|
+| SPY, all expiry weeks | 11% / 23% | +0.54%, 62% |
+| SPY below its own flip | 18% / 23% | +0.96% (p 0.07), 64% |
+| SPY above its own flip | **3%** / 22% | +0.02%, 61% |
+| **SPY, weak week and below its flip (today's state, n = 23)** | **26% / 26%** | **+1.61% (p 0.01), 70%** |
+| SPY below its flip with a big share of gamma expiring Friday | 28% / 32% | +0.66%, 68% |
+| QQQ, weak week and below its flip (n = 26) | 8% / 19% | +1.19% (p 0.13), 62% |
+
+* **Now** (Yahoo live chains, 12:27 ET):
+  * **SPY:** 769.2 vs its flip 772.1 (−0.4%), dealer gamma −$7.6B per 1%. 37% of its gamma expires Friday, about the median for a monthly-expiry Thursday. After Friday: flip 775.9, gamma −$4.6B.
+  * **QQQ:** 722.8 vs its flip 738.2 (−2.1%), dealer gamma −$10.4B per 1%; 35% expires Friday. After Friday: flip 743.6, gamma −$5.3B. Heavy same-week call buying at 723–725 today (the 724 call traded 63× its open interest).
+* **Reading:**
+  * SPY's positioning sharpens the weak-week result. Below the flip, the expiry Friday is a wide day both ways (about 1 in 4 big up, about 1 in 4 big down), and the next week carries the rebound (+1.6%, 70% up).
+  * Big up Fridays almost never came with SPY above its flip.
+  * QQQ's own positioning adds little beyond the weak week itself.
+  * After Friday the dealers' chasing roughly halves in both, while both stay below their flips.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
