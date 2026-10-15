@@ -1323,6 +1323,32 @@ This week, Monday to Thursday so far: S&P −1.1% (19th percentile of expiry wee
   * It does make the setup more two-sided, with more down-bursts over 10 sessions.
   * The 13 episodes are below what the method can resolve (§4ad), so treat the extra downside as a caution, not a measured effect.
 
+**Does a market bounce cap TSLA's downside?** (`market_cap.py`. Outcomes are strictly forward over the next 10 sessions; ^GSPC is used for the S&P.)
+
+* **Hindsight: yes, if the bounce happens.** 2015+, TSLA's chance of a dip worse than −8% within 10 sessions, by what the S&P actually did over the same 10 sessions:
+  * S&P rallied (top third, +3.3% average): **17%**; TSLA averaged +7.0%.
+  * S&P flat: 24%.
+  * S&P fell: 47%.
+  * Within rallies that began with S&P gamma low, the figure is 21% (13% otherwise).
+* **Ex ante: today's market readings only modestly raise the odds of a rally.**
+  * Base rate for a top-third S&P rally: 33%.
+  * S&P gamma low: 44%. Adding DIX in its top third: 47%. With DIX in its middle (today): 38%. With SPY's own dark-pool share in its top third (today): 49%.
+  * The same low-gamma states raise TSLA's own deep-dip odds: 35% vs 29% on all days, and **47%** with SPY's dark-pool share high. Low S&P gamma couples TSLA to a more volatile market (§4k), in both directions.
+* **TSLA's full setup (freed and below flip), split by the market's readings at the start (2021+):**
+
+| State at start | days / episodes | up-burst 10 | down-burst 10 | worst 10-session dip | dip worse than −8% | TSLA 10d | S&P 10d |
+|---|---|---|---|---|---|---|---|
+| TSLA all days | 1442 | 48% | 48% | −6.6% | 34% | +0.2% | +0.5% |
+| full setup, any market | 155 / 59 | 76% | 67% | −9.4% | 48% | −1.0% | +1.2% |
+| + S&P gamma low | 118 / 44 | 75% | 69% | −9.7% | 47% | −0.9% | +1.2% |
+| + S&P gamma not low | 37 / 22 | 78% | 60% | −8.5% | 49% | −1.4% | +1.1% |
+| + gamma low + SPY dark-pool share high (today's market) | 35 / 18 | 74% | 69% | −10.3% | 49% | −2.0% | +2.1% |
+
+* **Reading:**
+  * In today-like markets the S&P did tend to rise afterwards (+2.1%), and TSLA's drawdowns were still not capped.
+  * The full setup is a two-sided, high-volatility state, and the market's readings do not change that.
+  * The cap is real only once the market's bounce is under way. Use SPY/QQQ reclaiming their own flips (SPY about 772–776, QQQ about 738–744), and dark-pool buying returning, as live confirmation, not as a forecast.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -1443,6 +1469,7 @@ python edge_lab.py             # planted-truth power curves and controls, frozen
 python status_fig.py 2026-10-15 362.58 2026-10-16   # status of the TSLA and MSFT setups from the latest data (4ae)
 python intraday_check.py SCRATCH_DIR 2026-10-16 TSLA MSFT SPY   # today-so-far from live chains (4ae)
 python expiry_week.py 2026-10-15 "^GSPC=7811.54,7727.5" "QQQ=751.27,724.5" "TSLA=382.70,362.5" "MSFT=535.07,537.9"   # weak week into expiry (4ae)
+python market_cap.py          # does a market bounce cap TSLA's drawdown? hindsight vs ex ante vs the full setup (4ae)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
