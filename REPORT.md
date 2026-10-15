@@ -1283,6 +1283,22 @@ This week, Monday to Thursday so far: S&P −1.1% (19th percentile of expiry wee
   * QQQ's own positioning adds little beyond the weak week itself.
   * After Friday the dealers' chasing roughly halves in both, while both stay below their flips.
 
+**TSLA setup by closing price** (positions after the Oct 14 close; IVs from the Oct 14 close):
+
+| Close | Thursday Oct 15 (Oct 16 contracts live) | Monday on (after Friday's expiry) |
+|---|---|---|
+| 350–355 | full setup (flip 363.9, dealers chasing $150–210M per 1%) | full setup (flip 356.3, chasing $10–46M) |
+| 357.5–360 | **full setup** (near-price OI at the 16th–23rd percentile) | freed only (above the 356.3 flip) |
+| 362.5 | below flip only (near-price OI at the 41st percentile) | freed only |
+| 365 | neither | freed only |
+| 370 | freed only | freed only |
+
+* **A close at or under about 360 today turns the full setup on.** With live IVs the flip is 360.6, so the line holds either way.
+* **After the expiry the line drops to about 356:** a close between 356 and 360 then reads "freed only".
+* **The full-setup odds (39% up vs 17% down bursts within 3 sessions) count from the close where the setup is on.** A Thursday reading covers Friday, Monday and Tuesday.
+* **Expiry Friday rarely carries the up-burst for TSLA after a weak week** (0 of 65), so the window's weight falls on Monday and Tuesday.
+* **Positions change daily, so the map is recomputed each morning** (`tsla_live.py`).
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
