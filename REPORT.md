@@ -1186,6 +1186,43 @@ The controls and pass criteria were written and committed before the run (`edge_
 * **Seven hand-picked examples cannot confirm or refute a pattern, however clear it looks on a chart.** That is why the named moves (§4v) were turned into rules with many events before testing.
 * **The biggest danger is timing, not noise.** A one-day leak manufactured a +40-pt fake edge, larger than any real one found here. The strictly-forward check catches it.
 
+## 4ae. Update, Oct 15 (data to the Oct 14 close; TSLA live at 362.58, 11:44 ET) (`status_fig.py`)
+
+![status](out/status.png)
+
+**The two days.**
+* S&P 500: flat Monday and Tuesday morning, then −1.1% on Tuesday Oct 14. VIX rose from 15.2 to 16.9.
+* QQQ: under its own flip (749) all week, now 724.
+* TSLA: 382.73 → 378.03 → 375.23 → 367.16, and 362.58 today.
+* MSFT: 541.15 → 543.45 → 533.69, and 537.15 today. Up today while QQQ is −0.7%.
+* MU −11% and NVDA −5.5% over three sessions.
+
+**Scorecard against what was said on Oct 12.**
+
+| Call | What happened |
+|---|---|
+| TSLA: "a close under ~370 this week turns on freed and below flip" | **Not on.** TSLA closed 367.48 on Oct 14, but the flip itself fell to 362.7 as positions changed, so it was still 1.3% above. Near-price OI was at the 38th percentile, not freed. The price map holds only while positions hold; recompute it daily (`tsla_live.py`). |
+| TSLA: "freed from Oct 19 at any price" | Still expected. With Oct 15 open interest, the post-expiry near-price OI share is at the **6th percentile**. |
+| TSLA: "own dark-pool buying is the missing confirmation" | **Weaker:** the 5-day share fell from the 15th–17th percentile to the **2nd**. |
+| MSFT: "release likely around or after the Oct 28 report, unless the market dips first" | **The market dipped, and the release turned on at the Oct 14 close:** S&P dealer gamma at the 31st percentile (99th on Oct 9), MSFT's 20-day lead at the 89th. |
+
+**TSLA now** (Oct 15 open interest, live 362.58, IVs from the Oct 14 close):
+* **Flip 363.9:** TSLA is 0.3% **below** it, and dealer gamma at the price has turned negative (−$28M per 1%; dealers chase).
+* **Below flip: on.** Freed: off (41st percentile).
+* **Row of §4w:** "below flip only" has 13% up / 15% down bursts within 3 sessions, and 55% up within 10 (base 48%).
+* **After Friday's expiry:**
+  * Flip ~356; freed on.
+  * Above 356: "freed only", 20% / 23% within 3 sessions and 60% up within 10.
+  * Under ~356: the full setup, 39% up vs 17% down within 3 sessions.
+* **Next open interest since the last close:** next-month calls +7.9%, next-month puts +5.1%. New calls at 370 (+25%) and 380 (+9%).
+* **The report is Oct 21 after the close.**
+
+**MSFT now.**
+* **The release setup of §4aa is on:** in that state MSFT had an up-leg within 10 sessions 50% of the time vs 24%, and +2.7% average over 10 sessions.
+* Ten sessions from Oct 14 reach Oct 28, the report date.
+* MSFT's own dark-pool share is at the 84th percentile.
+* **S&P side:** DIX fell to the 36th percentile; SPY's own dark-pool share rose to the 71st.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -1303,6 +1340,7 @@ python held_back_fig.py        # figure for 4aa
 tfm_env/bin/python timesfm_check.py   # TimesFM 2.5 zero-shot vs simple baselines, post-release origins (4ab)
 python named_weeks.py          # the named TSLA moves as a day-by-day calendar (4ac)
 python edge_lab.py             # planted-truth power curves and controls, frozen in edge_lab_controls.md (4ad); --quick for a timing run
+python status_fig.py 2026-10-15 362.58 2026-10-16   # status of the TSLA and MSFT setups from the latest data (4ae)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
