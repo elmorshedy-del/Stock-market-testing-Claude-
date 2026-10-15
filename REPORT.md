@@ -1245,6 +1245,24 @@ The controls and pass criteria were written and committed before the run (`edge_
 * **SPY is 0.4% below its own flip (772.9), with dealer gamma −$6.0B per 1%.** The market is in the chasing regime, which is the "unpinned" side of the §4aa release. It stays below the flip (774.8) after Friday.
 * **Still to come after the close:** today's end-of-day chains, S&P dealer gamma / DIX, and FINRA dark-pool files.
 
+**What follows a weak Monday–Thursday into monthly expiry?** (`expiry_week.py`, every monthly expiry week)
+
+This week, Monday to Thursday so far: S&P −1.1% (19th percentile of expiry weeks), QQQ −3.6% (8th), TSLA −5.3% (14th), MSFT +0.5%.
+
+| Weeks as weak as this one | Expiry Friday: big up / big down (>1 sd) | Next week: mean, % up | Normal |
+|---|---|---|---|
+| S&P 500, 1990+ (n = 74) | 22% / 24% | +0.70%, 61% up (luck p < 0.001) | 13% / 17%; +0.05%, 52% |
+| S&P 500, 2005+ (n = 49) | 24% / 20% | +1.11%, 69% up | 13% / 15%; +0.20%, 55% |
+| S&P, weak week and S&P gamma low on Thursday (1990+, n = 33) | 24% / 24% | +1.50%, 76% up | |
+| QQQ, 1999+ (n = 25) | 16% / 20% | +2.02%, 76% up (p < 0.001) | 12% / 17%; +0.27%, 58% |
+| TSLA, 2010+ (n = 28) | **0% / 21%** | **+4.46%, 71% up (p = 0.01)** | 7% / 11%; +1.11%, 54% |
+| MSFT, weak week and S&P gamma low (n = 22) | 5% / 23% | +1.89%, 64% up (p 0.04) | 14% / 13%; +0.75%, 61% |
+
+* **The expiry Friday after a weak week is wider, not up.** Big-up and big-down days both become more common for the S&P.
+* **TSLA had no big-up expiry Friday in any of its 65 weak expiry weeks since 2010.** Its Friday averaged −0.8%.
+* **The reliable rebound is the week after expiry**, for the S&P, QQQ and TSLA alike.
+* **By start year (S&P weak weeks, next-week mean):** +0.10% from 1970, +0.53% from 1983, +0.70% from 1990, +1.11% from 2005, +1.40% from 2015. Near zero before index options existed and growing since, which fits an expiry mechanism rather than a calendar quirk.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -1364,6 +1382,7 @@ python named_weeks.py          # the named TSLA moves as a day-by-day calendar (
 python edge_lab.py             # planted-truth power curves and controls, frozen in edge_lab_controls.md (4ad); --quick for a timing run
 python status_fig.py 2026-10-15 362.58 2026-10-16   # status of the TSLA and MSFT setups from the latest data (4ae)
 python intraday_check.py SCRATCH_DIR 2026-10-16 TSLA MSFT SPY   # today-so-far from live chains (4ae)
+python expiry_week.py 2026-10-15 "^GSPC=7811.54,7727.5" "QQQ=751.27,724.5" "TSLA=382.70,362.5" "MSFT=535.07,537.9"   # weak week into expiry (4ae)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
