@@ -1223,6 +1223,28 @@ The controls and pass criteria were written and committed before the run (`edge_
 * MSFT's own dark-pool share is at the 84th percentile.
 * **S&P side:** DIX fell to the 36th percentile; SPY's own dark-pool share rose to the 71st.
 
+**Today so far (Oct 15, about 12:00 ET; `intraday_check.py`: Yahoo live chains, today's volume, live IVs).**
+* **Morning flush, then recovery:**
+  * TSLA opened 360.58, hit **355.23**, and was back to 362.5.
+  * SPY: low 764.4, back to 770.2.
+  * QQQ: low 715.4, back to 724.5.
+  * VIX: high 18.0, back to 16.8.
+  * MSFT: low 531.2, now 537.9 (+0.8%).
+* **TSLA is sitting on its flip.**
+  * With live IVs, the flip is **360.6** (TSLA +0.4%) and dealer gamma at the price is +$31M per 1%. With the Oct 14 IVs it is 363.9. The reading is within a fraction of a percent of the flip either way.
+  * Near-price OI is at the 43rd percentile (not freed).
+  * After Friday's expiry: flip **354.3**, near-price OI at the **6th percentile** (freed).
+  * This morning's low (355.23) touched that post-expiry flip and bounced.
+* **TSLA flow today:**
+  * Call volume 447k vs put volume 302k; 68% of it in contracts expiring by Friday.
+  * The busiest strikes are **360 calls (52k, 1.9× open interest)**, 360 puts (39k), 350 puts (32k), 370 calls (30k), and **365 calls and 355 puts (both about 1.8× OI)**. Short-dated bets on both sides of the flip, leaning to calls.
+  * 30-day ATM IV is 44.0% vs 43.3% at the last close.
+* **MSFT:**
+  * Dealer gamma $2.0B per 1% at the price (flip 459, 17% below); $1.4B after Friday. Near-price OI after Friday: 8th percentile.
+  * **Call volume is twice put volume.** New calls at 542.5 (3.9× OI), 547.5 (3.2×) and 537.5 (2.5×), and 24.7k of the 550 call wall (128k OI) traded.
+* **SPY is 0.4% below its own flip (772.9), with dealer gamma −$6.0B per 1%.** The market is in the chasing regime, which is the "unpinned" side of the §4aa release. It stays below the flip (774.8) after Friday.
+* **Still to come after the close:** today's end-of-day chains, S&P dealer gamma / DIX, and FINRA dark-pool files.
+
 ## 5. MU microstructure snapshot (`options_flow.py`, `flow_intraday.py`)
 
 ![gex](out/fig_gex.png)
@@ -1341,6 +1363,7 @@ tfm_env/bin/python timesfm_check.py   # TimesFM 2.5 zero-shot vs simple baseline
 python named_weeks.py          # the named TSLA moves as a day-by-day calendar (4ac)
 python edge_lab.py             # planted-truth power curves and controls, frozen in edge_lab_controls.md (4ad); --quick for a timing run
 python status_fig.py 2026-10-15 362.58 2026-10-16   # status of the TSLA and MSFT setups from the latest data (4ae)
+python intraday_check.py SCRATCH_DIR 2026-10-16 TSLA MSFT SPY   # today-so-far from live chains (4ae)
 python data_checks_fig.py <hd_gamma.csv> <calib.csv>   # figure for 4r
 python channels.py            # current MU channel
 python backtest.py            # ~3-4 min on 4 cores -> out/backtest.json, out/events.csv
