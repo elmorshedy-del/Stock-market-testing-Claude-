@@ -1,0 +1,507 @@
+<style>
+  .gc { font-family: var(--font-anthropic-sans); display: flex; flex-direction: column; gap: var(--cds-gap-xl); }
+  .gc h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .gc h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; text-wrap: balance; }
+  .gc p { margin: 0; }
+  .gc .muted { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .gc-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); max-width: 70ch; }
+  .gc-take { font-size: var(--cds-font-size-body); }
+  .gc-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); gap: var(--cds-gap-md); }
+  .gc-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; }
+  .gc-tile .big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .gc-tile .lab { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .gc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+  .gc-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); position: relative; min-width: 0; }
+  .gc-chart { position: relative; min-height: 240px; }
+  .gc-chart.short { min-height: 200px; }
+  .gc-chart svg { display: block; overflow: visible; }
+  .gc-chart .tick text, .gc-chart .lbl { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .gc-chart .grid line { stroke: var(--cds-chart-grid); }
+  .gc-chart .domain { stroke: var(--cds-chart-axis); }
+  .gc-chart .tick line { stroke: var(--cds-chart-grid); }
+  .gc-chart .ref { stroke: var(--cds-chart-reference); stroke-dasharray: 4 3; }
+  .gc-chart .zone-reset { fill: var(--color-ok); opacity: .12; }
+  .gc-chart .zone-pin { fill: var(--color-warn); opacity: .12; }
+  .gc-chart .band-reset { fill: var(--color-ok); opacity: .22; }
+  .gc-chart .dot-ran { fill: var(--color-warn); stroke: var(--color-panel); stroke-width: 1.5; }
+  .gc-chart .zone-lbl { font-size: var(--cds-font-size-caption); }
+  .gc-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; z-index: 2; }
+  .gc-tip .d { color: var(--cds-text-secondary); }
+  .gc-tip .sw { display: inline-block; width: .6rem; height: .6rem; border-radius: 2px; margin-right: .35rem; vertical-align: middle; }
+  .gc-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .gc-legend span { display: inline-flex; align-items: center; gap: .35rem; }
+  .gc-legend i { display: inline-block; width: .75rem; height: .75rem; border-radius: 2px; }
+  .gc-cycle { display: flex; flex-wrap: wrap; align-items: stretch; gap: var(--cds-gap-sm); }
+  .gc-stage { flex: 1 1 9rem; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; position: relative; }
+  .gc-stage b { font-weight: var(--cds-font-weight-medium); }
+  .gc-stage.here { border-color: var(--color-warn); box-shadow: inset 0 0 0 1px var(--color-warn); }
+  .gc-stage .here-tag { align-self: flex-start; font-size: var(--cds-font-size-caption); color: var(--color-warn); border: 1px solid var(--color-warn); border-radius: 999px; padding: 0 .5rem; }
+  .gc-arrow { align-self: center; color: var(--color-fg-muted); }
+  .gc-seg { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: 999px; overflow: hidden; align-self: flex-start; }
+  .gc-seg button { font: inherit; font-size: var(--cds-font-size-caption); background: transparent; color: var(--color-fg-muted); border: 0; padding: .25rem .75rem; cursor: pointer; }
+  .gc-seg button[aria-pressed="true"] { background: var(--color-border-line); color: var(--color-fg); }
+  .gc-seg button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: -2px; }
+  .gc-table-wrap { overflow-x: auto; }
+  .gc table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); }
+  .gc th { text-align: left; color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .gc td { padding: var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+  .gc td.call { min-width: 14rem; }
+  .gc .pill { display: inline-block; border: 1px solid currentColor; border-radius: 999px; padding: 0 .5rem; white-space: nowrap; }
+  .gc .v-ok { color: var(--color-ok); } .gc .v-part { color: var(--color-warn); } .gc .v-miss { color: var(--color-bad); } .gc .v-open { color: var(--color-fg-muted); }
+  .gc-sum { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-body); }
+  .gc-sum .n { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; margin-right: .3rem; }
+  [data-dash-source-state=empty] { color: transparent; }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+  .gc-fail { display: flex; align-items: center; justify-content: center; gap: .5rem; min-height: inherit; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+  .gc-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+</style>
+
+<div class="gc">
+  <header class="gc-head">
+    <h1 id="top">S&amp;P gamma cycle</h1>
+    <p class="gc-take" id="takeaway">Gamma ran up from Oct 2 to Oct 6 while the S&amp;P barely moved. In past cycles that led to a pause first, and the next leg up usually came after gamma reset below its 30th percentile.</p>
+    <p class="muted">Gamma is S&amp;P dealer gamma (SqueezeMetrics GEX) ranked against its past year; DIX is dark-pool buying ranked the same way. Data through the Oct 8 close.</p>
+  </header>
+
+  <section class="gc-tiles" aria-label="Current state">
+    <div class="gc-tile"><span class="lab">S&amp;P 500, Oct 8 close</span><span class="big dash-skeleton" data-source="latest_state" data-field="spx" data-row="0">—</span><span class="lab"><span data-source="latest_state" data-field="spx_change_since_oct1_pct" data-row="0">—</span> since our Oct 1 read</span></div>
+    <div class="gc-tile"><span class="lab">Gamma percentile</span><span class="big dash-skeleton" data-source="latest_state" data-field="gex_pct" data-row="0">—</span><span class="lab">reset zone ≤ 30, pinned ≥ 90</span></div>
+    <div class="gc-tile"><span class="lab">DIX percentile</span><span class="big dash-skeleton" data-source="latest_state" data-field="dix_pct" data-row="0">—</span><span class="lab">dark-pool buying, high is supportive</span></div>
+    <div class="gc-tile"><span class="lab">VIX</span><span class="big dash-skeleton" data-source="latest_state" data-field="vix" data-row="0">—</span><span class="lab">calm, contango</span></div>
+    <div class="gc-tile"><span class="lab">Trading days since last reset</span><span class="big dash-skeleton" data-source="latest_state" data-field="trading_days_since_reset" data-row="0">—</span><span class="lab">last reset <span data-source="latest_state" data-field="last_reset" data-row="0">—</span></span></div>
+  </section>
+
+  <section class="gc-card" aria-labelledby="cycle-h">
+    <h2 id="cycle-h">Where we are in the cycle</h2>
+    <p class="muted">The pattern the data found: legs start from a gamma reset, stall when gamma is pinned, and gamma that runs up without price leads to a pause.</p>
+    <div class="gc-cycle">
+      <div class="gc-stage"><b>1. Reset</b><span class="muted">Gamma falls to its 30th percentile or below. Price is free to move.</span></div>
+      <span class="gc-arrow" aria-hidden="true">→</span>
+      <div class="gc-stage"><b>2. Leg</b><span class="muted">The big move. Most legs start within 20 days of a reset.</span></div>
+      <span class="gc-arrow" aria-hidden="true">→</span>
+      <div class="gc-stage"><b>3. Pinned</b><span class="muted">The rally rebuilds gamma to its 90th percentile or above. Moves get damped.</span></div>
+      <span class="gc-arrow" aria-hidden="true">→</span>
+      <div class="gc-stage here"><span class="here-tag">You are here</span><b>4. Pause</b><span class="muted">Consolidation, shallow dips. Gamma ran up without price on Oct 2–6 and is now fading.</span></div>
+      <span class="gc-arrow" aria-hidden="true">↺</span>
+      <div class="gc-stage"><b>Back to 1</b><span class="muted">Watch for gamma at or below its 30th percentile with DIX above its 50th: entry rung R2.</span></div>
+    </div>
+  </section>
+
+  <section class="gc-card" aria-labelledby="spx-h">
+    <h2 id="spx-h">S&amp;P 500 since mid-June</h2>
+    <p class="muted">Green bands are reset days. Orange dots are days gamma ran up without price. Dashed lines mark our first read and the next two dates that move gamma.</p>
+    <div class="gc-chart dash-skeleton" id="chart-spx" data-source="spx_cycle"></div>
+  </section>
+
+  <section class="gc-card" aria-labelledby="gex-h">
+    <h2 id="gex-h">Gamma and DIX percentiles</h2>
+    <div class="gc-legend" id="legend-gex"></div>
+    <div class="gc-chart dash-skeleton" id="chart-gex" data-source="spx_cycle"></div>
+  </section>
+
+  <section class="gc-grid">
+    <div class="gc-card" aria-labelledby="odds-h">
+      <h2 id="odds-h">What the next 20 days look like</h2>
+      <p class="muted">Share of past cases followed by an up-leg (a 10-day S&amp;P gain of 3.5% or more) or by a tight range. The tick is any day.</p>
+      <div class="gc-seg" role="group" aria-label="Period">
+        <button type="button" id="era-a" aria-pressed="true">2012 onward</button>
+        <button type="button" id="era-b" aria-pressed="false">Since late 2019</button>
+      </div>
+      <div class="gc-legend" id="legend-odds"></div>
+      <div class="gc-chart dash-skeleton" id="chart-odds" data-source="reset_odds"></div>
+    </div>
+    <div class="gc-card" aria-labelledby="need-h">
+      <h2 id="need-h">Do legs need a reset first?</h2>
+      <p class="muted">Share of up-legs that had a gamma reset in the 20 days before, compared with random days.</p>
+      <div class="gc-chart short dash-skeleton" id="chart-need" data-source="legs_need_reset"></div>
+    </div>
+  </section>
+
+  <section class="gc-card" aria-labelledby="score-h">
+    <h2 id="score-h">How our calls held up since Oct 1</h2>
+    <div class="gc-sum" id="score-sum">
+      <span><span class="n" data-source="score_summary" data-field="count" data-where="group=Held">—</span>held</span>
+      <span><span class="n" data-source="score_summary" data-field="count" data-where="group=Partly">—</span>partly</span>
+      <span><span class="n" data-source="score_summary" data-field="count" data-where="group=Missed">—</span>missed</span>
+      <span><span class="n" data-source="score_summary" data-field="count" data-where="group=Open">—</span>still open</span>
+    </div>
+    <div class="gc-table-wrap">
+      <table id="score-table" data-source="scorecard" data-row-key="id">
+        <thead><tr><th data-field="market">Market</th><th data-field="made">Made</th><th data-field="call">What we said</th><th data-field="outcome">What happened</th><th data-field="verdict">Verdict</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="gc-grid">
+    <div class="gc-card" aria-labelledby="mu-h">
+      <h2 id="mu-h">MU against its channel</h2>
+      <p class="muted">The rising lower channel line we drew on Oct 1, with the 1,100 trigger and the gamma flip.</p>
+      <div class="gc-chart short dash-skeleton" id="chart-mu" data-source="mu_track levels"></div>
+    </div>
+    <div class="gc-card" aria-labelledby="msft-h">
+      <h2 id="msft-h">MSFT and its pin zone</h2>
+      <p class="muted">The 510–525 zone we expected into the Oct 16 expiry, and the 550 call wall.</p>
+      <div class="gc-chart short dash-skeleton" id="chart-msft" data-source="msft_track levels"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const parseDay = (s) => new Date(String(s).slice(0, 10) + 'T00:00:00Z');
+  const fmtDay = d3.utcFormat('%b %-d');
+
+  dash.calc('latest_state', {
+    inputs: ['spx_cycle'],
+    title: 'Latest S&P gamma state',
+    description: 'The last day of the S&P cycle data, with trading days since gamma last reset and the S&P change since Oct 1.',
+    fn: (spx_cycle) => {
+      const last = spx_cycle[spx_cycle.length - 1];
+      const iReset = spx_cycle.map((r) => Number(r.reset)).lastIndexOf(1);
+      const oct1 = spx_cycle.find((r) => r.date === '2026-10-01');
+      return [{
+        date: last.date, spx: Number(last.spx), gex_pct: Number(last.gex_pct), dix_pct: Number(last.dix_pct),
+        vix: Number(last.vix), trading_days_since_reset: spx_cycle.length - 1 - iReset, last_reset: spx_cycle[iReset].date,
+        spx_change_since_oct1_pct: Math.round(1000 * (Number(last.spx) / Number(oct1.spx) - 1)) / 10
+      }];
+    }
+  });
+
+  dash.calc('score_summary', {
+    inputs: ['scorecard'],
+    title: 'Calls by verdict',
+    description: 'Counts of our calls that held, held partly, missed, or are still open.',
+    fn: (scorecard) => {
+      const group = (v) => (['Played out', 'Consistent', 'Mostly'].includes(v) ? 'Held' : v === 'Partly' ? 'Partly' : v === 'Missed' ? 'Missed' : 'Open');
+      const counts = { Held: 0, Partly: 0, Missed: 0, Open: 0 };
+      scorecard.forEach((r) => { counts[group(r.verdict)] += 1; });
+      return Object.entries(counts).map(([g, n]) => ({ group: g, count: n }));
+    }
+  });
+
+  let era = '2012+';
+  const color = (i) => dash.colors[i];
+
+  function failed(el) { el.innerHTML = ''; el.classList.remove('dash-skeleton'); const d = document.createElement('div'); d.className = 'gc-fail'; d.textContent = 'Failed to load'; el.appendChild(d); }
+
+  function textWidth(svg, s) {
+    const t = svg.append('text').attr('class', 'lbl').text(s);
+    const w = t.node().getComputedTextLength(); t.remove(); return w;
+  }
+
+  function makeSvg(el, H) {
+    el.innerHTML = ''; el.classList.remove('dash-skeleton');
+    const W = Math.max(280, el.clientWidth);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('height', H);
+    return { svg, W, H };
+  }
+
+  function tipFor(el) {
+    const tip = document.createElement('div'); tip.className = 'gc-tip'; tip.hidden = true; el.appendChild(tip); return tip;
+  }
+
+  function placeTip(el, tip, x, y) {
+    const w = tip.offsetWidth, h = tip.offsetHeight, W = el.clientWidth;
+    let left = x + 12; if (left + w > W) left = x - w - 12; if (left < 0) left = 0;
+    tip.style.left = left + 'px'; tip.style.top = Math.max(0, y - h - 8) + 'px';
+  }
+
+  function tipLine(tip, swatch, label, value) {
+    const row = document.createElement('div');
+    if (swatch) { const s = document.createElement('span'); s.className = 'sw'; s.style.background = swatch; row.appendChild(s); }
+    row.appendChild(document.createTextNode(label + ' ' + value)); tip.appendChild(row);
+  }
+
+  const X_END = parseDay('2026-10-23');
+  const EVENTS = [['2026-10-01', 'Our first read'], ['2026-10-16', 'Monthly expiry'], ['2026-10-21', 'VIX settles']];
+
+  function cycleRows() {
+    return dash.data('spx_cycle').data.map((r) => ({
+      date: parseDay(r.date), spx: Number(r.spx), gex: Number(r.gex_pct), dix: Number(r.dix_pct), vix: Number(r.vix),
+      reset: Number(r.reset) === 1, ran: Number(r.gamma_ran) === 1
+    }));
+  }
+
+  function drawSpx() {
+    const el = document.getElementById('chart-spx');
+    const st = dash.data('spx_cycle');
+    if (st.status === 'error' || st.status === 'connect') return failed(el);
+    if (st.status !== 'ok') { el.innerHTML = ''; return; }
+    const rows = cycleRows();
+    const { svg, W, H } = makeSvg(el, 260);
+    const fmt = d3.format(',.0f');
+    const yExt = d3.extent(rows, (d) => d.spx);
+    const y = d3.scaleLinear([yExt[0] * 0.995, yExt[1] * 1.005], [H - 28, 30]).nice();
+    const ml = Math.ceil(d3.max(y.ticks(5), (t) => textWidth(svg, fmt(t)))) + 10;
+    const x = d3.scaleUtc([rows[0].date, X_END], [ml, W - 8]);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${ml},0)`)
+      .call(d3.axisLeft(y).ticks(5).tickSize(-(W - ml - 8)).tickFormat('')).call((g) => g.select('.domain').remove());
+    const bw = Math.max(2, (x(rows[1].date) - x(rows[0].date)) * 0.9);
+    svg.append('g').selectAll('rect').data(rows.filter((d) => d.reset)).join('rect').attr('class', 'band-reset')
+      .attr('x', (d) => x(d.date) - bw / 2).attr('width', bw).attr('y', 30).attr('height', H - 58);
+    const rowsUsed = [[], []];
+    EVENTS.forEach(([day, lab]) => {
+      const xx = x(parseDay(day));
+      svg.append('line').attr('class', 'ref').attr('x1', xx).attr('x2', xx).attr('y1', 4).attr('y2', H - 28);
+      const t = svg.append('text').attr('class', 'lbl').text(lab);
+      const tw = t.node().getComputedTextLength();
+      const left = Math.min(Math.max(xx - tw / 2, ml), W - tw);
+      // stack labels on two lines so neighbours never overlap
+      let row = rowsUsed.findIndex((used) => used.every(([a, b]) => left > b + 6 || left + tw < a - 6));
+      if (row < 0) row = 1;
+      rowsUsed[row].push([left, left + tw]);
+      t.attr('x', left).attr('y', row === 0 ? 10 : 22);
+    });
+    const line = d3.line().x((d) => x(d.date)).y((d) => y(d.spx));
+    svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', color(0)).attr('stroke-width', 2)
+      .attr('stroke-linejoin', 'round').attr('stroke-linecap', 'round').attr('d', line);
+    svg.append('g').selectAll('circle').data(rows.filter((d) => d.ran)).join('circle').attr('class', 'dot-ran')
+      .attr('cx', (d) => x(d.date)).attr('cy', (d) => y(d.spx)).attr('r', 4.5);
+    svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(fmt).tickSize(0))
+      .attr('font-size', null).attr('font-family', null).call((g) => g.select('.domain').remove());
+    const xt = x.ticks(W < 500 ? 3 : 6);
+    svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).tickValues(xt).tickFormat(fmtDay))
+      .attr('font-size', null).attr('font-family', null);
+    hover(el, svg, rows, x, (d) => y(d.spx), W, H, ml, (tip, d) => {
+      tipLine(tip, null, '', ''); tip.lastChild.className = 'd'; tip.lastChild.textContent = fmtDay(d.date);
+      tipLine(tip, color(0), 'S&P', fmt(d.spx));
+      tipLine(tip, null, 'Gamma pct', d3.format('.0f')(d.gex));
+      tipLine(tip, null, 'DIX pct', d3.format('.0f')(d.dix));
+      if (d.reset) tipLine(tip, null, 'Gamma reset day', '');
+      if (d.ran) tipLine(tip, null, 'Gamma ran without price', '');
+    });
+  }
+
+  function hover(el, svg, rows, x, yAt, W, H, ml, fill) {
+    const tip = tipFor(el);
+    const dot = svg.append('circle').attr('r', 4).attr('fill', color(0)).attr('stroke', 'var(--color-panel)').attr('stroke-width', 1.5).style('display', 'none');
+    const bis = d3.bisector((d) => d.date).center;
+    svg.append('rect').attr('x', ml).attr('y', 0).attr('width', W - ml).attr('height', H).attr('fill', 'transparent')
+      .on('pointermove', (ev) => {
+        const [px, py] = d3.pointer(ev);
+        const d = rows[bis(rows, x.invert(px))];
+        if (!d) return;
+        dot.style('display', null).attr('cx', x(d.date)).attr('cy', yAt(d));
+        tip.innerHTML = ''; fill(tip, d); tip.hidden = false;
+        const r = el.getBoundingClientRect(), s = svg.node().getBoundingClientRect();
+        placeTip(el, tip, (x(d.date) / W) * s.width + (s.left - r.left), (yAt(d) / H) * s.height + (s.top - r.top));
+      })
+      .on('pointerleave', () => { tip.hidden = true; dot.style('display', 'none'); });
+  }
+
+  function drawGex() {
+    const el = document.getElementById('chart-gex');
+    const lg = document.getElementById('legend-gex');
+    const st = dash.data('spx_cycle');
+    if (st.status === 'error' || st.status === 'connect') return failed(el);
+    if (st.status !== 'ok') { el.innerHTML = ''; return; }
+    const rows = cycleRows();
+    lg.innerHTML = '';
+    [['Gamma percentile', color(0)], ['DIX percentile', color(1)]].forEach(([n, c]) => {
+      const s = document.createElement('span'); const i = document.createElement('i'); i.style.background = c; s.appendChild(i); s.appendChild(document.createTextNode(n)); lg.appendChild(s);
+    });
+    const { svg, W, H } = makeSvg(el, 240);
+    const y = d3.scaleLinear([0, 100], [H - 28, 10]);
+    const ml = Math.ceil(textWidth(svg, '100')) + 10;
+    const x = d3.scaleUtc([rows[0].date, X_END], [ml, W - 8]);
+    svg.append('rect').attr('class', 'zone-reset').attr('x', ml).attr('width', W - ml - 8).attr('y', y(30)).attr('height', y(0) - y(30));
+    svg.append('rect').attr('class', 'zone-pin').attr('x', ml).attr('width', W - ml - 8).attr('y', y(100)).attr('height', y(90) - y(100));
+    svg.append('text').attr('class', 'lbl zone-lbl').attr('x', ml + 6).attr('y', y(30) + 14).text('Reset zone');
+    svg.append('text').attr('class', 'lbl zone-lbl').attr('x', ml + 6).attr('y', y(90) - 4).text('Pinned zone');
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${ml},0)`)
+      .call(d3.axisLeft(y).tickValues([0, 30, 50, 90, 100]).tickSize(-(W - ml - 8)).tickFormat('')).call((g) => g.select('.domain').remove());
+    EVENTS.forEach(([day]) => { const xx = x(parseDay(day)); svg.append('line').attr('class', 'ref').attr('x1', xx).attr('x2', xx).attr('y1', 10).attr('y2', H - 28); });
+    [['dix', 1], ['gex', 0]].forEach(([k, i]) => {
+      svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', color(i)).attr('stroke-width', 2)
+        .attr('stroke-linejoin', 'round').attr('stroke-linecap', 'round').attr('d', d3.line().x((d) => x(d.date)).y((d) => y(d[k])));
+    });
+    svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).tickValues([0, 30, 50, 90, 100]).tickSize(0))
+      .attr('font-size', null).attr('font-family', null).call((g) => g.select('.domain').remove());
+    svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).tickValues(x.ticks(W < 500 ? 3 : 6)).tickFormat(fmtDay))
+      .attr('font-size', null).attr('font-family', null);
+    hover(el, svg, rows, x, (d) => y(d.gex), W, H, ml, (tip, d) => {
+      tipLine(tip, null, '', ''); tip.lastChild.className = 'd'; tip.lastChild.textContent = fmtDay(d.date);
+      tipLine(tip, color(0), 'Gamma pct', d3.format('.0f')(d.gex));
+      tipLine(tip, color(1), 'DIX pct', d3.format('.0f')(d.dix));
+    });
+  }
+
+  function drawOdds() {
+    const el = document.getElementById('chart-odds');
+    const lg = document.getElementById('legend-odds');
+    const st = dash.data('reset_odds');
+    if (st.status === 'error' || st.status === 'connect') return failed(el);
+    if (st.status !== 'ok') { el.innerHTML = ''; return; }
+    const rows = st.data.filter((r) => r.era === era).map((r) => ({
+      state: r.state, order: Number(r.order), leg: Number(r.p_leg_20d), con: Number(r.p_consolidation), n: Number(r.n),
+      baseLeg: Number(r.base_leg), baseCon: Number(r.base_consolidation)
+    })).sort((a, b) => a.order - b.order);
+    lg.innerHTML = '';
+    [['Up-leg starts', color(0)], ['Tight range', color(2)]].forEach(([n, c]) => {
+      const s = document.createElement('span'); const i = document.createElement('i'); i.style.background = c; s.appendChild(i); s.appendChild(document.createTextNode(n)); lg.appendChild(s);
+    });
+    const rowH = 46;
+    const { svg, W, H } = makeSvg(el, rows.length * rowH + 24);
+    const narrow = W < 460;
+    const labW = narrow ? 0 : Math.min(W * 0.42, d3.max(rows, (r) => textWidth(svg, r.state)) + 12);
+    const x = d3.scaleLinear([0, 80], [labW, W - 40]);
+    const tip = tipFor(el);
+    rows.forEach((r, k) => {
+      const y0 = k * rowH + (narrow ? 14 : 4);
+      if (narrow) svg.append('text').attr('class', 'lbl').attr('x', 0).attr('y', y0 - 3).text(r.state);
+      else svg.append('text').attr('class', 'lbl').attr('x', 0).attr('y', y0 + 15).text(r.state);
+      [['leg', 0, r.baseLeg], ['con', 2, r.baseCon]].forEach(([key, ci, base], j) => {
+        const yy = y0 + j * 14;
+        const val = r[key];
+        const g = svg.append('g');
+        g.append('rect').attr('x', x(0)).attr('y', yy).attr('height', 11).attr('rx', 4)
+          .attr('width', Math.max(2, x(val) - x(0))).attr('fill', color(ci))
+          .on('pointermove', (ev) => {
+            tip.innerHTML = ''; tipLine(tip, null, '', ''); tip.lastChild.className = 'd'; tip.lastChild.textContent = r.state;
+            tipLine(tip, color(ci), key === 'leg' ? 'Up-leg within 20 days' : 'Tight range next 20 days', d3.format('.0f')(val) + '%');
+            tipLine(tip, null, 'Any day', d3.format('.0f')(base) + '%');
+            tipLine(tip, null, 'Cases', d3.format(',')(r.n));
+            tip.hidden = false; const [px, py] = d3.pointer(ev, el); placeTip(el, tip, px, py);
+          })
+          .on('pointerleave', () => { tip.hidden = true; });
+        g.append('line').attr('x1', x(base)).attr('x2', x(base)).attr('y1', yy - 2).attr('y2', yy + 13)
+          .attr('stroke', 'var(--color-fg)').attr('stroke-width', 1.5);
+        g.append('text').attr('class', 'lbl').attr('x', x(val) + 4).attr('y', yy + 9.5).text(d3.format('.0f')(val) + '%');
+      });
+    });
+  }
+
+  function drawNeed() {
+    const el = document.getElementById('chart-need');
+    const st = dash.data('legs_need_reset');
+    if (st.status === 'error' || st.status === 'connect') return failed(el);
+    if (st.status !== 'ok') { el.innerHTML = ''; return; }
+    const rows = st.data.map((r) => ({ era: r.era, legs: Number(r.legs_with_reset_pct), rnd: Number(r.random_days_pct), n: Number(r.legs) }));
+    const { svg, W, H } = makeSvg(el, rows.length * 70 + 10);
+    const x = d3.scaleLinear([0, 100], [0, W - 44]);
+    rows.forEach((r, k) => {
+      const y0 = k * 70 + 14;
+      svg.append('text').attr('class', 'lbl').attr('x', 0).attr('y', y0).text(r.era + ' · ' + d3.format(',')(r.n) + ' legs');
+      [['Before up-legs', r.legs, color(0)], ['Random days', r.rnd, 'var(--cds-chart-muted)']].forEach(([lab, v, c], j) => {
+        const yy = y0 + 8 + j * 22;
+        svg.append('rect').attr('x', 0).attr('y', yy).attr('height', 14).attr('rx', 4).attr('width', x(v)).attr('fill', c);
+        svg.append('text').attr('class', 'lbl').attr('x', x(v) + 4).attr('y', yy + 11).text(d3.format('.0f')(v) + '% ' + lab.toLowerCase());
+      });
+    });
+  }
+
+  function verdictClass(v) {
+    if (['Played out', 'Consistent', 'Mostly'].includes(v)) return 'v-ok';
+    if (v === 'Partly') return 'v-part';
+    if (v === 'Missed') return 'v-miss';
+    return 'v-open';
+  }
+
+  function drawTable() {
+    const tb = document.querySelector('#score-table tbody');
+    const st = dash.data('scorecard');
+    tb.innerHTML = '';
+    if (st.status !== 'ok') return;
+    st.data.forEach((r) => {
+      const tr = document.createElement('tr'); tr.dataset.key = r.id;
+      ['market', 'made', 'call', 'outcome', 'verdict'].forEach((k) => {
+        const td = document.createElement('td');
+        if (k === 'call') td.className = 'call';
+        if (k === 'verdict') { const p = document.createElement('span'); p.className = 'pill ' + verdictClass(r.verdict); p.textContent = r.verdict; td.appendChild(p); }
+        else td.textContent = r[k];
+        tr.appendChild(td);
+      });
+      tb.appendChild(tr);
+    });
+  }
+
+  function drawTrack(id, ds, market) {
+    const el = document.getElementById(id);
+    const a = dash.data(ds), b = dash.data('levels');
+    if ([a.status, b.status].some((s) => s === 'error' || s === 'connect')) return failed(el);
+    if (a.status !== 'ok' || b.status !== 'ok') { el.innerHTML = ''; return; }
+    const rows = a.data.map((r) => ({ date: parseDay(r.date), close: Number(r.close), lower: r.channel_lower === undefined ? null : Number(r.channel_lower) }));
+    const lv = b.data.filter((r) => r.market === market).map((r) => ({ level: r.level, value: Number(r.value) }));
+    const { svg, W, H } = makeSvg(el, 220);
+    const vals = rows.flatMap((r) => [r.close, r.lower].filter((v) => v !== null)).concat(lv.map((l) => l.value));
+    const y = d3.scaleLinear([d3.min(vals) * 0.99, d3.max(vals) * 1.01], [H - 26, 10]).nice();
+    const fmt = d3.format(',.0f');
+    const ml = Math.ceil(d3.max(y.ticks(4), (t) => textWidth(svg, fmt(t)))) + 10;
+    const x = d3.scaleUtc(d3.extent(rows, (r) => r.date), [ml, W - 8]);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${ml},0)`)
+      .call(d3.axisLeft(y).ticks(4).tickSize(-(W - ml - 8)).tickFormat('')).call((g) => g.select('.domain').remove());
+    if (market === 'MSFT') {
+      const lo = lv.find((l) => l.level === 'Pin zone low'), hi = lv.find((l) => l.level === 'Pin zone high');
+      if (lo && hi) {
+        svg.append('rect').attr('class', 'zone-pin').attr('x', ml).attr('width', W - ml - 8).attr('y', y(hi.value)).attr('height', y(lo.value) - y(hi.value));
+        svg.append('text').attr('class', 'lbl').attr('x', ml + 6).attr('y', y(lo.value) - 4).text('Pin zone');
+      }
+    }
+    lv.filter((l) => !l.level.startsWith('Pin zone')).forEach((l) => {
+      svg.append('line').attr('class', 'ref').attr('x1', ml).attr('x2', W - 8).attr('y1', y(l.value)).attr('y2', y(l.value));
+      svg.append('text').attr('class', 'lbl').attr('x', ml + 6).attr('y', y(l.value) - 4).text(l.level + ' ' + fmt(l.value));
+    });
+    if (rows[0].lower !== null) {
+      svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', color(2)).attr('stroke-width', 2).attr('stroke-dasharray', '6 4')
+        .attr('d', d3.line().x((d) => x(d.date)).y((d) => y(d.lower)));
+      const last = rows[rows.length - 1];
+      const t = svg.append('text').attr('class', 'lbl').text('Channel lower line');
+      t.attr('x', Math.max(ml, x(last.date) - t.node().getComputedTextLength())).attr('y', y(last.lower) - 6);
+    }
+    svg.append('path').datum(rows).attr('fill', 'none').attr('stroke', color(0)).attr('stroke-width', 2)
+      .attr('stroke-linejoin', 'round').attr('stroke-linecap', 'round').attr('d', d3.line().x((d) => x(d.date)).y((d) => y(d.close)));
+    svg.append('g').attr('transform', `translate(${ml},0)`).call(d3.axisLeft(y).ticks(4).tickFormat(fmt).tickSize(0))
+      .attr('font-size', null).attr('font-family', null).call((g) => g.select('.domain').remove());
+    svg.append('g').attr('transform', `translate(0,${H - 26})`).call(d3.axisBottom(x).ticks(W < 500 ? 3 : 5).tickFormat(fmtDay))
+      .attr('font-size', null).attr('font-family', null);
+    hover(el, svg, rows, x, (d) => y(d.close), W, H, ml, (tip, d) => {
+      tipLine(tip, null, '', ''); tip.lastChild.className = 'd'; tip.lastChild.textContent = fmtDay(d.date);
+      tipLine(tip, color(0), market, d3.format(',.2f')(d.close));
+      if (d.lower !== null) tipLine(tip, color(2), 'Channel lower', d3.format(',.1f')(d.lower));
+    });
+  }
+
+  function fillTiles() {
+    const st = dash.data('latest_state');
+    document.querySelectorAll('[data-source="latest_state"]').forEach((el) => {
+      el.classList.remove('dash-skeleton');
+      if (st.status !== 'ok' || !st.data.length) { el.textContent = '—'; return; }
+      const r = st.data[0], f = el.dataset.field, v = r[f];
+      if (f === 'spx') el.textContent = d3.format(',.0f')(v);
+      else if (f === 'spx_change_since_oct1_pct') el.textContent = (v > 0 ? '+' : '') + d3.format('.1f')(v) + '%';
+      else if (f === 'gex_pct' || f === 'dix_pct') el.textContent = d3.format('.0f')(v);
+      else if (f === 'vix') el.textContent = d3.format('.1f')(v);
+      else if (f === 'last_reset') el.textContent = fmtDay(parseDay(v));
+      else el.textContent = String(v);
+    });
+    const ss = dash.data('score_summary');
+    document.querySelectorAll('[data-source="score_summary"]').forEach((el) => {
+      if (ss.status !== 'ok') { el.textContent = '—'; return; }
+      const g = el.dataset.where.split('=')[1];
+      const row = ss.data.find((r) => r.group === g);
+      el.textContent = row ? String(row.count) : '—';
+    });
+  }
+
+  const setEra = (e) => {
+    era = e;
+    document.getElementById('era-a').setAttribute('aria-pressed', String(e === '2012+'));
+    document.getElementById('era-b').setAttribute('aria-pressed', String(e !== '2012+'));
+    drawOdds();
+  };
+  document.getElementById('era-a').addEventListener('click', () => setEra('2012+'));
+  document.getElementById('era-b').addEventListener('click', () => setEra('Since late 2019'));
+
+  let drawn = false;
+  dash.onData(() => {
+    fillTiles(); drawSpx(); drawGex(); drawOdds(); drawNeed(); drawTable();
+    drawTrack('chart-mu', 'mu_track', 'MU'); drawTrack('chart-msft', 'msft_track', 'MSFT');
+    if (!drawn && dash.data('spx_cycle').status === 'ok') {
+      drawn = true;
+      const named = document.getElementById(location.hash.slice(1));
+      if (named) { named.scrollIntoView(); dash.setLink(named.id); }
+    }
+  });
+})();
+</script>

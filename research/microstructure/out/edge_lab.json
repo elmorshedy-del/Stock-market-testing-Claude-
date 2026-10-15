@@ -1,0 +1,114 @@
+{
+ "denominators": {
+  "analysis days": 1449,
+  "freed&below days": 155,
+  "freed days": 409
+ },
+ "real freed&below, up-burst in 3": {
+  "n_days": 155,
+  "episodes": 59,
+  "lift": 0.22757328336233437,
+  "p": 0.0
+ },
+ "real freed only, up-burst in 3": {
+  "n_days": 409,
+  "episodes": 121,
+  "lift": 0.10541853929734499,
+  "p": 0.0
+ },
+ "N1 all-False signal": {
+  "n_days": 0,
+  "episodes": 0,
+  "lift": null,
+  "p": null
+ },
+ "N2 all-True signal lift": 0.0,
+ "N3 all-zero outcome lift": 0.0,
+ "P1 false-positive rate": {
+  "rate": 0.0275,
+  "n": 400,
+  "pass": true
+ },
+ "F1 iid null breaks P1": {
+  "rate": 0.0875,
+  "check fails as it should": true
+ },
+ "P2 false-positive rate": {
+  "rate": 0.05,
+  "n": 400,
+  "pass": true
+ },
+ "P3 plant recovery": {
+  "0.1": {
+   "recovered": 0.08763794861985773,
+   "expected": 0.1299412445064792,
+   "diff": -0.042303295886621475,
+   "pass": false,
+   "F2 broken plant diff": -0.06266608650240381,
+   "F2 check fails as it should": true
+  },
+  "0.2": {
+   "recovered": 0.14647411721327333,
+   "expected": 0.23957749738401035,
+   "diff": -0.09310338017073702,
+   "pass": false,
+   "F2 broken plant diff": -0.13082445429070017,
+   "F2 check fails as it should": true
+  },
+  "0.3": {
+   "recovered": 0.17972603044281552,
+   "expected": 0.34236826764508166,
+   "diff": -0.16264223720226614,
+   "pass": false,
+   "F2 broken plant diff": -0.21699495925007029,
+   "F2 check fails as it should": true
+  }
+ },
+ "P3 diagnosis (after it fired)": {
+  "0.1": {
+   "expected": 0.1266516154522284,
+   "production": 0.08968061449671808,
+   "production without de-dup": 0.1266516154522284
+  },
+  "0.3": {
+   "expected": 0.3376782364007006,
+   "production": 0.18299297865601744,
+   "production without de-dup": 0.3376782364007006
+  },
+  "real TSLA big days hidden by de-dup": "23 of 103",
+  "real freed&below without de-dup": {
+   "n_days": 155,
+   "episodes": 59,
+   "lift": 0.21511622718957749,
+   "p": 0.0
+  }
+ },
+ "P4 lift detected 80% of the time (pts)": {
+  "a: freed & below flip (real persistence), 3 sessions": 17.353871207735345,
+  "b: freed (real persistence), 3 sessions": 9.792243739257,
+  "c: 7 hand-picked events, 10 sessions": null
+ },
+ "C1 timing leak": {
+  "leaky lift": 0.4019939082136732,
+  "leaky p": 0.0,
+  "forward lift": -0.09195225654423442,
+  "forward p": 1.0,
+  "detector on leaky": true,
+  "detector on clean": false,
+  "pass": true
+ },
+ "C2 date convention": {
+  "actual max weekday share": 0.375,
+  "week-start max weekday share": 1.0,
+  "detector on week-start": true,
+  "detector on actual": false,
+  "pass": true,
+  "n dates": 8
+ },
+ "gate: real freed&below": {
+  "lift pts": 22.75732833623344,
+  "p": 0.0,
+  "80%-power lift pts": 17.353871207735345,
+  "verdict": "robust"
+ }
+}
