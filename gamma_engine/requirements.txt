@@ -1,0 +1,4 @@
+numpy>=1.26
+pandas>=2.1
+scipy>=1.11
+thetadata>=1.0.14   # Python >= 3.12; only td_pull.py and live_check.py need it
