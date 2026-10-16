@@ -184,3 +184,46 @@ These were recomputed with `ladder.py`'s own code on data to Oct 15, as P(a test
   * **R3:** GEX ≤ 20th pct. Expiry day usually drops GEX about 17 points (§4h).
   * **R4/R5:** the same plus the S&P 2% under its 10-day high. That is about 7,663 on the S&P, roughly SPY $764, which is about 1% under the owner's lower line (~$769–771 next week). Both 2026 launches came off a dip just under the lower line (Jun 26 −1.6%, Jul 23 −0.3%). Add DIX back over its 50th for R5.
   * **Or ARMED, then IGNITION:** the April entry.
+
+## Follow-up 2: VIX is the throttle (`vix_throttle.py`, `out/vix_throttle.png`, `out/vix_throttle*.csv`)
+
+**What is being checked.** §4d states: "Within high-VIX days, P(elevator) runs 29% → 5% from low to high GEX. In low-VIX markets it is ~0 whatever GEX does." No script in the repository produces that line.
+
+This check reproduces it with `release.py`'s own frame and outcome: the next-10-day S&P return in its top decile, base 10%, 2012-04 to 2026-10.
+* The VIX split is the sample's own terciles (14.3 and 18.4). That split was chosen here, after the fact.
+* The median split (16.1) is shown alongside for comparison.
+
+![VIX throttle](out/vix_throttle.png)
+
+**The claim reproduces.**
+
+| GEX pct (quintile) | VIX < 14.3 | VIX 14.3–18.4 | VIX > 18.4 |
+|---|---|---|---|
+| 0.00–0.21 | 0% (34 days) | 12% | **29%** |
+| 0.21–0.45 | 0% | 7% | **26%** |
+| 0.45–0.66 | 1% | 4% | **20%** |
+| 0.66–0.86 | 0% | 4% | 9% |
+| 0.86–1.00 | 1% | 2% | 5% |
+
+* **Median split:** above VIX 16.1 the odds run 27% → 2.5% across the gamma quintiles; below it they are 1–3% at every level of gamma.
+* **2019Q4+:** the same picture (30–31% in the bottom two gamma quintiles with VIX over 18.4).
+* **Part of this is arithmetic.** A top-decile 10-day rise is about +3.5%, which is 1.4 standard deviations at VIX 12 and 0.9 at VIX 20. Either way, the index does not sprint without vol.
+
+**The owner's touches** (`out/vix_throttle_touches.csv`):
+
+| Touch | GEX pct | VIX | Cell | Outcome |
+|---|---|---|---|---|
+| Apr 21 | 0.52 | 19.5 | 20% | upper line |
+| Jun 26 | 0.00 | 18.4 | 29% | stalled; the leg came 4 weeks later |
+| Jul 23 | 0.11 | 18.7 | 29% | upper line |
+| Sep 15 | 0.40 | 17.2 | 7% | stalled at the mid line |
+| Oct 1 | 0.44 | 16.4 | 7% | stalled at the mid line |
+| Oct 14 | 0.31 | 16.9 | 7% | ongoing |
+| **Oct 15 (now)** | **0.52** | **16.5** | **4%** | |
+
+**Read:**
+* **Every 2026 touch with VIX above 18.4 sat in a 20–29% cell,** and 2 of the 3 went on to the upper line.
+* **Every touch with VIX in the middle third sat in a 4–7% cell,** and all of them stalled at the mid line.
+* **Getting back into a launch cell takes VIX over about 18.4,** 2 points above today, with gamma under its 66th percentile.
+* **This fits the ladder:** the R4/R5 dip of 2% (SPY about $764) is the kind of move that lifts VIX about that much.
+* **For options (§4i):** the high-VIX cells are where calls are expensive. Spreads hold up from R2 on; naked calls only pay after the VIX crush (R7).

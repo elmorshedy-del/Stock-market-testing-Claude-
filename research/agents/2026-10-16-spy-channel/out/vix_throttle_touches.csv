@@ -1,0 +1,8 @@
+day,GEX pct,VIX,GEX quintile,VIX tercile,outcome
+Apr 21,0.52,19.5,2,2,upper line
+Jun 26,0.0,18.4,0,2,stalled
+Jul 23,0.11,18.7,0,2,upper line
+Sep 15,0.4,17.2,1,1,stalled
+Oct 01,0.44,16.4,1,1,stalled
+Oct 14,0.31,16.9,1,1,now
+now (Oct 15),0.52,16.5,2,1,now
