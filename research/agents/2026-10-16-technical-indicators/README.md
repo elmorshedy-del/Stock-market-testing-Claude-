@@ -333,10 +333,39 @@ The owner's idea: the regime changed, from TSLA's strong uptrend to a flat range
   * H-trend: ADX and momentum predict big up moves in trends (the pre-2021 ADX result).
   * At most one family passes.
 
+
+### Follow-up C results (`followup_regimes.py`, `out/followup_regimes.csv`, `out/followup_regimes.json`)
+
+![regimes](out/followup_regimes.png)
+
+**No survivor in any family. My prediction was right about the families and wrong on H-trend, which shows only as a weak lead.**
+
+| Family (TSLA, 2014–2026) | Family-wise p |
+|---|---|
+| daily range / trend / interaction | 0.55 / 0.61 / 0.83 |
+| weekly range / trend / interaction | 0.71 / 0.41 / 0.36 |
+
+* **Splitting by regime doesn't rescue the indicators.**
+  * The 20 statistics the hypotheses name went the predicted way 12 times out of 20. Chance gives 10, so that is no better than a coin.
+  * In ranges, the oscillators' effects are tiny: daily RSI, %B and stochastic move entry and exit odds by −1 to +4 points.
+* **The one echo of the owner's idea:** weekly ADX in the trend regime gives +23 points of big up moves (z 1.9, raw p 0.046). That is the pre-2021 ADX result reappearing as a trend effect, but it is far from the family-wise bar.
+* **What already works doesn't depend on the regime (secondary):**
+  * **Daily RSI in its bottom tenth → up-burst within 10 sessions:** 52% vs 34% in ranges (p 0.022), 59% vs 42% in trends (p 0.043).
+  * **The options full setup → up-burst within 3 (2021+):** 37% vs 12% in ranges (29 episodes), 41% vs 15% in trends (33 episodes).
+  * **New 20-session closing lows held:** 20% in ranges, 19% in trends.
+* **The bursts were not concentrated in ranges by this gauge.**
+  * 40% of TSLA up-burst days since 2014 fell in the range regime, which covers 49% of days. Since 2021 the shares are 45% and 47%.
+  * The 2021 and 2025 runs register as trend phases on a 52-week view.
+  * On a multi-year view, 2021–2026 is one range. That calendar split is already in Part A's "2021+" column, where nothing passes either.
+* **Threats:**
+  * The 52-week window and the median split are fixed choices; the two alternates agree on direction only.
+  * Each regime has about half the data.
+
 ## Reproduce
 ```bash
 OMP_NUM_THREADS=1 python indicators.py      # Part A + Part B + today's readings -> out/ (about 10 seconds)
 OMP_NUM_THREADS=1 python figures.py         # out/indicators.png
 OMP_NUM_THREADS=1 python followup_rsi_lows.py   # follow-up A -> out/followup_rsi_lows.json, .png
 OMP_NUM_THREADS=1 python followup_false_lows.py  # follow-up B -> out/followup_false_lows.json, .png
+OMP_NUM_THREADS=1 python followup_regimes.py     # follow-up C (--regimes prints the regime by year) -> out/followup_regimes.*
 ```

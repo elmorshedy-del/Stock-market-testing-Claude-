@@ -1,0 +1,50 @@
+{
+ "family p (single-step)": {
+  "daily range": 0.5514485514485514,
+  "daily trend": 0.6093906093906094,
+  "daily interaction": 0.8331668331668332,
+  "weekly range": 0.7056910569105691,
+  "weekly trend": 0.4065040650406504,
+  "weekly interaction": 0.36260162601626017
+ },
+ "survivors": 0,
+ "robust": [],
+ "secondary": {
+  "RSI bottom tenth -> up-burst within 10, range": {
+   "days": 164,
+   "P | RSI low": 0.5182926829268293,
+   "P | regime": 0.34063745019920316,
+   "difference": 0.17765523272762612,
+   "p": 0.02197802197802198
+  },
+  "RSI bottom tenth -> up-burst within 10, trend": {
+   "days": 198,
+   "P | RSI low": 0.5858585858585859,
+   "P | regime": 0.4247787610619469,
+   "difference": 0.16107982479663896,
+   "p": 0.04295704295704296
+  },
+  "options full setup -> up-burst within 3 (2021+), range": {
+   "setup days": 75,
+   "episodes": 29,
+   "P | setup": 0.37333333333333335,
+   "P | no setup": 0.12312811980033278
+  },
+  "options full setup -> up-burst within 3 (2021+), trend": {
+   "setup days": 80,
+   "episodes": 33,
+   "P | setup": 0.4125,
+   "P | no setup": 0.15151515151515152
+  },
+  "new 20-session closing low held 10 sessions, range": {
+   "candidates": 184,
+   "held": 0.20108695652173914
+  },
+  "new 20-session closing low held 10 sessions, trend": {
+   "candidates": 150,
+   "held": 0.19333333333333333
+  }
+ },
+ "headline": "TSLA indicators by regime: 0 robust survivor(s) of 144 statistics; splitting by regime does not uncover a reliable signal",
+ "regime now (week of 2026-10-09)": "range"
+}
