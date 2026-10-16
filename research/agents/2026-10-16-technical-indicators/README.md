@@ -297,6 +297,37 @@ The owner's use: avoid entering at a "false" low, one that gets broken soon afte
   * The 1-ATR bounce and the 10-session hold window are fixed choices, not optimised. Nearby values were not tested.
   * Candidates in a long slide cluster together. The shift null keeps that clustering.
 
+
+## Follow-up C (pre-registered 2026-10-16, before any outcome is computed): the indicators split by the higher-timeframe regime
+
+The owner's idea: the regime changed, from TSLA's strong uptrend to a flat range on the higher timeframes, and the bursts we study happened inside ranges. Pooling regimes can cancel opposite effects. Technical analysis expects oscillators to work in ranges and trend indicators in trends.
+
+* **Regime, known in real time (weekly bars, completed weeks only; days take the last completed week):**
+  * **Primary:** Kaufman efficiency ratio over 52 weeks, |net log change| ÷ Σ|weekly log changes|, as an expanding percentile (min 156 weeks). **Range** = at or below its median; **trend** = above.
+  * **Alternates, for robustness:** weekly ADX(14) < 20 = range; |SMA(40) slope over 13 weeks| ÷ weekly ATR at or below its expanding median = range.
+  * Checked before any outcome (`followup_regimes.py --regimes`): the primary gauge marks 2015–16, 2018–19, 2022–24 and 2026 as mostly range, and 2014, 2017, 2020–21 and 2025 as mostly trend. Both regimes occur before and after 2021.
+* **Tests (TSLA; the Part A indicators, states, outcomes and statistics, unchanged):**
+  * Daily and weekly bars. Monthly bars are too few once split.
+  * S1, S2 and S3 within the range regime, within the trend regime, and the interaction (range minus trend).
+* **Families and null:**
+  * 6 families (2 timeframes × range / trend / interaction) of 24 statistics, step-down maxT as in Part A.
+  * The indicator series are shifted against the outcomes while each day keeps its own regime label.
+  * **Survivor:** step-down p < 0.0083. **Robust:** the same sign under both alternate regime gauges.
+* **Hypotheses (direction, written now):**
+  * **H-range:** in ranges, low RSI, %B or stochastic brings more big up moves (S2 < 0), and high readings bring more big down moves (S3 > 0).
+  * **H-trend:** in trends, high momentum, trend distance, MACD or ADX brings more big up moves (S2 > 0).
+  * Each survivor is reported as matching or contradicting these.
+* **Secondary, descriptive, no pass bar:**
+  * up-burst within 10 sessions after daily RSI in its bottom tenth, by regime
+  * the TSLA options full setup's up-burst within 3 sessions, by regime (2021+)
+  * follow-up B's hold rates for new lows, by regime
+* **Smallest possible p:** daily 0.001; weekly about 0.0016. Both are below 0.0083.
+* **Power warning:** each regime has about half the data, so effects must be larger to pass.
+* **Prediction written now:**
+  * H-range shows up for daily RSI or %B as more big up moves after low readings in ranges, but does not pass the family-wise bar.
+  * H-trend: ADX and momentum predict big up moves in trends (the pre-2021 ADX result).
+  * At most one family passes.
+
 ## Reproduce
 ```bash
 OMP_NUM_THREADS=1 python indicators.py      # Part A + Part B + today's readings -> out/ (about 10 seconds)
