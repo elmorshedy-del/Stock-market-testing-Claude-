@@ -1,0 +1,503 @@
+{
+ "events": [
+  {
+   "peak": "2000-03-24",
+   "trough": "2000-04-14",
+   "depth": -0.112,
+   "VOL": {
+    "first_warning": "2000-02-04",
+    "weeks_vs_peak": -7,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.072
+   },
+   "V+R": {
+    "first_warning": "2000-01-28",
+    "weeks_vs_peak": -8,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.123
+   },
+   "FULL": null
+  },
+  {
+   "peak": "2000-09-01",
+   "trough": "2001-04-04",
+   "depth": -0.275,
+   "VOL": {
+    "first_warning": "2000-06-16",
+    "weeks_vs_peak": -11,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.038
+   },
+   "V+R": {
+    "first_warning": "2000-09-15",
+    "weeks_vs_peak": 2,
+    "already_down": -0.036,
+    "share_of_fall_still_ahead": 0.87,
+    "rise_to_peak_after_warning": 0.0
+   },
+   "FULL": {
+    "first_warning": "2001-01-05",
+    "weeks_vs_peak": 18,
+    "already_down": -0.146,
+    "share_of_fall_still_ahead": 0.47,
+    "rise_to_peak_after_warning": 0.0
+   }
+  },
+  {
+   "peak": "2001-05-21",
+   "trough": "2001-09-21",
+   "depth": -0.264,
+   "VOL": {
+    "first_warning": "2001-03-09",
+    "weeks_vs_peak": -10,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.064
+   },
+   "V+R": {
+    "first_warning": "2001-02-23",
+    "weeks_vs_peak": -12,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.054
+   },
+   "FULL": {
+    "first_warning": "2001-03-02",
+    "weeks_vs_peak": -11,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.064
+   }
+  },
+  {
+   "peak": "2002-01-04",
+   "trough": "2002-07-23",
+   "depth": -0.32,
+   "VOL": {
+    "first_warning": "2002-02-22",
+    "weeks_vs_peak": 7,
+    "already_down": -0.071,
+    "share_of_fall_still_ahead": 0.78,
+    "rise_to_peak_after_warning": 0.0
+   },
+   "V+R": {
+    "first_warning": "2001-10-05",
+    "weeks_vs_peak": -13,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.094
+   },
+   "FULL": {
+    "first_warning": "2002-01-04",
+    "weeks_vs_peak": 0,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.0
+   }
+  },
+  {
+   "peak": "2002-08-22",
+   "trough": "2002-10-09",
+   "depth": -0.193,
+   "VOL": {
+    "first_warning": "2002-07-12",
+    "weeks_vs_peak": -6,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.045
+   },
+   "V+R": {
+    "first_warning": "2002-07-19",
+    "weeks_vs_peak": -5,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.136
+   },
+   "FULL": null
+  },
+  {
+   "peak": "2002-11-27",
+   "trough": "2003-03-11",
+   "depth": -0.147,
+   "VOL": {
+    "first_warning": "2003-03-07",
+    "weeks_vs_peak": 14,
+    "already_down": -0.117,
+    "share_of_fall_still_ahead": 0.2,
+    "rise_to_peak_after_warning": 0.0
+   },
+   "V+R": {
+    "first_warning": "2003-01-17",
+    "weeks_vs_peak": 7,
+    "already_down": -0.04,
+    "share_of_fall_still_ahead": 0.73,
+    "rise_to_peak_after_warning": 0.0
+   },
+   "FULL": {
+    "first_warning": "2002-11-08",
+    "weeks_vs_peak": -3,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.049
+   }
+  },
+  {
+   "peak": "2007-10-09",
+   "trough": "2008-03-10",
+   "depth": -0.186,
+   "VOL": {
+    "first_warning": "2007-10-05",
+    "weeks_vs_peak": -1,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.005
+   },
+   "V+R": {
+    "first_warning": "2007-11-16",
+    "weeks_vs_peak": 5,
+    "already_down": -0.068,
+    "share_of_fall_still_ahead": 0.64,
+    "rise_to_peak_after_warning": 0.0
+   },
+   "FULL": null
+  },
+  {
+   "peak": "2008-05-19",
+   "trough": "2008-10-10",
+   "depth": -0.37,
+   "VOL": {
+    "first_warning": "2008-05-02",
+    "weeks_vs_peak": -2,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.009
+   },
+   "V+R": {
+    "first_warning": "2008-02-22",
+    "weeks_vs_peak": -12,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.054
+   },
+   "FULL": {
+    "first_warning": "2008-05-16",
+    "weeks_vs_peak": 0,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.001
+   }
+  },
+  {
+   "peak": "2008-10-13",
+   "trough": "2008-10-27",
+   "depth": -0.154,
+   "VOL": null,
+   "V+R": {
+    "first_warning": "2008-09-26",
+    "weeks_vs_peak": -2,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": -0.173
+   },
+   "FULL": null
+  },
+  {
+   "peak": "2008-11-04",
+   "trough": "2008-11-20",
+   "depth": -0.252,
+   "VOL": null,
+   "V+R": {
+    "first_warning": "2008-09-26",
+    "weeks_vs_peak": -6,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": -0.171
+   },
+   "FULL": null
+  },
+  {
+   "peak": "2009-01-06",
+   "trough": "2009-03-09",
+   "depth": -0.276,
+   "VOL": null,
+   "V+R": {
+    "first_warning": "2008-10-10",
+    "weeks_vs_peak": -13,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.039
+   },
+   "FULL": {
+    "first_warning": "2009-01-02",
+    "weeks_vs_peak": -1,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.003
+   }
+  },
+  {
+   "peak": "2010-04-23",
+   "trough": "2010-07-02",
+   "depth": -0.16,
+   "VOL": null,
+   "V+R": null,
+   "FULL": null
+  },
+  {
+   "peak": "2011-04-29",
+   "trough": "2011-10-03",
+   "depth": -0.194,
+   "VOL": null,
+   "V+R": {
+    "first_warning": "2011-08-19",
+    "weeks_vs_peak": 16,
+    "already_down": -0.176,
+    "share_of_fall_still_ahead": 0.09,
+    "rise_to_peak_after_warning": 0.0
+   },
+   "FULL": null
+  },
+  {
+   "peak": "2015-05-21",
+   "trough": "2015-08-25",
+   "depth": -0.124,
+   "VOL": null,
+   "V+R": null,
+   "FULL": null
+  },
+  {
+   "peak": "2015-11-03",
+   "trough": "2016-02-11",
+   "depth": -0.133,
+   "VOL": {
+    "first_warning": "2015-09-11",
+    "weeks_vs_peak": -8,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.076
+   },
+   "V+R": {
+    "first_warning": "2015-08-28",
+    "weeks_vs_peak": -10,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.061
+   },
+   "FULL": {
+    "first_warning": "2015-12-25",
+    "weeks_vs_peak": 7,
+    "already_down": -0.023,
+    "share_of_fall_still_ahead": 0.83,
+    "rise_to_peak_after_warning": 0.0
+   }
+  },
+  {
+   "peak": "2018-01-26",
+   "trough": "2018-02-08",
+   "depth": -0.102,
+   "VOL": null,
+   "V+R": null,
+   "FULL": null
+  },
+  {
+   "peak": "2018-09-20",
+   "trough": "2018-12-24",
+   "depth": -0.198,
+   "VOL": {
+    "first_warning": "2018-06-22",
+    "weeks_vs_peak": -13,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.064
+   },
+   "V+R": {
+    "first_warning": "2018-06-22",
+    "weeks_vs_peak": -13,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.064
+   },
+   "FULL": null
+  },
+  {
+   "peak": "2020-02-19",
+   "trough": "2020-03-23",
+   "depth": -0.339,
+   "VOL": {
+    "first_warning": "2020-03-13",
+    "weeks_vs_peak": 3,
+    "already_down": -0.199,
+    "share_of_fall_still_ahead": 0.41,
+    "rise_to_peak_after_warning": 0.0
+   },
+   "V+R": {
+    "first_warning": "2019-12-06",
+    "weeks_vs_peak": -11,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.076
+   },
+   "FULL": {
+    "first_warning": "2019-12-06",
+    "weeks_vs_peak": -11,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.076
+   }
+  },
+  {
+   "peak": "2022-01-03",
+   "trough": "2022-03-08",
+   "depth": -0.13,
+   "VOL": {
+    "first_warning": "2021-12-03",
+    "weeks_vs_peak": -4,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.057
+   },
+   "V+R": {
+    "first_warning": "2021-10-22",
+    "weeks_vs_peak": -10,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.055
+   },
+   "FULL": {
+    "first_warning": "2021-10-29",
+    "weeks_vs_peak": -9,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.042
+   }
+  },
+  {
+   "peak": "2022-03-29",
+   "trough": "2022-06-16",
+   "depth": -0.208,
+   "VOL": {
+    "first_warning": "2021-12-31",
+    "weeks_vs_peak": -13,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": -0.028
+   },
+   "V+R": {
+    "first_warning": "2022-03-11",
+    "weeks_vs_peak": -3,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.102
+   },
+   "FULL": {
+    "first_warning": "2022-04-15",
+    "weeks_vs_peak": 2,
+    "already_down": -0.052,
+    "share_of_fall_still_ahead": 0.75,
+    "rise_to_peak_after_warning": 0.0
+   }
+  },
+  {
+   "peak": "2022-08-16",
+   "trough": "2022-10-12",
+   "depth": -0.169,
+   "VOL": {
+    "first_warning": "2022-09-16",
+    "weeks_vs_peak": 4,
+    "already_down": -0.1,
+    "share_of_fall_still_ahead": 0.41,
+    "rise_to_peak_after_warning": 0.0
+   },
+   "V+R": {
+    "first_warning": "2022-05-27",
+    "weeks_vs_peak": -12,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.035
+   },
+   "FULL": {
+    "first_warning": "2022-09-23",
+    "weeks_vs_peak": 5,
+    "already_down": -0.142,
+    "share_of_fall_still_ahead": 0.16,
+    "rise_to_peak_after_warning": 0.0
+   }
+  },
+  {
+   "peak": "2023-07-31",
+   "trough": "2023-10-27",
+   "depth": -0.103,
+   "VOL": null,
+   "V+R": null,
+   "FULL": null
+  },
+  {
+   "peak": "2025-02-19",
+   "trough": "2025-04-08",
+   "depth": -0.189,
+   "VOL": {
+    "first_warning": "2025-04-04",
+    "weeks_vs_peak": 6,
+    "already_down": -0.174,
+    "share_of_fall_still_ahead": 0.08,
+    "rise_to_peak_after_warning": 0.0
+   },
+   "V+R": {
+    "first_warning": "2024-11-22",
+    "weeks_vs_peak": -13,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.029
+   },
+   "FULL": {
+    "first_warning": "2024-11-22",
+    "weeks_vs_peak": -13,
+    "already_down": 0.0,
+    "share_of_fall_still_ahead": 1.0,
+    "rise_to_peak_after_warning": 0.029
+   }
+  }
+ ],
+ "precision_VOL": {
+  "flagged_weeks": 183,
+  "followed_by_10pct": 0.2185792349726776,
+  "base_rate": 0.19219653179190752
+ },
+ "precision_V+R": {
+  "flagged_weeks": 232,
+  "followed_by_10pct": 0.3217391304347826,
+  "base_rate": 0.19219653179190752
+ },
+ "precision_FULL": {
+  "flagged_weeks": 183,
+  "followed_by_10pct": 0.2722222222222222,
+  "base_rate": 0.19219653179190752
+ },
+ "summary_VOL": {
+  "events": 23,
+  "warned": 15,
+  "warned_before_peak": 10,
+  "median_already_down": 0.0,
+  "median_share_still_ahead": 1.0,
+  "median_rise_missed_when_early": 0.051000000000000004
+ },
+ "summary_V+R": {
+  "events": 23,
+  "warned": 19,
+  "warned_before_peak": 15,
+  "median_already_down": 0.0,
+  "median_share_still_ahead": 1.0,
+  "median_rise_missed_when_early": 0.055
+ },
+ "summary_FULL": {
+  "events": 23,
+  "warned": 12,
+  "warned_before_peak": 8,
+  "median_already_down": 0.0,
+  "median_share_still_ahead": 1.0,
+  "median_rise_missed_when_early": 0.035500000000000004
+ }
+}

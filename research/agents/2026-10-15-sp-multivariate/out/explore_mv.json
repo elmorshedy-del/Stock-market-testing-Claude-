@@ -1,0 +1,250 @@
+{
+ "stack_Y_CORR": {
+  "macro": {
+   "rate_on": 0.1409,
+   "rate_off": 0.1683,
+   "weeks_on": 596,
+   "delta": -0.0274,
+   "p_shift": 0.6603
+  },
+  "trigger": {
+   "rate_on": 0.22,
+   "rate_off": 0.1168,
+   "weeks_on": 409,
+   "delta": 0.1033,
+   "p_shift": 0.024
+  },
+  "stretched": {
+   "rate_on": 0.0831,
+   "rate_off": 0.2338,
+   "weeks_on": 891,
+   "delta": -0.1508,
+   "p_shift": 0.996
+  },
+  "macro_and_trigger": {
+   "rate_on": 0.2326,
+   "rate_off": 0.1458,
+   "weeks_on": 172,
+   "delta": 0.0867,
+   "p_shift": 0.2138
+  },
+  "trigger_and_stretched": {
+   "rate_on": 0.1182,
+   "rate_off": 0.1675,
+   "weeks_on": 110,
+   "delta": -0.0493,
+   "p_shift": 0.7622
+  },
+  "macro_and_stretched": {
+   "rate_on": 0.0708,
+   "rate_off": 0.172,
+   "weeks_on": 226,
+   "delta": -0.1012,
+   "p_shift": 0.9421
+  },
+  "all_three": {
+   "rate_on": 0.037,
+   "rate_off": 0.1654,
+   "weeks_on": 27,
+   "delta": -0.1284,
+   "p_shift": 0.9321
+  },
+  "base_rate": 0.1593
+ },
+ "stack_Y_BEAR": {
+  "macro": {
+   "rate_on": 0.0856,
+   "rate_off": 0.1885,
+   "weeks_on": 596,
+   "delta": -0.1029,
+   "p_shift": 0.8472
+  },
+  "trigger": {
+   "rate_on": 0.1294,
+   "rate_off": 0.1144,
+   "weeks_on": 394,
+   "delta": 0.015,
+   "p_shift": 0.3926
+  },
+  "stretched": {
+   "rate_on": 0.0642,
+   "rate_off": 0.2413,
+   "weeks_on": 872,
+   "delta": -0.1771,
+   "p_shift": 0.961
+  },
+  "macro_and_trigger": {
+   "rate_on": 0.0291,
+   "rate_off": 0.1427,
+   "weeks_on": 172,
+   "delta": -0.1136,
+   "p_shift": 0.8921
+  },
+  "trigger_and_stretched": {
+   "rate_on": 0.0935,
+   "rate_off": 0.1247,
+   "weeks_on": 107,
+   "delta": -0.0312,
+   "p_shift": 0.6224
+  },
+  "macro_and_stretched": {
+   "rate_on": 0.0044,
+   "rate_off": 0.1757,
+   "weeks_on": 226,
+   "delta": -0.1712,
+   "p_shift": 1.0
+  },
+  "all_three": {
+   "rate_on": 0.0,
+   "rate_off": 0.1247,
+   "weeks_on": 27,
+   "delta": -0.1247,
+   "p_shift": 1.0
+  }
+ },
+ "stack_now": {
+  "macro": 0.0,
+  "trigger": 0.0,
+  "stretched": 0.0,
+  "macro_and_trigger": 0.0,
+  "trigger_and_stretched": 0.0,
+  "macro_and_stretched": 0.0,
+  "all_three": 0.0
+ },
+ "spy_gamma": {
+  "first_warning_weeks": [
+   "2020-01-03",
+   "2021-11-05",
+   "2022-07-22",
+   "2023-07-28",
+   "2025-01-03"
+  ],
+  "weeks_before_a_10pct_fall_mean": {
+   "below_flip": 0.6786,
+   "flip_dist": -0.0159,
+   "gex_pct": 0.3257,
+   "share_1d": 0.0636,
+   "put_call_oi": 2.1167,
+   "iv_minus_rv": -0.002,
+   "near_oi_5": 0.2598
+  },
+  "other_weeks_mean": {
+   "below_flip": 0.5228,
+   "flip_dist": -0.0074,
+   "gex_pct": 0.5323,
+   "share_1d": 0.0678,
+   "put_call_oi": 2.328,
+   "iv_minus_rv": 0.0056,
+   "near_oi_5": 0.2347
+  },
+  "n_before": 56,
+  "n_other": 285,
+  "now": {
+   "below_flip": 0.0,
+   "flip_dist": 0.0042,
+   "gex_pct": 0.869,
+   "share_1d": 0.093,
+   "put_call_oi": 2.8344,
+   "iv_minus_rv": 0.0235,
+   "near_oi_5": 0.228
+  }
+ },
+ "now_raw": {
+  "V_VIX": 16.46,
+  "V_RV20": 0.0961,
+  "V_RV126": 0.1193,
+  "M_FF_HIKE": -0.23,
+  "M_Y10_UP": 0.93,
+  "M_CURVE_FLAT": -0.91,
+  "M_USD_UP": 0.039,
+  "M_M2_SLOW": -5.5046,
+  "M_MARGIN_FROTH": 31.6195,
+  "M_LIQ_DRAIN": -0.0152,
+  "M_TIPS_UP": 0.88,
+  "M_CREDIT_WIDEN": -0.0246,
+  "M_MARGIN_CREDIT": 3.3428,
+  "M_CPI_YOY": 3.3401,
+  "M_NFCI": -0.518,
+  "M_NFCI_RISK": -0.584,
+  "M_NFCI_CREDIT": -0.041,
+  "M_NFCI_LEV": 0.153,
+  "M_NFCI_CHG13": 0.0,
+  "O_VIX_TERM": 0.8902,
+  "O_VIX9D_RATIO": 0.8487,
+  "O_VVIX": 92.57,
+  "O_SKEW": 160.45,
+  "O_VRP": 6.849,
+  "O_PC_TOTAL": 0.853,
+  "O_PC_EQUITY": 0.589,
+  "O_PC_INDEX": 0.98,
+  "O_GEX": 7.8043,
+  "O_DIX": 0.4486,
+  "R_RSI_D": 51.9412,
+  "R_RSI_W": 61.6917,
+  "R_RSI_M": 74.7438,
+  "R_MOM4": 0.0122,
+  "R_MOM13": 0.0377,
+  "R_MOM26": 0.0832,
+  "R_MOM52": 0.1502,
+  "R_MOM12_1": 0.138,
+  "R_MACD_H": -0.0018,
+  "R_DIST_SMA40": 0.0628,
+  "R_BREADTH": 0.5766,
+  "R_RSI_DIV": 1.0,
+  "S_CHAN_Z": 0.4225,
+  "S_CHAN_R2": 0.9254,
+  "S_DD52": -0.0086,
+  "S_AVGCORR": 0.0811,
+  "ERA_ZC": 1.0,
+  "ERA_0DTE": 1.0
+ },
+ "now_pct": {
+  "V_VIX": 0.415,
+  "V_RV20": 0.146,
+  "V_RV126": 0.254,
+  "M_FF_HIKE": 0.404,
+  "M_Y10_UP": 0.831,
+  "M_CURVE_FLAT": 0.154,
+  "M_USD_UP": 0.769,
+  "M_M2_SLOW": 0.181,
+  "M_MARGIN_FROTH": 0.846,
+  "M_LIQ_DRAIN": 0.304,
+  "M_TIPS_UP": 0.815,
+  "M_CREDIT_WIDEN": 0.477,
+  "M_MARGIN_CREDIT": 0.146,
+  "M_CPI_YOY": 0.55,
+  "M_NFCI": 0.258,
+  "M_NFCI_RISK": 0.177,
+  "M_NFCI_CREDIT": 0.323,
+  "M_NFCI_LEV": 0.915,
+  "M_NFCI_CHG13": 0.512,
+  "O_VIX_TERM": 0.569,
+  "O_VIX9D_RATIO": 0.308,
+  "O_VVIX": 0.454,
+  "O_SKEW": 0.95,
+  "O_VRP": 0.796,
+  "O_PC_TOTAL": 0.212,
+  "O_PC_EQUITY": 0.388,
+  "O_PC_INDEX": 0.05,
+  "O_GEX": 0.923,
+  "O_DIX": 0.185,
+  "R_RSI_D": 0.539,
+  "R_RSI_W": 0.734,
+  "R_RSI_M": 0.995,
+  "R_MOM4": 0.469,
+  "R_MOM13": 0.481,
+  "R_MOM26": 0.55,
+  "R_MOM52": 0.535,
+  "R_MOM12_1": 0.504,
+  "R_MACD_H": 0.338,
+  "R_DIST_SMA40": 0.485,
+  "R_BREADTH": 0.335,
+  "R_RSI_DIV": 1.5,
+  "S_CHAN_Z": 0.923,
+  "S_CHAN_R2": 1.425,
+  "S_DD52": 0.491,
+  "S_AVGCORR": 0.058,
+  "ERA_ZC": 1.5,
+  "ERA_0DTE": 1.5
+ }
+}

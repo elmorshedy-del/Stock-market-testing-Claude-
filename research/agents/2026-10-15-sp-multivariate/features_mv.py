@@ -40,6 +40,8 @@ def ycol(base, sym, col="adjclose"):
 
 def asof(series, idx, lag_days=0):
     s = series.dropna().sort_index()
+    if s.empty:                       # series not born yet at a cutoff (e.g. VIX9D before 2011)
+        return pd.Series(np.nan, index=idx)
     pos = np.searchsorted(s.index.to_numpy("datetime64[ns]"),
                           (idx - pd.Timedelta(days=lag_days)).to_numpy("datetime64[ns]"), side="right") - 1
     return pd.Series(np.where(pos >= 0, s.to_numpy(float)[np.clip(pos, 0, None)], np.nan), index=idx)
