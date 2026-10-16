@@ -2,7 +2,11 @@
 
 **Agent / session:** Claude, claude.ai session for the owner, 2026-10-16
 **Type:** data check (descriptive, 1 day), the first step of the data audit the owner asked for. Builds on microstructure §4r item 3 (the Mar 28 2025 sample).
-**Verdict:**
+**Verdict (updated after Part B):** the behaviour test **supports the engine's classic convention for calls in all five assets, TSLA included** (p < 0.001), and **rejects the all-short convention**.
+* Puts behave as classic in SPY and QQQ (p < 0.001). For TSLA puts it is inconclusive (+0.026, p 0.24), leaning the classic way.
+* The Cboe days below describe customers only. The prices say that, across all holders, dealers end up net long call gamma.
+
+**Part A verdict (one day, before Part B):**
 * **For TSLA puts, the engine's classic convention looks right.** Customers mostly hold long puts, so dealers are short them.
 * **For TSLA calls it is in doubt.**
   * Customers' call activity is about 6 to 1 on the long side: they buy to open and sell to close. So customers mostly hold *long* calls, and the other side (market makers, plus funds that write calls) is mostly *short*.
@@ -126,3 +130,56 @@ The test estimates call and put gamma separately, so no convention has to be ass
 * **TSLA:** β_put > 0, so the classic convention holds for puts. β_call near zero: customers' long calls (dealers short) partly offset by call-writing funds (dealers long).
 * **SPY and QQQ:** β_call < 0 and β_put > 0, the classic pattern.
 * **Confidence:** low for TSLA calls.
+
+## Part B results (`behaviour.py`, `out/behaviour.json`, `out/behaviour_table.csv`)
+
+![behaviour](out/behaviour.png)
+
+**Primary:** next-day range, 2020-01 to 2026-10-07, about 1,700 days per asset. Every row uses the same frame; the last days drop because the 5-day secondary outcome needs 5 days ahead.
+
+| Asset | β_call (p) | β_put (p) | Reading |
+|---|---|---|---|
+| **TSLA** | **−0.070 (< 0.001)** | +0.026 (0.24) | calls damp: dealers long calls. Puts inconclusive |
+| MSFT | −0.082 (< 0.001) | +0.008 (0.64) | calls damp. Puts neutral |
+| NVDA | −0.088 (< 0.001) | +0.042 (0.043) | calls damp. Puts amplify slightly (not under 0.00625) |
+| SPY | −0.159 (< 0.001) | +0.135 (< 0.001) | classic on both legs |
+| QQQ | −0.168 (< 0.001) | +0.133 (< 0.001) | classic on both legs |
+
+**TSLA verdict by the pre-registered rule:**
+* **Calls:** "dealers net long calls: classic right".
+* **Puts:** "inconclusive".
+
+**Robustness (TSLA calls):**
+
+| Outcome or period | β_call | p |
+|---|---|---|
+| next-day \|return\| | −0.081 | 0.075 |
+| next 5-day RV | −0.060 | 0.051 |
+| 2020–22 | −0.118 | < 0.001 |
+| 2023–26 | **−0.032** | **0.10** |
+
+* The damping is weaker since 2023: a watch item, not a reversal.
+* MSFT, SPY and QQQ calls are under 0.001 in both periods.
+
+**Classic vs all-short in the same model** (extra share of the next-day range explained beyond the controls):
+
+| Asset | Classic | All-short |
+|---|---|---|
+| TSLA | 0.0099 | 0.0088 |
+| MSFT | 0.0055 | 0.0046 |
+| NVDA | 0.0097 | 0.0037 |
+| SPY | 0.0262 | 0.0001 |
+| QQQ | 0.0235 | 0.0009 |
+
+* The all-short composite also has the **wrong sign** for the single stocks: more total gamma comes before *smaller* ranges, which is impossible if dealers were short everything.
+
+**Prediction check:**
+* SPY and QQQ: right.
+* TSLA: wrong on both legs. I expected significant put amplification and no call effect.
+
+**The attention confound** (written down in advance) pushes both β's upward. That makes the negative call β's conservative, and leaves the small positive TSLA and NVDA put β's open to that explanation.
+
+**Read:**
+* **Why the Cboe days look different.** They show what retail customers do on Cboe's exchanges: they mostly hold long calls. The prices say that across all holders (call-writing funds, covered-call holders, other exchanges) dealers end up net long call gamma.
+* **What the evidence settles.** The engine's call sign is right for every asset tested, and its put sign is right for the indices. For single-stock puts, the data can't tell long from short.
+* **What depends on that.** The TSLA flip balances call gamma (shown to damp) against put gamma (not shown to amplify). So "below the flip" means "too little call damping near the price" more than "dealers amplifying". That fits the freed result: little gamma near the price, bigger moves.
