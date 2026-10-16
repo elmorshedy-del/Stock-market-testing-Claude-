@@ -1,0 +1,58 @@
+{
+ "TSLA": {
+  "asset": "TSLA",
+  "gap days": 311,
+  "below flip": 125,
+  "above flip": 186,
+  "P(continue | below)": 0.44,
+  "P(continue | above)": 0.5053763440860215,
+  "difference": -0.0653763440860215,
+  "p (one-sided)": 0.9078498293515358,
+  "smallest possible p": 0.0034129692832764505,
+  "P(fill | below)": 0.176,
+  "P(fill | above)": 0.10215053763440861,
+  "passes (TSLA, p < 0.05, positive)": false
+ },
+ "MSFT": {
+  "asset": "MSFT",
+  "gap days": 365,
+  "below flip": 75,
+  "above flip": 290,
+  "P(continue | below)": 0.5066666666666667,
+  "P(continue | above)": 0.4862068965517241,
+  "difference": 0.0204597701149426,
+  "p (one-sided)": 0.41210374639769454,
+  "smallest possible p": 0.002881844380403458,
+  "P(fill | below)": 0.18666666666666668,
+  "P(fill | above)": 0.15172413793103448,
+  "passes (TSLA, p < 0.05, positive)": false
+ },
+ "SPY": {
+  "asset": "SPY",
+  "gap days": 337,
+  "below flip": 256,
+  "above flip": 81,
+  "P(continue | below)": 0.515625,
+  "P(continue | above)": 0.5802469135802469,
+  "difference": -0.06462191358024694,
+  "p (one-sided)": 0.8683385579937304,
+  "smallest possible p": 0.003134796238244514,
+  "P(fill | below)": 0.15234375,
+  "P(fill | above)": 0.08641975308641975,
+  "passes (TSLA, p < 0.05, positive)": false
+ },
+ "QQQ": {
+  "asset": "QQQ",
+  "gap days": 354,
+  "below flip": 243,
+  "above flip": 111,
+  "P(continue | below)": 0.5349794238683128,
+  "P(continue | above)": 0.4864864864864865,
+  "difference": 0.04849293738182625,
+  "p (one-sided)": 0.19940476190476192,
+  "smallest possible p": 0.002976190476190476,
+  "P(fill | below)": 0.1646090534979424,
+  "P(fill | above)": 0.10810810810810811,
+  "passes (TSLA, p < 0.05, positive)": false
+ }
+}

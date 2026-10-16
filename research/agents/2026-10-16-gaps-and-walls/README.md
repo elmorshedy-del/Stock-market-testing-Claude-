@@ -1,9 +1,11 @@
 # Do gaps and premarket moves stop at option walls, and does the gamma regime decide whether a gap runs or gets dragged back?
 
 **Agent / session:** Claude, claude.ai session for the owner, 2026-10-16
-**Started:** 2026-10-16   **Pre-registered at commit:** (the first commit of this README, pushed before any outcome was computed)
+**Started:** 2026-10-16   **Pre-registered at commit:** 7b90640 (pushed before any outcome was computed)
 **Type:** new question (the owner's observation)
-**Verdict:** _to be filled in after the run_
+**Verdict:** **no to both, as tested.**
+* Walls do not attract opens, highs, lows or premarket extremes beyond being close to the price and on round numbers.
+* The gamma regime matters, but the opposite of the textbook. Gaps that open below the flip continue *less* and get filled *more*; gaps that open above it hold.
 
 ## Question
 The owner's observations:
@@ -58,7 +60,59 @@ Today's example (Oct 16): TSLA gapped about +4% on news, peaked premarket at 382
 * **G2:** the difference leans positive but does not pass for TSLA.
 
 ## Results
-_to be filled in after the run_
+
+![gaps and walls](out/gaps_walls.png)
+
+### G1: walls (`out/g1.json`)
+
+| Event (TSLA) | Events | On a wall | Pre-registered null (round-matched) | p | Post-hoc null (round- **and distance**-matched) | p |
+|---|---|---|---|---|---|---|
+| (a) open | 1,703 | 4.1% | 3.8% | 0.10 | 4.4% | 1.00 |
+| (a′) open, gap days | 271 | 5.5% | 4.6% | 0.14 | | |
+| (b) day high and low | 3,406 | 2.7% | 2.4% | **0.013 (passes)** | 2.6% | 0.12 |
+| (c) premarket high and low | 116 (58 days) | 3.4% | 1.6% | 0.063 | 3.7% | 0.89 |
+
+* **The one pass, (b), is a design flaw in my null, found after the run.**
+  * The top-OI strikes sit close to the price, but the pre-registered null drew equally round strikes from anywhere within ±10%. Closer strikes get touched more, so the null favoured the walls.
+  * Matching the null on distance as well removes the excess: 1.04× for highs and lows, p 0.12.
+  * The second pre-registered null (each strike's OI taken from another day) is worse still on this count. Its walls are often far from today's price (18–28 hits expected), so I don't use it.
+* **Read:** highs, lows, opens and premarket extremes land on the biggest-OI strikes about as often as on any equally round strike at the same distance. The "exact" stops the eye catches are mostly round numbers near the price.
+* **Not tested:**
+  * walls from same-day (0DTE) or expiring-today positions only;
+  * gamma per strike instead of OI;
+  * expiry days alone (about 80 cases).
+
+### G2: the gamma regime at the open (`out/g2.json`, `out/g2_cells.csv`)
+
+| Asset (gap days 2020+) | Continued, open below flip | Continued, open above flip | Difference | p (one-sided, predicted +) | Gap filled: below / above |
+|---|---|---|---|---|---|
+| **TSLA** (311) | 44% (125) | 51% (186) | **−7 pts** | 0.91 | **18% / 10%** |
+| MSFT (365) | 51% (75) | 49% (290) | +2 | 0.41 | 19% / 15% |
+| SPY (337) | 52% (256) | 58% (81) | −6 | 0.87 | 15% / 9% |
+| QQQ (354) | 53% (243) | 49% (111) | +5 | 0.20 | 16% / 11% |
+
+* **The pre-registered prediction fails for TSLA:** below the flip, gaps continue *less*, not more.
+* **What does hold, across all four assets:** gaps that open below the flip are filled more often. They close back beyond the prior close in 15–19% of cases, against 9–15% above the flip.
+  * TSLA gap-ups that open below the flip fill **23%** of the time (30 days); gap-ups that open above it fill **11%** (131 days).
+  * This fits §4z (below the flip, TSLA snaps back): below the flip, moves revert more, not less.
+* **Today:** TSLA gapped up and opened well above the flip (about 364). Historically that cell continued 50% of the time, with a median session move of +0.03% from the open, and filled the gap only 11% of the time.
+
+### G3: premarket volume
+Not run: no premarket volume in the data we have (see above).
+
+## Threats to validity
+* **G1:**
+  * The 1/10-spacing hit window is narrow. Hits are a few percent of events, so small differences need many days.
+  * The premarket sample is 58 days.
+* **G2:**
+  * The flip is from the prior day's chain, so a large gap can move the open far from where the flip was computed.
+  * The SPY "above flip, gap down" cell has 7 days, and QQQ's has 16.
+* **The post-hoc null:** it is my correction of my own design flaw and was chosen after seeing (b) pass. It is reported next to the pre-registered result, not instead of it.
+
+## Verdict
+* **Walls:** no evidence that big-OI strikes stop prices beyond being near the price and round. Don't size a trade on "it will stop at the wall".
+* **Regime:** the useful version is about the gap fill, not continuation. When a TSLA gap opens below the flip, it is about twice as likely to be fully filled (18% vs 10%). When it opens above, the gap tends to hold.
+* **Premarket volume:** untested. It needs 1-minute premarket bars with volume, from Databento (about cents from the free credit; the owner's approval is needed) or a paid Alpha Vantage tier.
 
 ## Reproduce
 ```bash
