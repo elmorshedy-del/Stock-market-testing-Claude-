@@ -270,9 +270,37 @@ The owner's use: avoid entering at a "false" low, one that gets broken soon afte
 * **Smallest possible p:** this depends on the candidate count. The script prints it first and marks any test that cannot reach 0.025.
 * **Prediction written now:** divergence raises the hold rate a little (+5 to +10 points) but does not pass. Most false lows come in high-volatility slides, which RSI does not see.
 
+
+### Follow-up B results (`followup_false_lows.py`, `out/followup_false_lows.json`)
+
+![true vs false lows](out/followup_false_lows.png)
+
+**The primary test fails in both framings. My prediction was roughly right:** no pass, with a lift only after the bounce.
+
+| | (a) Enter at a new 20-day closing low | (b) Enter after the first 1-ATR bounce |
+|---|---|---|
+| Candidates (2011–2026) | 406 | 120 |
+| **The low held for the next 10 sessions** | **20%** | **66%** |
+| With RSI divergence / without | 23% (82) / 23% (167), p 1.00 | **86% (21) / 69% (55)**, +17 pts, p 0.21 |
+| RSI in its bottom tenth / not | 20% / 20% | 66% / 67% |
+| Options setup on / off (2021+) | 21% (76) / 18% (90), p 0.60 | 2 cases on: untestable |
+| Up-burst within 10 sessions | 53% | 34% |
+
+* **Buying a new low is mostly buying a false low.** 4 of 5 new 20-day closing lows were broken within 10 sessions.
+  * RSI can't tell you which one will hold: not its level, not divergence.
+  * Low RSI at the low raises the burst odds (59% vs 44%) without changing the hold rate. The moves around it are bigger in both directions.
+* **The bounce itself is the filter.** After a 1-ATR bounce off the low, the low held 66% of the time.
+  * The cost is entering about one ATR higher (about 3% for TSLA now).
+  * Part of the burst may already be spent: up-burst within 10 sessions falls from 53% to 34%.
+* **After the bounce, divergence helps but isn't proven.** 86% vs 69% held, 21 cases, p 0.21. It's the best-supported way to use RSI against false lows, but still a lead.
+* **Threats:**
+  * The 1-ATR bounce and the 10-session hold window are fixed choices, not optimised. Nearby values were not tested.
+  * Candidates in a long slide cluster together. The shift null keeps that clustering.
+
 ## Reproduce
 ```bash
 OMP_NUM_THREADS=1 python indicators.py      # Part A + Part B + today's readings -> out/ (about 10 seconds)
 OMP_NUM_THREADS=1 python figures.py         # out/indicators.png
 OMP_NUM_THREADS=1 python followup_rsi_lows.py   # follow-up A -> out/followup_rsi_lows.json, .png
+OMP_NUM_THREADS=1 python followup_false_lows.py  # follow-up B -> out/followup_false_lows.json, .png
 ```

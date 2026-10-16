@@ -1,0 +1,93 @@
+{
+ "a": {
+  "n": 406,
+  "base": 0.2019704433497537,
+  "burst10 base": 0.5320197044334976,
+  "D": {
+   "n": 249,
+   "on": 82,
+   "off": 167,
+   "P(true | on)": 0.23170731707317074,
+   "P(true | off)": 0.2275449101796407,
+   "difference": 0.004162406893530035,
+   "p": 1.0,
+   "smallest possible p": 0.004329004329004329,
+   "burst10 | on": 0.5975609756097561,
+   "burst10 | off": 0.5868263473053892,
+   "testable": true
+  },
+  "L": {
+   "n": 405,
+   "on": 261,
+   "off": 144,
+   "P(true | on)": 0.20306513409961685,
+   "P(true | off)": 0.2013888888888889,
+   "difference": 0.0016762452107279557,
+   "p": 1.0,
+   "smallest possible p": 0.002583979328165375,
+   "burst10 | on": 0.5862068965517241,
+   "burst10 | off": 0.4375,
+   "testable": true
+  },
+  "S": {
+   "n": 166,
+   "on": 76,
+   "off": 90,
+   "P(true | on)": 0.21052631578947367,
+   "P(true | off)": 0.17777777777777778,
+   "difference": 0.03274853801169589,
+   "p": 0.6013513513513513,
+   "smallest possible p": 0.006756756756756757,
+   "burst10 | on": 0.75,
+   "burst10 | off": 0.6111111111111112,
+   "testable": true
+  },
+  "D passes (p < 0.025, positive)": false
+ },
+ "b": {
+  "n": 120,
+  "base": 0.6583333333333333,
+  "burst10 base": 0.3416666666666667,
+  "D": {
+   "n": 76,
+   "on": 21,
+   "off": 55,
+   "P(true | on)": 0.8571428571428571,
+   "P(true | off)": 0.6909090909090909,
+   "difference": 0.16623376623376618,
+   "p": 0.20689655172413793,
+   "smallest possible p": 0.017241379310344827,
+   "burst10 | on": 0.3333333333333333,
+   "burst10 | off": 0.32727272727272727,
+   "testable": true
+  },
+  "L": {
+   "n": 119,
+   "on": 80,
+   "off": 39,
+   "P(true | on)": 0.6625,
+   "P(true | off)": 0.6666666666666666,
+   "difference": -0.004166666666666652,
+   "p": 1.0,
+   "smallest possible p": 0.009900990099009901,
+   "burst10 | on": 0.3625,
+   "burst10 | off": 0.3076923076923077,
+   "testable": true
+  },
+  "S": {
+   "n": 46,
+   "on": 2,
+   "off": 44,
+   "P(true | on)": 0.5,
+   "P(true | off)": 0.6818181818181818,
+   "difference": -0.18181818181818177,
+   "p": 1.0,
+   "smallest possible p": 0.03571428571428571,
+   "burst10 | on": 1.0,
+   "burst10 | off": 0.4772727272727273,
+   "testable": true
+  },
+  "D passes (p < 0.025, positive)": false
+ },
+ "headline": "TSLA: RSI doesn't reliably separate true lows from false ones; the bounce itself is the filter: a new 20-day low holds 20% of the time, after a 1-ATR bounce 66%"
+}
