@@ -1,0 +1,7 @@
+parity spot vs Yahoo 1-minute opens (pre-registered pass: median |gap| < $0.05)
+2026-10-08: 389 minutes, median |gap| $0.015, 95th pct $0.050
+2026-10-09: 389 minutes, median |gap| $0.015, 95th pct $0.058
+2026-10-12: 389 minutes, median |gap| $0.010, 95th pct $0.035
+2026-10-13: 389 minutes, median |gap| $0.020, 95th pct $0.050
+2026-10-14: 389 minutes, median |gap| $0.020, 95th pct $0.050
+2026-10-15: 389 minutes, median |gap| $0.020, 95th pct $0.118
