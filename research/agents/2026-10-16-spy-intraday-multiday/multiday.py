@@ -115,18 +115,20 @@ def day_work(args):
     ci = {c: j for j, c in enumerate(cols)}
     g["j"] = g.c.map(ci).fillna(-1).astype(int)
     g["days_out"] = (g.expiration - pd.Timestamp(day)).dt.days
+    uk, kidx = np.unique(g.K.to_numpy(), return_inverse=True)
+    Kv, IVv, POSv, Jv = g.K.to_numpy(), g.iv.to_numpy(), g.pos.to_numpy(), g.j.to_numpy()
+    Z0, DO = (g.is0.to_numpy() & (g.j.to_numpy() >= 0)), g.days_out.to_numpy()
+    IS0 = g.is0.to_numpy()
     def gex_by_strike(i, live):
         Si = S[i]
-        T = np.where(g.is0, Tm[i], (g.days_out * 1440 + (390 - i)) / YEAR)
-        iv = g.iv.to_numpy().copy()
-        pos = g.pos.to_numpy().copy()
-        j = g.j.to_numpy()
-        z = g.is0.to_numpy() & (j >= 0)
+        T = np.where(IS0, Tm[i], (DO * 1440 + (390 - i)) / YEAR)
+        iv, pos = IVv.copy(), POSv.copy()
         if live:
-            iv[z] = np.where(np.isfinite(ivm[i, j[z]]), ivm[i, j[z]], iv[z])
-            pos[z] = pos[z] - cum_sv[i, j[z]]
-        gx = pos * gamma(Si, g.K.to_numpy(), T, iv) * 100 * Si * Si * 0.01
-        return pd.Series(gx, index=g.K.to_numpy()).groupby(level=0).sum()
+            jj = Jv[Z0]
+            iv[Z0] = np.where(np.isfinite(ivm[i, jj]), ivm[i, jj], iv[Z0])
+            pos[Z0] = pos[Z0] - cum_sv[i, jj]
+        gx = pos * gamma(Si, Kv, T, iv) * 100 * Si * Si * 0.01
+        return np.bincount(kidx, weights=np.nan_to_num(gx), minlength=len(uk))
     day_gex = float(gex_by_strike(0, live=False).sum())
     # live and static maps at every minute (levels used at minute m come from minute m-1)
     levels = {}
@@ -134,9 +136,11 @@ def day_work(args):
         pos_l, neg_l = [], []
         for i in range(390):
             gx = gex_by_strike(i, live=(v == "live"))
-            gx = gx[(gx.index >= S[i] * (1 - BAND)) & (gx.index <= S[i] * (1 + BAND))]
-            pos_l.append(set(gx[gx > 0].nlargest(NLEV).index))
-            neg_l.append(set(gx[gx < 0].nsmallest(NLEV).index))
+            inb = (uk >= S[i] * (1 - BAND)) & (uk <= S[i] * (1 + BAND))
+            k, x = uk[inb], gx[inb]
+            o = np.argsort(x)
+            pos_l.append(set(k[o[::-1][:NLEV]][x[o[::-1][:NLEV]] > 0]))
+            neg_l.append(set(k[o[:NLEV]][x[o[:NLEV]] < 0]))
         levels[v] = (pos_l, neg_l)
     grid = np.arange(np.floor(S.min() * (1 - BAND)), np.ceil(S.max() * (1 + BAND)) + 1)
     rows = []
@@ -234,33 +238,41 @@ def lg_test(R):
     T = pd.DataFrame([(r["day"], r["type"]) + tuple(x) for r in R for x in r["touches"]],
                      columns=["day", "type", "X", "rc", "m", "reject", "live_pos", "live_neg", "static_pos", "static_neg"])
     T.to_csv(OUT / "touches.csv.gz", index=False)
-    def diff(t, col):
-        lev = t[t[col]]
-        ctl = t[~(t.live_pos | t.live_neg | t.static_pos | t.static_neg)]
-        if not len(lev):
+    T["ctl"] = ~(T.live_pos | T.live_neg | T.static_pos | T.static_neg)
+    days = sorted(T.day.unique())
+    di = {d: k for k, d in enumerate(days)}
+    T["di"] = T.day.map(di)
+    def counts(mask):
+        n = np.zeros((len(days), 3)); r = np.zeros((len(days), 3))
+        np.add.at(n, (T.di[mask], T.rc[mask]), 1)
+        np.add.at(r, (T.di[mask], T.rc[mask]), T.reject[mask])
+        return n, r
+    def diff(Ln, Lr, Cn, Cr):
+        if Ln.sum() == 0:
             return np.nan, np.nan, np.nan
-        w = lev.rc.value_counts(normalize=True)
-        cr = sum(w[k] * ctl[ctl.rc == k].reject.mean() for k in w.index if (ctl.rc == k).any())
-        return lev.reject.mean() - cr, lev.reject.mean(), cr
-    res = {}
+        w = Ln / Ln.sum()
+        crate = np.divide(Cr, Cn, out=np.full(3, np.nan), where=Cn > 0)
+        ok = np.isfinite(crate) & (w > 0)
+        cr = np.sum(w[ok] * crate[ok]) / w[ok].sum()
+        lr = Lr.sum() / Ln.sum()
+        return lr - cr, lr, cr
     rng = np.random.default_rng(20261016)
+    dtype = T.groupby("di").type.first().reindex(range(len(days))).to_numpy()
+    res = {}
     for typ in ("long", "short", "all"):
-        t = T if typ == "all" else T[T.type == typ]
-        days = t.day.unique()
-        if not len(days):
+        sel = np.arange(len(days)) if typ == "all" else np.where(dtype == typ)[0]
+        if not len(sel):
             continue
-        by = {d: x for d, x in t.groupby("day")}
+        W = np.stack([np.bincount(rng.choice(sel, len(sel)), minlength=len(days)) for _ in range(NBOOT)])
+        base = np.zeros(len(days)); base[sel] = 1
+        Cn, Cr = counts(T.ctl.to_numpy())
         for col in ("live_pos", "live_neg", "static_pos", "static_neg"):
-            d0, lv, cr = diff(t, col)
-            boot = []
-            for _ in range(NBOOT):
-                pick = rng.choice(days, len(days))
-                boot.append(diff(pd.concat([by[d] for d in pick]), col)[0])
-            boot = np.array(boot)
-            res[f"{typ} days, {col}"] = {"days": int(len(days)), "level touches": int(t[col].sum()),
-                                         "control touches": int((~(t.live_pos | t.live_neg | t.static_pos | t.static_neg)).sum()),
+            Ln, Lr = counts(T[col].to_numpy())
+            d0, lv, cr = diff(base @ Ln, base @ Lr, base @ Cn, base @ Cr)
+            boot = np.array([diff(w @ Ln, w @ Lr, w @ Cn, w @ Cr)[0] for w in W])
+            res[f"{typ} days, {col}"] = {"days": int(len(sel)), "level touches": int((base @ Ln).sum()), "control touches": int((base @ Cn).sum()),
                                          "reject at levels": float(lv), "reject at controls (roundness-weighted)": float(cr),
-                                         "difference": float(d0), "p (diff <= 0)": float(np.mean(boot <= 0)), "p (diff >= 0)": float(np.mean(boot >= 0)),
+                                         "difference": float(d0), "p (diff <= 0)": float(np.nanmean(boot <= 0)), "p (diff >= 0)": float(np.nanmean(boot >= 0)),
                                          "95% day-bootstrap": [float(np.nanquantile(boot, .025)), float(np.nanquantile(boot, .975))]}
     return res
 
