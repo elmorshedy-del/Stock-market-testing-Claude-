@@ -192,6 +192,24 @@ The MSFT release setup was on at the Oct 14 close. Oct 15 is pending S&P gamma d
   * **MSFT:** the release setup historically worked about half as often when MSFT was this stretched (28–30% vs 62–64%). It's a lead, not proven, but it argues for smaller size or waiting for a pullback toward the 200-day.
 * **Fits the S&P study:** `2026-10-15-sp-multivariate` found high momentum/RSI means *lower* crash risk. Here, being stretched doesn't add downside either. In both, trend indicators describe the path, not a reversal.
 
+
+## Follow-up A (pre-registered 2026-10-16, before running): the owner's claim that TSLA's burst launches came from lows with a shared, relatively low RSI
+
+The claim is about **the lows the bursts launched from**. A low comes at the end of a decline, and RSI measures recent decline, so a low RSI at a low is expected whether or not a burst follows. The claim is useful only if burst lows differ from other lows, or if a low RSI reading predicts a burst going forward.
+
+* **Events:**
+  * TSLA up-burst start days 2011–2026 (`stock_now.burst_days`, unchanged).
+  * The **launch low** is the lowest close in the 10 sessions before each burst day.
+  * The 8 named moves (`named_weeks.MOVES`) are shown individually.
+* **Comparison lows:** every **swing low** (a close that is the lowest within ±5 sessions) that was not followed by an up-burst within 10 sessions.
+* **Measured at each low:** daily RSI(14), its trailing-year percentile, and weekly RSI(14) from the last completed week.
+* **F1 (look-back, the claim as stated):** compare launch-low daily RSI with non-launch swing-low RSI. Statistic: difference in medians. Null: 2,000 random relabellings of which swing lows launched a burst.
+* **F2 (forward, the tradable version; primary):** on days when daily RSI is in its trailing-year bottom tenth, the chance of an up-burst within the next 10 sessions (t+1..t+10), minus the chance on all days. Null: 1,000 circular shifts of the RSI series (offset ≥ 60).
+* **F3 (secondary):** the same with classic RSI < 30, and with weekly RSI in its bottom third.
+* **Pass:** F2 p < 0.05 with a positive difference. F1 and F3 are reported without a pass bar.
+* **Smallest possible p:** about 0.001 for F2 and F3 and 0.0005 for F1, both below 0.05.
+* **Prediction written now:** F1 shows burst lows have low RSI, but no lower than other lows; F2 does not pass.
+
 ## Reproduce
 ```bash
 OMP_NUM_THREADS=1 python indicators.py      # Part A + Part B + today's readings -> out/ (about 10 seconds)
