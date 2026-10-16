@@ -1,0 +1,50 @@
+{
+ "daily returns": 86,
+ "first": "2026-06-15",
+ "last": "2026-10-15",
+ "D0": {
+  "same-day corr SPCX-TSLA": 0.22761324790275955,
+  "same-day partial corr SPCX-TSLA ex QQQ": -0.06331049194229267,
+  "same-day corr TSLA-QQQ": 0.6388427616361534,
+  "same-day corr SPCX-QQQ": 0.4252938392690807,
+  "beta TSLA on SPCX": 0.1399587659248429,
+  "same-bar 5-min corr SPCX-TSLA": 0.2673490341868261
+ },
+ "H1 daily lead": {
+  "partial corr": 0.19129200905050628,
+  "p": 0.10294117647058823,
+  "null draws": 67,
+  "n": 85
+ },
+ "H2 intraday SPCX leads TSLA": {
+  "partial corr": 0.033969249411909215,
+  "p": 0.13333333333333333,
+  "null draws": 59,
+  "bar pairs": 4560,
+  "sessions": 60,
+  "share of next-bar variance explained %": 0.11539099056084945,
+  "next-bar move per 1 sd lead move (bp)": 0.5225351746610487,
+  "sd of next-bar move (bp)": 20.420094659644583
+ },
+ "H2r intraday TSLA leads SPCX": {
+  "partial corr": 0.02718047956344771,
+  "p": 0.21666666666666667,
+  "null draws": 59,
+  "bar pairs": 4560,
+  "sessions": 60,
+  "share of next-bar variance explained %": 0.07387784692989986,
+  "next-bar move per 1 sd lead move (bp)": 0.7373190876323122,
+  "sd of next-bar move (bp)": 33.766534679827764
+ },
+ "H3 catch-up": {
+  "corr": 0.2759185984154332,
+  "p": 0.0847457627118644,
+  "null draws": 58,
+  "n (overlapping)": 77
+ },
+ "usable signal": {
+  "H1 daily lead": false,
+  "H2 intraday SPCX leads TSLA": false,
+  "H3 catch-up": false
+ }
+}
