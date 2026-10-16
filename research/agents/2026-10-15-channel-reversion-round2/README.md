@@ -166,7 +166,8 @@ Top-of-channel stock-months, tech + non-tech (5,276 rows, 124 stocks):
 history after them, the channel's lines rose at a median **19% a year**; the stocks then rose **11% a year**. Volatility
 after the top was only 5% higher than before. So the lower line catches price. Feeding that slowdown into the model
 (estimated only from earlier episodes) lifts its average to 32% but does not fix the shape (slope 0.42): the calm stocks
-that touch anyway are the **crash** cases (2000, 2008, 2020, 2022), when everything falls together.
+that touch anyway (the lowest tenth of random-walk odds: 104 of 528 touched) are mostly market-wide selloffs, a third of
+them in **2008** alone, others in 1987, 1993–94 and 2016, when everything falls together.
 
 ### C3. S&P 500 zoomed in (weekly, 3-year channels since 1928): **nothing passes**
 
