@@ -73,3 +73,28 @@ The owner asks whether a day trader could have used today's SPY option levels: d
 
 ## Exploratory (no test)
 * The planned before/after-the-flip comparison was not possible: SPY never traded above the flip ($774) today.
+
+---
+
+## Part B: did SPY follow the options order flow today? (pre-registered; pushed before any flow was computed)
+
+**The data we found.** Our ThetaData Value key serves **1-minute OHLC with volume and VWAP per option contract**, and **1-minute NBBO quotes**. Tick trades need the Standard tier (checked: permission denied).
+
+**Pull.** SPY options expiring Oct 16 (0DTE) and Oct 19 (the next daily), the 25 strikes either side of the money, 1-minute bars and quotes for the regular session.
+
+**Signing.** For each contract-minute with volume:
+* s = clip((VWAP − mid) ÷ half-spread, −1, +1);
+* mid = the average of the quote at the start of the minute and the quote at the start of the next minute. That cancels most of the stale-quote bias: quotes from the start alone would label trades in a rising minute as buys, and quotes from the end alone would do the opposite.
+
+**Flow.** Per minute, Σ s × volume × delta × 100: net delta bought, in SPY shares. Positive means net buying of upside.
+* Delta is Black-Scholes from the IV implied by that minute's mid, with SPY's minute close as spot and time to the 16:00 expiry.
+
+**Tests (5-minute buckets, 09:30 to the last full bucket):**
+* **H1, flow leads price (primary):** corr(flow in bucket b, SPY return in bucket b+1) > 0.
+* **H2, price moves with flow:** corr(flow_b, return_b) > 0. This is expected to be positive partly by construction, so it is descriptive only.
+* **Null:** circular shift of the flow series against SPY returns within the day (shifts of at least 6 buckets, 2,000 draws); one-sided p.
+* **Pass for H1:** p < 0.05. Even a pass is one day.
+
+**Prediction written now.** H1 does not pass: flow does not lead SPY at 5 minutes on one day. H2 is positive.
+
+**What it cannot say.** Minute-level signing is the same family of method that missed customer *direction* in §4r (55–60%). It measures aggressor pressure, not who ends up holding the position.
