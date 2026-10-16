@@ -117,3 +117,70 @@ OMP_NUM_THREADS=1 python spy_channel.py
 * Fresh data will move today's numbers.
 
 ![SPY channel](out/spy_channel.png)
+
+## Follow-up: the tested S&P rules applied day by day (`established_rules.py`, `out/spy_rules.png`, `out/rules_*.csv`)
+
+**Why.** The first pass used S&P gamma and VIX as loose descriptors. That is not how TSLA was treated, and the owner flagged it.
+
+This pass applies the repository's own tested S&P rules, imported unchanged:
+* the entry ladder R0–R7 (`ladder.rungs`, §4i);
+* the reset, "gamma ran with no price" and pinned rules (`reset.prep`, §4p);
+* the gamma-release strategy's ARMED and IGNITION (§4f's chosen parameters: GEX ≤ 5th pct within 15 days; VIX ≥ 25% off its 10-day high).
+
+It adds no new rule, threshold or test.
+
+![SPY rules](out/spy_rules.png)
+
+### The odds reproduce (`out/rules_odds.csv`)
+These were recomputed with `ladder.py`'s own code on data to Oct 15, as P(a tested up-leg starts within 20 sessions; up-leg = a top-decile 10-day S&P rise).
+
+| Rule | 2012–2026 | 2019Q4–2026 | Report §4i |
+|---|---|---|---|
+| any day | 50% | 58% | 50% / 58% |
+| R1 GEX ≤ 30th pct | 60% | 71% | 61% / 72% |
+| R2 GEX ≤ 30th + DIX > 50th | 64% | 78% | 65% / 79% |
+| R3 GEX ≤ 20th pct | 64% | 73% | 65% / 73% |
+| R5 GEX ≤ 20th + 2% dip + DIX > 50th | **73%** | **83%** | 74% / 83% |
+| §4f ARMED (GEX ≤ 5th within 15 days) | 69% | 75% | |
+| R0 mid GEX + DIX > 80th | 58% | 68% | 59% / 70% |
+| "gamma ran with no price" | 36% | 51% | below base (§4p) |
+
+### What the rules did in 2026, signal by signal
+* **R2:** 4 of 8 led to a leg (Mar 6, Apr 1, Jun 30, Jul 23). The Aug 21 and Sep 16 signals passed without one.
+* **R5:** 2 of 3 (Mar 6, Jul 23).
+* **§4f IGNITION:** 1 of 1 (Apr 8).
+* **ARMED:** 1 of 2 (Jun 24, leg on day 20).
+* **R3:** 1 of 6.
+* **R0:** Apr 23 led to a leg; Sep 8 did not; **Sep 23 is still open, until about Oct 21.**
+* **The tested up-legs of 2026** started on Mar 26, Apr 28 and Jul 23.
+* **This year has run below the long-run rates** (R2 at 50% against 64–78%).
+
+### Under the owner's channel (`out/rules_touches.csv`)
+
+| Touch | Rules on from 10 sessions before to the outcome | Tested up-leg | At the upper line |
+|---|---|---|---|
+| Apr 21 | R0–R3, R6, R7, ARMED, **IGNITION** (Apr 8) | **Apr 28** | May 13, GEX pct 0.90: **pinned** |
+| Jun 26 | R1–R7, ARMED | none (the June miss; it came Jul 23) | — |
+| Jul 23 | R1–R6, ARMED (since Jun 24), **R5** | **Jul 23** | Aug 4, GEX pct 0.88: **pinned** |
+| Sep 15 | R0, R1, R2 only (GEX never ≤ 20th) | none | stalled at the mid line |
+| Oct 1 | R0, R1, R2 only | none | stalled at the mid line |
+| Oct 14 (now) | R0 (Sep 23, open), reset in the prior 20 days | — | — |
+
+**Read:**
+* **Both lower-to-upper moves are tested up-legs, and both came after the deep rungs** (GEX at or under its 20th percentile, ARMED, IGNITION or R5).
+* **Both ended pinned at the upper line** (GEX 0.88–0.90). §4p's tested read of a pinned leg end is consolidation 55% vs 30%: a pause, not a top. That is the Aug–Oct chop between the mid and lower lines.
+* **The September and October touches only reached the shallow rungs** (R1/R2, GEX 0.22–0.30), and both R2 signals passed with no leg.
+
+### Now (Oct 15 close)
+* **On:** reset in the prior 20 days, the precondition (88–90% of legs had one, against 71–73% of all days).
+* **Off:** every other rung, ARMED and IGNITION.
+* **The state:**
+  * GEX is at its 52nd pct (it was 0.31 on Oct 14).
+  * DIX fell to its **5th pct**.
+  * VIX is 16.5.
+  * The S&P is 1.0% under its 10-day high.
+* **Today's cell (mid GEX, DIX under its 50th):** the next-10-day rise was top-decile on 6.8% of days, against 10% for all days, in 2012–2026. In 2019Q4–2026 the cell is neutral (14.7% vs 13.4%), so low DIX is not a reliable negative lately.
+* **What would turn the deep rungs on**, as before both 2026 launches:
+  * **R3:** GEX ≤ 20th pct. Expiry day usually drops GEX about 17 points (§4h).
+  * **R4/R5:** the same plus the S&P 2% under its 10-day high. That is about 7,663 on the S&P, roughly SPY $764, which is about 1% under the owner's lower line (~$769–771 next week). Both 2026 launches came off a dip just under the lower line (Jun 26 −1.6%, Jul 23 −0.3%). Add DIX back over its 50th for R5.
+  * **Or ARMED, then IGNITION:** the April entry.

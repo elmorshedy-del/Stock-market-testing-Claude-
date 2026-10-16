@@ -1,0 +1,7 @@
+touch,reached the upper line,rules on from 10 sessions before to the outcome,tested up-leg started,GEX pct at the upper line,gamma ran with no price in window
+2026-04-21,2026-05-13,"R0, R1, R2, R3, R6, R7, reset in the prior 20 days, ARMED, IGNITION while armed",2026-04-28,0.9,False
+2026-06-26,,"R1, R2, R3, R4, R5, R6, R7, reset in the prior 20 days, ARMED",none,,True
+2026-07-23,2026-08-04,"R1, R2, R3, R4, R5, R6, reset in the prior 20 days, ARMED",2026-07-23,0.88,True
+2026-09-15,,"R0, R1, R2, reset in the prior 20 days",none,,True
+2026-10-01,,"R0, R1, R2, reset in the prior 20 days",none,,True
+2026-10-14,,"R0, reset in the prior 20 days",none,,True
