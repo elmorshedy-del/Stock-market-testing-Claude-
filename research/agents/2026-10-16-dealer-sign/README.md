@@ -59,3 +59,70 @@
 python3 who_holds.py data/Cboe_OpenClose_2026-09-30_15_20_1.csv.gz 2026-09-30 TSLA SPY MSFT QQQ   # needs the ThetaData chains
 python3 opening.py data/Cboe_OpenClose_2026-09-30_15_20_1.csv.gz TSLA SPY
 ```
+
+---
+
+## Part B: the behaviour test (pre-registered; this section was pushed before any outcome was computed)
+
+**Question.** Which side of each option leg are dealers on, judged by what prices do afterwards?
+* If dealers are net **long** gamma in a leg, their hedging leans against moves (they sell rallies and buy dips), so more of that gamma is followed by **smaller** next-day ranges.
+* If they are net **short**, their hedging chases moves, so the next-day range is **larger**.
+
+The test estimates call and put gamma separately, so no convention has to be assumed:
+
+| Convention | Calls | Puts |
+|---|---|---|
+| classic (the engine) | β_call < 0 | β_put > 0 |
+| all-short (`gex_short`) | β_call > 0 | β_put > 0 |
+| the Cboe days' hint for TSLA | β_call > 0 | β_put > 0 |
+
+**Data.** For each asset, row t of `research/microstructure/out/td_gamma_{SYM}.csv`, built from OI dated t (positions at the start of day t) and day t's end-of-day quotes, so it is known at the close of t.
+* Call and put dollar gamma come from the two stored conventions: Γc = (gex_classic − gex_short)/2 and Γp = −(gex_classic + gex_short)/2. This follows from `options_flow.exposures`.
+* Yahoo daily OHLC and volume.
+
+**Assets.**
+* **TSLA (primary).**
+* **Secondary:** MSFT, NVDA, SPY, QQQ, each on its own data.
+* **Sample:** 2020 to the last row.
+
+**Variables.**
+* **Regressors:** ln(Γc_t ÷ 20-day mean dollar volume) and the same for Γp, each standardized. Dividing by dollar volume measures hedging against the stock's trading capacity.
+* **Outcome (primary):** ln of day t+1's range, ln(ln(High/Low)).
+* **Secondary outcomes:**
+  * ln|close-to-close return t+1| (zeros floored at 1 bp);
+  * ln realized vol over t+1..t+5.
+* **Controls, all known at the close of t:**
+  * ln range_t;
+  * ln |return_t| (floored);
+  * ln RV5_t and ln RV20_t (close-to-close);
+  * ln implied vol_t: own ATM 30-day IV for TSLA, MSFT and NVDA; VIX for SPY and QQQ.
+
+**Model.** OLS: y = a + β_call·z(ln Γc) + β_put·z(ln Γp) + controls.
+
+**Null.** Circular shift of the (Γc, Γp) pair together against prices and controls: 1,000 shifts of at least 60 days, two-sided p = share of |β_null| ≥ |β_obs|. The smallest attainable p is 0.001.
+
+**Decision rule (TSLA; 2 tests, so p < 0.025 each):**
+
+| Result | Reading |
+|---|---|
+| β_call < 0, significant | dealers net long calls: classic right for calls |
+| β_call > 0, significant | dealers net short calls: classic wrong for calls |
+| β_put > 0, significant | dealers net short puts: classic right for puts |
+| β_put < 0, significant | dealers net long puts: classic wrong for puts |
+| not significant | inconclusive for that leg |
+
+**Secondary, reported but not decided on:**
+* the same for MSFT, NVDA, SPY and QQQ (a family statement needs p < 0.05/8 = 0.00625);
+* the two secondary outcomes;
+* split periods, 2020–22 and 2023–26;
+* the classic composite against the all-short composite in the same model (which explains more of the next-day range).
+
+**A confound written down in advance: attention.**
+* More open interest can simply mean people expect a move. That would push both β's **up**, toward reading "short", even with the IV control.
+* So a **negative** β (damping) is stronger evidence than a positive one.
+* If both legs come out positive, I will report that this could be attention rather than dealer positioning.
+
+**Prediction written now.**
+* **TSLA:** β_put > 0, so the classic convention holds for puts. β_call near zero: customers' long calls (dealers short) partly offset by call-writing funds (dealers long).
+* **SPY and QQQ:** β_call < 0 and β_put > 0, the classic pattern.
+* **Confidence:** low for TSLA calls.
