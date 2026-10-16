@@ -1,0 +1,26 @@
+{
+ "family p (single-step)": {
+  "TSLA daily": 0.2707292707292707,
+  "TSLA weekly": 0.018469656992084433,
+  "TSLA monthly": 0.7441860465116279,
+  "MSFT daily": 0.001998001998001998,
+  "MSFT weekly": 0.023692003948667325,
+  "MSFT monthly": 0.01904761904761905
+ },
+ "survivors": 1,
+ "robust survivors": 1,
+ "robust list": [
+  {
+   "asset": "MSFT",
+   "timeframe": "daily",
+   "indicator": "Trend distance",
+   "statistic": "S2 entry (P(UP) high - low)",
+   "value": -0.08615127070532769,
+   "z": -3.99607825459356,
+   "p family (step-down)": 0.001998001998001998,
+   "early": -0.09070586649548876,
+   "2021+": -0.06820293990601725
+  }
+ ],
+ "part B passes": 1
+}

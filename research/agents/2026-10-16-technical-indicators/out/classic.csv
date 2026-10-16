@@ -1,0 +1,37 @@
+asset,timeframe,rule,statistic,value,p raw,n high,n low
+TSLA,daily,RSI >70 vs <30,S1 direction (mean R high - low),-0.003988606909178245,0.972027972027972,405,121
+TSLA,daily,RSI >70 vs <30,S2 entry (P(UP) high - low),-0.07540046933986327,0.4385614385614386,405,121
+TSLA,daily,RSI >70 vs <30,S3 exit (P(DOWN) high - low),-0.008876645240281617,0.8731268731268731,405,121
+TSLA,daily,Stochastic >80 vs <20,S1 direction (mean R high - low),0.015195788049185964,0.2177822177822178,989,638
+TSLA,daily,Stochastic >80 vs <20,S2 entry (P(UP) high - low),0.00948363027788432,0.7982017982017982,989,638
+TSLA,daily,Stochastic >80 vs <20,S3 exit (P(DOWN) high - low),-0.032325803271725656,0.4035964035964036,989,638
+TSLA,weekly,RSI >70 vs <30,S1 direction (mean R high - low),-0.22576892615803673,0.047493403693931395,96,5
+TSLA,weekly,RSI >70 vs <30,S2 entry (P(UP) high - low),-0.46666666666666673,0.07519788918205805,96,5
+TSLA,weekly,RSI >70 vs <30,S3 exit (P(DOWN) high - low),0.20833333333333334,0.4366754617414248,96,5
+TSLA,weekly,Stochastic >80 vs <20,S1 direction (mean R high - low),0.003087043299795457,0.866754617414248,191,106
+TSLA,weekly,Stochastic >80 vs <20,S2 entry (P(UP) high - low),-0.013879284796996932,0.9340369393139841,191,106
+TSLA,weekly,Stochastic >80 vs <20,S3 exit (P(DOWN) high - low),0.009236392373802249,0.9498680738786279,191,106
+TSLA,monthly,RSI >70 vs <30,S1 direction (mean R high - low),,0.007751937984496124,22,0
+TSLA,monthly,RSI >70 vs <30,S2 entry (P(UP) high - low),,0.007751937984496124,22,0
+TSLA,monthly,RSI >70 vs <30,S3 exit (P(DOWN) high - low),,0.007751937984496124,22,0
+TSLA,monthly,Stochastic >80 vs <20,S1 direction (mean R high - low),-0.129774456517584,0.5813953488372093,25,6
+TSLA,monthly,Stochastic >80 vs <20,S2 entry (P(UP) high - low),-0.1333333333333333,0.7209302325581395,25,6
+TSLA,monthly,Stochastic >80 vs <20,S3 exit (P(DOWN) high - low),0.24,0.4496124031007752,25,6
+MSFT,daily,RSI >70 vs <30,S1 direction (mean R high - low),-0.013106323471928891,0.22277722277722278,895,201
+MSFT,daily,RSI >70 vs <30,S2 entry (P(UP) high - low),-0.16067706161927792,0.017982017982017984,895,201
+MSFT,daily,RSI >70 vs <30,S3 exit (P(DOWN) high - low),-0.043592095388976904,0.43656343656343655,895,201
+MSFT,daily,Stochastic >80 vs <20,S1 direction (mean R high - low),-0.0013033752674366664,0.8551448551448552,2799,1438
+MSFT,daily,Stochastic >80 vs <20,S2 entry (P(UP) high - low),-0.04224362863550016,0.16883116883116883,2799,1438
+MSFT,daily,Stochastic >80 vs <20,S3 exit (P(DOWN) high - low),-0.02372295688754328,0.37462537462537465,2799,1438
+MSFT,weekly,RSI >70 vs <30,S1 direction (mean R high - low),-0.0599502828623594,0.09427443237907206,319,10
+MSFT,weekly,RSI >70 vs <30,S2 entry (P(UP) high - low),-0.2557993730407524,0.0755182625863771,319,10
+MSFT,weekly,RSI >70 vs <30,S3 exit (P(DOWN) high - low),-0.002507836990595619,0.9703849950641659,319,10
+MSFT,weekly,Stochastic >80 vs <20,S1 direction (mean R high - low),-0.013418129780635533,0.23000987166831194,721,196
+MSFT,weekly,Stochastic >80 vs <20,S2 entry (P(UP) high - low),-0.08311868436695066,0.096248766041461,721,196
+MSFT,weekly,Stochastic >80 vs <20,S3 exit (P(DOWN) high - low),-0.006588072122052702,0.8632773938795657,721,196
+MSFT,monthly,RSI >70 vs <30,S1 direction (mean R high - low),-0.18747624290153214,0.1619047619047619,147,1
+MSFT,monthly,RSI >70 vs <30,S2 entry (P(UP) high - low),-0.7755102040816326,0.15,147,1
+MSFT,monthly,RSI >70 vs <30,S3 exit (P(DOWN) high - low),0.1292517006802721,0.9785714285714285,147,1
+MSFT,monthly,Stochastic >80 vs <20,S1 direction (mean R high - low),0.07172429280449882,0.0880952380952381,194,28
+MSFT,monthly,Stochastic >80 vs <20,S2 entry (P(UP) high - low),-0.11561119293078054,0.38095238095238093,194,28
+MSFT,monthly,Stochastic >80 vs <20,S3 exit (P(DOWN) high - low),-0.187039764359352,0.09047619047619047,194,28
