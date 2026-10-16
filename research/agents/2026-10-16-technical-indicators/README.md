@@ -304,7 +304,7 @@ The owner's idea: the regime changed, from TSLA's strong uptrend to a flat range
 
 * **Regime, known in real time (weekly bars, completed weeks only; days take the last completed week):**
   * **Primary:** Kaufman efficiency ratio over 52 weeks, |net log change| ÷ Σ|weekly log changes|, as an expanding percentile (min 156 weeks). **Range** = at or below its median; **trend** = above.
-  * **Alternates, for robustness:** weekly ADX(14) < 20 = range; |SMA(40) slope over 13 weeks| ÷ weekly ATR at or below its expanding median = range.
+  * **Alternates, for robustness:** weekly ADX(14) at or below its expanding median = range; |SMA(40) slope over 13 weeks| ÷ weekly ATR at or below its expanding median = range.
   * Checked before any outcome (`followup_regimes.py --regimes`): the primary gauge marks 2015–16, 2018–19, 2022–24 and 2026 as mostly range, and 2014, 2017, 2020–21 and 2025 as mostly trend. Both regimes occur before and after 2021.
 * **Tests (TSLA; the Part A indicators, states, outcomes and statistics, unchanged):**
   * Daily and weekly bars. Monthly bars are too few once split.
@@ -320,9 +320,14 @@ The owner's idea: the regime changed, from TSLA's strong uptrend to a flat range
 * **Secondary, descriptive, no pass bar:**
   * up-burst within 10 sessions after daily RSI in its bottom tenth, by regime
   * the TSLA options full setup's up-burst within 3 sessions, by regime (2021+)
-  * follow-up B's hold rates for new lows, by regime
+  * follow-up B's framing (a) only (new 20-session closing lows, held for 10 sessions), by regime
 * **Smallest possible p:** daily 0.001; weekly about 0.0016. Both are below 0.0083.
 * **Power warning:** each regime has about half the data, so effects must be larger to pass.
+* **Amendment, 2026-10-16, before any run (owner's instruction): no TA rule-of-thumb thresholds or patterns.**
+  * The ADX < 20 alternate is replaced by ADX at or below its own expanding median.
+  * Follow-up B's 1-ATR-bounce framing is dropped from the secondaries.
+  * No 70/30, 80/20 or divergence rules appear in this follow-up. Every state is relative to the stock's own history (thirds, medians or tenths).
+  * The classic-threshold rows in Part A and follow-ups A/B stay as recorded, but are not used further.
 * **Prediction written now:**
   * H-range shows up for daily RSI or %B as more big up moves after low readings in ranges, but does not pass the family-wise bar.
   * H-trend: ADX and momentum predict big up moves in trends (the pre-2021 ADX result).
