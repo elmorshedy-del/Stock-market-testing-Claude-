@@ -95,7 +95,7 @@ Today's example (Oct 16): TSLA gapped about +4% on news, peaked premarket at 382
 * **What does hold, across all four assets:** gaps that open below the flip are filled more often. They close back beyond the prior close in 15–19% of cases, against 9–15% above the flip.
   * TSLA gap-ups that open below the flip fill **23%** of the time (30 days); gap-ups that open above it fill **11%** (131 days).
   * This fits §4z (below the flip, TSLA snaps back): below the flip, moves revert more, not less.
-* **Today:** TSLA gapped up and opened well above the flip (about 364). Historically that cell continued 50% of the time, with a median session move of +0.03% from the open, and filled the gap only 11% of the time.
+* **Today (written at 09:13 ET, before the open):** TSLA is set to open well above the flip (about 364), at about 374 premarket. Historically that cell continued 50% of the time, with a median session move of +0.03% from the open, and filled the gap only 11% of the time.
 
 ### G3: premarket volume
 Not run: no premarket volume in the data we have (see above).
