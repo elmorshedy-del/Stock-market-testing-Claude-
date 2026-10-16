@@ -62,14 +62,16 @@ def main():
 
     months = pd.date_range("1975-01-31", R.index[-1] + pd.offsets.MonthEnd(0), freq="ME")
     fridays = pd.date_range("1975-01-03", R.index[-1] + pd.Timedelta(days=6), freq="W-FRI")
-    ac = pd.concat({"monthly": avg_corr(R, months), "weekly": avg_corr(R, fridays)}, axis=1)
+    ac = pd.concat({"monthly": avg_corr(R, months), "weekly": avg_corr(R, fridays)}, axis=1, sort=True)
     ac.index.name = "date"
     ac.to_csv(OUT / "avgcorr.csv", float_format="%.5f")
 
     BP.DATA = DATA
     spx = BP.load_yahoo("GSPC_long").close
     v = np.log(spx).diff().rolling(126, min_periods=100).std() * np.sqrt(5)
-    v.resample("W-FRI").last().rename("sig_w").to_frame().to_csv(OUT / "sp_vol_weekly.csv", float_format="%.6f")
+    v = v.resample("W-FRI").last().rename("sig_w").to_frame()
+    v.index.name = "Date"
+    v.to_csv(OUT / "sp_vol_weekly.csv", float_format="%.6f")
     print("vol rows", sum(len(x) for x in rows), "| avgcorr monthly", ac.monthly.notna().sum(),
           "from", ac.monthly.first_valid_index().date(), "| weekly", ac.weekly.notna().sum())
 
