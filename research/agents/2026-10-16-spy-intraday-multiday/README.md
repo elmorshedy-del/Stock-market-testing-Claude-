@@ -69,3 +69,37 @@
 THETADATA_API_KEY=... python pull_days.py 2023-01-03 2026-10-15   # resumable; about 20 s per day
 OMP_NUM_THREADS=1 python multiday.py
 ```
+
+## Amendment 1 (written before the full run; after a 7-day smoke test of the code)
+
+**Why.** A smoke test on the 7 newest days (Oct 6–14 2026) showed that the original LG null is mechanically biased.
+* The strikes with the largest |gamma| are the ones nearest the current price, because 0DTE gamma peaks at the money.
+* A turn's price is within cents of the price one minute earlier.
+* So "turns sit close to the top-|gamma| strikes" comes out true whether or not levels matter: ratio 0.60, p 0.000 on 7 days.
+* Matching the null on distance decile is too coarse to fix that, and every scheme that anchors levels to a recent price carries some version of the bias.
+
+**LG is replaced by a touch-and-reject test,** which conditions on the price being at the strike:
+* **Touch:** at minute m, SPY's parity spot crosses strike X or comes within $0.10 of it (a tenth of the $1 strike spacing, as in gaps-and-walls).
+* **Approach side:** the side of X that S_{m−1} was on.
+* **Outcome:** first passage after the touch.
+  * **Reject** if price gets back $0.50 (half a strike) to the approach side before it gets $0.50 through.
+  * **Break** if it goes through first.
+  * **Unresolved** after 30 minutes: dropped.
+  * A strike's next touch counts only after the previous one has resolved.
+* **Levels at the touch:** from the live map as of minute m−1.
+  * **Positive levels:** the 3 largest positive dealer-GEX strikes within ±1.5% of S_{m−1}.
+  * **Negative levels:** the 3 most negative.
+* **Controls:** every other strike in the band. The comparison is made within each roundness class ($10, $5, $1) and weighted to the levels' roundness mix.
+* **Primary (replaces LG):** on long-gamma days, the rejection rate at live positive levels minus the control rate.
+  * **Inference:** a day-block bootstrap (2,000 resamples of days); one-sided p = share of resampled differences ≤ 0.
+  * **Pass:** p < 0.025.
+* **Secondary:**
+  * on short-gamma days, the rejection rate at live negative levels minus controls (prediction: negative, run-through);
+  * the same with the static morning map;
+  * all days.
+
+**Also fixed before the full run:** the parity spot carried the prior close into the first minute, which has no quotes. Minutes before the first quote now take the first parity value, so the first bucket no longer includes the overnight gap.
+
+**FL is unchanged.** Its 7-day smoke numbers (β +0.25 bp per sd, p 0.15) are in the full sample, as are the 7 days themselves.
+
+**Prediction for the amended LG.** The long-gamma rejection difference is small and does not pass. On short-gamma days the difference leans negative.
