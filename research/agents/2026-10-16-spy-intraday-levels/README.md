@@ -1,0 +1,46 @@
+# Did SPY's intraday turns on Oct 16 2026 land on option-inferred levels more than luck allows?
+
+**Agent / session:** Claude, claude.ai session for the owner, 2026-10-16 (written at about 13:20 ET, during the session)
+**Type:** one-day test against a luck baseline. The design below was pushed before any distance from a turn to a level was computed.
+**Builds on:** gaps-and-walls (the walls were no better than equally round strikes at the same distance, so that null is reused here)
+**Verdict:** (after the run)
+
+## Question
+The owner asks whether a day trader could have used today's SPY option levels: did price turn at the lines inferred from options, exactly, beyond what luck gives?
+* **What can be measured:** price levels.
+* **What cannot:** options order flow. We have no signed intraday options tape, and signing from tick data failed (microstructure §4r: 55–60% agreement).
+
+## Levels, all known before the open
+* **Inputs:**
+  * SPY open interest dated Oct 16 (positions at the Oct 15 close), from ThetaData;
+  * implied vols from the latest SPY end-of-day chain on file (Oct 9, so stale; disclosed);
+  * spot = the Oct 15 close, $771.79;
+  * the engine's classic convention, which the dealer-sign Part B test supports for SPY on both legs.
+* **L1:** the 5 strikes with the largest absolute dealer gamma (summed across all expiries, including today's) within ±3% of the prior close.
+* **L2:** the call wall and the put wall. These are the strikes with the most call OI and the most put OI within ±3%, expiries out to 45 days.
+* **L3:** the gamma flip, including today's expiring options, rounded to the nearest $1 strike.
+* **The level set** is the union of L1–L3 (unique strikes).
+
+## Turns
+* **Bars:** Yahoo 1-minute SPY bars, regular session, from 09:30 to the time of the run.
+* **Turns:**
+  * A swing high is a minute whose high is the highest of the 10 minutes either side; a swing low is defined the same way.
+  * The session high and low are always included.
+* **Sensitivity:** windows of 5 and 20 minutes.
+* **Rerun:** at the close, on the full day.
+
+## Statistic and null
+* **Statistic:** the median $ distance from each turn's extreme (high or low) to the nearest level.
+* **Null:** 2,000 random level sets of the same size.
+  * Each level is replaced by a random strike within ±3% of the prior close.
+  * The replacement has the **same roundness class** (a multiple of $10, of $5, or a $1 strike) and lies in the **same distance decile** from the prior close.
+  * This is the gaps-and-walls null, matched on both roundness and distance.
+* **p:** one-sided, the share of null sets with a median distance at or below the observed.
+* **Pass:** p < 0.05. Even a pass is one day, not an edge.
+
+## Prediction written now
+**Not significant.** With about 15–25 turns and SPY strikes every $1, only a large effect would show. I expect today's turns to sit no closer to the option levels than to equally round strikes at the same distance.
+
+## Exploratory (no test)
+* When SPY first traded below the intraday flip.
+* Whether 5-minute realized vol was higher after that than before.
