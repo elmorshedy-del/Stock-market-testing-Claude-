@@ -227,3 +227,22 @@ This check reproduces it with `release.py`'s own frame and outcome: the next-10-
 * **Getting back into a launch cell takes VIX over about 18.4,** 2 points above today, with gamma under its 66th percentile.
 * **This fits the ladder:** the R4/R5 dip of 2% (SPY about $764) is the kind of move that lifts VIX about that much.
 * **For options (§4i):** the high-VIX cells are where calls are expensive. Spreads hold up from R2 on; naked calls only pay after the VIX crush (R7).
+
+## Follow-up 3: does a 2% dip line the conditions up? (`dip_lineup.py`, `out/dip_lineup.csv`; descriptive, 13 cases)
+* **The cases:** first days the S&P closed 2% under its 10-day high (the R4 dip), from a state like Oct 15. Five sessions earlier, GEX was at its 35th–66th pct and VIX in its middle third.
+* **Within the dip day and the next 3 sessions:**
+  * GEX fell to ≤ 0.20 in 85% of cases (median 0.11 on the dip day).
+  * VIX rose above 18.4 in 77% (median 19.7).
+  * DIX rose above its 50th pct in 62% (median 0.75).
+  * All three lined up in 38%.
+* **What followed** (a tested up-leg within 20 sessions):
+  * All such dips: 46%, no better than any day (50%).
+  * When all three lined up: 4 of 5.
+  * When they didn't: 2 of 8.
+  * The DIX split: 5 of 8 dips with DIX back over its 50th led to a leg, against 1 of 5 without.
+  * In 2026, the dips with DIX at 0.00–0.03 (Jan 20, Feb 5, Jun 23) had no leg; Jul 23 (DIX 0.76) did.
+* **The dip level is read at the close and rolls with the 10-day high:**
+  * about SPY $764 through Mon Oct 19 (S&P high 7,818.9 on Oct 6);
+  * about $763 from Oct 20 to Oct 26;
+  * lower after that unless the S&P makes new closing highs.
+* **Read:** the dip by itself is not the edge; it is the trigger that usually drags gamma down and lifts VIX. Whether buyers show up in the dark pools (DIX back over its 50th) is what separated the legs from the failures in these 13 cases. Too few cases to call tested.

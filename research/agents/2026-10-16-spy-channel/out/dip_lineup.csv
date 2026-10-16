@@ -1,0 +1,14 @@
+dip day,GEX <= 0.20,VIX > 18.4,DIX > 0.5,GEX on the dip day,VIX on the dip day,DIX on the dip day,tested up-leg within 20,all three
+2012-12-28,True,True,False,0.07,22.7,0.06,0.0,False
+2013-06-20,True,True,True,0.02,20.5,1.0,1.0,True
+2015-01-05,True,True,True,0.12,19.9,1.0,1.0,True
+2016-01-04,True,True,True,0.11,20.7,0.99,0.0,True
+2016-05-19,True,False,True,0.2,16.3,0.84,0.0,False
+2019-05-23,True,False,True,0.1,16.9,0.75,1.0,False
+2022-01-05,True,True,True,0.06,19.7,0.4,1.0,True
+2025-11-06,False,True,False,0.26,19.5,0.16,1.0,False
+2026-01-20,True,True,False,0.13,20.1,0.03,0.0,False
+2026-02-05,True,True,False,0.19,21.8,0.0,0.0,False
+2026-06-23,True,True,False,0.09,19.5,0.03,0.0,False
+2026-07-23,True,True,True,0.11,18.7,0.76,1.0,True
+2026-09-10,False,False,True,0.44,17.8,0.95,0.0,False
