@@ -4,7 +4,7 @@
 **Pre-registered at commit:** (this commit; pushed before any multi-day data was pulled)
 **Type:** pre-registered test of the owner's hypothesis that day traders and algos trade option levels and flow almost deterministically, so the edge must be strong
 **Builds on:** spy-intraday-levels Parts A–B (one day: levels no, flow yes, modestly), dealer-sign Part B (the classic convention holds for SPY on both legs)
-**Verdict:** (after the run)
+**Verdict:** **not run.** The owner chose to hand the question to an independent, blind thread working from the raw data only, with none of this design or our earlier findings. The design, amendment and code stay here as written. Only the 7–20-day smoke tests were ever computed (numbers in Amendment 1).
 
 ## Data
 * **Option minute data:** ThetaData Value tier, SPY options expiring the **same day (0DTE)**, the 15 strikes either side of the money, 1-minute OHLC (volume, VWAP) and 1-minute NBBO quotes.
