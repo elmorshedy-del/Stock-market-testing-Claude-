@@ -1,0 +1,12 @@
+{
+ "buckets": 54,
+ "distinct_shifts": 43,
+ "H1 flow leads next bucket: corr": 0.23186583049994686,
+ "H1 p (one-sided)": 0.0265,
+ "H2 same bucket: corr": -0.223043085763243,
+ "H2 p (one-sided)": 1.0,
+ "net delta bought today, shares": 206967061.73863462,
+ "contract-minutes signed": 25637,
+ "share of volume printed above mid": 0.515653494743021,
+ "0DTE share of signed volume": 0.8937118359618851
+}

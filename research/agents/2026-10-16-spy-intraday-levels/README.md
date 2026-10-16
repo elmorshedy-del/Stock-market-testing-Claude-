@@ -98,3 +98,32 @@ The owner asks whether a day trader could have used today's SPY option levels: d
 **Prediction written now.** H1 does not pass: flow does not lead SPY at 5 minutes on one day. H2 is positive.
 
 **What it cannot say.** Minute-level signing is the same family of method that missed customer *direction* in §4r (55–60%). It measures aggressor pressure, not who ends up holding the position.
+
+### Part B results (to 14:02 ET; `flow_today.py`, `out/flow.json`, `out/flow_buckets.csv`)
+
+![flow today](out/flow_today.png)
+
+**Coverage:** 25,637 signed contract-minutes; 89% of the signed volume was 0DTE.
+
+| | corr | p (one-sided, circular shift) |
+|---|---|---|
+| **H1: flow in bucket b → SPY return in bucket b+1** | **+0.23** | **0.027 (passes)** |
+| H2: flow and return in the same bucket | **−0.22** | 1.00 |
+| Post-hoc: H1 controlling for SPY's own return in bucket b | +0.23 (partial) | 0.047 |
+
+**Notes on the inference:**
+* There are 54 five-minute buckets, so the circular null has only 43 distinct shifts. The smallest attainable p is about 0.023, and both p's sit near that floor.
+* SPY's own 5-minute reversal today was −0.04. So the lead is not just price bouncing: flow adds about +1.7 bp to the next 5 minutes per standard deviation, while SPY's own last return adds about 0.
+
+**Read:**
+* **Within the day, the options flow ran against price and was then followed by it.** Traders bought delta in the buckets where SPY fell (H2 < 0), and the next 5 minutes moved their way (H1 > 0).
+* **The effect is modest:** about 5% of the next-5-minute variance.
+* **This is one day.** The prediction (H1 would not pass) was wrong. The prediction for H2 (positive) was also wrong.
+
+**Do not read the cumulative total.** The figure shows +210M SPY-share deltas net bought, more than SPY's whole share volume. Minute-level signing almost certainly carries a level bias on a trending day. The test uses only the bucket-to-bucket variation, which is much less sensitive to a constant bias.
+
+**Answer to the owner's question for today:**
+* **Levels from options:** no. Turns were no closer than luck (Part A).
+* **Options order flow:** yes, modestly, in the narrow sense that 5-minute net delta bought led the next 5 minutes.
+
+The 60-day version (both questions, split by long- and short-gamma days) is the real test.
