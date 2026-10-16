@@ -150,7 +150,8 @@ so its strength is tested post-hoc below.
 * S&P 6.3% above its 40-week average; 26-week momentum +8%; weekly RSI 62, monthly RSI 75: **trend intact**.
 * Breadth 58% of stocks above their 200-day average: bottom third since 2000, a narrow market (survivor universe).
 * Bearish RSI divergence is on; historically not a warning.
-* SPY above its gamma flip, gamma at the 87th percentile (dampened). Stacked rule and fast trigger: off.
+* SPY above its gamma flip, gamma at the 87th percentile, i.e. dampened (engine data to Oct 9). Stacked rule and fast
+  trigger: off.
 
 ## Threats to validity
 
