@@ -1,0 +1,184 @@
+{
+ "F1": {
+  "launch lows": 167,
+  "other swing lows": 116,
+  "median RSI at launch lows": 41.88213452074545,
+  "median RSI at other swing lows": 43.02286129806109,
+  "IQR launch": [
+   34.74259927668721,
+   54.6755857391051
+  ],
+  "IQR other": [
+   37.39636039233374,
+   48.403191689417625
+  ],
+  "difference": -1.1407267773156349,
+  "p": 0.5542228885557221,
+  "share of launch lows with RSI pct <= 0.10": 0.3473053892215569,
+  "same for other swing lows": 0.28448275862068967,
+  "share of launch lows with RSI < 30": 0.1497005988023952,
+  "same for other swing lows (RSI < 30)": 0.06896551724137931
+ },
+ "F2": {
+  "signal": "daily RSI pct <= 0.10",
+  "days": 447,
+  "episodes": 115,
+  "P(up-burst within 10 | signal)": 0.5727069351230425,
+  "P(up-burst within 10), all days": 0.4025079911482665,
+  "difference": 0.17019894397477597,
+  "p": 0.000999000999000999,
+  "passes (p < 0.05, positive)": true
+ },
+ "F3a": {
+  "signal": "daily RSI < 30",
+  "days": 123,
+  "episodes": 40,
+  "P(up-burst within 10 | signal)": 0.7398373983739838,
+  "P(up-burst within 10), all days": 0.4025079911482665,
+  "difference": 0.33732940722571725,
+  "p": 0.000999000999000999
+ },
+ "F3b": {
+  "signal": "weekly RSI pct <= 1/3",
+  "days": 1373,
+  "episodes": 51,
+  "P(up-burst within 10 | signal)": 0.4144209759650401,
+  "P(up-burst within 10), all days": 0.4058080808080808,
+  "difference": 0.008612895156959288,
+  "p": 0.8151848151848152
+ },
+ "named moves": [
+  {
+   "move": "Oct 2021",
+   "biggest day": "2021-10-25",
+   "launch low": "2021-10-11",
+   "daily RSI at low": 64.16641856963797,
+   "RSI pct at low": 0.7777777777777778,
+   "weekly RSI": 64.28233140463857
+  },
+  {
+   "move": "Jan 2023 (off the bottom)",
+   "biggest day": "2023-01-27",
+   "launch low": "2023-01-13",
+   "daily RSI at low": 39.056680884132085,
+   "RSI pct at low": 0.3412698412698413,
+   "weekly RSI": 27.42968594475569
+  },
+  {
+   "move": "May 2023",
+   "biggest day": "2023-05-22",
+   "launch low": "2023-05-15",
+   "daily RSI at low": 44.70816468421571,
+   "RSI pct at low": 0.45634920634920634,
+   "weekly RSI": 44.11722422767964
+  },
+  {
+   "move": "Jun-Jul 2024",
+   "biggest day": "2024-07-02",
+   "launch low": "2024-06-20",
+   "daily RSI at low": 53.62291783741688,
+   "RSI pct at low": 0.7023809523809523,
+   "weekly RSI": 45.752536956454094
+  },
+  {
+   "move": "Oct-Nov 2024 (red week between)",
+   "biggest day": "2024-10-24",
+   "launch low": "2024-10-23",
+   "daily RSI at low": 36.46268894961546,
+   "RSI pct at low": 0.1746031746031746,
+   "weekly RSI": 51.42985606153679
+  },
+  {
+   "move": "Apr-May 2025",
+   "biggest day": "2025-04-25",
+   "launch low": "2025-04-21",
+   "daily RSI at low": 39.86061073399883,
+   "RSI pct at low": 0.15873015873015872,
+   "weekly RSI": 38.49381547731576
+  },
+  {
+   "move": "Sep 2025 (smaller, then big)",
+   "biggest day": "2025-09-12",
+   "launch low": "2025-09-02",
+   "daily RSI at low": 48.7861113534186,
+   "RSI pct at low": 0.3611111111111111,
+   "weekly RSI": 54.27622374100473
+  },
+  {
+   "move": "Oct 2025 (a window you asked about)",
+   "biggest day": "2025-10-06",
+   "launch low": "2025-09-25",
+   "daily RSI at low": 65.56084171942501,
+   "RSI pct at low": 0.7976190476190477,
+   "weekly RSI": 69.6406118391177
+  }
+ ],
+ "bands": [
+  {
+   "band": "<30",
+   "days": 123,
+   "P": 0.7398373983739838,
+   "P down": 0.3983739837398374
+  },
+  {
+   "band": "30-40",
+   "days": 510,
+   "P": 0.5254901960784314,
+   "P down": 0.4470588235294118
+  },
+  {
+   "band": "40-50",
+   "days": 1169,
+   "P": 0.40547476475620187,
+   "P down": 0.40547476475620187
+  },
+  {
+   "band": "50-60",
+   "days": 1138,
+   "P": 0.30755711775043937,
+   "P down": 0.3462214411247803
+  },
+  {
+   "band": "60-70",
+   "days": 703,
+   "P": 0.37980085348506404,
+   "P down": 0.3541963015647226
+  },
+  {
+   "band": "70+",
+   "days": 424,
+   "P": 0.4410377358490566,
+   "P down": 0.5495283018867925
+  }
+ ],
+ "overlap": [
+  [
+   {
+    "group": "setup +\nRSI low",
+    "days": 104,
+    "episodes": 36,
+    "P": 0.40384615384615385
+   },
+   {
+    "group": "setup,\nRSI not low",
+    "days": 51,
+    "episodes": 37,
+    "P": 0.37254901960784315
+   },
+   {
+    "group": "RSI low,\nno setup",
+    "days": 87,
+    "episodes": 37,
+    "P": 0.16091954022988506
+   },
+   {
+    "group": "neither",
+    "days": 1207,
+    "episodes": 67,
+    "P": 0.13670256835128416
+   }
+  ],
+  104,
+  155
+ ]
+}

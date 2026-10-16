@@ -210,8 +210,50 @@ The claim is about **the lows the bursts launched from**. A low comes at the end
 * **Smallest possible p:** about 0.001 for F2 and F3 and 0.0005 for F1, both below 0.05.
 * **Prediction written now:** F1 shows burst lows have low RSI, but no lower than other lows; F2 does not pass.
 
+
+### Follow-up A results (`followup_rsi_lows.py`, `out/followup_rsi_lows.json`)
+
+![RSI at the lows](out/followup_rsi_lows.png)
+
+**My written prediction was half wrong.** F1 came out as predicted; F2 passes, which I predicted it would not.
+
+* **F1, look-back: no shared RSI at the launch lows.**
+  * The 167 burst-launch lows had a median daily RSI of 42 (IQR 35–55). The 116 swing lows with no burst after had 43 (IQR 37–48). Difference −1.1, p 0.55.
+  * The 8 named moves launched from RSI **36 to 66**:
+    * Oct 2021: 64
+    * Jan 2023: 39
+    * May 2023: 45
+    * Jun–Jul 2024: 54
+    * Oct 2024: 36
+    * Apr 2025: 40
+    * Sep 2025: 49
+    * Oct 2025: 66
+  * Only the extreme is over-represented: 15% of launch lows had RSI < 30 vs 7% of the other lows.
+* **F2, look-forward (primary): passes.**
+  * With daily RSI in its trailing-year bottom tenth (447 days, 115 episodes), an up-burst followed within 10 sessions **57%** of the time vs 40% on all days (+17 points, p 0.001).
+* **F3, secondary:**
+  * RSI < 30: 123 days, 40 episodes; up-burst within 10 sessions **74%** vs 40%, p 0.001. The mean 10-day return was +4.3% (median +6.2%, 72% up).
+  * Weekly RSI in its bottom third adds nothing: 41% vs 41%, p 0.82.
+* **Post-hoc checks (chosen after seeing F2; descriptive):**
+  * **Not just volatility.** At RSI < 30, down-bursts followed 40% of the time against 74% for up-bursts. Within every volatility third, RSI < 30 kept an up-lean: up 62–80% vs 33–45% at RSI 30–70, down 25–53%. RSI 70+ leans the other way (up 44%, down 55%).
+  * **It mostly *is* our setup since 2021.** 104 of the 155 full-setup days had RSI in its bottom tenth. Up-burst within 3 sessions:
+
+    | Group | Up-burst within 3 | Episodes |
+    |---|---|---|
+    | setup + low RSI | 40% | 36 |
+    | setup without low RSI | 37% | 37 |
+    | low RSI without the setup | 16% | 37 |
+    | neither | 14% | 67 |
+
+    Since 2021, the options state is what separates the low-RSI days that launched from those that didn't. Low RSI alone adds little over 3 sessions: 16% vs 14%. Over 10 sessions it adds more: 52% vs 44%.
+* **Today:**
+  * TSLA's daily RSI is 46.5 (40th percentile). The bottom-tenth line is RSI 38.3, about a **$344 close** tomorrow (−5.1%). RSI < 30 needs about **$320** (−11.7%).
+  * Both are one-day moves; a slower slide reaches the same RSI at a slightly different price.
+  * Below about $355 after Friday's expiry, the options full setup is on too (§4ae).
+
 ## Reproduce
 ```bash
 OMP_NUM_THREADS=1 python indicators.py      # Part A + Part B + today's readings -> out/ (about 10 seconds)
 OMP_NUM_THREADS=1 python figures.py         # out/indicators.png
+OMP_NUM_THREADS=1 python followup_rsi_lows.py   # follow-up A -> out/followup_rsi_lows.json, .png
 ```
