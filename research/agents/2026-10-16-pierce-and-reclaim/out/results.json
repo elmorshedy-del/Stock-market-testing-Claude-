@@ -1,0 +1,46 @@
+{
+ "analysis days": 1452,
+ "base up-burst within 3": 0.16551724137931034,
+ "base down-burst within 3": 0.17172413793103447,
+ "groups": {
+  "A  closed below the flip (full setup)": {
+   "days": 155,
+   "episodes": 59,
+   "up-burst within 3": 0.3935483870967742,
+   "down-burst within 3": 0.17419354838709677
+  },
+  "B  traded below, closed above": {
+   "days": 39,
+   "episodes": 31,
+   "up-burst within 3": 0.23076923076923078,
+   "down-burst within 3": 0.28205128205128205
+  },
+  "C  never traded below": {
+   "days": 216,
+   "episodes": 82,
+   "up-burst within 3": 0.18981481481481483,
+   "down-burst within 3": 0.2222222222222222
+  }
+ },
+ "H1 (B, freed)": {
+  "n_days": 39,
+  "episodes": 31,
+  "lift": 0.06525198938992044,
+  "p": 0.174
+ },
+ "H1 pass": false,
+ "secondary: B on all days": {
+  "n_days": 232,
+  "episodes": 172,
+  "lift": 0.011206896551724133,
+  "p": 0.379,
+  "up-burst within 3": 0.17672413793103448,
+  "down-burst within 3": 0.1896551724137931
+ },
+ "check: A reproduces the full setup": {
+  "n_days": 155,
+  "episodes": 59,
+  "lift": 0.22803114571746386,
+  "p": 0.0
+ }
+}
