@@ -251,6 +251,25 @@ The claim is about **the lows the bursts launched from**. A low comes at the end
   * Both are one-day moves; a slower slide reaches the same RSI at a slightly different price.
   * Below about $355 after Friday's expiry, the options full setup is on too (§4ae).
 
+
+## Follow-up B (pre-registered 2026-10-16, before running): can RSI tell a true low from a false one, in real time?
+
+The owner's use: avoid entering at a "false" low, one that gets broken soon after entry. Everything below is known at the close of the day it is measured.
+
+* **Candidates (TSLA daily, 2011–2026):**
+  * **(a) At the low:** a new 20-session closing low.
+  * **(b) After the first bounce:** the first close at least 1 ATR(14) above the most recent 20-session closing low, within 10 sessions of it. The low being judged is that earlier closing low.
+* **Outcome, a true low:** no close below the candidate low in the next 10 sessions after the candidate day. Also reported: the up-burst rate within 10 sessions.
+* **Predictors at each candidate:**
+  * **D, bullish divergence (primary).** The candidate low is below the previous 20-session closing low from 5–30 sessions earlier, while daily RSI is higher than it was at that earlier low. Only candidates with such an earlier low count.
+  * **L, RSI level (secondary).** Daily RSI in its trailing-year bottom tenth at the low.
+  * **S, our options setup (secondary, 2021+).** The TSLA full setup is on at the candidate day.
+* **Statistic:** P(true low | predictor on) − P(true low | off), among candidates.
+* **Null:** circularly shift the predictor's on/off sequence across the ordered candidates (offset ≥ 10 candidates, every offset). This keeps the predictor's clustering.
+* **Pass:** D in framing (a) or (b) with p < 0.025 (0.05 over the two framings) and a positive difference. L and S are reported without a pass bar.
+* **Smallest possible p:** this depends on the candidate count. The script prints it first and marks any test that cannot reach 0.025.
+* **Prediction written now:** divergence raises the hold rate a little (+5 to +10 points) but does not pass. Most false lows come in high-volatility slides, which RSI does not see.
+
 ## Reproduce
 ```bash
 OMP_NUM_THREADS=1 python indicators.py      # Part A + Part B + today's readings -> out/ (about 10 seconds)
