@@ -64,3 +64,38 @@ Reading error is about ±3% per line. The screenshot itself was taken on Oct 16 
   * TSLA ~$364 sits on line C (~$364), in the D–C lower band. D is about $338.
   * After today's expiry TSLA is above its flip (~$348–356) and freed: the channel says "lower band", the options say not yet coiled.
   * A drop to line D would bring it near or below the flip, which is the full setup.
+
+## Follow-up: why the Jan 2023 leg overshot while later legs paused at the mid line (`legs.py`, `out/legs.csv`, `out/legs.png`; descriptive, 4 legs)
+
+![legs](out/legs.png)
+
+| | Jan 2023 | Apr 2024 | Apr 2025 | Jul 2026 (now) |
+|---|---|---|---|---|
+| Low (close) | $108.1, Jan 3 | $142.1, Apr 22 | $221.9, Apr 8 | $298.3, Jul 29 |
+| **Below the 52-week high** | **−73%** | −52% | −54% | −39% |
+| Below line D | −10.5% | −17.4% | −0.6% | −6.4% |
+| Below the flip | −16.4% | −15.0% | −8.0% | −3.7% |
+| Dealer-gamma pct / near-OI pct at the low | 10 / 3 | 5 / 1 | 9 / 5 | 2 / 5 |
+| ATM IV at the low (pct of its year) | 86% (99) | 64% (100) | 98% (100) | 49% (71) |
+| **IV during the climb** | **stayed at its 60–80th pct** | fell to ~5th, rose late | fell to ~50th | fell to ~0, then 20–35th |
+| Calls/puts OI at the low | 1.26 | 1.12 | 1.09 | 1.24 |
+| Highest channel position in 80 sessions (A = 1) | **1.09** | 0.71 | 0.85 | 0.26 so far |
+| Sessions within 0.08 of the mid line | 7 | 12 | **29** | 0 |
+| S&P over the window | +8% | +9% | +25% | +6% |
+| TSLA 40 sessions after the low | **+88%** | +32% | +50% | +27% |
+
+**What separates Jan 2023 in the data:**
+* **The deepest crash before the low:** −73% from its high, against −39% to −54% for the others. This was the first leg out of a bear-market capitulation, not a leg inside an established channel.
+* **IV stayed high through the climb.** The market kept paying up for options all the way up; in every later leg IV collapsed as the price recovered.
+
+**What does not separate it:**
+* Depth below the flip (Apr 2024 was as deep).
+* Dealer gamma and the freed state at the low (all near their extremes).
+* The market backdrop (Apr 2025 had a far bigger S&P rally, and TSLA still consolidated at the mid line).
+* The spot-vol correlation in the first 30 sessions: Jan 2023 +0.14, Apr 2024 +0.10, Apr 2025 −0.62, now +0.61. Mixed.
+* The other big overshoot, Nov–Dec 2024 (the election), did come with spot-up/vol-up (+0.45 over 20 sessions, near the 90th percentile of the measure).
+
+**Read:**
+* The overshoots came out of an extreme (a −73% crash, or an event like the election) with options demand that stayed high.
+* The clean legs came out of ordinary pullbacks, with IV deflating as the price rose. Those consolidate at the mid line.
+* This is 4 legs; a hypothesis for a pre-registered test, not a finding: does IV holding up during a rally off the lower lines predict an overshoot of the upper line?
