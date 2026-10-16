@@ -1,0 +1,41 @@
+{
+ "map": {
+  "eod_chain_date": "2026-10-14",
+  "oi_date": "2026-10-16",
+  "top_gamma_strikes": [
+   772.0,
+   760.0,
+   750.0,
+   780.0,
+   765.0
+  ],
+  "top_gamma_values_$M_per_1pct": {
+   "772.0": -6115.6,
+   "760.0": -1116.9,
+   "750.0": -711.1,
+   "780.0": 685.7,
+   "765.0": -675.9
+  },
+  "call_wall": 785.0,
+  "put_wall": 750.0,
+  "flip_with_expiring": 773.81594875,
+  "levels": [
+   750.0,
+   760.0,
+   765.0,
+   772.0,
+   774.0,
+   780.0,
+   785.0
+  ],
+  "expiring_today_share_of_abs_gamma": 0.43064443265181007
+ },
+ "test": {
+  "turns": 34,
+  "median_distance_obs": 1.32000732421875,
+  "null_median_of_median_distance": 1.32000732421875,
+  "p_one_sided": 0.5355
+ },
+ "bars_to": "2026-10-16 13:48:42",
+ "window_minutes": 5
+}

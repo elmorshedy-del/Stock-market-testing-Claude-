@@ -3,7 +3,7 @@
 **Agent / session:** Claude, claude.ai session for the owner, 2026-10-16 (written at about 13:20 ET, during the session)
 **Type:** one-day test against a luck baseline. The design below was pushed before any distance from a turn to a level was computed.
 **Builds on:** gaps-and-walls (the walls were no better than equally round strikes at the same distance, so that null is reused here)
-**Verdict:** (after the run)
+**Verdict (to 13:48 ET; rerun at the close):** **no, as predicted.** Today's turns sat no closer to the option levels than to equally round strikes at the same distance (p 0.54–0.67 across the three turn windows). Price did not *turn* at the levels. It *trended through* them, from just under the intraday flip.
 
 ## Question
 The owner asks whether a day trader could have used today's SPY option levels: did price turn at the lines inferred from options, exactly, beyond what luck gives?
@@ -41,6 +41,35 @@ The owner asks whether a day trader could have used today's SPY option levels: d
 ## Prediction written now
 **Not significant.** With about 15–25 turns and SPY strikes every $1, only a large effect would show. I expect today's turns to sit no closer to the option levels than to equally round strikes at the same distance.
 
+## Results (to 13:48 ET)
+
+![levels today](out/levels_today_k10.png)
+
+**Correction to the design text:** the implied vols came from the Oct 14 chain, not Oct 9 (the SPY raw files run to Oct 14).
+
+**The map before the open** (OI dated Oct 16, spot $771.79):
+
+| Level | What it is |
+|---|---|
+| $774 | the flip, with today's expiring options included |
+| $772 | the largest gamma strike, −$6.1B per 1% move (put-heavy and mostly expiring today; 43% of all absolute gamma expired today) |
+| $760, $765, $750 | the next-largest gamma strikes, all negative (−$1.1B, −$0.68B, −$0.71B) |
+| $780 | the largest positive gamma strike (+$0.69B) |
+| $785 / $750 | call wall / put wall |
+
+**The test** (`out/levels_k*.json`, `out/turns_k*.csv`):
+
+| Turn window | Turns | Median $ to the nearest level | Luck (round- and distance-matched) | p |
+|---|---|---|---|---|
+| 5 min | 34 | 1.32 | 1.32 | 0.54 |
+| **10 min (primary)** | **12** | **1.42** | **1.29** | **0.67** |
+| 20 min | 7 | 1.58 | 1.58 | 0.62 |
+
+**What the day did:**
+* SPY opened at $773.24. The session high, $773.25, came in the first minute, **$0.56 under the intraday flip**, and SPY never traded above it.
+* It then ground lower through $772, $770 and $765 to $762.58 at 13:22, and bounced back to about $765.
+* The eye sees a "retest" of $765. The luck check says equally round strikes at the same distance get touched about as often.
+* **This fits a short-gamma day:** below the flip, with the biggest strike negative, levels get run through rather than defended. The test only shows the negative part (no turning at levels). That the trend came *because of* gamma is one day of description, not a test.
+
 ## Exploratory (no test)
-* When SPY first traded below the intraday flip.
-* Whether 5-minute realized vol was higher after that than before.
+* The planned before/after-the-flip comparison was not possible: SPY never traded above the flip ($774) today.
