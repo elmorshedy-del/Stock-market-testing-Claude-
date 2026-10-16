@@ -99,3 +99,49 @@ Reading error is about ±3% per line. The screenshot itself was taken on Oct 16 
 * The overshoots came out of an extreme (a −73% crash, or an event like the election) with options demand that stayed high.
 * The clean legs came out of ordinary pullbacks, with IV deflating as the price rose. Those consolidate at the mid line.
 * This is 4 legs; a hypothesis for a pre-registered test, not a finding: does IV holding up during a rally off the lower lines predict an overshoot of the upper line?
+
+## Follow-up 2: was the July 2026 dip to line D the launch pad? (`report_launch.py`, `out/reports.csv`, `out/report_launch.png`; descriptive, written after seeing the legs)
+
+The owner's question: the 2023, 2024 and 2025 legs shot straight off line D. In 2026, TSLA dipped to D in July and has drifted between C and D since. That looks like 2025, which also hung around C and D before its shot came from D, where the flip was. So is the July dip the launch pad, and how does it fit the Q4 catch-up and the Oct 21 report?
+
+![report launch](out/report_launch.png)
+
+**What the legs have in common:** every launch off the lower lines started on an earnings report.
+* **Jan 2023:** low on Jan 3; the launch came at the Jan 25 report.
+* **Apr 2024:** low on Apr 22; the launch came at the Apr 23 report.
+* **Apr 2025:** lows on Mar 10 and Apr 8 (two touches of D, with full-setup runs from Feb 21 to Apr 22); the launch came at the Apr 22 report.
+* **Oct 2024:** the Q3 report from line C.
+* **Jul 2026 is the exception in order:** its low (Jul 29) came *after* a report, the −14.5% reaction on Jul 23, not before one. It had the deepest gamma of the four legs (gamma pct 2, near-OI pct 5, 9 full-setup closes), but no report to launch it. It crept from D to C instead (highest channel position 0.26 in 56 sessions, against 0.71–1.09 for the other legs).
+
+**Every report reaction since Aug 2022** (16 reports, sorted by channel position at the close before; D = 0, A = 1, B = 0.58; the 2026 report dates are from Tesla's releases, because the volume detector in `q4_forensics.py` picks Apr 15 for Q1 2026):
+
+| Report reaction | Position before | vs flip before | Reaction day | 20 sessions later |
+|---|---|---|---|---|
+| 2024-04-24 | −0.34 | −11.0% | +12.1% | **+29%** |
+| 2025-04-23 | 0.10 | −3.3% (full setup) | +5.4% | **+45%** |
+| **now: 2026-10-22** | **0.14** | **about +3–5% vs the post-expiry estimate** | | |
+| 2024-10-24 | 0.15 | +3.0% | +21.9% | **+60%** |
+| 2026-07-23 | 0.30 | +1.1% | −14.5% | −6% |
+| 2023-01-26 | 0.33 | +5.5% | +11.0% | **+40%** |
+| 2024-01-25, 2026-04-23, 2024-07-24 | 0.50–0.56 | 0 to +18% | −12% to −4% | −10% to +8% |
+| the 8 above the mid line B | 0.60–1.46 | | 2 of 8 up | 1 of 8 up, median −7% |
+
+* **Below the mid line:** 5 of 8 reports were higher 20 sessions later (median +18%).
+* **The five closest to D:** 4 launched (+29% to +60% in 20 sessions), and 1 failed: Jul 2026, which produced the July low.
+* **The flip does not separate them:** the launches came from below the flip (Apr 2024, Apr 2025) and from above it (Jan 2023, Oct 2024). The failure came from 1% above it.
+* **The closest match to now is Oct 2024:**
+  * a Q3 report in a catch-up year;
+  * channel position 0.15 (now 0.14);
+  * about 3% above the flip, without the full setup.
+  * Its +60% was helped by the election inside the 20 sessions.
+* **What the data shows for Oct 21, not tested:**
+  * The report is the first since the July low at D, the slot where the earlier launches came.
+  * TSLA sits where 4 of the last 5 launches started.
+  * The one failure from this spot was a report that disappointed (an EPS miss and a capex shock).
+
+**Threats to validity:**
+* **Hindsight lines.** The owner drew line D under these very lows, so "near D before a launch" is partly built in.
+* **Small sample.** There are 16 reports and 5 near D, with no p-value. The news in the report dominates any position effect.
+* **The flip band ($348–356) is an estimate** from Friday's expiry. Recompute it Monday with real OI (`research/microstructure/tsla_live.py`).
+
+**Honest test, proposed and not yet run:** refit the channel lines walk-forward, using only prices before each report. Then score report reactions by that position across TSLA and other high-beta names, and pre-register the design before the run.
