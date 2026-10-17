@@ -1,0 +1,10 @@
+candidate,A,B,C,D
+cost basis since the Jan 2023 low (anchored VWAP),46.5,24.9,13.9,12.0
+cost basis since the Apr 2024 low (anchored VWAP),42.4,20.8,5.5,10.9
+cost basis since the Apr 2025 low (anchored VWAP),31.0,9.4,14.9,22.3
+cost basis since the Jul 2026 low (anchored VWAP),50.5,29.0,3.3,4.4
+200-day average,25.4,6.2,20.3,27.7
+50-day average,24.0,14.4,24.0,31.2
+gamma flip (20-day median),28.4,16.6,22.9,30.2
+put wall (20-day median),30.3,16.5,18.6,23.2
+call wall (20-day median),19.6,17.0,37.7,45.0
