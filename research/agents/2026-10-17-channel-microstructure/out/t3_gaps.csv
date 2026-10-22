@@ -1,0 +1,8 @@
+objective line,A upper,B mid,C second lowest,D lowest,SPY upper,SPY mid,SPY lower
+VWAP50,24.4,14.0,24.0,31.3,4.1,1.8,0.7
+VWAP200,27.4,7.3,21.8,29.2,10.6,8.3,6.4
+VWAP500,43.5,25.3,3.5,8.9,19.3,17.0,15.1
+channel upper,28.9,50.5,75.3,82.7,2.7,5.0,6.9
+channel mid,11.0,20.1,43.0,50.4,6.0,3.7,1.9
+channel lower,39.2,18.7,17.8,15.6,14.8,12.5,10.6
+VWAP from channel anchor (extra),32.4,14.1,14.8,20.4,27.1,24.8,22.9
