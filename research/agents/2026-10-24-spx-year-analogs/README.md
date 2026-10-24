@@ -114,3 +114,49 @@
 * **This year's shape:** a March flush (−7% year to date at the low), a V in April and May, a flat summer, and an October stall after a new high.
 * **The five years that drew the same curve did not agree on what came next.** In 75 years of out-of-sample tests, the curve has carried no information about the following month.
 * **What has carried information** in this repository is the market's positioning state: the S&P gamma rungs, ARMED, and the VIX × gamma cells (spy-channel follow-ups). See those for the month ahead.
+
+## Amendment 2 (owner's follow-up: which years had a similar macro background?). Pre-registered before any macro analog was computed.
+**Question:** which past years looked like September 2026 in their macro and valuation backdrop, and did those years say anything about what came next?
+
+**Data:**
+* the repository's macro panel (`2026-10-15-channel-reversion-macro/out/macro_monthly.csv`; Fed H.15 rates, BLS CPI, dollar index), 1981–2026;
+* the monthly Shiller CAPE (multpl.com table, 1871–2026);
+* Shiller's `ie_data.xls` for 10-year yields and CPI before 1981.
+
+Unemployment is not included: FRED and the BLS API are unreachable from this environment.
+
+**Snapshot:** each year's September values (the latest complete month for 2026).
+
+**Primary set, 1981–2025 (45 candidate years), z-scored across the candidates, equal weights, Euclidean distance. Seven features:**
+1. fed funds rate;
+2. its 12-month change (cutting vs hiking);
+3. CPI year on year;
+4. 10-year yield;
+5. curve (10y − 3m);
+6. CAPE;
+7. S&P return from January to September.
+
+**Secondary set, 1900–2025 (long history, no Fed data), five features:**
+1. CAPE;
+2. 10-year yield;
+3. CPI year on year;
+4. the 12-month change in the 10-year yield;
+5. S&P January-to-September return.
+
+**Reported:**
+* the 5 nearest years;
+* their September values next to 2026's;
+* what the S&P did from day 204 to the end of November, to year end, and over the next 12 months (from the end of October);
+* whether each analog was a midterm year. 2026 is a midterm year; this is descriptive, not a feature.
+
+**Skill test (walk-forward, same rules as the shape test):**
+* for each test year, the 5 nearest earlier years; prediction = their mean outcome; naive = the mean over all earlier years.
+* **Primary:** the next-12-month return, with test years 1991–2025 (at least 10 earlier candidates).
+* **Also reported:** the end-of-November outcome, and the secondary feature set with test years 1930–2025.
+* **Null:** permutation, 5,000 draws, one-sided.
+* **Pass:** correlation > 0 with p < 0.05 and a sign hit rate above naive.
+
+**Prediction (written before the run):**
+* The valuation backdrop (CAPE about 40) will pull the analogs toward 1998–2000 and 2021.
+* 12-month outcomes after those years were mixed: 1999 up, 2000 and 2021 followed by bear markets.
+* The walk-forward has low power (35 test years) and is expected to fail.
