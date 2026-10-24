@@ -133,3 +133,58 @@ Each result gets a diagnosis: era and ticker splits, alternative explanations, a
 **F4. D cleaner leverage (secondary):**
 * The 12-month change in log(margin debt ÷ S&P level), with a 2-month lag, in place of margin growth.
 * Same test. Pass p < 0.05.
+
+## Round 2 results (`followup.py`; `out/f1.json` to `out/f4.json`)
+**F1. A1 dissection**
+* **6 names pooled (9,494 days):** the gamma ordering **survives the volatility control.**
+  * b2 (today's return × gamma percentile) = +0.107 (95% +0.034 to +0.177), p 0.0005.
+  * The volatility interaction is about 0 (−0.005).
+  * Gamma and volatility percentiles correlate −0.31, so they are separable.
+* **It is an up-day effect:**
+  * up days: β −0.062 on low-gamma days vs +0.057 on high-gamma days;
+  * down days: about −0.10 in both.
+  * That is not the vanna or volatility-crush bounce, which predicted down days.
+* **The gap does not close; it widens** (cumulative response, low minus high gamma, by day 1/5/10: −0.06, −0.16, −0.26).
+  * Moves made on low-gamma days are progressively given back (−0.18 of the move by day 10).
+  * Moves made on high-gamma days persist (+0.08).
+  * "Speed, not destination" is rejected.
+* **S&P (3,768 days):** the same sign (b2 +0.13) but not significant once volatility is held fixed (p 0.19). Gamma and volatility correlate −0.54 there. On up days: −0.35 on low-gamma days vs +0.04 on high-gamma days.
+
+**F2. Echo mechanism: not established**
+* **Check 1 passes:** the lag profile peaks at lags 19–21 (+0.28%, +0.41%, +0.30%) against negative placebo lags. Excess over placebo +0.40%, p 0.013.
+* **Check 2 fails:** shocks that were *not* the largest in their window echo just as much (+0.28%; difference +0.01%, p 0.50). The volatility drop-out is therefore not the cause.
+* **Check 3 passes:** up-shocks +0.34% (28 events), down-shocks +0.28% (53 events).
+* **Check 4 weak:** excluding turn-of-month echo windows leaves +0.18% (57 events, p 0.20).
+* **Reading:** something does recur about one month (19–21 sessions) after big moves in 2008–2026, but not because of volatility-window drop-out. The leading alternative is the monthly macro-release calendar (jobs report, CPI, FOMC): shocks happen on release days, and the next month's release falls about 21 sessions later. Untested here, because there is no announcement calendar in this environment.
+
+**F3. Expiry size law: fail.** Slope +0.002, p 0.45. The released hedge relative to liquidity does not predict the volatility change.
+
+**F4. Cleaner leverage: fail, and the opposite way.** High leverage growth relative to the market came with *shallower* post-shock drawdowns (−1.1% vs −4.1%), slope p 0.72.
+
+## Theory update after round 2
+* **What died:**
+  * leverage as fuel (D, F4);
+  * expiry release as a size law (B, F3);
+  * the volatility-target echo as a mechanism (C, F2);
+  * the naive dealer sign flip (A1 as predicted, A2).
+* **What survived and sharpened, the transitory-impact law:**
+  * Price moves made while dealers are short gamma (forced chasing) are temporary and get given back over the next two weeks.
+  * Moves made while dealers are long gamma (damped) are permanent and continue.
+  * Forced flow moves price, but it does not carry information, so its impact decays. That is the forced-flow theory's own logic, applied to the after-effect rather than to the move.
+
+## Amendment 2: round 3 tests. Pre-registered before running.
+**R3a. Is the transitory-impact law robust in single names?** Pooled names, same regression as F1. All three must hold:
+1. b2 > 0 in both 2020–2022 and 2023–2026, each with block-bootstrap p < 0.10.
+2. b2 > 0 for at least 5 of the 6 tickers.
+3. The day-10 cumulative gap (low minus high gamma) < 0 with block-bootstrap p < 0.05.
+
+**R3b. Does the law generalize to other forced-flow days?**
+* **The prediction:** a big S&P move made on a day when index funds and pensions must trade by calendar should be given back more than a move of the same size on another day.
+* **Data:** ^GSPC, 1990–2026.
+* **Forced-flow days:**
+  * quarterly index rebalances and quad witching (third Friday of Mar/Jun/Sep/Dec; the Thursday if the Friday is a holiday);
+  * the last trading day of each month (pension and fund rebalancing);
+  * the Russell reconstitution (last Friday of June).
+* **Model:** c5 (next-5-day return ÷ the 20-day standard deviation) = a + b·x + d·x·F + e·F. x is the day's z-return and F = 1 on a forced-flow day.
+* **Pass:** d < 0 with a 20-day block bootstrap p < 0.05.
+* **Also reported:** each day type separately, and c10.

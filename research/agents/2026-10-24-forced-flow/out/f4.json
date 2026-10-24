@@ -1,0 +1,11 @@
+{
+ "events": 47,
+ "slope of drawdown on 12m change in log(margin/S&P)": 3.0625959314828726,
+ "p (one-sided, slope >= 0)": 0.7218,
+ "corr": 0.08109104844303108,
+ "mean drawdown high / low half %": [
+  -1.14775,
+  -4.14104347826087
+ ],
+ "verdict": "fail"
+}

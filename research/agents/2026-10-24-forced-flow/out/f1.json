@@ -1,0 +1,116 @@
+{
+ "6 names pooled (z-returns)": {
+  "days": 9494,
+  "b1 (x)": -0.022004027927116962,
+  "b2 (x*gamma pct)": 0.10729278061404117,
+  "b3 (x*vol pct)": -0.005242757934330974,
+  "p (b2 <= 0, block bootstrap)": 0.0005,
+  "b2 ci95": [
+   0.0339830532507511,
+   0.1773194696902473
+  ],
+  "corr(gamma pct, vol pct)": -0.30928230852649113,
+  "beta up days: low-gamma half / high-gamma half": [
+   -0.061740434122761395,
+   0.05689462013568282
+  ],
+  "beta down days: low-gamma half / high-gamma half": [
+   -0.09337217931948473,
+   -0.10213042625222893
+  ],
+  "cumulative response gap (low - high gamma), days 1..10": [
+   -0.0618,
+   -0.0616,
+   -0.1018,
+   -0.154,
+   -0.156,
+   -0.1911,
+   -0.1698,
+   -0.2138,
+   -0.1835,
+   -0.262
+  ],
+  "cumulative response low-gamma half, days 1..10": [
+   -0.0537,
+   -0.0532,
+   -0.097,
+   -0.1573,
+   -0.1519,
+   -0.1735,
+   -0.1621,
+   -0.1963,
+   -0.1601,
+   -0.1838
+  ],
+  "cumulative response high-gamma half, days 1..10": [
+   0.0082,
+   0.0084,
+   0.0048,
+   -0.0033,
+   0.0042,
+   0.0177,
+   0.0077,
+   0.0175,
+   0.0234,
+   0.0782
+  ],
+  "verdict": "ordering survives the volatility control"
+ },
+ "S&P": {
+  "days": 3768,
+  "b1 (x)": -0.05301114045732402,
+  "b2 (x*gamma pct)": 0.1334752190296467,
+  "b3 (x*vol pct)": -0.13136777027522784,
+  "p (b2 <= 0, block bootstrap)": 0.193,
+  "b2 ci95": [
+   -0.10316255036986353,
+   0.32803467931980074
+  ],
+  "corr(gamma pct, vol pct)": -0.53767482164346,
+  "beta up days: low-gamma half / high-gamma half": [
+   -0.34822982535735436,
+   0.03848675905632413
+  ],
+  "beta down days: low-gamma half / high-gamma half": [
+   -0.144591149400979,
+   -0.023125373402930697
+  ],
+  "cumulative response gap (low - high gamma), days 1..10": [
+   -0.1578,
+   -0.0298,
+   -0.0236,
+   -0.1309,
+   -0.063,
+   -0.1391,
+   -0.0267,
+   -0.1778,
+   -0.0826,
+   -0.1733
+  ],
+  "cumulative response low-gamma half, days 1..10": [
+   -0.1473,
+   -0.0475,
+   -0.0711,
+   -0.1517,
+   -0.0971,
+   -0.2014,
+   -0.0667,
+   -0.196,
+   -0.0737,
+   -0.1224
+  ],
+  "cumulative response high-gamma half, days 1..10": [
+   0.0105,
+   -0.0178,
+   -0.0475,
+   -0.0209,
+   -0.0341,
+   -0.0623,
+   -0.0399,
+   -0.0181,
+   0.0089,
+   0.051
+  ],
+  "verdict": "explained by volatility (or too weak)"
+ }
+}

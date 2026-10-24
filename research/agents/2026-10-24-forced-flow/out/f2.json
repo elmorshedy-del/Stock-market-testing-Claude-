@@ -1,0 +1,44 @@
+{
+ "qualifying events (post-2008)": 81,
+ "non-qualifying shocks": 79,
+ "1 lag profile: mean excess % by start lag 15..27": {
+  "15": 0.143,
+  "16": -0.194,
+  "17": -0.291,
+  "18": -0.012,
+  "19": 0.279,
+  "20": 0.413,
+  "21": 0.297,
+  "22": 0.138,
+  "23": 0.033,
+  "24": -0.002,
+  "25": -0.027,
+  "26": -0.198,
+  "27": -0.258
+ },
+ "1 excess at 21 minus placebo lags %": 0.4014868925723381,
+ "1 p (one-sided)": 0.013,
+ "2 qualifying minus non-qualifying at lag 21 %": 0.013187084449906928,
+ "2 p (one-sided)": 0.495,
+ "2 non-qualifying excess %": 0.2833814124572462,
+ "3 up-shocks: events, mean excess %": [
+  28,
+  0.33591209727673804
+ ],
+ "3 down-shocks: events, mean excess %": [
+  53,
+  0.27578319859869316
+ ],
+ "4 excluding turn-of-month echo windows: events, mean excess %, p": [
+  57,
+  0.17895147300411648,
+  0.199
+ ],
+ "checks passed (1, 2, 3, 4)": [
+  true,
+  false,
+  true,
+  true
+ ],
+ "verdict": "mechanism not established"
+}

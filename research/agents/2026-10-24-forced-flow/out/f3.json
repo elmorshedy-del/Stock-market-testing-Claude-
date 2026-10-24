@@ -1,0 +1,20 @@
+{
+ "events": 480,
+ "dropped (zero expiring share)": 6,
+ "slope of vol change on log(released hedge / dollar volume), within ticker": 0.0019145571090794394,
+ "p (one-sided, permutation)": 0.4524,
+ "mean vol change by third (log)": {
+  "low": 0.052800317966940305,
+  "mid": 0.03409719654678524,
+  "high": 0.06122930003250961
+ },
+ "per ticker slope": {
+  "TSLA": -0.026885020672260992,
+  "MSFT": -0.018102016604154777,
+  "NVDA": 0.030454105209401672,
+  "SPY": -0.016783729898139765,
+  "QQQ": -0.0117200954950302,
+  "MU": 0.057683034577130754
+ },
+ "verdict": "fail"
+}
