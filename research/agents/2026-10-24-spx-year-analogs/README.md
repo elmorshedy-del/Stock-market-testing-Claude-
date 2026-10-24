@@ -279,3 +279,24 @@ Unemployment is not included: FRED and the BLS API are unreachable from this env
 * **Old bulls are not weaker bulls.** Age and the size of the run carry no information about the next year.
 * **The rhyme does recur across three independent lenses: the late 1990s** (1995–2000 by multi-year shape; 1999 by macro backdrop). That identity is stable.
 * **But the 1990s mirror itself splits by which year you line up with:** 1998 went on +17% and 2000 went −13%.
+
+## Correction (owner, 2026-10-24): the Fed is hiking, not easing
+**What was wrong:** Amendment 2 described September 2026 as "Fed easing," because the fed funds rate is 0.47 points below its September 2025 level. That 12-month change is the late-2025 cuts:
+* the Fed cut from 4.33% (Sep 2025) to 3.64% (Jan 2026);
+* then held through August 2026;
+* then **hiked 25 bp in September 2026, to 3.75–4.00%, its first hike since July 2023**, with the median projection and the minutes pointing to more by year end;
+* the 3-month bill (4.09%) sits above effective fed funds (3.75%), consistent with further hikes being priced.
+
+So the current direction is tightening, into re-accelerating inflation (CPI 2.4% in March, 4.2% in June, 3.3% in September) and a 10-year up 0.87 points over the year.
+
+**Re-ranking (descriptive, post-hoc; the walk-forward verdict does not change):** replacing the 12-month change with the 3-month change in fed funds, and adding the 12-month change in the 10-year, gives these nearest years:
+* 2025, then **1999, 2018, 2000, 2017.** Every historical twin is now a hiking year.
+* **1999 rhymes more closely than before.** The Fed cut in late 1998, then hiked from June 1999 (ff 4.76 in Jun, 5.22 in Sep), into a market at CAPE 41, with the 10-year up 1.1 points.
+* **What came next:**
+
+| Year | To end of Nov | To year end | Next 12 months |
+|---|---|---|---|
+| 1999 | +6.7% | +12.9% | +4.9% |
+| 2018 | +0.7% | −8.5% | +12.0% |
+| 2000 | −5.8% | −5.4% | −25.9% |
+| 2017 | +3.2% | +4.2% | +5.3% |
