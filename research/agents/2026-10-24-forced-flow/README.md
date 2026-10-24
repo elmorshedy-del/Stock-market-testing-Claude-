@@ -8,7 +8,14 @@
 * spy-channel (S&P gamma rungs, VIX × gamma);
 * the failures of shape, macro and candle-model forecasts (2026-10-24 analogs, Kronos).
 
-**Verdict:** (after the run)
+**Verdict: one law survived three rounds of attack. Forced moves fade; unforced moves stick.**
+* **Single names (TSLA, MSFT, NVDA, SPY, QQQ, MU; 2020–2026):**
+  * a move made on a day when dealers are short gamma is given back over the next two weeks (−18% of the move by day 10);
+  * a move made when dealers are long gamma persists (+8%).
+  * The day-10 gap is −26 points (p 0.002). It is not volatility (p 0.0005 with volatility held fixed), and it holds in both halves of the period and in 5 of 6 tickers.
+* **The same fingerprint from a different forced actor:** S&P moves made on calendar forced-flow days are given back more over the next 5 sessions than other days' moves (−35% vs −9%, p 0.026; 1990–2026). Month-end gives back −36%, Russell reconstitution −70% (n 37), quad witching −4%.
+* **What died:** the naive dealer sign flip, last-half-hour momentum, the expiry-release size law, volatility-target window drop-out as a mechanism, and leverage as fuel for selloffs.
+* **The original theory predicted the wrong sign for A1.** The law that survived came from diagnosing that failure, and it was then confirmed on fresh splits and a different actor.
 
 ## The theory
 * **Discretionary flow is arbitraged away;** forced flow is not.
@@ -188,3 +195,33 @@ Each result gets a diagnosis: era and ticker splits, alternative explanations, a
 * **Model:** c5 (next-5-day return ÷ the 20-day standard deviation) = a + b·x + d·x·F + e·F. x is the day's z-return and F = 1 on a forced-flow day.
 * **Pass:** d < 0 with a 20-day block bootstrap p < 0.05.
 * **Also reported:** each day type separately, and c10.
+
+
+## Round 3 results (`round3.py`; `out/r3a.json`, `out/r3b.json`, figure `out/forced_flow.png`)
+![forced flow](out/forced_flow.png)
+
+**R3a. Robustness in single names: all three checks pass.**
+
+| Check | Result |
+|---|---|
+| b2 in 2020–2022 | +0.122, p 0.022 |
+| b2 in 2023–2026 | +0.088, p 0.029 |
+| Per ticker | TSLA +0.18, MSFT +0.02, NVDA +0.19, SPY +0.14, QQQ +0.22, MU −0.05: 5 of 6 positive |
+| Day-10 cumulative gap (low − high gamma) | −0.26 (95% −0.40 to −0.10), p 0.0015 |
+
+**R3b. Generalization to calendar forced-flow days (S&P 1990–2026, 9,254 days, 609 forced days): pass.**
+* **The model's interaction term (move × forced day):** d = −0.26, p 0.026, for the next 5 days; −0.31 for the next 10 days.
+* **Share of the day's move given back over the next 5 sessions:** other days −9%; forced days −35%.
+* **By type, for the next 5 / 10 days:**
+  * month end (441 days): d −0.27 / −0.21;
+  * Russell reconstitution (37 days): −0.61 / −0.80;
+  * quad witching (147 days): +0.05 / −0.20.
+
+## What it means
+* **The law:** price impact from flow that carries no information is temporary. Dealer short-gamma chasing and calendar rebalancing are two independent examples. The size of the eventual give-back is a measure of how forced the move was.
+* **Practical reading:**
+  * **A single-name move made under low dealer gamma, for example a squeeze rally while dealers are short gamma, tends to be partly given back over two weeks.** The gap is concentrated on up days.
+  * A move made under high gamma tends to stick.
+  * **A large S&P move on a month-end or reconstitution day tends to be partly given back the following week.**
+* **TSLA, Oct 19–21 (+9%):** the gamma percentile on the three rally days was 55th, 72nd and 91st. All three are in the high-gamma half, where moves have stuck. Thursday's −3.1% (70th) is in the same group.
+* **Open question:** the full setup (closes below the flip while freed, then up-bursts) is about down moves. In the pooled names, down-day reversal did not depend on gamma. So this law does not explain the setup's edge; the "freed" variable may be what does. That is a candidate for the next round.
