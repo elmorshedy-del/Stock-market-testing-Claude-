@@ -231,3 +231,51 @@ Unemployment is not included: FRED and the BLS API are unreachable from this env
 **Prediction (written before the run):**
 * Multi-year shape mirrors will also fail the walk-forward. A 4-year path is mostly trend, and trend is not predictive.
 * The age table will be mixed, with notable breaks after age 4 (1946, 1962, 1987) and continuations (1953, 1986 into 1987, 2013).
+
+## Amendment 3 results (`multiyear.py`; `out/multiyear.json`, `out/bulls.csv`, `out/multiyear.png`)
+![multiyear](out/multiyear.png)
+
+**Run:** `python multiyear.py <GSPC_max.json>`.
+
+**Implementation notes (decided before looking at results):**
+* **Bull markets:** the standard 20% zigzag on closes (a bear is −20% from the running peak; a bull is confirmed at +20% from the trough). The record-close wording in the plan cannot separate the 1930s–40s cycles, which never regained the 1929 record until 1954.
+* **Ages and horizons** are in calendar time, because of Saturday sessions before 1952.
+* **The walk-forward** applies the same no-overlap rule as the current window.
+
+### 3a. Multi-year shape mirrors: every variant fails
+| Window | Now | Closest past windows (shape and size) | Their next 12 months | Walk-forward next 12m: correlation (p); right sign vs naive |
+|---|---|---|---|---|
+| 24 months | +34% | 2016–18, 1960–62, 1963–65, 2012–14, 2013–15 | +11, +7, +4, +12, −0% | +0.00 (0.50); 52% vs 79% |
+| 36 months | +82% | **1997–2000**, 1942–45, 1949–52, 2009–12, 2011–14 | −14, +24, −3, +11, −3% | −0.03 (0.59); 65% vs 79% |
+| **48 months (primary)** | **+97%** | 1949–53, 2011–15, 1942–46, **1994–98**, **1996–2000** | +15, +13, −11, +17, −13% | **−0.05 (0.66); 69% vs 79%** |
+| 60 months | +66% | 1948–53, 1941–46, 1981–86, 2015–20, 1947–52 | +19, −11, +25, +29, +4% | −0.12 (0.83); 66% vs 79% |
+
+* **Shape only (correlation),** the 3- and 4-year mirrors are mostly the late 1990s: 1995–98, 1996–2000, 1997–2000, 1994–98.
+* **1-month outcomes** fail at every window length too (correlation −0.27 to +0.01).
+
+### 3b. Bull-market age (descriptive)
+* **This bull:** began at the Oct 12, 2022 close (3,577). At 48.4 months it is up 113%, with a worst drawdown of −18.9% (April 2025).
+* **9 past bulls reached the same age without a new bear:**
+
+| Bull from | Gain at month 48 | Worst drawdown so far | Next 12 months |
+|---|---|---|---|
+| Apr 1942 | +147% | −13% | **−20.7%** (1946 bear) |
+| Aug 1982 | +142% | −14% | +35.9% (then the Oct 1987 crash) |
+| Mar 2009 | +130% | −19% | +20.1% |
+| Jun 1949 | +78% | −14% | +21.5% |
+| Oct 1957 | +77% | −14% | **−16.4%** (1962 bear) |
+| Dec 1987 | +72% | −20% | +12.2% |
+| Jun 1962 | +67% | −11% | +4.9% (through the 1966 bear) |
+| Oct 1974 | +65% | −19% | +0.6% |
+| Jul 2002 | +61% | −19% | +11.9% |
+
+* **The three with the most similar gain** (1942, 1982, 2009) went −21%, +36% and +20%.
+* **Across all 1,021 bull-market months, age says nothing about the next 12 months:**
+  * correlation +0.01 with age, −0.02 with the gain so far;
+  * the next-12-month mean is +8.7% before month 24, +5.6% from months 24 to 48, and +8.3% after month 48 (up 70% of the time).
+
+### Reading
+* **No window length helps:** 1-, 2-, 3-, 4- or 5-year mirrors give no forecast.
+* **Old bulls are not weaker bulls.** Age and the size of the run carry no information about the next year.
+* **The rhyme does recur across three independent lenses: the late 1990s** (1995–2000 by multi-year shape; 1999 by macro backdrop). That identity is stable.
+* **But the 1990s mirror itself splits by which year you line up with:** 1998 went on +17% and 2000 went −13%.

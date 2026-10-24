@@ -1,0 +1,447 @@
+{
+ "now": "2026-10-31",
+ "3a shape mirrors": {
+  "W=24": {
+   "rmse mirrors": [
+    {
+     "window": "2016-04 to 2018-04",
+     "rmse": 0.03198200403036286,
+     "window gain %": 28.2162391043694,
+     "next 1m %": 2.1608341854583593,
+     "next 3m %": 6.353353869154672,
+     "next 12m %": 11.245256842054596
+    },
+    {
+     "window": "1960-04 to 1962-04",
+     "rmse": 0.03409963211418922,
+     "window gain %": 19.992641429886348,
+     "next 1m %": -8.599014376684664,
+     "next 3m %": -10.744939532602519,
+     "next 12m %": 6.989585127685308
+    },
+    {
+     "window": "1963-03 to 1965-03",
+     "rmse": 0.03989608499199478,
+     "window gain %": 29.427676216150424,
+     "next 1m %": 3.423858893752,
+     "next 3m %": -2.3676889842386397,
+     "next 12m %": 3.5631378416181456
+    },
+    {
+     "window": "2012-01 to 2014-01",
+     "rmse": 0.040330515647861866,
+     "window gain %": 35.82568857258918,
+     "next 1m %": 4.31170301781608,
+     "next 3m %": 5.686107702559539,
+     "next 12m %": 11.915248514052902
+    },
+    {
+     "window": "2013-03 to 2015-03",
+     "rmse": 0.043035981869399886,
+     "window gain %": 31.780725711570547,
+     "next 1m %": 0.8520819822534683,
+     "next 3m %": -0.2311431171168719,
+     "next 12m %": -0.39411684214911313
+    }
+   ],
+   "corr mirrors": [
+    "1994-06 to 1996-06",
+    "1950-01 to 1952-01",
+    "2016-04 to 2018-04",
+    "2012-05 to 2014-05",
+    "1953-05 to 1955-05"
+   ],
+   "current window gain %": 33.6210099957535
+  },
+  "W=36": {
+   "rmse mirrors": [
+    {
+     "window": "1997-04 to 2000-04",
+     "rmse": 0.04795986080333478,
+     "window gain %": 81.25015661708619,
+     "next 1m %": -2.191505060341788,
+     "next 3m %": -1.487169561182104,
+     "next 12m %": -13.974517551110424
+    },
+    {
+     "window": "1942-06 to 1945-06",
+     "rmse": 0.05571563384900308,
+     "window gain %": 79.15662101018007,
+     "next 1m %": -1.412239675609647,
+     "next 3m %": 7.935436184148294,
+     "next 12m %": 23.940823449998625
+    },
+    {
+     "window": "1949-06 to 1952-06",
+     "rmse": 0.06027005197675895,
+     "window gain %": 76.27118187458431,
+     "next 1m %": 1.7628227171343598,
+     "next 3m %": -1.6826850334565557,
+     "next 12m %": -3.2852553080994857
+    },
+    {
+     "window": "2009-03 to 2012-03",
+     "rmse": 0.06639902832664132,
+     "window gain %": 76.52875522612611,
+     "next 1m %": -0.7497452372495614,
+     "next 3m %": -3.287960516497103,
+     "next 12m %": 11.41096182710183
+    },
+    {
+     "window": "2011-09 to 2014-09",
+     "rmse": 0.06641101134755147,
+     "window gain %": 74.31987789300929,
+     "next 1m %": 2.3201460667203246,
+     "next 3m %": 4.391335025066547,
+     "next 12m %": -2.6497121990468773
+    }
+   ],
+   "corr mirrors": [
+    "1997-03 to 2000-03",
+    "1995-01 to 1998-01",
+    "1990-12 to 1993-12",
+    "1984-05 to 1987-05",
+    "1953-08 to 1956-08"
+   ],
+   "current window gain %": 81.7845517389768
+  },
+  "W=48": {
+   "rmse mirrors": [
+    {
+     "window": "1949-04 to 1953-04",
+     "rmse": 0.06272352699931702,
+     "window gain %": 67.36914191289696,
+     "next 1m %": -0.324938752961246,
+     "next 3m %": 0.5280225683804336,
+     "next 12m %": 14.784724880463388
+    },
+    {
+     "window": "2011-09 to 2015-09",
+     "rmse": 0.07270053188955321,
+     "window gain %": 69.7009028231146,
+     "next 1m %": 8.298311781266712,
+     "next 3m %": 6.453540320655911,
+     "next 12m %": 12.928963945698454
+    },
+    {
+     "window": "1942-02 to 1946-02",
+     "rmse": 0.07387595828965983,
+     "window gain %": 101.16414877407887,
+     "next 1m %": 4.398149297929067,
+     "next 3m %": 10.995367725874312,
+     "next 12m %": -10.706020300678908
+    },
+    {
+     "window": "1994-03 to 1998-03",
+     "rmse": 0.07997427692721608,
+     "window gain %": 147.15661151567764,
+     "next 1m %": 0.9076469253460305,
+     "next 3m %": 2.9126358811265947,
+     "next 12m %": 16.75697709255158
+    },
+    {
+     "window": "1996-11 to 2000-11",
+     "rmse": 0.08384852589225769,
+     "window gain %": 73.70081599507728,
+     "next 1m %": 0.40534456237292255,
+     "next 3m %": -5.704400361304751,
+     "next 12m %": -13.346515572215933
+    }
+   ],
+   "corr mirrors": [
+    "1996-03 to 2000-03",
+    "1948-12 to 1952-12",
+    "1994-07 to 1998-07",
+    "2011-07 to 2015-07",
+    "2015-10 to 2019-10"
+   ],
+   "current window gain %": 96.89358452876911
+  },
+  "W=60": {
+   "rmse mirrors": [
+    {
+     "window": "1948-05 to 1953-05",
+     "rmse": 0.07007673973102024,
+     "window gain %": 47.034152967526964,
+     "next 1m %": -1.6299980071549665,
+     "next 3m %": -4.97147993149089,
+     "next 12m %": 18.948652995314465
+    },
+    {
+     "window": "1941-02 to 1946-02",
+     "rmse": 0.07546364973571125,
+     "window gain %": 74.19355396921749,
+     "next 1m %": 4.398149297929067,
+     "next 3m %": 10.995367725874312,
+     "next 12m %": -10.706020300678908
+    },
+    {
+     "window": "1981-02 to 1986-02",
+     "rmse": 0.08754585451214353,
+     "window gain %": 72.86508020366598,
+     "next 1m %": 5.279391778691884,
+     "next 3m %": 9.003176493664398,
+     "next 12m %": 25.242382557856434
+    },
+    {
+     "window": "2015-02 to 2020-02",
+     "rmse": 0.09810749871475379,
+     "window gain %": 40.37633502984673,
+     "next 1m %": -12.511928240892809,
+     "next 3m %": 3.049538923439855,
+     "next 12m %": 29.006977819484053
+    },
+    {
+     "window": "1947-03 to 1952-03",
+     "rmse": 0.10066105334819225,
+     "window gain %": 60.64601658978388,
+     "next 1m %": -4.308580665778113,
+     "next 3m %": 2.4210021539655515,
+     "next 12m %": 3.775133543749556
+    }
+   ],
+   "corr mirrors": [
+    "1993-07 to 1998-07",
+    "1948-03 to 1953-03",
+    "2014-10 to 2019-10",
+    "1941-05 to 1946-05",
+    "2010-12 to 2015-12"
+   ],
+   "current window gain %": 65.53857379351471
+  }
+ },
+ "3a walk-forward": {
+  "W=24, next 12m": {
+   "test dates": 71,
+   "corr(pred, actual)": 0.0008252040657220544,
+   "p (permutation)": 0.504,
+   "hit rate mirror": 0.5211267605633803,
+   "hit rate naive": 0.7887323943661971,
+   "verdict": "fail"
+  },
+  "W=24, next 1m": {
+   "test dates": 71,
+   "corr(pred, actual)": 0.009024679721798734,
+   "p (permutation)": 0.459,
+   "hit rate mirror": 0.5915492957746479,
+   "hit rate naive": 0.704225352112676,
+   "verdict": "fail"
+  },
+  "W=24, next 12m, corr metric": {
+   "test dates": 71,
+   "corr(pred, actual)": 0.09317040071321198,
+   "p (permutation)": 0.225,
+   "hit rate mirror": 0.7183098591549296,
+   "hit rate naive": 0.7887323943661971,
+   "verdict": "fail"
+  },
+  "W=36, next 12m": {
+   "test dates": 71,
+   "corr(pred, actual)": -0.02757489893735409,
+   "p (permutation)": 0.5918,
+   "hit rate mirror": 0.647887323943662,
+   "hit rate naive": 0.7887323943661971,
+   "verdict": "fail"
+  },
+  "W=36, next 1m": {
+   "test dates": 71,
+   "corr(pred, actual)": -0.011263819239082578,
+   "p (permutation)": 0.5308,
+   "hit rate mirror": 0.5633802816901409,
+   "hit rate naive": 0.704225352112676,
+   "verdict": "fail"
+  },
+  "W=36, next 12m, corr metric": {
+   "test dates": 71,
+   "corr(pred, actual)": 0.10990900448794187,
+   "p (permutation)": 0.181,
+   "hit rate mirror": 0.5774647887323944,
+   "hit rate naive": 0.7887323943661971,
+   "verdict": "fail"
+  },
+  "W=48, next 12m (primary)": {
+   "test dates": 71,
+   "corr(pred, actual)": -0.05032472597945795,
+   "p (permutation)": 0.66,
+   "hit rate mirror": 0.6901408450704225,
+   "hit rate naive": 0.7887323943661971,
+   "verdict": "fail"
+  },
+  "W=48, next 1m": {
+   "test dates": 71,
+   "corr(pred, actual)": -0.17474726449081723,
+   "p (permutation)": 0.9322,
+   "hit rate mirror": 0.4788732394366197,
+   "hit rate naive": 0.704225352112676,
+   "verdict": "fail"
+  },
+  "W=48, next 12m, corr metric": {
+   "test dates": 71,
+   "corr(pred, actual)": -0.028239222795175194,
+   "p (permutation)": 0.5918,
+   "hit rate mirror": 0.5492957746478874,
+   "hit rate naive": 0.7887323943661971,
+   "verdict": "fail"
+  },
+  "W=60, next 12m": {
+   "test dates": 71,
+   "corr(pred, actual)": -0.11582924109588967,
+   "p (permutation)": 0.8326,
+   "hit rate mirror": 0.6619718309859155,
+   "hit rate naive": 0.7887323943661971,
+   "verdict": "fail"
+  },
+  "W=60, next 1m": {
+   "test dates": 71,
+   "corr(pred, actual)": -0.2668890774613845,
+   "p (permutation)": 0.988,
+   "hit rate mirror": 0.4788732394366197,
+   "hit rate naive": 0.704225352112676,
+   "verdict": "fail"
+  },
+  "W=60, next 12m, corr metric": {
+   "test dates": 71,
+   "corr(pred, actual)": -0.0013399690508803235,
+   "p (permutation)": 0.494,
+   "hit rate mirror": 0.5492957746478874,
+   "hit rate naive": 0.7887323943661971,
+   "verdict": "fail"
+  }
+ },
+ "3b bull age": {
+  "current bull low": "2022-10-12",
+  "current low close": 3577.030029296875,
+  "age (months)": 48.35742444152431,
+  "gain %": 113.12877200753641,
+  "worst drawdown so far %": -18.902206184284008,
+  "past bulls reaching this age alive": [
+   {
+    "low date": "1942-04-28",
+    "low": 7.47,
+    "age date": "1946-05-09",
+    "alive at age": true,
+    "gain at age %": 146.85,
+    "worst drawdown so far %": -13.05,
+    "next 1m %": 2.22,
+    "next 3m %": -2.11,
+    "next 12m %": -20.66
+   },
+   {
+    "low date": "1949-06-13",
+    "low": 13.55,
+    "age date": "1953-06-24",
+    "alive at age": true,
+    "gain at age %": 77.79,
+    "worst drawdown so far %": -14.02,
+    "next 1m %": 0.58,
+    "next 3m %": -3.53,
+    "next 12m %": 21.46
+   },
+   {
+    "low date": "1957-10-22",
+    "low": 38.98,
+    "age date": "1961-11-02",
+    "alive at age": true,
+    "gain at age %": 77.3,
+    "worst drawdown so far %": -14.02,
+    "next 1m %": 4.2,
+    "next 3m %": 1.01,
+    "next 12m %": -16.44
+   },
+   {
+    "low date": "1962-06-26",
+    "low": 52.32,
+    "age date": "1966-07-07",
+    "alive at age": true,
+    "gain at age %": 67.01,
+    "worst drawdown so far %": -11.09,
+    "next 1m %": -4.15,
+    "next 3m %": -16.23,
+    "next 12m %": 4.93
+   },
+   {
+    "low date": "1974-10-03",
+    "low": 62.28,
+    "age date": "1978-10-16",
+    "alive at age": true,
+    "gain at age %": 64.76,
+    "worst drawdown so far %": -19.41,
+    "next 1m %": -8.67,
+    "next 3m %": -3.07,
+    "next 12m %": 0.57
+   },
+   {
+    "low date": "1982-08-12",
+    "low": 102.42,
+    "age date": "1986-08-25",
+    "alive at age": true,
+    "gain at age %": 141.95,
+    "worst drawdown so far %": -14.38,
+    "next 1m %": -6.45,
+    "next 3m %": 0.15,
+    "next 12m %": 35.9
+   },
+   {
+    "low date": "1987-12-04",
+    "low": 223.92,
+    "age date": "1991-12-16",
+    "alive at age": true,
+    "gain at age %": 71.7,
+    "worst drawdown so far %": -19.92,
+    "next 1m %": 8.78,
+    "next 3m %": 5.7,
+    "next 12m %": 12.24
+   },
+   {
+    "low date": "2002-07-23",
+    "low": 797.7,
+    "age date": "2006-08-03",
+    "alive at age": true,
+    "gain at age %": 60.5,
+    "worst drawdown so far %": -19.31,
+    "next 1m %": 2.58,
+    "next 3m %": 6.56,
+    "next 12m %": 11.93
+   },
+   {
+    "low date": "2009-03-09",
+    "low": 676.53,
+    "age date": "2013-03-20",
+    "alive at age": true,
+    "gain at age %": 130.4,
+    "worst drawdown so far %": -19.39,
+    "next 1m %": 0.24,
+    "next 3m %": 1.89,
+    "next 12m %": 20.1
+   }
+  ],
+  "past bulls that died earlier": [
+   "1929-11-13",
+   "1930-12-16",
+   "1931-06-02",
+   "1931-10-05",
+   "1932-06-01",
+   "1933-02-27",
+   "1933-10-19",
+   "1935-03-14",
+   "1938-03-31",
+   "1939-04-11",
+   "1940-06-10",
+   "1947-05-19",
+   "1966-10-07",
+   "1970-05-26",
+   "2001-09-21",
+   "2008-11-20",
+   "2020-03-23"
+  ],
+  "age vs next 12 months (all bull months)": {
+   "months": 1021,
+   "corr(age, next 12m)": 0.008875445602163018,
+   "corr(gain so far, next 12m)": -0.02019185491256705,
+   "next 12m mean %, age < 24m": 8.730121581992481,
+   "next 12m mean %, age 24-48m": 5.589392517334495,
+   "next 12m mean %, age >= 48m": 8.27090713925036,
+   "share up, age >= 48m": 0.7020648967551623
+  }
+ }
+}
