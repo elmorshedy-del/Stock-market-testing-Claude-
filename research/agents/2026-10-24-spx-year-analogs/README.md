@@ -171,7 +171,7 @@ Unemployment is not included: FRED and the BLS API are unreachable from this env
 * CPI +3.3%;
 * 10-year 4.99%;
 * curve +0.9;
-* CAPE 40.4, the 2nd highest September reading since 1982 after 1999 (41.3) and above 2000's 41.9 only if October holds;
+* CAPE 40.4, the 3rd highest September reading since 1982, after 2000 (41.9) and 1999 (41.3);
 * S&P +11.8% from January to September.
 
 **Nearest years, primary features (1982–2025):**
