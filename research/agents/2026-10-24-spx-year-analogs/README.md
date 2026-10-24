@@ -202,3 +202,32 @@ Unemployment is not included: FRED and the BLS API are unreachable from this env
 * **The closest historical macro twin of 2026 is 1999:** a Fed easing into a market valued near record CAPE, with a 10-year near 5–6% and a positive curve. The macro study of 2026-10-15 reached the same rhyme from different variables.
 * **1999's next 12 months were +4.9%,** and the bear market began the year after. 2018 shows the other path from a similar backdrop: flat into November, then −8.5% by year end.
 * **No macro twin has predicted the following month or year in 33–88 out-of-sample years.** The backdrop describes where the market stands; it has not said what comes next.
+
+## Amendment 3 (owner's follow-up: maybe the mirrors span several years). Pre-registered before any multi-year analog was computed.
+**Idea:** the year-shape analogs cut history at calendar years. A mirror may instead be a multi-year stretch, for example the run since the 2022 bear-market low.
+
+### 3a. Multi-year shape mirrors
+* **Data:** ^GSPC month-end closes from 1928 to the 2026-10-23 close (used as October's).
+* **Current windows:** the last W months, for W = 24, 36, **48 (primary)** and 60.
+* **Candidates:** every window of W months ending at a past month-end t. It must not overlap the current window, and its 12-month outcome must be known.
+* **Similarity:**
+  * **primary:** RMSE between the two log-price paths, each re-based to 0 at its start (shape **and** size);
+  * **secondary:** the correlation of the paths (shape only).
+* **Mirrors:** the 5 best, each ending at least 12 months apart from the others, so one episode cannot fill the list.
+* **Outcomes:** the next 1, 3 and 12 months after the window ends.
+* **Walk-forward skill test:**
+  * test dates: every October-end from 1955 to 2024 (70 dates); the 1-month outcome is also scored for Oct 2025;
+  * mirrors chosen only from windows ending 12+ months before the test date;
+  * prediction = the mirrors' mean outcome; naive = the mean over all eligible windows.
+* **Pass (primary W = 48, 12-month outcome):** correlation > 0 with permutation p < 0.05 (5,000 draws) **and** a sign hit rate above naive.
+* **Also reported:** all W, the 1-month outcome, and the correlation metric.
+
+### 3b. Bull-market age mirrors (descriptive)
+* **Bear market:** a close at least 20% below the prior record close. The bull starts at the lowest close of that bear.
+* **This bull:** began at the Oct 12, 2022 close (3,577.03) and is about 48 months old. The 2025 drop was −18.9% on closes, so the bull is still alive by this rule.
+* **For every past bull that reached the same age without a new bear:** the gain from the low at that age, the worst drawdown so far, and the next 1, 3 and 12 months.
+* **Across all months of all bulls:** the correlation of bull age with the next-12-month return, as a check on whether old bulls do worse.
+
+**Prediction (written before the run):**
+* Multi-year shape mirrors will also fail the walk-forward. A 4-year path is mostly trend, and trend is not predictive.
+* The age table will be mixed, with notable breaks after age 4 (1946, 1962, 1987) and continuations (1953, 1986 into 1987, 2013).
