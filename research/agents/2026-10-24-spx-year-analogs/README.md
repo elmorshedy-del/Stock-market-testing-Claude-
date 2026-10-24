@@ -160,3 +160,45 @@ Unemployment is not included: FRED and the BLS API are unreachable from this env
 * The valuation backdrop (CAPE about 40) will pull the analogs toward 1998–2000 and 2021.
 * 12-month outcomes after those years were mixed: 1999 up, 2000 and 2021 followed by bear markets.
 * The walk-forward has low power (35 test years) and is expected to fail.
+
+## Amendment 2 results (`macro_analogs.py`; `out/macro.json`, `out/macro_features.csv`, `out/macro.png`)
+![macro](out/macro.png)
+
+**Run:** `python macro_analogs.py <GSPC_max.json> <cape_monthly.csv> <shiller.csv>`.
+
+**September 2026:**
+* fed funds 3.75% and 0.47 points lower than a year earlier (easing);
+* CPI +3.3%;
+* 10-year 4.99%;
+* curve +0.9;
+* CAPE 40.4, the 2nd highest September reading since 1982 after 1999 (41.3) and above 2000's 41.9 only if October holds;
+* S&P +11.8% from January to September.
+
+**Nearest years, primary features (1982–2025):**
+
+| Year | Distance | Fed funds (12m change) | CPI | 10y | Curve | CAPE | Jan–Sep | To end of Nov | To year end | Next 12 months |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 2025 | 0.89 | 4.22 (−0.91) | 2.9 | 4.12 | 0.05 | 38.6 | +13.7% | +1.6% | +1.6% | +11.5% (to Oct 23, 2026) |
+| **1999** | 1.06 | 5.22 (−0.29) | 2.2 | 5.92 | 1.10 | 41.3 | +4.4% | +6.7% | +12.9% | +4.9% |
+| 2018 (midterm) | 1.55 | 1.95 (+0.80) | 2.7 | 3.00 | 0.83 | 32.6 | +9.0% | +0.7% | **−8.5%** | +12.0% |
+| 1998 (midterm) | 1.71 | 5.51 (−0.03) | 1.6 | 4.81 | 0.07 | 33.5 | +4.8% | +8.7% | +14.8% | +24.1% |
+| 1997 | 1.85 | 5.54 (+0.24) | 2.2 | 6.21 | 1.13 | 32.7 | +27.9% | +0.5% | +2.1% | +20.1% |
+
+* **Ranks 6–10:** 2007, 2000, 1996, 2024, 2021.
+* **Long history (1900–2025; CAPE, 10y, CPI, 10y change, Jan–Sep):** 2025, 1999, 2018, 2023, 2000. The fifth, 2000, was followed by −25.9% over the next 12 months.
+
+**Skill test (pre-registered, walk-forward): every variant fails.**
+
+| Variant | Test years | Correlation (p) | Right sign vs naive |
+|---|---|---|---|
+| primary, next 12 months | 33 (1993–2025) | **−0.45** (0.997) | 76% vs 88% |
+| primary, to end of Nov | 34 | −0.24 (0.91) | 79% vs 76% |
+| long history, next 12 months | 87 (1939–2025) | −0.11 (0.84) | 63% vs 78% |
+| long history, to end of Nov | 88 | −0.02 (0.56) | 49% vs 57% |
+
+* If anything, the 12-month result runs backwards: years whose macro twins did well tended to do worse. That fits valuations mean-reverting across regimes, but it was not the tested direction.
+
+**Reading:**
+* **The closest historical macro twin of 2026 is 1999:** a Fed easing into a market valued near record CAPE, with a 10-year near 5–6% and a positive curve. The macro study of 2026-10-15 reached the same rhyme from different variables.
+* **1999's next 12 months were +4.9%,** and the bear market began the year after. 2018 shows the other path from a similar backdrop: flat into November, then −8.5% by year end.
+* **No macro twin has predicted the following month or year in 33–88 out-of-sample years.** The backdrop describes where the market stands; it has not said what comes next.

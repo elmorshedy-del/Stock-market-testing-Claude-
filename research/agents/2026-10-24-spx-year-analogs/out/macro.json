@@ -1,0 +1,196 @@
+{
+ "2026": {
+  "fed funds": 3.75,
+  "fed funds 12m change": -0.46999999999999975,
+  "CPI yoy": 3.3401,
+  "10y yield": 4.99,
+  "curve 10y-3m": 0.9000000000000004,
+  "CAPE": 40.42,
+  "S&P Jan-Sep %": 11.774743102220441,
+  "10y 12m change": 0.8700000000000001
+ },
+ "primary nearest (1982-2025)": {
+  "2025": {
+   "distance": 0.8859422691184566,
+   "fed funds": 4.22,
+   "fed funds 12m change": -0.9100000000000001,
+   "CPI yoy": 2.8745,
+   "10y yield": 4.12,
+   "curve 10y-3m": 0.04999999999999982,
+   "CAPE": 38.59,
+   "S&P Jan-Sep %": 13.717797518724307,
+   "to end of Nov %": 1.6420700237132158,
+   "to year end %": 1.5887959160381993,
+   "next 12 months %": 11.45405043854797,
+   "midterm": false
+  },
+  "1999": {
+   "distance": 1.057590068592702,
+   "fed funds": 5.22,
+   "fed funds 12m change": -0.29000000000000004,
+   "CPI yoy": 2.2391,
+   "10y yield": 5.92,
+   "curve 10y-3m": 1.0999999999999996,
+   "CAPE": 41.32,
+   "S&P Jan-Sep %": 4.3506895632627,
+   "to end of Nov %": 6.70379964882688,
+   "to year end %": 12.87596300406344,
+   "next 12 months %": 4.876990607268716,
+   "midterm": false
+  },
+  "2018": {
+   "distance": 1.5546543656710308,
+   "fed funds": 1.95,
+   "fed funds 12m change": 0.8,
+   "CPI yoy": 2.6634,
+   "10y yield": 3.0,
+   "curve 10y-3m": 0.8300000000000001,
+   "CAPE": 32.62,
+   "S&P Jan-Sep %": 8.990460964357293,
+   "to end of Nov %": 0.7107692181609782,
+   "to year end %": -8.532152441513198,
+   "next 12 months %": 12.015166259771615,
+   "midterm": true
+  },
+  "1998": {
+   "distance": 1.7109917867006639,
+   "fed funds": 5.51,
+   "fed funds 12m change": -0.03000000000000025,
+   "CPI yoy": 1.604,
+   "10y yield": 4.81,
+   "curve 10y-3m": 0.0699999999999994,
+   "CAPE": 33.53,
+   "S&P Jan-Sep %": 4.799935847140091,
+   "to end of Nov %": 8.682409810864966,
+   "to year end %": 14.809411865037326,
+   "next 12 months %": 24.05271821343833,
+   "midterm": true
+  },
+  "1997": {
+   "distance": 1.854849817224287,
+   "fed funds": 5.54,
+   "fed funds 12m change": 0.2400000000000002,
+   "CPI yoy": 2.2007,
+   "10y yield": 6.21,
+   "curve 10y-3m": 1.13,
+   "CAPE": 32.66,
+   "S&P Jan-Sep %": 27.88293352396829,
+   "to end of Nov %": 0.4954319452777245,
+   "to year end %": 2.076385591905039,
+   "next 12 months %": 20.123116683507792,
+   "midterm": false
+  }
+ },
+ "secondary nearest (1900-2025)": {
+  "2025": {
+   "distance": 0.6410689432278891,
+   "CAPE": 38.59,
+   "10y yield": 4.12,
+   "CPI yoy": 2.8745,
+   "10y 12m change": 0.3999999999999999,
+   "S&P Jan-Sep %": 13.717797518724307,
+   "to end of Nov %": 1.6420700237132158,
+   "to year end %": 1.5887959160381993,
+   "next 12 months %": 11.45405043854797,
+   "midterm": false
+  },
+  "1999": {
+   "distance": 0.7081395032451927,
+   "CAPE": 41.32,
+   "10y yield": 5.92,
+   "CPI yoy": 2.2391,
+   "10y 12m change": 1.1100000000000003,
+   "S&P Jan-Sep %": 4.3506895632627,
+   "to end of Nov %": 6.70379964882688,
+   "to year end %": 12.87596300406344,
+   "next 12 months %": 4.876990607268716,
+   "midterm": false
+  },
+  "2018": {
+   "distance": 1.2193332389831681,
+   "CAPE": 32.62,
+   "10y yield": 3.0,
+   "CPI yoy": 2.6634,
+   "10y 12m change": 0.7999999999999998,
+   "S&P Jan-Sep %": 8.990460964357293,
+   "to end of Nov %": 0.7107692181609782,
+   "to year end %": -8.532152441513198,
+   "next 12 months %": 12.015166259771615,
+   "midterm": true
+  },
+  "2023": {
+   "distance": 1.3322735351821735,
+   "CAPE": 29.8,
+   "10y yield": 4.38,
+   "CPI yoy": 3.5995,
+   "10y 12m change": 0.8599999999999999,
+   "S&P Jan-Sep %": 11.682505656661025,
+   "to end of Nov %": 8.317676910247652,
+   "to year end %": 13.108484480630933,
+   "next 12 months %": 36.04488676200985,
+   "midterm": false
+  },
+  "2000": {
+   "distance": 1.4163613560373005,
+   "CAPE": 41.89,
+   "10y yield": 5.8,
+   "CPI yoy": 3.3542,
+   "10y 12m change": -0.1200000000000001,
+   "S&P Jan-Sep %": -2.2283471318274684,
+   "to end of Nov %": -5.791032714927025,
+   "to year end %": -5.409161788769334,
+   "next 12 months %": -25.858401343507854,
+   "midterm": false
+  }
+ },
+ "primary distance ranking": {
+  "2025": 0.89,
+  "1999": 1.06,
+  "2018": 1.55,
+  "1998": 1.71,
+  "1997": 1.85,
+  "2007": 1.95,
+  "2000": 2.01,
+  "1996": 2.04,
+  "2024": 2.06,
+  "2021": 2.08
+ },
+ "walk-forward": {
+  "primary: next 12 months": {
+   "test years": 33,
+   "first": 1993,
+   "corr(pred, actual)": -0.45475379710356617,
+   "p (permutation)": 0.9972,
+   "hit rate analog": 0.7575757575757576,
+   "hit rate naive": 0.8787878787878788,
+   "verdict": "fail"
+  },
+  "primary: to end of Nov": {
+   "test years": 34,
+   "first": 1992,
+   "corr(pred, actual)": -0.2371273873923989,
+   "p (permutation)": 0.9144,
+   "hit rate analog": 0.7941176470588235,
+   "hit rate naive": 0.7647058823529411,
+   "verdict": "fail"
+  },
+  "secondary (1900+): next 12 months": {
+   "test years": 87,
+   "first": 1939,
+   "corr(pred, actual)": -0.11265118732289818,
+   "p (permutation)": 0.8394,
+   "hit rate analog": 0.632183908045977,
+   "hit rate naive": 0.7816091954022989,
+   "verdict": "fail"
+  },
+  "secondary (1900+): to end of Nov": {
+   "test years": 88,
+   "first": 1938,
+   "corr(pred, actual)": -0.0182302088396064,
+   "p (permutation)": 0.5622,
+   "hit rate analog": 0.48863636363636365,
+   "hit rate naive": 0.5681818181818182,
+   "verdict": "fail"
+  }
+ }
+}
