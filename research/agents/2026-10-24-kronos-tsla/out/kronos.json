@@ -190,5 +190,108 @@
    ],
    "paths": 8
   }
+ },
+ "amendment 1: Kronos-base on its 206 unseen origins": {
+  "origins": 206,
+  "hit rate": 0.6601941747572816,
+  "always-long hit rate": 0.46601941747572817,
+  "p hit (shift)": 0.005,
+  "corr": 0.16898174800411467,
+  "p corr (shift)": 0.0,
+  "share predicted down": 0.5436893203883495,
+  "mean predicted %": -7.890448632756438,
+  "realized when forecast in top half %": 0.40702825486806304,
+  "realized when forecast in bottom half %": -1.6355267541422098,
+  "verdict": "pass"
+ },
+ "base, all 258 origins (descriptive)": {
+  "origins": 258,
+  "direction 5d": {
+   "corr": 0.11154094029740769,
+   "p_shift": 0.004,
+   "hit rate": 0.6162790697674418,
+   "always-long hit rate": 0.4689922480620155,
+   "MAE kronos %": 14.169288285654499,
+   "MAE zero %": 4.4679786247620354,
+   "mean predicted %": -7.908500486188623
+  },
+  "direction 10d": {
+   "corr": 0.16628849022830045,
+   "p_shift": 0.0,
+   "hit rate": 0.6666666666666666,
+   "always-long hit rate": 0.46511627906976744,
+   "MAE kronos %": 16.885232366656673,
+   "MAE zero %": 5.744043812552376,
+   "mean predicted %": -8.126446707407748
+  },
+  "volatility 10d": {
+   "kronos": {
+    "corr": -0.029262644502123698,
+    "MAE %": 1.6025670232908469,
+    "mean %": 3.31380354960838
+   },
+   "last 22 days": {
+    "corr": 0.15790425936318336,
+    "MAE %": 0.5706739607220169,
+    "mean %": 2.2593317645935387
+   },
+   "1/5/22 blend": {
+    "corr": 0.025662467480785392,
+    "MAE %": 0.8180070395199643,
+    "mean %": 2.2324151947058795
+   },
+   "option IV": {
+    "corr": 0.1929479140360024,
+    "MAE %": 0.555912689569524,
+    "mean %": 2.3438600657565174
+   },
+   "realized mean %": 2.1817520164754867,
+   "kronos minus option IV corr": -0.24666479792497017,
+   "p (bootstrap, kronos not better)": 0.9335
+  },
+  "next-day range": {
+   "corr kronos": 0.12795844664948,
+   "corr last 22 days": 0.22095603172144465,
+   "mean predicted %": 8.09260686480975,
+   "mean realized %": 3.596068430454617
+  }
+ },
+ "post-hoc (not pre-registered): Kronos-base vs momentum / moving-average features": {
+  "origins": 258,
+  "partial corr after the 5 features": 0.05360490194902476,
+  "p (shift)": 0.44,
+  "corr(base forecast, past 5d return)": -0.146114783740263,
+  "corr(past 5d return, outcome)": -0.10158660585989589,
+  "corr(base forecast, past 10d return)": -0.21089028089290726,
+  "corr(past 10d return, outcome)": -0.13881982709687532,
+  "corr(base forecast, past 20d return)": -0.3639310207691971,
+  "corr(past 20d return, outcome)": -0.24097499699964742,
+  "corr(base forecast, close vs 20d average)": -0.28505422981623707,
+  "corr(close vs 20d average, outcome)": -0.2088124637879632,
+  "corr(base forecast, close vs 50d average)": -0.577297856822043,
+  "corr(close vs 50d average, outcome)": -0.24513808152139072,
+  "50d-average reversal rule hit rate": 0.5658914728682171,
+  "by quarter": {
+   "2025Q4": {
+    "n": 64,
+    "hit rate": 0.46875,
+    "corr": 0.5041537519003322
+   },
+   "2026Q1": {
+    "n": 61,
+    "hit rate": 0.819672131147541,
+    "corr": -0.08510169323711504
+   },
+   "2026Q2": {
+    "n": 62,
+    "hit rate": 0.7903225806451613,
+    "corr": 0.7065468726849994
+   },
+   "2026Q3": {
+    "n": 64,
+    "hit rate": 0.640625,
+    "corr": 0.6028237102276663
+   }
+  }
  }
 }

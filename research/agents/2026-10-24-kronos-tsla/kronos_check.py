@@ -16,7 +16,7 @@ MICRO = HERE.parents[1] / "microstructure"
 START, LAST, END = "2025-10-01", "2026-10-09", "2026-10-23"
 CTX, H, K, BATCH = 400, 10, 8, 16
 EVERY = {"small": 1, "base": 5}
-NAMES = {"small": "NeoQuasar/Kronos-small", "base": "NeoQuasar/Kronos-base"}
+NAMES = {"small": "NeoQuasar/Kronos-small", "base": "NeoQuasar/Kronos-base", "base_rest": "NeoQuasar/Kronos-base"}
 NSHIFT, MINSHIFT, NBOOT, BLOCK = 1000, 20, 2000, 20
 RNG = np.random.default_rng(20261024)
 COLS = ["open", "high", "low", "close", "volume"]
@@ -41,8 +41,12 @@ def forecast(repo, path, which):
     p = KronosPredictor(Kronos.from_pretrained(NAMES[which]), KronosTokenizer.from_pretrained("NeoQuasar/Kronos-Tokenizer-base"),
                         device="cpu", max_context=512)
     b = bars(path)
-    io = [i for i in range(CTX, len(b)) if pd.Timestamp(START) <= b.index[i] <= pd.Timestamp(LAST)][::EVERY[which]]
-    io.append(len(b) - 1)                                   # today's forecast (Oct 23 close), descriptive only
+    allo = [i for i in range(CTX, len(b)) if pd.Timestamp(START) <= b.index[i] <= pd.Timestamp(LAST)]
+    if which == "base_rest":                                # Amendment 1: the origins Kronos-base has not seen
+        io = [i for i in allo if i not in set(allo[::EVERY["base"]])]
+    else:
+        io = allo[::EVERY[which]]
+        io.append(len(b) - 1)                               # today's forecast (Oct 23 close), descriptive only
     jobs = [(i, k) for i in io for k in range(K)]
     rows = []
     for s in range(0, len(jobs), BATCH):
@@ -81,8 +85,8 @@ def block_boot_diff(a, b_, y):
     return float(np.mean(d)), float((d <= 0).mean())
 
 
-def score_model(which, b):
-    P = pd.read_csv(OUT / f"paths_{which}.csv.gz", parse_dates=["origin"])
+def score_model(which, b, P=None):
+    P = pd.read_csv(OUT / f"paths_{which}.csv.gz", parse_dates=["origin"]) if P is None else P
     P = P[P.origin <= LAST]
     c, lc = b.close, np.log(b.close)
     r = lc.diff().abs()
@@ -160,6 +164,11 @@ def figure(b, res, td):
     a.set_title(f"What Kronos forecasts from the Oct 23 close (${b.close.iloc[-1]:.2f}), {td['small']['paths']} sampled paths per model\n"
                 "Read it with the test on the right: a forecast is only as good as its record", loc="left", fontsize=9.5, color=INK)
     s = res["small"]
+    sb = res.get("base, all 258 origins (descriptive)")
+    bv = []
+    if sb:
+        bv = [sb["direction 10d"]["corr"], sb["direction 5d"]["corr"], sb["direction 10d"]["hit rate"] - sb["direction 10d"]["always-long hit rate"],
+              sb["volatility 10d"]["kronos"]["corr"], sb["next-day range"]["corr kronos"]]
     labels, kv, base = [], [], []
     for lab, k, bb in (("10-day direction\ncorrelation", s["direction 10d"]["corr"], 0.0),
                        ("5-day direction\ncorrelation", s["direction 5d"]["corr"], 0.0),
@@ -168,22 +177,81 @@ def figure(b, res, td):
                        ("next-day range: correlation\n(baseline = last 22 days)", s["next-day range"]["corr kronos"], s["next-day range"]["corr last 22 days"])):
         labels.append(lab), kv.append(k), base.append(bb)
     y = np.arange(len(labels))[::-1]
-    z.barh(y + 0.18, kv, height=0.34, color=BLUE, label="Kronos-small")
-    z.barh(y - 0.18, base, height=0.34, color=MUTED, alpha=0.6, label="baseline to beat")
-    for yy, v, bb in zip(y, kv, base):
-        z.text(v + (0.01 if v >= 0 else -0.01), yy + 0.18, f"{v:+.2f}", va="center", ha="left" if v >= 0 else "right", fontsize=8, color=INK)
-        z.text(bb + (0.01 if bb >= 0 else -0.01), yy - 0.18, f"{bb:+.2f}", va="center", ha="left" if bb >= 0 else "right", fontsize=8, color=INK)
+    series = [(0.27, kv, BLUE, "Kronos-small (pre-registered)")] + ([(0.0, bv, ORANGE, "Kronos-base, all 258 origins")] if bv else []) + [(-0.27, base, MUTED, "baseline to beat")]
+    for off, vals, col, lab in series:
+        z.barh(y + off, vals, height=0.25, color=col, alpha=0.6 if col == MUTED else 1, label=lab)
+        for yy, v in zip(y, vals):
+            z.text(v + (0.008 if v >= 0 else -0.008), yy + off, f"{v:+.2f}", va="center", ha="left" if v >= 0 else "right", fontsize=7.5, color=INK)
     z.axvline(0, color=INK, lw=0.8)
     z.set_yticks(y, labels)
-    z.legend(loc="lower right", frameon=False, fontsize=8)
-    lo = min(min(kv), min(base), 0) - 0.12
-    hi = max(max(kv), max(base), 0) + 0.15
+    z.legend(loc="upper left", bbox_to_anchor=(0.0, -0.07), ncol=3, frameon=False, fontsize=8)
+    lo = min(min(kv), min(base), min(bv or [0]), 0) - 0.12
+    hi = max(max(kv), max(base), max(bv or [0]), 0) + 0.22
     z.set_xlim(lo, hi)
     d10, v10 = s["direction 10d"], s["volatility 10d"]
     z.set_title(f"The test: {s['origins']} daily origins, Oct 2025 - Oct 2026 (after Kronos was released)\n"
-                f"10-day direction p {d10['p_shift']:.2f} (shift null); vol vs option IV p {v10['p (bootstrap, kronos not better)']:.2f}",
+                f"Kronos-small: 10-day direction p {d10['p_shift']:.2f} (shift null); vol vs option IV p {v10['p (bootstrap, kronos not better)']:.2f}",
                 loc="left", fontsize=9.5, color=INK)
+    c = res.get("amendment 1: Kronos-base on its 206 unseen origins")
+    ph = res.get("post-hoc (not pre-registered): Kronos-base vs momentum / moving-average features")
+    if c and ph:
+        z.text(0.02, -0.16, f"Kronos-base, 206 unseen origins (Amendment 1): 10-day hit rate {100 * c['hit rate']:.0f}% vs {100 * c['always-long hit rate']:.0f}% always-long "
+               f"(p {c['p hit (shift)']:.3f}), correlation {c['corr']:+.2f} (p {c['p corr (shift)']:.3f}): passes.\n"
+               f"But after five plain momentum / moving-average distance features its partial correlation is {ph['partial corr after the 5 features']:+.2f} (p {ph['p (shift)']:.2f}): "
+               "it mostly re-learns\nthe pull back toward the 50-day average, which worked this year (one year is the only clean test period).",
+               transform=z.transAxes, fontsize=8.3, color=INK, va="top")
     f.savefig(OUT / "kronos.png", dpi=140, bbox_inches="tight", facecolor=SURF)
+
+
+def confirm(b):
+    """Amendment 1: Kronos-base on its 206 unseen origins."""
+    P = pd.read_csv(OUT / "paths_base_rest.csv.gz", parse_dates=["origin"])
+    lc = np.log(b.close)
+    m = P[P.h == H].groupby("origin").close.mean()
+    pos = np.array([b.index.get_loc(t) for t in m.index])
+    pred = np.log(m.to_numpy()) - lc.iloc[pos].to_numpy()
+    act = lc.iloc[pos + H].to_numpy() - lc.iloc[pos].to_numpy()
+    n = len(pred)
+    hit = lambda x: np.mean(np.sign(x) == np.sign(act))
+    shifts = RNG.integers(10, n - 10, NSHIFT)
+    nh = np.array([hit(np.roll(pred, s)) for s in shifts])
+    nc = np.array([np.corrcoef(np.roll(pred, s), act)[0, 1] for s in shifts])
+    cr = float(np.corrcoef(pred, act)[0, 1])
+    out = {"origins": n, "hit rate": float(hit(pred)), "always-long hit rate": float(np.mean(act > 0)),
+           "p hit (shift)": float((nh >= hit(pred)).mean()), "corr": cr, "p corr (shift)": float((nc >= cr).mean()),
+           "share predicted down": float(np.mean(pred < 0)), "mean predicted %": float(100 * pred.mean())}
+    up = pred > np.median(pred)
+    out["realized when forecast in top half %"], out["realized when forecast in bottom half %"] = float(100 * act[up].mean()), float(100 * act[~up].mean())
+    out["verdict"] = "pass" if (out["hit rate"] > out["always-long hit rate"] and out["p hit (shift)"] < 0.05 and cr > 0 and out["p corr (shift)"] < 0.05) else "fail"
+    return out
+
+
+def posthoc(b):
+    """Not pre-registered: is Kronos-base's 10-day signal more than plain momentum / moving-average distance?"""
+    P = pd.concat([pd.read_csv(OUT / f"paths_{w}.csv.gz", parse_dates=["origin"]) for w in ("base", "base_rest")])
+    m = P[(P.h == H) & (P.origin <= LAST)].groupby("origin").close.mean().sort_index()
+    lc = np.log(b.close)
+    pos = np.array([b.index.get_loc(t) for t in m.index])
+    pred = np.log(m.to_numpy()) - lc.iloc[pos].to_numpy()
+    act = lc.iloc[pos + H].to_numpy() - lc.iloc[pos].to_numpy()
+    feats = {f"past {n}d return": lc.iloc[pos].to_numpy() - lc.iloc[pos - n].to_numpy() for n in (5, 10, 20)}
+    for n in (20, 50):
+        feats[f"close vs {n}d average"] = lc.iloc[pos].to_numpy() - np.log(b.close.rolling(n).mean().iloc[pos].to_numpy())
+    X = np.column_stack([np.ones(len(act))] + list(feats.values()))
+    res = lambda y: y - X @ np.linalg.lstsq(X, y, rcond=None)[0]
+    rp, ra = res(pred), res(act)
+    obs = float(np.corrcoef(rp, ra)[0, 1])
+    rng = np.random.default_rng(3)
+    null = np.array([np.corrcoef(np.roll(rp, s), ra)[0, 1] for s in rng.integers(10, len(rp) - 10, NSHIFT)])
+    out = {"origins": len(pred), "partial corr after the 5 features": obs, "p (shift)": float((null >= obs).mean())}
+    for k, v in feats.items():
+        out[f"corr(base forecast, {k})"] = float(np.corrcoef(v, pred)[0, 1])
+        out[f"corr({k}, outcome)"] = float(np.corrcoef(v, act)[0, 1])
+    out["50d-average reversal rule hit rate"] = float(np.mean(np.sign(-feats["close vs 50d average"]) == np.sign(act)))
+    q = pd.DataFrame({"p": pred, "a": act}, index=m.index).groupby(m.index.to_period("Q"))
+    out["by quarter"] = {str(k): {"n": len(d), "hit rate": float(np.mean(np.sign(d.p) == np.sign(d.a))), "corr": float(np.corrcoef(d.p, d.a)[0, 1])}
+                         for k, d in q if len(d) > 10}
+    return out
 
 
 def score(path):
@@ -199,6 +267,11 @@ def score(path):
         "direction": "pass" if (d["p_shift"] < 0.05 and d["hit rate"] > d["always-long hit rate"]) else "fail",
         "volatility": "pass" if v["p (bootstrap, kronos not better)"] < 0.05 else "fail"}
     res["today"] = td
+    if (OUT / "paths_base_rest.csv.gz").exists():
+        res["amendment 1: Kronos-base on its 206 unseen origins"] = confirm(b)
+        allb = pd.concat([pd.read_csv(OUT / f"paths_{w}.csv.gz", parse_dates=["origin"]) for w in ("base", "base_rest")])
+        res["base, all 258 origins (descriptive)"] = score_model("base", b, allb)
+        res["post-hoc (not pre-registered): Kronos-base vs momentum / moving-average features"] = posthoc(b)
     (OUT / "kronos.json").write_text(json.dumps(res, indent=1))
     figure(b, res, td)
     return res
