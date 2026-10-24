@@ -1,0 +1,35 @@
+{
+ "21-session echo": {
+  "1960-2007": {
+   "events": 205,
+   "excess 3-session return %": -0.06302717715095651,
+   "share positive": 0.4926829268292683,
+   "p (one-sided, bootstrap: excess <= 0)": 0.739
+  },
+  "2008-2026": {
+   "events": 81,
+   "excess 3-session return %": 0.2965684969071531,
+   "share positive": 0.6419753086419753,
+   "p (one-sided, bootstrap: excess <= 0)": 0.0344
+  },
+  "post minus pre %": 0.3592334286732784,
+  "p (post <= pre)": 0.028
+ },
+ "63-session echo": {
+  "1960-2007": {
+   "events": 116,
+   "excess 3-session return %": 0.07411370561146897,
+   "share positive": 0.5862068965517241,
+   "p (one-sided, bootstrap: excess <= 0)": 0.2774
+  },
+  "2008-2026": {
+   "events": 45,
+   "excess 3-session return %": -0.01021253968768128,
+   "share positive": 0.5333333333333333,
+   "p (one-sided, bootstrap: excess <= 0)": 0.5158
+  },
+  "post minus pre %": -0.08430624042145125,
+  "p (post <= pre)": 0.6336
+ },
+ "verdict (21-session, pre-registered)": "pass"
+}

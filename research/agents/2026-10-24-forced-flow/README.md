@@ -87,3 +87,49 @@
 
 ## Then
 Each result gets a diagnosis: era and ticker splits, alternative explanations, and what it implies. Any follow-up test is written here as an amendment and pushed before it runs.
+
+## Round 1 results (`test_a.py`, `test_bcd.py`; outputs in `out/`)
+| Test | Result | Verdict |
+|---|---|---|
+| **A1 daily, S&P** (3,768 days) | β by gamma quintile: −0.19, −0.03, −0.10, +0.01, −0.01. **Q1 − Q5 = −0.18** (p 0.84 for the predicted sign); Spearman **+0.80** | **fail, and reversed** |
+| A1, 6 names pooled (9,494 days) | β −0.077, −0.047, −0.024, +0.003, +0.029: monotone, Spearman **+1.0**, Q1 − Q5 −0.106 (95% −0.176 to −0.031) | **reversed, and significant** |
+| A2 intraday, SPY 2023–2026 (945 days) | last-half-hour slope ≈ 0 overall (−0.005). Low-H half +0.002, high-H half −0.024, difference p 0.11 | fail (predicted sign, weak) |
+| B expiry release (486 expiries) | within-ticker slope +0.43, p 0.066. Vol rose +9% after high-share expiries vs +2–4% otherwise. Mixed by ticker | fail (predicted sign, borderline) |
+| **C 21-session echo** | **2008–2026: +0.30% excess over 3 sessions, 64% positive (81 events, p 0.034); 1960–2007: −0.06% (205 events). Post − pre +0.36%, p 0.028.** The 63-session echo: nothing | **pass** |
+| D leverage as fuel (47 VIX shocks, 1998–2026) | drawdown vs margin-debt growth: slope +0.02 (wrong sign), −2.6% vs −2.7% by half. Control: no return difference over all days (p 0.87) | fail (null) |
+
+## Diagnosis
+* **A1 reversed:** low-gamma days are followed by **reversal** the next day, and high-gamma days by slight **continuation**. The naive sign flip predicted the opposite.
+  * **Explanation 1, volatility:** low-gamma days are high-volatility days. Daily returns mean-revert in turbulent markets for reasons unrelated to dealers. If so, the gamma ordering should vanish once realized volatility is held fixed.
+  * **Explanation 2, a refined dealer theory:** dealers change the **speed** of price discovery, not its destination.
+    * Short gamma, they push price too far within the day, and the overshoot corrects the next day.
+    * Long gamma, they damp the move within the day, and the unfinished move continues the next day.
+    * This predicts the ordering survives the volatility control, and that the gap closes over the following days.
+  * **Explanation 3, a vanna or volatility-crush bounce:** after selloffs (low gamma, rising IV), falling IV makes dealers buy back hedges. This predicts the reversal comes mostly after **down** days.
+* **A2 null:** last-half-hour momentum is absent in SPY in 2023–2026, a period when 0DTE dominates. It points the predicted way, but weakly.
+* **B borderline:** it points the predicted way. The share expiring ignores the size of the released hedge relative to liquidity, and the size law says that is what should matter.
+* **C passed:** it is the most mechanical of the four predictions, so it now has to survive checks that distinguish the drop-out mechanism from coincidence: the lag profile, a placebo, the sign of the shock, and the calendar.
+* **D null:** margin-debt growth may simply track rising prices rather than leverage. A cleaner proxy is margin debt relative to the market's level.
+
+## Amendment 1: follow-up tests. Pre-registered here before any follow-up runs.
+**F1. A1 dissection (pooled names and S&P separately):**
+* **Regression:** y = a + b1·x + b2·x·Hc + b3·x·RVc + c1·Hc + c2·RVc.
+  * Hc is the H percentile minus 0.5 and RVc is the realized-volatility percentile (trailing 20-day volatility vs the past year, point in time) minus 0.5.
+* **Test b2 > 0** (the found ordering) with a 20-day block bootstrap.
+* **If b2's p < 0.05:** the ordering is independent of the volatility regime (explanation 2 or 3). **Otherwise** it is volatility (explanation 1).
+* **Also:** β by H half, separately for up-days and down-days (explanation 3 predicts the gap mostly on down-days).
+* **Also:** the cumulative response over 1–10 days for the low-H and high-H halves. Explanation 2 predicts the gap shrinks by day 10.
+
+**F2. C mechanism checks (post-2008 events; all four must hold for the mechanism to stand):**
+1. **Lag profile:** the 3-session excess starting at lags 15–27. The excess at 21 must exceed the mean of the placebo lags (15–18, 24–27), with an event-bootstrap p < 0.05.
+2. **Placebo:** shocks that were **not** the largest in their window, so measured volatility does not fall when they drop out, must show a smaller echo than the qualifying shocks. One-sided p < 0.05.
+3. **Sign:** both up-shocks and down-shocks echo positive (each mean > 0; reported, given the small samples).
+4. **Calendar:** the post-2008 excess stays positive after excluding echo windows that contain the last trading day or the first three trading days of a month.
+
+**F3. B size law:**
+* x2 = gamma_share_1d × |gex_classic| ÷ 20-day dollar volume (the released hedge relative to liquidity), at the session before the expiry.
+* Same within-ticker permutation. Pass p < 0.05.
+
+**F4. D cleaner leverage (secondary):**
+* The 12-month change in log(margin debt ÷ S&P level), with a 2-month lag, in place of margin growth.
+* Same test. Pass p < 0.05.

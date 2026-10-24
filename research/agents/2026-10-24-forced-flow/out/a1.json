@@ -1,0 +1,151 @@
+{
+ "S&P (SqueezeMetrics GEX / SPY dollar volume), 2011-2026": {
+  "days": 3768,
+  "beta by quintile (Q1 low gamma .. Q5 high)": [
+   -0.188,
+   -0.0317,
+   -0.0957,
+   0.0056,
+   -0.0086
+  ],
+  "Q1 - Q5": -0.17940563121441194,
+  "p (one-sided, block bootstrap)": 0.8405,
+  "ci95": [
+   -0.351741996909611,
+   0.07850875971163632
+  ],
+  "spearman(beta, quintile)": 0.7999999999999999,
+  "days per quintile": [
+   715,
+   646,
+   689,
+   707,
+   1011
+  ],
+  "verdict": "fail"
+ },
+ "S&P 2011-2018": {
+  "days": 1811,
+  "beta by quintile (Q1 low gamma .. Q5 high)": [
+   0.052,
+   -0.0055,
+   -0.1333,
+   -0.0442,
+   -0.0149
+  ],
+  "Q1 - Q5": 0.06697425670475736,
+  "p (one-sided, block bootstrap)": 0.1615,
+  "spearman(beta, quintile)": -0.6,
+  "days per quintile": [
+   355,
+   291,
+   311,
+   334,
+   520
+  ]
+ },
+ "S&P 2019-2026": {
+  "days": 1957,
+  "beta by quintile (Q1 low gamma .. Q5 high)": [
+   -0.2753,
+   -0.0426,
+   -0.0829,
+   0.0422,
+   -0.0003
+  ],
+  "Q1 - Q5": -0.27500316610774744,
+  "p (one-sided, block bootstrap)": 0.915,
+  "spearman(beta, quintile)": 0.7999999999999999,
+  "days per quintile": [
+   360,
+   355,
+   378,
+   373,
+   491
+  ]
+ },
+ "6 names pooled (own gamma / own dollar volume, z-returns), 2020-2026": {
+  "days": 9494,
+  "beta by quintile (Q1 low gamma .. Q5 high)": [
+   -0.0774,
+   -0.0465,
+   -0.0244,
+   0.0031,
+   0.0286
+  ],
+  "Q1 - Q5": -0.10604996658423493,
+  "p (one-sided, block bootstrap)": 0.9975,
+  "ci95": [
+   -0.17580487165666164,
+   -0.03086263147335015
+  ],
+  "spearman(beta, quintile)": 0.9999999999999999,
+  "days per quintile": [
+   2045,
+   1771,
+   1622,
+   1762,
+   2294
+  ]
+ },
+ "name TSLA": {
+  "beta by quintile": [
+   -0.138,
+   -0.037,
+   0.072,
+   -0.063,
+   0.123
+  ],
+  "Q1 - Q5": -0.26124248095188085
+ },
+ "name MSFT": {
+  "beta by quintile": [
+   -0.022,
+   -0.035,
+   -0.045,
+   0.01,
+   -0.044
+  ],
+  "Q1 - Q5": 0.021829988002209658
+ },
+ "name NVDA": {
+  "beta by quintile": [
+   -0.142,
+   -0.106,
+   -0.082,
+   0.16,
+   0.016
+  ],
+  "Q1 - Q5": -0.15788359344401498
+ },
+ "name SPY": {
+  "beta by quintile": [
+   -0.118,
+   -0.002,
+   -0.056,
+   0.118,
+   -0.026
+  ],
+  "Q1 - Q5": -0.09218831020469412
+ },
+ "name QQQ": {
+  "beta by quintile": [
+   -0.061,
+   -0.142,
+   0.004,
+   0.075,
+   0.12
+  ],
+  "Q1 - Q5": -0.18128661589590192
+ },
+ "name MU": {
+  "beta by quintile": [
+   -0.018,
+   0.047,
+   -0.045,
+   -0.163,
+   -0.003
+  ],
+  "Q1 - Q5": -0.014504662392248822
+ }
+}

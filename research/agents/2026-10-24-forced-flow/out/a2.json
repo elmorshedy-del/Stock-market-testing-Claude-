@@ -1,0 +1,24 @@
+{
+ "days": 945,
+ "slope all days": -0.004711237385801898,
+ "slope low-H half": 0.002033692233315316,
+ "slope high-H half": -0.023926435435492093,
+ "low - high": 0.02596012766880741,
+ "p (one-sided, block bootstrap)": 0.1075,
+ "slope by quintile": [
+  0.0113,
+  0.0029,
+  -0.0439,
+  0.0296,
+  -0.0402
+ ],
+ "slope when SPY gex_classic < 0": -0.0011689032207409804,
+ "days gex<0": 566,
+ "slope when SPY gex_classic > 0": -0.019346636033173388,
+ "days gex>0": 379,
+ "by SqueezeMetrics S&P gamma: slope low half / high half": [
+  -0.006164986354847269,
+  -0.001415318679862031
+ ],
+ "verdict": "fail"
+}

@@ -1,0 +1,25 @@
+{
+ "events": 486,
+ "slope (within ticker)": 0.4287203829320145,
+ "p (one-sided, permutation)": 0.0664,
+ "mean y by expiring-share third": {
+  "low": 0.04072777162427651,
+  "mid": 0.022848024511729507,
+  "high": 0.09012403405686636
+ },
+ "mean expiring share by third": {
+  "low": 0.32805937028739734,
+  "mid": 0.4262660324998012,
+  "high": 0.535580726003942
+ },
+ "mean y all (vol change into the week after expiry, log)": 0.05123327673095746,
+ "per ticker slope": {
+  "TSLA": -0.18814703213960737,
+  "MSFT": -0.28123401416283966,
+  "NVDA": 0.6708103895892269,
+  "SPY": 0.9975534595748236,
+  "QQQ": -0.19700461671452205,
+  "MU": 1.2822568484586143
+ },
+ "verdict": "fail"
+}

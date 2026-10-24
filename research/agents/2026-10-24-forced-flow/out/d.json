@@ -1,0 +1,16 @@
+{
+ "events": 47,
+ "slope of drawdown on margin yoy (pts per 1pt)": 0.022478209585479043,
+ "p (one-sided, permutation: slope >= 0)": 0.7368,
+ "corr": 0.08922047059988086,
+ "mean drawdown, high-leverage half %": -2.5695344100227286,
+ "mean drawdown, low-leverage half %": -2.6575117944991953,
+ "mean 20d return, high half %": 2.0097738874687456,
+ "mean 20d return, low half %": 1.7872040727503797,
+ "control: all days next 20d return %, high vs low leverage half": [
+  0.6261092039049174,
+  0.6781103572914928
+ ],
+ "control p (two-sided, month bootstrap)": 0.867,
+ "verdict": "fail"
+}
