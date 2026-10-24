@@ -58,3 +58,23 @@
 * About 255 overlapping 10-day windows hold only about 25 independent outcomes. The shift null keeps the serial dependence but has limited power.
 * K = 8 paths make the mean forecast noisy, which works against Kronos. The 5-day horizon and the base model act as checks.
 * Yahoo prices are split-adjusted. The input is normalized per window, as the predictor does.
+
+## Amendment 1 (written after scoring the pre-registered run, before any new forecast)
+**Pre-registered result (primary, Kronos-small, 258 origins): both tests fail.**
+* 10-day direction: correlation −0.05 (shift p 0.74). Hit rate 48% vs 47% always-long.
+* Volatility: correlation 0.03 vs 0.19 for the option IV (bootstrap p 0.93).
+
+**Why an amendment:** the secondary model, Kronos-base, scored well on its 52 origins (every 5th day).
+* 10-day hit rate 69% vs 46% always-long; correlation +0.16.
+* The pre-registered shift null (minimum shift 20) has only 12 distinct shifts at n = 52, so its p = 0 is not informative.
+* A post-hoc shift null with minimum shift 2 (49 shifts) gives p < 0.02 for both hit rate and correlation.
+* It is a secondary model, looked at after the fact, on about 26 independent windows, so it needs confirmation.
+* Kronos-base's forecasts correlate 0.79 with Kronos-small's on the same origins, yet small's hit rate there is 44%. The hit rate may hinge on where each model's large downward bias puts the zero line.
+
+**Confirmation test:**
+* **Run:** Kronos-base, same settings and seed rule, on the **206 origins it has not seen** (the other four of every five days, 2025-10-01 to 2026-10-09).
+* **Pass (both required):**
+  1. The 10-day hit rate beats always-long, with a circular-shift null p < 0.05 (minimum shift 10, 1,000 shifts).
+  2. The 10-day correlation is above 0 with shift p < 0.05.
+* **Volatility:** must beat the option IV (bootstrap p < 0.05) to count as a volatility skill.
+* **Caveat:** these origins share the same 12 months and overlapping outcome windows with the 52 already scored. A pass shows the result is not a fluke of which days were sampled, not that it holds in a different period.
