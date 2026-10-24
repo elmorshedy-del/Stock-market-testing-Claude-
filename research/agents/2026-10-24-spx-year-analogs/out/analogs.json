@@ -1,0 +1,182 @@
+{
+ "n0 (2026 sessions)": 204,
+ "2026 YTD %": 11.36776241006865,
+ "top analogs": {
+  "1935": {
+   "shape": 0.9187285002811665,
+   "recent": -0.6126112103950236,
+   "rmse": 0.0685434935908313,
+   "to end of Nov %": 5.479731965414327,
+   "to year end %": 9.196509626784866,
+   "date of day n0": "1935-10-22",
+   "year %": 41.368424265008215
+  },
+  "1978": {
+   "shape": 0.9069083114185402,
+   "recent": 0.5008003024313438,
+   "rmse": 0.05653108716567643,
+   "to end of Nov %": -3.3743145267766597,
+   "to year end %": -1.8963738048522334,
+   "date of day n0": "1978-10-20",
+   "year %": 1.0620422212785918
+  },
+  "1989": {
+   "shape": 0.9064880929264896,
+   "recent": 0.7104856709149583,
+   "rmse": 0.08034186040029748,
+   "to end of Nov %": -0.33759346440181265,
+   "to year end %": 1.7814763289944437,
+   "date of day n0": "1989-10-20",
+   "year %": 27.250465340319007
+  },
+  "2003": {
+   "shape": 0.8892292143495218,
+   "recent": 0.2829364788756958,
+   "rmse": 0.036675041062362045,
+   "to end of Nov %": 2.6661063823419213,
+   "to year end %": 7.618004879452435,
+   "date of day n0": "2003-10-22",
+   "year %": 26.38039993281984
+  },
+  "1933": {
+   "shape": 0.8887978182076918,
+   "recent": -0.4598713871173261,
+   "rmse": 0.24516751259544428,
+   "to end of Nov %": 6.913745681245345,
+   "to year end %": 7.820554422656535,
+   "date of day n0": "1933-11-02",
+   "year %": 44.07514677902016
+  }
+ },
+ "analog mean to end of Nov %": 2.269535207564624,
+ "all years mean to end of Nov %": 0.55150352470377,
+ "all years up share to end of Nov": 0.5773195876288659,
+ "top by recent-month shape": [
+  1971,
+  1989,
+  1999,
+  2004,
+  1970
+ ],
+ "top by rmse": [
+  1964,
+  2003,
+  2017,
+  1944,
+  1963
+ ],
+ "walk-forward (pre-registered)": {
+  "test years": 75,
+  "corr(pred, actual)": -0.14484431184072016,
+  "p (permutation)": 0.897,
+  "corr(pred - naive, actual - naive)": -0.1295205874630387,
+  "hit rate analog": 0.4666666666666667,
+  "hit rate naive": 0.5333333333333333,
+  "actual by prediction third %": {
+   "bottom third": 2.0159458552144063,
+   "middle": 2.0376077320145445,
+   "top third": 0.8845771695348016
+  },
+  "up share by prediction third": {
+   "bottom third": 0.76,
+   "middle": 0.68,
+   "top third": 0.52
+  },
+  "verdict": "fail"
+ },
+ "walk-forward secondary": {
+  "year-end outcome": {
+   "test years": 75,
+   "corr(pred, actual)": -0.022202171258851794,
+   "p (permutation)": 0.574,
+   "corr(pred - naive, actual - naive)": 0.028008051821469208,
+   "hit rate analog": 0.64,
+   "hit rate naive": 0.6,
+   "verdict": "fail"
+  },
+  "K=3": {
+   "test years": 75,
+   "corr(pred, actual)": -0.07586337948859441,
+   "p (permutation)": 0.7384,
+   "corr(pred - naive, actual - naive)": -0.09600700523128901,
+   "hit rate analog": 0.4666666666666667,
+   "hit rate naive": 0.5333333333333333,
+   "verdict": "fail"
+  },
+  "K=10": {
+   "test years": 75,
+   "corr(pred, actual)": -0.043428773569422374,
+   "p (permutation)": 0.642,
+   "corr(pred - naive, actual - naive)": -0.011577047971403407,
+   "hit rate analog": 0.48,
+   "hit rate naive": 0.5333333333333333,
+   "verdict": "fail"
+  },
+  "recent-month selector": {
+   "test years": 75,
+   "corr(pred, actual)": -0.13409417064516654,
+   "p (permutation)": 0.8766,
+   "corr(pred - naive, actual - naive)": -0.1621834453556469,
+   "hit rate analog": 0.49333333333333335,
+   "hit rate naive": 0.5333333333333333,
+   "verdict": "fail"
+  },
+  "rmse selector": {
+   "test years": 75,
+   "corr(pred, actual)": -0.00966042323921096,
+   "p (permutation)": 0.52,
+   "corr(pred - naive, actual - naive)": -0.013712238127119398,
+   "hit rate analog": 0.5866666666666667,
+   "hit rate naive": 0.5333333333333333,
+   "verdict": "fail"
+  }
+ },
+ "post-hoc: calendar-day alignment (Saturday sessions before 1952)": {
+  "top analogs": {
+   "1935": {
+    "shape": 0.9187095529913959,
+    "to end of Nov %": 4.828794565629428,
+    "to year end %": 8.545572226999965
+   },
+   "1989": {
+    "shape": 0.9088509803962194,
+    "to end of Nov %": 0.33583416557402057,
+    "to year end %": 2.454903958970265
+   },
+   "1978": {
+    "shape": 0.9074541906108091,
+    "to end of Nov %": -3.6088563771735123,
+    "to year end %": -2.1309156552490793
+   },
+   "1933": {
+    "shape": 0.9040926484139782,
+    "to end of Nov %": 9.106813851848159,
+    "to year end %": 10.013622593259342
+   },
+   "2003": {
+    "shape": 0.8903270362288711,
+    "to end of Nov %": 2.3356972245945973,
+    "to year end %": 7.287595721705102
+   }
+  },
+  "walk-forward": {
+   "test years": 76,
+   "corr(pred, actual)": -0.18504894594310084,
+   "p (permutation)": 0.9474,
+   "corr(pred - naive, actual - naive)": -0.16709849721589906,
+   "hit rate analog": 0.5131578947368421,
+   "hit rate naive": 0.5,
+   "actual by prediction third %": {
+    "bottom third": 2.3771562860824234,
+    "middle": 2.6817392032302525,
+    "top third": 0.9456666820220665
+   },
+   "up share by prediction third": {
+    "bottom third": 0.6538461538461539,
+    "middle": 0.8,
+    "top third": 0.64
+   },
+   "verdict": "fail"
+  }
+ }
+}

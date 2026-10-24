@@ -1,12 +1,19 @@
 # Which past years has the S&P's 2026 rhymed with, and what came next?
 
 **Agent / session:** Claude, claude.ai session for the owner, 2026-10-24
-**Type:** analog study plus a pre-registered skill test. Pre-registered here before any analog was computed. The only thing looked at beforehand was 2026's own path.
+**Type:** analog study plus a skill test, pre-registered at 8c1c59b before any analog was computed. The only thing looked at beforehand was 2026's own path.
 **Builds on:**
 * microstructure §4x (state analogs for the S&P: neutral; the Oct–Dec season is the tailwind);
 * spy-channel (the Q4 record since 1971).
 
-**Verdict:** (after the run)
+**Verdict: 2026 does rhyme with past years, but a rhyme has never predicted the next month.**
+* **The closest rhymes, by the shape of the year's path:** 1935, 1978, 1989, 2003 and 1933 (correlation 0.89–0.92).
+* **From the same point in the year to the end of November** they went +5.5%, −3.4%, −0.3%, +2.7% and +6.9%: three up, two down.
+* **Walk-forward over 1950–2025 fails**, with analogs picked only from earlier years:
+  * correlation with the realized next month −0.14 (p 0.90);
+  * right sign 47% vs 53% for the season.
+* **Every secondary variant fails:** year-end outcome, K = 3 or 10, recent-month selector, RMSE selector, and calendar alignment (post-hoc).
+* **The year's shape is a memory, not a map.**
 
 ## The owner's question
 * Based on what the S&P has done this year and this month, what will next month look like?
@@ -54,3 +61,56 @@
 * With 76 test years the test has low power: it can detect a strong signal, not a subtle one.
 * Choosing the shape metric is itself a degree of freedom. It is fixed above, and the alternatives are reported as secondary.
 * Markets before 1950 differ (volatility, the role of index investing). They serve only as candidate analogs, never as test years.
+
+
+## Results (`analogs.py`; outputs in `out/`)
+![analogs](out/analogs.png)
+
+**Run:** `python analogs.py <GSPC_max.json>`, which takes a few seconds. Outputs: `out/analogs.json`, `out/analogs.csv` (every year's scores and outcomes) and `out/analogs.png`.
+
+### The rhymes (primary: correlation of the January-to-October path, trading-day index)
+| Year | Shape correlation | This month's shape | From day 204 to end of Nov | To year end | Whole year |
+|---|---|---|---|---|---|
+| 1935 | 0.92 | −0.61 | +5.5% | +9.2% | +41.4% |
+| 1978 | 0.91 | +0.50 | −3.4% | −1.9% | +1.1% |
+| 1989 | 0.91 | +0.71 | −0.3% | +1.8% | +27.3% |
+| 2003 | 0.89 | +0.28 | +2.7% | +7.6% | +26.4% |
+| 1933 | 0.89 | −0.46 | +6.9% | +7.8% | +44.1% |
+| **analog mean** | | | **+2.3%** | | |
+| all years 1928–2025 | | | mean +0.55%, up 58% | | |
+
+* **Closest by this month's shape alone:** 1971, 1989, 1999, 2004, 1970.
+* **Closest by shape and size (RMSE):** 1964, 2003, 2017, 1944, 1963.
+* **1989 and 2003 appear in more than one list.** 1989 was flat to the end of November; 2003 rose.
+
+### The skill test (pre-registered)
+* **Primary:** 75 test years, analogs from earlier years only. Correlation −0.14 (p 0.90). Right sign 47% vs 53% naive. **Fail.**
+* **Realized outcome by the analogs' forecast:**
+
+  | Forecast third | Mean next month | Up |
+  |---|---|---|
+  | bottom | +2.0% | 76% |
+  | middle | +2.0% | 68% |
+  | top | +0.9% | 52% |
+
+  If anything it runs backwards, but not significantly.
+* **Secondary, all fail:**
+
+  | Variant | Correlation (p) |
+  |---|---|
+  | year-end outcome | −0.02 (0.57) |
+  | K = 3 | −0.08 |
+  | K = 10 | −0.04 |
+  | recent-month selector | −0.13 |
+  | RMSE selector | −0.01 |
+
+### Post-hoc check: calendar alignment
+* **Why:** exchanges traded on Saturdays until 1952, so "trading day 204" falls on a later calendar date in old years (1933: Nov 2).
+* **Fix:** every year is re-indexed to 2026's calendar.
+* **Result:** the same five rhymes (1935, 1989, 1978, 1933, 2003). The walk-forward still fails: correlation −0.19, p 0.95.
+* **The figure uses this alignment.**
+
+### Reading
+* **This year's shape:** a March flush (−7% year to date at the low), a V in April and May, a flat summer, and an October stall after a new high.
+* **The five years that drew the same curve did not agree on what came next.** In 75 years of out-of-sample tests, the curve has carried no information about the following month.
+* **What has carried information** in this repository is the market's positioning state: the S&P gamma rungs, ARMED, and the VIX × gamma cells (spy-channel follow-ups). See those for the month ahead.
