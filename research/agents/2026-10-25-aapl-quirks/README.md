@@ -148,3 +148,44 @@ Anatomy of decoupling: `log corr = log β + log σ_m − log σ_X`. For each ala
 **R3c, where in the window (descriptive):** AAPL's residual in the 14 days before quarter end vs from quarter end to the report.
 
 **R3d, live check (one observation, not evidence):** AAPL's residual summed from Oct 26 through Nov 2, 2026, the last session before the reaction day. Predicted > 0.
+
+## Amendment 2 results (`round3.py`; `out/round3.json`): **fail**. The run into earnings is noisy and not AAPL's alone.
+| Test | Result | Verdict |
+|---|---|---|
+| R3a AAPL blackout − open residual, earnings days excluded, 2020–2026 | **+19%/yr, p 0.11**. Years positive: 4 of 7 (2021 +48, 2022 +75; 2020, 2024 and 2026 negative). Fiscal quarters positive: 3 of 4 (Dec −9; Mar +11, Jun +45, Sep +27) | fail |
+| R3b vs peers on their own calendars | AAPL +19, MSFT +1, AMZN +21, GOOGL +16, META −10, NVDA +25 (%/yr). AAPL minus peer average +8, p 0.37 | fail. It is a mega-cap pattern, not an AAPL quirk |
+| R3c where in the window | Before quarter end +36%/yr, quarter end to report +13%/yr, open +0.3%/yr | (descriptive) |
+| 2011–2019 contrast | AAPL −10%/yr (p 0.77) | |
+
+* The current blackout so far (Sep 12 to Oct 23, 30 sessions): AAPL residual +4.7%.
+* R3d (live, Oct 26 to Nov 2) is pending.
+
+## Verdict: what explains AAPL since 2020
+**Survived:**
+1. **AAPL makes its money during the trading day** (R2a).
+   * Intraday − overnight is +30%/yr in 2020–2026, against −7% for the peers and −18% for AAPL itself in 2011–2019.
+   * Overnight was negative in 2022–2025.
+   * Before 2020 the day-time bid lined up with Apple's buyback windows (p 0.0035). Since 2020 it does not, so **someone other than Apple is buying AAPL during the day**. Who is still unexplained.
+2. **Since 2023 AAPL is the mega-cap that is short the AI trade** (T2a).
+   * Its stock-specific move is −0.12 per 1% of semis beating SPY, vs about −0.03 for MSFT/AMZN/GOOGL/META.
+   * In 2011–2022 it was +0.22.
+   * The current episode is a textbook case: semis −2.6% vs the S&P, AAPL-specific +4.2%, daily correlation −0.34.
+3. **Decoupling changed nature** (T1 contrast, descriptive).
+   * In 2011–2019, 63% of decoupled days had an earnings report inside the window (vs 24%). Since 2020, earnings play no role.
+   * Today's decoupling is a negative 20-day beta with calm stock-specific volatility: a rotation, not news.
+
+**Failed:**
+* Defensive asymmetry (T3).
+* Buyback windows changing beta (T4).
+* Quad-witching forced flows (T5).
+* AI leadership timing the decoupling (T2b).
+* Residual persistence (R2c).
+* Stick or fade after run-ups (R2d).
+* The buyback explanation of the 2020s intraday bid (R2b).
+* An AAPL-specific run into earnings (R3a/R3b).
+
+**Open next questions:**
+* *Who buys AAPL during the day?* Possible tests:
+  * hourly bars (Yahoo serves 730 days): does the premium sit in the first hour (gap-down buying) or the last hour (closing-auction / passive flow)?
+  * AAPL option flow (ThetaData): is dealer hedging of call buying the driver?
+* *Is the anti-AI loading the cause or a side effect of index concentration?*

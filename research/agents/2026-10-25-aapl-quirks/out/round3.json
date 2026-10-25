@@ -1,0 +1,95 @@
+{
+ "R3a AAPL 2020-2026 (earnings days excluded)": {
+  "blackout residual (annualized %)": 19.52617022156138,
+  "open residual (annualized %)": 0.2864869017008599,
+  "blackout minus open (annualized %)": 19.239683319860518,
+  "p (<= 0, quarter bootstrap)": 0.113,
+  "by year": {
+   "2020": -8.240968767561295,
+   "2021": 48.36909006173917,
+   "2022": 74.79363560476435,
+   "2023": 11.9867358159577,
+   "2024": -1.0068066758993275,
+   "2025": 4.389377112743465,
+   "2026": -4.5491615088156205
+  },
+  "years positive": 4,
+  "by fiscal quarter (blackout minus open)": {
+   "FQE 12": -8.966661408347267,
+   "FQE 3": 11.144955812490124,
+   "FQE 6": 44.92881993835177,
+   "FQE 9": 26.698386988337976
+  },
+  "quarters positive": 3,
+  "R3c: before quarter end / quarter end to report / open (annualized %)": [
+   36.31823866614566,
+   12.788450690141874,
+   0.2864869017008599
+  ]
+ },
+ "R3a contrast 2011-2019": {
+  "blackout residual (annualized %)": 3.9429157871307203,
+  "open residual (annualized %)": 13.550107552879467,
+  "blackout minus open (annualized %)": -9.607191765748748,
+  "p (<= 0, quarter bootstrap)": 0.77,
+  "by year": {
+   "2011": 44.26734776206075,
+   "2012": -36.15943770087208,
+   "2013": -49.781512433587274,
+   "2014": -43.367816181735705,
+   "2015": -17.612723549716016,
+   "2016": 19.258260710662203,
+   "2017": 7.031750984351524,
+   "2018": -15.205683340087347,
+   "2019": 10.717403912602803
+  },
+  "years positive": 4,
+  "by fiscal quarter (blackout minus open)": {
+   "FQE 12": -32.65518154031159,
+   "FQE 3": -22.049013056052008,
+   "FQE 6": -2.934237948686394,
+   "FQE 9": 16.475667619661237
+  },
+  "quarters positive": 1,
+  "R3c: before quarter end / quarter end to report / open (annualized %)": [
+   7.734785931280484,
+   2.060503789749666,
+   13.550107552879467
+  ]
+ },
+ "R3a verdict": "fail",
+ "R3b vs peers 2020-2026": {
+  "blackout minus open per stock (annualized %)": {
+   "AAPL": 19.239683319860518,
+   "MSFT": 1.4884171581461498,
+   "AMZN": 21.06155013041037,
+   "GOOGL": 16.19287641093916,
+   "META": -9.656447295079962,
+   "NVDA": 25.133727347417572
+  },
+  "AAPL minus peer average (annualized %)": 8.39565856949386,
+  "p (<= 0, block bootstrap)": 0.3665
+ },
+ "R3b contrast 2013-2019": {
+  "blackout minus open per stock (annualized %)": {
+   "AAPL": -12.784180442147333,
+   "MSFT": 9.304993884648617,
+   "AMZN": 21.4252085926543,
+   "GOOGL": 17.81056686097035,
+   "META": 34.93350951534664,
+   "NVDA": -17.700353855705774
+  },
+  "AAPL minus peer average (annualized %)": -25.938965441730158,
+  "p (<= 0, block bootstrap)": 0.931
+ },
+ "R3b verdict": "fail",
+ "current blackout so far (Sep 12 - Oct 23)": {
+  "AAPL residual sum %": 4.719728636060108,
+  "sessions": 30
+ },
+ "R3d live check": "pending: AAPL residual summed Oct 26 - Nov 2, 2026; predicted > 0",
+ "verdicts": {
+  "R3a": "fail",
+  "R3b": "fail"
+ }
+}
