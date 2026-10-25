@@ -59,3 +59,28 @@
 * H1: positive but weak out of sample, stronger after 2011.
 * H3: holds.
 * H2 and H4: uncertain.
+
+## Round 1 results (`decoupling.py`; `out/decoupling.json`, `out/daily.csv`)
+| Test | Result | Verdict |
+|---|---|---|
+| **H1, 1990–2022 pooled (primary)** (44 tops) | 23.2% vs 23.0%, difference +0.2 points, p 0.48 | **fail** |
+| H1, 1990–2010 (28 tops) | 19% vs 25%, −6 points | no signal, as mechanism (a) predicted |
+| H1, 2011–2022 (16 tops, out of sample) | **30% vs 20%, +10 points, p 0.098** | positive, not significant |
+| discovery channel 2022–2026 (6 tops) | 40% vs 13%, +27 points, p 0.027 | (in sample) |
+| H2 other mega-caps, 2013–2026 | MSFT +4, AMZN +4, GOOGL +5, META +10, NVDA +5 points (none significant); AAPL +11 (p 0.039); mega-cap average +7 (p 0.16) | **fail** (5 of 5 positive, but the average p is 0.16) |
+| **H3 not the earnings jump**, 2011–2026 | drop-2 version 34% vs 18%, +16 points, **p 0.0015** (plain +15, p 0.006; rank correlation +10, p 0.066) | **pass** |
+| **H4 beyond dispersion**, 2011–2026 | AAPL coefficient +0.89, **p 0.001**, with the dispersion alarm in the model (dispersion −0.14). Dispersion alone +5 points, p 0.20. The two alarms correlate 0.48 | **pass** |
+
+* **Pre-registered overall verdict: "channel coincidence,"** because H1's pooled primary fails.
+* **Diagnosis:**
+  * The pooled test mixes an era in which the mechanism says nothing should happen (AAPL was a small weight in 1990–2010) with the era in which it should. The failure is concentrated in the earlier era, and the mechanism-era out-of-sample is positive (+10 points) but not significant (16 tops).
+  * The signal is not earnings jumps, and it is not general dispersion.
+  * Other mega-caps lean the same way, weakly.
+* **Status:** a plausible, partly supported lead that has **not** passed a strict out-of-sample test.
+
+## Amendment 1 (round 2): is it a "narrowing rally"? Pre-registered before running.
+* **The mechanism says the warning is about the index rising without its biggest name.** So its power should be concentrated on alarm days when the S&P's 20-day return is > 0 **and** AAPL's 20-day return is below the S&P's (AAPL lagging while the index rises).
+* **Test (2011–2022 only, so the discovery period stays out):**
+  * P(top within 30 | narrowing-rally alarm) − P(top within 30 | no alarm), circular-shift p;
+  * the same for the other alarm days.
+* **Pass:** the narrowing-rally difference > 0 with p < 0.05, **and** it is larger than the other-alarm difference.

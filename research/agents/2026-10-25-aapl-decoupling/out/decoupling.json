@@ -1,0 +1,156 @@
+{
+ "tops (all, 1985-2026)": 57,
+ "tops by era": {
+  "1990-2022 (H1 primary)": 44,
+  "1990-2010": 28,
+  "2011-2022": 16,
+  "channel 2022-2026 (discovery)": 6
+ },
+ "H1 AAPL, 1990-2022 (H1 primary)": {
+  "days": 5584,
+  "alarm share": 0.24964183381088825,
+  "P(top within 30 | on)": 0.23170731707317074,
+  "P(top within 30 | off)": 0.23007159904534608,
+  "difference": 0.0016357180278246675,
+  "p (one-sided, shift)": 0.4845
+ },
+ "H1 AAPL, 1990-2010": {
+  "days": 3428,
+  "alarm share": 0.2546674445740957,
+  "P(top within 30 | on)": 0.19129438717067582,
+  "P(top within 30 | off)": 0.25048923679060664,
+  "difference": -0.05919484961993082,
+  "p (one-sided, shift)": 0.8275
+ },
+ "H1 AAPL, 2011-2022": {
+  "days": 2156,
+  "alarm share": 0.24165120593692022,
+  "P(top within 30 | on)": 0.29942418426103645,
+  "P(top within 30 | off)": 0.1981651376146789,
+  "difference": 0.10125904664635754,
+  "p (one-sided, shift)": 0.098
+ },
+ "H1 AAPL, channel 2022-2026 (discovery)": {
+  "days": 776,
+  "alarm share": 0.38917525773195877,
+  "P(top within 30 | on)": 0.3973509933774834,
+  "P(top within 30 | off)": 0.12658227848101267,
+  "difference": 0.27076871489647075,
+  "p (one-sided, shift)": 0.027
+ },
+ "H2 AAPL, 2013-2026": {
+  "days": 2639,
+  "alarm share": 0.27472527472527475,
+  "P(top within 30 | on)": 0.28413793103448276,
+  "P(top within 30 | off)": 0.17450365726227796,
+  "difference": 0.1096342737722048,
+  "p (one-sided, shift)": 0.0385
+ },
+ "H2 MSFT, 2013-2026": {
+  "days": 2639,
+  "alarm share": 0.27586206896551724,
+  "P(top within 30 | on)": 0.23351648351648352,
+  "P(top within 30 | off)": 0.1936159079016222,
+  "difference": 0.03990057561486132,
+  "p (one-sided, shift)": 0.2545
+ },
+ "H2 AMZN, 2013-2026": {
+  "days": 2639,
+  "alarm share": 0.2588101553618795,
+  "P(top within 30 | on)": 0.2342606149341142,
+  "P(top within 30 | off)": 0.19427402862985685,
+  "difference": 0.03998658630425736,
+  "p (one-sided, shift)": 0.299
+ },
+ "H2 GOOGL, 2013-2026": {
+  "days": 2639,
+  "alarm share": 0.2565365668813945,
+  "P(top within 30 | on)": 0.24076809453471196,
+  "P(top within 30 | off)": 0.19215086646279306,
+  "difference": 0.0486172280719189,
+  "p (one-sided, shift)": 0.2405
+ },
+ "H2 META, 2013-2026": {
+  "days": 2639,
+  "alarm share": 0.23493747631678666,
+  "P(top within 30 | on)": 0.2838709677419355,
+  "P(top within 30 | off)": 0.1802872709262011,
+  "difference": 0.1035836968157344,
+  "p (one-sided, shift)": 0.114
+ },
+ "H2 NVDA, 2013-2026": {
+  "days": 2639,
+  "alarm share": 0.24630541871921183,
+  "P(top within 30 | on)": 0.24307692307692308,
+  "P(top within 30 | off)": 0.19205630970336854,
+  "difference": 0.05102061337355454,
+  "p (one-sided, shift)": 0.2485
+ },
+ "H2 mega-cap average, 2013-2026": {
+  "days": 2639,
+  "alarm share": 0.2857142857142857,
+  "P(top within 30 | on)": 0.2519893899204244,
+  "P(top within 30 | off)": 0.1856763925729443,
+  "difference": 0.06631299734748011,
+  "p (one-sided, shift)": 0.1605
+ },
+ "H3 AAPL plain, 2011-2026": {
+  "days": 2932,
+  "alarm share": 0.2806957708049113,
+  "P(top within 30 | on)": 0.3353584447144593,
+  "P(top within 30 | off)": 0.18207681365576103,
+  "difference": 0.15328163105869827,
+  "p (one-sided, shift)": 0.0055
+ },
+ "H3 AAPL drop-2 largest gaps, 2011-2026": {
+  "days": 2932,
+  "alarm share": 0.27114597544338337,
+  "P(top within 30 | on)": 0.34088050314465407,
+  "P(top within 30 | off)": 0.18203088441740758,
+  "difference": 0.15884961872724648,
+  "p (one-sided, shift)": 0.0015
+ },
+ "H3 AAPL rank correlation, 2011-2026": {
+  "days": 2932,
+  "alarm share": 0.27694406548431105,
+  "P(top within 30 | on)": 0.29802955665024633,
+  "P(top within 30 | off)": 0.19716981132075473,
+  "difference": 0.1008597453294916,
+  "p (one-sided, shift)": 0.0655
+ },
+ "H4 dispersion alarm alone, 2011-2026": {
+  "days": 2932,
+  "alarm share": 0.3018417462482947,
+  "P(top within 30 | on)": 0.2621468926553672,
+  "P(top within 30 | off)": 0.20908646800195407,
+  "difference": 0.05306042465341315,
+  "p (one-sided, shift)": 0.196
+ },
+ "H4 logistic: AAPL alarm coefficient (with dispersion alarm)": {
+  "coef AAPL": 0.8888406477393183,
+  "coef dispersion": -0.1429551063528847,
+  "p (AAPL coef <= 0, block bootstrap)": 0.001,
+  "corr of the two alarms": 0.4821245570788603
+ },
+ "verdicts": {
+  "H1": false,
+  "H1 mechanism (2011-22 > 1990-2010)": true,
+  "H2": false,
+  "H3": true,
+  "H4": true
+ },
+ "overall": "channel coincidence",
+ "today": {
+  "AAPL corr": -0.16872990803590354,
+  "AAPL drop-2 corr": -0.14104822229146988,
+  "mega avg corr": 0.5581802187246746,
+  "avg pairwise corr": 0.046392344827111597,
+  "alarms on": [
+   "alarm AAPL",
+   "alarm AAPL drop2",
+   "alarm AAPL rank",
+   "alarm dispersion"
+  ],
+  "date": "2026-10-23"
+ }
+}
