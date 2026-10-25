@@ -59,3 +59,17 @@
   * a best-of-all luck check that includes the 34 earlier indicators;
   * whether any of these adds to breadth: leave-one-dip-out logistic with breadth plus the new measure vs breadth alone.
 * **Today:** the open dip started 2026-10-16. 0DTE data end on Oct 15, FINRA on Oct 14, so today's reading uses the available days (at least 3 of 5).
+
+## Amendment 1: the signing convention was wrong. Diagnosed without using returns; fixed before re-running.
+**Run 0** (multiday's convention: mid = average of minute t's and minute t+1's quote rows) gave **corr(morning flow z, morning return) = −0.82**. Every year was negative.
+* Customers appeared to sell calls and buy puts whenever SPY rose. No real flow is that strongly anti-price.
+* That points to a quote-timing artefact. Run-0 outputs are kept as `out/*_v0`.
+
+**Diagnostic** (`quote_alignment.py`, `out/quote_alignment.json`; 40 days, option prices only, no SPY returns):
+* For contract-minutes with trades, the mid closest to the minute's VWAP is **minute t−1's quote row 61% of the time**, against 16% for minute t and 19% for minute t+1.
+* So a quote row stamped t is the **end** of minute t (the start of t+1), while the trades in OHLC row t happened during minute t.
+* The run-0 average of t and t+1 therefore looked about one minute ahead. When 0DTE prices drift by more than the spread each minute (VWAP falls inside a single quote snapshot only about 14% of the time), that forward look mislabels trades as sells in up-moves for calls and as buys for puts.
+
+**Fix:** sign against the average of minute t−1's and minute t's mid, i.e. the start and the end of the trade minute. That is centred on the trades, so drift cancels to first order. Everything else is unchanged.
+* A1 is the pre-registered sanity check. If it is still ≤ 0, minute-level option signing is judged unreliable here, and Part 3 drops the signed-flow measures.
+* **Caveat:** with only minute snapshots, any signing of 0DTE options is noisy, because prices move several ticks within a minute.
