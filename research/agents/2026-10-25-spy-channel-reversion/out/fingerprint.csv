@@ -1,0 +1,29 @@
+signal,"hits (2023, 2025, 2026)",hits,lead sessions (first alarm in window),false-alarm rate,luck share,"fired before minor pullbacks (Mar24, Jul24, Nov25)",on today,today percentile,"candidate (3/3, FA <= 15%, luck <= 0.05)"
+V4 SKEW high,✓✓✓,3,"[29, 25, 29]",0.324031007751938,0.27,"[1, 1, 0]",True,0.9083665338645418,False
+A4 AAPL decoupling (20d corr with SPY low),✓✓✓,3,"[29, 16, 23]",0.324031007751938,0.167,"[1, 1, 1]",True,1.0,False
+M1 dealer gamma low,·✓✓,2,"[None, 28, 6]",0.11627906976744186,0.0,"[0, 0, 0]",False,0.749003984063745,False
+V6 VIX rising (10d),✓·✓,2,"[17, 26, 8]",0.12558139534883722,0.0,"[1, 0, 1]",True,0.9601593625498008,False
+M5 VIX minus realized vol high,✓·✓,2,"[17, None, 8]",0.15038759689922482,0.0,"[0, 1, 1]",True,0.896414342629482,False
+X5 discretionary lagging staples (XLY vs XLP),·✓✓,2,"[None, 5, 7]",0.15658914728682172,0.059,"[1, 0, 1]",True,0.8286852589641435,False
+X8 dollar rising (UUP),·✓✓,2,"[None, 29, 9]",0.16124031007751938,0.036,"[0, 0, 1]",False,0.601593625498008,False
+M2 gamma percentile falling (10d),✓·✓,2,"[27, 26, 26]",0.17984496124031008,0.0,"[1, 0, 1]",True,0.9840637450199203,False
+A3 AAPL below its 50-day while S&P above,·✓✓,2,"[None, 21, 17]",0.18294573643410852,0.087,"[1, 0, 0]",False,0.0,False
+X7 bonds falling (TLT),·✓✓,2,"[None, 29, 22]",0.18449612403100776,0.159,"[0, 0, 0]",False,0.05976095617529881,False
+A2 AAPL diverging either way (20d),·✓✓,2,"[None, 21, 13]",0.20930232558139536,0.224,"[1, 1, 1]",False,0.41832669322709165,False
+M3 DIX low,✓·✓,2,"[20, 23, 28]",0.21395348837209302,0.029,"[1, 0, 1]",False,0.20318725099601595,False
+A1 AAPL lagging SPY (20d),·✓✓,2,"[None, 22, 18]",0.22945736434108527,0.09,"[1, 0, 0]",False,0.3665338645418327,False
+X2 small caps lagging (IWM vs SPY),✓✓·,2,"[25, 29, None]",0.23875968992248062,0.153,"[0, 1, 0]",False,0.5657370517928287,False
+V5 VIX not falling on up days (10d corr),✓·✓,2,"[29, None, 15]",0.24651162790697675,0.22,"[0, 1, 1]",False,0.2868525896414343,False
+T3 RSI overbought,✓·✓,2,"[29, None, 29]",0.2651162790697674,0.303,"[0, 1, 1]",False,0.08366533864541832,False
+M4 realized vol low (vol-target max exposure),✓·✓,2,"[29, None, 21]",0.3023255813953488,0.143,"[0, 1, 1]",True,0.8725099601593626,False
+T1 trend broken (close vs 50-day),·✓·,1,"[None, 29, None]",0.10697674418604651,0.032,"[0, 0, 0]",True,0.8804780876494024,False
+T2 20-day return low,·✓·,1,"[None, 29, None]",0.11937984496124031,0.033,"[0, 0, 0]",True,0.8366533864541833,False
+X9 bitcoin falling,·✓·,1,"[None, 26, 28]",0.12403100775193798,0.0,"[0, 1, 1]",False,0.6573705179282868,False
+V2 VIX9D/VIX high,·✓·,1,"[None, 16, 5]",0.16899224806201552,0.127,"[1, 1, 0]",False,0.7729083665338645,False
+X1 credit lagging (HYG vs IEF),·✓·,1,"[None, 9, None]",0.17364341085271318,0.007,"[0, 1, 1]",True,0.9880478087649402,False
+V3 VVIX high,✓··,1,"[29, 26, 8]",0.19224806201550387,0.032,"[0, 0, 1]",True,0.8685258964143426,False
+X4 semis lagging (SMH vs SPY),·✓·,1,"[None, 16, None]",0.2062015503875969,0.124,"[0, 0, 0]",True,0.9721115537848606,False
+T4 sessions since 52-week high,·✓·,1,"[None, 29, None]",0.4310077519379845,0.078,"[0, 0, 0]",False,0.549800796812749,False
+V1 VIX/VIX3M high,···,0,"[None, 11, None]",0.13488372093023257,0.023,"[1, 0, 0]",True,0.8725099601593626,False
+X6 regional banks lagging (KRE vs SPY),···,0,"[16, 29, None]",0.23255813953488372,0.155,"[1, 1, 1]",False,0.33067729083665337,False
+X3 breadth narrowing (RSP vs SPY),···,0,"[26, 29, None]",0.27906976744186046,0.086,"[0, 1, 1]",False,0.035856573705179286,False

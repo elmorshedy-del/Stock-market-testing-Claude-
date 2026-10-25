@@ -7,7 +7,14 @@
 * forced-flow (forced moves fade);
 * spy-channel (the owner's 2026 channel).
 
-**Verdict:** (after the run)
+**Verdict: nothing passes the pre-registered bar. The owner's AAPL hunch is the one signal that stands out.**
+* **Only 2 of 28 signals fired before all three reversions,** about the 2.6 expected by luck:
+  * **SKEW high:** on 32% of other days, and pullbacks were *less* likely when it was on, so it is not a warning;
+  * **AAPL decoupling from SPY** (20-day correlation in the bottom fifth of its past year).
+* **AAPL decoupling** fired before all three reversions and all three minor pullbacks (6 of 6), with 16–29 sessions of lead.
+  * When on, a pullback of 5% or more started within 30 sessions 36% of the time, vs 12% when off (base rate 22%). That difference is post-hoc, with circular-shift p 0.024.
+  * **Today the AAPL–SPY correlation is −0.17,** its lowest in a year and lower than before any of the six channel tops.
+* **Reading:** with six events this is a lead to watch, not a tested rule. It is right more often than chance, and it is on now.
 
 ## Question
 * Since the Oct 2022 low the S&P has risen in a channel, with reversions inside it: Jul–Oct 2023, Apr 2024, Jul–Aug 2024, Feb–Apr 2025 and Feb–Mar 2026.
@@ -112,3 +119,38 @@
 **Reading rule (written before the run):**
 * A signal is a **candidate warning** only if it hits 3 of 3, its false-alarm rate is ≤ 15%, and its luck share is ≤ 0.05.
 * With three events, even a candidate is a hypothesis to watch, not a tested rule.
+
+
+## Results (`fingerprint.py`, `aapl_check.py`; `out/fingerprint.csv`, `out/fingerprint.json`, `out/aapl_check.json`, `out/fingerprint.png`)
+![fingerprint](out/fingerprint.png)
+
+**Pre-registered fingerprint (28 signals, 645 normal days):**
+
+| Signal | Hits (2023, 2025, 2026) | Lead (sessions) | False alarms | Luck share | Before minor pullbacks | On now |
+|---|---|---|---|---|---|---|
+| **A4 AAPL decoupling (20-day correlation with SPY low)** | ✓✓✓ | 29, 16, 23 | 32% | 0.17 | 3 of 3 | **yes** |
+| V4 SKEW high | ✓✓✓ | 29, 25, 29 | 32% | 0.27 | 2 of 3 | yes |
+| M1 dealer gamma low | ·✓✓ | –, 28, 6 | 12% | – | 0 of 3 | no |
+| V6 VIX rising (10d) | ✓·✓ | 17, –, 8 | 13% | – | 2 of 3 | yes |
+| M5 VIX minus realized vol high | ✓·✓ | 17, –, 8 | 15% | – | 2 of 3 | yes |
+| M2 gamma percentile falling | ✓·✓ | 27, –, 26 | 18% | – | 2 of 3 | yes |
+| X5 discretionary lagging staples | ·✓✓ | –, 5, 7 | 16% | – | 2 of 3 | yes |
+| T1/T2 broken trend | ·✓· | –, 29, – | 11–12% | – | 0 of 3 | yes |
+| T3 RSI overbought | ✓·✓ | 29, –, 29 | 27% | 0.30 | 2 of 3 | no |
+
+* **Expected number of 3-of-3 signals by luck:** 2.6. Observed: 2. **No candidate meets the pre-registered rule** (3 of 3, false alarms ≤ 15%, luck share ≤ 0.05).
+* **Each reversion had a different look:**
+  * **2023:** volatility rising and the gamma percentile falling.
+  * **2025:** dealer gamma low, the dollar rising, credit and the trend breaking.
+  * **2026:** almost everything fired.
+* **Many of the signals on today are reacting to the current −2.5% dip,** not leading it.
+
+**Post-hoc (not pre-registered): pullback odds when AAPL decouples**
+* **Events:** the three major tops plus three minor (2024-03-28, 2024-07-16, 2025-10-28).
+* **The alarm** is on 40% of non-reversion days. A top followed within 30 sessions 36% of the time when on vs 12% when off. Base rate 22%; difference +24 points, circular-shift p 0.024.
+* **Lowest AAPL–SPY 20-day correlation in the 30 sessions before each top:** 0.51 (Jul 2023), 0.11 (Feb 2025), 0.01 (Jan 2026), 0.24 (Mar 2024), 0.26 (Jul 2024), 0.14 (Oct 2025). The channel median is 0.61.
+* **Today: −0.17,** below every pre-top reading in the channel.
+
+**Reading:**
+* **A possible mechanism:** AAPL is about 7% of the S&P and among its most widely held passive names. When the largest name stops moving with the index, the index's rise is being carried by a narrower group, and leadership is rotating. That is a breadth crack seen through the single biggest holding.
+* **Six events and a post-hoc probability test.** Treat it as a watch signal, combined with the tested state signals (the S&P gamma rungs), not as a timing rule.

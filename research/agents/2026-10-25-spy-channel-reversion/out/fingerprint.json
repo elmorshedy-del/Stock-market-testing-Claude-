@@ -1,0 +1,51 @@
+{
+ "minor pullbacks used": [
+  [
+   "2024-03-28",
+   "2024-04-19"
+  ],
+  [
+   "2024-07-16",
+   "2024-08-05"
+  ],
+  [
+   "2025-10-28",
+   "2025-11-20"
+  ]
+ ],
+ "normal days": 645,
+ "signals": 28,
+ "hitting 3/3": 2,
+ "expected by luck to hit 3/3 at their false-alarm rate (sum of luck shares)": 2.6369999999999996,
+ "candidates": [],
+ "today": {
+  "V4 SKEW high": true,
+  "A4 AAPL decoupling (20d corr with SPY low)": true,
+  "M1 dealer gamma low": false,
+  "V6 VIX rising (10d)": true,
+  "M5 VIX minus realized vol high": true,
+  "X5 discretionary lagging staples (XLY vs XLP)": true,
+  "X8 dollar rising (UUP)": false,
+  "M2 gamma percentile falling (10d)": true,
+  "A3 AAPL below its 50-day while S&P above": false,
+  "X7 bonds falling (TLT)": false,
+  "A2 AAPL diverging either way (20d)": false,
+  "M3 DIX low": false,
+  "A1 AAPL lagging SPY (20d)": false,
+  "X2 small caps lagging (IWM vs SPY)": false,
+  "V5 VIX not falling on up days (10d corr)": false,
+  "T3 RSI overbought": false,
+  "M4 realized vol low (vol-target max exposure)": true,
+  "T1 trend broken (close vs 50-day)": true,
+  "T2 20-day return low": true,
+  "X9 bitcoin falling": false,
+  "V2 VIX9D/VIX high": false,
+  "X1 credit lagging (HYG vs IEF)": true,
+  "V3 VVIX high": true,
+  "X4 semis lagging (SMH vs SPY)": true,
+  "T4 sessions since 52-week high": false,
+  "V1 VIX/VIX3M high": true,
+  "X6 regional banks lagging (KRE vs SPY)": false,
+  "X3 breadth narrowing (RSP vs SPY)": false
+ }
+}

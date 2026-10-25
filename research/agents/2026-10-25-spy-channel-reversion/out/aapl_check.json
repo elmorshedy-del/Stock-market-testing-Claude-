@@ -1,0 +1,27 @@
+{
+ "pullback tops counted (3 major + 3 minor)": [
+  "2023-07-31",
+  "2025-02-19",
+  "2026-01-27",
+  "2024-03-28",
+  "2024-07-16",
+  "2025-10-28"
+ ],
+ "share of non-reversion days with the alarm on": 0.39636363636363636,
+ "P(top within 30 sessions | on)": 0.36085626911314983,
+ "P(top within 30 | off)": 0.12449799196787148,
+ "base rate": 0.21818181818181817,
+ "difference": 0.23635827714527835,
+ "p (circular shift, one-sided)": 0.024,
+ "AAPL-SPY 20-day correlation in the 30 sessions before each top (min)": {
+  "2023-07-31": 0.5121193057087486,
+  "2025-02-19": 0.11363126617031129,
+  "2026-01-27": 0.013860700739508841,
+  "2024-03-28": 0.24470024048558744,
+  "2024-07-16": 0.25772614681951417,
+  "2025-10-28": 0.1406308634233982
+ },
+ "AAPL-SPY 20-day correlation, channel median": 0.610253240522568,
+ "today": -0.16903179477720806,
+ "today's percentile (past year)": 1.0
+}
