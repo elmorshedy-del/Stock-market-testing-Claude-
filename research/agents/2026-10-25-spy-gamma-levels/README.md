@@ -70,3 +70,17 @@
   * **750** (put wall, centre of the short-gamma pocket);
   * **741** (the theory's invalidation line).
 * **Caveat:** Monday's OI file (positions at Friday's close) is not yet published. The map is one day stale on positions; the 0DTE gamma at 760 is Monday's.
+
+## Amendment 1 (owner: "So most rallies hold when it flips into positive gamma"). Written before computing.
+* **Data:** SPY daily parity close and flip from the engine history (2020-01-02 to 2026-10-09) plus the Oct 12–23 rows above.
+* **Up days:** close-to-close return > 0.
+  * Normalized as in forced-flow: x = r / σ, with σ the trailing 20-day volatility known the day before.
+  * Next-10-day response c10 = (sum of the next 10 returns) / σ.
+* **Groups:** (A) up days that close **above** the flip (positive gamma at the close); (B) up days that close **below** it.
+* **Statistic:** the slope of c10 on x in each group, i.e. the share of the day's move added (+) or given back (−) over 10 sessions.
+  * Primary: A − B, 20-day block bootstrap.
+  * Prediction (forced-flow, up-day effect): **A − B > 0**. Rallies hold better in positive gamma.
+* **Secondary:**
+  * the same split for down days (forced-flow predicts no difference there);
+  * **flip reclaims**: the first close above the flip after at least 3 closes below. Reported: the share still above the flip 10 sessions later, and the mean 10-day forward return, vs all days;
+  * eras 2020–22 and 2023–26.
