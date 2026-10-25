@@ -1,0 +1,267 @@
+{
+ "M1 PRIMARY: 12m TSMOM, mean monthly strategy return minus buy-and-hold (%)": {
+  "mean": 0.005679807928425148,
+  "n": 1174,
+  "p": 0.4985
+ },
+ "M1 strategy vs buy-and-hold, mean monthly %": {
+  "TSMOM": 0.49515873719571557,
+  "buy and hold": 0.511611493107689,
+  "share of months long": 0.6874473462510531
+ },
+ "M1 contrasts": [
+  {
+   "contrast": "high vol minus low vol",
+   "value": -0.0012576350111955848,
+   "predicted sign": "+",
+   "p": 0.6045,
+   "supported": false
+  },
+  {
+   "contrast": "bear (24m down) minus bull (24m up)",
+   "value": 0.0003052712135079012,
+   "predicted sign": "+",
+   "p": 0.51475,
+   "supported": false
+  }
+ ],
+ "M1 lookback 12m: strategy mean %/month, sharpe-like": {
+  "mean": 0.49515873719571557,
+  "t": 3.1788001765955762
+ },
+ "M1 lookback 3m: strategy mean %/month, sharpe-like": {
+  "mean": 0.2161122906617496,
+  "t": 1.3871566224038885
+ },
+ "M1 lookback 1m: strategy mean %/month, sharpe-like": {
+  "mean": 0.174602705980941,
+  "t": 1.1210598238530491
+ },
+ "M2 PRIMARY: XS momentum WML mean %/month": {
+  "mean": 0.4575548806332191,
+  "n": 441,
+  "p": 0.03725
+ },
+ "M2 contrasts": [
+  {
+   "contrast": "bear (24m down) minus bull (24m up)",
+   "value": -0.0037072453735271025,
+   "predicted sign": "-",
+   "p": 0.3025,
+   "supported": false
+  }
+ ],
+ "M2 rebound months: mean %/month, n, share negative": [
+  -0.8746839231326419,
+  38,
+  0.5526315789473685
+ ],
+ "M2 universe size (median stocks per month)": 40.0,
+ "M3 PRIMARY: weekly reversal gross mean bp/week": {
+  "mean": 21.291644757160764,
+  "n": 1852,
+  "p": 0.0
+ },
+ "M3 net of 20 bp/week (10 bp per leg), mean bp/week": 1.2916447571607652,
+ "M3 contrasts": [
+  {
+   "contrast": "high vol minus low vol",
+   "value": 0.00333467598372275,
+   "predicted sign": "+",
+   "p": 0.00275,
+   "supported": true
+  },
+  {
+   "contrast": "below 200d minus above 200d",
+   "value": 0.003125930838947725,
+   "predicted sign": "+",
+   "p": 0.01775,
+   "supported": true
+  }
+ ],
+ "M4 PRIMARY: pooled 5d->5d slope": {
+  "slope": -0.02539147447045705,
+  "p": 0.0
+ },
+ "M4 cells": {
+  "phase: uptrend": {
+   "slope": -0.025733212861642145,
+   "lo90": -0.03878978929301618,
+   "hi90": -0.014286174568347507,
+   "stock-days": 177550
+  },
+  "phase: downtrend": {
+   "slope": -0.026454890284088452,
+   "lo90": -0.04559296362003313,
+   "hi90": -0.007645980794951088,
+   "stock-days": 78356
+  },
+  "phase: mixed": {
+   "slope": -0.025875524506550278,
+   "lo90": -0.03899676375800987,
+   "hi90": -0.012826559920633716,
+   "stock-days": 172229
+  },
+  "52w: near high (>=95%)": {
+   "slope": -0.020371589738093342,
+   "lo90": -0.034129984482122275,
+   "hi90": -0.007895777913559304,
+   "stock-days": 142731
+  },
+  "52w: far (<80%)": {
+   "slope": -0.019843917450563856,
+   "lo90": -0.03749301371802878,
+   "hi90": -0.002812699494897503,
+   "stock-days": 98799
+  },
+  "all": {
+   "slope": -0.02539147447045705,
+   "lo90": -0.03512866442708072,
+   "hi90": -0.01662677984175791,
+   "stock-days": 442229
+  },
+  "market vol: high vol": {
+   "slope": -0.0378554958550407,
+   "lo90": -0.05625602692471509,
+   "hi90": -0.02039564193209721,
+   "stock-days": 158875
+  },
+  "market vol: low vol": {
+   "slope": -0.019035693515743083,
+   "lo90": -0.032377287375917725,
+   "hi90": -0.007606405529720987,
+   "stock-days": 149218
+  },
+  "market vol: mid vol": {
+   "slope": -0.019633312446517438,
+   "lo90": -0.037316756332295066,
+   "hi90": -0.001582922640522153,
+   "stock-days": 134136
+  },
+  "market trend: above 200d": {
+   "slope": -0.02229212995013008,
+   "lo90": -0.03239340148442269,
+   "hi90": -0.012551439576268504,
+   "stock-days": 338985
+  },
+  "market trend: below 200d": {
+   "slope": -0.035221685649835896,
+   "lo90": -0.05770850599655916,
+   "hi90": -0.0121638244063795,
+   "stock-days": 103244
+  }
+ },
+ "M4 contrasts": [
+  {
+   "contrast": "phase: uptrend minus phase: downtrend",
+   "value": 0.0007216774224463075,
+   "predicted sign": "+",
+   "p": 0.4765,
+   "supported": false
+  },
+  {
+   "contrast": "52w: near high (>=95%) minus 52w: far (<80%)",
+   "value": -0.0005276722875294862,
+   "predicted sign": "+",
+   "p": 0.508,
+   "supported": false
+  }
+ ],
+ "M5 PRIMARY: same-hour persistence, mean bp per slot": {
+  "mean": 0.6042936975472865,
+  "n": 695,
+  "p": 0.0805
+ },
+ "Holm-adjusted primary p": {
+  "M3": 0,
+  "M4": 0,
+  "M2": 0.11174999999999999,
+  "M5": 0.161,
+  "M1": 0.4985
+ },
+ "today": {
+  "S&P trend": "above 200d",
+  "state": "bull (24m up)",
+  "vol third": "low vol",
+  "S&P 12m return %": 13.796463667053892
+ },
+ "today: stock phases": {
+  "AAPL": {
+   "phase": "uptrend",
+   "% of 52w high": 99.85928716539621,
+   "12-1m momentum %": 23.17194771162743,
+   "past 5d %": 1.2432363703149152
+  },
+  "MSFT": {
+   "phase": "uptrend",
+   "% of 52w high": 96.5148584016977,
+   "12-1m momentum %": -0.9482190702537863,
+   "past 5d %": -0.8581378191280464
+  },
+  "NVDA": {
+   "phase": "mixed",
+   "% of 52w high": 88.17923502342299,
+   "12-1m momentum %": 12.785815935257382,
+   "past 5d %": -1.4804082084059922
+  },
+  "AMZN": {
+   "phase": "mixed",
+   "% of 52w high": 87.31779789909858,
+   "12-1m momentum %": 2.0186686803453258,
+   "past 5d %": -0.8000000000000007
+  },
+  "GOOGL": {
+   "phase": "mixed",
+   "% of 52w high": 79.53156707030337,
+   "12-1m momentum %": 22.365654391985167,
+   "past 5d %": -5.983735606431029
+  },
+  "META": {
+   "phase": "mixed",
+   "% of 52w high": 82.64252021285657,
+   "12-1m momentum %": 11.850084056902976,
+   "past 5d %": -9.404652329016939
+  },
+  "TSLA": {
+   "phase": "mixed",
+   "% of 52w high": 75.98187260362758,
+   "12-1m momentum %": -22.286227559159254,
+   "past 5d %": 4.933468634353
+  },
+  "AVGO": {
+   "phase": "downtrend",
+   "% of 52w high": 66.79817841296935,
+   "12-1m momentum %": -4.988773150938441,
+   "past 5d %": -2.1505725701045586
+  },
+  "JPM": {
+   "phase": "mixed",
+   "% of 52w high": 90.79905614288492,
+   "12-1m momentum %": 6.335173490747215,
+   "past 5d %": -2.3960952016920722
+  },
+  "XOM": {
+   "phase": "uptrend",
+   "% of 52w high": 100.0,
+   "12-1m momentum %": 42.31374530551402,
+   "past 5d %": 2.363398752544099
+  },
+  "UNH": {
+   "phase": "uptrend",
+   "% of 52w high": 95.81528371485959,
+   "12-1m momentum %": 7.47159772692465,
+   "past 5d %": 4.1501641546661805
+  },
+  "LLY": {
+   "phase": "uptrend",
+   "% of 52w high": 97.4569345476871,
+   "12-1m momentum %": 34.0982286463601,
+   "past 5d %": 1.3070436869209168
+  }
+ },
+ "today: share of 81 stocks in uptrend / downtrend / mixed": [
+  0.37037037037037035,
+  0.12345679012345678,
+  0.5061728395061729
+ ]
+}

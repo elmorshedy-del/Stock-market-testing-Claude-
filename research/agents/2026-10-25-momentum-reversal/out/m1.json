@@ -1,0 +1,174 @@
+{
+ "12m lookback": {
+  "long minus short, %/month": 0.7213568522491288,
+  "months long / short": [
+   815,
+   357
+  ],
+  "p (<= 0)": 0.033,
+  "cells": [
+   {
+    "regime": "vol",
+    "cell": "high vol",
+    "long minus short %/month": 0.8373681041365566,
+    "months long / short": [
+     181,
+     184
+    ],
+    "lo90": -0.38243356848738946,
+    "hi90": 1.899179485440287
+   },
+   {
+    "regime": "vol",
+    "cell": "low vol",
+    "long minus short %/month": 0.23326943055568639,
+    "months long / short": [
+     355,
+     79
+    ],
+    "lo90": -0.6601737950436672,
+    "hi90": 0.9571955143649804
+   },
+   {
+    "regime": "vol",
+    "cell": "mid vol",
+    "long minus short %/month": 1.2201492671685192,
+    "months long / short": [
+     268,
+     77
+    ],
+    "lo90": 0.13776154983315947,
+    "hi90": 2.5615735233736276
+   },
+   {
+    "regime": "state",
+    "cell": "bear (24m down)",
+    "long minus short %/month": 0.8008684293609852,
+    "months long / short": [
+     97,
+     190
+    ],
+    "lo90": -0.5989078090399952,
+    "hi90": 2.269771540309157
+   },
+   {
+    "regime": "state",
+    "cell": "bull (24m up)",
+    "long minus short %/month": 0.7141324124327585,
+    "months long / short": [
+     718,
+     167
+    ],
+    "lo90": 0.12750640126885576,
+    "hi90": 1.2813430578194946
+   },
+   {
+    "regime": "trend",
+    "cell": "above 10m avg",
+    "long minus short %/month": 0.06445161413624993,
+    "months long / short": [
+     716,
+     81
+    ],
+    "lo90": -1.0738037036654056,
+    "hi90": 1.2611262714318063
+   },
+   {
+    "regime": "trend",
+    "cell": "below 10m avg",
+    "long minus short %/month": 0.6114410822952591,
+    "months long / short": [
+     99,
+     276
+    ],
+    "lo90": -0.7221581191570969,
+    "hi90": 1.8548117837412965
+   },
+   {
+    "regime": "era",
+    "cell": "1928-49",
+    "long minus short %/month": 0.9512034629202696,
+    "months long / short": [
+     125,
+     127
+    ],
+    "lo90": -0.7308361196736544,
+    "hi90": 2.521522425258456
+   },
+   {
+    "regime": "era",
+    "cell": "1950-79",
+    "long minus short %/month": 0.3466414039281118,
+    "months long / short": [
+     246,
+     113
+    ],
+    "lo90": -0.5700353266996917,
+    "hi90": 1.1638010803363092
+   },
+   {
+    "regime": "era",
+    "cell": "1980-99",
+    "long minus short %/month": -0.1376820184058155,
+    "months long / short": [
+     203,
+     37
+    ],
+    "lo90": -1.1380817718266851,
+    "hi90": 0.6794378238539176
+   },
+   {
+    "regime": "era",
+    "cell": "2000-22",
+    "long minus short %/month": 0.702393526567184,
+    "months long / short": [
+     199,
+     74
+    ],
+    "lo90": -0.9573477875388496,
+    "hi90": 1.947258013808822
+   },
+   {
+    "regime": "era",
+    "cell": "channel 2022-26",
+    "long minus short %/month": 0.20307291522897816,
+    "months long / short": [
+     42,
+     6
+    ],
+    "lo90": -0.9791856663411798,
+    "hi90": 1.3731027028565486
+   }
+  ],
+  "contrasts": [
+   {
+    "contrast": "high vol minus low vol",
+    "value %/month": 0.6040986735808702,
+    "p (<= 0)": 0.248,
+    "supported": false
+   },
+   {
+    "contrast": "bear (24m down) minus bull (24m up)",
+    "value %/month": 0.08673601692822672,
+    "p (<= 0)": 0.46725,
+    "supported": false
+   }
+  ]
+ },
+ "3m lookback": {
+  "long minus short, %/month": 0.16709410420423543,
+  "months long / short": [
+   754,
+   429
+  ],
+  "p (<= 0)": 0.28825
+ },
+ "1m lookback": {
+  "long minus short, %/month": 0.15541293953901578,
+  "months long / short": [
+   706,
+   478
+  ],
+  "p (<= 0)": 0.31
+ }
+}
