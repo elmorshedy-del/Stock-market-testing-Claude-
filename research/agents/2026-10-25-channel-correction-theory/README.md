@@ -150,3 +150,52 @@ What each top looked like:
   * The yen is a **spark** if (a) passes.
   * It is **fuel** if the yen strengthens in at least 6 of 8 corrections during the decline, against at most half of the bounces.
   * Otherwise it is **context** only.
+
+## Amendment 2 results: the yen (`yen.py`, `posthoc_shock.py`, `figure_yen.py`; `out/yen.json`, `out/yen_episodes.csv`, `out/shock_types.json`, `out/yen_carry.png`)
+![yen carry](out/yen_carry.png)
+
+**(a) Spark: passes the pre-registered rule, but not the luck check.**
+* Corrections started after the yen had **firmed** over the prior 20 days: z −0.76 vs +0.49 for bounces; 7 of 8 corrections beyond the bounce median, all 3 main corrections included; AUC 0.78.
+* **Best-of-29 luck check: p 0.58.** Breadth is still the only separator beyond luck (p 0.051 with 29 indicators).
+* The yen 5-day change (AUC 0.72) and yen volatility (AUC 0.77) do not pass the rule.
+* By the pre-registered reading the yen counts as a "spark", but it is a weak one. It adds little once breadth is known: the corrections with the firmest yen (Nov 2022, Feb 2025) also had above-normal breadth.
+
+**(b) Before the tops** (10-day pre-top z, yen 20-day): the yen was firming before Jul 2023 (−1.0) and Feb 2025 (−1.5), but not before Jan 2026 (+0.3), Jul 2024 (+0.8) or Oct 2025 (+0.8).
+
+**(c) Fuel: no.**
+* The yen strengthened during only **2 of 8** corrections (start to decided) vs **9 of 13** bounces. The median USD/JPY move was +1.6% in corrections and −1.2% in bounces.
+* No link with depth (correlation 0.21).
+
+**What each correction's shock was (post hoc, descriptive; USD/JPY and TLT from high to trough):**
+
+| Correction | S&P | USD/JPY | TLT | Shock |
+|---|---|---|---|---|
+| Dec 2022 | −7% | **−3.9%** | −3% | **yen** (BoJ yield-curve-control tweak) |
+| Feb 2023 | −8% | +4.8% | −2% | rates |
+| Jul–Oct 2023 | −10% | +6.6% | **−16%** | **rates** |
+| Apr 2024 | −5.5% | +2.2% | −6% | rates |
+| Jul–Aug 2024 | −8.5% | **−8.3%** | +5% | **yen** (carry unwind) |
+| Feb–Apr 2025 | −19% | −2.8% | 0% | yen / haven (tariffs) |
+| Nov 2025 | −5% | +2.8% | −3% | rates |
+| Jan–Mar 2026 | −9% | +3.8% | −1% | other |
+
+## Updated theory: state × shock
+1. **The state decides whether a dip turns into a correction:** broad participation means crowded and fragile (breadth, the one separator beyond luck).
+2. **The shock comes through financing costs, by one of two routes:**
+   * **US rates** (yields up, yen down): 4 of 8;
+   * **the yen** (carry unwind, yen up): 3 of 8.
+   * Both make leverage more expensive or force it to unwind. That fits margin debt being high in both outcomes: the fuel is always there, and the state decides whether it ignites.
+3. **The two corrections that started from narrow breadth (Feb 2023, Nov 2025) were both rates shocks, and both were shallow (−7.8%, −5.1%).** A strong enough rates shock can break even a rolling, narrow tape, but only into a shallow correction.
+
+## Today, updated
+* **Yen:**
+  * USD/JPY 156.8, −0.7% since the Oct 6 high;
+  * yen 20-day z at the dip's start +0.67 (bounce side);
+  * yen volatility at the 20th percentile (calm).
+  * **No carry stress.**
+* **Rates are the live risk:**
+  * the 10-year was 4.99% at end-September (4.60% in July), with the Fed hiking;
+  * TLT 20-day z at the dip's start −0.75.
+  * The only narrow-breadth corrections in the channel were rates shocks.
+* **The live call is unchanged:** a new high above 7,818.93 before a close at or below 7,427.98.
+* **The main way it fails:** a rates shock (yields breaking higher, TLT falling hard). Even then, the channel's history points to a shallow correction rather than a deep one.

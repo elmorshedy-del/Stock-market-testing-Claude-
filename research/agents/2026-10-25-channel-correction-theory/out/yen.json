@@ -1,0 +1,188 @@
+{
+ "(a) spark: dip anatomy": {
+  "yen 20-day (USD/JPY change)": {
+   "mean z corrections": -0.7594543060345288,
+   "mean z bounces": 0.4868508000576254,
+   "corrections beyond bounce median": 7,
+   "main corrections beyond": 3,
+   "AUC": 0.7788461538461539,
+   "passes rule": true,
+   "per episode": {
+    "boun 2022-10-13": 0.69,
+    "boun 2022-10-28": 0.67,
+    "corr 2022-11-30": -3.63,
+    "corr 2023-02-02": -0.55,
+    "boun 2023-06-15": 0.93,
+    "corr 2023-07-31": -0.79,
+    "corr 2024-03-28": 0.14,
+    "corr 2024-07-16": -0.07,
+    "boun 2024-10-18": 2.23,
+    "boun 2024-11-11": 1.2,
+    "boun 2024-12-06": -0.74,
+    "boun 2025-01-23": -0.87,
+    "corr 2025-02-19": -1.42,
+    "boun 2025-07-28": 1.24,
+    "boun 2025-10-08": 0.93,
+    "corr 2025-10-28": 0.81,
+    "boun 2025-12-11": 0.01,
+    "boun 2026-01-12": 0.65,
+    "corr 2026-01-27": -0.58,
+    "boun 2026-06-02": 0.53,
+    "boun 2026-08-13": -1.14
+   },
+   "today (open episode)": 0.6652684274292029
+  },
+  "yen 5-day (USD/JPY change)": {
+   "mean z corrections": -0.24651744631601252,
+   "mean z bounces": 0.5174372214753739,
+   "corrections beyond bounce median": 7,
+   "main corrections beyond": 2,
+   "AUC": 0.7211538461538461,
+   "passes rule": false,
+   "per episode": {
+    "boun 2022-10-13": 0.8,
+    "boun 2022-10-28": -0.91,
+    "corr 2022-11-30": -2.03,
+    "corr 2023-02-02": 0.73,
+    "boun 2023-06-15": 1.25,
+    "corr 2023-07-31": 0.84,
+    "corr 2024-03-28": -0.01,
+    "corr 2024-07-16": -1.75,
+    "boun 2024-10-18": 0.94,
+    "boun 2024-11-11": 0.85,
+    "boun 2024-12-06": 1.12,
+    "boun 2025-01-23": -0.52,
+    "corr 2025-02-19": -0.58,
+    "boun 2025-07-28": 0.82,
+    "boun 2025-10-08": 1.7,
+    "corr 2025-10-28": 0.62,
+    "boun 2025-12-11": -0.22,
+    "boun 2026-01-12": 0.62,
+    "corr 2026-01-27": 0.21,
+    "boun 2026-06-02": 0.18,
+    "boun 2026-08-13": 0.08
+   },
+   "today (open episode)": 0.007328367656682637
+  },
+  "yen volatility percentile": {
+   "mean z corrections": 0.6817940822744316,
+   "mean z bounces": -0.2016342333368883,
+   "corrections beyond bounce median": 6,
+   "main corrections beyond": 3,
+   "AUC": 0.7692307692307693,
+   "passes rule": false,
+   "per episode": {
+    "boun 2022-10-13": 0.39,
+    "boun 2022-10-28": 0.74,
+    "corr 2022-11-30": 1.93,
+    "corr 2023-02-02": 1.18,
+    "boun 2023-06-15": -1.08,
+    "corr 2023-07-31": 0.65,
+    "corr 2024-03-28": -0.19,
+    "corr 2024-07-16": 0.91,
+    "boun 2024-10-18": 0.47,
+    "boun 2024-11-11": 0.46,
+    "boun 2024-12-06": 0.04,
+    "boun 2025-01-23": -0.71,
+    "corr 2025-02-19": 0.35,
+    "boun 2025-07-28": -1.06,
+    "boun 2025-10-08": -0.03,
+    "corr 2025-10-28": -0.59,
+    "boun 2025-12-11": -1.28,
+    "boun 2026-01-12": -0.66,
+    "corr 2026-01-27": 1.21,
+    "boun 2026-06-02": -1.38,
+    "boun 2026-08-13": 1.49
+   },
+   "today (open episode)": -0.7892990602295106
+  }
+ },
+ "best-of-29 luck check": {
+  "indicators": 29,
+  "top 5 AUC": {
+   "share of panel above 50-day": 0.894,
+   "yen 20-day (USD/JPY change)": 0.779,
+   "yen volatility percentile": 0.769,
+   "bitcoin (20d)": 0.731,
+   "yen 5-day (USD/JPY change)": 0.721
+  },
+  "family-wise p": {
+   "share of panel above 50-day": 0.0506,
+   "yen 20-day (USD/JPY change)": 0.5766,
+   "yen volatility percentile": 0.6154,
+   "yen 5-day (USD/JPY change)": 0.9068
+  }
+ },
+ "(b) pre-top 10-day profile (z)": {
+  "yen 20-day (USD/JPY change)": {
+   "2023-07-31": -1.0030033864566064,
+   "2025-02-19": -1.4793291472972423,
+   "2026-01-27": 0.2822712433067312,
+   "2024-03-28": -0.15520400502640494,
+   "2024-07-16": 0.832682357649469,
+   "2025-10-28": 0.8038324439943941
+  },
+  "yen 5-day (USD/JPY change)": {
+   "2023-07-31": 0.2353656129320772,
+   "2025-02-19": -0.7016613466189673,
+   "2026-01-27": -0.11740561969550316,
+   "2024-03-28": 0.9680031657657546,
+   "2024-07-16": -0.2878869584372106,
+   "2025-10-28": -0.09246889378369008
+  },
+  "yen volatility percentile": {
+   "2023-07-31": -0.5282176834028725,
+   "2025-02-19": 0.09302210555897421,
+   "2026-01-27": -0.5844505953347637,
+   "2024-03-28": -0.4117352229725262,
+   "2024-07-16": -0.5389287142470424,
+   "2025-10-28": 0.25636532593256334
+  }
+ },
+ "(c) fuel: yen during the decline": {
+  "corrections with yen strengthening (start -> decided)": "2 of 8",
+  "bounces with yen strengthening (start -> decided)": "9 of 13",
+  "median USD/JPY % start -> decided: corrections / bounces": [
+   1.562860774635455,
+   -1.1600636638579687
+  ],
+  "corrections: USD/JPY % high -> trough": {
+   "corr 2022-11-30": -3.86,
+   "corr 2023-02-02": 4.82,
+   "corr 2023-07-31": 6.6,
+   "corr 2024-03-28": 2.17,
+   "corr 2024-07-16": -8.27,
+   "corr 2025-02-19": -2.76,
+   "corr 2025-10-28": 2.78,
+   "corr 2026-01-27": 3.75
+  },
+  "corrections: S&P depth %": {
+   "corr 2022-11-30": -7.3,
+   "corr 2023-02-02": -7.8,
+   "corr 2023-07-31": -10.3,
+   "corr 2024-03-28": -5.5,
+   "corr 2024-07-16": -8.5,
+   "corr 2025-02-19": -18.9,
+   "corr 2025-10-28": -5.1,
+   "corr 2026-01-27": -9.1
+  },
+  "corr(yen move high->trough, depth) across corrections": 0.20955452664811985
+ },
+ "reading": "spark",
+ "today": {
+  "USD/JPY": 156.81399536132812,
+  "Oct 6 (S&P high)": 157.96299743652344,
+  "USD/JPY % since Oct 6": -0.7300452095540422,
+  "10-day z": {
+   "yen 20-day (USD/JPY change)": 0.24940904498320435,
+   "yen 5-day (USD/JPY change)": -0.12148974093443751,
+   "yen volatility percentile": -0.7933156967960744
+  },
+  "yen 20-day raw %": -1.2654485080044964,
+  "yen vol percentile raw": 0.20318725099601595,
+  "USD/JPY 1y range": [
+   151.7310028076172,
+   163.86399841308594
+  ]
+ }
+}

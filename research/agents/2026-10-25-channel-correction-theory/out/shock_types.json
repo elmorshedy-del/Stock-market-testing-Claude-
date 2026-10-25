@@ -1,0 +1,50 @@
+{
+ "corr 2022-11-30": {
+  "S&P depth %": -7.3,
+  "USD/JPY %": -3.9,
+  "TLT %": -3.1,
+  "kind": "yen shock"
+ },
+ "corr 2023-02-02": {
+  "S&P depth %": -7.8,
+  "USD/JPY %": 4.8,
+  "TLT %": -2.3,
+  "kind": "rates shock"
+ },
+ "corr 2023-07-31": {
+  "S&P depth %": -10.3,
+  "USD/JPY %": 6.6,
+  "TLT %": -15.7,
+  "kind": "rates shock"
+ },
+ "corr 2024-03-28": {
+  "S&P depth %": -5.5,
+  "USD/JPY %": 2.2,
+  "TLT %": -5.8,
+  "kind": "rates shock"
+ },
+ "corr 2024-07-16": {
+  "S&P depth %": -8.5,
+  "USD/JPY %": -8.3,
+  "TLT %": 4.9,
+  "kind": "yen shock"
+ },
+ "corr 2025-02-19": {
+  "S&P depth %": -18.9,
+  "USD/JPY %": -2.8,
+  "TLT %": 0.2,
+  "kind": "yen shock"
+ },
+ "corr 2025-10-28": {
+  "S&P depth %": -5.1,
+  "USD/JPY %": 2.8,
+  "TLT %": -3.0,
+  "kind": "rates shock"
+ },
+ "corr 2026-01-27": {
+  "S&P depth %": -9.1,
+  "USD/JPY %": 3.8,
+  "TLT %": -1.2,
+  "kind": "other"
+ }
+}
