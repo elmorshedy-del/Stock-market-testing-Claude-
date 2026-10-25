@@ -84,3 +84,23 @@
   * the same split for down days (forced-flow predicts no difference there);
   * **flip reclaims**: the first close above the flip after at least 3 closes below. Reported: the share still above the flip 10 sessions later, and the mean 10-day forward return, vs all days;
   * eras 2020–22 and 2023–26.
+
+## Amendment 1 results (`rallies.py`, `figure_rallies.py`; `out/rallies.json`, `out/reclaims.csv`, `out/rallies_flip.png`)
+![rallies vs flip](out/rallies_flip.png)
+
+| SPY, share of the day's move added (+) or given back (−) over the next 10 sessions | Closed above the flip | Closed below the flip | A − B | p |
+|---|---|---|---|---|
+| **Up days, 2020–2026 (primary)** (564 / 360 days) | **+13%** | **−53%** | +0.66 | 0.097 |
+| Up days, 2023–2026 (channel era) | +19% | −30% | +0.49 | 0.052 |
+| Up days, 2020–2022 | +6% | −97% | +1.03 | 0.24 |
+| Down days, 2020–2026 (181 / 570 days) | **+79%** (keeps going) | −13% | +0.92 | 0.14 |
+
+**Flip reclaims** (first close above the flip after at least 3 closes below), 79 events since 2020:
+* **65% are still above the flip 10 sessions later.** The mean 10-day return is **+0.90%** (median +1.25%) vs +0.57% on all days.
+* Channel era: 51 events, 65%, +0.84%.
+
+**Verdict by the pre-set rule: "no reliable difference"** (p 0.097).
+* The direction is as predicted in every era, and the gap is large: rallies above the flip hold and slightly extend; rallies below it give back about a third to a half.
+* **Down days above the flip continue strongly.** A selloff that gets through dealer damping tends to be real.
+* **Reading: suggestive, not proven.**
+* **Use:** a **close back above 774** is the gamma confirmation for the bounce. A bounce that stays below 774 has historically been prone to give back half.

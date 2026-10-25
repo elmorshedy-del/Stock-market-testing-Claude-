@@ -1,0 +1,61 @@
+{
+ "period": [
+  "2020-02-03",
+  "2026-10-09"
+ ],
+ "PRIMARY up days, 2020-2026": {
+  "above flip: share of day's move added (+) / given back (-) by day 10": 0.13139855237925896,
+  "below flip": -0.532346029827835,
+  "A - B": 0.663744582207094,
+  "p (A - B <= 0)": 0.097,
+  "days above / below": [
+   564,
+   360
+  ]
+ },
+ "down days, 2020-2026": {
+  "above flip: share of day's move added (+) / given back (-) by day 10": 0.7929374126081143,
+  "below flip": -0.1269925007696715,
+  "A - B": 0.9199299133777858,
+  "p (A - B <= 0)": 0.13875,
+  "days above / below": [
+   181,
+   570
+  ]
+ },
+ "up days, 2020-2022": {
+  "above flip: share of day's move added (+) / given back (-) by day 10": 0.057648629088391266,
+  "below flip": -0.973579632160938,
+  "A - B": 1.0312282612493293,
+  "p (A - B <= 0)": 0.2425,
+  "days above / below": [
+   256,
+   131
+  ]
+ },
+ "up days, 2023-2026 (channel era)": {
+  "above flip: share of day's move added (+) / given back (-) by day 10": 0.19318917587177079,
+  "below flip": -0.30006073292838403,
+  "A - B": 0.49324990880015485,
+  "p (A - B <= 0)": 0.05175,
+  "days above / below": [
+   308,
+   229
+  ]
+ },
+ "flip reclaims (first close above after >= 3 below)": {
+  "events": 79,
+  "still above after 10 sessions": 0.6455696202531646,
+  "mean share of next 10 sessions above": 0.539240506329114,
+  "mean next 10-day return %": 0.8966976447171828,
+  "median": 1.2497497420417947,
+  "all days: mean next 10-day return %": 0.5683494351057198,
+  "all days: share of days above flip": 0.44821533060269164,
+  "channel era (2023+) events / still above / mean 10d %": [
+   51,
+   0.6470588235294118,
+   0.8418885551062014
+  ]
+ },
+ "verdict": "no reliable difference"
+}
