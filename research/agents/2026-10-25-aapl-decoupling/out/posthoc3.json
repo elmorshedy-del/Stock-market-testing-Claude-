@@ -1,0 +1,43 @@
+{
+ "1990-2026": {
+  "P(dip extends to -5% first | alarm)": 0.3561643835616438,
+  "days, episodes (alarm)": [
+   438,
+   182
+  ],
+  "P(dip extends to -5% first | no alarm)": 0.3926247288503254,
+  "days, episodes (no alarm)": [
+   1383,
+   498
+  ]
+ },
+ "2011-2026": {
+  "P(dip extends to -5% first | alarm)": 0.44751381215469616,
+  "days, episodes (alarm)": [
+   181,
+   82
+  ],
+  "P(dip extends to -5% first | no alarm)": 0.3906810035842294,
+  "days, episodes (no alarm)": [
+   558,
+   224
+  ]
+ },
+ "channel 2022-2026": {
+  "P(dip extends to -5% first | alarm)": 0.359375,
+  "days, episodes (alarm)": [
+   64,
+   29
+  ],
+  "P(dip extends to -5% first | no alarm)": 0.33064516129032256,
+  "days, episodes (no alarm)": [
+   124,
+   49
+  ]
+ },
+ "today": {
+  "date": "2026-10-23",
+  "distance %": -2.497144693845421,
+  "alarm": true
+ }
+}

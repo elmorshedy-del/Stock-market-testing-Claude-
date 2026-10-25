@@ -144,3 +144,54 @@
   * R3b pass → "**the decoupling warning is real and general**";
   * R3b fail and R3a pass → "**US/AAPL-only, unconfirmed**";
   * R3a fail and R3b fail → "**near-the-high artifact**".
+
+## Amendment 2 results (`round3.py`; `out/r3a.json`, `out/r3b.json`, `out/r3b_markets.csv`, `out/r3_overall.json`)
+**R3a, US near-the-high control: pass (narrowly), but the pass comes from the discovery era.**
+
+| Window | Distance-adjusted difference | Raw difference | p (shift) |
+|---|---|---|---|
+| **2011–2026 (R3a primary)** | **+10.1 points** | +15.3 | **0.044** |
+| 2011–2022 (out of sample) | +4.6 | +10.1 | 0.26 |
+| channel 2022–2026 (discovery) | +22.9 | +27.1 | 0.031 |
+| 1990–2022 | −2.8 | +0.2 | 0.72 |
+| 1990–2010 | −7.5 | −5.9 | 0.90 |
+
+* Logistic regression, 2011–2026: `ahead ~ AAPL alarm + distance quintiles + dispersion alarm`. AAPL coefficient +0.74, block-bootstrap p 0.0085.
+* About half the raw out-of-sample edge was the "near the high" effect.
+
+**R3b, 12 other markets (largest stock vs its own index, 2000–2026, 348 tops): fail.**
+* Average distance-adjusted difference **−3.2 points**, p 0.98 (common shift).
+* 5 of 12 markets positive; plain average −0.7 points (p 0.67).
+* No market has p < 0.05 in the positive direction. Samsung/KOSPI is the most negative (−17 points).
+* None of the 12 pairs was dropped.
+
+**Pre-registered overall verdict (round 3): "US/AAPL-only, unconfirmed."**
+
+### Post hoc (`posthoc3.py`; `out/posthoc3.json`; descriptive): today's question
+**Setup:** the S&P is 2.5% below its 252-day high with the AAPL alarm on. How often does a 1.5–3.5% dip reach −5% before a new high?
+
+| Window | Alarm on | Alarm off |
+|---|---|---|
+| 1990–2026 | 36% (182 episodes) | 39% (498) |
+| 2011–2026 | 45% (82) | 39% (224) |
+| channel | 36% (29) | 33% (49) |
+
+* No material difference: the base rate is about 40% either way.
+
+## Verdict across all three rounds
+1. **What survives:**
+   * In the US since 2011, AAPL's decoupling has gone with more S&P tops.
+   * This is not earnings jumps (H3) and not general dispersion (H4).
+   * It partly survives the near-the-high control.
+2. **What fails:**
+   * The pre-registered out-of-sample test (H1, 1990–2022). After the near-the-high control, 2011–2022 is +4.6 points, p 0.26.
+   * The proposed mechanism ("a narrowing rally": round 2).
+   * Generalization: "the largest stock decoupling" does nothing in 12 other markets.
+3. **Reading:**
+   * Most of the evidence comes from the channel in which it was noticed (2022–2026).
+   * There is no mechanism that survived testing, and no out-of-sample confirmation.
+   * By the protocol this is an **unconfirmed lead, most likely a feature of this one regime, not a law**.
+4. **Today (Oct 23):**
+   * AAPL's correlation is −0.17 (drop-2 −0.14): the alarm is on and robust.
+   * The S&P is −2.5% from its high, and the alarm did not change the odds that a dip like this extends to −5%.
+   * Treat it as context, not a trade signal.
