@@ -1,0 +1,81 @@
+{
+ "R2a intraday minus overnight (annualized, log %)": {
+  "AAPL 2020-2026": 30.008163009273627,
+  "peer average 2020-2026": -6.566888150472682,
+  "AAPL 2011-2019": -18.290360983683254,
+  "per peer 2020-2026": {
+   "MSFT": -1.6388846663596472,
+   "AMZN": -20.541076552537213,
+   "GOOGL": 11.9865736282255,
+   "META": 5.317254936327418,
+   "NVDA": -27.958308098019458
+  },
+  "(i) AAPL minus peers": 36.57505115974631,
+  "p (i)": 0.0,
+  "(ii) AAPL 2020-26 minus 2011-19": 48.29852399295688,
+  "p (ii)": 0.0005
+ },
+ "R2a verdict": "pass",
+ "R2b buyback execution 2020-2026": {
+  "open windows: intraday / overnight (annualized %)": [
+   11.560324616440491,
+   -6.152868443372511
+  ],
+  "blackout: intraday / overnight (annualized %)": [
+   39.03111864515425,
+   -1.364174149008522
+  ],
+  "open minus blackout (intraday - overnight, annualized %)": -22.682099734349773,
+  "p (<= 0, quarter bootstrap)": 0.7835
+ },
+ "R2b contrast 2013-2019": {
+  "open windows: intraday / overnight (annualized %)": [
+   16.619235406479895,
+   4.941625433010172
+  ],
+  "blackout: intraday / overnight (annualized %)": [
+   -6.17426065056222,
+   23.21032134081441
+  ],
+  "open minus blackout (intraday - overnight, annualized %)": 41.06219196484635,
+  "p (<= 0, quarter bootstrap)": 0.0035
+ },
+ "R2b verdict": "fail",
+ "R2c residual autocorrelation, lags 1-5 summed, 2020-2026": {
+  "AAPL": 0.00026104039808307056,
+  "peers": {
+   "MSFT": 0.06168974826206049,
+   "AMZN": 0.001540068201093368,
+   "GOOGL": -0.02889482251624114,
+   "META": 0.040319247166657295,
+   "NVDA": -0.0653113794427135
+  },
+  "AAPL minus peer average": -0.001607531936088233,
+  "p (<= 0, block bootstrap)": 0.4915
+ },
+ "R2c verdict": "fail",
+ "R2d AAPL after a top-tenth 20-day residual run-up": {
+  "signal days": 225,
+  "mean next-20d residual on signal days %": 0.17181009599764463,
+  "minus all days %": -0.609149674329321,
+  "p (two-sided, block bootstrap)": 0.504
+ },
+ "R2d contrast: peers pooled": {
+  "signal days": 1032,
+  "mean next-20d residual on signal days %": 1.8478010834903469,
+  "minus all days %": 0.9382303634283292,
+  "p (two-sided, block bootstrap)": 0.249
+ },
+ "R2d reading": "neither",
+ "today": {
+  "AAPL 20-day residual %": 2.579786937701126,
+  "top-tenth signal on": false,
+  "in blackout": true
+ },
+ "verdicts": {
+  "R2a": "pass",
+  "R2b": "fail",
+  "R2c": "fail",
+  "R2d": "neither"
+ }
+}

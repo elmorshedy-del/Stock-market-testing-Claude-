@@ -115,3 +115,36 @@ Anatomy of decoupling: `log corr = log β + log σ_m − log σ_X`. For each ala
 * Statistic: mean outcome on signal days − mean on all days, 2020–2026. 20-day block bootstrap, two-sided p.
 * Same for the peers pooled, as a contrast.
 * No pass/fail direction; reported as stick (> 0), fade (< 0) or neither (p ≥ 0.05).
+
+## Amendment 1 results (`round2.py`; `out/round2.json`)
+| Test | Result | Verdict |
+|---|---|---|
+| **R2a overnight/intraday quirk** | AAPL intraday − overnight, 2020–2026: **+30%/yr**; peer average −7%/yr (MSFT −2, AMZN −21, GOOGL +12, META +5, NVDA −28); AAPL 2011–2019 −18%/yr. vs peers p < 0.001, vs its own past p 0.0005 | **pass** (in-sample) |
+| R2b buyback execution | 2020–2026: the intraday premium is *larger in blackout* (intraday +39%/yr) than in open windows (+12%/yr), the reverse of the prediction (p 0.78). **2013–2019: open > blackout by +41 points/yr, p 0.0035**: there the buyback fingerprint is present | fail. Buybacks explained the old intraday bid, not the 2020s one |
+| R2c residual persistence | lags 1–5 summed: AAPL 0.000 vs peer average 0.002 (p 0.49). Lag 1 is +0.08, and lags 2–5 cancel it | fail |
+| R2d stick or fade after a top-tenth run-up | next 20 days −0.6 points vs all days (p 0.50); peers +0.9 (p 0.25) | neither |
+
+### Post hoc observation, from the descriptive T4/R2b numbers already printed (not a test)
+* **2020–2026:** AAPL's mean daily residual is +0.078% in blackout windows (≈ +20%/yr) vs +0.001% in open windows.
+  * Total return, annualized: about +38%/yr in blackout vs +5%/yr open.
+  * The intraday premium sits in the same windows.
+* **2011–2019:** no gap (+0.043% vs +0.054%).
+* So in the 2020s **AAPL's excess return seems to arrive in the roughly 7 weeks running into each earnings report**: the blackout runs from mid-month before the fiscal quarter end through the report, and it covers the iPhone launch (Sep–Oct) and the holiday quarter (Dec–Jan).
+* **Today is inside one** (blackout since Sep 12; report expected Nov 2), with a +4.2% residual since Sep 15.
+
+## Amendment 2 (round 3): the "run into earnings" quirk. Pre-registered before computing anything beyond the numbers above.
+**R3a, in-sample significance and stability:**
+* AAPL mean daily residual in blackout − open, 2020–2026, **excluding earnings reaction days**. Quarter bootstrap; p < 0.05.
+* Also required: positive in ≥5 of the 7 calendar years 2020–2026, and in ≥3 of the 4 fiscal quarters.
+* Pass: all three.
+
+**R3b, is it AAPL-specific?**
+* The same statistic for each peer, on its own calendar: blackout = 14 days before its fiscal quarter end through its earnings reaction day.
+  * MSFT/AMZN/GOOGL/META use calendar quarter ends.
+  * NVDA uses the last Sunday of Jan/Apr/Jul/Oct.
+* Statistic: AAPL minus the peer average, 20-day block bootstrap on aligned days; pass at p < 0.05.
+* If it fails because the peers show the same thing, the reading is a general mega-cap "run into earnings" premium since 2020.
+
+**R3c, where in the window (descriptive):** AAPL's residual in the 14 days before quarter end vs from quarter end to the report.
+
+**R3d, live check (one observation, not evidence):** AAPL's residual summed from Oct 26 through Nov 2, 2026, the last session before the reaction day. Predicted > 0.
