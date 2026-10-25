@@ -286,3 +286,27 @@ Latest week, raw:
 * The live call is unchanged.
 * Rates are a smaller risk than stated in Amendment 2's "today": bonds have rallied over the past 20 days.
 * The most likely route to a correction is an inflation and rates impulse from oil that pushes yields back up through the Fed decision.
+
+## Amendment 4 (owner: "But that 50-day u based it on what? Is it a 'magical' number… it should be tested differently do it"). Written before downloading or computing.
+* **Why:** the 50-day average was a convention, chosen without a test. Breadth now carries the theory, so it must hold across reasonable definitions, not just the one picked first.
+* **AUC is rank-based**, so the z-scoring does not affect it. Only the raw breadth value at the dip's start matters.
+
+**The full set of versions** (each scored by AUC, corrections vs bounces, on the same 21 decided dips):
+
+| Choice | Options |
+|---|---|
+| Moving-average lookback L | 10, 20, 50, 100, 150, 200 days (share of stocks closing above their L-day average) |
+| Reading | the 5-day mean ending at the dip's start (as before), and the start day alone |
+| Universe | (U1) the 41-stock panel; (U2) U1 plus 40 more US large caps; (U3) U1 without the 6 mega-caps; (U4) U2 without the 8 mega-caps |
+| Other breadth measures (U1 and U2) | share of stocks with a positive 20-day return; share within 5% of their own 252-day high; equal-weight vs cap-weight (RSP/SPY) as a trailing-252 percentile |
+
+* **U2's 40 extra names:** AVGO, TSLA, CRM, NFLX, BRK-B, V, MA, ABBV, TMO, ACN, LIN, NKE, AMGN, HON, UPS, LOW, SBUX, GS, MS, BLK, SPGI, INTU, NOW, ISRG, BKNG, ADP, DE, CVS, MDT, GILD, NEE, DUK, PM, CMCSA, LMT, RTX, UNP, COP, AXP, SCHW.
+* **Mega-caps removed in U3/U4:** AAPL, MSFT, AMZN, GOOGL, META, NVDA, plus AVGO and TSLA in U4.
+* **Survivorship note:** these are today's large caps, the same set for every dip.
+
+**Pass ("not a magic number"); all must hold:**
+1. The median AUC across the 6 lookbacks (U1, 5-day reading) is ≥ 0.75, with at least 5 of the 6 lookbacks ≥ 0.70.
+2. The 50-day result holds in U2, U3 and U4 (AUC ≥ 0.70 in each).
+3. **Multiverse luck check:** the median AUC across **all** versions beats the medians from shuffled outcome labels (5,000 shuffles, the same shuffle applied to every version) at p < 0.05. Picking the best version cannot help.
+
+**Today:** every version's reading for today's dip, as a percentile among the 21 dips' readings.
