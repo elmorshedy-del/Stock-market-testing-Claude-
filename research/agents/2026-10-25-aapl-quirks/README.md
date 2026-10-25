@@ -64,3 +64,54 @@ Anatomy of decoupling: `log corr = log β + log σ_m − log σ_X`. For each ala
 **"Since 2020" check, descriptive:** for each theory that passes, is the effect larger in 2020–2026 than in 2011–2019?
 
 **Current episode, descriptive (Sep 15 to Oct 23, 2026):** the anatomy, the residual against f, and AAPL vs SMH and the S&P.
+
+## Round 1 results (`quirks.py`; `out/quirks.json`, `out/daily.csv`)
+**Bug fixed before reporting:** quarters not yet reported (Sep 2026) had been left out of the blackout calendar. They now run to the last day of data. T4's verdict is unchanged.
+
+| Theory | Result | Verdict |
+|---|---|---|
+| T1 earnings calendar | 2020–2026: alarm windows contain earnings 31% vs 32% of the time (p 0.44). **2011–2019: 63% vs 24% (p < 0.001)** | fail. Decoupling *used to be* an earnings event; since 2020 it is not |
+| T2 AI-trade rotation | (a) since 2023, AAPL's residual loads **−0.12** on SMH−SPY vs about −0.03 for MSFT/AMZN/GOOGL/META (difference −0.09, **p 0.015**); 2011–2022 it was +0.22, above peers. (b) AI leadership does not line up with AAPL's coupling over time (Spearman +0.05, p 0.55) | fail (only (a) passes). Since 2023 AAPL is the mega-cap that is short the AI trade, but that does not explain *when* it decouples |
+| T3 defensive asymmetry | down − up beta −0.03 (p 0.37); vs peers −0.06 (p 0.20) | fail |
+| T4 buyback windows | downside beta open 1.15 vs blackout 1.12 (p 0.62) | fail |
+| T5 forced index flows (quad witching) | d −0.21, p 0.41 (27 days). Month end +0.08 | fail |
+
+### Part 0 scan (descriptive)
+| 2020–2026 | AAPL | MSFT | NVDA | AMZN | GOOGL | META | AAPL 2011–19 |
+|---|---|---|---|---|---|---|---|
+| Beta / corr vs market ex-self | 1.09 / 0.70 | 1.08 / 0.72 | 1.66 / 0.63 | 1.07 / 0.61 | 1.09 / 0.68 | 1.27 / 0.57 | 0.88 / 0.49 |
+| **Overnight / intraday log return, %** | **−24 / +180** | +66 / +55 | +274 / +84 | +119 / −20 | +38 / +119 | +39 / +75 | +175 / +10 |
+| Residual lag-1 autocorrelation | **0.081** | 0.026 | −0.048 | 0.026 | 0.034 | 0.026 | 0.048 |
+| Share of days with corr < 0.3 | 16% | 12% | 15% | 12% | 12% | 10% | 29% |
+
+* **By year, AAPL's overnight return is negative in 2022, 2023, 2024 and 2025 (−37, −7, −2, −14%),** while intraday is +5, +46, +29, +22%.
+* SPY's overnight return is positive in every year except 2022. MSFT shows no such pattern.
+* The largest single overnight gaps (all under 14%) cannot account for this; dividends are worth about −0.5% a year.
+
+**Anatomy of decoupling (2020–2026), relative to normal (1 = normal):** on alarm days, the 20-day beta falls to 0.61, market volatility to 0.73 and AAPL's own volatility to 0.89, while idiosyncratic volatility rises to 1.17. The peers show the same pattern, so a typical decoupling is "a calm market plus stock-specific news." **Today is different:**
+* AAPL's 20-day beta is **negative** (−0.97 × normal), while its idiosyncratic volatility is *below* normal (0.83).
+* That is a calm, steady move against the market, i.e. rotation rather than news.
+* Current episode (Sep 15 to Oct 23): AAPL +4.3%, S&P ex-AAPL −0.2%, SMH − SPY −2.6%. AAPL's residual is +4.2% and correlates **−0.34** with the AI factor.
+
+## Amendment 1 (round 2): the quirks round 1 found. Pre-registered before computing.
+**R2a, the overnight/intraday quirk (in-sample check of a pattern already seen):**
+* Mean daily (intraday − overnight) for AAPL, 2020-01-02 to 2026-10-23.
+* Two comparisons: (i) above the peer average; (ii) above AAPL in 2011–2019.
+* 20-day block bootstrap; pass if both have p < 0.05.
+
+**R2b, buyback execution (mechanism, not yet looked at):**
+* Rule 10b-18 keeps buybacks out of the opening print and the last minutes of trading, so buybacks push prices during the day.
+* Prediction: AAPL's mean (intraday − overnight) is larger in open windows than in blackout windows (T4 calendar).
+* Quarter bootstrap; pass at p < 0.05.
+* 2013–2019 is reported as a contrast (buybacks were also large then).
+
+**R2c, residual persistence (in-sample):**
+* Sum of AAPL's residual autocorrelations at lags 1–5, 2020–2026, above the peer average.
+* Block bootstrap; pass at p < 0.05.
+
+**R2d, the trader's question: after a rotation-type run-up, does AAPL's excess stick or fade?**
+* Signal: AAPL's 20-day residual sum is in the top tenth of its trailing 252 days (no look-ahead).
+* Outcome: the next 20-day residual sum.
+* Statistic: mean outcome on signal days − mean on all days, 2020–2026. 20-day block bootstrap, two-sided p.
+* Same for the peers pooled, as a contrast.
+* No pass/fail direction; reported as stick (> 0), fade (< 0) or neither (p ≥ 0.05).

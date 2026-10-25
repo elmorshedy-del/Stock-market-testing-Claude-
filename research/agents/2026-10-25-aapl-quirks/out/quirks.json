@@ -1,0 +1,368 @@
+{
+ "scan": {
+  "AAPL 2020-2026": {
+   "beta": 1.0917641591743268,
+   "corr": 0.7027444113319179,
+   "downside beta": 1.1298639741912226,
+   "upside beta": 1.1636777137957082,
+   "asymmetry (down - up)": -0.033813739604485527,
+   "overnight log return %": -24.16588281699982,
+   "intraday log return %": 179.69909762695434,
+   "residual lag-1 autocorr": 0.08146671582032784,
+   "share of days 20d corr < 0.3": 0.15595794392523366,
+   "mean residual on market's 20 worst days %": 0.25794873920638917,
+   "alarm share": 0.2891355140186916
+  },
+  "MSFT 2020-2026": {
+   "beta": 1.0777518201120133,
+   "corr": 0.7153429758769898,
+   "downside beta": 1.0674604587242882,
+   "upside beta": 1.111106955638022,
+   "asymmetry (down - up)": -0.04364649691373379,
+   "overnight log return %": 65.65550692879697,
+   "intraday log return %": 54.52149681448064,
+   "residual lag-1 autocorr": 0.026456289343905856,
+   "share of days 20d corr < 0.3": 0.12032710280373832,
+   "mean residual on market's 20 worst days %": 0.713234694487018,
+   "alarm share": 0.27102803738317754
+  },
+  "NVDA 2020-2026": {
+   "beta": 1.6607181757139362,
+   "corr": 0.6295385153846464,
+   "downside beta": 1.687860347288353,
+   "upside beta": 1.6234356639270517,
+   "asymmetry (down - up)": 0.06442468336130136,
+   "overnight log return %": 273.95382615308426,
+   "intraday log return %": 84.0148441538409,
+   "residual lag-1 autocorr": -0.04755630979358114,
+   "share of days 20d corr < 0.3": 0.1466121495327103,
+   "mean residual on market's 20 worst days %": 1.465982703698331,
+   "alarm share": 0.24649532710280375
+  },
+  "AMZN 2020-2026": {
+   "beta": 1.0713188962616897,
+   "corr": 0.6067295447911839,
+   "downside beta": 1.000867882290044,
+   "upside beta": 0.8923625285195395,
+   "asymmetry (down - up)": 0.10850535377050463,
+   "overnight log return %": 119.143869004258,
+   "intraday log return %": -20.405032019328146,
+   "residual lag-1 autocorr": 0.02575376140113754,
+   "share of days 20d corr < 0.3": 0.11799065420560748,
+   "mean residual on market's 20 worst days %": 0.4758978185267649,
+   "alarm share": 0.2505841121495327
+  },
+  "GOOGL 2020-2026": {
+   "beta": 1.0908033169822007,
+   "corr": 0.6781247507973166,
+   "downside beta": 1.0505600256079257,
+   "upside beta": 1.0491366738700134,
+   "asymmetry (down - up)": 0.001423351737912304,
+   "overnight log return %": 37.52068961066282,
+   "intraday log return %": 118.95328505321064,
+   "residual lag-1 autocorr": 0.03440052232966442,
+   "share of days 20d corr < 0.3": 0.11623831775700935,
+   "mean residual on market's 20 worst days %": 0.40694582187748324,
+   "alarm share": 0.2435747663551402
+  },
+  "META 2020-2026": {
+   "beta": 1.2652556271175721,
+   "corr": 0.5740177994383311,
+   "downside beta": 1.2473694827771153,
+   "upside beta": 1.256425240384782,
+   "asymmetry (down - up)": -0.009055757607666637,
+   "overnight log return %": 39.00445408224488,
+   "intraday log return %": 75.12802730046918,
+   "residual lag-1 autocorr": 0.025721778446024513,
+   "share of days 20d corr < 0.3": 0.1022196261682243,
+   "mean residual on market's 20 worst days %": 0.21850704548129646,
+   "alarm share": 0.22546728971962618
+  },
+  "AAPL 2011-2019": {
+   "beta": 0.8788467446013918,
+   "corr": 0.493436959268696,
+   "downside beta": 1.0074354509035606,
+   "upside beta": 1.0019758738324454,
+   "asymmetry (down - up)": 0.005459577071115218,
+   "overnight log return %": 174.76193808443918,
+   "intraday log return %": 10.439012421507044,
+   "residual lag-1 autocorr": 0.04807803427492564,
+   "share of days 20d corr < 0.3": 0.2884275618374558,
+   "mean residual on market's 20 worst days %": 0.2015462385204873,
+   "alarm share": 0.20185512367491165
+  }
+ },
+ "anatomy today (AAPL, 1 = normal)": {
+  "20d beta": -0.9652117304722553,
+  "market vol": 0.8693353396790687,
+  "own vol": 0.7198522357098948,
+  "idiosyncratic vol": 0.8333460642506757
+ },
+ "anatomy 2020-2026": {
+  "AAPL": {
+   "20d beta": {
+    "alarm days (median, 1 = normal)": 0.6099122391078114,
+    "other days": 1.0028182316609309
+   },
+   "market vol": {
+    "alarm days (median, 1 = normal)": 0.7299193917091565,
+    "other days": 1.0800691744937692
+   },
+   "own vol": {
+    "alarm days (median, 1 = normal)": 0.8940686799432717,
+    "other days": 1.043848141617044
+   },
+   "idiosyncratic vol": {
+    "alarm days (median, 1 = normal)": 1.1673103630414596,
+    "other days": 0.9907263835606744
+   }
+  },
+  "MSFT": {
+   "20d beta": {
+    "alarm days (median, 1 = normal)": 0.5856819541844063,
+    "other days": 1.0448941128369427
+   },
+   "market vol": {
+    "alarm days (median, 1 = normal)": 0.7746538973280331,
+    "other days": 1.069256144846399
+   },
+   "own vol": {
+    "alarm days (median, 1 = normal)": 0.9351409117524563,
+    "other days": 1.0162075122898515
+   },
+   "idiosyncratic vol": {
+    "alarm days (median, 1 = normal)": 1.3734843589159067,
+    "other days": 0.9570601556440185
+   }
+  },
+  "NVDA": {
+   "20d beta": {
+    "alarm days (median, 1 = normal)": 0.5320729314743466,
+    "other days": 1.0636141634864043
+   },
+   "market vol": {
+    "alarm days (median, 1 = normal)": 0.7156549084242345,
+    "other days": 1.0955187814015153
+   },
+   "own vol": {
+    "alarm days (median, 1 = normal)": 0.9183399540319022,
+    "other days": 1.0361811406132169
+   },
+   "idiosyncratic vol": {
+    "alarm days (median, 1 = normal)": 1.1487631432761398,
+    "other days": 0.9957261326028575
+   }
+  },
+  "AMZN": {
+   "20d beta": {
+    "alarm days (median, 1 = normal)": 0.6269725446115062,
+    "other days": 1.0770092380631426
+   },
+   "market vol": {
+    "alarm days (median, 1 = normal)": 0.7113775193403546,
+    "other days": 1.0542593446667585
+   },
+   "own vol": {
+    "alarm days (median, 1 = normal)": 0.954578650584382,
+    "other days": 1.0494919161892862
+   },
+   "idiosyncratic vol": {
+    "alarm days (median, 1 = normal)": 1.2659821524640222,
+    "other days": 0.9922136471808911
+   }
+  },
+  "GOOGL": {
+   "20d beta": {
+    "alarm days (median, 1 = normal)": 0.7272976207793743,
+    "other days": 1.0595039279917349
+   },
+   "market vol": {
+    "alarm days (median, 1 = normal)": 0.7157865467215662,
+    "other days": 1.0633267156761899
+   },
+   "own vol": {
+    "alarm days (median, 1 = normal)": 0.9313850299098648,
+    "other days": 1.043330843237938
+   },
+   "idiosyncratic vol": {
+    "alarm days (median, 1 = normal)": 1.2438920977944612,
+    "other days": 0.9778499815402794
+   }
+  },
+  "META": {
+   "20d beta": {
+    "alarm days (median, 1 = normal)": 0.7200190677216275,
+    "other days": 1.0787755536096562
+   },
+   "market vol": {
+    "alarm days (median, 1 = normal)": 0.8282830691854667,
+    "other days": 1.0338208932064017
+   },
+   "own vol": {
+    "alarm days (median, 1 = normal)": 1.0131681450274708,
+    "other days": 1.0215462230717778
+   },
+   "idiosyncratic vol": {
+    "alarm days (median, 1 = normal)": 1.2005009009360232,
+    "other days": 0.9814152111385892
+   }
+  }
+ },
+ "T1 earnings calendar 2020-2026": {
+  "P(earnings in window | alarm)": 0.31313131313131315,
+  "P(earnings in window | no alarm)": 0.3163516844700082,
+  "difference": -0.0032203713386950716,
+  "p (one-sided, shift)": 0.444
+ },
+ "T1 contrast 2011-2019": {
+  "P(earnings in window | alarm)": 0.6280087527352297,
+  "P(earnings in window | no alarm)": 0.23962368566685113,
+  "difference": 0.3883850670683786,
+  "p (one-sided, shift)": 0.0
+ },
+ "T1 verdict": "fail",
+ "T2a AI-factor loading 2023-2026": {
+  "AAPL loading on f": -0.12467286594927669,
+  "non-semi peer loadings": {
+   "MSFT": -0.053057207618865815,
+   "AMZN": -0.03462846786636908,
+   "GOOGL": -0.04061893971339257,
+   "META": -0.00900378558025129
+  },
+  "AAPL minus peer average": -0.09034576575455701,
+  "p (>= 0, block bootstrap)": 0.0145,
+  "days": 956
+ },
+ "T2a contrast 2011-2022": {
+  "AAPL loading on f": 0.22020898263028593,
+  "non-semi peer loadings": {
+   "MSFT": 0.15682862032116246,
+   "AMZN": 0.1638580720546392,
+   "GOOGL": 0.10204794872423997,
+   "META": 0.19930281530643007
+  },
+  "AAPL minus peer average": 0.06469961852866801,
+  "p (>= 0, block bootstrap)": 0.962,
+  "days": 2472
+ },
+ "T2b AI leadership vs AAPL coupling 2020-2026": {
+  "spearman(AAPL 20d corr, corr(S&P ex-AAPL, f))": 0.04563036607975297,
+  "p (one-sided, shift)": 0.5475
+ },
+ "T2b contrast 2011-2019": {
+  "spearman(AAPL 20d corr, corr(S&P ex-AAPL, f))": 0.309514998772418,
+  "p (one-sided, shift)": 0.5045
+ },
+ "T2 verdict": "fail",
+ "T3 defensive asymmetry 2020-2026": {
+  "AAPL asymmetry (down - up beta)": -0.033813739604485527,
+  "p (>= 0)": 0.3705,
+  "peer asymmetries": {
+   "MSFT": -0.04364649691373379,
+   "AMZN": 0.10850535377050463,
+   "GOOGL": 0.001423351737912304,
+   "META": -0.009055757607666637,
+   "NVDA": 0.06442468336130136
+  },
+  "AAPL minus peer average": -0.0581439664741491,
+  "p diff (>= 0)": 0.1985
+ },
+ "T3 contrast 2013-2019 (META listed)": {
+  "AAPL asymmetry (down - up beta)": 0.013679194935162897,
+  "p (>= 0)": 0.5635,
+  "peer asymmetries": {
+   "MSFT": -0.0643803347356735,
+   "AMZN": 0.0708156070364474,
+   "GOOGL": -0.005155133435527981,
+   "META": 0.2130580832203055,
+   "NVDA": 0.16535516130827466
+  },
+  "AAPL minus peer average": -0.062259481743602324,
+  "p diff (>= 0)": 0.341
+ },
+ "T3 verdict": "fail",
+ "T4 buyback windows 2020-2026": {
+  "downside beta open": 1.1456946841185156,
+  "downside beta blackout": 1.1165725306128058,
+  "upside beta open / blackout": [
+   1.2453020670867863,
+   1.1053513441386333
+  ],
+  "open minus blackout (downside)": 0.02912215350570979,
+  "p (>= 0, quarter bootstrap)": 0.624,
+  "mean residual % open / blackout": [
+   0.0011368527845272219,
+   0.07836868698850322
+  ],
+  "blackout share of days": 0.5420560747663551
+ },
+ "T4 contrast 2011-2019": {
+  "downside beta open": 1.0217270680381807,
+  "downside beta blackout": 0.9833807151958043,
+  "upside beta open / blackout": [
+   0.9370069909807524,
+   1.0885562394496262
+  ],
+  "open minus blackout (downside)": 0.03834635284237642,
+  "p (>= 0, quarter bootstrap)": 0.698,
+  "mean residual % open / blackout": [
+   0.05377026806698201,
+   0.04258753493649082
+  ],
+  "blackout share of days": 0.4792402826855124
+ },
+ "T4 verdict": "fail",
+ "today in blackout": true,
+ "T5 quad witching 2020-2026": {
+  "d (extra give-back slope on flagged days)": -0.20778066185672778,
+  "p (d >= 0, block bootstrap)": 0.406,
+  "slope other days": 0.0013248337315966184,
+  "slope flagged days": -0.20645582812512983,
+  "mean |residual| % flagged / other": [
+   0.9240123653759245,
+   0.9815401964873174
+  ],
+  "flagged days": 27
+ },
+ "T5 secondary: month end 2020-2026": {
+  "d (extra give-back slope on flagged days)": 0.08372364086306139,
+  "p (d >= 0, block bootstrap)": 0.679,
+  "slope other days": -0.007125253140750943,
+  "slope flagged days": 0.07659838772231038,
+  "mean |residual| % flagged / other": [
+   1.220769165029118,
+   0.9686676270581084
+  ],
+  "flagged days": 81
+ },
+ "T5 contrast quad witching 2011-2019": {
+  "d (extra give-back slope on flagged days)": 0.3936194285950415,
+  "p (d >= 0, block bootstrap)": 0.8135,
+  "slope other days": 0.04987024146834402,
+  "slope flagged days": 0.44348967006338524,
+  "mean |residual| % flagged / other": [
+   0.9387961286432024,
+   0.9663763599764384
+  ],
+  "flagged days": 36
+ },
+ "T5 verdict": "fail",
+ "current episode Sep 15 - Oct 23": {
+  "AAPL log return %": 4.304368710940842,
+  "S&P ex-AAPL log return %": -0.24731190498220218,
+  "SMH minus SPY log return %": -2.556631577385282,
+  "AAPL residual log return %": 4.226170443260218,
+  "residual loading on f": -0.19911809655670987,
+  "corr(residual, f)": -0.34313667410040394,
+  "AAPL 20d corr today": -0.27015121690751537,
+  "corr(S&P ex-AAPL, f) today": 0.618018879836314,
+  "AAPL alarm today": true
+ },
+ "verdicts": {
+  "T1": "fail",
+  "T2": "fail",
+  "T3": "fail",
+  "T4": "fail",
+  "T5": "fail"
+ }
+}
