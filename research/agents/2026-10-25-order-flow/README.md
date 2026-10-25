@@ -105,3 +105,34 @@ The statistics are unchanged:
 * leave-one-dip-out logistic with breadth plus the measure vs breadth alone.
 
 Today's dip uses the available days: 0DTE data run to Oct 15, FINRA to Oct 14.
+
+## Part 3 results (`dips_flow.py`, `figure.py`; `out/dips_flow.json`, `out/dips_flow_features.csv`, `out/order_flow.png`)
+![order flow](out/order_flow.png)
+
+| Measure at the dip's start | AUC | Direction in corrections | Best-of-39 p | Breadth + this, LOO AUC (breadth alone 0.82) | Today, percentile among dips |
+|---|---|---|---|---|---|
+| SPY FINRA short ratio | 0.70 | lower | 0.99 | 0.78 | **100th** (the highest of all 22) |
+| 0DTE put/call volume (16 dips with data) | 0.68 | lower | 1.00 | 0.70 | 81st |
+| SPY relative volume | 0.64 | lower | 1.00 | 0.80 | 24th |
+| SPY Amihud illiquidity | 0.60 | lower | 1.00 | 0.81 | 52nd |
+| 0DTE activity (17 dips with data) | 0.59 | higher | 1.00 | 0.79 | 59th |
+
+* Breadth stays the only measure beyond luck (best-of-39 p 0.046).
+* **None of the unsigned order-flow or liquidity measures separates the outcomes, and none improves on breadth.**
+* **Today's context:** SPY's off-exchange short ratio over the 5 sessions to Oct 14 is its highest at any dip start. Under the DIX reading of that data, market makers shorting to fill buy orders means buying under the surface. That points the same way as breadth (bounce side), but it is luck-level evidence.
+
+## Verdict
+1. **Research map (Part 1):**
+   * The robust order-flow rules mostly *describe* price, not predict it: flow moves price at the same moment (R1); impact is concave and partly transient (R2); flow persists while prices stay close to random (R3).
+   * Predictive edges are small and specific: informative option flow in single names (R5), mechanical dealer and rebalancing flows (R6), and clientele effects overnight vs intraday (R9).
+2. **What we had already confirmed earlier:**
+   * R2/R6 in [forced-flow](../2026-10-24-forced-flow/): low-gamma moves fade, and calendar forced-flow days fade;
+   * R9 in [intraday-hours](../2026-10-25-intraday-hours/): each stock's "open personality" persists.
+3. **What we could not test properly:** signed option order flow (R4/R5).
+   * Minute-bar signing of 0DTE options comes out **backwards**: corr −0.82 with price, and every trade sign disagrees with its own option's price move on 40 of 40 days.
+   * Tick-level data (trades with quotes) needs ThetaData's Standard tier, which we do not have.
+   * **This is a warning about minute-bar "options flow" dashboards.**
+4. **Applied to the channel:** unsigned flow and liquidity measures add nothing beyond breadth. The channel theory is unchanged.
+5. **Next step if the owner wants signed flow:**
+   * a tick data source, i.e. a ThetaData Standard upgrade, or Databento OPRA trades and quotes (spending needs the owner's approval);
+   * then a proper Pan–Poteshman test (opening buy volume by side) and a dealer-hedging-flow test.

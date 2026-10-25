@@ -1,0 +1,68 @@
+{
+ "new measures": {
+  "SPY Amihud illiquidity (pct)": {
+   "AUC (either direction)": 0.5961538461538461,
+   "direction in corrections": "lower",
+   "corrections mean": 0.36802788844621515,
+   "bounces mean": 0.5130248237817959,
+   "dips with data": 21,
+   "today": 0.5378486055776892,
+   "today percentile among dips": 0.5238095238095238
+  },
+  "SPY relative volume (5d/60d)": {
+   "AUC (either direction)": 0.6442307692307692,
+   "direction in corrections": "lower",
+   "corrections mean": 1.016397934336501,
+   "bounces mean": 1.0769116541391346,
+   "dips with data": 21,
+   "today": 0.9649022204698717,
+   "today percentile among dips": 0.23809523809523808
+  },
+  "SPY FINRA short ratio (pct)": {
+   "AUC (either direction)": 0.7019230769230769,
+   "direction in corrections": "lower",
+   "corrections mean": 0.3874501992031872,
+   "bounces mean": 0.5565430585350905,
+   "dips with data": 21,
+   "today": 0.9322709163346613,
+   "today percentile among dips": 1.0
+  },
+  "0DTE put/call volume (pct)": {
+   "AUC (either direction)": 0.6833333333333333,
+   "direction in corrections": "lower",
+   "corrections mean": 0.31673306772908366,
+   "bounces mean": 0.38247011952191234,
+   "dips with data": 16,
+   "today": 0.43824701195219123,
+   "today percentile among dips": 0.8125
+  },
+  "0DTE activity (5d/60d)": {
+   "AUC (either direction)": 0.5909090909090909,
+   "direction in corrections": "higher",
+   "corrections mean": 1.041839244201932,
+   "bounces mean": 1.0029162606403685,
+   "dips with data": 17,
+   "today": 1.0284934043292249,
+   "today percentile among dips": 0.5882352941176471
+  }
+ },
+ "best-of-all luck check": {
+  "indicators": 39,
+  "family-wise p": {
+   "share of panel above 50-day": 0.04633333333333333,
+   "SPY Amihud illiquidity (pct)": 1.0,
+   "SPY relative volume (5d/60d)": 1.0,
+   "SPY FINRA short ratio (pct)": 0.9883333333333333,
+   "0DTE put/call volume (pct)": 1.0,
+   "0DTE activity (5d/60d)": 1.0
+  }
+ },
+ "leave-one-dip-out AUC": {
+  "breadth alone": 0.8173076923076923,
+  "breadth + SPY Amihud illiquidity (pct)": 0.8076923076923077,
+  "breadth + SPY relative volume (5d/60d)": 0.7980769230769231,
+  "breadth + SPY FINRA short ratio (pct)": 0.7788461538461539,
+  "breadth + 0DTE put/call volume (pct)": 0.7019230769230769,
+  "breadth + 0DTE activity (5d/60d)": 0.7884615384615384
+ }
+}
