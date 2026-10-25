@@ -1,0 +1,21 @@
+{
+ "M0 breadth P(correction), latest week": 0.09717017726284136,
+ "M1 composite percentile among 21 dips, latest week": 0.5238095238095238,
+ "M1 terms, latest week": {
+  "share of panel above 50-day": -1.43,
+  "bonds TLT (20d)": -0.06,
+  "yen 20-day (USD/JPY change)": 0.17,
+  "oil 20-day": 0.78,
+  "gold (20d)": -1.5,
+  "FOMC within next 10 sessions": 1.41,
+  "margin debt vs prices": 1.0
+ },
+ "raw": {
+  "breadth (share above 50-day)": 0.4390243902439024,
+  "WTI": 103.2699966430664,
+  "WTI 20-day %": 11.111164764805626,
+  "gold 20-day %": -7.05537615969937,
+  "TLT 20-day %": 2.51475556526381,
+  "USD/JPY 20-day %": -1.2654485080044964
+ }
+}

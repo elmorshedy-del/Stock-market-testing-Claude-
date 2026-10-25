@@ -233,3 +233,56 @@ What each top looked like:
 * **Pass:** a multivariate model (M1, M2 or M3) beats M0's LOO AUC by ≥ 0.05. Otherwise the model stays "breadth alone".
 * **Today:** each model's probability that today's open dip becomes a correction, fitted on all 21. M1 is reported as a percentile against the 21 dips.
 * **Sensitivity:** ridge penalties of 0.3 and 3 are also reported.
+
+## Amendment 3 results (`multivar.py`, `figure_mv.py`; `out/multivar.json`, `out/multivar_episodes.csv`, `out/multivar_features.csv`, `out/latest_week.json`, `out/multivariate.png`)
+![multivariate](out/multivariate.png)
+
+**New variables at the dip's start (corrections vs bounces):**
+
+| Variable | AUC | Direction in corrections | Best-of-34 p |
+|---|---|---|---|
+| oil 20-day | 0.60 | higher | (luck) |
+| oil volatility | 0.75 | lower | 0.83 |
+| FOMC within the next 10 sessions | **0.51** | none | |
+| sessions to the next FOMC | 0.54 | none | |
+| sessions since the last FOMC | 0.55 | none | |
+| gold 20-day | 0.68 | higher | (luck) |
+
+* **Fed-meeting timing does not separate the dips that turned into corrections from the ones that were bought.**
+* Breadth is still the only separator beyond luck: AUC 0.90, best-of-34 p 0.038.
+
+**Multivariate, leave-one-dip-out AUC (penalty 1):**
+
+| Model | AUC |
+|---|---|
+| **M0 breadth alone** | **0.82** |
+| M1 theory composite (7 drivers, no fitting) | 0.74 |
+| M3 best-3 stack | 0.62 |
+| M2 ridge on all 34 | 0.59 |
+
+* Penalties 0.3 and 3 give the same ranking: M0 0.84 / 0.80, M3 0.70 / 0.54, M2 0.59 / 0.61.
+* In every fold, M3 picked breadth and the yen 20-day, and in 12 folds yen volatility. Adding them still lowers accuracy on held-out dips.
+* **Verdict: breadth alone.** Stacking more variables overfits 21 dips. This is the same lesson as [sp-multivariate](../2026-10-15-sp-multivariate/), where stacking did not beat the single best family.
+
+**Today:**
+
+| | Pre-registered (dip's start, Oct 12–16) | Post hoc, latest week (Oct 19–23) |
+|---|---|---|
+| M0 breadth: P(correction) | **7.7%** | 9.7% |
+| M2 | 4.1% | not computed |
+| M3 (breadth, yen 20-day, yen volatility) | 5.0% | not computed |
+| M1 composite, percentile among the 21 dips | 38th | 52nd |
+| Base rate | 38% | 38% |
+
+Latest week, raw:
+* breadth 44% above the 50-day (normal near the high: 64%);
+* WTI $103, **+11% in 20 days**; **gold −7% in 20 days**;
+* TLT **+2.5%** in 20 days: bonds rallied in October, after the September yield spike;
+* USD/JPY −1.3%; the Fed decides on Oct 28.
+
+**How to read it:**
+* The pushes toward a correction come from variables that never separated the outcomes in this channel: oil, Fed timing, margin. The one that did, breadth, points firmly to a bounce.
+* Gold falling is also on the bounce side.
+* The live call is unchanged.
+* Rates are a smaller risk than stated in Amendment 2's "today": bonds have rallied over the past 20 days.
+* The most likely route to a correction is an inflation and rates impulse from oil that pushes yields back up through the Fed decision.

@@ -1,0 +1,154 @@
+{
+ "dips": 21,
+ "corrections": 8,
+ "indicators": 34,
+ "univariate: new variables": {
+  "oil 20-day": {
+   "AUC (either direction)": 0.5961538461538461,
+   "direction in corrections": "higher",
+   "mean z corrections / bounces": [
+    0.12544873780984125,
+    -0.07581649766123862
+   ],
+   "today z": -0.7494946405127296
+  },
+  "oil volatility percentile": {
+   "AUC (either direction)": 0.75,
+   "direction in corrections": "lower",
+   "mean z corrections / bounces": [
+    -0.6971011331606054,
+    0.19755976171953665
+   ],
+   "today z": -0.38239498771105873
+  },
+  "FOMC within next 10 sessions": {
+   "AUC (either direction)": 0.5096153846153846,
+   "direction in corrections": "higher",
+   "mean z corrections / bounces": [
+    -0.1756557810628941,
+    -0.21643518969495895
+   ],
+   "today z": 1.4147411555876337
+  },
+  "sessions to next FOMC": {
+   "AUC (either direction)": 0.5432692307692307,
+   "direction in corrections": "higher",
+   "mean z corrections / bounces": [
+    0.4682524085004523,
+    0.35386330734822025
+   ],
+   "today z": -1.072393593504836
+  },
+  "sessions since last FOMC": {
+   "AUC (either direction)": 0.5528846153846154,
+   "direction in corrections": "higher",
+   "mean z corrections / bounces": [
+    -0.3582287819475458,
+    -0.38593754249994205
+   ],
+   "today z": 0.7224128795959052
+  },
+  "gold (20d)": {
+   "AUC (either direction)": 0.6826923076923077,
+   "direction in corrections": "higher",
+   "mean z corrections / bounces": [
+    0.5822151383551024,
+    0.04666750691176191
+   ],
+   "today z": -1.159958622739444
+  }
+ },
+ "univariate: top 6 of all 34 (AUC, best-of-34 p)": {
+  "share of panel above 50-day": [
+   0.8990384615384616,
+   0.03833333333333333
+  ],
+  "yen 20-day (USD/JPY change)": [
+   0.7788461538461539,
+   0.635
+  ],
+  "yen volatility percentile": [
+   0.7692307692307693,
+   0.675
+  ],
+  "oil volatility percentile": [
+   0.75,
+   0.8296666666666667
+  ],
+  "bitcoin (20d)": [
+   0.7307692307692308,
+   0.8923333333333333
+  ],
+  "yen 5-day (USD/JPY change)": [
+   0.7211538461538461,
+   0.9386666666666666
+  ]
+ },
+ "leave-one-dip-out AUC": {
+  "lambda 0.3": {
+   "M0 breadth alone": 0.8365384615384616,
+   "M2 ridge, all 34": 0.5865384615384616,
+   "M3 best-3 stack": 0.7019230769230769
+  },
+  "lambda 1.0": {
+   "M0 breadth alone": 0.8173076923076923,
+   "M2 ridge, all 34": 0.5865384615384616,
+   "M3 best-3 stack": 0.6153846153846154
+  },
+  "lambda 3.0": {
+   "M0 breadth alone": 0.7980769230769231,
+   "M2 ridge, all 34": 0.6057692307692307,
+   "M3 best-3 stack": 0.5384615384615384
+  }
+ },
+ "M1 theory composite AUC (no fitting)": 0.7403846153846154,
+ "verdict": "breadth alone",
+ "M3: indicators picked across the 21 folds": {
+  "share of panel above 50-day": 21,
+  "yen 20-day (USD/JPY change)": 21,
+  "yen volatility percentile": 12,
+  "oil volatility percentile": 4,
+  "bitcoin (20d)": 2,
+  "yen 5-day (USD/JPY change)": 2,
+  "bonds TLT (20d)": 1
+ },
+ "today (open dip, started 2026-10-16)": {
+  "M0 breadth alone": {
+   "P(correction)": 0.07687326104262598,
+   "uses": null
+  },
+  "M2 ridge, all 34": {
+   "P(correction)": 0.041128110662342995,
+   "uses": null
+  },
+  "M3 best-3 stack": {
+   "P(correction)": 0.04993705835024976,
+   "uses": [
+    "share of panel above 50-day",
+    "yen 20-day (USD/JPY change)",
+    "yen volatility percentile"
+   ]
+  },
+  "M1 theory composite": {
+   "score": -1.0542329962140866,
+   "percentile among 21 dips": 0.38095238095238093,
+   "terms today": {
+    "share of panel above 50-day": -1.64,
+    "bonds TLT (20d)": 0.75,
+    "yen 20-day (USD/JPY change)": -0.67,
+    "oil 20-day": -0.75,
+    "gold (20d)": -1.16,
+    "FOMC within next 10 sessions": 1.41,
+    "margin debt vs prices": 1.0
+   }
+  }
+ },
+ "base rate": 0.38095238095238093,
+ "context today": {
+  "WTI": 103.2699966430664,
+  "WTI 20-day %": 11.111164764805626,
+  "gold 20-day %": -7.05537615969937,
+  "next FOMC decision": "2026-10-28",
+  "sessions to it from Oct 23": 1
+ }
+}
