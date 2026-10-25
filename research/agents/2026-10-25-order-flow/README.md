@@ -73,3 +73,35 @@
 **Fix:** sign against the average of minute t−1's and minute t's mid, i.e. the start and the end of the trade minute. That is centred on the trades, so drift cancels to first order. Everything else is unchanged.
 * A1 is the pre-registered sanity check. If it is still ≤ 0, minute-level option signing is judged unreliable here, and Part 3 drops the signed-flow measures.
 * **Caveat:** with only minute snapshots, any signing of 0DTE options is noisy, because prices move several ticks within a minute.
+
+## Amendment 1 result: **the sanity check fails again. Signed option flow is unreliable in this data.**
+| Run | corr(morning flow z, morning return) | A1 coefficient by year (2023 / 2024 / 2025 / 2026) |
+|---|---|---|
+| Re-run with the centred mid (`out/tests_v1.json`) | still **−0.82** | −0.0040 / −0.0033 / −0.0040 / −0.0036 |
+
+**Tick-level validation was not possible:** ThetaData answers trades, trades-with-quotes and 1-second quotes with "requires a STANDARD subscription; you only have VALUE".
+
+**Own-price check** (`sign_check.py`, `out/sign_check.json`; option prices only):
+* If trade signs were right, buying would lift the option's own mid within the same minute, so corr(sign, own mid change) would be > 0.
+* It is **negative on all 40 sampled days** under both conventions: centred −0.06, run-0 forward −0.11.
+* **Minute-bar signing of 0DTE options systematically labels trades against the price move.** Within a minute the price drifts by several ticks, so VWAP lags the quote path. Summed across strikes and weighted by delta, that bias becomes the −0.82.
+
+**Consequences, by the rule fixed in Amendment 1:**
+* **A1 fails.** A2–A4 are computed (`out/tests_v1.json`), but they are **void**: their input is contaminated, so they are not interpreted.
+* Part 3 **drops the signed-flow measures**.
+* **A practical warning:** "options flow" built from minute bars, as many retail dashboards do, can carry the opposite sign of the real flow. Real signing needs trade-by-trade data with the quote at each trade.
+
+## Amendment 2: unsigned order-flow measures for Part 3. Written before computing.
+Part 3 keeps its pre-registered unsigned measures (SPY Amihud illiquidity, SPY relative volume, SPY FINRA short-volume ratio) and adds two that need no trade sign:
+
+| Measure | Definition |
+|---|---|
+| 0DTE put/call volume ratio | 5-day sum of put volume / call volume (minute files), as a trailing-252 percentile |
+| 0DTE activity | 5-day / 60-day average of 0DTE contract volume |
+
+The statistics are unchanged:
+* AUC either direction;
+* best-of-all luck check, including the 34 earlier indicators;
+* leave-one-dip-out logistic with breadth plus the measure vs breadth alone.
+
+Today's dip uses the available days: 0DTE data run to Oct 15, FINRA to Oct 14.

@@ -1,0 +1,12 @@
+{
+ "centred (t-1,t) [Amendment 1]": {
+  "mean corr(sign, own mid change)": -0.05736387991537696,
+  "days negative": 40,
+  "days": 40
+ },
+ "forward (t,t+1) [run 0]": {
+  "mean corr(sign, own mid change)": -0.11390502899325153,
+  "days negative": 40,
+  "days": 40
+ }
+}
