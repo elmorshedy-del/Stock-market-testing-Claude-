@@ -79,3 +79,8 @@ What each top looked like:
 * **Reading:** each indicator's mean over the 5 sessions ending on the episode's first day, as a z-score as before.
 * **Separates:** at least 5 of the 6 corrections on the same side of the bounces' median, including all 3 main corrections, with the corrections' mean differing from the bounces' mean by ≥ 0.5 SD.
 * **Theory step and today:** as before. Today's episode began on the first close ≥ 2% below the Oct 6 high.
+
+**Added by the owner before the dip anatomy was computed:** "Also that margin and debt thing u said before that can drive moves." Two indicators join the list, and are also reported for the pre-top profiles:
+* **margin debt growth:** FINRA margin debt, year on year, from the macro panel ([channel-reversion-macro](../2026-10-15-channel-reversion-macro/), which found margin-debt surges before reversions after 2010).
+* **margin debt vs prices:** margin-debt year-on-year growth minus the S&P's year-on-year growth for the same month. Leverage growing faster than prices is the cleaner proxy that [forced-flow](../2026-10-24-forced-flow/) D suggested.
+* Both use a 2-month lag (FINRA publishes about three weeks after month end), so each day sees only what was public.
