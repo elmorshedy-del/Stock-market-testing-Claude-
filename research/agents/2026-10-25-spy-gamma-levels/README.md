@@ -58,7 +58,12 @@
 
 ## Reading
 * **Short term:** dealers are heavily short gamma between 745 and 774, so moves in either direction get amplified. A flush into 745–755 can be fast.
-* **Medium term:** by the [forced-flow](../2026-10-24-forced-flow/) law, moves made on low-gamma days tend to be given back over about 10 sessions. That fits the breadth "bounce" call.
+* ~~**Medium term:** by the forced-flow law, moves made on low-gamma days tend to be given back over about 10 sessions. That fits the breadth "bounce" call.~~
+  **Correction (2026-10-25, after the owner asked):** that overstated the [forced-flow](../2026-10-24-forced-flow/) result.
+  * The give-back under low gamma is an **up-day** effect in single names: squeeze rallies are given back.
+  * **Down days are retraced about 10% over 10 days whether gamma is high or low.**
+  * At the S&P level, the gamma effect is not significant once volatility is held fixed.
+  * So the law says nothing special about this selloff fading. The bounce call rests on breadth alone. Short gamma sets how big the moves are, not their direction.
 * **Levels to watch:**
   * **774** (flip: reclaiming it flips dealers to damping);
   * **780** (the gamma magnet, and the S&P's new high);
