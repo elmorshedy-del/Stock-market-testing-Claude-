@@ -1,0 +1,25 @@
+{
+ "narrowing-rally alarm": {
+  "days": 1747,
+  "alarm share": 0.06410990269032628,
+  "P(top within 30 | on)": 0.22321428571428573,
+  "P(top within 30 | off)": 0.1981651376146789,
+  "difference": 0.025049148099606816,
+  "p (one-sided, shift)": 0.387
+ },
+ "other alarm days": {
+  "days": 2044,
+  "alarm share": 0.20009784735812133,
+  "P(top within 30 | on)": 0.3202933985330073,
+  "P(top within 30 | off)": 0.1981651376146789,
+  "difference": 0.1221282609183284,
+  "p (one-sided, shift)": 0.057
+ },
+ "verdict": "fail",
+ "today": {
+  "alarm": true,
+  "S&P 20d return %": -1.558296342318144,
+  "AAPL 20d return %": 1.933859187982101,
+  "narrowing rally": false
+ }
+}

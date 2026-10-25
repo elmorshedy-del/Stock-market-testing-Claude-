@@ -84,3 +84,63 @@
   * P(top within 30 | narrowing-rally alarm) − P(top within 30 | no alarm), circular-shift p;
   * the same for the other alarm days.
 * **Pass:** the narrowing-rally difference > 0 with p < 0.05, **and** it is larger than the other-alarm difference.
+
+## Amendment 1 results (`round2.py`; `out/round2.json`): **fail**, and the mechanism was the wrong way round
+| 2011–2022 | P(top within 30) | Difference vs no-alarm days (19.8%) | p |
+|---|---|---|---|
+| Narrowing-rally alarm days (S&P up, AAPL lagging), 112 days | 22.3% | +2.5 points | 0.39 |
+| All other alarm days, 409 days | 32.0% | **+12.2 points** | 0.057 |
+
+* "The index rising without its biggest name" is **not** where the signal sits.
+
+### Post hoc diagnosis (`posthoc2.py`; `out/posthoc2.json`; descriptive, no test)
+| Alarm days, 2011–2022, split by cell | Alarm days | P(top within 30): alarm | P(top within 30): no alarm, same cell |
+|---|---|---|---|
+| S&P up, AAPL lags | 112 | 22% | 20% |
+| **S&P up, AAPL leads** | 367 | **34%** | 26% |
+| S&P down, AAPL holds up | 26 | 23% | 12% |
+| S&P down, AAPL falls more | 16 | 0% | 5% |
+
+* **Possible confound:** alarm days sit closer to the S&P's 252-day high (median −0.45%, vs −1.24% on other days).
+* Tops are defined **at** 252-day highs, so being near the high mechanically raises P(top within 30).
+* Low single-stock correlation is also typical of calm, grinding markets near highs.
+* The round-1 differences may therefore be a "near the high" artifact. This must be controlled before the signal means anything.
+
+## Amendment 2 (round 3): the "near the high" control, and a fresh out-of-sample test abroad. Pre-registered before computing or downloading anything.
+* **Statistic: the distance-adjusted difference.**
+  * Cut distance to the 252-day high into quintiles (edges from that market's full window).
+  * Within each quintile, compute P(top within 30 | alarm) − P(top within 30 | no alarm).
+  * Average across quintiles, weighted by alarm days; use only quintiles that have both alarm and no-alarm days.
+* **R3a, US control (diagnostic; the data have been used before):**
+  * the distance-adjusted difference for AAPL on 2011-01-03 to 2026-08-14;
+  * circular-shift p, 2,000 draws;
+  * pass at p < 0.05.
+  * Also reported: 2011–2022 alone, the discovery channel, and a logistic regression `ahead ~ AAPL alarm + distance quintile dummies + dispersion alarm`.
+* **R3b, fresh out-of-sample:** does "the largest stock decoupling from its own index" warn of that index's tops in other markets?
+  * Windows run from 2000-01-01 (or the first date with 252 days of both series) to 2026-08-14.
+  * Same definitions throughout: 20-day correlation, alarm at the bottom fifth of the trailing 252 days, a top at a 252-day high followed by a close ≥5% below it, a 30-session horizon, and days inside a decline excluded.
+  * Markets and names, fixed now (the largest or longest-largest index weight):
+
+    | Index | Name |
+    |---|---|
+    | ^KS11 | Samsung 005930.KS |
+    | ^TWII | TSMC 2330.TW |
+    | ^SSMI | Nestlé NESN.SW |
+    | ^AEX | ASML ASML.AS |
+    | ^GDAXI | SAP SAP.DE |
+    | ^FCHI | LVMH MC.PA |
+    | ^HSI | Tencent 0700.HK |
+    | ^NSEI | Reliance RELIANCE.NS |
+    | ^AXJO | CBA CBA.AX |
+    | ^GSPTSE | RBC RY.TO |
+    | ^N225 | Fast Retailing 9983.T |
+    | ^FTSE | AstraZeneca AZN.L |
+
+  * Any pair that Yahoo cannot serve is dropped and listed; no replacements.
+  * **Primary:** the equal-weight average across markets of the distance-adjusted difference > 0, with p < 0.05.
+  * **Null:** one common circular shift of every market's alarm on a shared weekday calendar, 2,000 draws. This keeps the cross-market clustering of tops.
+  * **Secondary:** the count of markets with a positive difference; the plain (unadjusted) average.
+* **Overall rule:**
+  * R3b pass → "**the decoupling warning is real and general**";
+  * R3b fail and R3a pass → "**US/AAPL-only, unconfirmed**";
+  * R3a fail and R3b fail → "**near-the-high artifact**".

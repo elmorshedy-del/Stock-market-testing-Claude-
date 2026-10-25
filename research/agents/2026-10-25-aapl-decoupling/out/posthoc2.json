@@ -1,0 +1,31 @@
+{
+ "S&P up, AAPL lags (narrowing)": {
+  "alarm days": 112,
+  "P(top in 30 | alarm, this cell)": 0.22321428571428573,
+  "P(top in 30 | no alarm, same cell)": 0.2,
+  "median distance to 252d high %, alarm": -0.5904802850766999
+ },
+ "S&P up, AAPL leads": {
+  "alarm days": 367,
+  "P(top in 30 | alarm, this cell)": 0.3405994550408719,
+  "P(top in 30 | no alarm, same cell)": 0.25686813186813184,
+  "median distance to 252d high %, alarm": -0.3127988178846297
+ },
+ "S&P down, AAPL holds up better": {
+  "alarm days": 26,
+  "P(top in 30 | alarm, this cell)": 0.23076923076923078,
+  "P(top in 30 | no alarm, same cell)": 0.1228813559322034,
+  "median distance to 252d high %, alarm": -2.9228670809130666
+ },
+ "S&P down, AAPL falls more": {
+  "alarm days": 16,
+  "P(top in 30 | alarm, this cell)": 0.0,
+  "P(top in 30 | no alarm, same cell)": 0.05113636363636364,
+  "median distance to 252d high %, alarm": -3.7552608929775246
+ },
+ "all no-alarm days": 0.1981651376146789,
+ "median distance to 252d high %: alarm / no alarm": [
+  -0.44735804606589324,
+  -1.2418228192406455
+ ]
+}
