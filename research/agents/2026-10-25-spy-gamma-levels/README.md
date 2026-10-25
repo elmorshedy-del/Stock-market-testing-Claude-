@@ -22,3 +22,46 @@
    * AUC, corrections vs bounces.
    * Forced-flow prediction: corrections start closer to or below the flip (dealers less long gamma).
    * Descriptive only, because 21 dips is a small sample. Today's dip is placed on it.
+
+## Results (`spy_gamma.py`, `figure.py`; `out/levels.json`, `out/daily.csv`, `out/profile.csv`, `out/strikes.csv`, `out/spy_gamma_map.png`)
+![SPY gamma map](out/spy_gamma_map.png)
+
+**1. Verification:** the code path reproduces the stored engine rows exactly for 2026-10-08 and 10-09 (flip 775.12 / 775.37, spot 774.65 / 778.60, GEX −$1.24bn / +$4.72bn).
+
+**2. Daily, Oct 12–23:**
+* SPY has closed **below the flip every day since Oct 14**: −0.9, −0.4, −1.6, −0.8, −0.6, −0.1, −1.3 and **−1.7%**.
+* The flip itself is steady at 773–777.
+* Dealer GEX swung from +$2.9bn (Oct 12) to **−$13.9bn per 1%** (Oct 23).
+
+**3. The map after Friday's close** (OI = positions at the Oct 22 close; Oct 23 expiries removed):
+* SPY **760.6**; **flip 774.1** (the only zero crossing within ±6%); total dealer GEX −$13.9bn per 1%.
+* **Below spot: short-gamma accelerants.**
+  * Largest strikes: 750 (−$2.5bn), 755 (−$2.3bn), 760 (−$1.7bn), 745 (−$0.9bn).
+  * The total-gamma profile is most negative at **745–753** (about −$18.5bn).
+  * The **put wall is 750** (286k OI within 45 days).
+* **Above the flip: long gamma.** The largest positive strike is **780** (+$0.48bn), then 790, 785, 795. The **call wall is 800** (159k OI).
+* **Gamma by expiry:**
+
+  | Expiry | Share of \|gamma\| | Net |
+  |---|---|---|
+  | Fri **Oct 30** (after the Fed) | 22% | −$4.1bn |
+  | Monthly Nov 20 | 18% | −$2.7bn |
+  | **Mon Oct 26** (0DTE) | 15% | −$4.1bn |
+  | Dec 18 | 13% | |
+  | Fed-day Oct 28 | small, not in the top 8 | |
+
+* **The live call in SPY terms:** the S&P's new high (7,818.93) ≈ **SPY 780**, the biggest positive-gamma strike. The S&P's −5% line (7,427.98) ≈ **SPY 741**, just below the 745–755 short-gamma pocket and the 750 put wall.
+
+**4. Channel check:**
+* AUC **0.47**: distance to the flip does **not** separate corrections from bounces.
+* A 2% dip almost always pushes SPY below the flip: corrections 8 of 8, bounces 12 of 13. Being below the flip is the normal state of a dip, not a warning.
+
+## Reading
+* **Short term:** dealers are heavily short gamma between 745 and 774, so moves in either direction get amplified. A flush into 745–755 can be fast.
+* **Medium term:** by the [forced-flow](../2026-10-24-forced-flow/) law, moves made on low-gamma days tend to be given back over about 10 sessions. That fits the breadth "bounce" call.
+* **Levels to watch:**
+  * **774** (flip: reclaiming it flips dealers to damping);
+  * **780** (the gamma magnet, and the S&P's new high);
+  * **750** (put wall, centre of the short-gamma pocket);
+  * **741** (the theory's invalidation line).
+* **Caveat:** Monday's OI file (positions at Friday's close) is not yet published. The map is one day stale on positions; the 0DTE gamma at 760 is Monday's.
