@@ -34,3 +34,48 @@
 **Today:**
 * The same reading for the 10 sessions ending 2026-10-23.
 * A similarity score: cosine similarity of today's z-profile to the average pre-top profile, over the indicators that line up, compared with every other channel day near the high.
+
+## Round 1 results (`dossier.py`, `posthoc_types.py`; `out/profile.csv`, `out/lineup.csv`, `out/dossier.json`, `out/types.json`)
+**Nothing lines up by the rule. No indicator is |z| ≥ 0.5 in the same direction before all 3 main corrections:**
+* not in the 10 sessions before the top;
+* not in the earlier window (sessions t−30 to t−11; post hoc check).
+
+| Near misses | Before the 3 main corrections | Before all 6 events |
+|---|---|---|
+| VVIX high | 3 of 3 | 4 of 6 |
+| Gold up | 2 of 3 | 4 of 6 |
+| SKEW high | 2 of 3 | 4 of 6 |
+
+**The three corrections looked different beforehand.** Cosine similarity of their 23-indicator pre-top profiles:
+* Jul 2023 vs Feb 2025: −0.16
+* Jul 2023 vs Jan 2026: −0.02
+* Feb 2025 vs Jan 2026: +0.31
+
+What each top looked like:
+* **Jul 2023, "exhaustion":**
+  * S&P stretched above its 50-day average (+1.1), broad breadth (+1.4), low VIX (−1.2);
+  * spot and vol rising together (spot-vol correlation +1.5);
+  * strong credit and banks; high GEX.
+* **Feb 2025, "rotation under the surface":**
+  * semis already lagging (−1.1, after DeepSeek), AAPL decoupled (correlation −1.1), defensives leading (+0.9);
+  * gold (+1.2) and bonds (+0.9) bid; VIX elevated (+0.6); credit weakening (−0.8);
+  * S&P below its usual stretch (−0.8).
+* **Jan 2026, "broadening on a thin cushion":**
+  * semis (+1.2), equal weight (+1.2), small caps (+1.4), defensives (+1.4) and gold (+1.5) all up;
+  * AAPL lagging (−1.6);
+  * low dealer gamma: GEX −1.4, SPY gamma −0.9, DIX −0.9.
+
+**Today** (10 sessions to Oct 23) is most similar to **Feb 2025 (+0.47)** and the opposite of Jul 2023 (−0.46):
+* semis lagging (−1.3), AAPL decoupled (−1.5), defensives leading (+1.7), small caps lagging (−1.3);
+* breadth weak (−1.5), credit weakening (−1.5), low GEX (−1.1), VIX term structure up (+0.9), SKEW high (+1.1);
+* S&P below its usual stretch (−1.4).
+* Unlike Feb 2025, gold (−1.3) and bonds (−0.3) are not bid.
+
+## Amendment 1 (round 2, owner-aligned and still channel-only): dip anatomy. Written before computing.
+* **Why:** no common setup precedes the tops. The question a trader faces right now (S&P −2.5% from its Oct 6 high) is different: **is this dip the start of a correction, or a dip the channel will buy?** The channel has many more dips than corrections, so both outcomes are well represented.
+* **Episode:** the first close ≥ 2% below the running 252-day high (high made on or after 2022-10-13), outside an open episode.
+  * Outcome: **correction** if a close ≥ 5% below that high comes before a new high; **bounce** if a new high comes first.
+  * An episode ends when its outcome is decided.
+* **Reading:** each indicator's mean over the 5 sessions ending on the episode's first day, as a z-score as before.
+* **Separates:** at least 5 of the 6 corrections on the same side of the bounces' median, including all 3 main corrections, with the corrections' mean differing from the bounces' mean by ≥ 0.5 SD.
+* **Theory step and today:** as before. Today's episode began on the first close ≥ 2% below the Oct 6 high.

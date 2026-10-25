@@ -1,0 +1,25 @@
+indicator,group,lines up,majors same sign |z|>=0.5,events same sign |z|>=0.5,mean z (6 events),today z,normal near-high mean,today raw (10d mean)
+semis vs SPY (20d),leadership / rotation,0,1,2,0.0866,-1.257,0.031,-0.046
+AAPL stock-specific (20d),leadership / rotation,0,1,2,-0.3442,0.2185,0.0043,0.0176
+AAPL-S&P correlation (20d),leadership / rotation,0,1,2,-0.1418,-1.5359,0.379,-0.0285
+equal weight vs SPY (20d),leadership / rotation,0,2,2,0.1914,0.5732,-0.0066,0.0052
+small caps vs SPY (20d),leadership / rotation,0,2,2,0.2382,-1.2702,-0.001,-0.0405
+defensives vs SPY (20d),leadership / rotation,0,2,2,0.3609,1.6452,-0.0177,0.0421
+share of panel above 50-day,breadth,0,1,3,0.5481,-1.5327,0.6401,0.4659
+avg pairwise correlation,breadth,0,1,2,-0.5188,-1.1159,0.1388,0.0585
+GEX percentile,dealers / flows,0,1,2,0.1275,-1.1177,0.68,0.3972
+DIX percentile,dealers / flows,0,1,3,-0.1437,0.187,0.4441,0.4976
+SPY dealer gamma percentile,dealers / flows,0,1,2,0.0188,,0.5883,
+VIX percentile,volatility structure,0,1,3,-0.2073,0.4809,0.3776,0.5127
+VIX / VIX3M,volatility structure,0,1,1,-0.0659,0.8965,0.8696,0.9101
+VVIX percentile,volatility structure,0,3,4,0.1998,0.2608,0.4404,0.5171
+SKEW percentile,volatility structure,0,2,4,0.4597,1.1044,0.6388,0.9402
+spot-vol correlation (20d),volatility structure,0,2,2,0.3672,-0.1545,-0.7554,-0.7834
+bonds TLT (20d),cross-asset,0,1,2,0.2553,-0.3437,-0.0015,-0.0126
+dollar UUP (20d),cross-asset,0,2,2,-0.1232,0.8659,0.0006,0.0188
+bitcoin (20d),cross-asset,0,0,1,-0.1807,-0.1496,0.0286,0.0089
+gold (20d),cross-asset,0,2,4,0.9493,-1.3289,0.0185,-0.0462
+credit HYG vs IEF (20d),cross-asset,0,2,2,-0.1818,-1.5368,0.0039,-0.0128
+banks KRE vs SPY (20d),cross-asset,0,1,2,0.1759,-0.5304,0.0006,-0.0343
+S&P vs 50-day average,stretch,0,2,3,0.1283,-1.3755,0.029,0.0017
+S&P return (20d),stretch,0,1,2,0.108,-0.8012,0.0248,0.0059
