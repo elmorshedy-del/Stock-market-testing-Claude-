@@ -129,3 +129,24 @@ What each top looked like:
   * Channel base rate: 13 of 21 bounced. With breadth z ≤ 0.2: 13 of 15.
   * **The theory is wrong if 7,427.98 comes first.**
 * **What would change the reading before then:** breadth surging back above normal while the index stalls (a synchronized state), or the rotation stopping, with AAPL and defensives falling alongside semis.
+
+## Amendment 2 (owner: "Can u check the yen too since yen trade also can be a drive of some sort"). Written before downloading or computing.
+* **Mechanism:** the carry trade borrows cheap yen to buy higher-yielding and risk assets. A sharp yen rise (USD/JPY falling), or a jump in yen volatility, forces those positions to unwind, which means selling risk assets. Aug 2024 is the textbook case.
+* **Data:** Yahoo `JPY=X` (USD/JPY, daily), aligned to S&P sessions.
+* **Indicators (all known at that day's close):**
+
+  | Indicator | Definition | Carry stress when |
+  |---|---|---|
+  | yen 20-day | 20-day log change of USD/JPY | **negative** (yen strengthening) |
+  | yen 5-day | 5-day log change of USD/JPY | negative (sharp moves) |
+  | yen volatility | trailing-252 percentile of USD/JPY 20-day realized volatility | high |
+
+* **Tests:**
+  * **(a) Spark:** the same dip-anatomy rule as Amendment 1 (at least 7 of 8 corrections beyond the bounce median, all 3 main corrections, |difference| ≥ 0.5 SD), plus AUC. The best-of-indicators luck check is re-run with all 29 indicators.
+  * **(b) Before the tops:** the yen indicators in the 10-day pre-top profiles of the 6 events (Round 1 method).
+  * **(c) Fuel:** USD/JPY's log change from each dip's start to its outcome date, corrections vs bounces, plus its correlation with the correction's depth. Descriptive.
+* **Today:** the yen readings for the open episode and for the last 10 sessions.
+* **Reading:**
+  * The yen is a **spark** if (a) passes.
+  * It is **fuel** if the yen strengthens in at least 6 of 8 corrections during the decline, against at most half of the bounces.
+  * Otherwise it is **context** only.
