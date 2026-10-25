@@ -23,3 +23,7 @@ If a check fails, or you can show a rule or result is wrong, write it up as rese
   * Give the answer first, then the evidence, with a figure when it helps.
   * Say plainly when a result is unresolved or the data can't answer it.
 * **Performance:** set `OMP_NUM_THREADS=1` for multiprocessing and for many small model fits.
+* **Every SPY read includes these three (owner, 2026-10-25):**
+  * **Breadth:** share of large caps above their 50- to 200-day averages vs normal near-high days. See `research/agents/2026-10-25-channel-correction-theory/` (`dips.py`, `breadth_multiverse.py`).
+  * **Gamma levels:** the flip, the call and put walls, and where SPY closes vs the flip. See `research/agents/2026-10-25-spy-gamma-levels/spy_gamma.py`.
+  * **Gamma pockets:** strikes and price zones where dealer gamma is most negative (moves amplified) or most positive (magnets).
