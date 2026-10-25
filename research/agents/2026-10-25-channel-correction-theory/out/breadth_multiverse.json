@@ -1,0 +1,35 @@
+{
+ "versions": 58,
+ "median AUC, all versions": 0.7451923076923077,
+ "multiverse p (shuffled medians >= observed)": 0.0018,
+ "share of versions with AUC >= 0.70": 0.603448275862069,
+ "AUC by lookback (U1, 5-day)": {
+  "above 10-day": 0.587,
+  "above 20-day": 0.663,
+  "above 50-day": 0.899,
+  "above 100-day": 0.846,
+  "above 150-day": 0.851,
+  "above 200-day": 0.726
+ },
+ "50-day AUC by universe (5-day)": {
+  "U1 panel 41": 0.899,
+  "U2 panel + 40 (81)": 0.793,
+  "U3 panel ex-mega (35)": 0.822,
+  "U4 81 ex-mega (73)": 0.74
+ },
+ "alternative measures (5-day)": {
+  "positive 20-day return | U1 panel 41": 0.74,
+  "within 5% of 252-day high | U1 panel 41": 0.702,
+  "positive 20-day return | U2 panel + 40 (81)": 0.644,
+  "within 5% of 252-day high | U2 panel + 40 (81)": 0.625,
+  "equal weight vs SPY (percentile) | RSP/SPY": 0.558
+ },
+ "checks (lookbacks, universes, multiverse)": [
+  false,
+  true,
+  true
+ ],
+ "verdict": "not robust",
+ "today: median percentile among the 21 dips across versions": 0.19047619047619047,
+ "today: share of versions where today is below every correction's reading": 0.46551724137931033
+}

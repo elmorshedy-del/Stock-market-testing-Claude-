@@ -310,3 +310,30 @@ Latest week, raw:
 3. **Multiverse luck check:** the median AUC across **all** versions beats the medians from shuffled outcome labels (5,000 shuffles, the same shuffle applied to every version) at p < 0.05. Picking the best version cannot help.
 
 **Today:** every version's reading for today's dip, as a percentile among the 21 dips' readings.
+
+## Amendment 4 results (`breadth_multiverse.py`, `figure_breadth.py`; `out/breadth_multiverse.csv`, `out/breadth_multiverse.json`, `out/breadth_multiverse.png`)
+![breadth multiverse](out/breadth_multiverse.png)
+
+**Pre-registered verdict: "not robust". Check 1 fails, checks 2 and 3 pass.**
+
+| Check | Result | Pass |
+|---|---|---|
+| 1. Lookbacks (41 panel, 5-day reading) | 10-day 0.59, 20-day 0.66, **50-day 0.90, 100-day 0.85, 150-day 0.85, 200-day 0.73**. Median 0.79, but only 4 of 6 are ≥ 0.70 | ❌ |
+| 2. The 50-day in other universes | 81 stocks 0.79; 41 ex-mega 0.82; 81 ex-mega 0.74 | ✅ |
+| 3. All 58 versions together | median AUC **0.75**; shuffled-label medians reach it with **p 0.002**; 60% of versions ≥ 0.70 | ✅ |
+
+**Other measures** (5-day reading):
+* share with a positive 20-day return: 0.74 (41 panel), 0.64 (81 stocks);
+* share within 5% of their 252-day high: 0.70 (41), 0.63 (81);
+* equal weight vs SPY: 0.56. Relative performance is not the same thing as participation.
+
+**Diagnosis:**
+* The 50-day is not a magic number. It sits on a **plateau**: participation measured over 50 to 200 days separates corrections from bounces in every universe (AUC 0.73–0.90, 24 of 24 cells ≥ 0.73). Where it peaks depends on the universe: the 50-day in the 41 panel, the 150-day for the panel without mega-caps.
+* The failure is confined to **short** lookbacks (10–20 days). Those mostly measure the dip itself, since every 2% dip pushes short-term breadth down, not the underlying state.
+* So the effect is about **how many stocks are in intermediate and long uptrends** when the dip starts. That is the "state" in the theory: crowded, broad participation means fragile.
+* By the pre-set rule, though, it does not count as robust. The honest label is a strong, plateau-shaped effect for 50–200-day participation, with short-term breadth carrying no information.
+
+**Today** (dip start, Oct 16):
+* On every 50–200-day version, today sits at the **5th–24th percentile** of the 21 past dips; at the 10th on every 50-day version and the 5th on most 100-day versions.
+* In 47% of all 58 versions, today's breadth is below every one of the 8 corrections.
+* The bounce reading holds across definitions. Short-term breadth (10-day) sits high, at the 62nd–90th percentile, because the market bounced within the dip. That is exactly the kind of reading that carries no information here.
