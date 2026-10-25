@@ -199,3 +199,37 @@ What each top looked like:
   * The only narrow-breadth corrections in the channel were rates shocks.
 * **The live call is unchanged:** a new high above 7,818.93 before a close at or below 7,427.98.
 * **The main way it fails:** a rates shock (yields breaking higher, TLT falling hard). Even then, the channel's history points to a shallow correction rather than a deep one.
+
+## Amendment 3 (owner: "Fed meeting next week also gold and oil are making movements… Should we do a multivariate here like we did before. Do it"). Written before downloading oil or computing anything new.
+**New variables** (added to the 29; known at each day's close):
+
+| Variable | Definition |
+|---|---|
+| oil 20-day | 20-day log change of WTI front month (Yahoo `CL=F`) |
+| oil volatility percentile | trailing-252 percentile of oil's 20-day realized volatility |
+| FOMC within the next 10 sessions | 1 if a scheduled FOMC decision falls in the 10 sessions after the day |
+| sessions to the next FOMC decision | count of sessions |
+| sessions since the last FOMC decision | count of sessions |
+
+* **FOMC decision dates** are the scheduled meetings' second days:
+  * 2022: 01-26, 03-16, 05-04, 06-15, 07-27, 09-21, 11-02, 12-14
+  * 2023: 02-01, 03-22, 05-03, 06-14, 07-26, 09-20, 11-01, 12-13
+  * 2024: 01-31, 03-20, 05-01, 06-12, 07-31, 09-18, 11-07, 12-18
+  * 2025: 01-29, 03-19, 05-07, 06-18, 07-30, 09-17, 10-29, 12-10
+  * 2026: 01-28, 03-18, 04-29, 06-17, 07-29, 09-16, **10-28**, 12-09
+* Gold is already in the set (`gold (20d)`).
+
+**Univariate:** AUC for each new variable at the dip's start (corrections vs bounces), and the best-of-all-indicators luck check re-run with all 34.
+
+**Multivariate:** 21 decided dips, so every fitted model is scored by **leave-one-dip-out** cross-validation (LOO AUC).
+
+| Model | What it is |
+|---|---|
+| **M0** | breadth alone (logistic) |
+| **M1, theory composite, no fitting** | equal-weight sum of z-scores with signs fixed by mechanism: + breadth (crowded), − TLT 20-day (rates pressure), − yen 20-day (yen firming), + oil 20-day (inflation/rates), + gold 20-day (hedging demand), + FOMC within 10 sessions (event shock), + margin debt vs prices (fuel) |
+| **M2** | ridge logistic on all 34 indicators (penalty 1 on standardized inputs) |
+| **M3** | inside each fold, pick the 3 indicators with the highest univariate AUC on the training dips, then ridge logistic: "stack the best few" without leakage |
+
+* **Pass:** a multivariate model (M1, M2 or M3) beats M0's LOO AUC by ≥ 0.05. Otherwise the model stays "breadth alone".
+* **Today:** each model's probability that today's open dip becomes a correction, fitted on all 21. M1 is reported as a percentile against the 21 dips.
+* **Sensitivity:** ridge penalties of 0.3 and 3 are also reported.
