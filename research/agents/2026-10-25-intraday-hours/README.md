@@ -95,3 +95,37 @@
 | F5 | Semis gap up and fade | mean (first hour − overnight) of the semis (NVDA, AVGO, AMD, MU, AMAT, QCOM, TXN, INTC, SMH; picked by industry, not by rank) minus the rest < 0; day-block bootstrap, one-sided |
 
 * **Contamination note:** Part A used all 730 sessions for the segment means of AAPL and its 5 peers (6 of the 51 tickers in F4/F5) and for the AAPL first-hour slope. F3's AAPL last-half-hour slope was not computed on the held-out half.
+
+## Confirmation results (held-out 357 sessions, 2025-05-16 to 2026-10-23; `confirm.py`; `out/confirm.json`)
+| # | Held-out result | Raw p | Holm p | Verdict |
+|---|---|---|---|---|
+| F1 first hour → last half hour | pooled −0.006 (SPY −0.03, QQQ −0.02) | 0.77 | 1 | ❌ dies |
+| F2 month-end last half hour | −5.0 bp (SPY −6.5 bp), 18 days | 0.84 | 1 | ❌ dies |
+| F3 AAPL gap → its last half hour | −0.054 | 0.035 | 0.14 | same sign, not confirmed |
+| **F4 the "open personality" persists** | **Spearman 0.47 across 51 tickers** | **0.0003** | **0.0015** | ✅ **confirmed** |
+| F5 semis gap up and fade | −12 bp/day vs the rest (year 1: −18) | 0.036 | 0.14 | same sign, not confirmed |
+
+* **Held-out F4 extremes (first hour − overnight, bp/day):**
+  * top: T +22.5, ADBE +13.0, IBM +12.2, DIS +9.5, BAC +7.7, JNJ +6.2;
+  * bottom: AVGO −33.7, ORCL −33.2, BA −27.3, MU −26.8, NVDA −25.5, CAT −22.3.
+* **Selected tickers (year 1 → year 2, bp/day):** TSLA −9.8 → −4.2, SPY −5.9 → −4.8, QQQ −8.6 → −6.9, **AAPL +18.1 → 0.0**.
+* **AAPL by segment (%/yr):**
+  * year 1: overnight −21, first hour +24, midday −0, last half hour +3;
+  * year 2: overnight **+18**, first hour **+18**, midday −5, last half hour +1.
+  * The first-hour bid held in both years. The weak overnight did not.
+
+## Verdict
+1. **Who buys AAPL during the day?**
+   * Not the close. The last half hour is the same as the peers' (p 0.94), and closing pressure does not reverse overnight (A3).
+   * The premium is a **first-hour** effect: AAPL is bought between 9:30 and 10:30, +24%/yr vs the peers (p 0.014), and that held in both halves.
+   * In 2023–25 it came after a weak open. In the latest 17 months the overnight weakness disappeared, but the first-hour bid stayed.
+   * Gap-size dependence is weak (A2, p 0.075). So by the pre-registered rule no buyer type is identified: it is a systematic morning bid, not dip-buying.
+2. **Last-hour exploration:**
+   * Every last-hour pattern found in year 1 died in year 2: first hour → close continuation, the month-end close, and the volume-share and gamma patterns.
+   * This matches forced-flow A2 (no last-half-hour momentum in SPY, 2023–2026).
+3. **The finding that survived: each stock has a persistent "open personality."**
+   * AI and semis names (AVGO, NVDA, MU, ORCL) make their gains overnight and give part back in the first hour.
+   * Names such as T, IBM, BAC and JNJ, and AAPL in year 1, do the reverse.
+   * Index ETFs (SPY, QQQ) and TSLA lean mildly toward gapping up and fading.
+   * The ranking is stable year to year (Spearman 0.47, Holm p 0.0015).
+   * This is consistent with the "tug of war" literature: overnight demand from attention- and momentum-driven traders, intraday demand from institutions.

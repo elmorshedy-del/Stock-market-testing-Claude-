@@ -1,0 +1,113 @@
+{
+ "held-out sessions": 357,
+ "dates": [
+  "2025-05-16",
+  "2026-10-23"
+ ],
+ "F1 first hour -> last half hour, pooled stocks": {
+  "slope": -0.005965364594404784,
+  "p (one-sided)": 0.76775,
+  "SPY": -0.03126568298583407,
+  "QQQ": -0.017925378695342442
+ },
+ "F2 month-end last half hour, stock average": {
+  "days": 18,
+  "mean bp": -4.978560421317101,
+  "p (one-sided)": 0.844,
+  "SPY mean bp": -6.547837776760038,
+  "all days stock mean bp": -0.2043462519842375
+ },
+ "F3 AAPL overnight -> last half hour": {
+  "slope": -0.053566267233732034,
+  "p (one-sided)": 0.03525
+ },
+ "F4 persistence of (first hour - overnight) across 51 tickers": {
+  "spearman exploration vs held-out": 0.4682352941176471,
+  "p (one-sided, permutation)": 0.0003,
+  "held-out top 6 (bp/day)": [
+   [
+    "T",
+    22.5
+   ],
+   [
+    "ADBE",
+    13.0
+   ],
+   [
+    "IBM",
+    12.2
+   ],
+   [
+    "DIS",
+    9.5
+   ],
+   [
+    "BAC",
+    7.7
+   ],
+   [
+    "JNJ",
+    6.2
+   ]
+  ],
+  "held-out bottom 6 (bp/day)": [
+   [
+    "AVGO",
+    -33.7
+   ],
+   [
+    "ORCL",
+    -33.2
+   ],
+   [
+    "BA",
+    -27.3
+   ],
+   [
+    "MU",
+    -26.8
+   ],
+   [
+    "NVDA",
+    -25.5
+   ],
+   [
+    "CAT",
+    -22.3
+   ]
+  ],
+  "AAPL rank held-out (1 = highest)": 16
+ },
+ "F5 semis minus rest, (first hour - overnight)": {
+  "difference bp/day": -12.265722810685341,
+  "p (one-sided)": 0.036,
+  "exploration difference bp/day": -18.012995114975098
+ },
+ "confirmations": {
+  "F1 first hour -> last half hour, pooled stocks": {
+   "raw p": 0.76775,
+   "Holm p": 1.0,
+   "confirmed": false
+  },
+  "F2 month-end last half hour, stock average": {
+   "raw p": 0.844,
+   "Holm p": 1.0,
+   "confirmed": false
+  },
+  "F3 AAPL overnight -> last half hour": {
+   "raw p": 0.03525,
+   "Holm p": 0.141,
+   "confirmed": false
+  },
+  "F4 persistence of (first hour - overnight) across 51 tickers": {
+   "raw p": 0.0003,
+   "Holm p": 0.0014999999999999998,
+   "confirmed": true
+  },
+  "F5 semis minus rest, (first hour - overnight)": {
+   "raw p": 0.036,
+   "Holm p": 0.141,
+   "confirmed": false
+  }
+ }
+}
