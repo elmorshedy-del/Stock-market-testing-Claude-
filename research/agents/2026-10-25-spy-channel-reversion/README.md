@@ -81,3 +81,34 @@
 * **Few independent episodes.** Roughly 25–35 reversions of 5% or more since 2011. Overlapping 20-day outcomes are handled by the shift null.
 * **The near-high universe is a choice.** All-days results are reported alongside it.
 * **ETF relative returns are noisy proxies** for the flows they stand in for.
+
+## Redirect by the owner (before any outcome was computed): this channel only, three reversions, add AAPL
+**This replaces the 2011–2026 test above, which was not run.**
+
+**The owner's three reversions** (S&P closes):
+1. **2023-07-31** top 4,589 → 2023-10-27 low 4,117 (−10.3%, 63 sessions).
+2. **2025-02-19** top 6,144 → 2025-04-08 low 4,983 (−18.9%, 34 sessions).
+3. **2026-01-27** top 6,979 → 2026-03-30 low 6,344 (−9.1%, 43 sessions).
+
+**Minor pullbacks:** 2024-03-28 → 04-19 (−5.5%), 2024-07-16 → 08-05 (−8.5%) and Nov 2025 (−5.1%). They are not counted as hits or as false alarms; how the signals behaved before them is reported.
+
+**Design (descriptive fingerprint plus a luck check; three events allow no significance test):**
+* **Period:** the channel, 2022-10-13 to 2026-10-23.
+* **Signals:** the 24 above, plus **AAPL**, since the owner sees it behave differently first:
+  * A1 AAPL's 20-day return minus SPY's (risk when low: AAPL lagging);
+  * A2 the size of that gap in either direction (risk when high: divergence);
+  * A3 AAPL below its 50-day average while the S&P is above its own (risk when on);
+  * A4 the 20-day correlation of AAPL's and SPY's daily returns (risk when low: AAPL decoupling).
+* **Alarm:** the sign-aligned trailing-252-day percentile ≥ 0.80. A3 is on when its condition is true.
+* **Hit:** the alarm is on for at least 3 of the 30 sessions ending at a top. **Lead:** sessions from the first alarm day in that window to the top.
+* **False-alarm rate:** the share of normal channel days with the alarm on. Normal days exclude:
+  * the pre-top windows;
+  * the reversions themselves;
+  * the minor pullbacks and the 30 sessions before them.
+* **Ranking:** signals that hit 3 of 3, ordered by false-alarm rate.
+* **Luck check:** each signal is circularly shifted within the period, 1,000 times. For each, the share of shifts that hit 3 of 3 with a false-alarm rate at or below the observed one. Their sum is the number of signals expected to look this good by chance.
+* **Today:** each signal's state at the Oct 23, 2026 close.
+
+**Reading rule (written before the run):**
+* A signal is a **candidate warning** only if it hits 3 of 3, its false-alarm rate is ≤ 15%, and its luck share is ≤ 0.05.
+* With three events, even a candidate is a hypothesis to watch, not a tested rule.
