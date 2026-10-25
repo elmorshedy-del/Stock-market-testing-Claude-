@@ -1,0 +1,74 @@
+{
+ "sessions": 722,
+ "first / last day": [
+  "2023-11-27",
+  "2026-10-23"
+ ],
+ "A0 intraday minus overnight: AAPL minus peers (annualized %)": {
+  "value": 46.00147800037905,
+  "p (<= 0)": 0.0055,
+  "AAPL": 22.41977770159476,
+  "peers": {
+   "MSFT": -3.1650593220015195,
+   "AMZN": -20.611420882732784,
+   "GOOGL": -1.307812793297367,
+   "META": -27.264930278818618,
+   "NVDA": -65.55927821707118
+  }
+ },
+ "A1 segment means (annualized %)": {
+  "on": {
+   "AAPL": -2.061790130906016,
+   "peer average": 24.715031741741722,
+   "AAPL minus peers": -26.776821872647737,
+   "p (two-sided)": 0.021
+  },
+  "first": {
+   "AAPL": 20.810211032168063,
+   "peer average": -3.139410649610338,
+   "AAPL minus peers": 23.9496216817784,
+   "p (two-sided)": 0.014
+  },
+  "mid": {
+   "AAPL": -2.843659465526312,
+   "peer average": 2.4829512139254932,
+   "AAPL minus peers": -5.326610679451805,
+   "p (two-sided)": 0.338
+  },
+  "last": {
+   "AAPL": 2.2749398355910833,
+   "peer average": 1.7594096530999686,
+   "AAPL minus peers": 0.515530182491115,
+   "p (two-sided)": 0.938
+  }
+ },
+ "A2 first hour on overnight gap": {
+  "AAPL slope": -0.10461830318995069,
+  "peer slopes": {
+   "MSFT": 0.025249727134464404,
+   "AMZN": -0.03871683453662085,
+   "GOOGL": -0.04456336571520596,
+   "META": -0.0458459200692207,
+   "NVDA": -0.02760303648251996
+  },
+  "AAPL minus peer average": -0.07832241725613008,
+  "p (>= 0)": 0.0745
+ },
+ "A3 next overnight on last half hour": {
+  "AAPL slope": -0.08491832532721919,
+  "peer slopes": {
+   "MSFT": -0.041398797827331406,
+   "AMZN": -0.2924795722840944,
+   "GOOGL": -0.03597697168024394,
+   "META": -0.06397349249858313,
+   "NVDA": -0.39648447815593774
+  },
+  "AAPL minus peer average": 0.08114433716201894,
+  "p (>= 0)": 0.62
+ },
+ "verdicts": {
+  "H-gap": "not supported",
+  "H-close": "not supported",
+  "H-spread": "not supported"
+ }
+}

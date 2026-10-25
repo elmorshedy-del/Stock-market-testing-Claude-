@@ -53,3 +53,45 @@
   * Carry forward **at most 5 findings**, chosen on the exploration half, each with a stated sign.
   * They are written into this README and pushed **before** the held-out half is computed.
   * A finding is confirmed if, on the held-out half, it has the same sign and a Holm-corrected p < 0.05 across the carried findings, using the same statistic and a 20-day block bootstrap.
+
+## Part A results (`part_a.py`; `out/part_a.json`; 722 full sessions)
+| Test | Result |
+|---|---|
+| A0, is the quirk present? | AAPL intraday − overnight **+22%/yr**; peers MSFT −3, AMZN −21, GOOGL −1, META −27, NVDA −66. AAPL minus peers +46, **p 0.006** ✅ |
+| A1, where it sits (AAPL minus peers, %/yr) | **overnight −27 (p 0.02); first hour +24 (p 0.014)**; midday −5 (p 0.34); last half hour +0.5 (p 0.94) |
+| A2, first hour vs gap (H-gap test) | AAPL −0.10 vs peers about −0.03; difference −0.08, p 0.075 (not significant) |
+| A3, next overnight vs last half hour (H-close test) | AAPL −0.08 vs peers −0.17; wrong direction (p 0.62) |
+
+* **By the rule, no hypothesis is supported:**
+  * H-gap has its segment but its extra test misses (p 0.075);
+  * H-close has neither;
+  * H-spread does not apply, because the first hour is significant.
+* **Diagnosis:**
+  * AAPL's "intraday" premium is a **first-hour** effect. AAPL opens cheap: about 27%/yr less overnight than the peers. It is bought back within the first hour (+24%/yr).
+  * Overnight plus the first hour together, AAPL (+19) ≈ peers (+22).
+  * So the quirk is **where** the gain lands: AAPL's opening print is depressed and recovers by 10:30. **It is not the close and not closing flows.**
+  * It does not depend much on the size of the gap (A2), so it looks less like dip-buying after bad news and more like a systematic weak open.
+
+## Part B exploration results (first 365 sessions, 2023-11-27 to 2025-05-15; `explore.py`; `out/explore.json`)
+| # | Result |
+|---|---|
+| B1 open-to-15:30 → last half hour | ≈ 0 (pooled t 0.2). No intraday momentum, as A2 found in forced-flow |
+| **B2 first hour → last half hour** | **positive**: pooled stocks slope +0.022 (t 1.96); 71% of stocks positive; SPY +0.066, QQQ +0.058, XLK +0.073, SMH +0.061 |
+| B3 overnight → last half hour | pooled ≈ 0; **AAPL is the most negative of 51 (−0.074)** |
+| B4 last half hour → next overnight | nothing pooled (t −0.5) |
+| **B5 calendar** | **month end: stocks +17 bp (t 2.0), SPY +14 bp (t 1.4), 19 days.** Weekdays, OPEX, quad witching and pre-holiday show nothing |
+| B6 abnormal closing volume | nothing (corr 0.04 / 0.01) |
+| B7 big SPY days | slight last-half-hour reversal (t < 0.6) |
+| B8 gamma | no consistent pattern across the 6 tickers |
+| **Extra: (first hour − overnight) by ticker** | a clear split. **Semis and AI names gap up overnight and fade in the first hour:** AVGO −38, MU −34, NVDA −33, SMH −25, ORCL −24 bp/day. **AAPL (+18), T (+21), UNH, BAC, PG, MMM gap down and recover in the first hour.** The overnight/first-hour split lines up with the AI trade, and AAPL sits on the anti-AI side again |
+
+### Carried forward for confirmation on the held-out 365 sessions (signs fixed now; Holm across these 5)
+| # | Finding | Statistic and test |
+|---|---|---|
+| F1 | The first hour predicts the last half hour | ticker-demeaned pooled slope over the 45 stocks > 0; day-block bootstrap, one-sided |
+| F2 | The month-end last half hour is positive | mean of the stock-average last-half-hour return on month-end days > 0; bootstrap over those days, one-sided |
+| F3 | AAPL's overnight gap predicts its last half hour negatively | slope < 0; day-block bootstrap, one-sided |
+| F4 | A stock's (first hour − overnight) signature is persistent | Spearman across the 51 tickers of the per-ticker mean, exploration vs held-out, > 0; permutation of ticker labels |
+| F5 | Semis gap up and fade | mean (first hour − overnight) of the semis (NVDA, AVGO, AMD, MU, AMAT, QCOM, TXN, INTC, SMH; picked by industry, not by rank) minus the rest < 0; day-block bootstrap, one-sided |
+
+* **Contamination note:** Part A used all 730 sessions for the segment means of AAPL and its 5 peers (6 of the 51 tickers in F4/F5) and for the AAPL first-hour slope. F3's AAPL last-half-hour slope was not computed on the held-out half.
