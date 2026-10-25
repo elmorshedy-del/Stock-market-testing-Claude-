@@ -1,0 +1,52 @@
+{
+ "episodes": {
+  "bounce": 13,
+  "correction": 8,
+  "open": 1
+ },
+ "correction high dates": [
+  "2022-11-30",
+  "2023-02-02",
+  "2023-07-31",
+  "2024-03-28",
+  "2024-07-16",
+  "2025-02-19",
+  "2025-10-28",
+  "2026-01-27"
+ ],
+ "separating indicators": [
+  {
+   "indicator": "share of panel above 50-day",
+   "direction in corrections": "higher",
+   "corrections beyond bounce median": 7,
+   "difference": 1.4859466993687924,
+   "today (open episode) z": -1.639938788967496,
+   "today on the correction side": false
+  },
+  {
+   "indicator": "dollar UUP (20d)",
+   "direction in corrections": "lower",
+   "corrections beyond bounce median": 6,
+   "difference": -0.7456602420010324,
+   "today (open episode) z": 1.1773866582718946,
+   "today on the correction side": false
+  },
+  {
+   "indicator": "bitcoin (20d)",
+   "direction in corrections": "lower",
+   "corrections beyond bounce median": 7,
+   "difference": -0.7402318250663084,
+   "today (open episode) z": 0.15466491558852374,
+   "today on the correction side": true
+  }
+ ],
+ "today's episode": [
+  {
+   "high date": "2026-10-06",
+   "start": "2026-10-16",
+   "outcome": "open",
+   "decided": NaN,
+   "depth at start %": "-2.04"
+  }
+ ]
+}

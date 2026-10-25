@@ -1,0 +1,19 @@
+{
+ "strict rule (>= 7 of 8, 3 of 3 main)": [
+  "share of panel above 50-day",
+  "bitcoin (20d)"
+ ],
+ "expected number passing by chance": 1.9375,
+ "P(>= observed count by chance)": 0.545,
+ "P(breadth alone passes by chance) proxy: share of shuffles with >= 1 pass": 0.8105,
+ "post hoc breadth split (threshold read off the data)": {
+  "breadth z > 0.2": {
+   "corrections": 6,
+   "bounces": 0
+  },
+  "breadth z <= 0.2": {
+   "corrections": 2,
+   "bounces": 13
+  }
+ }
+}

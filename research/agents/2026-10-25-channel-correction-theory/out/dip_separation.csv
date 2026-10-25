@@ -1,0 +1,27 @@
+indicator,separates,direction in corrections,corrections beyond bounce median,majors beyond,mean z corrections,mean z bounces,difference,today (open episode) z,today on the correction side
+share of panel above 50-day,True,higher,7,3,0.73,-0.755,1.486,-1.64,False
+bonds TLT (20d),False,higher,6,2,0.309,-0.587,0.896,-0.747,False
+credit HYG vs IEF (20d),False,lower,5,2,-0.267,0.542,-0.81,-1.072,True
+dollar UUP (20d),True,lower,6,3,-0.326,0.42,-0.746,1.177,False
+S&P vs 50-day average,False,higher,6,1,0.072,-0.669,0.741,-1.197,False
+bitcoin (20d),True,lower,7,3,-0.599,0.141,-0.74,0.155,True
+AAPL-S&P correlation (20d),False,higher,6,2,0.488,-0.162,0.65,-1.002,False
+margin debt growth,False,lower,4,1,-0.762,-0.191,-0.571,0.89,False
+gold (20d),False,higher,5,2,0.582,0.047,0.536,-1.16,False
+S&P return (20d),False,higher,5,1,0.079,-0.382,0.461,-0.29,False
+defensives vs SPY (20d),False,higher,6,3,0.418,-0.004,0.422,0.751,True
+AAPL stock-specific (20d),False,higher,5,2,0.233,-0.186,0.419,0.182,True
+VIX percentile,False,lower,5,1,0.002,0.39,-0.388,0.037,True
+banks KRE vs SPY (20d),False,higher,6,3,0.386,0.07,0.316,-1.104,False
+margin debt vs prices,False,lower,5,1,-0.347,-0.058,-0.289,0.999,False
+GEX percentile,False,higher,5,1,-0.276,-0.55,0.273,-0.732,False
+SPY dealer gamma percentile,False,higher,5,1,-0.325,-0.58,0.255,,False
+SKEW percentile,False,higher,5,2,-0.152,-0.378,0.226,1.239,True
+semis vs SPY (20d),False,higher,5,2,-0.072,-0.248,0.176,-0.32,False
+spot-vol correlation (20d),False,higher,4,1,0.361,0.241,0.12,0.211,True
+avg pairwise correlation,False,lower,4,3,0.446,0.545,-0.099,-0.934,True
+VVIX percentile,False,lower,3,0,0.183,0.254,-0.07,-0.305,True
+equal weight vs SPY (20d),False,higher,5,2,0.234,0.167,0.067,-0.457,False
+small caps vs SPY (20d),False,higher,4,2,0.268,0.226,0.043,-1.771,False
+DIX percentile,False,higher,5,2,-0.112,-0.133,0.021,-0.31,True
+VIX / VIX3M,False,higher,5,2,0.368,0.366,0.001,0.504,True

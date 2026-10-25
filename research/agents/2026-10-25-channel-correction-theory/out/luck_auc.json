@@ -1,0 +1,15 @@
+{
+ "AUC by indicator (top 6)": {
+  "share of panel above 50-day": 0.894,
+  "bitcoin (20d)": 0.731,
+  "bonds TLT (20d)": 0.702,
+  "gold (20d)": 0.683,
+  "dollar UUP (20d)": 0.673,
+  "AAPL-S&P correlation (20d)": 0.663
+ },
+ "family-wise p (best of all indicators by chance >= observed)": {
+  "share of panel above 50-day": 0.0494,
+  "bitcoin (20d)": 0.8246,
+  "bonds TLT (20d)": 0.9476
+ }
+}

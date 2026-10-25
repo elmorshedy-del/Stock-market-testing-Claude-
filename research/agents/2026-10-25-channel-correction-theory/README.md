@@ -84,3 +84,48 @@ What each top looked like:
 * **margin debt growth:** FINRA margin debt, year on year, from the macro panel ([channel-reversion-macro](../2026-10-15-channel-reversion-macro/), which found margin-debt surges before reversions after 2010).
 * **margin debt vs prices:** margin-debt year-on-year growth minus the S&P's year-on-year growth for the same month. Leverage growing faster than prices is the cleaner proxy that [forced-flow](../2026-10-24-forced-flow/) D suggested.
 * Both use a 2-month lag (FINRA publishes about three weeks after month end), so each day sees only what was public.
+
+## Amendment 1 results (`dips.py`, `luck.py`, `figure.py`; `out/dips.csv`, `out/dip_profiles.csv`, `out/dip_separation.csv`, `out/luck.json`, `out/luck_auc.json`, `out/channel_dips.png`)
+![channel dips](out/channel_dips.png)
+
+**Episodes:** 21 decided 2% dips: 8 corrections, 13 bounces.
+* The corrections' highs are 2022-11-30, 2023-02-02, 2023-07-31, 2024-03-28, 2024-07-16, 2025-02-19, 2025-10-28 and 2026-01-27. That is the owner's 6 plus two early-channel ones.
+* Today's dip is open: high 2026-10-06 at 7,818.93; the episode started 2026-10-16 at −2.04%.
+
+**Reading of the rule:** with 8 corrections instead of 6, "at least 5 of 6" scales to **at least 7 of 8**, with all 3 main corrections included.
+
+| | Breadth (share of 41 large caps above their 50-day) | Bitcoin, 20 days |
+|---|---|---|
+| Direction in corrections | **higher**: z +0.73 vs −0.76 for bounces (difference 1.5 SD) | lower: −0.60 vs +0.14 |
+| Corrections beyond the bounce median | 7 of 8, all 3 main corrections | 7 of 8, all 3 main corrections |
+| AUC | **0.89** | 0.73 |
+| Best-of-26 luck check | **p 0.049** | p 0.82 (luck level) |
+
+* Shuffling outcomes, about 1.9 indicators pass the count rule by chance, so the count alone means little. **Breadth is the only indicator whose effect size beats luck**, using a best-of-26 AUC check (5,000 shuffles).
+* **Post hoc split** (threshold read off the data):
+  * breadth z > 0.2 at the dip's start: **6 of 6 became corrections**;
+  * breadth z ≤ 0.2: **13 of 15 were bought**.
+* Margin debt does not separate the outcomes inside the channel (AUC 0.61 and 0.57). Corrections came at both low growth (2022–23) and high growth (2025–26).
+
+## The theory: synchronized vs rolling
+1. **A dip becomes a correction when it starts from broad strength.**
+   * With most large caps above their 50-day average, positioning is crowded everywhere and nothing is under-owned.
+   * A shock forces synchronized de-risking across the board. Examples: Jul 2023 (rates), Jul 2024 (the carry unwind after the small-cap squeeze), Feb 2025 (DeepSeek, then tariffs), Jan 2026.
+2. **A dip from narrow breadth is a rolling correction already under way.**
+   * Most stocks have already pulled back beneath a firm index, so sellers are largely done.
+   * Money **rotates instead of leaving**: into AAPL, defensives or the laggards. That is what the AAPL quirks study saw now (semis −2.6% vs SPY, AAPL-specific +4.2%, defensives leading).
+   * The index dip gets bought.
+3. **How the other observations fit:**
+   * The three main corrections had different setups (round 1) because the **shock** differed each time. The common factor is the state the shock hit: broad, crowded participation.
+   * Margin debt is high in both outcomes in 2024–26: at most fuel for depth, not the spark (consistent with forced-flow D).
+   * AAPL decoupling flagged many of these windows in the channel because rotation inside the index produces it. Rotation is the *bounce* signature, which is why it does not predict tops by itself.
+
+## Today and the live call (written 2026-10-25, before the outcome is known)
+* **Today's dip started from very narrow breadth:**
+  * z **−1.6**: 39% of the panel above its 50-day on Oct 16 and 44% on Oct 23, against 64% on normal near-high days;
+  * the second-lowest start of all 22 dips;
+  * it sits on the **bounce** side, with rotation visible (AAPL, defensives).
+* **Live call:** the S&P makes a new closing high above **7,818.93** before any close at or below **7,427.98** (−5% from the Oct 6 high).
+  * Channel base rate: 13 of 21 bounced. With breadth z ≤ 0.2: 13 of 15.
+  * **The theory is wrong if 7,427.98 comes first.**
+* **What would change the reading before then:** breadth surging back above normal while the index stalls (a synchronized state), or the rotation stopping, with AAPL and defensives falling alongside semis.
