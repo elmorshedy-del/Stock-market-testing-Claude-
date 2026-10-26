@@ -1,0 +1,42 @@
+{
+ "cells 2011-2026": {
+  "GEX <0, corr rising": {
+   "days": 147,
+   "next 10d %": -0.8088130978961914,
+   "P(-5% within 20d | near high)": 0.5925925925925926
+  },
+  "GEX <0, corr not rising": {
+   "days": 200,
+   "next 10d %": 2.5570321217132603,
+   "P(-5% within 20d | near high)": 0.38461538461538464
+  },
+  "GEX >0, corr rising": {
+   "days": 1127,
+   "next 10d %": 0.50923659958999,
+   "P(-5% within 20d | near high)": 0.23273942093541203
+  },
+  "GEX >0, corr not rising": {
+   "days": 2379,
+   "next 10d %": 0.346824310246252,
+   "P(-5% within 20d | near high)": 0.18925964546402502
+  }
+ },
+ "PRIMARY: within GEX < 0": {
+  "next 10d return, rising minus not %": -3.365845219609452,
+  "p (<= 0 is the prediction; P(diff >= 0))": 0.0,
+  "drawdown odds, rising minus not": 0.20797720797720792,
+  "p (P(diff <= 0))": 0.13566666666666666
+ },
+ "same contrast within GEX > 0": {
+  "next 10d return, rising minus not %": 0.16241228934373805,
+  "p (<= 0 is the prediction; P(diff >= 0))": 0.852,
+  "drawdown odds, rising minus not": 0.04347977547138701,
+  "p (P(diff <= 0))": 0.05533333333333333
+ },
+ "today": {
+  "10d corr (41 panel) Oct 23": 0.024843659312862535,
+  "5d change": 0.002896036352954448,
+  "rising (top third)": false,
+  "SqueezeMetrics GEX Oct 23 $bn": 4.001421424610004
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "secondary 2020-2026 (SPY below flip, 81-stock corr)": {
+  "below flip": {
+   "days rising / not": [
+    319,
+    554
+   ],
+   "next 10d % rising / not": [
+    0.6995728196497822,
+    0.7174516124209477
+   ],
+   "difference %": -0.01787879277116546,
+   "p (diff >= 0)": 0.5143333333333333
+  },
+  "above flip": {
+   "days rising / not": [
+    186,
+    530
+   ],
+   "next 10d % rising / not": [
+    0.4576418017674575,
+    0.37999924807715774
+   ],
+   "difference %": 0.07764255369029976,
+   "p (diff >= 0)": 0.592
+  }
+ },
+ "post hoc: primary by period": {
+  "2011-2019": {
+   "GEX<0 days rising / not": [
+    61,
+    93
+   ],
+   "next 10d % rising / not": [
+    0.6362861136597208,
+    2.473901243293618
+   ]
+  },
+  "2020-2022": {
+   "GEX<0 days rising / not": [
+    62,
+    89
+   ],
+   "next 10d % rising / not": [
+    -3.1915435351395085,
+    2.4858902994904826
+   ]
+  },
+  "2023-2026": {
+   "GEX<0 days rising / not": [
+    24,
+    18
+   ],
+   "next 10d % rising / not": [
+    1.6736133689444346,
+    3.338298447871818
+   ]
+  }
+ },
+ "post hoc: GEX<0 & rising, distinct episodes (gap > 10 sessions)": 35,
+ "today (Oct 26, 81-stock corr)": {
+  "corr": 0.10824642773672713,
+  "rising": true,
+  "SPY below engine flip": true
+ }
+}

@@ -116,3 +116,71 @@ QQQ 2026-10-30 **$700 put** OI by file date (each file is positions at the prior
   * The **open-to-close +2.0%** has the footprint of a **stop run above the $389 triple top**: an immediate break, heavy opening volume, no pullback. That fits short covering by shorts who sold the earnings spike, plus momentum buyers.
   * It was a burst, not a squeeze: short interest is modest (about 2 days to cover), and dealers were selling into it.
   * Historically, gaps over big call strikes fade intraday, so Monday bucked that tendency. That is consistent with an extra, non-dealer buyer.
+
+## P2 results (`p2_p3.py`, `p2_robust.py`; `out/p2.json`, `out/p2_robust.json`)
+**Verdict: the letter's rule passes on returns in the primary test, but only in true short gamma, and most of it comes from 2020–22. The drawdown half and the secondary (engine flip) version fail.**
+
+| S&P, 2011–2026 | Days | Next 10 sessions | P(−5% within 20 sessions \| near the high) |
+|---|---|---|---|
+| **GEX < 0, correlation rising** | 147 | **−0.81%** | 59% |
+| GEX < 0, correlation not rising | 200 | +2.56% | 38% |
+| GEX > 0, rising | 1,127 | +0.51% | 23% |
+| GEX > 0, not rising | 2,379 | +0.35% | 19% |
+
+* **Primary contrast (GEX < 0):** −3.37 points over 10 sessions, **p < 0.001** (prediction met). Drawdown odds +21 points, p 0.14 (not met).
+* **When GEX > 0:** +0.16 points (p 0.85). Rising correlation means nothing when dealers are long gamma.
+* **Reading:** in short gamma the usual pattern is a sharp bounce (+2.6%). Rising correlation is what turns that into a further leg down: a broad, all-names liquidation, not a rotation. This fits the channel study's breadth finding: corrections are synchronized, bounces are rotational.
+* **Secondary (registered): engine flip, 81-stock correlation, 2020–2026.** Below the flip, rising vs not: +0.70% vs +0.72% (p 0.51). Null. The engine's flip is a local strike-level map; SqueezeMetrics GEX is a market-wide sign. Only the second carries the effect.
+* **Post hoc, by period** (GEX < 0; rising vs not):
+  * 2011–19: +0.64% vs +2.47% (61 / 93 days);
+  * **2020–22: −3.19% vs +2.49%** (62 / 89 days);
+  * 2023–26 (the channel): +1.67% vs +3.34% (24 / 18 days).
+  * Same sign in all three periods; the drop is a 2020–22 feature. 35 distinct episodes (gaps > 10 sessions).
+* **Today:**
+  * SqueezeMetrics GEX on Oct 23: **+$4.0bn** (long gamma), so the rule is **off** by its own definition.
+  * Correlation: the 41-stock panel is **not** rising (Oct 23); the 81-stock panel **is** rising (0.108 on Oct 26).
+  * Our engine has SPY below its flip (773). The two gamma measures disagree, and only the one that tested positive says "long gamma".
+* **Limitation:** realized correlation, not COR1M (implied).
+
+## P3 results (`p2_p3.py`; `out/p3.json`)
+**Verdict: the direction matches the letter (large put closes come near lows), but there are too few events to tell it from noise.**
+
+| | Selloff days | Events (de-duplicated) | Next 5d with / without | Next 10d | Next 20d | p (5 / 10 / 20d) |
+|---|---|---|---|---|---|---|
+| SPY | 198 | 5 | +1.86% / +0.02% | +1.42% / +0.23% | +4.50% / +1.32% | 0.22 / 0.57 / 0.30 |
+| QQQ | 293 | 4 | +2.14% / +0.17% | +3.82% / +0.52% | +6.29% / +1.68% | 0.55 / 0.25 / 0.35 |
+
+* **Events:**
+  * SPY: 2022-06-21, 2022-09-08, 2022-12-16, 2025-04-07, 2026-03-27;
+  * QQQ: 2021-03-04, 2022-01-14, 2023-10-27, 2025-04-16.
+* Several sit at or near well-known lows (June 2022, Oct 2023, April 2025), but 9 events cannot pass a test.
+* **The letter's trade:** the build is confirmed (OI +65k from Oct 6 to the Oct 19 peak). The close is only partly visible (−32k by Oct 26): OI changes net out when other traders take the other side.
+
+## P4 results (`p4_levels.py`; `out/p4.json`)
+**P4b round-number clustering: confirmed. Orders resting at round numbers leave a clear footprint (Osler replicates).**
+* 81 stocks + SPY + TSLA, 2015–2026, each from after its last split.
+* **Day highs** within 0.5% **below** a round level vs within 0.5% above: **19,070 vs 17,553** (52.1% vs 47.9%, binomial p 2e-15).
+* **Day lows** within 0.5% **above** a round level vs below: **18,335 vs 17,567** (51.1% vs 48.9%, p 5e-5).
+* **Crossing a round level** at the close vs stopping short: next-day +0.018z (p 0.39). The level stalls prices intraday but carries no next-day signal.
+
+**P4a stop cascades at the prior 20-day high: not supported at the daily horizon.**
+* 442,553 stock-days. Events: A crossed and closed above 8,285; B crossed but closed back below 6,681; C near miss (within 0.5%) 10,120.
+* Coefficients vs all other stock-days, controlling for the day's own z-return (90% interval, day-cluster bootstrap):
+
+| | Next day | Next 5 days |
+|---|---|---|
+| A crossed and held | +0.026z (−0.001, +0.051), p 0.13 | +0.029z, p 0.40 |
+| B crossed, closed back below | **+0.064z** (+0.034, +0.090), p < 0.01 | +0.043z, p 0.30 |
+| C near miss | +0.006z, p 0.62 | −0.054z (−0.121, +0.006), p 0.15 |
+
+* **Deviation, stated:** the registered contrast is A vs C. It was run as A, B and C dummies against all other days. A − C is +0.02z next day and +0.08z over 5 days, with overlapping intervals. Neither prediction (A continues, C reverses) is met.
+* **Splits:** one cell of 6 for C over 5 days reaches p < 0.05 (mid volatility, −0.135z, p 0.048). That is luck-level across 18 cells.
+* **Reading:** stop runs and short covering at prior highs exist (P1's TSLA open is an example), but they play out **within the session**. Daily bars show no follow-through to trade. The one daily footprint is a small next-day bounce after a failed break (B). Testing the intraday cascade needs trade and quote data, not daily bars.
+
+## What this means today (Oct 26 close)
+* **TSLA:** the high of $397.27 stalled just under the $400 round number and the 42k-contract call wall: the textbook P4b footprint. A break of $400 needs a new buyer. $389 (the old triple top) is the first support.
+* **SPY:** round levels 770 and 780 sit on the gamma map (flip 773, magnet 780). P4b says expect stalls just below them, not clean breaks.
+* **Correlation × gamma:** half on (81-stock correlation rising, SPY below our flip), half off (SqueezeMetrics GEX positive). The tested version is off. If GEX turns negative while correlation keeps rising, the rule says expect a leg down, not a bounce.
+
+## Figure
+`out/positioning_tests.png` (`figure.py`).
