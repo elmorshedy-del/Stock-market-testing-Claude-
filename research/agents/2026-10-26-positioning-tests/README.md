@@ -42,3 +42,46 @@
   * **Statistic:** mean next 5/10/20-session ETF return after selloff days **with** a large put close minus selloff days **without** one. Events are de-duplicated: one per 5 sessions per ETF.
   * Bootstrap by event; two-sided (the letter implies > 0).
 * **Reading:** a positive difference means monetization marks short-term lows; otherwise it is noise.
+
+## Verification of the letter's QQQ trade (`spyg/QQQ_oi_exp20261030.csv.gz`, licensed; aggregates only)
+QQQ 2026-10-30 **$700 put** OI by file date (each file is positions at the prior close):
+
+| File date | OI (contracts) |
+|---|---|
+| Oct 6 | 38.6k |
+| **Oct 7** | **88.1k (+49.5k)** |
+| Oct 13 | 91.3k |
+| Oct 16 | 95.6k |
+| **Oct 19** | **103.9k (peak)** |
+| Oct 20 | 89.8k |
+| Oct 22 | 82.5k |
+| Oct 23 | 88.3k |
+| **Oct 26** | **72.0k** |
+
+* **The build is confirmed:** about +65k contracts from Oct 6 to Oct 16.
+* **The close is only partly visible:** −32k from the peak by Friday's close.
+* OI falls only when both sides close. A holder selling to a new buyer leaves OI unchanged, so the letter's "closed" cannot be fully verified from OI, nor refuted.
+
+## Amendment 1 (owner: "It's also about positioning as orders and order book. It can force shorts covering… levels that have orders sitting that we didn't even explore"). Written before computing P1–P4.
+* **No order-book depth is available:** Databento market-by-price would need the owner's approval to spend. We test the **footprints** that resting orders leave in prices, following the literature:
+  * Osler (2003, *JF*; 2005, *JIMF*): take-profit and limit orders cluster **at** round numbers, so trends tend to stall there. Stop-loss orders cluster **just beyond** round numbers and beyond prior extremes, so moves **accelerate** once these are crossed: price cascades and forced short covering.
+  * Kavajecz & Odders-White (2004, *JF*): support and resistance levels coincide with peaks in limit-order depth.
+
+**P4a. Stop-cascade footprint at prior highs** (daily data, 81 large caps; 41 from 1990, 81 from 2020):
+* **Event:** the day's high crosses the prior **20-day high** for the first time in at least 5 sessions.
+* **Statistic:** next-day and next-5-day return (z, by trailing 20-day volatility), **crossed and closed above** vs a **near miss** (high within 0.5% below the prior 20-day high without crossing).
+* The day's own z-return is a control, via regression of the outcome on the crossing dummy plus that z-return.
+* **Predictions:** crossings continue (coefficient > 0, stops and short covering); near misses reverse (limit orders at the level).
+* Split by market volatility third and by the stock's 50-day trend.
+
+**P4b. Round-number clustering** (Osler's test): daily highs and lows of TSLA, SPY and the 81 stocks, 2015–2026.
+* **Round levels:** multiples of $10 for prices above $100, $5 for $20–100, $1 below $20; SPY uses multiples of $5.
+* **Statistic:** the share of daily highs that end in the band just **below** a round level (within 0.5% under it) vs just **above** it (within 0.5% over it).
+  * Take-profit and limit orders at the level should make highs stall just below it: share below > share above.
+  * Lows are mirrored.
+* **Also:** the next-day return after a close that crossed a round level vs one that stopped just short of it.
+* Binomial test on below vs above; bootstrap by day for the returns.
+
+**P1 additions:**
+* TSLA's **opening auction and first 30 minutes on Oct 26** (5-minute bars): volume relative to its recent first-bar average, and the price path.
+* **Short interest,** if a free source can serve it (FINRA bi-monthly short interest or the Yahoo key statistics), as context only.
