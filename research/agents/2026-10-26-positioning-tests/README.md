@@ -85,3 +85,34 @@ QQQ 2026-10-30 **$700 put** OI by file date (each file is positions at the prior
 **P1 additions:**
 * TSLA's **opening auction and first 30 minutes on Oct 26** (5-minute bars): volume relative to its recent first-bar average, and the price path.
 * **Short interest,** if a free source can serve it (FINRA bi-monthly short interest or the Yahoo key statistics), as context only.
+
+## P1 results (`p1_tsla.py`; `out/p1.json`, `out/p1_events.csv`)
+**Historical: TSLA up-gaps ≥ 2% with a call strike within +10%, 2020–2026 (228 events).**
+
+| | Crossed the largest call-OI strike (60) | Did not cross (168) | Difference, p |
+|---|---|---|---|
+| Open → close | **−0.58%** (median −0.82%) | +0.28% (median +0.03%) | −0.86 points, p 0.17 |
+| Next 5 days from the close | −0.09% | −0.08% | ≈ 0 |
+| Filled the same day | 35% | 31% | p 0.57 |
+
+* After crossing a big call strike, gaps tend to **fade** intraday: the dealer-lid direction (dealers long calls sell into the rise).
+* Not significant. **The forced-buy-by-dealers idea gets no support.**
+
+**Monday Oct 26 (descriptive):**
+* **Call OI within 45 days** (positions at Friday's close): 375 → 21.2k, **380 → 27.1k**, 385 → 18.9k, 390 → 15.9k, 395 → 17.5k, **400 → 42.4k**.
+* **Dealer hedge flow from $372.22 to $391.62:**
+  * classic convention (supported for TSLA calls by dealer-sign): dealers had to **sell about 5.9M shares**;
+  * all-short convention: they would have had to buy about 20M.
+  * Dealers were **not** the forced buyers; they leaned against the move, toward the 400 lid.
+* **Levels where shorts' stops sit:** Friday's high $377.32, gapped over at the open. The **triple top $388.56 / $388.84 / $388.86** (the Oct 9, 21 and 22 highs; Oct 22 was the earnings-spike high).
+* **Price path:** open $383.97; **the first 5-minute bar closed $389.49, through the triple top within 5 minutes**; $393.82 by 10:00; high $397.27, just under the 400 round number and call wall. The day's low was the opening print.
+* **Opening volume:** first 30 minutes about **2.5×** the prior 4 days' first-30-minute average (Yahoo 5-minute bars).
+* **Short positioning:**
+  * FINRA short interest 70.9M shares at the Sep 30 settlement (68.9M Sep 15), **about 1.9 days to cover**: modest, around 2% of shares.
+  * Off-exchange short-sale ratio: Oct 21 0.60, Oct 22 0.52, Oct 23 0.58, vs a 60-day mean of 0.50 (10th–90th percentile 0.41–0.61). Upper range, not extreme.
+  * The Oct 15 settlement isn't published yet; **the Oct 30 settlement (published around Nov 10) will show whether shorts covered.**
+* **Reading:**
+  * The **gap (+3.2%) was news**: the Barclays upgrade and SpaceX merger talk.
+  * The **open-to-close +2.0%** has the footprint of a **stop run above the $389 triple top**: an immediate break, heavy opening volume, no pullback. That fits short covering by shorts who sold the earnings spike, plus momentum buyers.
+  * It was a burst, not a squeeze: short interest is modest (about 2 days to cover), and dealers were selling into it.
+  * Historically, gaps over big call strikes fade intraday, so Monday bucked that tendency. That is consistent with an extra, non-dealer buyer.

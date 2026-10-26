@@ -1,0 +1,76 @@
+{
+ "events (gap >= 2% with a call strike within +10%)": 228,
+ "crossed / not": [
+  60,
+  168
+ ],
+ "open->close %": {
+  "crossed mean": -0.5804900785372056,
+  "not crossed mean": 0.2813065868478374,
+  "difference": -0.861796665385043,
+  "p (two-sided)": 0.17,
+  "crossed median": -0.8154002042846331,
+  "not median": 0.030488159878094834
+ },
+ "next 5d from close %": {
+  "crossed mean": -0.09188150032513825,
+  "not crossed mean": -0.08304992609567567,
+  "difference": -0.008831574229462583,
+  "p (two-sided)": 0.9925,
+  "crossed median": 0.3929254107344793,
+  "not median": -0.49504165454613
+ },
+ "filled same day": {
+  "crossed": 0.35,
+  "not crossed": 0.30952380952380953,
+  "difference": 0.04047619047619044,
+  "p": 0.565
+ },
+ "crossed gaps: share closing above the strike": 0.65,
+ "open->close by gap-size third (crossed / not)": {
+  "0": [
+   -2.6630014216173903,
+   0.25905381498465535,
+   8,
+   68
+  ],
+  "1": [
+   0.09626316039546232,
+   1.019939240856906,
+   15,
+   61
+  ],
+  "2": [
+   -0.4045767768979766,
+   -0.8351909364305419,
+   37,
+   39
+  ]
+ },
+ "today Oct 26": {
+  "gap over": "Friday high $377.32 and the $375 / $380 call strikes",
+  "call OI <=45d at 375 / 380 / 385 / 390 / 395 / 400 (positions at Fri close)": {
+   "375": 21181,
+   "380": 27096,
+   "385": 18855,
+   "390": 15931,
+   "395": 17470,
+   "400": 42429
+  },
+  "dealer hedge shares needed, $372.22 -> $391.62 (classic = dealers long calls, short puts)": -5920273,
+  "same under all-short (customers long everything)": 20274360,
+  "first 30 min volume (shares) today vs prior 4-day average": [
+   24001652,
+   9497930
+  ],
+  "first 30 min path (5-min closes)": [
+   389.49,
+   391.4,
+   392.18,
+   392.6,
+   393.82,
+   392.83
+  ],
+  "day volume (shares)": 131453623
+ }
+}
