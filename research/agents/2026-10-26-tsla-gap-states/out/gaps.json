@@ -1,0 +1,85 @@
+{
+ "events (gap >= 2%)": 228,
+ "base: fill same day": 0.3201754385964912,
+ "base: fill within 5 sessions": 0.5921052631578947,
+ "base: mean 5-session return from the open %": 1.185076441976057,
+ "gap >= 3%: events, fill same day, fill 5": [
+  109,
+  0.25688073394495414,
+  0.5321100917431193
+ ],
+ "S1 flip crossing": {
+  "events yes / no": [
+   15,
+   205
+  ],
+  "fill same day yes / no": [
+   0.13333333333333333,
+   0.32682926829268294
+  ],
+  "fill within 5 yes / no": [
+   0.6,
+   0.5853658536585366
+  ],
+  "difference in 5-session fill": 0.014634146341463428,
+  "p (two-sided)": 0.875,
+  "5-session return from open % yes / no": [
+   -1.7375436714426986,
+   1.1747878878568687
+  ]
+ },
+ "S2 breakaway (open > prior high)": {
+  "events yes / no": [
+   160,
+   68
+  ],
+  "fill same day yes / no": [
+   0.29375,
+   0.38235294117647056
+  ],
+  "fill within 5 yes / no": [
+   0.55,
+   0.6911764705882353
+  ],
+  "difference in 5-session fill": -0.14117647058823524,
+  "p (two-sided)": 0.0425,
+  "5-session return from open % yes / no": [
+   1.299498367622782,
+   0.9158483816308229
+  ]
+ },
+ "S3 prior close above 50-day": {
+  "events yes / no": [
+   128,
+   100
+  ],
+  "fill same day yes / no": [
+   0.265625,
+   0.39
+  ],
+  "fill within 5 yes / no": [
+   0.5546875,
+   0.64
+  ],
+  "difference in 5-session fill": -0.08531250000000001,
+  "p (two-sided)": 0.1875,
+  "5-session return from open % yes / no": [
+   1.8129979684707656,
+   0.3813368880628309
+  ]
+ },
+ "today (Oct 26)": {
+  "gap %": 3.157407555441316,
+  "open": 383.9725036621094,
+  "prior close": 372.2200012207031,
+  "prior high": 377.32000732421875,
+  "flip at prior close (engine, if available)": null,
+  "exact flip at Oct 23 close (from the Oct 23 exact run)": 364.97,
+  "50-day (prior)": 363.7681982421875,
+  "breakaway (open > prior high)": true,
+  "prior close above 50-day": true,
+  "filled today": false,
+  "day low": 383.8406066894531,
+  "close": 391.6199951171875
+ }
+}
