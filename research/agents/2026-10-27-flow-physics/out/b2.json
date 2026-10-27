@@ -1,0 +1,82 @@
+{
+ "SPX analog (R2 within 10 sessions, within 2% of 52w high, VIX 15-20)": {
+  "days": 175,
+  "episodes (gap>10)": 34,
+  "sample": "2012-04-30 to 2026-10-26",
+  "today in state": true,
+  "last date in data": "2026-10-26",
+  "fwd median % at 1/3/5/10/20d": [
+   0.03,
+   0.17,
+   0.31,
+   0.52,
+   0.7
+  ],
+  "fwd 5%/95% at 10d": [
+   -4.53,
+   3.37
+  ],
+  "fwd 5%/95% at 20d": [
+   -8.22,
+   4.62
+  ],
+  "all days median at 10/20d": [
+   0.72,
+   1.51
+  ],
+  "all days 5%/95% at 20d": [
+   -5.91,
+   6.53
+  ],
+  "P(+3% before -3%, closes, within 60d)": [
+   0.533,
+   150
+  ],
+  "P(+3% before -3%), all days": [
+   0.621,
+   3425
+  ],
+  "P(close <= -2% at any point within 10d)": 0.28,
+  "P(close <= -2% within 10d), all days": 0.276
+ },
+ "TSLA analog (freed, >5% above own flip), 2021-Oct 14 2026": {
+  "days": 159,
+  "episodes (gap>10)": 24,
+  "fwd median % at 1/3/5/10d": [
+   0.55,
+   0.45,
+   -0.04,
+   -0.61
+  ],
+  "fwd 5%/95% at 10d": [
+   -15.12,
+   25.65
+  ],
+  "all days median / 5% / 95% at 10d": [
+   0.15,
+   -17.48,
+   23.2
+  ],
+  "P(close <= -5% at any point within 10d)": 0.472,
+  "same, all days": 0.503,
+  "P(close >= +10% at any point within 10d)": 0.308,
+  "same, all days ": 0.257
+ },
+ "B3 November S&P (Yahoo monthly; years available)": {
+  "years": 41,
+  "first year": 1985,
+  "mean %": 1.91,
+  "median %": 2.45,
+  "share up": 0.732,
+  "all months mean % / share up": [
+   0.84,
+   0.64
+  ],
+  "Oct close within 3% of 12m high: years / mean % / share up": [
+   25,
+   1.44,
+   0.72
+  ],
+  "Nov rank among 12 months by mean": 1
+ }
+}

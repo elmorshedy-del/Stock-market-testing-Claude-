@@ -1,0 +1,336 @@
+{
+ "per day": [
+  {
+   "day": "20261005",
+   "flip day": false,
+   "high": 7847.5,
+   "high time ET": "15:19",
+   "buy/min ratio (final 0.1% vs earlier run)": 1.584,
+   "delta/min earlier, final": [
+    -93.8,
+    243.1
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.236,
+    0.899
+   ],
+   "absorption ratio (final/earlier progress per buy)": 3.8026,
+   "sell/min next 10 min vs earlier run": 1.1407,
+   "final segment minutes": 6.4,
+   "note": NaN
+  },
+  {
+   "day": "20261006",
+   "flip day": false,
+   "high": 7897.5,
+   "high time ET": "11:26",
+   "buy/min ratio (final 0.1% vs earlier run)": 0.9622,
+   "delta/min earlier, final": [
+    160.5,
+    240.2
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.17,
+    0.419
+   ],
+   "absorption ratio (final/earlier progress per buy)": 2.4714,
+   "sell/min next 10 min vs earlier run": 1.2439,
+   "final segment minutes": 13.5,
+   "note": NaN
+  },
+  {
+   "day": "20261007",
+   "flip day": false,
+   "high": 7859.5,
+   "high time ET": "15:01",
+   "buy/min ratio (final 0.1% vs earlier run)": 1.0316,
+   "delta/min earlier, final": [
+    -44.3,
+    7.6
+   ],
+   "progress per 1k bought: earlier, final": [
+    -0.174,
+    0.61
+   ],
+   "absorption ratio (final/earlier progress per buy)": -3.4959,
+   "sell/min next 10 min vs earlier run": 2.6988,
+   "final segment minutes": 22.2,
+   "note": NaN
+  },
+  {
+   "day": "20261008",
+   "flip day": false,
+   "high": 7850.0,
+   "high time ET": "12:17",
+   "buy/min ratio (final 0.1% vs earlier run)": 6.6406,
+   "delta/min earlier, final": [
+    104.8,
+    2060.0
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.497,
+    1.987
+   ],
+   "absorption ratio (final/earlier progress per buy)": 4.0014,
+   "sell/min next 10 min vs earlier run": 2.3933,
+   "final segment minutes": 0.5,
+   "note": NaN
+  },
+  {
+   "day": "20261009",
+   "flip day": false,
+   "high": 7870.5,
+   "high time ET": "14:51",
+   "buy/min ratio (final 0.1% vs earlier run)": 5.784,
+   "delta/min earlier, final": [
+    29.1,
+    1169.9
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.039,
+    1.141
+   ],
+   "absorption ratio (final/earlier progress per buy)": 29.4064,
+   "sell/min next 10 min vs earlier run": 1.8609,
+   "final segment minutes": 1.9,
+   "note": NaN
+  },
+  {
+   "day": "20261012",
+   "flip day": false,
+   "high": NaN,
+   "high time ET": "09:30",
+   "buy/min ratio (final 0.1% vs earlier run)": NaN,
+   "delta/min earlier, final": NaN,
+   "progress per 1k bought: earlier, final": NaN,
+   "absorption ratio (final/earlier progress per buy)": NaN,
+   "sell/min next 10 min vs earlier run": NaN,
+   "final segment minutes": NaN,
+   "note": "high within 20 min of the open: no run-up"
+  },
+  {
+   "day": "20261013",
+   "flip day": false,
+   "high": NaN,
+   "high time ET": "09:41",
+   "buy/min ratio (final 0.1% vs earlier run)": NaN,
+   "delta/min earlier, final": NaN,
+   "progress per 1k bought: earlier, final": NaN,
+   "absorption ratio (final/earlier progress per buy)": NaN,
+   "sell/min next 10 min vs earlier run": NaN,
+   "final segment minutes": NaN,
+   "note": "high within 20 min of the open: no run-up"
+  },
+  {
+   "day": "20261014",
+   "flip day": true,
+   "high": NaN,
+   "high time ET": "09:49",
+   "buy/min ratio (final 0.1% vs earlier run)": NaN,
+   "delta/min earlier, final": NaN,
+   "progress per 1k bought: earlier, final": NaN,
+   "absorption ratio (final/earlier progress per buy)": NaN,
+   "sell/min next 10 min vs earlier run": NaN,
+   "final segment minutes": NaN,
+   "note": "high within 20 min of the open: no run-up"
+  },
+  {
+   "day": "20261015",
+   "flip day": true,
+   "high": 7801.75,
+   "high time ET": "15:22",
+   "buy/min ratio (final 0.1% vs earlier run)": 1.5555,
+   "delta/min earlier, final": [
+    245.5,
+    158.7
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.524,
+    0.453
+   ],
+   "absorption ratio (final/earlier progress per buy)": 0.865,
+   "sell/min next 10 min vs earlier run": 1.7298,
+   "final segment minutes": 8.6,
+   "note": NaN
+  },
+  {
+   "day": "20261016",
+   "flip day": true,
+   "high": NaN,
+   "high time ET": "09:30",
+   "buy/min ratio (final 0.1% vs earlier run)": NaN,
+   "delta/min earlier, final": NaN,
+   "progress per 1k bought: earlier, final": NaN,
+   "absorption ratio (final/earlier progress per buy)": NaN,
+   "sell/min next 10 min vs earlier run": NaN,
+   "final segment minutes": NaN,
+   "note": "high within 20 min of the open: no run-up"
+  },
+  {
+   "day": "20261019",
+   "flip day": true,
+   "high": 7773.25,
+   "high time ET": "11:37",
+   "buy/min ratio (final 0.1% vs earlier run)": 1.0783,
+   "delta/min earlier, final": [
+    147.1,
+    525.1
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.195,
+    1.105
+   ],
+   "absorption ratio (final/earlier progress per buy)": 5.6656,
+   "sell/min next 10 min vs earlier run": 0.7393,
+   "final segment minutes": 3.7,
+   "note": NaN
+  },
+  {
+   "day": "20261020",
+   "flip day": true,
+   "high": 7791.5,
+   "high time ET": "10:30",
+   "buy/min ratio (final 0.1% vs earlier run)": 1.9003,
+   "delta/min earlier, final": [
+    155.2,
+    1045.4
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.446,
+    1.607
+   ],
+   "absorption ratio (final/earlier progress per buy)": 3.6028,
+   "sell/min next 10 min vs earlier run": 1.1763,
+   "final segment minutes": 1.0,
+   "note": NaN
+  },
+  {
+   "day": "20261021",
+   "flip day": false,
+   "high": 7812.25,
+   "high time ET": "14:16",
+   "buy/min ratio (final 0.1% vs earlier run)": 1.0848,
+   "delta/min earlier, final": [
+    18.5,
+    142.7
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.025,
+    1.082
+   ],
+   "absorption ratio (final/earlier progress per buy)": 43.5429,
+   "sell/min next 10 min vs earlier run": 0.9386,
+   "final segment minutes": 10.2,
+   "note": NaN
+  },
+  {
+   "day": "20261022",
+   "flip day": false,
+   "high": 7742.5,
+   "high time ET": "10:03",
+   "buy/min ratio (final 0.1% vs earlier run)": 0.9479,
+   "delta/min earlier, final": [
+    -49.9,
+    521.3
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.068,
+    0.885
+   ],
+   "absorption ratio (final/earlier progress per buy)": 12.9734,
+   "sell/min next 10 min vs earlier run": 0.8149,
+   "final segment minutes": 3.0,
+   "note": NaN
+  },
+  {
+   "day": "20261023",
+   "flip day": false,
+   "high": 7697.25,
+   "high time ET": "11:34",
+   "buy/min ratio (final 0.1% vs earlier run)": 0.8649,
+   "delta/min earlier, final": [
+    65.5,
+    6.3
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.008,
+    1.065
+   ],
+   "absorption ratio (final/earlier progress per buy)": 129.5608,
+   "sell/min next 10 min vs earlier run": 0.8948,
+   "final segment minutes": 4.1,
+   "note": NaN
+  },
+  {
+   "day": "20261026",
+   "flip day": false,
+   "high": 7739.5,
+   "high time ET": "11:02",
+   "buy/min ratio (final 0.1% vs earlier run)": 1.4907,
+   "delta/min earlier, final": [
+    103.6,
+    520.6
+   ],
+   "progress per 1k bought: earlier, final": [
+    0.374,
+    1.348
+   ],
+   "absorption ratio (final/earlier progress per buy)": 3.6052,
+   "sell/min next 10 min vs earlier run": 0.8991,
+   "final segment minutes": 1.9,
+   "note": NaN
+  }
+ ],
+ "summary": {
+  "flip-wick days": {
+   "n": 3,
+   "median buy/min ratio": 1.556,
+   "median absorption ratio": 3.603,
+   "share exhaustion (buy/min ratio < 1)": 0.0,
+   "median sell/min after high vs run": 1.176
+  },
+  "other days": {
+   "n": 9,
+   "median buy/min ratio": 1.085,
+   "median absorption ratio": 4.001,
+   "share exhaustion (buy/min ratio < 1)": 0.333,
+   "median sell/min after high vs run": 1.141
+  }
+ },
+ "MBO Oct 20": {
+  "Oct 20 day high": 7791.5,
+  "time ET": "10:30:45",
+  "at the high (price and 1 tick above)": {
+   "added/min": 42.3,
+   "cancelled/min": 35.4,
+   "filled/min": 1.0,
+   "refill ratio (added/filled contracts)": 42.3,
+   "net new offers/min": 6.9
+  },
+  "placebo: 10 other 5-min swing highs that day, median net new offers/min": 2.4,
+  "placebo net new offers/min": [
+   6.0,
+   -0.1,
+   0.8,
+   1.7,
+   3.1,
+   4.0,
+   4.7,
+   6.0,
+   1.3,
+   0.7
+  ],
+  "placebo filled/min": [
+   0.9,
+   0.5,
+   5.6,
+   9.3,
+   1.0,
+   5.2,
+   10.8,
+   13.9,
+   3.3,
+   1.5
+  ]
+ }
+}

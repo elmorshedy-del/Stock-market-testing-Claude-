@@ -1,0 +1,202 @@
+{
+ "SPX, sigma = VIX (pre-registered)": {
+  "-1.0% within 5d": {
+   "n": 3634,
+   "mean predicted": 0.661,
+   "realized": 0.469,
+   "calibration slope": 1.398,
+   "Brier skill": -0.095,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-1.0% within 10d": {
+   "n": 3634,
+   "mean predicted": 0.756,
+   "realized": 0.585,
+   "calibration slope": 1.454,
+   "Brier skill": -0.087,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-2.0% within 5d": {
+   "n": 3634,
+   "mean predicted": 0.388,
+   "realized": 0.245,
+   "calibration slope": 0.955,
+   "Brier skill": -0.029,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-2.0% within 10d": {
+   "n": 3634,
+   "mean predicted": 0.536,
+   "realized": 0.364,
+   "calibration slope": 1.112,
+   "Brier skill": -0.062,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-3.0% within 5d": {
+   "n": 3634,
+   "mean predicted": 0.209,
+   "realized": 0.128,
+   "calibration slope": 0.749,
+   "Brier skill": 0.011,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-3.0% within 10d": {
+   "n": 3634,
+   "mean predicted": 0.359,
+   "realized": 0.222,
+   "calibration slope": 0.829,
+   "Brier skill": -0.046,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  }
+ },
+ "SPX, sigma = 20d realized vol (post hoc comparison)": {
+  "-1.0% within 5d": {
+   "n": 3715,
+   "mean predicted": 0.543,
+   "realized": 0.467,
+   "calibration slope": 0.479,
+   "Brier skill": -0.028,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-1.0% within 10d": {
+   "n": 3715,
+   "mean predicted": 0.661,
+   "realized": 0.585,
+   "calibration slope": 0.331,
+   "Brier skill": -0.047,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-2.0% within 5d": {
+   "n": 3715,
+   "mean predicted": 0.263,
+   "realized": 0.243,
+   "calibration slope": 0.532,
+   "Brier skill": 0.011,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-2.0% within 10d": {
+   "n": 3715,
+   "mean predicted": 0.404,
+   "realized": 0.361,
+   "calibration slope": 0.459,
+   "Brier skill": -0.019,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-3.0% within 5d": {
+   "n": 3715,
+   "mean predicted": 0.128,
+   "realized": 0.126,
+   "calibration slope": 0.595,
+   "Brier skill": 0.034,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-3.0% within 10d": {
+   "n": 3715,
+   "mean predicted": 0.239,
+   "realized": 0.22,
+   "calibration slope": 0.497,
+   "Brier skill": -0.004,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  }
+ },
+ "TSLA, sigma = own 30d ATM IV (registered levels)": {
+  "-1.0% within 5d": {
+   "n": 1414,
+   "mean predicted": 0.894,
+   "realized": 0.825,
+   "calibration slope": 1.638,
+   "Brier skill": -0.027,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-1.0% within 10d": {
+   "n": 1413,
+   "mean predicted": 0.925,
+   "realized": 0.863,
+   "calibration slope": 1.4,
+   "Brier skill": -0.029,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-2.0% within 5d": {
+   "n": 1414,
+   "mean predicted": 0.79,
+   "realized": 0.733,
+   "calibration slope": 1.809,
+   "Brier skill": 0.004,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-2.0% within 10d": {
+   "n": 1413,
+   "mean predicted": 0.85,
+   "realized": 0.798,
+   "calibration slope": 2.024,
+   "Brier skill": -0.002,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-3.0% within 5d": {
+   "n": 1414,
+   "mean predicted": 0.688,
+   "realized": 0.645,
+   "calibration slope": 1.601,
+   "Brier skill": 0.022,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-3.0% within 10d": {
+   "n": 1413,
+   "mean predicted": 0.776,
+   "realized": 0.742,
+   "calibration slope": 1.79,
+   "Brier skill": 0.018,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  }
+ },
+ "TSLA, sigma = own 30d ATM IV (TSLA-sized levels, added)": {
+  "-3.0% within 5d": {
+   "n": 1414,
+   "mean predicted": 0.688,
+   "realized": 0.645,
+   "calibration slope": 1.601,
+   "Brier skill": 0.022,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-3.0% within 10d": {
+   "n": 1413,
+   "mean predicted": 0.776,
+   "realized": 0.742,
+   "calibration slope": 1.79,
+   "Brier skill": 0.018,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-5.0% within 5d": {
+   "n": 1414,
+   "mean predicted": 0.501,
+   "realized": 0.472,
+   "calibration slope": 1.272,
+   "Brier skill": 0.036,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-5.0% within 10d": {
+   "n": 1413,
+   "mean predicted": 0.633,
+   "realized": 0.607,
+   "calibration slope": 1.459,
+   "Brier skill": 0.031,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-8.0% within 5d": {
+   "n": 1414,
+   "mean predicted": 0.28,
+   "realized": 0.262,
+   "calibration slope": 1.296,
+   "Brier skill": 0.059,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  },
+  "-8.0% within 10d": {
+   "n": 1413,
+   "mean predicted": 0.44,
+   "realized": 0.425,
+   "calibration slope": 1.547,
+   "Brier skill": 0.059,
+   "usable (slope 0.8-1.2 and skill>0)": false
+  }
+ }
+}

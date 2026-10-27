@@ -1,0 +1,164 @@
+{
+ "ES": {
+  "sessions": 16,
+  "Spearman(open-close return, delta % of volume)": [
+   -0.121,
+   0.656
+  ],
+  "Spearman(|return|, Hawkes n)": [
+   -0.321,
+   0.226
+  ],
+  "Hawkes n median range": [
+   0.542,
+   0.63
+  ],
+  "Kyle lambda first half / second half of window": [
+   2.3932,
+   3.3821
+  ],
+  "Spearman(prior-day S&P GEX pctile, Kyle lambda)": [
+   -0.371,
+   0.158,
+   16
+  ],
+  "weekly": [
+   {
+    "week": "2026-10-03/2026-10-09",
+    "sym": "ES",
+    "ret": 1.1496,
+    "delta": -29793,
+    "volume": 5103953,
+    "lam": 1.7307,
+    "n": 0.595,
+    "days": 5,
+    "delta % of vol": -0.5837
+   },
+   {
+    "week": "2026-10-10/2026-10-16",
+    "sym": "ES",
+    "ret": -1.2383,
+    "delta": 1524,
+    "volume": 6481104,
+    "lam": 2.5414,
+    "n": 0.5793,
+    "days": 5,
+    "delta % of vol": 0.0235
+   },
+   {
+    "week": "2026-10-17/2026-10-23",
+    "sym": "ES",
+    "ret": 0.2832,
+    "delta": 48111,
+    "volume": 6954189,
+    "lam": 4.2855,
+    "n": 0.5691,
+    "days": 5,
+    "delta % of vol": 0.6918
+   },
+   {
+    "week": "2026-10-24/2026-10-30",
+    "sym": "ES",
+    "ret": 0.4035,
+    "delta": 1006,
+    "volume": 1276026,
+    "lam": 3.5904,
+    "n": 0.5953,
+    "days": 1,
+    "delta % of vol": 0.0788
+   }
+  ]
+ },
+ "TSLA": {
+  "sessions": 26,
+  "Spearman(open-close return, delta % of volume)": [
+   0.481,
+   0.013
+  ],
+  "Spearman(|return|, Hawkes n)": [
+   0.136,
+   0.509
+  ],
+  "Hawkes n median range": [
+   0.507,
+   0.598
+  ],
+  "Kyle lambda first half / second half of window": [
+   0.0205,
+   0.0241
+  ],
+  "Spearman(prior-day S&P GEX pctile, Kyle lambda)": [
+   0.005,
+   0.98,
+   26
+  ],
+  "weekly": [
+   {
+    "week": "2026-09-19/2026-09-25",
+    "sym": "TSLA",
+    "ret": -2.0906,
+    "delta": 1641139,
+    "volume": 28398612,
+    "lam": 0.0215,
+    "n": 0.5268,
+    "days": 5,
+    "delta % of vol": 5.7789
+   },
+   {
+    "week": "2026-09-26/2026-10-02",
+    "sym": "TSLA",
+    "ret": -1.3604,
+    "delta": 1169077,
+    "volume": 30215417,
+    "lam": 0.0179,
+    "n": 0.5501,
+    "days": 5,
+    "delta % of vol": 3.8691
+   },
+   {
+    "week": "2026-10-03/2026-10-09",
+    "sym": "TSLA",
+    "ret": 2.4401,
+    "delta": 775158,
+    "volume": 25077784,
+    "lam": 0.0243,
+    "n": 0.5653,
+    "days": 5,
+    "delta % of vol": 3.091
+   },
+   {
+    "week": "2026-10-10/2026-10-16",
+    "sym": "TSLA",
+    "ret": -4.8368,
+    "delta": -1430038,
+    "volume": 24095015,
+    "lam": 0.0241,
+    "n": 0.5283,
+    "days": 5,
+    "delta % of vol": -5.935
+   },
+   {
+    "week": "2026-10-17/2026-10-23",
+    "sym": "TSLA",
+    "ret": 5.1486,
+    "delta": 1121613,
+    "volume": 31671989,
+    "lam": 0.0223,
+    "n": 0.5208,
+    "days": 5,
+    "delta % of vol": 3.5413
+   },
+   {
+    "week": "2026-10-24/2026-10-30",
+    "sym": "TSLA",
+    "ret": 2.0345,
+    "delta": 1154783,
+    "volume": 9285698,
+    "lam": 0.0194,
+    "n": 0.5783,
+    "days": 1,
+    "delta % of vol": 12.4361
+   }
+  ]
+ }
+}

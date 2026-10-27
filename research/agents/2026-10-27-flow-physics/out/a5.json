@@ -1,0 +1,107 @@
+{
+ "symbol-days": 260,
+ "days": 26,
+ "Spearman rho (pooled)": 0.37,
+ "p (bootstrap by day, rho <= 0)": 0.0,
+ "90% CI": [
+  0.231,
+  0.493
+ ],
+ "passes (rho > 0, p < 0.05)": true,
+ "per symbol rho": {
+  "AAPL": 0.232,
+  "AMZN": 0.498,
+  "AVGO": 0.588,
+  "GOOGL": 0.517,
+  "META": 0.505,
+  "MSFT": 0.415,
+  "NVDA": 0.573,
+  "QQQ": -0.447,
+  "SPY": 0.177,
+  "TSLA": 0.088
+ },
+ "largest-fifth imbalances: share where close moved WITH the imbalance": 0.808,
+ "n largest fifth": 52,
+ "Oct 26 rows": [
+  {
+   "sym": "SPY",
+   "day": "2026-10-26",
+   "imb $m": 27.476,
+   "imb % of day $vol": 0.113,
+   "ret 15:50-close %": -0.025,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "TSLA",
+   "day": "2026-10-26",
+   "imb $m": -415.45,
+   "imb % of day $vol": -1.998,
+   "ret 15:50-close %": -0.44,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "GOOGL",
+   "day": "2026-10-26",
+   "imb $m": 136.661,
+   "imb % of day $vol": 1.798,
+   "ret 15:50-close %": -0.069,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "AMZN",
+   "day": "2026-10-26",
+   "imb $m": 73.568,
+   "imb % of day $vol": 0.903,
+   "ret 15:50-close %": 0.08,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "NVDA",
+   "day": "2026-10-26",
+   "imb $m": -146.608,
+   "imb % of day $vol": -0.747,
+   "ret 15:50-close %": -0.208,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "AVGO",
+   "day": "2026-10-26",
+   "imb $m": -125.897,
+   "imb % of day $vol": -2.051,
+   "ret 15:50-close %": -0.324,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "MSFT",
+   "day": "2026-10-26",
+   "imb $m": -182.341,
+   "imb % of day $vol": -1.8,
+   "ret 15:50-close %": 0.083,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "AAPL",
+   "day": "2026-10-26",
+   "imb $m": -225.556,
+   "imb % of day $vol": -1.534,
+   "ret 15:50-close %": -0.218,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "META",
+   "day": "2026-10-26",
+   "imb $m": -92.048,
+   "imb % of day $vol": -0.472,
+   "ret 15:50-close %": -0.206,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "QQQ",
+   "day": "2026-10-26",
+   "imb $m": 114.68,
+   "imb % of day $vol": 0.486,
+   "ret 15:50-close %": -0.119,
+   "msg time": "15:50:00"
+  }
+ ]
+}

@@ -33,11 +33,17 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **C1. The letter's correlation rule with its real variable.** Re-run P2 with COR1M in place of realized 10-day correlation, plus a channel-era check (only 42 GEX < 0 days since 2023).
   - Source: [positioning-tests](2026-10-26-positioning-tests/) P2.
 
+### Databento, reserved (~$5.8 left of the owner's $15)
+- [ ] **D4. Add Oct 27 to flow-physics** once published: ES trades + MBO (the 771 wicks and the 15:50 drop), SPY/Nasdaq closing imbalances (did a sell imbalance print at 15:50?), TSLA trades (the 400 break). About $1.6.
+
 ## Can run now (data in hand)
 - [ ] **N1. SqueezeMetrics GEX vs our engine when they disagree.** Example: on Oct 23 SqueezeMetrics showed +$4.0bn while our engine showed −$8.8bn. Only SqueezeMetrics carries P2; our flip carries the rally-hold result. Test which measure predicts better on the days they disagree.
 - [ ] **N3. Who is long the 0DTE calls? A last-30-minute convention test.** On 711 days, does the 15:30 → close move continue the day's move more when the 0DTE strikes near the price are put-heavy (classic: dealers short gamma) than call-heavy (classic: dealers long gamma)? Classic predicts a difference by call/put mix; all-short predicts momentum scales with total 0DTE gamma regardless of mix. Prompted by Oct 27's last-10-minute drop through the 770 calls. [flip-wicks](2026-10-27-flip-wicks/).
 - [ ] **N4. Pre-earnings de-risking into the close.** Do mega caps underperform in the last 30 minutes of the day before their report, more so after an up day? Oct 27: GOOGL −0.66%, AMZN −0.36% in the last 10 minutes. Hourly bars in hand (51 tickers, Nov 2023 →); earnings dates needed.
 - [ ] **N2. Breakaway-gap rule beyond TSLA.** TSLA breakaway gaps fill less (p 0.04). Pre-register the same rule on the 81-stock panel and SPY/QQQ.
+
+- [ ] **N5. Liquidity regime test.** Does ES Kyle lambda (book depth) track dealer gamma over a long sample? Flow-physics found rho -0.37 on 16 days. Needs more ES trade days, or a cheaper depth proxy (ohlcv range / volume).
+- [ ] **N6. A calibrated pullback model.** The reflection principle fails with VIX (B4). Test a VIX × (realized/implied ratio) scaling or a GARCH sigma, walk-forward, with the same calibration rule.
 
 ## Needs time (more events), re-test on schedule
 - [ ] **R1. TSLA RSI divergence after a 1-ATR bounce:** 86% vs 69% held (21 cases, p 0.21). [technical-indicators](2026-10-16-technical-indicators/) B.

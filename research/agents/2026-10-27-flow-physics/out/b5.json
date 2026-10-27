@@ -1,0 +1,29 @@
+{
+ "universe": "SPY days within 2% of 252d high, 2020-01-03 to 2026-10-12",
+ "days in universe": 840,
+ "confirmed days": 378,
+ "fwd 10d %: confirmed / not": [
+  0.458,
+  0.518
+ ],
+ "diff pts": -0.06,
+ "p (shift null)": 0.625,
+ "P(new 20d high before -3%): confirmed / not": [
+  0.874,
+  0.878
+ ],
+ "diff": -0.004,
+ "p (shift null) ": 0.589,
+ "passes (both p < 0.05)": false,
+ "component: close above flip only": {
+  "diff fwd10 pts": -0.161,
+  "diff P(high first)": 0.074,
+  "confirmed days": 600
+ },
+ "component: GEX < 90th only": {
+  "diff fwd10 pts": 0.068,
+  "diff P(high first)": -0.078,
+  "confirmed days": 605
+ },
+ "today (Oct 27)": "SPY close 769.72 vs pre-open flip 770.34 -> NOT confirmed (0.08% under); GEX pct 0.255 (not pinned)"
+}
