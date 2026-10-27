@@ -109,9 +109,32 @@
 
 ## What this says about Oct 27
 * **The 770–771 wicks: consistent with a tested effect.** SPY started the day short gamma (pre-open flip 770.34, above the 767.34 open) and rallied into the flip, where its highs stopped (twice). That is the setting where highs stall at the flip (43% vs 31%).
-* **The close under the flip: not explained by any tested rule.** H1 says the close side is chance. H2 says there is no 0DTE pin. The late-session gamma at 770 did turn positive (+$1.5bn at 15:45), which is a damping description, not a tested predictor.
+* **The close under the flip: not explained by any tested rule.** H1 says the close side is chance. H2 says there is no 0DTE pin. The classic-convention map said the late session was damping; the tape contradicted it (see the correction below).
 * **For trading the level:**
   * Expect the flip to slow a move (above all from above, as support).
   * Don't treat a touch from below as a short signal for the close.
   * A close above the flip is what matters for the next days (spy-gamma-levels Amendment 1).
 * **Wednesday:** the pre-open flip will be rebuilt from Oct 28 OI. Monday's positions put it near 770 with 0DTE (772.5 without).
+
+## Correction (owner: "there was strong last ten min selling. It wasn't sticky like u say")
+The owner is right; the "damping" line above was the map's prediction, not what happened.
+* **The last 10 minutes (Yahoo 1-minute bars):**
+  * SPY went from 770.81 (15:49) to 769.72: **−$1.09 (−0.14%), 18% of the day's range**.
+  * That is the largest last-10-minute drop of the 5 sessions: Oct 21 −0.48, Oct 22 +1.79, Oct 23 −0.35, Oct 26 −0.19.
+  * Volume 3.49M shares (4.5% of the day), with 1.0M in the final minute.
+  * The selling started at **15:50**, when the exchanges publish closing-auction (MOC) imbalances.
+* **Who was sold, 15:50 → close (5-minute bars):**
+  * GOOGL −0.66% (reports Wed), AMZN −0.36% (reports Thu), AVGO −0.24% (the day's leader), NVDA −0.15%.
+  * Equal-weight RSP −0.04%, IWM 0.00%, XLF/XLP about 0.
+  * Narrow, cap-weighted selling of the winners and the names reporting this week, ahead of the FOMC. Not broad selling.
+* **What the 0DTE map implies, by convention** (positions at the Oct 26 close only; same-day 0DTE trades are invisible):
+  * Pure time decay at a fixed price: tiny under either convention (±0.03M shares).
+  * The slide from 770.81 to 769.72 through the 770 (9.0k) and 771 (5.1k) calls:
+    * **classic** (dealers long the calls): dealers **buy** about 0.75M shares (damping);
+    * **all-short** (customers long the calls): dealers **sell** about 1.04M shares, about 30% of the last-10-minute volume (amplifying).
+  * The tape fits the all-short reading for these 0DTE calls, or a sell imbalance large enough to overwhelm classic damping. One day cannot tell which. Signing the trades needs tick data (TODO T1, T2).
+* **Our earlier test of last-half-hour momentum** (forced-flow A2) died, so there is no tested rule for the closing move either way.
+* **Added to TODO:**
+  * N3: last-30-minute continuation vs the 0DTE call/put mix near the price (a convention test on 711 days in hand).
+  * N4: pre-earnings de-risking into the close in mega caps.
+  * D3: closing-auction imbalance data (Databento imbalance feeds).

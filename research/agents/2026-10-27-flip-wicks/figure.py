@@ -27,9 +27,9 @@ a.axhline(R["days"][-1]["flip excl 0DTE"], color=ORANGE, lw=1, ls=":", label=f"f
 a.axhline(770, color=GREEN, lw=0.8, ls="--"); a.text(0.05, 769.72, "770: biggest 0DTE call strike (9.0k)", fontsize=7.5, color=GREEN)
 a.set_xticks([0.5, 2.5, 4.5, 6.4], ["10:00", "12:00", "14:00", "15:55"]); a.set_ylabel("SPY, 1-minute range and close")
 a.legend(frameon=False, fontsize=7.5, loc="lower right")
-a.set_title("Oct 27: SPY rallied to the pre-open flip (770.3), topped at 771.14 twice (12:00, 15:35-45),\n"
-            "and closed 769.72. Into the close the 0DTE options' gamma grew, the flip slid below price\n"
-            "(769.6 at 15:45) and dealer gamma at 770 turned positive (+$1.5bn): late session = damping", loc="left", fontsize=9, color=INK)
+a.set_title("Oct 27: SPY rallied to the pre-open flip (770.3), topped at 771.14 twice (12:00, 15:35-45).\n"
+            "From 15:50 it fell $1.09 to 769.72, the biggest last-10-minute drop of 5 sessions. The classic-\n"
+            "convention map said damping there; the tape says no. Sellers: GOOGL -0.66%, AMZN -0.36%, AVGO -0.24%", loc="left", fontsize=9, color=INK)
 # B: motivating days
 b = ax[0, 1]; d = [e for e in R["days"] if "high" in e]
 lab = [e["day"][5:] for e in d]; hv = [e["high - flip"] for e in d]; cv = [e["close - flip"] for e in d]

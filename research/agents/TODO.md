@@ -24,6 +24,8 @@ Every test is pre-registered in its own folder before it runs.
   - Source: [positioning-tests](2026-10-26-positioning-tests/) P1, P4a.
 - [ ] **D2. Order-book depth at round numbers and gamma strikes.** Does resting depth peak at round numbers (Kavajecz & Odders-White) and at the call and put walls? P4b proved highs and lows cluster there; D2 would show the orders themselves.
 
+- [ ] **D3. Closing-auction imbalances.** Use NYSE/Nasdaq imbalance messages (Databento imbalance schema). Does the 15:50 published imbalance explain the last-10-minute move, and does it interact with the 0DTE map? Oct 27's drop began at 15:50.
+
 ### Sierra Chart Package 11 or 12 + Denali CME feed (about $57–67/mo)
 - [ ] **S1. ES futures footprint at SPY gamma levels.** Measure absorption (large volume, little price progress) and delta divergence at the flip, the walls and the pockets, vs equally round placebo levels. ES has one central order book, so this is the cleanest order-flow test of the gamma map.
 
@@ -33,6 +35,8 @@ Every test is pre-registered in its own folder before it runs.
 
 ## Can run now (data in hand)
 - [ ] **N1. SqueezeMetrics GEX vs our engine when they disagree.** Example: on Oct 23 SqueezeMetrics showed +$4.0bn while our engine showed −$8.8bn. Only SqueezeMetrics carries P2; our flip carries the rally-hold result. Test which measure predicts better on the days they disagree.
+- [ ] **N3. Who is long the 0DTE calls? A last-30-minute convention test.** On 711 days, does the 15:30 → close move continue the day's move more when the 0DTE strikes near the price are put-heavy (classic: dealers short gamma) than call-heavy (classic: dealers long gamma)? Classic predicts a difference by call/put mix; all-short predicts momentum scales with total 0DTE gamma regardless of mix. Prompted by Oct 27's last-10-minute drop through the 770 calls. [flip-wicks](2026-10-27-flip-wicks/).
+- [ ] **N4. Pre-earnings de-risking into the close.** Do mega caps underperform in the last 30 minutes of the day before their report, more so after an up day? Oct 27: GOOGL −0.66%, AMZN −0.36% in the last 10 minutes. Hourly bars in hand (51 tickers, Nov 2023 →); earnings dates needed.
 - [ ] **N2. Breakaway-gap rule beyond TSLA.** TSLA breakaway gaps fill less (p 0.04). Pre-register the same rule on the 81-stock panel and SPY/QQQ.
 
 ## Needs time (more events), re-test on schedule
