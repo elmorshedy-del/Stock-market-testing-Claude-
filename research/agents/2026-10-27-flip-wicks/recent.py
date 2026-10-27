@@ -49,6 +49,6 @@ for clock, hl in (("09:30", 6.5), ("12:00", 4.0), ("15:00", 1.0), ("15:30", 0.5)
 z = o[o.expiration == D]
 oc = next(c for c in z.columns if "open_interest" in c)
 odte = z[z.strike.between(760, 780)].pivot_table(index="strike", columns="cp", values=oc, aggfunc="sum").fillna(0).astype(int)
-res = {"days": rows, "Oct 27 intraday": intr, "Oct 27 0DTE OI by strike (positions at Oct 26 close)": odte.to_dict(orient="index")}
+res = {"days": rows, "Oct 27 intraday": intr}          # raw per-strike OI is licensed: printed, not saved
 (HERE / "out" / "recent.json").write_text(json.dumps(res, indent=1, default=str))
 print(odte.loc[764:776].to_string())
