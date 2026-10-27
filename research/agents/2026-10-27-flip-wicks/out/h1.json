@@ -1,0 +1,392 @@
+{
+ "days": 1700,
+ "first": "2020-01-03",
+ "last": "2026-10-12",
+ "PRIMARY (incl 0DTE, b 0.15%, up-approach)": {
+  "up stall": {
+   "real": 0.4201,
+   "null mean": 0.375,
+   "diff": 0.0451,
+   "p": 0.03,
+   "events": 388
+  },
+  "up reject": {
+   "real": 0.5361,
+   "null mean": 0.556,
+   "diff": -0.02,
+   "p": 0.774,
+   "events": 388
+  }
+ },
+ "primary passes (both p < 0.05)": false,
+ "multiverse joint p (median z, 40 cells)": 0.0,
+ "median z": 2.675503932894169,
+ "cells": {
+  "flip_incl b=0.05% up stall": {
+   "real": 0.1509,
+   "null mean": 0.1494,
+   "diff": 0.0015,
+   "p": 0.436,
+   "events": 338
+  },
+  "flip_incl b=0.05% up reject": {
+   "real": 0.4675,
+   "null mean": 0.4922,
+   "diff": -0.0247,
+   "p": 0.838,
+   "events": 338
+  },
+  "flip_incl b=0.05% down stall": {
+   "real": 0.1736,
+   "null mean": 0.1424,
+   "diff": 0.0311,
+   "p": 0.044,
+   "events": 363
+  },
+  "flip_incl b=0.05% down hold": {
+   "real": 0.6088,
+   "null mean": 0.5664,
+   "diff": 0.0424,
+   "p": 0.008,
+   "events": 363
+  },
+  "flip_incl b=0.10% up stall": {
+   "real": 0.2833,
+   "null mean": 0.2736,
+   "diff": 0.0097,
+   "p": 0.342,
+   "events": 360
+  },
+  "flip_incl b=0.10% up reject": {
+   "real": 0.5,
+   "null mean": 0.5271,
+   "diff": -0.0271,
+   "p": 0.87,
+   "events": 360
+  },
+  "flip_incl b=0.10% down stall": {
+   "real": 0.3391,
+   "null mean": 0.2597,
+   "diff": 0.0794,
+   "p": 0.0,
+   "events": 404
+  },
+  "flip_incl b=0.10% down hold": {
+   "real": 0.6485,
+   "null mean": 0.5946,
+   "diff": 0.0539,
+   "p": 0.0,
+   "events": 404
+  },
+  "flip_incl b=0.15% up stall": {
+   "real": 0.4201,
+   "null mean": 0.375,
+   "diff": 0.0451,
+   "p": 0.03,
+   "events": 388
+  },
+  "flip_incl b=0.15% up reject": {
+   "real": 0.5361,
+   "null mean": 0.556,
+   "diff": -0.02,
+   "p": 0.774,
+   "events": 388
+  },
+  "flip_incl b=0.15% down stall": {
+   "real": 0.4527,
+   "null mean": 0.3576,
+   "diff": 0.0951,
+   "p": 0.0,
+   "events": 433
+  },
+  "flip_incl b=0.15% down hold": {
+   "real": 0.6721,
+   "null mean": 0.6188,
+   "diff": 0.0533,
+   "p": 0.0,
+   "events": 433
+  },
+  "flip_incl b=0.25% up stall": {
+   "real": 0.5728,
+   "null mean": 0.529,
+   "diff": 0.0438,
+   "p": 0.042,
+   "events": 426
+  },
+  "flip_incl b=0.25% up reject": {
+   "real": 0.5775,
+   "null mean": 0.6004,
+   "diff": -0.023,
+   "p": 0.832,
+   "events": 426
+  },
+  "flip_incl b=0.25% down stall": {
+   "real": 0.6265,
+   "null mean": 0.5076,
+   "diff": 0.119,
+   "p": 0.0,
+   "events": 490
+  },
+  "flip_incl b=0.25% down hold": {
+   "real": 0.7102,
+   "null mean": 0.6573,
+   "diff": 0.0529,
+   "p": 0.0,
+   "events": 490
+  },
+  "flip_incl b=0.40% up stall": {
+   "real": 0.7238,
+   "null mean": 0.6828,
+   "diff": 0.0411,
+   "p": 0.04,
+   "events": 478
+  },
+  "flip_incl b=0.40% up reject": {
+   "real": 0.6234,
+   "null mean": 0.6461,
+   "diff": -0.0227,
+   "p": 0.868,
+   "events": 478
+  },
+  "flip_incl b=0.40% down stall": {
+   "real": 0.7558,
+   "null mean": 0.6578,
+   "diff": 0.098,
+   "p": 0.0,
+   "events": 557
+  },
+  "flip_incl b=0.40% down hold": {
+   "real": 0.7451,
+   "null mean": 0.6969,
+   "diff": 0.0482,
+   "p": 0.0,
+   "events": 557
+  },
+  "flip_excl b=0.05% up stall": {
+   "real": 0.1832,
+   "null mean": 0.1483,
+   "diff": 0.0348,
+   "p": 0.066,
+   "events": 273
+  },
+  "flip_excl b=0.05% up reject": {
+   "real": 0.5055,
+   "null mean": 0.4926,
+   "diff": 0.0129,
+   "p": 0.314,
+   "events": 273
+  },
+  "flip_excl b=0.05% down stall": {
+   "real": 0.2037,
+   "null mean": 0.1445,
+   "diff": 0.0592,
+   "p": 0.0,
+   "events": 270
+  },
+  "flip_excl b=0.05% down hold": {
+   "real": 0.6259,
+   "null mean": 0.5655,
+   "diff": 0.0605,
+   "p": 0.01,
+   "events": 270
+  },
+  "flip_excl b=0.10% up stall": {
+   "real": 0.3378,
+   "null mean": 0.2719,
+   "diff": 0.0659,
+   "p": 0.01,
+   "events": 299
+  },
+  "flip_excl b=0.10% up reject": {
+   "real": 0.5485,
+   "null mean": 0.5267,
+   "diff": 0.0217,
+   "p": 0.194,
+   "events": 299
+  },
+  "flip_excl b=0.10% down stall": {
+   "real": 0.3696,
+   "null mean": 0.2622,
+   "diff": 0.1075,
+   "p": 0.0,
+   "events": 303
+  },
+  "flip_excl b=0.10% down hold": {
+   "real": 0.6667,
+   "null mean": 0.5943,
+   "diff": 0.0724,
+   "p": 0.0,
+   "events": 303
+  },
+  "flip_excl b=0.15% up stall": {
+   "real": 0.4594,
+   "null mean": 0.3741,
+   "diff": 0.0853,
+   "p": 0.002,
+   "events": 320
+  },
+  "flip_excl b=0.15% up reject": {
+   "real": 0.5781,
+   "null mean": 0.5561,
+   "diff": 0.0221,
+   "p": 0.18,
+   "events": 320
+  },
+  "flip_excl b=0.15% down stall": {
+   "real": 0.4788,
+   "null mean": 0.3603,
+   "diff": 0.1185,
+   "p": 0.0,
+   "events": 330
+  },
+  "flip_excl b=0.15% down hold": {
+   "real": 0.6939,
+   "null mean": 0.619,
+   "diff": 0.0749,
+   "p": 0.0,
+   "events": 330
+  },
+  "flip_excl b=0.25% up stall": {
+   "real": 0.6173,
+   "null mean": 0.5301,
+   "diff": 0.0872,
+   "p": 0.0,
+   "events": 358
+  },
+  "flip_excl b=0.25% up reject": {
+   "real": 0.6229,
+   "null mean": 0.6018,
+   "diff": 0.0211,
+   "p": 0.178,
+   "events": 358
+  },
+  "flip_excl b=0.25% down stall": {
+   "real": 0.6472,
+   "null mean": 0.5094,
+   "diff": 0.1378,
+   "p": 0.0,
+   "events": 377
+  },
+  "flip_excl b=0.25% down hold": {
+   "real": 0.7321,
+   "null mean": 0.6577,
+   "diff": 0.0744,
+   "p": 0.0,
+   "events": 377
+  },
+  "flip_excl b=0.40% up stall": {
+   "real": 0.7663,
+   "null mean": 0.6854,
+   "diff": 0.0808,
+   "p": 0.0,
+   "events": 415
+  },
+  "flip_excl b=0.40% up reject": {
+   "real": 0.6747,
+   "null mean": 0.6496,
+   "diff": 0.0251,
+   "p": 0.126,
+   "events": 415
+  },
+  "flip_excl b=0.40% down stall": {
+   "real": 0.7886,
+   "null mean": 0.6628,
+   "diff": 0.1259,
+   "p": 0.0,
+   "events": 440
+  },
+  "flip_excl b=0.40% down hold": {
+   "real": 0.7705,
+   "null mean": 0.701,
+   "diff": 0.0695,
+   "p": 0.0,
+   "events": 440
+  }
+ },
+ "splits": {
+  "2020-22": {
+   "days": 753,
+   "up-reach events": 135,
+   "up stall real / null": [
+    0.348,
+    0.322
+   ],
+   "p stall": 0.277,
+   "up reject real / null": [
+    0.526,
+    0.544
+   ],
+   "p reject": 0.643
+  },
+  "2023-26": {
+   "days": 947,
+   "up-reach events": 253,
+   "up stall real / null": [
+    0.458,
+    0.425
+   ],
+   "p stall": 0.187,
+   "up reject real / null": [
+    0.542,
+    0.565
+   ],
+   "p reject": 0.777
+  },
+  "flip within $0.50 of a $5 multiple": {
+   "days": 351,
+   "up-reach events": 78,
+   "up stall real / null": [
+    0.372,
+    0.361
+   ],
+   "p stall": 0.367,
+   "up reject real / null": [
+    0.513,
+    0.552
+   ],
+   "p reject": 0.777
+  },
+  "flip NOT near a $5 multiple": {
+   "days": 1349,
+   "up-reach events": 310,
+   "up stall real / null": [
+    0.432,
+    0.375
+   ],
+   "p stall": 0.01,
+   "up reject real / null": [
+    0.542,
+    0.554
+   ],
+   "p reject": 0.677
+  },
+  "dealers short gamma at the open (incl 0DTE)": {
+   "days": 949,
+   "up-reach events": 281,
+   "up stall real / null": [
+    0.427,
+    0.312
+   ],
+   "p stall": 0.0,
+   "up reject real / null": [
+    0.509,
+    0.525
+   ],
+   "p reject": 0.767
+  },
+  "dealers long gamma at the open": {
+   "days": 751,
+   "up-reach events": 107,
+   "up stall real / null": [
+    0.402,
+    0.466
+   ],
+   "p stall": 0.903,
+   "up reject real / null": [
+    0.607,
+    0.596
+   ],
+   "p reject": 0.403
+  }
+ }
+}

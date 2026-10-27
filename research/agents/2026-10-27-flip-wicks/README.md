@@ -70,3 +70,48 @@
 * **Sign split (tests the convention):** K* call-heavy (classic: dealers long → pin) vs put-heavy (classic: dealers short → no pin). Prediction: the pin is stronger when call-heavy.
 
 **What would falsify the owner's reading:** H1 at or below the null means the flip wicks were coincidence (or round numbers). H2 at or below zero means the close behaviour was not a pin.
+
+## Results (run after the pre-registration commit ffed9e4)
+`history.py` → `out/preopen_levels.csv`: 1,702 days, 1,433 with a same-day expiry, 1 flip missing, 0 errors. `h1.py` → `out/h1.json`; `pin.py` → `out/h2.json`; `figure.py` → `out/flip_wicks.png`.
+
+![flip wicks](out/flip_wicks.png)
+
+**H1 verdict: the flip is a real stall level (joint p < 0.002 over 40 versions; median z +2.7). The pre-registered primary fails on its second half: after reaching the flip, closing back below is chance.**
+
+| Incl. 0DTE, band ±0.15% | Days | Real | Shifted null | Diff | p |
+|---|---|---|---|---|---|
+| **Up: high stops in the band** | 388 | 42.0% | 37.5% | **+4.5 pts** | **0.03** |
+| Up: close back below the flip | 388 | 53.6% | 55.6% | −2.0 | 0.77 |
+| **Down: low stops in the band** | 433 | 45.3% | 35.8% | **+9.5 pts** | **< 0.002** |
+| **Down: close stays above** | 433 | 67.2% | 61.9% | **+5.3 pts** | **< 0.002** |
+
+* **Every band (±0.05% to ±0.40%):**
+  * The down-side stall and hold beat the null (p ≤ 0.04).
+  * The up-side stall beats it from ±0.15% outward (+4.1 to +4.5 pts).
+  * The up-side "reject" is negative in all 5 bands.
+* **The flip without 0DTE** is as strong or stronger: up stall +8.5 pts at ±0.15% (p 0.002); down stall +11.8 pts. Including 0DTE, the motivating-day choice, did not improve it.
+* **Where it lives** (up stall, ±0.15%):
+  * Mornings that start with dealers **short** gamma: 42.7% vs 31.2% (p < 0.001, 281 days).
+  * Mornings that start long gamma: 40.2% vs 46.6% (p 0.90).
+  * It is not a round-number effect: flip not near a $5 strike 43.2% vs 37.5% (p 0.01); near one, n.s. (78 days).
+  * It holds in both eras in direction (2020–22 +2.6 pts, 2023–26 +3.3 pts); neither era alone is significant.
+* **Reading:**
+  * Below the flip, dealers' hedging chases the move, so a rally runs up to the flip.
+  * At the flip the hedging changes sign and the chase stops, so the day's high tends to land there.
+  * From above, the flip is a stronger floor (+9.5 pts) and closes stay above more often (+5.3 pts). This fits the earlier result that rallies above the flip hold.
+  * What the flip does **not** do is send the close back down. Once a day reaches it from below, the close finishes under it at the chance rate.
+
+**H2 verdict: no closing pin.**
+* Over 711 days (Nov 2023 – Oct 12 2026), the close landed within $0.50 of the biggest 0DTE strike near the 15:30 price **31% vs 35%** for other strikes at the same distance. Weighted difference −2.1 pts, p 0.91.
+* Neither the call-heavy (−2.6 pts) nor the put-heavy (−1.9 pts) days pin.
+* The close moved toward the big strike on 41.5% of days vs 43.0% for other strikes.
+* Ni–Pearson–Poteshman pinning does not show in SPY 0DTE closes on this test.
+
+## What this says about Oct 27
+* **The 770–771 wicks: consistent with a tested effect.** SPY started the day short gamma (pre-open flip 770.34, above the 767.34 open) and rallied into the flip, where its highs stopped (twice). That is the setting where highs stall at the flip (43% vs 31%).
+* **The close under the flip: not explained by any tested rule.** H1 says the close side is chance. H2 says there is no 0DTE pin. The late-session gamma at 770 did turn positive (+$1.5bn at 15:45), which is a damping description, not a tested predictor.
+* **For trading the level:**
+  * Expect the flip to slow a move (above all from above, as support).
+  * Don't treat a touch from below as a short signal for the close.
+  * A close above the flip is what matters for the next days (spy-gamma-levels Amendment 1).
+* **Wednesday:** the pre-open flip will be rebuilt from Oct 28 OI. Monday's positions put it near 770 with 0DTE (772.5 without).

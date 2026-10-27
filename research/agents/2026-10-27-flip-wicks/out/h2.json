@@ -1,0 +1,48 @@
+{
+ "days": 711,
+ "candidate rows": 4266,
+ "PRIMARY: K* hit rate minus same-bucket others (close within $0.50)": -0.0208,
+ "p (diff <= 0)": 0.909,
+ "90% CI": [
+  -0.0462,
+  0.005
+ ],
+ "passes (p < 0.05)": false,
+ "by bucket (K* hit / others hit / K* n)": {
+  "0": [
+   0.305,
+   0.352,
+   266
+  ],
+  "1": [
+   0.1,
+   0.116,
+   221
+  ],
+  "2": [
+   0.036,
+   0.029,
+   224
+  ]
+ },
+ "share of days close moved toward K*": 0.415,
+ "same for other candidates": 0.43,
+ "split K* call-heavy": {
+  "days": 411,
+  "diff": -0.0257,
+  "p": 0.885,
+  "90% CI": [
+   -0.0633,
+   0.0091
+  ]
+ },
+ "split K* put-heavy": {
+  "days": 300,
+  "diff": -0.0187,
+  "p": 0.799,
+  "90% CI": [
+   -0.0516,
+   0.0165
+  ]
+ }
+}
