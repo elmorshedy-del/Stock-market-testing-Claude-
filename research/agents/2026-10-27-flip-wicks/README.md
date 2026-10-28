@@ -138,3 +138,25 @@ The owner is right; the "damping" line above was the map's prediction, not what 
   * N3: last-30-minute continuation vs the 0DTE call/put mix near the price (a convention test on 711 days in hand).
   * N4: pre-earnings de-risking into the close in mega caps.
   * D3: closing-auction imbalance data (Databento imbalance feeds).
+
+## Follow-up: the flip and heavy expiry clusters (owner, Oct 28; post hoc, descriptive; `expiry_cycle.py` → `out/expiry_cycle.json`)
+* **What moves the flip:**
+  * Time: as a big expiry nears, gamma concentrates at strikes near the price and fades away from it.
+  * New positions: they show up in the next morning's OI.
+  * Expiry: the gamma disappears at the bell.
+* **This week (SPY, positions fixed):**
+  * The flip goes 772.2 (Thu) → 771.5 (Fri noon) → 770.0 (Fri 15:00) → 772.3 (Fri 15:45) → **773.6 on Monday** once Oct 30 (24% of gamma) is gone.
+  * At Wednesday's price, total gamma builds to +$0.76bn by Friday noon (stickier, pin-like). It is −$0.77bn on Monday: the same price sits in **short** gamma after the release.
+* **TSLA:** the flip stays about 369–372. The 400 strike's gamma rises into Friday (+$0.15bn) and halves after it (+$0.07bn).
+* **History, 2020 – Oct 2026:**
+  * The pre-open flip moves a median 0.27–0.32% a day ($2–2.5 for SPY), 90th pctile 0.7–1.0%.
+  * It moves a little more after big expiries (>35% of gamma expiring: median 0.32%; monthly opex 0.32%; month-end 0.34% vs 0.30% other days).
+* **H1 by expiry-cluster state** (band 0.15%):
+  * The stall effect holds in **light** expiry weeks (up stall 42% vs 31%, p < 0.002; down hold 69% vs 61%, p 0.01).
+  * In **heavy** weeks it is weaker (up stall 49% vs 43%, p 0.08; down stall 44% vs 37%, p 0.03). The base stall rate is already higher: the whole tape is stickier near big expiries.
+  * 3 sessions before monthly opex: down stall 43% vs 33% (p 0.04), down hold 69% vs 60% (p 0.03).
+  * Day after monthly opex: down stall 64% vs 36% (14 events).
+* **Implication:**
+  * Recompute the flip each morning.
+  * Into a big expiry, expect a sticky, pinned tape with the flip drifting by a dollar or two.
+  * After it, expect the release: the flip jumps and the same price can turn short gamma.

@@ -1,0 +1,191 @@
+{
+ "events (TSLA up-gaps >= 0.5%)": 1485,
+ "base: mean open->close %, P(red), P(open = high)": [
+  0.028,
+  0.515,
+  0.112
+ ],
+ "predictors": {
+  "P1": {
+   "events on / off": [
+    316,
+    1169
+   ],
+   "open->close % on / off": [
+    -0.129,
+    0.07
+   ],
+   "diff pts": -0.199,
+   "p (one-sided)": 0.171,
+   "P(red) on / off": [
+    0.551,
+    0.506
+   ],
+   "P(open was the high) on / off": [
+    0.101,
+    0.115
+   ],
+   "sample": "2011-01-03 to 2026-10-21",
+   "Holm p": 0.684,
+   "passes": false
+  },
+  "P2": {
+   "events on / off": [
+    219,
+    433
+   ],
+   "open->close % on / off": [
+    0.104,
+    0.1
+   ],
+   "diff pts": 0.004,
+   "p (one-sided)": 0.5,
+   "P(red) on / off": [
+    0.516,
+    0.483
+   ],
+   "P(open was the high) on / off": [
+    0.114,
+    0.099
+   ],
+   "sample": "2020-06-26 to 2026-10-09",
+   "Holm p": 1.0,
+   "passes": false
+  },
+  "P3": {
+   "events on / off": [
+    79,
+    635
+   ],
+   "open->close % on / off": [
+    0.222,
+    0.111
+   ],
+   "diff pts": 0.112,
+   "p (one-sided)": 0.622,
+   "P(red) on / off": [
+    0.481,
+    0.496
+   ],
+   "P(open was the high) on / off": [
+    0.063,
+    0.102
+   ],
+   "sample": "2020-01-03 to 2026-10-09",
+   "Holm p": 1.0,
+   "passes": false
+  },
+  "P4": {
+   "events on / off": [
+    477,
+    1008
+   ],
+   "open->close % on / off": [
+    -0.012,
+    0.047
+   ],
+   "diff pts": -0.059,
+   "p (one-sided)": 0.3795,
+   "P(red) on / off": [
+    0.522,
+    0.512
+   ],
+   "P(open was the high) on / off": [
+    0.103,
+    0.117
+   ],
+   "sample": "2011-01-03 to 2026-10-21",
+   "Holm p": 1.0,
+   "passes": false
+  }
+ },
+ "count of predictors on vs open->close (2021-2026)": {
+  "0": {
+   "events": 258,
+   "open->close %": 0.247,
+   "P(red)": 0.469,
+   "P(open = high)": 0.097
+  },
+  "1": {
+   "events": 227,
+   "open->close %": -0.054,
+   "P(red)": 0.507,
+   "P(open = high)": 0.115
+  },
+  "2": {
+   "events": 108,
+   "open->close %": -0.033,
+   "P(red)": 0.528,
+   "P(open = high)": 0.111
+  },
+  "3": {
+   "events": 53,
+   "open->close %": 0.257,
+   "P(red)": 0.509,
+   "P(open = high)": 0.075
+  },
+  "4": {
+   "events": 6,
+   "open->close %": 0.787,
+   "P(red)": 0.333,
+   "P(open = high)": 0.167
+  }
+ },
+ "Spearman(count, open->close)": [
+  -0.027,
+  0.4947
+ ],
+ "O4 first hour (Nov 2023-Oct 2026)": {
+  "0 predictors on": {
+   "events": 111,
+   "first-hour return %": 0.122,
+   "median drop open->first-hour low %": -1.052
+  },
+  "1 predictors on": {
+   "events": 106,
+   "first-hour return %": 0.072,
+   "median drop open->first-hour low %": -1.151
+  },
+  "2 predictors on": {
+   "events": 45,
+   "first-hour return %": 0.683,
+   "median drop open->first-hour low %": -1.12
+  },
+  "3 predictors on": {
+   "events": 25,
+   "first-hour return %": -0.831,
+   "median drop open->first-hour low %": -2.087
+  }
+ },
+ "today (Oct 28) gap pctile among trailing up-gaps": null,
+ "G1 2020-2026 (83 stocks)": {
+  "events": 34688,
+  "stocks": 83,
+  "open->close % P1 on / off": [
+   0.011,
+   0.036
+  ],
+  "diff pts": -0.026,
+  "p (by-day bootstrap)": 0.365,
+  "passes": false,
+  "P(red) on / off": [
+   0.504,
+   0.489
+  ]
+ },
+ "G1 2000-2019 (stocks with history)": {
+  "events": 44812,
+  "stocks": 83,
+  "open->close % P1 on / off": [
+   -0.156,
+   0.028
+  ],
+  "diff pts": -0.184,
+  "p (by-day bootstrap)": 0.0,
+  "passes": true,
+  "P(red) on / off": [
+   0.524,
+   0.486
+  ]
+ }
+}

@@ -1,0 +1,342 @@
+{
+ "(1) SPY this week, positions fixed": {
+  "Thu 09:30": {
+   "flip": 772.24,
+   "total gamma at today's close $bn/1%": 0.13,
+   "Oct 30 share of |gamma|": 0.242,
+   "biggest +strike": [
+    800.0,
+    1.452
+   ],
+   "biggest -strike": [
+    750.0,
+    -1.174
+   ]
+  },
+  "Thu 15:45": {
+   "flip": 772.08,
+   "total gamma at today's close $bn/1%": 0.33,
+   "Oct 30 share of |gamma|": 0.242,
+   "biggest +strike": [
+    800.0,
+    1.448
+   ],
+   "biggest -strike": [
+    750.0,
+    -1.136
+   ]
+  },
+  "Fri 09:30": {
+   "flip": 771.86,
+   "total gamma at today's close $bn/1%": 0.5,
+   "Oct 30 share of |gamma|": 0.231,
+   "biggest +strike": [
+    800.0,
+    1.437
+   ],
+   "biggest -strike": [
+    750.0,
+    -1.093
+   ]
+  },
+  "Fri 12:00": {
+   "flip": 771.5,
+   "total gamma at today's close $bn/1%": 0.76,
+   "Oct 30 share of |gamma|": 0.224,
+   "biggest +strike": [
+    800.0,
+    1.436
+   ],
+   "biggest -strike": [
+    750.0,
+    -1.093
+   ]
+  },
+  "Fri 15:00": {
+   "flip": 770.03,
+   "total gamma at today's close $bn/1%": 0.41,
+   "Oct 30 share of |gamma|": 0.186,
+   "biggest +strike": [
+    800.0,
+    1.434
+   ],
+   "biggest -strike": [
+    750.0,
+    -1.092
+   ]
+  },
+  "Fri 15:45": {
+   "flip": 772.32,
+   "total gamma at today's close $bn/1%": -0.01,
+   "Oct 30 share of |gamma|": 0.148,
+   "biggest +strike": [
+    800.0,
+    1.433
+   ],
+   "biggest -strike": [
+    750.0,
+    -1.092
+   ]
+  },
+  "Mon 09:30 (Oct 30 gone)": {
+   "flip": 773.56,
+   "total gamma at today's close $bn/1%": -0.77,
+   "Oct 30 share of |gamma|": 0.0,
+   "biggest +strike": [
+    800.0,
+    1.384
+   ],
+   "biggest -strike": [
+    750.0,
+    -1.059
+   ]
+  }
+ },
+ "(1) TSLA this week, positions fixed": {
+  "Thu 09:30": {
+   "flip": 370.62,
+   "total gamma at today's close $bn/1%": 0.65,
+   "Oct 30 share of |gamma|": 0.313,
+   "biggest +strike": [
+    400.0,
+    0.121
+   ],
+   "biggest -strike": [
+    350.0,
+    -0.013
+   ]
+  },
+  "Thu 15:45": {
+   "flip": 370.75,
+   "total gamma at today's close $bn/1%": 0.65,
+   "Oct 30 share of |gamma|": 0.31,
+   "biggest +strike": [
+    400.0,
+    0.126
+   ],
+   "biggest -strike": [
+    350.0,
+    -0.013
+   ]
+  },
+  "Fri 09:30": {
+   "flip": 371.19,
+   "total gamma at today's close $bn/1%": 0.61,
+   "Oct 30 share of |gamma|": 0.287,
+   "biggest +strike": [
+    400.0,
+    0.153
+   ],
+   "biggest -strike": [
+    350.0,
+    -0.012
+   ]
+  },
+  "Fri 12:00": {
+   "flip": 371.31,
+   "total gamma at today's close $bn/1%": 0.59,
+   "Oct 30 share of |gamma|": 0.276,
+   "biggest +strike": [
+    400.0,
+    0.151
+   ],
+   "biggest -strike": [
+    350.0,
+    -0.012
+   ]
+  },
+  "Fri 15:00": {
+   "flip": 372.08,
+   "total gamma at today's close $bn/1%": 0.51,
+   "Oct 30 share of |gamma|": 0.23,
+   "biggest +strike": [
+    405.0,
+    0.085
+   ],
+   "biggest -strike": [
+    350.0,
+    -0.012
+   ]
+  },
+  "Fri 15:45": {
+   "flip": 372.34,
+   "total gamma at today's close $bn/1%": 0.51,
+   "Oct 30 share of |gamma|": 0.252,
+   "biggest +strike": [
+    405.0,
+    0.141
+   ],
+   "biggest -strike": [
+    350.0,
+    -0.012
+   ]
+  },
+  "Mon 09:30 (Oct 30 gone)": {
+   "flip": 369.07,
+   "total gamma at today's close $bn/1%": 0.39,
+   "Oct 30 share of |gamma|": 0.0,
+   "biggest +strike": [
+    400.0,
+    0.07
+   ],
+   "biggest -strike": [
+    350.0,
+    -0.012
+   ]
+  }
+ },
+ "(2) |flip jump to next day| % by share of gamma expiring that day": {
+  "none": {
+   "days": 268,
+   "median |jump| %": 0.461,
+   "90th pct |jump| %": 1.156
+  },
+  "<15%": {
+   "days": 581,
+   "median |jump| %": 0.271,
+   "90th pct |jump| %": 0.883
+  },
+  "15-25%": {
+   "days": 645,
+   "median |jump| %": 0.27,
+   "90th pct |jump| %": 0.733
+  },
+  "25-35%": {
+   "days": 165,
+   "median |jump| %": 0.297,
+   "90th pct |jump| %": 0.886
+  },
+  ">35%": {
+   "days": 40,
+   "median |jump| %": 0.32,
+   "90th pct |jump| %": 0.999
+  }
+ },
+ "(2) median |jump| %: monthly opex / month-end / other days": [
+  0.316,
+  0.34,
+  0.295
+ ],
+ "(3) H1 (band 0.15%) by expiry-cluster state, post hoc": {
+  "light cluster (5-day share low third)": {
+   "days": 567,
+   "reach events up/down": [
+    132,
+    104
+   ],
+   "real / null / p": {
+    "up stall": [
+     0.424,
+     0.311,
+     0.0
+    ],
+    "up reject": [
+     0.583,
+     0.543,
+     0.167
+    ],
+    "down stall": [
+     0.433,
+     0.305,
+     0.007
+    ],
+    "down hold": [
+     0.692,
+     0.609,
+     0.01
+    ]
+   }
+  },
+  "heavy cluster (5-day share high third)": {
+   "days": 567,
+   "reach events up/down": [
+    115,
+    171
+   ],
+   "real / null / p": {
+    "up stall": [
+     0.487,
+     0.429,
+     0.077
+    ],
+    "up reject": [
+     0.583,
+     0.597,
+     0.67
+    ],
+    "down stall": [
+     0.444,
+     0.373,
+     0.027
+    ],
+    "down hold": [
+     0.655,
+     0.604,
+     0.057
+    ]
+   }
+  },
+  "3 sessions before a monthly opex": {
+   "days": 241,
+   "reach events up/down": [
+    44,
+    67
+   ],
+   "real / null / p": {
+    "up stall": [
+     0.5,
+     0.39,
+     0.083
+    ],
+    "up reject": [
+     0.614,
+     0.606,
+     0.483
+    ],
+    "down stall": [
+     0.433,
+     0.334,
+     0.037
+    ],
+    "down hold": [
+     0.687,
+     0.6,
+     0.03
+    ]
+   }
+  },
+  "day after monthly opex": {
+   "days": 72,
+   "reach events up/down": [
+    25,
+    14
+   ],
+   "real / null / p": {
+    "up stall": [
+     0.4,
+     0.289,
+     0.083
+    ],
+    "up reject": [
+     0.64,
+     0.517,
+     0.07
+    ],
+    "down stall": [
+     0.643,
+     0.36,
+     0.0
+    ],
+    "down hold": [
+     0.786,
+     0.71,
+     0.24
+    ]
+   }
+  }
+ },
+ "(3) 5-day share cut points": [
+  0.265,
+  0.36
+ ]
+}

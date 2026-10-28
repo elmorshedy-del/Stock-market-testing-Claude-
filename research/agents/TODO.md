@@ -26,6 +26,9 @@ Every test is pre-registered in its own folder before it runs.
 
 - [ ] **D3. Closing-auction imbalances.** Use NYSE/Nasdaq imbalance messages (Databento imbalance schema). Does the 15:50 published imbalance explain the last-10-minute move, and does it interact with the 0DTE map? Oct 27's drop began at 15:50.
 
+- [ ] **D5. Opening cross and first-30-minute flow.** Nasdaq opening imbalance (`imbalance` schema, auction type O) and TSLA aggressor flow in the first 30 minutes on gap days: buying exhaustion vs active selling. About $0.05 a day.
+- [ ] **T4. Call profit-taking at the open.** Near-money call OI change (next-morning OI) plus signed option trades on gap days: do customers selling calls force dealers to sell stock hedges? (ThetaData Standard.)
+
 ### Sierra Chart Package 11 or 12 + Denali CME feed (about $57–67/mo)
 - [ ] **S1. ES futures footprint at SPY gamma levels.** Measure absorption (large volume, little price progress) and delta divergence at the flip, the walls and the pockets, vs equally round placebo levels. ES has one central order book, so this is the cleanest order-flow test of the gamma map.
 
@@ -44,6 +47,9 @@ Every test is pre-registered in its own folder before it runs.
 
 - [ ] **N5. Liquidity regime test.** Does ES Kyle lambda (book depth) track dealer gamma over a long sample? Flow-physics found rho -0.37 on 16 days. Needs more ES trade days, or a cheaper depth proxy (ohlcv range / volume).
 - [ ] **N6. A calibrated pullback model.** The reflection principle fails with VIX (B4). Test a VIX × (realized/implied ratio) scaling or a GARCH sigma, walk-forward, with the same calibration rule.
+
+- [ ] **N7. Premarket drift and overnight-high timing** as an open-fade predictor (Oct 28: the 4am print was the high). Needs premarket bar history.
+- [ ] **N8. The 3-of-4 open-fade state** (extended run + long gamma + open above the call wall): first hour −0.83%, median dip −2.1% on 25 events. Re-test as events accrue.
 
 ## Needs time (more events), re-test on schedule
 - [ ] **R1. TSLA RSI divergence after a 1-ATR bounce:** 86% vs 69% held (21 cases, p 0.21). [technical-indicators](2026-10-16-technical-indicators/) B.

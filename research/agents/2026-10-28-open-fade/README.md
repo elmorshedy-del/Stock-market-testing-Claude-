@@ -44,3 +44,31 @@
   * P1 on (the stock's own 2-day return in its top quintile) vs off: difference in mean open → close, bootstrap by day.
   * **Passes if p < 0.05.** P4 is reported the same way.
 * **Today's state:** up-gap +0.67%; P1 on (+9.4% in 2 days); P2 on (own gamma 94th pctile); P3 on (open 410 ≥ call wall 400); P4 to be computed.
+
+## Results (run after the pre-registration commit 082e59d; `fade.py` → `out/fade.json`)
+![figure](out/flip_expiry_openfade.png)
+
+**Verdict: no predictor passes.** The TSLA gap-and-fade is not predictable from these pre-open states.
+* **TSLA up-gaps ≥ 0.5%,** 2011 – Oct 2026 (1,485 events):
+  * mean open → close +0.03%; close below the open 52%; **the open was the day's high only 11% of the time**.
+* **By predictor:**
+  * **P1** extended 2-day run: open → close −0.13% vs +0.07% (−0.20 pts, p 0.17, Holm 0.68). Right direction, not significant.
+  * **P2** long own gamma: +0.10% vs +0.10% (Holm 1.0).
+  * **P3** open at or above the call wall: +0.22% vs +0.11% (Holm 1.0). Opposite direction; it does not replicate positioning-tests P1 on smaller gaps.
+  * **P4** big gap: −0.01% vs +0.05% (Holm 1.0).
+* **Count of predictors on:** no relation (Spearman −0.03).
+* **First hour** (Nov 2023 – Oct 2026):
+  * The median drop from the open to the first-hour low is about **−1.1% whatever the state**. The early dip is normal noise.
+  * With 3 of 4 on (today's case): first-hour return −0.83% and a median −2.1% drop, but **25 events**. A lead, not a rule.
+* **G1, 83-stock panel, extended-run up-gaps vs other up-gaps:**
+  * 2020–2026: −0.03 pts (p 0.37). **Fails** (the primary sample).
+  * 2000–2019: −0.18 pts (p < 0.001).
+  * The attention-buying reversal (Berkman et al.) was real and has **decayed since 2020**, plausibly with 24-hour trading and options-driven flow. Not tested.
+* **Reading for call holders:**
+  * The open is rarely the day's high (11%) and the close finishes below the open about half the time.
+  * "Sell at the open" is not a rule the data supports. Neither is panic-selling the routine ~1% first-hour dip.
+  * What made Oct 28 different was descriptive, not predictive: an overnight high printed at 4am, the lowest opening volume in three sessions, long dealer gamma with the 400 wall below, and megacap rotation into chips.
+* **Added to TODO:**
+  * N7: premarket drift and overnight-high timing as a predictor (needs premarket history);
+  * D5: the Nasdaq opening-cross imbalance and the first-30-minute aggressor flow (Databento, about $0.05 a day);
+  * T4: call profit-taking at the open (OI change + signed option trades).
