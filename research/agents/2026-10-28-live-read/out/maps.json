@@ -1,0 +1,128 @@
+{
+ "SPY": {
+  "pre-open flip incl 0DTE": 771.6,
+  "pre-open flip excl 0DTE": 772.74,
+  "prior close (parity)": 770.11,
+  "open": 771.4299926757812,
+  "high": 773.3599853515625,
+  "high time": "14:37",
+  "low": 769.239990234375,
+  "low time": "09:48",
+  "close": 772.3499755859375,
+  "high - flip": 1.76,
+  "low - flip": -2.36,
+  "close - flip": 0.75,
+  "share of minutes above the flip": 0.115,
+  "path": {
+   "09:30-13:59": -0.021,
+   "14:00-14:29 (decision)": -0.049,
+   "14:30-15:49 (press conference)": 0.129,
+   "15:50-close": 0.06
+  },
+  "levels at 13:59 / 14:29 / 15:49": [
+   771.27001953125,
+   770.8900146484375,
+   771.8875732421875
+  ],
+  "after hours last": 771.77,
+  "after hours %": -0.08,
+  "flip incl 0DTE by time": {
+   "09:30": 771.6,
+   "12:00": 771.47,
+   "14:00": 771.29,
+   "15:00": 771.11,
+   "15:45": 770.84
+  },
+  "Thursday map": {
+   "flip": 772.24,
+   "total GEX $bn per 1% at close": 0.13,
+   "call wall": 800.0,
+   "put wall": 750.0,
+   "top positive strikes ($bn)": {
+    "800.0": 1.452,
+    "780.0": 1.08,
+    "810.0": 0.849,
+    "775.0": 0.607,
+    "790.0": 0.46
+   },
+   "top negative strikes ($bn)": {
+    "750.0": -1.174,
+    "765.0": -0.978,
+    "760.0": -0.723,
+    "740.0": -0.421,
+    "730.0": -0.383
+   },
+   "most negative total-gamma price": 742.42,
+   "most positive total-gamma price": 796.49,
+   "Oct 30 expiry share of |gamma|": 0.242
+  }
+ },
+ "TSLA": {
+  "pre-open flip incl 0DTE": 379.09,
+  "pre-open flip excl 0DTE": 369.98,
+  "prior close (parity)": 407.65,
+  "open": 410.2099914550781,
+  "high": 410.8500061035156,
+  "high time": "09:30",
+  "low": 397.17999267578125,
+  "low time": "10:12",
+  "close": 404.4599914550781,
+  "high - flip": 31.76,
+  "low - flip": 18.09,
+  "close - flip": 25.37,
+  "share of minutes above the flip": 1.0,
+  "path": {
+   "09:30-13:59": -1.853,
+   "14:00-14:29 (decision)": 0.162,
+   "14:30-15:49 (press conference)": 0.123,
+   "15:50-close": 0.173
+  },
+  "levels at 13:59 / 14:29 / 15:49": [
+   402.6099853515625,
+   403.26300048828125,
+   403.760009765625
+  ],
+  "after hours last": 403.869,
+  "after hours %": -0.15,
+  "flip incl 0DTE by time": {
+   "09:30": 379.09,
+   "12:00": 378.51,
+   "14:00": 378.27,
+   "15:00": 378.81,
+   "15:45": 390.99
+  },
+  "Thursday map": {
+   "flip": 370.62,
+   "total GEX $bn per 1% at close": 0.65,
+   "call wall": 400.0,
+   "put wall": 350.0,
+   "top positive strikes ($bn)": {
+    "400.0": 0.121,
+    "420.0": 0.094,
+    "410.0": 0.067,
+    "415.0": 0.046,
+    "395.0": 0.029
+   },
+   "top negative strikes ($bn)": {
+    "390.0": -0.005,
+    "397.5": -0.001,
+    "387.5": 0.001,
+    "427.5": 0.002,
+    "382.5": 0.003
+   },
+   "most negative total-gamma price": 376.15,
+   "most positive total-gamma price": 424.18,
+   "Oct 30 expiry share of |gamma|": 0.313
+  },
+  "freed: near-OI share and pctile, now / after Oct 30": [
+   [
+    0.089,
+    0.203
+   ],
+   [
+    0.0555,
+    0.004
+   ]
+  ]
+ }
+}
