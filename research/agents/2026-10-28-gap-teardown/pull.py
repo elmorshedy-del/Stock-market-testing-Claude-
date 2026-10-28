@@ -4,6 +4,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import threading
+import time
 
 import databento as db
 import pandas as pd
@@ -11,6 +12,7 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent; D = HERE / "data"
 c = db.Historical(sys.argv[1]); CAP = float(sys.argv[2]); MB = int(sys.argv[3])
 smp = pd.read_csv(HERE / "out" / "sample.csv", parse_dates=["date"])
+smp = pd.concat([smp[smp.focal == 1], smp[smp.focal == 0].sample(frac=1, random_state=0)])   # random order, so a cap stop drops events at random
 lock = threading.Lock(); spent = [0.0]
 et = lambda day, hm: pd.Timestamp(f"{day.date()} {hm}", tz="America/New_York").tz_convert("UTC")
 
@@ -24,7 +26,8 @@ def job(r):
     for name, schema, a, b in reqs:
         f = D / f"{tag}_{name}.parquet"
         if f.exists(): continue
-        try:
+        for k in range(5):
+          try:
             cost = c.metadata.get_cost(dataset="XNAS.ITCH", symbols=[api], schema=schema, start=a, end=b)
             with lock:
                 if spent[0] + cost > CAP: return f"cap reached at {tag}"
@@ -32,9 +35,10 @@ def job(r):
             df = c.timeseries.get_range(dataset="XNAS.ITCH", symbols=[api], schema=schema, start=a, end=b).to_df().reset_index()
             keep = [k for k in df.columns if k in ("ts_event", "price", "size", "side", "action", "flags") or k.startswith(("bid_px_", "ask_px_", "bid_sz_", "ask_sz_"))
                     or k in ("ref_price", "paired_qty", "total_imbalance_qty", "auction_type", "cont_book_clr_price", "auct_interest_clr_price")]
-            df[keep].to_parquet(f)
-        except Exception as e:
-            return f"err {tag} {name} {str(e)[:80]}"
+            df[keep].to_parquet(f); break
+          except Exception as e:
+            if k == 4: return f"err {tag} {name} {str(e)[:80]}"
+            time.sleep(4 * (k + 1))
     return None
 
 
