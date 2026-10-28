@@ -5,7 +5,13 @@
   * The owner has a theory and asked me **not** to be biased by it. The metrics below come from the standard microstructure toolkit (auction imbalance, aggressor flow, book depth and imbalance, absorption, spreads, trade-size mix, dealer gamma), fixed before any data is pulled.
 * **Focal pair (out of sample):** TSLA Oct 27 (gap +1.6% → ran +2.7%) and Oct 28 (gap +0.7% → −3.2% by 10:12). Oct 26 (news gap, held) is context.
 
-## Events (fixed)
+## Amendment 1 (owner, before any data was pulled: "it doesn't have to be after certain days, use your own brain")
+* **Setup:** a gap-up of at least **0.5σ** (open vs prior close, in units of the stock's 20-day daily σ). This scales the gap to each stock's volatility instead of a flat 0.5%.
+* **No prior-run filter.** The prior 2-day return becomes a measured covariate (**M0**, added to T2, so T2 covers 8 measures).
+* **Classes (VF, SC) are unchanged.**
+* **Cost control:** if the full VF + SC set exceeds the $25 cap, events are drawn at random within class and stock (seed 0) until the cap. Stated before pulling.
+
+## Events (original definition, superseded by Amendment 1)
 * **Universe:** 12 Nasdaq-listed mega caps: TSLA, AAPL, NVDA, AMD, META, MSFT, AMZN, GOOGL, AVGO, NFLX, MU, ORCL.
   * Days Nov 2023 – Oct 2026 (Yahoo hourly bars give the first hour).
 * **Setup:**
