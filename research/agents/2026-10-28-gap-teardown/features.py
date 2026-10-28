@@ -45,6 +45,9 @@ def feats(r):
             z = im.iloc[-1]; sgn = 1 if z.side == "B" else (-1 if z.side == "A" else 0)
             out["M3 opening imbalance / paired"] = sgn * float(z.total_imbalance_qty) / max(float(z.paired_qty), 1.0)
             out["opening paired shares"] = float(z.paired_qty)
+            w = im[im.et.dt.strftime("%H:%M:%S") >= "09:25:00"]   # exploratory (not pre-registered): the last messages are often balanced
+            sg = w.side.map({"B": 1, "A": -1}).fillna(0)
+            out["M3x mean imbalance 09:25-09:30 / paired (exploratory)"] = float((sg * w.total_imbalance_qty / w.paired_qty.clip(lower=1)).mean()) if len(w) else np.nan
     # book
     fb = D / f"{tag}_mbp10.parquet"
     if fb.exists():

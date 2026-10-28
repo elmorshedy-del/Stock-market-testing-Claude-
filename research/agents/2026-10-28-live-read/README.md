@@ -95,6 +95,6 @@
 * **What this changes:**
   * Netting the two reports is no longer flat. SPY after hours is **under Thursday's flip (772.24)**, with total gamma near zero, so the open would start on the short-gamma side.
   * The negative strikes are at 765 and 760, and the pocket is 742–765.
-  * Tested rule: below the flip, dips are not where lows stop (H1). Pre-open flip H1 holds only above it.
+  * Tested (flip-wicks): the pre-open flip stalls price from both sides, more as a floor than a lid. Starting below it, the flip is the level to reclaim, not support.
   * The real Thursday flip comes from Oct 29 OI in the morning. PCE/GDP at 8:30 can move the futures before then.
   * TSLA after hours sits just above its 400 floor (wick 397.18 today); next 395 / 389.
