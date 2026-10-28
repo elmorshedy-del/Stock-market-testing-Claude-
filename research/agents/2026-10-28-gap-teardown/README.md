@@ -5,6 +5,17 @@
   * The owner has a theory and asked me **not** to be biased by it. The metrics below come from the standard microstructure toolkit (auction imbalance, aggressor flow, book depth and imbalance, absorption, spreads, trade-size mix, dealer gamma), fixed before any data is pulled.
 * **Focal pair (out of sample):** TSLA Oct 27 (gap +1.6% → ran +2.7%) and Oct 28 (gap +0.7% → −3.2% by 10:12). Oct 26 (news gap, held) is context.
 
+## Amendment 2 (owner: "September 2 [2020] is a good example… market-wide, especially tech"; written before any microstructure data was pulled)
+* **Period:** May 2018 – Oct 27 2026, the full XNAS.ITCH history, so 2020 is in. **QQQ is added** (13 symbols).
+* **Classification source:** Databento XNAS 1-minute bars for 09:30–10:35 ET on each candidate day. Candidates are gap ≥ 0.5σ on Yahoo daily bars. The VF/SC rules are unchanged.
+* **Market-wide label:**
+  * a VF (SC) day is *market-wide* if QQQ is VF (SC) that day, or ≥ 1/3 of the 12 stocks with a qualifying gap share the class;
+  * otherwise it is *single-name*.
+  * T2 and T3 are reported for all events and split by this label.
+* **Sampling:** if all VF + SC events exceed the budget, a stratified random sample (seed 0; by class × year) is drawn.
+  * Focal days are always included: **2020-09-02, all 13 symbols**, and TSLA 2026-10-26/27/28.
+* **Budget cap raised to $40** (owner: "consume any data if you need to").
+
 ## Amendment 1 (owner, before any data was pulled: "it doesn't have to be after certain days, use your own brain")
 * **Setup:** a gap-up of at least **0.5σ** (open vs prior close, in units of the stock's 20-day daily σ). This scales the gap to each stock's volatility instead of a flat 0.5%.
 * **No prior-run filter.** The prior 2-day return becomes a measured covariate (**M0**, added to T2, so T2 covers 8 measures).
