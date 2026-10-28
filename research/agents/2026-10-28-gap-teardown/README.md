@@ -5,6 +5,19 @@
   * The owner has a theory and asked me **not** to be biased by it. The metrics below come from the standard microstructure toolkit (auction imbalance, aggressor flow, book depth and imbalance, absorption, spreads, trade-size mix, dealer gamma), fixed before any data is pulled.
 * **Focal pair (out of sample):** TSLA Oct 27 (gap +1.6% → ran +2.7%) and Oct 28 (gap +0.7% → −3.2% by 10:12). Oct 26 (news gap, held) is context.
 
+## Amendment 3 (owner, during labeling: "narrow the fetch for big names for now"; written before any class label or microstructure data was viewed)
+* **Why:** Databento was slow (~15 s per small request) and returned repeated 500 errors on 2018–2019 dates; the 13-symbol labeling fetch would have taken over an hour.
+* **Universe:** TSLA, AAPL, NVDA (the names the owner flagged) plus QQQ for the market-wide label. 1,512 candidates on 814 dates.
+* **Market-wide label:** the same rule. QQQ shares the class, or at least 2 of the 3 stocks do.
+* **Labeling fetch:** `fetch_bars.py`, one request per date for all gapped symbols. Same XNAS 09:30–10:35 1-minute bars; results are cached per date.
+* **Options (M5):** TSLA, NVDA and QQQ have local chains; AAPL has none (stated gap).
+* **Sample:**
+  * Every VF and SC event if the quoted pull fits $32. Otherwise a stratified draw (class × year, seed 0).
+  * Plus 120 middle days for T3, drawn the same way.
+  * Plus the focal days: 2020-09-02 for each of the 4 that gapped, and TSLA 2026-10-26/27.
+* **Unchanged:** the classes, the metrics M0–M10, tests T1–T4, the Holm rules, and the $40 cap.
+* **The other 9 symbols** are left for later. No claim is made about them.
+
 ## Amendment 2 (owner: "September 2 [2020] is a good example… market-wide, especially tech"; written before any microstructure data was pulled)
 * **Period:** May 2018 – Oct 27 2026, the full XNAS.ITCH history, so 2020 is in. **QQQ is added** (13 symbols).
 * **Classification source:** Databento XNAS 1-minute bars for 09:30–10:35 ET on each candidate day. Candidates are gap ≥ 0.5σ on Yahoo daily bars. The VF/SC rules are unchanged.
