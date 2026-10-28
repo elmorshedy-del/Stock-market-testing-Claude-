@@ -76,3 +76,25 @@
   * Up moves made in high own gamma tend to persist (forced-flow law).
   * After Friday, deep freed plus being far above its flip; historically (post hoc, 20 days) 50% up-bursts vs 20% down-bursts within 3 sessions. The window usually closes in about 4 sessions.
   * Floor 400 (wicked to 397 today); next 395 / 389. Lid and magnet 420–424.
+
+## Calls and late updates (written 23:40 UTC, about 7:40pm ET)
+* **After hours, about 19:35 ET, vs the close:**
+  * GOOGL 292.67 (−9.9%), MSFT 544.35 (+2.5%, down from +4.2% in early trading), AVGO −2.4%, NVDA −0.6%, AMZN −0.6%, META +0.8%.
+  * SPY 768.72 (−0.46%), QQQ −1.09%, TSLA 401.50 (−0.67%). Source: Yahoo 1-minute bars.
+* **Alphabet call** (investing.com transcript):
+  * The 2026 capex range of $195–205bn is **unchanged**. Capex is still expected to "increase significantly in 2027", with details on the Q4 call.
+  * Alphabet started renting **third-party compute** at the end of Q3 and will ramp it in Q4, so Cloud margins face near-term headwinds.
+  * TPU system sales keep scaling in Q4, with "a meaningful revenue ramp in 2027". The negative free cash flow is framed as TPU inventory built before billing.
+  * Search growth will be pressured in Q4 as it laps last year's acceleration.
+* **Microsoft call** (Business Insider):
+  * Calendar-2026 capex was **cut to $170bn from $175bn**, a rare cut.
+  * Q1 capex was $39.4bn ex-leases and $45.2bn with leases, under the ~$46bn expected.
+  * The Dec-quarter Azure guide was not in the coverage I could find at writing.
+* **SqueezeMetrics, Oct 28:** GEX +$5.61bn (47th pctile of the past year), DIX 46.1% (64th). GEX is not low, so the R4/R5 rungs stay off. R6 (VIX) stays on.
+* **FINRA TSLA, Oct 28:** short share of off-exchange volume 53.7% (Oct 27 48.7%). 5-day 0.515, so DPI is middling.
+* **What this changes:**
+  * Netting the two reports is no longer flat. SPY after hours is **under Thursday's flip (772.24)**, with total gamma near zero, so the open would start on the short-gamma side.
+  * The negative strikes are at 765 and 760, and the pocket is 742–765.
+  * Tested rule: below the flip, dips are not where lows stop (H1). Pre-open flip H1 holds only above it.
+  * The real Thursday flip comes from Oct 29 OI in the morning. PCE/GDP at 8:30 can move the futures before then.
+  * TSLA after hours sits just above its 400 floor (wick 397.18 today); next 395 / 389.
