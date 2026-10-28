@@ -29,7 +29,7 @@ for r in ev.itertuples():
     D = r.date
     oi = pd.concat([month(r.sym, f"{D:%Y-%m}", "oi")]); oi = oi[oi.date == D] if len(oi) else oi
     if not len(oi): continue
-    prevm = (D - pd.offsets.MonthBegin(1)).strftime("%Y-%m")
+    prevm = (D.replace(day=1) - pd.Timedelta(days=1)).strftime("%Y-%m")
     eod = pd.concat([month(r.sym, prevm, "eod"), month(r.sym, f"{D:%Y-%m}", "eod")])
     if not len(eod): continue
     P = eod.date[eod.date < D].max()

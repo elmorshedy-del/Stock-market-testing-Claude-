@@ -1,0 +1,652 @@
+{
+ "n": {
+  "mid": 109,
+  "VF": 83,
+  "SC": 79
+ },
+ "T2_all": [
+  {
+   "measure": "M0 prior 2-day return (sig)",
+   "n_vf": 83,
+   "n_sc": 79,
+   "median_vf": -0.04806982836375845,
+   "median_sc": -0.019907402050940784,
+   "auc_vf_gt_sc": 0.5260027451578466,
+   "p_boot": 0.5535,
+   "p_ranksum": 0.5689284125556593,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M1 premarket drift (last vs high, sig)",
+   "n_vf": 83,
+   "n_sc": 79,
+   "median_vf": -0.1708058625031805,
+   "median_sc": -0.1293246577818463,
+   "auc_vf_gt_sc": 0.43693762391337504,
+   "p_boot": 0.1465,
+   "p_ranksum": 0.16638878620676723,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "pm_high_min_after_4am",
+   "n_vf": 83,
+   "n_sc": 79,
+   "median_vf": 274.39643664588334,
+   "median_sc": 299.95933999811666,
+   "auc_vf_gt_sc": 0.4174165014488333,
+   "p_boot": 0.0745,
+   "p_ranksum": 0.06986808294161898,
+   "p_holm": 0.6705,
+   "pass": false
+  },
+  {
+   "measure": "M2a premarket buy share",
+   "n_vf": 83,
+   "n_sc": 79,
+   "median_vf": 0.5042558669175166,
+   "median_sc": 0.5198376785721665,
+   "auc_vf_gt_sc": 0.5075491840780845,
+   "p_boot": 0.8905,
+   "p_ranksum": 0.8695834759825379,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M2b premarket retail-size share",
+   "n_vf": 83,
+   "n_sc": 79,
+   "median_vf": 0.3027364683815648,
+   "median_sc": 0.3300741871131043,
+   "auc_vf_gt_sc": 0.4624065883788318,
+   "p_boot": 0.3715,
+   "p_ranksum": 0.40977554866446997,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M3 opening imbalance / paired",
+   "n_vf": 82,
+   "n_sc": 79,
+   "median_vf": 0.0,
+   "median_sc": 0.0,
+   "auc_vf_gt_sc": 0.5158999691262736,
+   "p_boot": 0.6765,
+   "p_ranksum": 0.6973950201438381,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M4 gap (sig)",
+   "n_vf": 83,
+   "n_sc": 79,
+   "median_vf": 0.7610044049956484,
+   "median_sc": 0.7276444691119727,
+   "auc_vf_gt_sc": 0.5960042702455391,
+   "p_boot": 0.0415,
+   "p_ranksum": 0.03506279531150252,
+   "p_holm": 0.41500000000000004,
+   "pass": false
+  },
+  {
+   "measure": "M5a open above biggest +gamma strike",
+   "n_vf": 54,
+   "n_sc": 48,
+   "median_vf": 0.0,
+   "median_sc": 0.0,
+   "auc_vf_gt_sc": 0.5081018518518519,
+   "p_boot": 0.8654999999999999,
+   "p_ranksum": 0.8415975471605068,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M5b dealer gamma at open >0",
+   "n_vf": 54,
+   "n_sc": 48,
+   "median_vf": 1.0,
+   "median_sc": 1.0,
+   "auc_vf_gt_sc": 0.4513888888888889,
+   "p_boot": 0.1875,
+   "p_ranksum": 0.2025889968596405,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M5c distance to big +gamma support below (sig)",
+   "n_vf": 24,
+   "n_sc": 21,
+   "median_vf": 0.21988464711724032,
+   "median_sc": 0.3110452644175454,
+   "auc_vf_gt_sc": 0.5079365079365079,
+   "p_boot": 0.9275,
+   "p_ranksum": 0.936533318286535,
+   "p_holm": 1.0,
+   "pass": false
+  }
+ ],
+ "T3_all": [
+  {
+   "measure": "M6 first-5m delta %",
+   "n": 271,
+   "rho": 0.39837053026532926,
+   "p": 9.64302520080261e-12,
+   "rho_weighted": 0.2036075412331502,
+   "ci95_date_boot": [
+    0.3139551311417695,
+    0.4758342570874785
+   ],
+   "p_holm": 5.7858151204815665e-11,
+   "pass": true
+  },
+  {
+   "measure": "M7 first-5m book imbalance",
+   "n": 270,
+   "rho": -0.18174604638379147,
+   "p": 0.0027216741258902053,
+   "rho_weighted": -0.0627197423626945,
+   "ci95_date_boot": [
+    -0.26929641593802695,
+    -0.09146772037083246
+   ],
+   "p_holm": 0.013608370629451026,
+   "pass": true
+  },
+  {
+   "measure": "M7b first-5m ask depth $",
+   "n": 270,
+   "rho": 0.14519399880351533,
+   "p": 0.01696910788866246,
+   "rho_weighted": 0.01472714079922222,
+   "ci95_date_boot": [
+    0.04807579528100058,
+    0.23805051448704845
+   ],
+   "p_holm": 0.059169740935098025,
+   "pass": false
+  },
+  {
+   "measure": "M7c first-5m bid depth $",
+   "n": 270,
+   "rho": -0.14820426067192355,
+   "p": 0.014792435233774506,
+   "rho_weighted": -0.11114566248043123,
+   "ci95_date_boot": [
+    -0.24477552634267133,
+    -0.055562651616579625
+   ],
+   "p_holm": 0.059169740935098025,
+   "pass": false
+  },
+  {
+   "measure": "M8 first-5m progress per 1k bought (sig)",
+   "n": 271,
+   "rho": 0.45636367473519357,
+   "p": 2.400147157237228e-15,
+   "rho_weighted": 0.2188062207345789,
+   "ci95_date_boot": [
+    0.37468483905188227,
+    0.5260168833497593
+   ],
+   "p_holm": 1.6801030100660594e-14,
+   "pass": true
+  },
+  {
+   "measure": "M9 first-5m spread bp",
+   "n": 270,
+   "rho": -0.021244370619872277,
+   "p": 0.7282155026251586,
+   "rho_weighted": 0.014905163936509775,
+   "ci95_date_boot": [
+    -0.10401474474337694,
+    0.07064013133848032
+   ],
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M10 first-5m retail-size share",
+   "n": 271,
+   "rho": 0.013522337754016045,
+   "p": 0.8246354495657239,
+   "rho_weighted": -0.027668868115233582,
+   "ci95_date_boot": [
+    -0.07168910289507326,
+    0.10419795081745592
+   ],
+   "p_holm": 1.0,
+   "pass": false
+  }
+ ],
+ "T2_market-wide": [
+  {
+   "measure": "M0 prior 2-day return (sig)",
+   "n_vf": 41,
+   "n_sc": 36,
+   "median_vf": 0.09696964058623742,
+   "median_sc": -0.1204863546381528,
+   "auc_vf_gt_sc": 0.5535230352303523,
+   "p_boot": 0.4015,
+   "p_ranksum": 0.42287826336548817,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M1 premarket drift (last vs high, sig)",
+   "n_vf": 41,
+   "n_sc": 36,
+   "median_vf": -0.1533841401429846,
+   "median_sc": -0.11909702194296651,
+   "auc_vf_gt_sc": 0.38482384823848237,
+   "p_boot": 0.0805,
+   "p_ranksum": 0.08352192873263119,
+   "p_holm": 0.7245,
+   "pass": false
+  },
+  {
+   "measure": "pm_high_min_after_4am",
+   "n_vf": 41,
+   "n_sc": 36,
+   "median_vf": 272.07459309875,
+   "median_sc": 304.55000958094166,
+   "auc_vf_gt_sc": 0.34823848238482386,
+   "p_boot": 0.0195,
+   "p_ranksum": 0.022501121433919774,
+   "p_holm": 0.195,
+   "pass": false
+  },
+  {
+   "measure": "M2a premarket buy share",
+   "n_vf": 41,
+   "n_sc": 36,
+   "median_vf": 0.5174844970600163,
+   "median_sc": 0.5190184582568236,
+   "auc_vf_gt_sc": 0.5420054200542005,
+   "p_boot": 0.5285,
+   "p_ranksum": 0.5300838710959015,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M2b premarket retail-size share",
+   "n_vf": 41,
+   "n_sc": 36,
+   "median_vf": 0.1769755661224147,
+   "median_sc": 0.23829174860599445,
+   "auc_vf_gt_sc": 0.47831978319783197,
+   "p_boot": 0.7444999999999999,
+   "p_ranksum": 0.7477587417856731,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M3 opening imbalance / paired",
+   "n_vf": 41,
+   "n_sc": 36,
+   "median_vf": 0.0,
+   "median_sc": 0.0,
+   "auc_vf_gt_sc": 0.49220867208672087,
+   "p_boot": 0.8795,
+   "p_ranksum": 0.8973530035719623,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M4 gap (sig)",
+   "n_vf": 41,
+   "n_sc": 36,
+   "median_vf": 0.7610044049956484,
+   "median_sc": 0.774826190827497,
+   "auc_vf_gt_sc": 0.6056910569105691,
+   "p_boot": 0.1125,
+   "p_ranksum": 0.1123855480372492,
+   "p_holm": 0.9,
+   "pass": false
+  },
+  {
+   "measure": "M5a open above biggest +gamma strike",
+   "n_vf": 31,
+   "n_sc": 23,
+   "median_vf": 0.0,
+   "median_sc": 0.0,
+   "auc_vf_gt_sc": 0.5638148667601683,
+   "p_boot": 0.2275,
+   "p_ranksum": 0.2592146089540728,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M5b dealer gamma at open >0",
+   "n_vf": 31,
+   "n_sc": 23,
+   "median_vf": 1.0,
+   "median_sc": 1.0,
+   "auc_vf_gt_sc": 0.5014025245441796,
+   "p_boot": 0.9764999999999999,
+   "p_ranksum": 0.990807585270253,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M5c distance to big +gamma support below (sig)",
+   "n_vf": 16,
+   "n_sc": 8,
+   "median_vf": 0.19377286617087625,
+   "median_sc": 0.3440956765485942,
+   "auc_vf_gt_sc": 0.453125,
+   "p_boot": 0.7655,
+   "p_ranksum": 0.741723331035486,
+   "p_holm": 1.0,
+   "pass": false
+  }
+ ],
+ "T3_market-wide": [
+  {
+   "measure": "M6 first-5m delta %",
+   "n": 186,
+   "rho": 0.31109726936054427,
+   "p": 1.546675781714761e-05,
+   "rho_weighted": 0.217231032316963,
+   "ci95_date_boot": [
+    0.2134293978886845,
+    0.40966201171217903
+   ],
+   "p_holm": 9.280054690288567e-05,
+   "pass": true
+  },
+  {
+   "measure": "M7 first-5m book imbalance",
+   "n": 186,
+   "rho": -0.08181627028951646,
+   "p": 0.26692778378512744,
+   "rho_weighted": -0.041576234514454115,
+   "ci95_date_boot": [
+    -0.18875204805659884,
+    0.02905569219941323
+   ],
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M7b first-5m ask depth $",
+   "n": 186,
+   "rho": 0.13013880969680378,
+   "p": 0.07665575514427671,
+   "rho_weighted": 0.06350066967650386,
+   "ci95_date_boot": [
+    0.0006715391410676838,
+    0.246987286695105
+   ],
+   "p_holm": 0.3832787757213835,
+   "pass": false
+  },
+  {
+   "measure": "M7c first-5m bid depth $",
+   "n": 186,
+   "rho": -0.028974128610899385,
+   "p": 0.6946348726399704,
+   "rho_weighted": -0.03317256818552946,
+   "ci95_date_boot": [
+    -0.14164026556954337,
+    0.09417031639191184
+   ],
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M8 first-5m progress per 1k bought (sig)",
+   "n": 186,
+   "rho": 0.4102152149429272,
+   "p": 6.06914668558993e-09,
+   "rho_weighted": 0.2770803688653316,
+   "ci95_date_boot": [
+    0.30738341270478403,
+    0.5158051621265849
+   ],
+   "p_holm": 4.248402679912951e-08,
+   "pass": true
+  },
+  {
+   "measure": "M9 first-5m spread bp",
+   "n": 186,
+   "rho": 0.016479251277328383,
+   "p": 0.8233431995533778,
+   "rho_weighted": 0.032804041709040235,
+   "ci95_date_boot": [
+    -0.09033233379287382,
+    0.12541197671823393
+   ],
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M10 first-5m retail-size share",
+   "n": 186,
+   "rho": -0.03135747983960144,
+   "p": 0.6709237588317681,
+   "rho_weighted": -0.042654539452630966,
+   "ci95_date_boot": [
+    -0.1420517315424009,
+    0.06978339697899234
+   ],
+   "p_holm": 1.0,
+   "pass": false
+  }
+ ],
+ "T2_single-name": [
+  {
+   "measure": "M0 prior 2-day return (sig)",
+   "n_vf": 42,
+   "n_sc": 43,
+   "median_vf": -0.1976595847835323,
+   "median_sc": 0.14208456750492046,
+   "auc_vf_gt_sc": 0.5005537098560354,
+   "p_boot": 0.9964999999999999,
+   "p_ranksum": 0.9964933599219168,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M1 premarket drift (last vs high, sig)",
+   "n_vf": 42,
+   "n_sc": 43,
+   "median_vf": -0.18363232477947505,
+   "median_sc": -0.1795020398566839,
+   "auc_vf_gt_sc": 0.48117386489479513,
+   "p_boot": 0.7284999999999999,
+   "p_ranksum": 0.7684047950601071,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "pm_high_min_after_4am",
+   "n_vf": 42,
+   "n_sc": 43,
+   "median_vf": 275.84985043691665,
+   "median_sc": 296.2871734107,
+   "auc_vf_gt_sc": 0.4778516057585825,
+   "p_boot": 0.7424999999999999,
+   "p_ranksum": 0.7284411287728366,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M2a premarket buy share",
+   "n_vf": 42,
+   "n_sc": 43,
+   "median_vf": 0.4875435002554886,
+   "median_sc": 0.5198376785721665,
+   "auc_vf_gt_sc": 0.47674418604651164,
+   "p_boot": 0.7214999999999999,
+   "p_ranksum": 0.7152758850621181,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M2b premarket retail-size share",
+   "n_vf": 42,
+   "n_sc": 43,
+   "median_vf": 0.3606250763255848,
+   "median_sc": 0.3989612907693373,
+   "auc_vf_gt_sc": 0.45016611295681064,
+   "p_boot": 0.4425,
+   "p_ranksum": 0.4314613122929404,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M3 opening imbalance / paired",
+   "n_vf": 41,
+   "n_sc": 43,
+   "median_vf": 0.0,
+   "median_sc": 0.0,
+   "auc_vf_gt_sc": 0.5467952353942144,
+   "p_boot": 0.4315,
+   "p_ranksum": 0.4191328835673106,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M4 gap (sig)",
+   "n_vf": 42,
+   "n_sc": 43,
+   "median_vf": 0.7645738657181247,
+   "median_sc": 0.7099705253942351,
+   "auc_vf_gt_sc": 0.5841638981173864,
+   "p_boot": 0.1945,
+   "p_ranksum": 0.18297012200790164,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M5a open above biggest +gamma strike",
+   "n_vf": 23,
+   "n_sc": 25,
+   "median_vf": 0.0,
+   "median_sc": 0.0,
+   "auc_vf_gt_sc": 0.44521739130434784,
+   "p_boot": 0.3435,
+   "p_ranksum": 0.3440797013792063,
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M5b dealer gamma at open >0",
+   "n_vf": 23,
+   "n_sc": 25,
+   "median_vf": 1.0,
+   "median_sc": 1.0,
+   "auc_vf_gt_sc": 0.41304347826086957,
+   "p_boot": 0.0285,
+   "p_ranksum": 0.03288324048471702,
+   "p_holm": 0.28500000000000003,
+   "pass": false
+  },
+  {
+   "measure": "M5c distance to big +gamma support below (sig)",
+   "n_vf": 8,
+   "n_sc": 13,
+   "median_vf": 0.3946612300273059,
+   "median_sc": 0.3110452644175454,
+   "auc_vf_gt_sc": 0.625,
+   "p_boot": 0.3695,
+   "p_ranksum": 0.37375792422232057,
+   "p_holm": 1.0,
+   "pass": false
+  }
+ ],
+ "T3_single-name": [
+  {
+   "measure": "M6 first-5m delta %",
+   "n": 194,
+   "rho": 0.2928846464497341,
+   "p": 3.408603303532774e-05,
+   "rho_weighted": 0.18190342134858936,
+   "ci95_date_boot": [
+    0.1957836996971604,
+    0.40149827831880136
+   ],
+   "p_holm": 0.00023860223124729418,
+   "pass": true
+  },
+  {
+   "measure": "M7 first-5m book imbalance",
+   "n": 193,
+   "rho": -0.16455556748477687,
+   "p": 0.02220513995364435,
+   "rho_weighted": -0.0788495399420897,
+   "ci95_date_boot": [
+    -0.26425620840793435,
+    -0.046813568208438495
+   ],
+   "p_holm": 0.0888205598145774,
+   "pass": false
+  },
+  {
+   "measure": "M7b first-5m ask depth $",
+   "n": 193,
+   "rho": 0.023905110716039558,
+   "p": 0.7414073430576829,
+   "rho_weighted": -0.031664661926471875,
+   "ci95_date_boot": [
+    -0.08959318842896026,
+    0.1397367367491602
+   ],
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M7c first-5m bid depth $",
+   "n": 193,
+   "rho": -0.2278167651249257,
+   "p": 0.0014406632881488713,
+   "rho_weighted": -0.17645029130792667,
+   "ci95_date_boot": [
+    -0.3279736521118187,
+    -0.11022886475625421
+   ],
+   "p_holm": 0.007203316440744356,
+   "pass": true
+  },
+  {
+   "measure": "M8 first-5m progress per 1k bought (sig)",
+   "n": 194,
+   "rho": 0.2741280900982149,
+   "p": 0.00010980216027395203,
+   "rho_weighted": 0.15464411706992887,
+   "ci95_date_boot": [
+    0.17133449638128595,
+    0.36947450240026153
+   ],
+   "p_holm": 0.0006588129616437122,
+   "pass": true
+  },
+  {
+   "measure": "M9 first-5m spread bp",
+   "n": 193,
+   "rho": -0.030674928565199742,
+   "p": 0.6719442761089749,
+   "rho_weighted": -0.003528669108619145,
+   "ci95_date_boot": [
+    -0.12674365535958096,
+    0.0776205470932636
+   ],
+   "p_holm": 1.0,
+   "pass": false
+  },
+  {
+   "measure": "M10 first-5m retail-size share",
+   "n": 194,
+   "rho": -0.0020158531690447137,
+   "p": 0.9777449690216943,
+   "rho_weighted": -0.03313801718759331,
+   "ci95_date_boot": [
+    -0.11662476345634194,
+    0.10511659000388487
+   ],
+   "p_holm": 1.0,
+   "pass": false
+  }
+ ]
+}

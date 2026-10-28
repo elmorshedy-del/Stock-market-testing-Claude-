@@ -19,8 +19,9 @@ A["key"] = A.sym + A.date.dt.strftime("%Y%m%d")
 rth = A[A.min_from_open >= 0]
 vol = rth.groupby("key").vol.sum()
 rth = rth.assign(cd=rth.groupby("key").delta.cumsum() / rth.key.map(vol) * 100)
-fig, ax = plt.subplots(2, 3, figsize=(17, 9.5))
-foc = {("TSLA", "2026-10-27"): ("TSLA Oct 27", "-"), ("TSLA", "2020-09-02"): ("TSLA 2020-09-02", ":"), ("AAPL", "2020-09-02"): ("AAPL 2020-09-02", "--")}
+fig, ax = plt.subplots(2, 4, figsize=(23, 10))
+DG = json.load(open(HERE / "out" / "diag.json")); RU = json.load(open(HERE / "out" / "rule.json"))
+foc = {("TSLA", "2026-10-26"): ("TSLA Oct 26 (SC)", "-"), ("AAPL", "2020-09-02"): ("AAPL 2020-09-02 (VF)", "--"), ("QQQ", "2020-09-02"): ("QQQ 2020-09-02 (VF)", ":")}
 
 
 def band(a, df, col, cls, lab=True, pm=False):
@@ -61,6 +62,10 @@ if "imb" in rth:
     ax[1, 0].legend(fontsize=8)
 
 
+for cls in ("VF", "SC"): band(ax[0, 3], rth, "spr_bp", cls)
+ax[0, 3].set(title="Quoted spread (bp), 1-min mean", xlabel="minutes from 09:30"); ax[0, 3].legend(fontsize=8)
+
+
 def bars(a, rows, key, title, xl):
     rows = [r for r in rows if key in r]
     lab = [r["measure"][:44] for r in rows]; v = [r[key] for r in rows]
@@ -72,9 +77,20 @@ def bars(a, rows, key, title, xl):
 
 bars(ax[1, 1], R["T2_all"], "auc_vf_gt_sc", "T2 before the open: VF vs SC (AUC; 0.5 = no separation)\ngreen = passes Holm", "AUC (VF values above SC)")
 ax[1, 1].axvline(0.5, color="k", lw=0.6); ax[1, 1].set_xlim(0.2, 0.8)
-bars(ax[1, 2], R["T3_all"], "rho", "T3 at 09:35: Spearman with the 09:35-10:30 return\n(within-stock ranks; green = passes Holm)", "rho")
-ax[1, 2].axvline(0, color="k", lw=0.6)
+a = ax[1, 2]; rows = R["T3_all"]; yy = np.arange(len(rows))
+a.barh(yy - 0.27, [r["rho"] for r in rows], 0.26, color=["#2ca02c" if r["pass"] else "#bbbbbb" for r in rows], label="pre-registered (green = Holm pass)")
+a.barh(yy, [DG["weighted"][r["measure"]]["rho"] for r in rows], 0.26, color="#8c564b", label="weighted to the population")
+a.barh(yy + 0.27, [DG["weighted_partial_on_first5m_return"][r["measure"]]["rho"] for r in rows], 0.26, color="#17becf", label="weighted, after removing the 5-min price move")
+a.set_yticks(yy); a.set_yticklabels([r["measure"][:40] for r in rows], fontsize=8); a.invert_yaxis(); a.axvline(0, color="k", lw=0.6)
+a.set(title="T3 at 09:35: Spearman with the 09:35-10:30 return\nflow 'passes' only as a proxy for the first 5 minutes' price move", xlabel="rho"); a.legend(fontsize=7, loc="lower right")
+a = ax[1, 3]; tb = RU["table"]; xx = np.arange(len(tb))
+a.bar(xx - 0.2, [100 * r["P(next < 0)"] for r in tb], 0.4, color="#c0392b", label="P(09:35-10:30 down) %")
+a.bar(xx + 0.2, [100 * r["P(next > +0.5 sig)"] for r in tb], 0.4, color="#1f77b4", label="P(up > 0.5 sigma) %")
+for i, r in enumerate(tb):
+    a.text(i, 62, f"mean {r['mean next (sig)']:+.2f}σ\nn={r['n']}", ha="center", fontsize=8)
+a.set_xticks(xx); a.set_xticklabels([r["first 5 min (sig)"] for r in tb]); a.axhline(50, color="k", lw=0.5, ls=":")
+a.set_ylim(0, 72); a.set(title="First 5 minutes vs the next 55 (exploratory)\nall gap-ups ≥ 0.5σ, weighted", xlabel="09:30-09:35 move (sigma)", ylabel="%"); a.legend(fontsize=8)
 n = R["n"]
-fig.suptitle(f"Gap-up opens, TSLA / AAPL / NVDA / QQQ 2018-2026 (Nasdaq trades + book): violent fade (VF) vs violent continuation (SC). Sample: {n}", fontsize=12)
+fig.suptitle(f"Gap-up opens ≥ 0.5σ, TSLA / AAPL / NVDA / QQQ 2018-2026, Nasdaq trades + 10-level book: violent fade (VF, n={n['VF']}) vs violent continuation (SC, n={n['SC']}); middle n={n['mid']}", fontsize=12)
 fig.tight_layout(); fig.savefig(HERE / "out" / "gap_teardown.png", dpi=130)
 print("saved")

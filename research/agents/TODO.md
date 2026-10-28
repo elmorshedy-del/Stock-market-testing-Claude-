@@ -26,7 +26,7 @@ Every test is pre-registered in its own folder before it runs.
 
 - [ ] **D3. Closing-auction imbalances.** Use NYSE/Nasdaq imbalance messages (Databento imbalance schema). Does the 15:50 published imbalance explain the last-10-minute move, and does it interact with the 0DTE map? Oct 27's drop began at 15:50.
 
-- [ ] **D5. Opening cross and first-30-minute flow.** Nasdaq opening imbalance (`imbalance` schema, auction type O) and TSLA aggressor flow in the first 30 minutes on gap days: buying exhaustion vs active selling. About $0.05 a day.
+- [x] **D5. Opening cross and first-30-minute flow.** Done: [gap-teardown](2026-10-28-gap-teardown/), INDEX 2026-10-28 (opening cross balanced, flow adds nothing beyond the 5-min price move). Nasdaq opening imbalance (`imbalance` schema, auction type O) and TSLA aggressor flow in the first 30 minutes on gap days: buying exhaustion vs active selling. About $0.05 a day.
 - [ ] **T4. Call profit-taking at the open.** Near-money call OI change (next-morning OI) plus signed option trades on gap days: do customers selling calls force dealers to sell stock hedges? (ThetaData Standard.)
 
 ### Sierra Chart Package 11 or 12 + Denali CME feed (about $57–67/mo)
@@ -57,7 +57,14 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **R3. TSLA R7 (S&P vol crush):** 82% up-burst (11 events, raw p 0.02, about 0.2 after correction). REPORT §4l.
 - [ ] **R4. SPCX–TSLA lead-lag:** retest around Feb 2027. [spcx-tsla-lead-lag](2026-10-16-spcx-tsla-lead-lag/).
 
+## Gap-teardown follow-ups (2026-10-28)
+- [ ] **G1. TSLA Oct 28 on Databento** (publishes about Oct 29): trades, book and cross; place on the T1/T3 distributions. About $0.2.
+- [ ] **G2. The other 9 names** (AMD, META as FB before 2022-06-09, MSFT, AMZN, GOOGL, AVGO, NFLX, MU, ORCL with no Nasdaq cross). Labels already fetched for about 170 dates. About $40+ for the book pull.
+- [ ] **G3. "Depth builds behind the move"** as a pre-registered test: do offers stacking above a falling price within 30 minutes cap rebounds (and bids under a rising one stop pullbacks)?
+- [ ] **G4. Hidden selling at the high:** MBO executions vs displayed size (iceberg refills) at the first-hour high on VF days vs SC days. Needs mbo, about $0.3 an event.
+
 ## Live forward checks (calls already made)
+- [ ] **F6. First-5-minute table** (gap-teardown, exploratory): log every TSLA/NVDA/AAPL/QQQ gap-up ≥ 0.5σ from Oct 29: the 09:30–09:35 bin and the 09:35–10:30 outcome.
 - [ ] **F1. Channel call:** the S&P makes a new high above 7,818.93 before closing at or below 7,427.98 ([channel-correction-theory](2026-10-25-channel-correction-theory/)).
 - [ ] **F2. S&P ladder:** whether an up-leg starts within 20 sessions of R2 turning on (Oct 20). History: 78% since 2019Q4, 64% since 2012. Watch R4/R5 (S&P ≤ 7,602 with GEX ≤ 20th) and R6/R7 (VIX ≤ 16.5 / ≤ 14.6 from Oct 30).
 - [ ] **F3. TSLA "freed only" state after the Oct 30 expiry** (near-price OI at the 0.4th percentile): do bigger moves follow (20% up / 23% down within 3 sessions historically)? Is $400 the lid and $389 the support?
