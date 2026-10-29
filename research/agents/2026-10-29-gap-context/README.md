@@ -14,6 +14,46 @@
   * The dealer and market regime.
 * **Everything below is fixed before any context variable is joined to an outcome.**
 
+## Amendment 1, fragility (owner: "what led to the vulnerability… was there an underlying structural weakness"; written before any test was run or any context was joined to an outcome)
+* **Idea:**
+  * The calendar and news contexts (C1–C12) are the *trigger*. Fragility is the *loaded spring*: a state built over days that raises how far price moves per unit of selling.
+  * In physics terms, the susceptibility of the system.
+  * Each measure uses only the sessions before D.
+* **Family F, Holm across these 7**, same outcome handling and date-block bootstrap as C1–C12:
+  * **F1, clientele tug-of-war** (Lou-Polk-Skouras 2019):
+    * Over the prior 20 sessions, Σ overnight log returns − Σ intraday log returns, in σ√20, top tercile within stock.
+    * Mechanism: overnight buyers keep lifting the opens and intraday sellers keep selling them, a persistent supply waiting at the open.
+    * Prediction: Y1 lower.
+  * **F2, thinning liquidity:**
+    * Amihud illiquidity (|return| / $ volume), 5-day mean over 60-day mean, top tercile.
+    * Mechanism: the same flow moves price further.
+    * Prediction: Y2 larger.
+  * **F3, air pocket below** (the owner's original "pocket underneath"):
+    * The share of the prior 20 sessions' volume (each day's volume spread evenly over its range) that traded within 1σ below the open, bottom tercile.
+    * Mechanism: few resting interests and little memory of value below.
+    * Prediction: Y1 lower.
+  * **F4, no dealer cushion** ("freed"):
+    * The near-price OI share (±5% of the prior close, expiries ≤ 45 days, over all OI ≤ 120 days), bottom tercile within stock.
+    * Prediction: Y2 larger. TSLA, NVDA, QQQ.
+  * **F5, fresh call crowding:**
+    * The 5-session change in call OI struck from the prior close to +10%, expiries ≤ 45 days, top tercile.
+    * Mechanism: when the gap lets new call holders take profit, the dealers' hedges unwind as stock sales.
+    * Prediction: Y1 lower. TSLA, NVDA, QQQ.
+  * **F6, off-exchange short share** (FINRA daily, 5-session):
+    * Top tercile.
+    * Mechanism: wholesalers short-selling into customer buying (the SqueezeMetrics reading: demand absorbed).
+    * Prediction: Y1 higher.
+  * **F7, narrow market:**
+    * The share of the ~50-stock panel above its 50-day average in the bottom tercile while QQQ is within 3% of its 252-day high.
+    * Mechanism: leadership is thin, so index gains rest on few names.
+    * Prediction: Y1 lower.
+* **Not in this run (needs a Databento quote and the owner's OK):**
+  * the microstructure precursors over the 3 sessions before each sampled gap;
+  * the Hawkes branching ratio drifting toward 1 (criticality, Filimonov-Sornette);
+  * Kyle's λ rising;
+  * lit depth shrinking;
+  * closing-auction sell imbalances (distribution into the close).
+
 ## Events and outcomes
 * **Events:** the 1,512 labeled gap-ups (gap ≥ 0.5σ) in TSLA, AAPL, NVDA and QQQ, May 2018 – Oct 27 2026, from the gap teardown: 196 VF, 203 SC, 1,113 middle. Labels and bars are unchanged.
 * **Y1, the first hour's direction:** the 09:30 open → 10:30 (close of the 10:29 bar) return, in σ (Nasdaq 1-minute bars).
