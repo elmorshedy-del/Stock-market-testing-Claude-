@@ -1,0 +1,21 @@
+# What the owner is trying to get at (keep in view for every study)
+
+*Started 2026-10-29. Add to it; don't rewrite it.*
+
+## The goal
+* **Better exits on short-term calls.** The same position kept most of its profit or gave back half or more, depending on a day (or an hour) of exit timing. Sept 2, 2020: exiting at the open vs at the close was the difference.
+* **Rules, not hand-drawn lines.**
+  * Support and resistance are real ideas (our work agrees: highs and lows cluster at round numbers and gamma walls; the pre-open flip stalls price).
+  * Manual line placement and day-early or day-late calls are what fail.
+  * Exits should key off mechanical levels and the *state of the flow*.
+* **Every test should help a trade, directly or by explaining the mechanics.** Statistics is the referee, not the source of ideas.
+
+## The owner's thesis: "house of cards" (stated 2026-10-29, after the gap studies)
+* **What drives it:** some rallies, including the days into a gap-up like Sept 2, 2020, are not lasting price discovery. They are forced inflows, for example dealers hedging customer call buying, rising in a relative liquidity vacuum.
+* **How it ends:** at exhaustion the move collapses as fast as it was built, because nothing genuine was holding it.
+* **Prediction:** the more forced the run-up, the more violent and quicker the unwind, and the more an exit at the open beats holding.
+* **First evidence (descriptive, 2026-10-29):** in the 10 sessions to Sept 1, 2020, the S&P rose +4.0% while VIX also rose +4.6 points. That combination (S&P 10-day ≥ +2% with VIX up) occurs on 3.7% of days since 1990. Spot up with vol up is the footprint of paying up for upside convexity.
+* **Related results already in hand:**
+  * forced-flow law: moves on low dealer-gamma days are given back;
+  * month-end and Russell moves are given back;
+  * earnings-morning gap-ups fade (a scheduled forced flow at the open).
