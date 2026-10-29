@@ -36,7 +36,7 @@ def one(r):
         near = oi[(oi.cp == "C") & (oi.expiration >= D) & (oi.expiration <= lim)]
         if len(near):
             k = near.groupby("strike")[oc].sum(); K = float(k.idxmax())
-            out["near_call_wall"] = K; out["near_call_oi"] = float(k.max())
+            out["near_call_wall"] = K   # the OI count itself is licensed data and is not saved
             out["C1_pin"] = int(S > K and (S - K) / S / r["sig"] <= 1.5)
         else:
             out["C1_pin"] = 0
