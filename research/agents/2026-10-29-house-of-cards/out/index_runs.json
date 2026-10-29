@@ -1,0 +1,132 @@
+{
+ "tests": {
+  "H1 S&P give-back, forced minus genuine (fraction of run, VIX-stratified)": {
+   "est": 0.08085036130176401,
+   "ci95": [
+    -0.19240563389869,
+    0.5226765037607127
+   ],
+   "p": 0.42669999999999997,
+   "threshold_10d_pct": 3.6191539763234957
+  },
+  "H2 S&P cliff (gave back >= 50% within 10 sessions), forced minus genuine": {
+   "est": 2.616431187858774e-05,
+   "ci95": [
+    -0.20833575102842022,
+    0.4791936780311128
+   ],
+   "p": 0.7315
+  },
+  "H3 Nasdaq-100 give-back, forced minus genuine (VXN-stratified)": {
+   "est": 0.07862539596055831,
+   "ci95": [
+    -0.27747142992343204,
+    0.4134531043316992
+   ],
+   "p": 0.6213621362136214,
+   "threshold_10d_pct": 5.06380875076324
+  }
+ },
+ "describe_spx": {
+  "genuine": {
+   "n": 170,
+   "run_pct": 4.943419134550341,
+   "giveback_mean": 0.374430357812144,
+   "giveback_median": 0.23236288828873225,
+   "cliff_rate": 0.2647058823529412,
+   "t50_median_censored11": 11.0,
+   "next10_pct": 0.07758223853787935
+  },
+  "forced": {
+   "n": 12,
+   "run_pct": 4.914221926732623,
+   "giveback_mean": 0.4382631981594884,
+   "giveback_median": 0.3266340365222303,
+   "cliff_rate": 0.3333333333333333,
+   "t50_median_censored11": 11.0,
+   "next10_pct": 0.09810303720398099
+  }
+ },
+ "describe_ndx": {
+  "genuine": {
+   "n": 119,
+   "run_pct": 6.569645361657368,
+   "giveback_mean": 0.3869055731333781,
+   "giveback_median": 0.23129214689669983,
+   "cliff_rate": 0.2857142857142857,
+   "t50_median_censored11": 11.0,
+   "next10_pct": 0.3843716501294372
+  },
+  "forced": {
+   "n": 9,
+   "run_pct": 6.733880892893978,
+   "giveback_mean": 0.4600852907460722,
+   "giveback_median": 0.557323053732166,
+   "cliff_rate": 0.5555555555555556,
+   "t50_median_censored11": 10.0,
+   "next10_pct": -0.06452783087659286
+  }
+ },
+ "by_stratum_spx": {
+  "low": {
+   "genuine": {
+    "n": 54,
+    "run_pct": 4.192425393710857,
+    "giveback_mean": 0.23002989147451014,
+    "giveback_median": 0.13240296061805476,
+    "cliff_rate": 0.16666666666666666,
+    "t50_median_censored11": 11.0,
+    "next10_pct": 0.45257782242552164
+   },
+   "forced": {
+    "n": 7,
+    "run_pct": 4.919682767807568,
+    "giveback_mean": 0.32637424394001646,
+    "giveback_median": 0.2669418328490771,
+    "cliff_rate": 0.2857142857142857,
+    "t50_median_censored11": 11.0,
+    "next10_pct": 0.9147649631058946
+   }
+  },
+  "mid": {
+   "genuine": {
+    "n": 56,
+    "run_pct": 4.6510237836828,
+    "giveback_mean": 0.2849093383499766,
+    "giveback_median": 0.22921779738940445,
+    "cliff_rate": 0.21428571428571427,
+    "t50_median_censored11": 11.0,
+    "next10_pct": 0.4174048948530234
+   },
+   "forced": {
+    "n": 4,
+    "run_pct": 5.161431051673727,
+    "giveback_mean": 0.6502715807770565,
+    "giveback_median": 0.7534300617920223,
+    "cliff_rate": 0.5,
+    "t50_median_censored11": 8.0,
+    "next10_pct": -1.4408942960985605
+   }
+  },
+  "high": {
+   "genuine": {
+    "n": 60,
+    "run_pct": 5.892215828782247,
+    "giveback_mean": 0.5879437290140375,
+    "giveback_median": 0.39192442083261875,
+    "cliff_rate": 0.4,
+    "t50_median_censored11": 11.0,
+    "next10_pct": -0.5770815995217998
+   },
+   "forced": {
+    "n": 1,
+    "run_pct": 3.8871595394435854,
+    "giveback_mean": 0.37345234722551895,
+    "giveback_median": 0.37345234722551895,
+    "cliff_rate": 0.0,
+    "t50_median_censored11": 11.0,
+    "next10_pct": 0.5374588891007503
+   }
+  }
+ }
+}

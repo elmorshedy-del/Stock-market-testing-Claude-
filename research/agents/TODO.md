@@ -73,6 +73,11 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **K2. Earnings-fade mechanism, round 2:** after-hours headline overshoot vs the conference call (after-hours price at 16:30 vs 18:00 vs the open), and pre-report positioning (the B5 close drift) as the predictor.
 - [ ] **K3. GEX roll-off dose** (A7, Holm 0.10): re-test forward on 2026–27 expiries, and with SPY's own expiring-gamma share.
 
+## House-of-cards follow-ups (2026-10-29)
+- [ ] **HC1. Forward log:** for every gap-up in the 5 chain names, record the forced/genuine signature at the prior close and the open→close outcome. This is the out-of-sample check of the exit tilt.
+- [ ] **HC2. Market-level signature for all 13 names** (VIX/VXN instead of own IV, much larger n). Pre-register before running.
+- [ ] **HC3. Earnings morning × forced run:** do the two fade mechanisms stack?
+
 ## Live forward checks (calls already made)
 - [ ] **F6. First-5-minute table** (gap-teardown, exploratory): log every TSLA/NVDA/AAPL/QQQ gap-up ≥ 0.5σ from Oct 29: the 09:30–09:35 bin and the 09:35–10:30 outcome.
 - [ ] **F1. Channel call:** the S&P makes a new high above 7,818.93 before closing at or below 7,427.98 ([channel-correction-theory](2026-10-25-channel-correction-theory/)).

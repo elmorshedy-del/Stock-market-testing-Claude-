@@ -19,3 +19,11 @@
   * forced-flow law: moves on low dealer-gamma days are given back;
   * month-end and Russell moves are given back;
   * earnings-morning gap-ups fade (a scheduled forced flow at the open).
+
+## Tested so far
+* **[house-of-cards](2026-10-29-house-of-cards/), 2026-10-29:** the thesis leans the right way but is not proven (Holm 0.20 at best).
+  * After a forced run (price and implied vol both up for 10 sessions), a 7-day call held from the gap's open to the close has a median of −2.8% vs +3.7% after a genuine run.
+  * Violent fades: 18% vs 13%.
+  * Forced index rallies give back half more often (Nasdaq-100 56% vs 29%) but are rare.
+  * **Exit tilt:** after a forced run, sell into the open; after a genuine run (vol falling), holding is favoured. Forward-check before sizing.
+* **[calendar-mechanics](2026-10-29-calendar-mechanics/), 2026-10-29:** earnings-morning gap-ups are violent fades about 1 in 4 times vs about 1 in 7 (confirmed out of sample, Holm 0.031). Exit or protect calls at the open on earnings mornings.

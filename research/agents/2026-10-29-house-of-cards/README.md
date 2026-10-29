@@ -46,3 +46,47 @@
 * VIX measures index options; single-name implied vol is from end-of-day quotes, so it is noisy.
 * A rising implied vol can also mean fear of a fall (put buying), not call demand. The signature cannot separate the two; the call-volume measure (H6) is the partial check.
 * Single-name tests cover 2020 onward only.
+
+---
+
+# Results (written after the run; pre-registered @ bab7db6)
+
+**Deviation:** for H6, windows spanning a stock split were dropped, because option contract counts jump at a split and Yahoo share volume is split-adjusted.
+
+## Tests (Holm across H1–H6: nothing passes; lowest Holm p 0.20)
+| | n (forced / genuine) | forced minus genuine [95% CI] | raw p | Holm |
+|---|---|---|---|---|
+| H1 S&P give-back (fraction of run, VIX-stratified) | 12 / 170 | +0.08 [−0.19, +0.52] | 0.43 | 1.0 |
+| H2 S&P cliff (≥ 50% given back in 10 sessions) | 12 / 170 | +0.00 [−0.21, +0.48] | 0.73 | 1.0 |
+| H3 Nasdaq-100 give-back (VXN-stratified) | 9 / 119 | +0.08 [−0.28, +0.41] | 0.62 | 1.0 |
+| H4 gap-up after a forced run, open → 10:30 (σ) | 429 / 1,138 | −0.05 [−0.12, +0.03] | 0.20 | 1.0 |
+| **H5 gap-up after a forced run, open → close (σ)** | 429 / 1,138 | **−0.13 [−0.25, −0.01]** | **0.033** | 0.20 |
+| H6 gap-up after an options-led run, open → close (σ) | 487 / 970 | +0.01 [−0.12, +0.13] | 0.92 | 1.0 |
+
+## Descriptive
+* **Index runs** (top-decile 10-day rallies):
+  * Forced runs are rare: 12 of 182 S&P runs, 9 of 128 Nasdaq-100 runs.
+  * Share giving back half within 10 sessions: S&P 33% forced vs 26% genuine; Nasdaq-100 **56% vs 29%**. Median give-back on the Nasdaq-100: 0.56 vs 0.23 of the run.
+  * The median forced path sags to 0.86 of the run by session 5, while the genuine path keeps rising (about 1.08).
+  * **Aug 28, 2020 was a forced S&P run:** it gave back 130% of the run, half of it within 5 sessions.
+* **Gap-ups:**
+  * Forced runs precede 27% of gap-ups.
+  * Gap day open → close: median −0.04% vs +0.19%. Violent first hour **18% vs 13%**.
+* **The exit in option terms** (7-day ATM call bought at the open, marked at the close, prior-close IV held constant):
+  * Median **−2.8%** after a forced run vs **+3.7%** after a genuine run.
+  * A loss of 25% or more: 30% vs 25%.
+  * Sept 2, 2020: NVDA (forced run, VF) −39%; QQQ (forced, VF) −7%; MU (forced, but SC) +60%.
+* **Current state:**
+  * TSLA's 10 sessions to Oct 27: +8.6% with its 30-day ATM implied vol **down** 4.5 points (0.425 → 0.380). A genuine run by this signature.
+  * S&P Oct 13–27: −1.1% with VIX +2.2, which is not a rally.
+
+## Verdict
+* **The owner's thesis points the right way, but it is not proven.**
+  * Every forced-vs-genuine contrast leans as predicted except H6: index give-backs, cliffs, gap-day open→close, the violent-fade rate and the option P&L.
+  * Only the gap-day open→close is individually significant (raw p 0.03), and nothing survives Holm.
+  * At the index level forced rallies are too rare (21 events in 35 years) to settle it.
+* **For exits, the practical reading:**
+  * After a run where price and implied vol rose together, the edge in holding a short-dated call from the gap's open to the close disappears: median −2.8% vs +3.7%.
+  * Selling into the open is favoured there; after a genuine run (vol falling), holding is.
+  * This is a tilt, not a rule. Treat it as a forward check before sizing on it.
+* **Options-led volume** (call volume up relative to shares) did not separate anything; implied vol carried what signal there was.
