@@ -140,3 +140,56 @@ Each hypothesis names a mechanism and a direction. The test is the difference in
 * Four symbols, so context cells are small. A real but modest effect (about 0.1σ) may not pass Holm across 12.
 * The 9 parked names can be labeled for about $0.2 to re-test.
 * C1, C11 and the AAPL options gaps: chains for TSLA/NVDA/QQQ only.
+
+---
+
+# Results (written after the run; the hypotheses above were pushed at 1696818 and 0ac6f73 before any test ran)
+
+**Data and deviations:**
+* 1,512 events (196 VF, 203 SC, 1,113 middle). Option-chain contexts cover 963 TSLA/NVDA/QQQ events. FINRA files start 2018-11 (earlier days return 403), so F6 has n = 1,430. The breadth panel has 43 names.
+* C1's "next 3 trading days" used weekdays, so holiday weeks are off by a day.
+* The F2 unit check and the earnings list are post hoc and labelled exploratory.
+
+## Trigger family C1–C12: nothing passes (Holm p ≥ 0.46)
+| | n | first-hour effect (σ) [95% CI] | raw p | VF rate in context vs rest | SC rate |
+|---|---|---|---|---|---|
+| C1 above a near-expiry call wall | 135 | −0.07 [−0.19, +0.03] | 0.19 | 15% vs 13% | **7% vs 13%** |
+| C2 week after monthly expiry (range) | 329 | +0.04 [−0.03, +0.12] | 0.24 | 16% vs 14% | 16% vs 14% |
+| C3 turn of the month | 320 | +0.02 [−0.08, +0.12] | 0.64 | 13% vs 13% | 14% vs 13% |
+| C4 month-end rebalance (ρ) | 289 | −0.06 [−0.21, +0.10] | 0.47 | | |
+| C5 extended | 506 | +0.04 [−0.03, +0.11] (opposite) | 0.30 | 14% vs 13% | 15% vs 13% |
+| C6 breakout from a quiet base | 104 | +0.00 [−0.12, +0.13] | 0.97 | 13% vs 13% | 14% vs 13% |
+| **C7 earnings-reaction gap** | 48 | **−0.31 [−0.62, −0.02] (opposite)** | **0.04** | **27% vs 12%** | 15% vs 16% |
+| C8 CPI / jobs / day after FOMC | 250 | −0.06 [−0.17, +0.05] (opposite) | 0.32 | 14% vs 13% | 13% vs 14% |
+| C9 mostly the stock's own gap | 354 | +0.08 [−0.01, +0.17] (opposite) | 0.08 | 16% vs 12% | **22% vs 13%** |
+| C10 market long gamma (range) | 494 | +0.03 [−0.03, +0.09] (opposite) | 0.31 | 12% vs 11% | 15% vs 11% |
+| C11 own-dealer hedge pressure (ρ) | 963 | −0.04 [−0.11, +0.03] | 0.29 | | |
+| C12 buyback blackout (AAPL, NVDA) | 344 | −0.01 [−0.10, +0.08] | 0.82 | 11% vs 12% | 17% vs 15% |
+
+* **C12 placebo** (TSLA, no buybacks): +0.05, p 0.50.
+* **C12 without earnings days:** +0.02, p 0.69.
+
+## Fragility family F1–F7: one Holm pass, and it is a units artifact
+| | n | effect (σ) [95% CI] | raw p | VF | SC |
+|---|---|---|---|---|---|
+| F1 overnight-up / intraday-down regime | 506 | −0.05 [−0.12, +0.01] | 0.13 | 13% vs 13% | 11% vs 15% |
+| F2 thinning liquidity (range) | 506 | −0.10 [−0.14, −0.05] (opposite) | 0.0002, **Holm 0.0014** | 13% vs 13% | 9% vs 16% |
+| F3 air pocket below the open | 502 | −0.01 [−0.08, +0.06] | 0.75 | 15% vs 12% | 13% vs 13% |
+| F4 no dealer cushion (range) | 320 | −0.00 [−0.06, +0.05] | 0.85 | 13% vs 14% | 12% vs 13% |
+| F5 fresh call OI above price | 321 | +0.06 [−0.02, +0.15] (opposite) | 0.15 | 13% vs 14% | 15% vs 11% |
+| F6 high off-exchange short share | 478 | +0.01 [−0.05, +0.08] | 0.75 | 12% vs 13% | 13% vs 13% |
+| F7 narrow market near the QQQ high | 54 | +0.02 [−0.27, +0.27] | 0.91 | 15% vs 13% | 15% vs 13% |
+
+* **F2 is not a finding.**
+  * Measured in % of price, the first-hour range is *larger* after liquidity thins (+0.27%, the predicted direction).
+  * Measured in σ it is smaller, because the recent big moves that raise Amihud also inflate the 20-day σ the outcome is scaled by. A result that flips sign with the unit is reported and not used.
+
+## What it means
+* **Context barely shifts the odds.** On these four names, the slow, scheduled context (expiries, month-turn and rebalancing flows, macro mornings, trend position, buyback windows, market gamma) and the multi-day fragility measures move the VF and SC odds by a few points at most. That is beneath what 1,512 events can resolve, roughly 0.1σ.
+* **The fork is made at the open.** With the gap teardown, this says the fade-vs-continuation fork is decided by the flow that arrives at 09:30, not by what kind of day it is.
+* **Lead 1: earnings mornings.**
+  * Earnings-reaction gap-ups are violent fades 27% of the time vs 12%: 13 of 48, and in each stock (AAPL 4/18, NVDA 5/15, TSLA 4/15).
+  * This is the opposite of the "information gaps continue" prediction.
+  * It is the one day a large, scheduled options position meets the open: implied vol collapses at 09:30, call holders sell, and dealer hedges unwind. Testable next (TODO E1).
+* **Lead 2, a near-expiry call wall below the open:** continuations halve (7% vs 13%), but fades barely rise. Dealer hedging caps the run rather than forcing the fade.
+* **Lead 3, a gap that is mostly the stock's own move:** more violent both ways (VF 16%, SC 22%).

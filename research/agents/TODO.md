@@ -63,6 +63,11 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **G3. "Depth builds behind the move"** as a pre-registered test: do offers stacking above a falling price within 30 minutes cap rebounds (and bids under a rising one stop pullbacks)?
 - [ ] **G4. Hidden selling at the high:** MBO executions vs displayed size (iceberg refills) at the first-hour high on VF days vs SC days. Needs mbo, about $0.3 an event.
 
+## Gap-context follow-ups (2026-10-29)
+- [ ] **E1. Earnings-morning fade mechanism:** the IV drop across the report (EOD chains) × pre-report call OI near the price vs the first-hour fade. TSLA/NVDA in hand (small n). OPRA signed flow at 09:30 on earnings mornings (Databento quote first) doubles as gap-teardown H4.
+- [ ] **E2. Re-run C/F on all 13 names** (labels about $0.2) to triple n. Pre-register C7 (earnings fade) and C1 (wall caps continuation) as directional confirmations.
+- [ ] **E3. Microstructure precursors** (Amendment 1): Hawkes branching, Kyle lambda, depth and closing imbalances over the 3 sessions before each sampled gap. Databento quote first.
+
 ## Live forward checks (calls already made)
 - [ ] **F6. First-5-minute table** (gap-teardown, exploratory): log every TSLA/NVDA/AAPL/QQQ gap-up ≥ 0.5σ from Oct 29: the 09:30–09:35 bin and the 09:35–10:30 outcome.
 - [ ] **F1. Channel call:** the S&P makes a new high above 7,818.93 before closing at or below 7,427.98 ([channel-correction-theory](2026-10-25-channel-correction-theory/)).

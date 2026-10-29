@@ -53,7 +53,10 @@ def one(r):
 
 
 if __name__ == "__main__":
-    with Pool(3) as p:
-        res = [x for x in p.map(one, EV.to_dict(orient="records"), chunksize=8) if x]
+    res = []   # single process: the forked pool hung (no CPU, no output) on the first run
+    for i, rec in enumerate(EV.sort_values(["sym", "date"]).to_dict(orient="records")):
+        x = one(rec)
+        if x: res.append(x)
+        if i % 100 == 0: print("progress", i, "of", len(EV), flush=True)
     O = pd.DataFrame(res); O.to_csv(HERE / "out" / "options_ctx.csv", index=False)
     print(len(O), "of", len(EV), "events; C1 =1:", int(O.C1_pin.sum()), "; pressure quantiles", O.C11_pressure.quantile([.1, .5, .9]).round(4).to_dict())

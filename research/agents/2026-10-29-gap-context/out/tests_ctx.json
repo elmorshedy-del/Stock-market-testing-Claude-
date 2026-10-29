@@ -1,0 +1,361 @@
+{
+ "family": {
+  "C1 pin pull (Y1, -)": {
+   "n_context": 135,
+   "n_rest": 828,
+   "estimate": -0.07341430934289815,
+   "ci95": [
+    -0.18637360267898756,
+    0.034522462614640766
+   ],
+   "p": 0.19060000000000002,
+   "vf_rate_context": 0.14814814814814814,
+   "vf_rate_rest": 0.13285024154589373,
+   "sc_rate_context": 0.07407407407407407,
+   "sc_rate_rest": 0.13405797101449277,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": -1,
+   "sign_as_predicted": true
+  },
+  "C2 gamma release: 5 days after vs 5 up to monthly expiry (Y2, +)": {
+   "n_context": 329,
+   "n_rest": 333,
+   "estimate": 0.044726444241267,
+   "ci95": [
+    -0.030729499249277724,
+    0.11707912063315894
+   ],
+   "p": 0.243,
+   "vf_rate_context": 0.16109422492401215,
+   "vf_rate_rest": 0.13813813813813813,
+   "sc_rate_context": 0.15501519756838905,
+   "sc_rate_rest": 0.14414414414414414,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": 1,
+   "sign_as_predicted": true
+  },
+  "C3 turn of month (Y1, +)": {
+   "n_context": 320,
+   "n_rest": 1192,
+   "estimate": 0.024121224152515223,
+   "ci95": [
+    -0.07526540559550544,
+    0.11828466589930346
+   ],
+   "p": 0.635,
+   "vf_rate_context": 0.134375,
+   "vf_rate_rest": 0.12835570469798657,
+   "sc_rate_context": 0.14375,
+   "sc_rate_rest": 0.13171140939597314,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": 1,
+   "sign_as_predicted": true
+  },
+  "C4 month-end rebalance: MTD SPY-TLT vs Y1, last 4 days (rho, -)": {
+   "n": 289,
+   "estimate": -0.058711507767703466,
+   "ci95": [
+    -0.214364604998904,
+    0.09656313579695434
+   ],
+   "p": 0.47259999999999996,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": -1,
+   "sign_as_predicted": true
+  },
+  "C5 extended, top tercile vs 20-day mean (Y1, -)": {
+   "n_context": 506,
+   "n_rest": 1006,
+   "estimate": 0.03993487362297425,
+   "ci95": [
+    -0.03487045977353841,
+    0.11258771645411386
+   ],
+   "p": 0.30179999999999996,
+   "vf_rate_context": 0.1383399209486166,
+   "vf_rate_rest": 0.12524850894632206,
+   "sc_rate_context": 0.15019762845849802,
+   "sc_rate_rest": 0.12624254473161034,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": -1,
+   "sign_as_predicted": false
+  },
+  "C6 breakout from a base (Y1, +)": {
+   "n_context": 104,
+   "n_rest": 1408,
+   "estimate": 0.002685066042508571,
+   "ci95": [
+    -0.11693110726048919,
+    0.12647208480628225
+   ],
+   "p": 0.9658,
+   "vf_rate_context": 0.125,
+   "vf_rate_rest": 0.1299715909090909,
+   "sc_rate_context": 0.14423076923076922,
+   "sc_rate_rest": 0.13352272727272727,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": 1,
+   "sign_as_predicted": true
+  },
+  "C7 own earnings reaction (Y1, +)": {
+   "n_context": 48,
+   "n_rest": 1009,
+   "estimate": -0.3124495199574314,
+   "ci95": [
+    -0.6232877054441237,
+    -0.016907000360100954
+   ],
+   "p": 0.038599999999999995,
+   "vf_rate_context": 0.2708333333333333,
+   "vf_rate_rest": 0.12190287413280476,
+   "sc_rate_context": 0.14583333333333334,
+   "sc_rate_rest": 0.1595639246778989,
+   "p_holm": 0.46319999999999995,
+   "pass": false,
+   "predicted_sign": 1,
+   "sign_as_predicted": false
+  },
+  "C8 CPI / jobs / post-FOMC (Y1, +)": {
+   "n_context": 250,
+   "n_rest": 1262,
+   "estimate": -0.05542359908093902,
+   "ci95": [
+    -0.16754025019130697,
+    0.0539852262382763
+   ],
+   "p": 0.31899999999999995,
+   "vf_rate_context": 0.14,
+   "vf_rate_rest": 0.12757527733755944,
+   "sc_rate_context": 0.128,
+   "sc_rate_rest": 0.13549920760697307,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": 1,
+   "sign_as_predicted": false
+  },
+  "C9 own (idiosyncratic) gap, top tercile (Y1, -)": {
+   "n_context": 354,
+   "n_rest": 703,
+   "estimate": 0.0813520239157943,
+   "ci95": [
+    -0.007151886600246908,
+    0.17162541632360667
+   ],
+   "p": 0.077,
+   "vf_rate_context": 0.1553672316384181,
+   "vf_rate_rest": 0.11522048364153627,
+   "sc_rate_context": 0.22033898305084745,
+   "sc_rate_rest": 0.12802275960170698,
+   "p_holm": 0.847,
+   "pass": false,
+   "predicted_sign": -1,
+   "sign_as_predicted": false
+  },
+  "C10 market GEX top vs bottom tercile (Y2, -)": {
+   "n_context": 494,
+   "n_rest": 541,
+   "estimate": 0.030526305500528546,
+   "ci95": [
+    -0.028398726745130082,
+    0.08741859892946686
+   ],
+   "p": 0.30779999999999996,
+   "vf_rate_context": 0.12348178137651822,
+   "vf_rate_rest": 0.11460258780036968,
+   "sc_rate_context": 0.14979757085020243,
+   "sc_rate_rest": 0.11090573012939002,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": -1,
+   "sign_as_predicted": false
+  },
+  "C11 own-dealer hedge pressure vs Y1 (rho, -)": {
+   "n": 963,
+   "estimate": -0.03870866058391041,
+   "ci95": [
+    -0.11271890102861876,
+    0.033180380016691643
+   ],
+   "p": 0.29259999999999997,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": -1,
+   "sign_as_predicted": true
+  },
+  "C12 buyback blackout, AAPL+NVDA (Y1, -)": {
+   "n_context": 344,
+   "n_rest": 381,
+   "estimate": -0.011504219855166345,
+   "ci95": [
+    -0.1026769465339978,
+    0.08070325769403869
+   ],
+   "p": 0.8234,
+   "vf_rate_context": 0.11046511627906977,
+   "vf_rate_rest": 0.12073490813648294,
+   "sc_rate_context": 0.1686046511627907,
+   "sc_rate_rest": 0.15223097112860892,
+   "p_holm": 1.0,
+   "pass": false,
+   "predicted_sign": -1,
+   "sign_as_predicted": true
+  }
+ },
+ "outside_family": {
+  "C12 placebo TSLA (no buybacks)": {
+   "n_context": 144,
+   "n_rest": 188,
+   "estimate": 0.04632237099301027,
+   "ci95": [
+    -0.09547428526135954,
+    0.1847121892194685
+   ],
+   "p": 0.5014,
+   "vf_rate_context": 0.1527777777777778,
+   "vf_rate_rest": 0.1595744680851064,
+   "sc_rate_context": 0.1597222222222222,
+   "sc_rate_rest": 0.15425531914893617
+  },
+  "C12 sensitivity, earnings-reaction days removed": {
+   "n_context": 311,
+   "n_rest": 381,
+   "estimate": 0.01852141347997776,
+   "ci95": [
+    -0.0701283086373367,
+    0.10802485564649567
+   ],
+   "p": 0.6898,
+   "vf_rate_context": 0.0932475884244373,
+   "vf_rate_rest": 0.12073490813648294,
+   "sc_rate_context": 0.16720257234726688,
+   "sc_rate_rest": 0.15223097112860892
+  }
+ },
+ "fragility": {
+  "F1 clientele tug-of-war, top tercile (Y1, -)": {
+   "n_context": 506,
+   "n_rest": 1006,
+   "estimate": -0.054762358006992355,
+   "ci95": [
+    -0.12475695487484917,
+    0.014699079225157084
+   ],
+   "p": 0.12940000000000002,
+   "vf_rate_context": 0.12648221343873517,
+   "vf_rate_rest": 0.1312127236580517,
+   "sc_rate_context": 0.11264822134387352,
+   "sc_rate_rest": 0.14512922465208747,
+   "p_holm": 0.7764000000000001,
+   "pass": false,
+   "sign_as_predicted": true
+  },
+  "F2 thinning liquidity, top tercile (Y2, +)": {
+   "n_context": 506,
+   "n_rest": 1006,
+   "estimate": -0.09529271488169361,
+   "ci95": [
+    -0.1389404089282808,
+    -0.052095015521312675
+   ],
+   "p": 0.0002,
+   "vf_rate_context": 0.13043478260869565,
+   "vf_rate_rest": 0.12922465208747516,
+   "sc_rate_context": 0.08695652173913043,
+   "sc_rate_rest": 0.15805168986083498,
+   "p_holm": 0.0014,
+   "pass": true,
+   "sign_as_predicted": false
+  },
+  "F3 air pocket below, bottom tercile (Y1, -)": {
+   "n_context": 502,
+   "n_rest": 1010,
+   "estimate": -0.011371518918032293,
+   "ci95": [
+    -0.08042577377110453,
+    0.05912383911264379
+   ],
+   "p": 0.747,
+   "vf_rate_context": 0.15338645418326693,
+   "vf_rate_rest": 0.11782178217821782,
+   "sc_rate_context": 0.13346613545816732,
+   "sc_rate_rest": 0.13465346534653466,
+   "p_holm": 1.0,
+   "pass": false,
+   "sign_as_predicted": true
+  },
+  "F4 no dealer cushion, bottom tercile (Y2, +)": {
+   "n_context": 320,
+   "n_rest": 643,
+   "estimate": -0.004151642916792471,
+   "ci95": [
+    -0.056068539602533565,
+    0.04787935464311863
+   ],
+   "p": 0.8486,
+   "vf_rate_context": 0.128125,
+   "vf_rate_rest": 0.13841368584758942,
+   "sc_rate_context": 0.11875,
+   "sc_rate_rest": 0.1290824261275272,
+   "p_holm": 1.0,
+   "pass": false,
+   "sign_as_predicted": false
+  },
+  "F5 fresh call crowding, top tercile (Y1, -)": {
+   "n_context": 321,
+   "n_rest": 638,
+   "estimate": 0.06301021555215294,
+   "ci95": [
+    -0.0238687726596371,
+    0.14824495327403764
+   ],
+   "p": 0.1538,
+   "vf_rate_context": 0.1277258566978193,
+   "vf_rate_rest": 0.13793103448275862,
+   "sc_rate_context": 0.14953271028037382,
+   "sc_rate_rest": 0.11285266457680251,
+   "p_holm": 0.7764000000000001,
+   "pass": false,
+   "sign_as_predicted": false
+  },
+  "F6 off-exchange short share, top tercile (Y1, +)": {
+   "n_context": 478,
+   "n_rest": 952,
+   "estimate": 0.012013666190947821,
+   "ci95": [
+    -0.052326945364675664,
+    0.07712678032232743
+   ],
+   "p": 0.7482,
+   "vf_rate_context": 0.12343096234309624,
+   "vf_rate_rest": 0.13445378151260504,
+   "sc_rate_context": 0.13179916317991633,
+   "sc_rate_rest": 0.1323529411764706,
+   "p_holm": 1.0,
+   "pass": false,
+   "sign_as_predicted": true
+  },
+  "F7 narrow market near the QQQ high (Y1, -)": {
+   "n_context": 54,
+   "n_rest": 1458,
+   "estimate": 0.01601566894463485,
+   "ci95": [
+    -0.2652810670048287,
+    0.2736287986485677
+   ],
+   "p": 0.9134,
+   "vf_rate_context": 0.14814814814814814,
+   "vf_rate_rest": 0.1289437585733882,
+   "sc_rate_context": 0.14814814814814814,
+   "sc_rate_rest": 0.1337448559670782,
+   "p_holm": 1.0,
+   "pass": false,
+   "sign_as_predicted": false
+  }
+ }
+}

@@ -76,8 +76,28 @@ for (k, v), h in zip(T.items(), holm([v["p"] for v in T.values()])):
 ts = C.sym == "TSLA"
 X = {"C12 placebo TSLA (no buybacks)": contrast(C[ts], C[ts].blackout == 1, C[ts].blackout == 0, "Y1"),
      "C12 sensitivity, earnings-reaction days removed": contrast(C[bb & (C.C7_earn == 0)], C[bb & (C.C7_earn == 0)].blackout == 1, C[bb & (C.C7_earn == 0)].blackout == 0, "Y1")}
-json.dump({"family": T, "outside_family": X}, open(HERE / "out" / "tests_ctx.json", "w"), indent=1)
+# Family F (Amendment 1 @ 0ac6f73): fragility, Holm across the 7
+FR = HERE / "out" / "fragility.csv"; TF = {}
+if FR.exists():
+    G = C.merge(pd.read_csv(FR, parse_dates=["date"]), on=["sym", "date"], how="inner")
+    tert = lambda col, top: (G.groupby("sym")[col].rank(pct=True) > 2 / 3) if top else (G.groupby("sym")[col].rank(pct=True) <= 1 / 3)
+    has = lambda col: G[col].notna()
+    m = has("F1_tow"); TF["F1 clientele tug-of-war, top tercile (Y1, -)"] = contrast(G[m], tert("F1_tow", True)[m], ~tert("F1_tow", True)[m], "Y1")
+    m = has("F2_illiq_ratio"); TF["F2 thinning liquidity, top tercile (Y2, +)"] = contrast(G[m], tert("F2_illiq_ratio", True)[m], ~tert("F2_illiq_ratio", True)[m], "Y2")
+    m = has("F3_vol_below"); TF["F3 air pocket below, bottom tercile (Y1, -)"] = contrast(G[m], tert("F3_vol_below", False)[m], ~tert("F3_vol_below", False)[m], "Y1")
+    if "F4_near_share" in G:
+        m = has("F4_near_share"); TF["F4 no dealer cushion, bottom tercile (Y2, +)"] = contrast(G[m], tert("F4_near_share", False)[m], ~tert("F4_near_share", False)[m], "Y2")
+        m = has("F5_call_oi_chg"); TF["F5 fresh call crowding, top tercile (Y1, -)"] = contrast(G[m], tert("F5_call_oi_chg", True)[m], ~tert("F5_call_oi_chg", True)[m], "Y1")
+    m = has("F6_dpi5"); TF["F6 off-exchange short share, top tercile (Y1, +)"] = contrast(G[m], tert("F6_dpi5", True)[m], ~tert("F6_dpi5", True)[m], "Y1")
+    m = has("breadth50"); nar = (G.breadth50 <= G.loc[m, "breadth50"].quantile(1 / 3)) & (G.qqq_near_high == 1)
+    TF["F7 narrow market near the QQQ high (Y1, -)"] = contrast(G[m], nar[m], ~nar[m], "Y1")
+    for (k, v), h in zip(TF.items(), holm([v["p"] for v in TF.values()])):
+        v["p_holm"] = float(h); v["pass"] = bool(h < 0.05); v["sign_as_predicted"] = bool(np.sign(v["estimate"]) == (-1 if k.endswith("-)") else 1))
+json.dump({"family": T, "outside_family": X, "fragility": TF}, open(HERE / "out" / "tests_ctx.json", "w"), indent=1)
 pd.set_option("display.width", 250)
 R = pd.DataFrame(T).T[["n_context", "n_rest", "n", "estimate", "ci95", "p", "p_holm", "pass", "sign_as_predicted", "vf_rate_context", "vf_rate_rest", "sc_rate_context", "sc_rate_rest"]] if True else None
 R["ci95"] = R.ci95.apply(lambda c: f"[{c[0]:+.2f}, {c[1]:+.2f}]")
 print(R.to_string()); print(pd.DataFrame(X).T[["n_context", "n_rest", "estimate", "p"]].to_string())
+if TF:
+    R2 = pd.DataFrame(TF).T[["n_context", "n_rest", "estimate", "ci95", "p", "p_holm", "pass", "sign_as_predicted", "vf_rate_context", "vf_rate_rest", "sc_rate_context", "sc_rate_rest"]]
+    R2["ci95"] = R2.ci95.apply(lambda c: f"[{c[0]:+.2f}, {c[1]:+.2f}]"); print(R2.to_string())
