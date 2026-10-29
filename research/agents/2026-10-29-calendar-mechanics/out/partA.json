@@ -1,0 +1,118 @@
+{
+ "A1 pre-1950 S&P: late-Sep minus other days (bp/day)": {
+  "est": -17.650945034216154,
+  "n_late": 171,
+  "ci95": [
+   -47.01153282814787,
+   8.234180098864135
+  ],
+  "p": 0.2011,
+  "p_holm": 1.0,
+  "pass": false,
+  "predicted_sign": 0,
+  "sign_as_predicted": null
+ },
+ "A2 DAX+FTSE+Nikkei: late-Sep minus other days (bp/day)": {
+  "est": -14.315374884954675,
+  "by_index": {
+   "FTSE": -7.397268463556774,
+   "GDAXI": -23.75717831073827,
+   "N225": -12.829844860302781
+  },
+  "ci95": [
+   -25.017879787904185,
+   -3.1096175835879674
+  ],
+  "p": 0.0143,
+  "p_holm": 0.1001,
+  "pass": false,
+  "predicted_sign": -1,
+  "sign_as_predicted": true
+ },
+ "A3 late-Sep contrast, 1983-2025 minus 1950-1982 (bp/day)": {
+  "est": 0.019275489888930658,
+  "1950-1982": -16.013732017411844,
+  "1983-2025": -15.994456527522912,
+  "ci95": [
+   -13.344882239480539,
+   13.911631531239406
+  ],
+  "p": 0.9954999999999999,
+  "p_holm": 1.0,
+  "pass": false,
+  "predicted_sign": -1,
+  "sign_as_predicted": false
+ },
+ "A4 (quarterly - monthly) post-expiry week, 1983+ minus 1950-82 (bp/day)": {
+  "est": -2.4050097670707635,
+  "1950-1982": 0.01507002456978615,
+  "1983-2025": -2.3899397425009776,
+  "ci95": [
+   -11.926370550848363,
+   7.411220860761745
+  ],
+  "p": 0.6309,
+  "p_holm": 1.0,
+  "pass": false,
+  "predicted_sign": -1,
+  "sign_as_predicted": true
+ },
+ "A5 clock race: (16th..3rd Fri) minus (after 3rd Fri), quarterly months 1983+ (bp/day)": {
+  "est": 6.201234638342145,
+  "between": 6.668200246975651,
+  "after": 0.46696560863350584,
+  "ordinary days 1983+": 4.353984581391617,
+  "n_between": 488,
+  "n_after": 1355,
+  "ci95": [
+   -10.066333682463187,
+   20.298027382389716
+  ],
+  "p": 0.4099,
+  "p_holm": 1.0,
+  "pass": false,
+  "predicted_sign": 1,
+  "sign_as_predicted": true
+ },
+ "A6 Nikkei: 5 sessions after US 3rd Fri minus after own SQ (bp/day)": {
+  "est": 5.965446489127561,
+  "after_us": 3.7871128982508298,
+  "after_sq": -2.17833359087673,
+  "nikkei all days": 0.564027615453653,
+  "ci95": [
+   -8.506147157385024,
+   22.756352619162783
+  ],
+  "p": 0.4747,
+  "p_holm": 1.0,
+  "pass": false,
+  "predicted_sign": 0,
+  "sign_as_predicted": null
+ },
+ "A7 dose: Spearman(GEX roll-off, S&P sessions 2-6 after expiry)": {
+  "est": 0.17193237796686076,
+  "n": 175,
+  "ci95": [
+   0.03821317662245705,
+   0.3103424198925068
+  ],
+  "p": 0.012499999999999999,
+  "p_holm": 0.09999999999999999,
+  "pass": false,
+  "predicted_sign": 1,
+  "sign_as_predicted": true
+ },
+ "A8 Spearman(weekly TGA change, same-week S&P return), 2009-2025": {
+  "est": 0.031379714454735835,
+  "n": 886,
+  "ci95": [
+   -0.018559880737754924,
+   0.08828478307194719
+  ],
+  "p": 0.21889999999999998,
+  "p_holm": 1.0,
+  "pass": false,
+  "predicted_sign": -1,
+  "sign_as_predicted": false
+ }
+}

@@ -67,6 +67,22 @@
   * Stocks with a report after that day's close: the 15:30–16:00 return on the report day vs the same stock's other days (stock-demeaned). 12 stocks, Yahoo 60-minute bars, Nov 2023 – Oct 2026.
   * Prediction: lower.
 
+## Amendment 1, Part C: the hemisphere test (owner: "do it"; written after Part A's results, before any southern-hemisphere return was computed)
+* **Why:** Part A found late-September weakness of the same size before 1983 (−16bp/day) as after (−16), and in the DAX, Nikkei and FTSE. So index expiries and buybacks are not its origin. Two old, global candidates remain, and they predict opposite things for the southern hemisphere:
+  * **Seasonal risk aversion** (Kamstra-Kramer-Levi 2003; disputed by Kelly-Meschke 2010): weakness starts as nights lengthen after the *local* autumn equinox. Southern markets should be weak in late **March**.
+  * **A global calendar or flow origin** (fiscal half-years, post-summer issuance, global funds): southern markets are weak in late **September** too.
+* **Windows:** the 10 sessions starting on or after the equinox date (Mar 20, Sep 22).
+* **Statistic:** mean daily log return in the local-autumn window minus the local-spring window. Year-block bootstrap (10,000), two-sided. **Holm across C1–C4.**
+  * **C1, Australia** (All Ordinaries, 1985–2025): late-March window minus late-September window. Mood predicts < 0; a global calendar predicts > 0.
+  * **C2, Australia's local component:** the same, on All Ordinaries returns after removing the prior US session's S&P return (full-sample OLS beta). Australia trades after the US close, so this strips the imported US move. Mood predicts < 0.
+  * **C3, southern pooled:** Australia 1985–2025, New Zealand 2003–2025, South Africa (All Share) 2012–2025. Same statistic as C1.
+  * **C4, northern control:** S&P, DAX, FTSE, Nikkei (late-September window minus late-March window). Both views predict < 0; this checks that the equinox window captures the northern effect.
+* **Excluded in advance:** Brazil and Argentina (low latitude, where the mood theory predicts little; Argentina's inflation distorts index returns).
+* **Reading, fixed now:**
+  * C1 or C3 < 0 supports a seasonal-mood origin.
+  * C1 or C3 > 0 supports a global calendar or flow origin.
+  * Near 0 with C4 < 0 means the northern effect is not mirrored (inconclusive for mood).
+
 ## Data
 * **Indices:** S&P 500 daily from 1927 (Yahoo); DAX, FTSE and Nikkei daily (Yahoo).
 * **Positioning and cash:** SqueezeMetrics DIX.csv; Treasury Daily Treasury Statement operating cash balance (fiscaldata.treasury.gov). The account was called "Federal Reserve Account" until 2021-09, then "TGA".
