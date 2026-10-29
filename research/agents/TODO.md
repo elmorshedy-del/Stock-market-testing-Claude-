@@ -42,7 +42,7 @@ Every test is pre-registered in its own folder before it runs.
 ## Can run now (data in hand)
 - [ ] **N1. SqueezeMetrics GEX vs our engine when they disagree.** Example: on Oct 23 SqueezeMetrics showed +$4.0bn while our engine showed −$8.8bn. Only SqueezeMetrics carries P2; our flip carries the rally-hold result. Test which measure predicts better on the days they disagree.
 - [ ] **N3. Who is long the 0DTE calls? A last-30-minute convention test.** On 711 days, does the 15:30 → close move continue the day's move more when the 0DTE strikes near the price are put-heavy (classic: dealers short gamma) than call-heavy (classic: dealers long gamma)? Classic predicts a difference by call/put mix; all-short predicts momentum scales with total 0DTE gamma regardless of mix. Prompted by Oct 27's last-10-minute drop through the 770 calls. [flip-wicks](2026-10-27-flip-wicks/).
-- [ ] **N4. Pre-earnings de-risking into the close.** Do mega caps underperform in the last 30 minutes of the day before their report, more so after an up day? Oct 27: GOOGL −0.66%, AMZN −0.36% in the last 10 minutes. Hourly bars in hand (51 tickers, Nov 2023 →); earnings dates needed.
+- [x] **N4. Pre-earnings de-risking into the close.** Run in [calendar-mechanics](2026-10-29-calendar-mechanics/) B5: −0.14% in the last 30 minutes (raw p 0.03, Holm 0.13). Do mega caps underperform in the last 30 minutes of the day before their report, more so after an up day? Oct 27: GOOGL −0.66%, AMZN −0.36% in the last 10 minutes. Hourly bars in hand (51 tickers, Nov 2023 →); earnings dates needed.
 - [ ] **N2. Breakaway-gap rule beyond TSLA.** TSLA breakaway gaps fill less (p 0.04). Pre-register the same rule on the 81-stock panel and SPY/QQQ.
 
 - [ ] **N5. Liquidity regime test.** Does ES Kyle lambda (book depth) track dealer gamma over a long sample? Flow-physics found rho -0.37 on 16 days. Needs more ES trade days, or a cheaper depth proxy (ohlcv range / volume).
@@ -65,8 +65,13 @@ Every test is pre-registered in its own folder before it runs.
 
 ## Gap-context follow-ups (2026-10-29)
 - [ ] **E1. Earnings-morning fade mechanism:** the IV drop across the report (EOD chains) × pre-report call OI near the price vs the first-hour fade. TSLA/NVDA in hand (small n). OPRA signed flow at 09:30 on earnings mornings (Databento quote first) doubles as gap-teardown H4.
-- [ ] **E2. Re-run C/F on all 13 names** (labels about $0.2) to triple n. Pre-register C7 (earnings fade) and C1 (wall caps continuation) as directional confirmations.
+- [x] **E2 (partly). 13 names labeled** (4,583 gap-ups); the earnings-gap fade replicates out of sample, Holm 0.031 ([calendar-mechanics](2026-10-29-calendar-mechanics/) B2). Still to do: re-run the rest of C and F on all 13. (labels about $0.2) to triple n. Pre-register C7 (earnings fade) and C1 (wall caps continuation) as directional confirmations.
 - [ ] **E3. Microstructure precursors** (Amendment 1): Hawkes branching, Kyle lambda, depth and closing imbalances over the 3 sessions before each sampled gap. Databento quote first.
+
+## Calendar-mechanics follow-ups (2026-10-29)
+- [ ] **K1. What makes September's second half extra weak:** post-summer equity issuance (IPO and secondary counts by month, for example Ritter's IPO data), fiscal half-year and quarter ends abroad, global fund flows. Pre-register on data after 1987.
+- [ ] **K2. Earnings-fade mechanism, round 2:** after-hours headline overshoot vs the conference call (after-hours price at 16:30 vs 18:00 vs the open), and pre-report positioning (the B5 close drift) as the predictor.
+- [ ] **K3. GEX roll-off dose** (A7, Holm 0.10): re-test forward on 2026–27 expiries, and with SPY's own expiring-gamma share.
 
 ## Live forward checks (calls already made)
 - [ ] **F6. First-5-minute table** (gap-teardown, exploratory): log every TSLA/NVDA/AAPL/QQQ gap-up ≥ 0.5σ from Oct 29: the 09:30–09:35 bin and the 09:35–10:30 outcome.

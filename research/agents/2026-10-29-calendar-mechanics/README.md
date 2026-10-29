@@ -95,3 +95,68 @@
 * Calendar windows overlap (quarter-end, expiry, blackout, tax date), so A5 and A6 are the discriminating tests and A1–A4 establish existence and era.
 * There are about 76 Septembers per index, so power is modest.
 * Japan's SQ also aligns with Japan's own fiscal calendar, so A6 separates local from US timing, not expiry from every local factor.
+
+---
+
+# Results (written after the run; Parts A and B pre-registered @ 89dcdd6, Part C @ 8d8be48)
+
+**Deviations, stated:**
+* **A7:** the outcome window is sessions 2–6 after expiry, because session 1 holds the "after" GEX reading and GEX moves with spot. The pre-registered wording was ambiguous; this is the uncontaminated reading.
+* **B3:** "next 3 trading days" used weekdays.
+* **B4:** Yahoo volume is split-adjusted, so it was divided back by later splits to match pre-split option contracts.
+* **Labels:** 4,583 gap-up events across the 13 names, from Databento first-hour bars ($0.2).
+
+## Part A: where late-September weakness comes from (Holm across A1–A8; units bp per day)
+| test | estimate [95% CI] | raw p | Holm | reading |
+|---|---|---|---|---|
+| A1 S&P 1928–49, late Sep vs other days | −17.7 [−47.0, +8.2] | 0.20 | 1.0 | same sign and size before derivatives or buybacks existed (noisy) |
+| A2 DAX + FTSE + Nikkei, late Sep | −14.3 [−25.0, −3.1] | 0.014 | 0.10 | exists abroad: DAX −24, Nikkei −13, FTSE −7 |
+| A3 era: 1983–2025 minus 1950–82 | +0.0 [−13.3, +13.9] | 1.00 | 1.0 | **−16.0 in both eras: not born with expiry or buybacks** |
+| A4 (quarterly − monthly) post-expiry week, era change | −2.4 [−11.9, +7.4] | 0.63 | 1.0 | no expiry-era signature |
+| A5 clock race: 16th→3rd Friday minus after 3rd Friday | +6.2 [−10.1, +20.3] | 0.41 | 1.0 | +6.7 vs +0.5 (ordinary days +4.4): leans "support until expiry", not resolved |
+| A6 Nikkei: after US 3rd Friday minus after own expiry | +6.0 [−8.5, +22.8] | 0.47 | 1.0 | no clock wins |
+| A7 dose: GEX roll-off vs the following week (ρ) | +0.17 [+0.04, +0.31] | 0.013 | 0.10 | bigger gamma roll-off → weaker next week (near-pass) |
+| A8 Treasury cash drain vs same-week S&P (ρ) | +0.03 [−0.02, +0.09] | 0.22 | 1.0 | no cash-drain effect |
+
+## Part C: the hemisphere test (Holm across C1–C4)
+| test | estimate [95% CI] | raw p | Holm |
+|---|---|---|---|
+| C1 Australia, late-Mar (local autumn) minus late-Sep | +1.3 [−11.5, +14.5] | 0.87 | 1.0 |
+| C2 Australia, local component (US move removed, β 0.29) | +0.1 [−11.3, +11.9] | 0.98 | 1.0 |
+| C3 southern pooled (AU +1.3, NZ +15.5, ZA +10.8) | +7.2 [−5.6, +20.0] | 0.28 | 0.84 |
+| C4 northern control, late-Sep minus late-Mar (DAX −18, Nikkei −15, S&P −4, FTSE −3) | −9.4 [−21.3, +1.7] | 0.10 | 0.39 |
+
+* **Southern autumns are not weak.** If anything, the southern late-September window is the weaker one (pooled +7, n.s.), the sign a *global* calendar predicts.
+* **Seasonal mood (Kamstra-Kramer-Levi) is not the origin.**
+* Australia's late September (after the US 3rd Friday) is −5.9bp/day vs other days (descriptive), which is imported, not local.
+
+## Part B: single names (Holm across B1–B5)
+| test | n | estimate [95% CI] | raw p | Holm | VF / SC in context vs rest |
+|---|---|---|---|---|---|
+| B1 gap-up in the 5 sessions after a quarterly expiry (Y1, σ) | 291 | +0.08 [−0.05, +0.21] | 0.22 | 0.66 | VF 16% vs 15%, SC 21% vs 15% |
+| **B2 earnings-reaction gap-up, 9 new names (Y1, σ)** | 146 | **−0.31 [−0.51, −0.10]** | 0.006 | **0.031 PASS** | **VF 25% vs 15%**, SC 14% vs 16% |
+| B3 call-wall cap, MSFT + MU (Y1, σ) | 72 | +0.08 [−0.08, +0.25] | 0.33 | 0.66 | |
+| B4 options-unwind pressure vs Y1 (ρ) | 52 | −0.12 [−0.40, +0.17] | 0.43 | 0.66 | call OI part −0.02, IV-drop part −0.08 |
+| B5 last 30 minutes on a report day (%) | 138 | −0.14 [−0.26, −0.01] | 0.033 | 0.13 | |
+
+## Descriptive: the half-month rhythm (Ariel 1987), S&P bp/day
+| | days 1–15 | days 16–end | September 1–15 | September 16–end |
+|---|---|---|---|---|
+| 1950–1986 | +4.8 | +1.0 | −1.6 | −5.1 |
+| 1987–2025 | +4.2 | +2.6 | +3.4 | −10.1 |
+
+* Second halves of months are weaker in general: inflows (pay, contributions, dividends) cluster around the month turn.
+* September's second half is far weaker than an ordinary second half, so the monthly rhythm explains part of the September effect, not all of it.
+
+## Verdict
+1. **What September's weakness is not:**
+   * It is not index-option expiry and not buybacks: it is the same size before 1983 as after.
+   * It is not Treasury cash drains (A8) and not seasonal mood (no southern mirror).
+   * It is old (1928+), northern-hemisphere-wide, and imported by Australia.
+   * What fits is a *global institutional calendar*: the weak second half of every month (inflows cluster at the turn), made much worse in September. Candidates for the extra: post-summer issuance supply, fiscal half-year and quarter ends, and global fund flows.
+2. **Expiry mechanics are real at the weekly scale:** the more dealer gamma rolls off, the weaker the next week (ρ +0.17, Holm 0.10).
+3. **The earnings-morning fade is confirmed out of sample** and passes:
+   * 9 new names, −0.31σ in the first hour, violent fades 25% vs 15%. That matches the 4-name estimate (−0.31σ).
+   * Across all 12 stocks, about 1 in 4 earnings gap-ups is a violent fade, vs about 1 in 7 normally.
+   * The option-unwind measure does not explain it (B4), so the mechanism is still open.
+4. **Pre-report selling into the close** leans the predicted way (−0.14% in the last 30 minutes, raw p 0.03) but does not pass.

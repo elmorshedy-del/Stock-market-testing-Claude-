@@ -1,0 +1,73 @@
+{
+ "C1 Australia: late-Mar minus late-Sep (bp/day)": {
+  "est": 1.2586646979417424,
+  "ci95": [
+   -11.496621312132168,
+   14.501110436647414
+  ],
+  "p": 0.8667,
+  "autumn_bp": 6.794269065828777,
+  "spring_bp": 5.535604367887035,
+  "all_days_bp": 2.4294877840825064,
+  "years": 41,
+  "p_holm": 1.0,
+  "pass": false
+ },
+ "C2 Australia local component (prior US session removed): late-Mar minus late-Sep (bp/day)": {
+  "est": 0.14487971223779553,
+  "ci95": [
+   -11.330830024129094,
+   11.900900573208105
+  ],
+  "p": 0.9837,
+  "autumn_bp": 5.919010970886176,
+  "spring_bp": 5.77413125864838,
+  "all_days_bp": 0.0966281773081274,
+  "years": 41,
+  "beta_on_prior_US": 0.28754966907112417,
+  "p_holm": 1.0,
+  "pass": false
+ },
+ "C3 southern pooled (AU, NZ, ZA): late-Mar minus late-Sep (bp/day)": {
+  "est": 7.1710817846506805,
+  "ci95": [
+   -5.554833020378085,
+   19.99720724576688
+  ],
+  "p": 0.2803,
+  "autumn_bp": 11.083772056434995,
+  "spring_bp": 3.9126902717843137,
+  "all_days_bp": 2.904891750699605,
+  "years": 41,
+  "by_index": {
+   "AU": 1.2586646979417424,
+   "NZ": 15.472598476789257,
+   "ZA": 10.847811544356338
+  },
+  "p_holm": 0.8409,
+  "pass": false
+ },
+ "C4 northern control: late-Sep minus late-Mar (bp/day)": {
+  "est": -9.42784306203662,
+  "ci95": [
+   -21.3174020920626,
+   1.7219482132923039
+  ],
+  "p": 0.0987,
+  "autumn_bp": -1.9500219757814807,
+  "spring_bp": 7.4778210862551395,
+  "all_days_bp": 2.7386233479015103,
+  "years": 76,
+  "by_index": {
+   "DAX": -18.337267681378645,
+   "FTSE": -3.481778037066259,
+   "N225": -14.765913137897373,
+   "SPX": -4.325799262899204
+  },
+  "p_holm": 0.3948,
+  "pass": false
+ },
+ "descriptive: Australia late-Sep (after US 3rd Fri) minus other days (bp/day)": {
+  "est": -5.941571320321674
+ }
+}

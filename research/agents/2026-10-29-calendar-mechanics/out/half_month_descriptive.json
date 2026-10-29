@@ -1,0 +1,22 @@
+{
+ "1950-1986 (before Ariel 1987)": {
+  "all months": {
+   "1st half (1-15)": 4.8,
+   "2nd half (16-end)": 1.0
+  },
+  "September": {
+   "1st half (1-15)": -1.6,
+   "2nd half (16-end)": -5.1
+  }
+ },
+ "1987-2025 (after publication)": {
+  "all months": {
+   "1st half (1-15)": 4.2,
+   "2nd half (16-end)": 2.6
+  },
+  "September": {
+   "1st half (1-15)": 3.4,
+   "2nd half (16-end)": -10.1
+  }
+ }
+}

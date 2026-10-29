@@ -1,0 +1,556 @@
+{
+ "family": {
+  "B1 gap-ups in the 5 sessions after a quarterly expiry (Y1, -)": {
+   "n_context": 291,
+   "n_rest": 4292,
+   "est": 0.08029093370216203,
+   "ci95": [
+    -0.04775904292044643,
+    0.20624085365355416
+   ],
+   "p": 0.21860000000000002,
+   "vf_context": 0.15807560137457044,
+   "vf_rest": 0.14748369058713887,
+   "sc_context": 0.20962199312714777,
+   "sc_rest": 0.14864864864864866,
+   "symbols": 13,
+   "p_holm": 0.6558,
+   "pass": false,
+   "sign_as_predicted": false
+  },
+  "B2 earnings-reaction gap-ups, 9 parked names (Y1, -)": {
+   "n_context": 146,
+   "n_rest": 2925,
+   "est": -0.306495990830184,
+   "ci95": [
+    -0.5139452472498179,
+    -0.09606159417701
+   ],
+   "p": 0.0062,
+   "vf_context": 0.2534246575342466,
+   "vf_rest": 0.15247863247863247,
+   "sc_context": 0.136986301369863,
+   "sc_rest": 0.16273504273504275,
+   "p_holm": 0.031,
+   "pass": true,
+   "sign_as_predicted": true
+  },
+  "B3 call-wall cap, MSFT+MU (Y1, -)": {
+   "n_context": 72,
+   "n_rest": 557,
+   "est": 0.0829145655190847,
+   "ci95": [
+    -0.08152818401527318,
+    0.25387964851403444
+   ],
+   "p": 0.3258,
+   "vf_context": 0.18055555555555555,
+   "vf_rest": 0.16696588868940754,
+   "sc_context": 0.2222222222222222,
+   "sc_rest": 0.1687612208258528,
+   "p_holm": 0.6558,
+   "pass": false,
+   "sign_as_predicted": false
+  },
+  "B4 earnings unwind pressure vs Y1 (rho, -)": {
+   "n": 52,
+   "est": -0.11935456330572866,
+   "ci95": [
+    -0.40380228911922506,
+    0.17063976147674007
+   ],
+   "p": 0.427,
+   "by_part": {
+    "rho call_oi": -0.018355673183642104,
+    "rho iv_drop": -0.08042346111158541
+   },
+   "p_holm": 0.6558,
+   "pass": false,
+   "sign_as_predicted": true
+  },
+  "B5 last 30 minutes on the report day (%, -)": {
+   "n_context": 138,
+   "n_rest": 8538,
+   "est": -0.13588839481138854,
+   "ci95": [
+    -0.25796205959219054,
+    -0.009839752211096852
+   ],
+   "p": 0.0334,
+   "p_holm": 0.1336,
+   "pass": false,
+   "sign_as_predicted": true
+  }
+ },
+ "events_file": "events13.csv",
+ "b4_rows": [
+  {
+   "sym": "MSFT",
+   "date": "2020-01-30",
+   "Y1": -0.9917,
+   "cls": "VF",
+   "call_oi_per_adv": 0.6143,
+   "iv_drop": 0.1137,
+   "unwind": 0.0699
+  },
+  {
+   "sym": "TSLA",
+   "date": "2020-01-30",
+   "Y1": 0.6531,
+   "cls": "mid",
+   "call_oi_per_adv": 0.3529,
+   "iv_drop": 0.3987,
+   "unwind": 0.1407
+  },
+  {
+   "sym": "NVDA",
+   "date": "2020-02-14",
+   "Y1": 0.2831,
+   "cls": "SC",
+   "call_oi_per_adv": 0.8301,
+   "iv_drop": 0.3326,
+   "unwind": 0.2761
+  },
+  {
+   "sym": "MU",
+   "date": "2020-03-26",
+   "Y1": -0.2667,
+   "cls": "mid",
+   "call_oi_per_adv": 0.1318,
+   "iv_drop": 0.3356,
+   "unwind": 0.0443
+  },
+  {
+   "sym": "TSLA",
+   "date": "2020-04-30",
+   "Y1": -0.3414,
+   "cls": "mid",
+   "call_oi_per_adv": 0.1212,
+   "iv_drop": 0.2876,
+   "unwind": 0.0349
+  },
+  {
+   "sym": "MU",
+   "date": "2020-06-30",
+   "Y1": 0.1894,
+   "cls": "mid",
+   "call_oi_per_adv": 0.5775,
+   "iv_drop": 0.1838,
+   "unwind": 0.1061
+  },
+  {
+   "sym": "TSLA",
+   "date": "2020-07-23",
+   "Y1": -0.9543,
+   "cls": "VF",
+   "call_oi_per_adv": 0.2366,
+   "iv_drop": 0.5905,
+   "unwind": 0.1397
+  },
+  {
+   "sym": "TSLA",
+   "date": "2020-10-22",
+   "Y1": -1.1235,
+   "cls": "VF",
+   "call_oi_per_adv": 0.2795,
+   "iv_drop": 0.3437,
+   "unwind": 0.0961
+  },
+  {
+   "sym": "MU",
+   "date": "2021-01-08",
+   "Y1": -1.6064,
+   "cls": "mid",
+   "call_oi_per_adv": 0.9152,
+   "iv_drop": 0.2586,
+   "unwind": 0.2366
+  },
+  {
+   "sym": "MSFT",
+   "date": "2021-01-27",
+   "Y1": 0.2544,
+   "cls": "mid",
+   "call_oi_per_adv": 1.0183,
+   "iv_drop": 0.0465,
+   "unwind": 0.0473
+  },
+  {
+   "sym": "MU",
+   "date": "2021-04-01",
+   "Y1": -0.0983,
+   "cls": "mid",
+   "call_oi_per_adv": 0.5029,
+   "iv_drop": 0.1682,
+   "unwind": 0.0846
+  },
+  {
+   "sym": "MSFT",
+   "date": "2021-07-28",
+   "Y1": 0.159,
+   "cls": "mid",
+   "call_oi_per_adv": 0.8263,
+   "iv_drop": 0.0891,
+   "unwind": 0.0736
+  },
+  {
+   "sym": "NVDA",
+   "date": "2021-08-19",
+   "Y1": -0.6449,
+   "cls": "VF",
+   "call_oi_per_adv": 1.2206,
+   "iv_drop": 0.0939,
+   "unwind": 0.1146
+  },
+  {
+   "sym": "MSFT",
+   "date": "2021-10-27",
+   "Y1": 1.4665,
+   "cls": "SC",
+   "call_oi_per_adv": 0.7005,
+   "iv_drop": 0.0657,
+   "unwind": 0.046
+  },
+  {
+   "sym": "NVDA",
+   "date": "2021-11-18",
+   "Y1": -0.4807,
+   "cls": "mid",
+   "call_oi_per_adv": 0.4229,
+   "iv_drop": 0.1942,
+   "unwind": 0.0821
+  },
+  {
+   "sym": "MU",
+   "date": "2021-12-21",
+   "Y1": 0.1611,
+   "cls": "mid",
+   "call_oi_per_adv": 0.7288,
+   "iv_drop": 0.2948,
+   "unwind": 0.2148
+  },
+  {
+   "sym": "MSFT",
+   "date": "2022-01-26",
+   "Y1": -1.6648,
+   "cls": "VF",
+   "call_oi_per_adv": 0.3671,
+   "iv_drop": 0.2434,
+   "unwind": 0.0894
+  },
+  {
+   "sym": "MU",
+   "date": "2022-03-30",
+   "Y1": -0.232,
+   "cls": "mid",
+   "call_oi_per_adv": 0.3577,
+   "iv_drop": 0.2122,
+   "unwind": 0.0759
+  },
+  {
+   "sym": "TSLA",
+   "date": "2022-04-21",
+   "Y1": -0.2787,
+   "cls": "mid",
+   "call_oi_per_adv": 0.6224,
+   "iv_drop": 0.2453,
+   "unwind": 0.1527
+  },
+  {
+   "sym": "MSFT",
+   "date": "2022-04-27",
+   "Y1": -0.0329,
+   "cls": "mid",
+   "call_oi_per_adv": 0.366,
+   "iv_drop": 0.238,
+   "unwind": 0.0871
+  },
+  {
+   "sym": "TSLA",
+   "date": "2022-07-21",
+   "Y1": 0.7874,
+   "cls": "SC",
+   "call_oi_per_adv": 0.416,
+   "iv_drop": 0.1369,
+   "unwind": 0.057
+  },
+  {
+   "sym": "MSFT",
+   "date": "2022-07-27",
+   "Y1": 0.5225,
+   "cls": "mid",
+   "call_oi_per_adv": 0.6227,
+   "iv_drop": 0.2036,
+   "unwind": 0.1268
+  },
+  {
+   "sym": "TSLA",
+   "date": "2023-01-26",
+   "Y1": -0.119,
+   "cls": "mid",
+   "call_oi_per_adv": 0.1184,
+   "iv_drop": 0.273,
+   "unwind": 0.0323
+  },
+  {
+   "sym": "NVDA",
+   "date": "2023-02-23",
+   "Y1": 0.4692,
+   "cls": "mid",
+   "call_oi_per_adv": 0.2398,
+   "iv_drop": 0.1803,
+   "unwind": 0.0432
+  },
+  {
+   "sym": "MU",
+   "date": "2023-03-29",
+   "Y1": 1.2554,
+   "cls": "SC",
+   "call_oi_per_adv": 0.5562,
+   "iv_drop": 0.2136,
+   "unwind": 0.1188
+  },
+  {
+   "sym": "MSFT",
+   "date": "2023-04-26",
+   "Y1": -0.2882,
+   "cls": "VF",
+   "call_oi_per_adv": 0.7508,
+   "iv_drop": 0.1588,
+   "unwind": 0.1192
+  },
+  {
+   "sym": "NVDA",
+   "date": "2023-05-25",
+   "Y1": -0.2286,
+   "cls": "VF",
+   "call_oi_per_adv": 0.526,
+   "iv_drop": 0.1516,
+   "unwind": 0.0797
+  },
+  {
+   "sym": "MU",
+   "date": "2023-06-29",
+   "Y1": -2.9172,
+   "cls": "VF",
+   "call_oi_per_adv": 0.7575,
+   "iv_drop": 0.2737,
+   "unwind": 0.2073
+  },
+  {
+   "sym": "NVDA",
+   "date": "2023-08-24",
+   "Y1": -1.33,
+   "cls": "VF",
+   "call_oi_per_adv": 0.4445,
+   "iv_drop": 0.4283,
+   "unwind": 0.1904
+  },
+  {
+   "sym": "MSFT",
+   "date": "2023-10-25",
+   "Y1": -1.11,
+   "cls": "mid",
+   "call_oi_per_adv": 1.0477,
+   "iv_drop": 0.1237,
+   "unwind": 0.1296
+  },
+  {
+   "sym": "MU",
+   "date": "2023-12-21",
+   "Y1": -0.5926,
+   "cls": "mid",
+   "call_oi_per_adv": 0.7781,
+   "iv_drop": 0.2153,
+   "unwind": 0.1675
+  },
+  {
+   "sym": "NVDA",
+   "date": "2024-02-22",
+   "Y1": 1.4495,
+   "cls": "mid",
+   "call_oi_per_adv": 0.4809,
+   "iv_drop": 0.4029,
+   "unwind": 0.1938
+  },
+  {
+   "sym": "MU",
+   "date": "2024-03-21",
+   "Y1": -1.0867,
+   "cls": "VF",
+   "call_oi_per_adv": 0.5582,
+   "iv_drop": 0.5249,
+   "unwind": 0.293
+  },
+  {
+   "sym": "TSLA",
+   "date": "2024-04-24",
+   "Y1": 0.3497,
+   "cls": "mid",
+   "call_oi_per_adv": 0.1869,
+   "iv_drop": 0.3292,
+   "unwind": 0.0615
+  },
+  {
+   "sym": "MSFT",
+   "date": "2024-04-26",
+   "Y1": -0.4504,
+   "cls": "VF",
+   "call_oi_per_adv": 1.115,
+   "iv_drop": 0.3037,
+   "unwind": 0.3386
+  },
+  {
+   "sym": "NVDA",
+   "date": "2024-05-23",
+   "Y1": 0.845,
+   "cls": "SC",
+   "call_oi_per_adv": 0.5748,
+   "iv_drop": 0.3678,
+   "unwind": 0.2114
+  },
+  {
+   "sym": "MU",
+   "date": "2024-09-26",
+   "Y1": -0.3174,
+   "cls": "mid",
+   "call_oi_per_adv": 0.5046,
+   "iv_drop": 0.4239,
+   "unwind": 0.2139
+  },
+  {
+   "sym": "TSLA",
+   "date": "2024-10-24",
+   "Y1": 0.6397,
+   "cls": "mid",
+   "call_oi_per_adv": 0.3952,
+   "iv_drop": 0.2277,
+   "unwind": 0.09
+  },
+  {
+   "sym": "NVDA",
+   "date": "2024-11-21",
+   "Y1": -2.3185,
+   "cls": "mid",
+   "call_oi_per_adv": 0.6167,
+   "iv_drop": 0.3923,
+   "unwind": 0.2419
+  },
+  {
+   "sym": "TSLA",
+   "date": "2025-01-30",
+   "Y1": -1.2615,
+   "cls": "VF",
+   "call_oi_per_adv": 0.2446,
+   "iv_drop": 0.3092,
+   "unwind": 0.0756
+  },
+  {
+   "sym": "NVDA",
+   "date": "2025-02-27",
+   "Y1": -1.942,
+   "cls": "VF",
+   "call_oi_per_adv": 0.3888,
+   "iv_drop": 0.2003,
+   "unwind": 0.0779
+  },
+  {
+   "sym": "TSLA",
+   "date": "2025-04-23",
+   "Y1": -0.0137,
+   "cls": "mid",
+   "call_oi_per_adv": 0.1115,
+   "iv_drop": 0.2799,
+   "unwind": 0.0312
+  },
+  {
+   "sym": "MSFT",
+   "date": "2025-05-01",
+   "Y1": -0.022,
+   "cls": "mid",
+   "call_oi_per_adv": 0.6706,
+   "iv_drop": 0.1841,
+   "unwind": 0.1235
+  },
+  {
+   "sym": "NVDA",
+   "date": "2025-05-29",
+   "Y1": -0.5144,
+   "cls": "mid",
+   "call_oi_per_adv": 0.5241,
+   "iv_drop": 0.2447,
+   "unwind": 0.1282
+  },
+  {
+   "sym": "MU",
+   "date": "2025-06-26",
+   "Y1": -2.0173,
+   "cls": "VF",
+   "call_oi_per_adv": 0.534,
+   "iv_drop": 0.3562,
+   "unwind": 0.1902
+  },
+  {
+   "sym": "MSFT",
+   "date": "2025-07-31",
+   "Y1": -4.9148,
+   "cls": "VF",
+   "call_oi_per_adv": 1.3179,
+   "iv_drop": 0.1185,
+   "unwind": 0.1561
+  },
+  {
+   "sym": "NVDA",
+   "date": "2025-11-20",
+   "Y1": -0.3609,
+   "cls": "mid",
+   "call_oi_per_adv": 0.6574,
+   "iv_drop": 0.1272,
+   "unwind": 0.0836
+  },
+  {
+   "sym": "MU",
+   "date": "2025-12-18",
+   "Y1": -0.5955,
+   "cls": "mid",
+   "call_oi_per_adv": 0.2386,
+   "iv_drop": 0.3377,
+   "unwind": 0.0806
+  },
+  {
+   "sym": "TSLA",
+   "date": "2026-01-29",
+   "Y1": -1.5486,
+   "cls": "mid",
+   "call_oi_per_adv": 0.4486,
+   "iv_drop": 0.242,
+   "unwind": 0.1086
+  },
+  {
+   "sym": "MU",
+   "date": "2026-06-25",
+   "Y1": -0.9411,
+   "cls": "VF",
+   "call_oi_per_adv": 0.1454,
+   "iv_drop": 0.3026,
+   "unwind": 0.044
+  },
+  {
+   "sym": "MSFT",
+   "date": "2026-07-30",
+   "Y1": 1.5465,
+   "cls": "mid",
+   "call_oi_per_adv": 0.7403,
+   "iv_drop": 0.4041,
+   "unwind": 0.2992
+  },
+  {
+   "sym": "NVDA",
+   "date": "2026-08-27",
+   "Y1": 0.6103,
+   "cls": "mid",
+   "call_oi_per_adv": 0.976,
+   "iv_drop": 0.3142,
+   "unwind": 0.3066
+  }
+ ]
+}
