@@ -179,3 +179,21 @@
   * Nasdaq is a share of volume.
   * Four symbols only (the other 9 were parked by Amendment 3).
   * The table is exploratory and needs the forward check (TODO F6).
+
+## Owner follow-up, Oct 29: how late is 09:35 on fade days? (descriptive, all 196 VF days, Nasdaq 1-minute bars; `late.py`, `out/late.json`)
+| | n | gap | first 5 min | then to 10:30 | then to the low (after 09:35) | share of the fade done by 09:35 |
+|---|---|---|---|---|---|---|
+| TSLA | 52 | +2.2% | −0.95% | −1.40% | −2.13% | 31% |
+| NVDA | 49 | +2.1% | −0.69% | −1.12% | −2.03% | 31% |
+| AAPL | 35 | +1.6% | −0.70% | −0.43% | −0.98% | 35% |
+| QQQ | 60 | +0.8% | −0.21% | −0.43% | −0.74% | 22% |
+
+Medians, % of price.
+
+**The other side.** These are all gap-ups whose first 5 minutes fell at least 0.25σ, which includes false alarms. The share that ended lower by 10:30:
+* TSLA 58% (n=62);
+* NVDA 50%;
+* AAPL 44%;
+* QQQ 69%.
+
+Within the same window, TSLA fell another ≥1% on 65% of these days and rebounded ≥1% on 55%.
