@@ -256,3 +256,18 @@ Same model as `r2_price.py`. Each cell is a range across the two fits.
 | R3 (GEX ≤ 20th) | 10–12% | 15–16% | 19–30% |
 | R4 / R5 (+ SPX ≤ 7,602) | no: price misses | no | no: needs SPY ≤ ~757.6 |
 | R6 / R7 (VIX crush) | no: VIX rises on a down day; these come in the recovery | | |
+
+### TSLA and 400 (owner: "I believe it will gravitate back to 400 somehow even if dips below; does structure support that")
+![tsla 400](out/tsla_400_map.png)
+* **Supports it on Friday:**
+  * Dealers are long gamma everywhere above the 371 flip. TSLA call gamma damping is tested (dealer-sign: β_call −0.070, p < 0.001; weaker in 2023–26, −0.032, p 0.10).
+  * 400 is the biggest positive strike, the call wall and a round number. P4b: day highs cluster just under round levels and lows just above (p 2e-15 / 5e-5).
+  * Below 400 there is no amplification down to 371. The cushion thins as price falls: total gamma is 0.57 at 400, 0.47 at 395 and 0.33 at 389 ($bn per 1%).
+* **Against it, Monday on:**
+  * The 400 strike's gamma falls 57% after the expiry (0.18 → 0.08), and total gamma near 389–400 falls about 40%.
+  * TSLA is deeply freed (0.4–0.8th pct): bigger moves both ways.
+* **Not tested:**
+  * A closing pin for TSLA. SPY 0DTE showed none (flip-wicks H2).
+  * Damping slows moves; it does not pull price up.
+  * A SPY flush makes TSLA trade as beta (REPORT §4k).
+* The Oct 28 OI curve grid stops at 375 (±7% of spot), so the area below 375 is not drawn.
