@@ -188,3 +188,34 @@
   * If it doesn't, most of the Oct 20 window's edge has already decayed.
   * The re-fire sample overlaps (several per episode).
   * The flat median 20-session return is the "movement, not direction" result again. Recent re-fires (Feb–Mar 2025, Mar 2026) came before further drops of 2–8% over 20 sessions; the up-leg came later. Hence defined-risk spreads and the dip rule for direction. These combinations have not been tested together.
+
+### R2 as a closing price, and the flush map (owner: "I don't see gex and dix in session … the price level it has to reach close to end … the extremes of pocket … draw it")
+![flush map](out/flush_map_1030.png)
+* **R2 by closing level** (`r2_price.py` → `out/r2_price.json`):
+  * Method: daily GEX and DIX changes regressed on the S&P return over the last 2 years (n 522; and n 337 for days starting at GEX $3.5–8bn), with the joint residuals resampled. Descriptive.
+  * GEX falls about **$1.0–1.4bn per 1%** S&P drop. DIX barely moves with price.
+  * **GEX ≤ $4.53bn is likely (71–92%) at an S&P close ≤ ~7,605 (SPY ≤ ~758, −1.5%).** At −1.25% (7,624 / SPY 759.7) it is 56–84%.
+  * DIX ≥ 45.4% is about **60%** at any price, so P(R2) tops out near 60–65%.
+  * P(R2) by close:
+
+| S&P close | SPY | P(R2) |
+|---|---|---|
+| 7,682 | 765.5 | 12% |
+| 7,643 | 761.7 | 22–39% |
+| 7,624 | 759.7 | 33–52% |
+| 7,605 | 757.8 | 42–59% |
+| ≤ 7,566 | ≤ 754 | 53–63% |
+
+  * A V-shaped day that closes back near 765 leaves R2 unlikely.
+* **The pocket's edges (Friday curve):**
+
+| Zone | SPY range |
+|---|---|
+| Zero crossing (the flip) | 771.7 |
+| Ramp: gamma goes −2 → −15 $bn per 1% | 770 → 755 |
+| Core: ≥ 80% of the peak depth | **754–728** |
+| Peak | **743** (−$19.9bn) |
+| Fading below | 728 |
+
+  * For scale, from the Oct 29 close: a 2-sigma day (VIX 17.2) is 752.7 and 3-sigma is 744.4. The put wall is 750.
+  * Monday's curve after the expiry is about 40% shallower (peak −$11.9bn at 733).
