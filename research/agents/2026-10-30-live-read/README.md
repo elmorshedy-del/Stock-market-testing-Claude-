@@ -169,3 +169,22 @@
 | ≤ −1% | 76 | **46%** |
 | −0.5% to −1% | 70 | 24% |
 | −0.5% to 0% | 176 | 5% |
+
+### R2 on its own, and what a Friday re-fire would mean (owner: "so r2 can be on without anything else?")
+* **Yes. R2 is only two numbers:** SqueezeMetrics GEX ≤ 30th percentile and DIX > 50th (each over the past year). It has no price, breadth, VIX or flip condition. The ladder's odds are for R2 alone, counted on the first day it turns on, with events at least 10 days apart.
+* **What it predicts:** an **up-leg** starts within 20 sessions. An up-leg is a top-decile 10-day S&P rise, about **+3.5%** (2012–26).
+  * It does not predict a higher average return. REPORT §4j: P(leg) is robust (91% of 216 specs, joint p < 0.003), but excess return is at luck level (6%). Low gamma widens both tails.
+* **Today's R2 is already 8 sessions old.** It first turned on **Oct 20**, and no up-leg has started since (S&P 7,624–7,757). Numbers below come from `ladder.py` / `forecast.py`, imported unchanged and run on the Oct 29 data:
+
+| | 2012–26 | 2019Q4–26 |
+|---|---|---|
+| Fresh R2: P(up-leg ≤ 20 sessions) | 64% (n 123) | 78% (n 58) |
+| R2 with no leg in days 1–8: P(leg in days 9–20) | 37% (n 70) vs 36% any day (12 days) | 54% (n 28) vs 43% |
+| **R2 re-fires 5–12 sessions after the first, no leg yet** (Friday's case): P(up-leg ≤ 20) | **64%** (n 66) | **77%** (n 30) |
+| … median lead / S&P 20 sessions later | 6 days / +0.25% | 6 days / +0.09% |
+
+* **Reading:**
+  * If R2 re-fires, the odds reset to fresh-R2 levels.
+  * If it doesn't, most of the Oct 20 window's edge has already decayed.
+  * The re-fire sample overlaps (several per episode).
+  * The flat median 20-session return is the "movement, not direction" result again. Recent re-fires (Feb–Mar 2025, Mar 2026) came before further drops of 2–8% over 20 sessions; the up-leg came later. Hence defined-risk spreads and the dip rule for direction. These combinations have not been tested together.
