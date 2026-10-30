@@ -1,0 +1,187 @@
+{
+ "SPY": {
+  "Friday Oct 30 (incl. the expiry) @ close Oct 29 769.36": {
+   "flip": 771.94,
+   "total gamma $bn per 1% at spot": -3.06,
+   "call wall": 800.0,
+   "put wall": 750.0,
+   "top positive strikes": {
+    "800.0": 1.24,
+    "810.0": 0.739,
+    "770.0": 0.667,
+    "780.0": 0.577
+   },
+   "top negative strikes": {
+    "765.0": -1.462,
+    "750.0": -1.202,
+    "760.0": -0.623,
+    "740.0": -0.446
+   },
+   "most negative total-gamma price (pocket centre)": 743.2,
+   "short-gamma zone": [
+    715.5,
+    771.7
+   ]
+  },
+  "Friday Oct 30 (incl. the expiry) @ after hours 764.73": {
+   "flip": 771.94,
+   "total gamma $bn per 1% at spot": -8.62,
+   "call wall": 800.0,
+   "put wall": 750.0,
+   "top positive strikes": {
+    "800.0": 0.989,
+    "810.0": 0.609,
+    "780.0": 0.484,
+    "790.0": 0.346
+   },
+   "top negative strikes": {
+    "765.0": -2.822,
+    "750.0": -1.378,
+    "760.0": -1.306,
+    "740.0": -0.501
+   },
+   "most negative total-gamma price (pocket centre)": 743.32,
+   "short-gamma zone": [
+    711.2,
+    771.6
+   ]
+  },
+  "Oct 30 expiry share of |gamma|": 0.266,
+  "Monday Nov 2 (after the expiry) @ close Oct 29 769.36": {
+   "flip": 773.62,
+   "total gamma $bn per 1% at spot": -2.76,
+   "call wall": 800.0,
+   "put wall": 750.0,
+   "top positive strikes": {
+    "800.0": 1.173,
+    "810.0": 0.706,
+    "780.0": 0.572,
+    "790.0": 0.393
+   },
+   "top negative strikes": {
+    "750.0": -1.183,
+    "760.0": -0.573,
+    "740.0": -0.437,
+    "730.0": -0.399
+   },
+   "most negative total-gamma price (pocket centre)": 733.2,
+   "short-gamma zone": [
+    715.5,
+    773.2
+   ]
+  },
+  "Monday Nov 2 (after the expiry) @ after hours 764.73": {
+   "flip": 773.62,
+   "total gamma $bn per 1% at spot": -5.4,
+   "call wall": 800.0,
+   "put wall": 750.0,
+   "top positive strikes": {
+    "800.0": 0.914,
+    "810.0": 0.576,
+    "780.0": 0.452,
+    "790.0": 0.337
+   },
+   "top negative strikes": {
+    "750.0": -1.373,
+    "760.0": -0.69,
+    "740.0": -0.496,
+    "765.0": -0.478
+   },
+   "most negative total-gamma price (pocket centre)": 733.38,
+   "short-gamma zone": [
+    711.2,
+    773.1
+   ]
+  },
+  "near-price OI share now": 0.2132,
+  "near-price OI share after Friday": 0.1757
+ },
+ "TSLA": {
+  "Friday Oct 30 (incl. the expiry) @ close Oct 29 403.3": {
+   "flip": 371.1,
+   "total gamma $bn per 1% at spot": 0.6,
+   "call wall": 400.0,
+   "put wall": 350.0,
+   "top positive strikes": {
+    "400.0": 0.18,
+    "410.0": 0.063,
+    "420.0": 0.046,
+    "405.0": 0.041
+   },
+   "top negative strikes": {
+    "390.0": -0.006,
+    "387.5": -0.001,
+    "397.5": -0.001,
+    "382.5": -0.001
+   },
+   "most negative total-gamma price (pocket centre)": 375.07,
+   "short-gamma zone": null
+  },
+  "Friday Oct 30 (incl. the expiry) @ after hours 397.45": {
+   "flip": 371.1,
+   "total gamma $bn per 1% at spot": 0.53,
+   "call wall": 400.0,
+   "put wall": 350.0,
+   "top positive strikes": {
+    "400.0": 0.191,
+    "395.0": 0.068,
+    "420.0": 0.039,
+    "410.0": 0.028
+   },
+   "top negative strikes": {
+    "390.0": -0.005,
+    "397.5": -0.001,
+    "382.5": -0.0,
+    "377.5": 0.0
+   },
+   "most negative total-gamma price (pocket centre)": 369.63,
+   "short-gamma zone": [
+    369.6,
+    370.8
+   ]
+  },
+  "Oct 30 expiry share of |gamma|": 0.297,
+  "Monday Nov 2 (after the expiry) @ close Oct 29 403.3": {
+   "flip": 368.36,
+   "total gamma $bn per 1% at spot": 0.38,
+   "call wall": 400.0,
+   "put wall": 350.0,
+   "top positive strikes": {
+    "400.0": 0.078,
+    "420.0": 0.045,
+    "410.0": 0.032,
+    "415.0": 0.018
+   },
+   "top negative strikes": {
+    "390.0": -0.005,
+    "392.5": -0.004,
+    "387.5": -0.001,
+    "382.5": -0.0
+   },
+   "most negative total-gamma price (pocket centre)": 375.07,
+   "short-gamma zone": null
+  },
+  "Monday Nov 2 (after the expiry) @ after hours 397.45": {
+   "flip": 368.36,
+   "total gamma $bn per 1% at spot": 0.31,
+   "call wall": 400.0,
+   "put wall": 350.0,
+   "top positive strikes": {
+    "400.0": 0.078,
+    "420.0": 0.038,
+    "410.0": 0.025,
+    "395.0": 0.019
+   },
+   "top negative strikes": {
+    "390.0": -0.007,
+    "392.5": -0.003,
+    "397.5": -0.003,
+    "387.5": -0.001
+   },
+   "most negative total-gamma price (pocket centre)": 369.63,
+   "short-gamma zone": null
+  },
+  "near-price OI share now": 0.0833,
+  "near-price OI share after Friday": 0.0555
+ }
+}

@@ -1,0 +1,47 @@
+{
+ "history ends": "2026-10-14",
+ "Friday (incl. Oct 30) @ close 403.30": {
+  "flip": 370.8,
+  "% above flip": 8.77,
+  "near-OI share": 0.089,
+  "near-OI pct": 0.203,
+  "freed (<= 1/3)": true,
+  "below flip": false,
+  "own-gamma pct": 0.865,
+  "call wall": 400.0,
+  "put wall": 350.0
+ },
+ "after Oct 30 expiry @ close 403.30": {
+  "flip": 366.5,
+  "% above flip": 10.03,
+  "near-OI share": 0.0555,
+  "near-OI pct": 0.004,
+  "freed (<= 1/3)": true,
+  "below flip": false,
+  "own-gamma pct": 0.657,
+  "call wall": 400.0,
+  "put wall": 350.0
+ },
+ "Friday (incl. Oct 30) @ after hours 397.45": {
+  "flip": 370.8,
+  "% above flip": 7.2,
+  "near-OI share": 0.0899,
+  "near-OI pct": 0.215,
+  "freed (<= 1/3)": true,
+  "below flip": false,
+  "own-gamma pct": 0.765,
+  "call wall": 400.0,
+  "put wall": 350.0
+ },
+ "after Oct 30 expiry @ after hours 397.45": {
+  "flip": 366.5,
+  "% above flip": 8.43,
+  "near-OI share": 0.0582,
+  "near-OI pct": 0.008,
+  "freed (<= 1/3)": true,
+  "below flip": false,
+  "own-gamma pct": 0.586,
+  "call wall": 400.0,
+  "put wall": 350.0
+ }
+}

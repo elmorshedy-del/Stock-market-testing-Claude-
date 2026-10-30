@@ -1,0 +1,333 @@
+{
+ "breadth": {
+  "date": "2026-10-29",
+  "n names": 81,
+  "share up today": 0.79,
+  "median return today %": 1.36,
+  "median 5-day return %": 1.03,
+  "% above 20-day avg": 74.1,
+  "% above 50-day avg": 64.2,
+  "% above 100-day avg": 60.5,
+  "% above 200-day avg": 64.2,
+  "% within 2% of 52-week high": 19.8,
+  "% within 2% of 52-week low": 2.5,
+  "% above 50-day, last 15 sessions": [
+   48,
+   48,
+   43,
+   44,
+   51,
+   48,
+   48,
+   59,
+   62,
+   64,
+   60,
+   65,
+   63,
+   67,
+   64
+  ],
+  "equal-weight 83 vs S&P, last 20 sessions, pts": 3.95
+ },
+ "calendar": {
+  "1950-2025": {
+   "all days": {
+    "n": 19120,
+    "mean %": 0.036,
+    "median %": 0.05,
+    "% up": 53.1
+   },
+   "last trading day of October": {
+    "n": 76,
+    "mean %": 0.091,
+    "median %": 0.058,
+    "% up": 53.9
+   },
+   "first 3 trading days of November (sum)": {
+    "n": 76,
+    "mean %": 0.77,
+    "median %": 0.721,
+    "% up": 68.4
+   },
+   "turn of month (last day + first 3), all months, sum": {
+    "n": 912,
+    "mean %": 0.437,
+    "median %": 0.555,
+    "% up": 63.0
+   },
+   "November month (sum of daily %)": {
+    "n": 76,
+    "mean %": 1.866,
+    "median %": 2.084,
+    "% up": 71.1
+   },
+   "November first half (td 1-10, sum)": {
+    "n": 76,
+    "mean %": 1.183,
+    "median %": 1.273,
+    "% up": 64.5
+   },
+   "November second half (td 11+, sum)": {
+    "n": 76,
+    "mean %": 0.683,
+    "median %": 1.353,
+    "% up": 64.5
+   }
+  },
+  "2000-2025": {
+   "all days": {
+    "n": 6539,
+    "mean %": 0.031,
+    "median %": 0.064,
+    "% up": 53.7
+   },
+   "last trading day of October": {
+    "n": 26,
+    "mean %": -0.044,
+    "median %": 0.008,
+    "% up": 53.8
+   },
+   "first 3 trading days of November (sum)": {
+    "n": 26,
+    "mean %": 0.653,
+    "median %": 0.839,
+    "% up": 73.1
+   },
+   "turn of month (last day + first 3), all months, sum": {
+    "n": 312,
+    "mean %": 0.201,
+    "median %": 0.327,
+    "% up": 59.0
+   },
+   "November month (sum of daily %)": {
+    "n": 26,
+    "mean %": 2.18,
+    "median %": 2.609,
+    "% up": 76.9
+   },
+   "November first half (td 1-10, sum)": {
+    "n": 26,
+    "mean %": 1.141,
+    "median %": 1.527,
+    "% up": 69.2
+   },
+   "November second half (td 11+, sum)": {
+    "n": 26,
+    "mean %": 1.038,
+    "median %": 1.318,
+    "% up": 76.9
+   }
+  },
+  "2020-2025": {
+   "all days": {
+    "n": 1508,
+    "mean %": 0.059,
+    "median %": 0.097,
+    "% up": 54.4
+   },
+   "last trading day of October": {
+    "n": 6,
+    "mean %": -0.453,
+    "median %": -0.275,
+    "% up": 50.0
+   },
+   "first 3 trading days of November (sum)": {
+    "n": 6,
+    "mean %": 1.173,
+    "median %": 1.274,
+    "% up": 66.7
+   },
+   "turn of month (last day + first 3), all months, sum": {
+    "n": 72,
+    "mean %": 0.253,
+    "median %": 0.124,
+    "% up": 52.8
+   },
+   "November month (sum of daily %)": {
+    "n": 6,
+    "mean %": 4.929,
+    "median %": 5.591,
+    "% up": 83.3
+   },
+   "November first half (td 1-10, sum)": {
+    "n": 6,
+    "mean %": 3.85,
+    "median %": 3.32,
+    "% up": 83.3
+   },
+   "November second half (td 11+, sum)": {
+    "n": 6,
+    "mean %": 1.079,
+    "median %": 1.501,
+    "% up": 83.3
+   }
+  },
+  "midterm years": {
+   "years": [
+    1950,
+    1954,
+    1958,
+    1962,
+    1966,
+    1970,
+    1974,
+    1978,
+    1982,
+    1986,
+    1990,
+    1994,
+    1998,
+    2002,
+    2006,
+    2010,
+    2014,
+    2018,
+    2022
+   ],
+   "November month %": {
+    "n": 19,
+    "mean %": 2.748,
+    "median %": 2.24,
+    "% up": 78.9
+   },
+   "Nov+Dec %": {
+    "n": 19,
+    "mean %": 3.607,
+    "median %": 3.178,
+    "% up": 68.4
+   },
+   "Oct close -> next Apr close %": {
+    "n": 19,
+    "mean %": 14.786,
+    "median %": 15.242,
+    "% up": 100.0
+   },
+   "all years Oct close -> next Apr close %": {
+    "n": 75,
+    "mean %": 6.971,
+    "median %": 6.567,
+    "% up": 76.0
+   }
+  },
+  "election week": {
+   "midterm (close before election day -> Friday after)": {
+    "n": 19,
+    "mean %": 1.514,
+    "median %": 1.358,
+    "% up": 73.7
+   },
+   "presidential (close before election day -> Friday after)": {
+    "n": 19,
+    "mean %": 0.115,
+    "median %": 0.059,
+    "% up": 52.6
+   }
+  }
+ },
+ "midterm conditioning": {
+  "by year": {
+   "1950": {
+    "Oct close vs 52w high %": -2.9,
+    "Oct->Apr %": 14.8,
+    "Nov %": -0.1
+   },
+   "1954": {
+    "Oct close vs 52w high %": -3.3,
+    "Oct->Apr %": 19.8,
+    "Nov %": 8.1
+   },
+   "1958": {
+    "Oct close vs 52w high %": -0.6,
+    "Oct->Apr %": 12.2,
+    "Nov %": 2.2
+   },
+   "1962": {
+    "Oct close vs 52w high %": -22.2,
+    "Oct->Apr %": 23.5,
+    "Nov %": 10.2
+   },
+   "1966": {
+    "Oct close vs 52w high %": -14.7,
+    "Oct->Apr %": 17.2,
+    "Nov %": 0.3
+   },
+   "1970": {
+    "Oct close vs 52w high %": -15.3,
+    "Oct->Apr %": 24.9,
+    "Nov %": 4.7
+   },
+   "1974": {
+    "Oct close vs 52w high %": -31.4,
+    "Oct->Apr %": 18.1,
+    "Nov %": -5.3
+   },
+   "1978": {
+    "Oct close vs 52w high %": -12.9,
+    "Oct->Apr %": 9.2,
+    "Nov %": 1.7
+   },
+   "1982": {
+    "Oct close vs 52w high %": -4.0,
+    "Oct->Apr %": 23.0,
+    "Nov %": 3.6
+   },
+   "1986": {
+    "Oct close vs 52w high %": -3.9,
+    "Oct->Apr %": 18.2,
+    "Nov %": 2.1
+   },
+   "1990": {
+    "Oct close vs 52w high %": -17.6,
+    "Oct->Apr %": 23.5,
+    "Nov %": 6.0
+   },
+   "1994": {
+    "Oct close vs 52w high %": -2.0,
+    "Oct->Apr %": 9.0,
+    "Nov %": -4.0
+   },
+   "1998": {
+    "Oct close vs 52w high %": -7.4,
+    "Oct->Apr %": 21.5,
+    "Nov %": 5.9
+   },
+   "2002": {
+    "Oct close vs 52w high %": -24.5,
+    "Oct->Apr %": 3.5,
+    "Nov %": 5.7
+   },
+   "2006": {
+    "Oct close vs 52w high %": -0.8,
+    "Oct->Apr %": 7.6,
+    "Nov %": 1.6
+   },
+   "2010": {
+    "Oct close vs 52w high %": -2.8,
+    "Oct->Apr %": 15.2,
+    "Nov %": -0.2
+   },
+   "2014": {
+    "Oct close vs 52w high %": 0.0,
+    "Oct->Apr %": 3.3,
+    "Nov %": 2.5
+   },
+   "2018": {
+    "Oct close vs 52w high %": -7.5,
+    "Oct->Apr %": 8.6,
+    "Nov %": 1.8
+   },
+   "2022": {
+    "Oct close vs 52w high %": -19.3,
+    "Oct->Apr %": 7.7,
+    "Nov %": 5.4
+   }
+  },
+  "years with Oct close within 5% of 52w high": {
+   "n": 9,
+   "Oct->Apr mean %": 13.7,
+   "Nov mean %": 1.8
+  },
+  "2026 Oct 29 close vs 52w high %": -1.26
+ }
+}
