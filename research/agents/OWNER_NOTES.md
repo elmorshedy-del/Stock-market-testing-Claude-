@@ -2,6 +2,11 @@
 
 *Started 2026-10-29. Add to it; don't rewrite it.*
 
+## How to treat the owner's words (owner, 2026-10-30)
+* The owner is an observer using loose terms ("forced", "genuine", "vacuum", "house of cards"). **Never adopt the words as definitions.**
+* Derive the construct from mechanics and the literature, measure the outcome directly, and test several footprints against it. Say which definition was used and why.
+* The 2026-10-29 house-of-cards study took "forced = price up with implied vol up" as given; the owner flagged that. The redo is [permanence](2026-10-30-permanence/).
+
 ## The goal
 * **Better exits on short-term calls.** The same position kept most of its profit or gave back half or more, depending on a day (or an hour) of exit timing. Sept 2, 2020: exiting at the open vs at the close was the difference.
 * **Rules, not hand-drawn lines.**
