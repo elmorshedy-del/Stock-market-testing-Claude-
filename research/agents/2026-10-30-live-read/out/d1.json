@@ -1,0 +1,177 @@
+{
+ "n events": 195,
+ "cells (% means)": {
+  "S&P gamma low | own high": {
+   "n": 8.0,
+   "sp": -1.44,
+   "tsla": -2.67,
+   "beta": 1.71,
+   "excess": -0.24,
+   "excess_next": -0.41
+  },
+  "S&P gamma low | own low": {
+   "n": 51.0,
+   "sp": -1.87,
+   "tsla": -4.04,
+   "beta": 2.08,
+   "excess": -0.14,
+   "excess_next": 0.06
+  },
+  "S&P gamma low | own mid": {
+   "n": 27.0,
+   "sp": -2.08,
+   "tsla": -3.83,
+   "beta": 2.37,
+   "excess": 1.09,
+   "excess_next": -0.31
+  },
+  "S&P gamma not low | own high": {
+   "n": 46.0,
+   "sp": -1.58,
+   "tsla": -3.03,
+   "beta": 2.1,
+   "excess": 0.23,
+   "excess_next": 0.52
+  },
+  "S&P gamma not low | own low": {
+   "n": 26.0,
+   "sp": -1.55,
+   "tsla": -2.79,
+   "beta": 1.78,
+   "excess": -0.04,
+   "excess_next": -0.62
+  },
+  "S&P gamma not low | own mid": {
+   "n": 37.0,
+   "sp": -1.74,
+   "tsla": -3.59,
+   "beta": 2.15,
+   "excess": 0.09,
+   "excess_next": -0.08
+  }
+ },
+ "primary": {
+  "D1a cushion (high-low own, S&P gamma not low)": {
+   "pts": 0.27,
+   "90% CI": [
+    -1.03,
+    1.66
+   ],
+   "p (one-sided, >0)": 0.371
+  },
+  "same, S&P gamma low": {
+   "pts": -0.1,
+   "90% CI": [
+    -2.07,
+    1.26
+   ],
+   "p (one-sided, >0)": 0.555
+  },
+  "D1b interaction": {
+   "pts": 0.37,
+   "90% CI": [
+    -1.44,
+    2.68
+   ],
+   "p (one-sided, >0)": 0.353
+  }
+ },
+ "Holm": {
+  "D1b": 0.706,
+  "D1a": 0.706
+ },
+ "secondary next-day": {
+  "D1a cushion (high-low own, S&P gamma not low)": {
+   "pts": 1.14,
+   "90% CI": [
+    -0.18,
+    2.31
+   ],
+   "p (one-sided, >0)": 0.076
+  },
+  "same, S&P gamma low": {
+   "pts": -0.47,
+   "90% CI": [
+    -1.73,
+    0.73
+   ],
+   "p (one-sided, >0)": 0.739
+  },
+  "D1b interaction": {
+   "pts": 1.61,
+   "90% CI": [
+    -0.15,
+    3.25
+   ],
+   "p (one-sided, >0)": 0.066
+  }
+ },
+ "regime 2020-21": {
+  "n": 37,
+  "cells n": "{('S&P gamma low', 'high'): 1, ('S&P gamma low', 'low'): 9, ('S&P gamma low', 'mid'): 7, ('S&P gamma not low', 'high'): 9, ('S&P gamma not low', 'low'): 4, ('S&P gamma not low', 'mid'): 7}",
+  "diffs": {
+   "D1a cushion (high-low own, S&P gamma not low)": {
+    "pts": 2.7,
+    "90% CI": [
+     -1.29,
+     6.54
+    ],
+    "p (one-sided, >0)": 0.128
+   },
+   "same, S&P gamma low": {
+    "pts": -2.72,
+    "90% CI": [
+     -4.15,
+     -1.64
+    ],
+    "p (one-sided, >0)": 1.0
+   },
+   "D1b interaction": {
+    "pts": 5.41,
+    "90% CI": [
+     1.12,
+     9.63
+    ],
+    "p (one-sided, >0)": 0.014
+   }
+  }
+ },
+ "regime 2022-26": {
+  "n": 158,
+  "cells n": "{('S&P gamma low', 'high'): 7, ('S&P gamma low', 'low'): 42, ('S&P gamma low', 'mid'): 20, ('S&P gamma not low', 'high'): 37, ('S&P gamma not low', 'low'): 22, ('S&P gamma not low', 'mid'): 30}",
+  "diffs": {
+   "D1a cushion (high-low own, S&P gamma not low)": {
+    "pts": -0.29,
+    "90% CI": [
+     -1.65,
+     1.17
+    ],
+    "p (one-sided, >0)": 0.66
+   },
+   "same, S&P gamma low": {
+    "pts": 0.28,
+    "90% CI": [
+     -1.87,
+     1.61
+    ],
+    "p (one-sided, >0)": 0.431
+   },
+   "D1b interaction": {
+    "pts": -0.57,
+    "90% CI": [
+     -2.37,
+     1.89
+    ],
+    "p (one-sided, >0)": 0.639
+   }
+  }
+ },
+ "all-day corr by S&P gamma": {
+  "low": 0.61,
+  "not low": 0.48
+ },
+ "down-day TSLA/S&P move ratio by S&P gamma": {
+  "S&P gamma low": 2.03,
+  "S&P gamma not low": 1.94
+ }
+}

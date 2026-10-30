@@ -292,3 +292,38 @@ Same model as `r2_price.py`. Each cell is a range across the two fits.
 * **Statistics:** differences in means with month-cluster bootstrap 90% CIs and p-values (5,000 draws). Holm across D1a and D1b. Every cell's n is reported.
 * **Regimes per OWNER_NOTES:** the same cells for 2020–21 and 2022–26. Pre-2020 has no TSLA option data on this plan.
 * **Prediction:** D1a positive but small; D1b positive. Confidence is low, because the S&P down days with low S&P gamma will be few once split three ways.
+
+### D1 results (`d1_override.py`, `drag_fig.py`; `out/d1.json`, `out/d1_events.csv`, `out/tsla_drag.png`)
+![tsla drag](out/tsla_drag.png)
+* **Events:** 195 S&P down days ≤ −1% (2020-01 to 2026-10-14).
+* **On those days TSLA fell about 2× the S&P (ratio 1.94–2.03) whatever its own gamma state.** Raw: own-high −3.0%, own-mid −3.7%, own-low −3.6%. The S&P also fell less on the own-high days, so beta-adjusted the gap is small:
+
+| | high − low own gamma, excess return | 90% CI | p |
+|---|---|---|---|
+| **D1a cushion** (S&P gamma not low; n 46 vs 26) | +0.27 pts | [−1.03, +1.66] | 0.37 |
+| Same, S&P gamma low (n 8 vs 51) | −0.10 pts | | |
+| **D1b override** (interaction) | +0.37 pts | [−1.44, +2.68] | 0.35 |
+
+  * Holm for both: **0.71. Both fail.**
+* **Regimes:**
+  * 2020–21: interaction +5.4 pts (p 0.014), but on n 37 with a cell of 1. Luck-level.
+  * 2022–26: −0.6 pts (p 0.64).
+* **Secondary, next day:** with S&P gamma not low, own-high days were followed by TSLA excess +0.52% vs −0.62% for own-low. That is +1.1 pts, p 0.08; interaction p 0.07. A hint that the cushion shows up as a next-day rebound, not same-day protection. Not a pass.
+* **Correlation, all days 2020–26:** 0.61 at low S&P gamma vs 0.48 otherwise. This agrees with REPORT §4k.
+* **Reading:**
+  * "SPY overrides TSLA's cushion" is not a conditional effect. On a market selloff day the cushion does not show up at all, and TSLA trades as about 2× beta.
+  * The tested damping (dealer-sign) shows up in TSLA's own next-day range, not on market-driven days.
+  * Prediction check: D1a predicted small positive (got +0.27, n.s.). D1b predicted positive (got +0.37, n.s.).
+* **Friday translator** (from 403.30, beta 2.0 on event days to 2.65 over 60 days):
+
+| SPY close | TSLA |
+|---|---|
+| 767 | 400–401 |
+| 765 | 397–399 |
+| 762 | 393–396 |
+| 760 | 390–393 |
+| 758 | 388–391 |
+| 754 | 382–387 |
+| 750 | 376–383 |
+
+  * TSLA back at 400 needs SPY to close near 766–767.
