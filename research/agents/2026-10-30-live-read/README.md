@@ -148,3 +148,24 @@
 * The SPY engine sign (−$3bn) vs SqueezeMetrics (+$5.6bn) disagree, as in every read since Oct 23. The engine is SPY-only; SqueezeMetrics is SPX-wide.
 * ES-implied SPY of 762 assumes the basis is unchanged since 16:00.
 * No new hypotheses were tested; $0 data spend.
+
+## Addendum: the dip-or-wait card for SPY calls (owner: "what would make it a good entry for calls for spy to get November trend … enter dip or wait")
+* **The dip rule the owner asked about** is from [channel-correction-theory](../2026-10-25-channel-correction-theory/):
+  * Measure breadth **when the dip starts**: the share of large caps above their 50-day average.
+  * **Narrow breadth at the start → bought** (13 of 15). **Broad breadth → correction** (6 of 6).
+  * Strength: AUC 0.89, and the effect is plateau-shaped across 50–200-day breadth (58 versions, p 0.002). It covers the post-2022 channel only (21 dips), and the z 0.2 cut was read off the data.
+* **Today's episode:**
+  * It started Oct 16 at z −1.6 (39% of the panel above the 50-day), the second-narrowest of 22 dips. That puts it on the bounce side.
+  * It is still open: no close above 7,818.93 yet. The kill line is a close ≤ 7,427.98.
+  * Rotation is intact: 79% of the panel rose Thursday while the megacaps fell. That is the bounce signature.
+  * Risks: rates (the only narrow-breadth corrections were rates shocks, and both were shallow), and breadth rising clearly above normal while the index stalls.
+* **R2 thresholds for Friday's close** (`gex_pct` as in `forecast.build`, ranked against the prior 251 SqueezeMetrics days):
+  * R2 needs GEX ≤ **$4.53bn** (≤ 30th pct) with DIX ≥ **45.4%** (> 50th). DIX is now 45.8%, only just above.
+  * R4/R5 need GEX ≤ **$3.35bn** (≤ 20th) plus an S&P close ≤ 7,602.
+* **How often a down day from the ~48th GEX percentile turns R2 on the same day** (2012–2026, descriptive):
+
+| S&P day | n | R2 on |
+|---|---|---|
+| ≤ −1% | 76 | **46%** |
+| −0.5% to −1% | 70 | 24% |
+| −0.5% to 0% | 176 | 5% |
