@@ -51,3 +51,48 @@
 
 ## Limits stated in advance
 * Yahoo volume is consolidated, so it includes off-exchange trading. The panel is large caps only. X4 covers 2020 onward for 5 names. P20 includes market drift after the run (a market-adjusted P20 is reported as secondary).
+
+---
+
+# Results (written after the run; pre-registered @ e2971b7)
+
+**Sample:** 5,853 top-decile 10-day runs in 42 stocks (1990–2025). The median run kept 1.12 of its gain 20 sessions later; 31% gave back half within 10 sessions. Also 154 S&P runs and 145 runs in the 5 option names.
+
+## Footprints (Holm across X1–X6: nothing passes)
+| footprint | n | Spearman with P20 [95% CI] | raw p | Holm | predicted sign? | halves 1990–2007 / 2008–2025 |
+|---|---|---|---|---|---|---|
+| X1 abnormal volume | 5,853 | +0.03 [−0.01, +0.07] | 0.11 | 0.54 | no | +0.04 / +0.02 |
+| X2 thinning liquidity | 5,853 | +0.01 [−0.03, +0.04] | 0.72 | 1.0 | no | −0.01 / +0.03 |
+| X3 overnight share | 5,853 | +0.01 [−0.02, +0.05] | 0.44 | 1.0 | no | +0.02 / −0.00 |
+| **X4 call-skew richening** | 145 | **−0.20 [−0.39, +0.00]** | **0.051** | 0.30 | **yes** | (2020+ only) |
+| X5 low dealer gamma (S&P) | 67 | +0.06 [−0.20, +0.32] | 0.65 | 1.0 | no | |
+| X6 narrow breadth (S&P) | 154 | +0.01 [−0.15, +0.17] | 0.95 | 1.0 | no | |
+| (old proxy) ATM implied vol up | 145 | +0.08 [−0.09, +0.27] | 0.37 | n/a | no | |
+
+* **Volume, the opposite of the liquidity-trading prediction:** high-volume runs were slightly *more* lasting.
+  * Cliff rate: 28% for the top-volume third vs 35% for the bottom third.
+  * P20 median: 1.15 vs 1.09.
+  * This fits the high-volume return premium (Gervais-Kaniel-Mingelgrin 2001) rather than Campbell-Grossman-Wang. Low-volume runs are the fragile ones, closer to the owner's "vacuum".
+* **Call skew is the only footprint pointing the predicted way.** The old ATM-implied-vol proxy did not.
+
+## Exit translation (family E empty because nothing passed; descriptive)
+* 1,482 gap-ups ≥ 0.5σ within 3 sessions of a run's end.
+* **After runs made on thin liquidity** (top third Amihud ratio): open → close −0.11σ vs the rest [−0.22, +0.00], p 0.054; median −0.18% vs 0.00%.
+* Volume (+0.02, p 0.73) and overnight share (+0.06, p 0.22) show nothing.
+
+## Profiles
+* **Sept 2020 run ends:**
+  * AAPL (to Aug 31, +12.6%, overnight share 0.68) kept −0.04 of its run: it gave back 118% within 10 sessions.
+  * MSFT, GOOGL, PEP, QCOM and WMT also hit the cliff; NVDA kept 0.67.
+  * NVDA's call skew rose 1.4 vol points into Sept 1; QQQ's did not (−0.4).
+* **TSLA now:** its run to Oct 27 came with call skew *falling* 1.9 vol points (25-delta risk reversal −0.2 → −2.2) and ATM implied vol falling 4.4 (42.4 → 38.0). No scramble for upside calls.
+
+## Verdict
+* **The rigorous version of "house of cards" mostly does not show up in daily footprints.**
+  * Across 5,853 stock runs, volume, liquidity and overnight share do not predict whether a run holds; neither do dealer gamma or breadth for the S&P.
+  * The loose "forced" label could not be identified from them.
+* **The one footprint with the mechanism's sign is call-skew richening**, paying up for upside calls (ρ −0.20, p 0.05, n=145). Yesterday's ATM-vol proxy had no signal, so the earlier house-of-cards tilt came from a crude measure.
+* **Two descriptive leads worth a pre-registered re-test:**
+  * low-volume runs hit the cliff more often (35% vs 28%);
+  * gap-ups after thin-liquidity runs fade on the day (−0.18% median).
+* **For exits:** the tested rules are still the earnings-morning fade (confirmed) and the 09:35 read. Run-footprints are not yet reliable enough to set exits.

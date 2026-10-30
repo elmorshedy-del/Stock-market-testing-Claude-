@@ -78,6 +78,11 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **HC2. Market-level signature for all 13 names** (VIX/VXN instead of own IV, much larger n). Pre-register before running.
 - [ ] **HC3. Earnings morning × forced run:** do the two fade mechanisms stack?
 
+## Permanence follow-ups (2026-10-30)
+- [ ] **PM1. Call-skew footprint at scale:** 25-delta risk-reversal change over runs for more names and years (ThetaData history), pre-registered directional (ρ < 0).
+- [ ] **PM2. Low-volume runs cliff more** (35% vs 28%) and **thin-liquidity runs' gap days fade**: pre-register as directional and test on the 83-name breadth panel names not in the 42.
+- [ ] **PM3. Forward log:** call-skew change and volume tercile at each run end, for TSLA/NVDA/QQQ/SPY.
+
 ## Live forward checks (calls already made)
 - [ ] **F6. First-5-minute table** (gap-teardown, exploratory): log every TSLA/NVDA/AAPL/QQQ gap-up ≥ 0.5σ from Oct 29: the 09:30–09:35 bin and the 09:35–10:30 outcome.
 - [ ] **F1. Channel call:** the S&P makes a new high above 7,818.93 before closing at or below 7,427.98 ([channel-correction-theory](2026-10-25-channel-correction-theory/)).

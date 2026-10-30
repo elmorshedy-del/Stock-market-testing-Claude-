@@ -90,3 +90,5 @@
   * Selling into the open is favoured there; after a genuine run (vol falling), holding is.
   * This is a tilt, not a rule. Treat it as a forward check before sizing on it.
 * **Options-led volume** (call volume up relative to shares) did not separate anything; implied vol carried what signal there was.
+
+> **Superseded (2026-10-30):** the owner pointed out that this study adopted his loose term ("forced") as the definition. The redo, [permanence](../2026-10-30-permanence/), derives the construct from the literature and tests several footprints on 5,853 runs. There, the ATM-implied-vol proxy used here has no signal (ρ +0.08). Call skew is the only footprint with the predicted sign (ρ −0.20, p 0.05).

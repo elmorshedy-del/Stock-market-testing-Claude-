@@ -32,3 +32,9 @@
   * Forced index rallies give back half more often (Nasdaq-100 56% vs 29%) but are rare.
   * **Exit tilt:** after a forced run, sell into the open; after a genuine run (vol falling), holding is favoured. Forward-check before sizing.
 * **[calendar-mechanics](2026-10-29-calendar-mechanics/), 2026-10-29:** earnings-morning gap-ups are violent fades about 1 in 4 times vs about 1 in 7 (confirmed out of sample, Holm 0.031). Exit or protect calls at the open on earnings mornings.
+* **[permanence](2026-10-30-permanence/), 2026-10-30 (the rigorous redo):**
+  * "Forced vs genuine" was re-defined as transitory vs permanent price impact and measured as the share of a run kept 20 sessions later.
+  * Daily footprints (volume, liquidity, overnight share, dealer gamma, breadth) do not predict it across 5,853 runs.
+  * Only call-skew richening (traders paying up for upside calls) points the right way (ρ −0.20, p 0.05).
+  * Low-volume runs are the fragile ones (cliff 35% vs 28%).
+  * The earlier house-of-cards tilt came from a crude measure; treat it as unconfirmed.

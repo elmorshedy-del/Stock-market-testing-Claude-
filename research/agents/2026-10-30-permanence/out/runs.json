@@ -1,0 +1,113 @@
+{
+ "tests": {
+  "X1 abnormal volume during the run": {
+   "n": 5853,
+   "rho": 0.03187254988933989,
+   "ci95": [
+    -0.006778808324881521,
+    0.07107414655037712
+   ],
+   "p": 0.10790000000000001,
+   "rho_1990_2007": 0.04324107361792401,
+   "rho_2008_2025": 0.020011890913399395,
+   "rho_vs_G10": -0.052939224658850564,
+   "P20_median_top_tercile": 1.1483679995472167,
+   "P20_median_bottom_tercile": 1.090908712592138,
+   "cliff_top_tercile": 0.27989821882951654,
+   "cliff_bottom_tercile": 0.3506962351727695,
+   "p_holm": 0.5395000000000001,
+   "sign_as_predicted": false,
+   "pass": false
+  },
+  "X2 thinning liquidity (Amihud ratio)": {
+   "n": 5853,
+   "rho": 0.006467878869531263,
+   "ci95": [
+    -0.03005015046157351,
+    0.04480160542256603
+   ],
+   "p": 0.7225,
+   "rho_1990_2007": -0.011578555435354182,
+   "rho_2008_2025": 0.029132101307718587,
+   "rho_vs_G10": -0.011002326327013824,
+   "P20_median_top_tercile": 1.1416761245924085,
+   "P20_median_bottom_tercile": 1.1219541758358145,
+   "cliff_top_tercile": 0.31806615776081426,
+   "cliff_bottom_tercile": 0.3176895306859206,
+   "p_holm": 1.0,
+   "sign_as_predicted": false,
+   "pass": false
+  },
+  "X3 overnight share of the run": {
+   "n": 5853,
+   "rho": 0.013382227823313515,
+   "ci95": [
+    -0.021527983410999516,
+    0.048300219758906485
+   ],
+   "p": 0.4431,
+   "rho_1990_2007": 0.017552447563095708,
+   "rho_2008_2025": -0.0028523166181449733,
+   "rho_vs_G10": -0.044827496240835575,
+   "P20_median_top_tercile": 1.1280989488302515,
+   "P20_median_bottom_tercile": 1.1184669962105553,
+   "cliff_top_tercile": 0.31603053435114503,
+   "cliff_bottom_tercile": 0.334708612686952,
+   "p_holm": 1.0,
+   "sign_as_predicted": false,
+   "pass": false
+  },
+  "X4 call-skew (25-delta risk reversal) change during the run": {
+   "n": 145,
+   "rho": -0.20153763209044642,
+   "ci95": [
+    -0.3910528004683133,
+    0.0001660567574460664
+   ],
+   "p": 0.0507,
+   "old proxy, ATM IV change": {
+    "n": 145,
+    "rho": 0.08450873343428508,
+    "ci95": [
+     -0.09308412431112947,
+     0.26638499123449977
+    ],
+    "p": 0.3709
+   },
+   "p_holm": 0.3042,
+   "sign_as_predicted": true,
+   "pass": false
+  },
+  "X5 share of run sessions with low dealer gamma (S&P, 2011+)": {
+   "n": 67,
+   "rho": 0.0601076588561267,
+   "ci95": [
+    -0.2013049215230799,
+    0.3227852894878547
+   ],
+   "p": 0.6486999999999999,
+   "p_holm": 1.0,
+   "sign_as_predicted": false,
+   "pass": false
+  },
+  "X6 narrowness = minus breadth (S&P runs)": {
+   "n": 154,
+   "rho": 0.006847266848040127,
+   "ci95": [
+    -0.14919949254852022,
+    0.1669442897732093
+   ],
+   "p": 0.9459,
+   "p_holm": 1.0,
+   "sign_as_predicted": false,
+   "pass": false
+  }
+ },
+ "describe": {
+  "stock runs": 5853,
+  "stocks": 42,
+  "P20 median": 1.1172415244594636,
+  "cliff rate": 0.3141978472578165,
+  "S&P runs": 154
+ }
+}
