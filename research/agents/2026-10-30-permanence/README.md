@@ -120,3 +120,35 @@
 * **Not testable now:**
   * Single-stock option footprints before 2020. ThetaData returns "requires a STANDARD subscription" for anything before 2020 on the current Value plan.
   * Queued as TODO T5 for when the owner upgrades.
+
+## Amendment 1 results: options regimes (computed after 67fa742)
+**Family G (Holm across G1–G5): nothing passes.**
+* The daily stock footprints behave the same before and after 2020: X1 ρ +0.03 / +0.03, X2 −0.00 / +0.05, X3 +0.01 / −0.01.
+* S&P dealer gamma is no different (+0.10 / +0.09).
+* Only 1 price-up + VIX-up S&P run happened after 2020 (33 runs), so G5 cannot be tested.
+
+**Within the options era (R1 2020–21 vs R2 2022–26; reported with CIs, outside the Holm family):**
+| | R1 2020–21 | R2 2022–26 |
+|---|---|---|
+| Gap day after a price-up + IV-up run, open → close (σ) | **−0.26 [−0.47, −0.05], p 0.02** (n forced 138) | −0.07 [−0.20, +0.05], p 0.26 (n forced 291) |
+| 7-day ATM call, gap open → close, median: forced vs not | **−1.0% vs +11.0%** | −3.2% vs +0.8% |
+| Call skew (X4) vs permanence | +0.20 [−0.14, +0.48], n 45 | **−0.33 [−0.53, −0.10], p 0.006**, n 100 |
+| ATM IV vs permanence | −0.13, n 45 | +0.14, n 100 |
+
+**Earlier option-linked results by era (descriptive):**
+| | 2018–19 | 2020–21 | 2022–26 |
+|---|---|---|---|
+| Earnings-morning gap-ups that are violent fades (vs other gap-ups) | 16% vs 11% (n 37) | **30% vs 13%** (n 47) | **27% vs 16%** (n 110) |
+| 09:35 rule: Spearman of the first 5 min with the next 55 (13 names) | 0.12 | 0.02 | 0.05 |
+| Strong first 5 min (≥ +0.25σ), share up over the next 55 | 58% | 57% | 56% |
+
+* **S&P forced-flow give-back** (slope of the next 10 days on today's move): 2011–19 low-gamma days −0.12 vs other days −0.03. 2020–26 low-gamma days −0.00 vs other days −0.14. The low-gamma give-back seen before 2020 is not there after; since 2020, all S&P moves are given back more.
+
+**Reading:**
+* The owner is right that the option world changed. The *daily stock* footprints never worked in either era. The option-linked effects do differ by era:
+  1. The earnings-morning fade nearly doubled after 2020.
+  2. The price-up + IV-up gap-day fade was a 2020–21 phenomenon (retail call boom) and weakened in the 0DTE era.
+  3. Call-skew richening predicts a run fading only in the 0DTE era (ρ −0.33).
+  4. The 09:35 first-5-minute signal has been weak since 2020.
+* These era splits are subgroup results; each needs forward confirmation.
+* **Before 2020, single-stock option footprints cannot be measured** on the current ThetaData Value plan (TODO T5).

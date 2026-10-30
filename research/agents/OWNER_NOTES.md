@@ -2,6 +2,10 @@
 
 *Started 2026-10-29. Add to it; don't rewrite it.*
 
+## Regimes (owner, 2026-10-30: "the option world is different post 2020")
+* Test every option-linked idea **per regime**: R0 before 2020, R1 2020–21 (the retail call boom), R2 2022+ (the 0DTE and daily-expiry era). Never pool across eras without showing each one.
+* Single-stock options before 2020 need ThetaData Standard; the current plan is Value (2020 onward).
+
 ## How to treat the owner's words (owner, 2026-10-30)
 * The owner is an observer using loose terms ("forced", "genuine", "vacuum", "house of cards"). **Never adopt the words as definitions.**
 * Derive the construct from mechanics and the literature, measure the outcome directly, and test several footprints against it. Say which definition was used and why.
@@ -38,3 +42,8 @@
   * Only call-skew richening (traders paying up for upside calls) points the right way (ρ −0.20, p 0.05).
   * Low-volume runs are the fragile ones (cliff 35% vs 28%).
   * The earlier house-of-cards tilt came from a crude measure; treat it as unconfirmed.
+* **Options regimes, 2026-10-30:**
+  * The earnings-morning fade got stronger after 2020: violent fades 27–30% vs 13–16%, up from 16% vs 11% in 2018–19. This is the strongest exit rule we have.
+  * The price-up + IV-up gap-day fade was mostly a 2020–21 thing.
+  * In the 0DTE era, call-skew richening during a run predicts that the run fades (ρ −0.33).
+  * **Correction:** the 09:35 rule is weaker than first reported. Strong first 5 minutes → higher next 55 minutes 61% (TSLA/AAPL/NVDA/QQQ) or 55% (others), not 72%, and weak since 2020. A mild tilt only.

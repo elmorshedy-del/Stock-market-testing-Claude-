@@ -197,3 +197,5 @@ Medians, % of price.
 * QQQ 69%.
 
 Within the same window, TSLA fell another ≥1% on 65% of these days and rebounded ≥1% on 55%.
+
+> **Erratum (2026-10-30):** the "practical table" above came from the weighted 270-event sample, with only 62 events in the ≥ +0.25σ bin. On the full labeled population (all 1,512 gap-ups of these 4 names, from the 1-minute bars), a strong first 5 minutes is followed by a higher next 55 minutes **61%** of the time, not 72%. A weak first 5 minutes is followed by a lower one 55% of the time. For the other 9 names the figures are 55% and 47%. Since 2020 the signal is weaker (Spearman 0.02–0.05 vs 0.12 in 2018–19; [permanence](../2026-10-30-permanence/) Amendment 1). Treat the 09:35 read as a mild tilt, not a rule.
