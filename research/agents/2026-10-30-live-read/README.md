@@ -219,3 +219,29 @@
 
   * For scale, from the Oct 29 close: a 2-sigma day (VIX 17.2) is 752.7 and 3-sigma is 744.4. The put wall is 750.
   * Monday's curve after the expiry is about 40% shallower (peak −$11.9bn at 733).
+
+### The whole ladder for Friday (owner: "weren't there other Rs? I thought they synergise")
+* **Two families that come in sequence.** Dip rungs R1–R5 need low GEX and fire during selloffs. Vol-crush rungs R6–R7 need low GEX within the last 15 sessions plus VIX falling from its 10-day max, so they fire during recoveries.
+* **Within the dip family, conditions stack:**
+  * P(up-leg) climbs R1 61/72 → R2 65/79 → R4 70/74 → R5 74/83 (2012–26 / 2019Q4–26).
+  * Multiverse (REPORT §4j): lower GEX thresholds and a DIX filter strengthen the effect.
+  * The spread payoff does not climb in the recent era: R2 +16% vs R5 +11% vs any day +12.4%.
+* **R7 is a different kind of signal:**
+  * P(leg) is only 46/52% (below any day), but naked calls pay +5/+10% and the spread +17/+21%, the best spread since 2019Q4.
+  * Vol is cheap after the crush.
+  * The sequence "dip rung, then R7" has not been tested as one combined rule.
+* **Friday's conditions:**
+  * R3–R5 need GEX ≤ $3.35bn (≤ 20th). P(GEX ≤ $3.35bn) by S&P close, from the same model as `r2_price.py`:
+
+| S&P close | Change | P(GEX ≤ $3.35bn) |
+|---|---|---|
+| 7,605 | −1.5% | 19–30% |
+| 7,566 | −2.0% | 32–78% |
+| 7,527 | −2.5% | 60–96% |
+| 7,489 | −3.0% | 84–98% |
+
+  * R4 also needs SPX ≤ 7,602, which is met at those closes. R5 adds DIX (~60%).
+  * "Low GEX recently" for R6/R7 is **live**: GEX was at the 18th percentile on Oct 22, so it holds to about Nov 12 without a new low, and longer if Friday sets one.
+  * R6 needs VIX ≤ 0.85 × its 10-day max (about 16.5 now). R7 needs ≤ 0.75× (about 14.6).
+  * A Friday VIX spike raises the max and so the lines. At VIX 21, R6 sits at ≤ 17.9 and R7 at ≤ 15.75.
+  * That is the mechanical link between a flush and the later crush rungs.
