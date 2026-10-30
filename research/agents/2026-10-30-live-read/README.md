@@ -271,3 +271,24 @@ Same model as `r2_price.py`. Each cell is a range across the two fits.
   * Damping slows moves; it does not pull price up.
   * A SPY flush makes TSLA trade as beta (REPORT §4k).
 * The Oct 28 OI curve grid stops at 375 (±7% of spot), so the area below 375 is not drawn.
+
+## Pre-registration D1 (written and pushed before computing): does SPY's selling override TSLA's own dealer cushion?
+* **Owner, 2026-10-30:** "Tell me more about spy overriding and dragging it thing."
+* **Mechanism, from the literature:**
+  * Index-level selling is spread into every member stock: index-option dealer hedging in futures and baskets, ETF arbitrage, and systematic de-risking (vol-control, CTA).
+  * TSLA's own long call gamma makes its dealers buy TSLA dips.
+  * Which one wins on a market selloff day is the question.
+  * Correlations rise in selloffs (Longin–Solnik 2001; Ang–Chen 2002). REPORT §4k found TSLA–S&P correlation 0.62 at low S&P GEX vs 0.35 at high.
+* **Events:** S&P 500 down days ≤ −1% (close to close), 2020-01-02 to 2026-10-14. The end date is where the TSLA own-gamma history (`microstructure/out/td_gamma_TSLA.csv`) stops.
+* **States, both known at the prior close:**
+  * **TSLA own gamma:** `gex_classic / (spot × total OI × 100)`, percentile vs the trailing 252 days, as in `tsla_state.py`. High = top third; low = bottom third.
+  * **S&P gamma:** SqueezeMetrics `gex_pct`. Low ≤ 0.30, else not low.
+* **Outcome:**
+  * Primary: TSLA's **excess return over beta** on the event day, = TSLA return − β × S&P return, with β the trailing 60-day OLS beta ending the prior day. Yahoo adjusted daily closes.
+  * Secondary: TSLA's next-day excess return (rebound).
+* **Hypotheses:**
+  * **D1a, cushion:** with S&P gamma not low, high own-gamma days have a higher (less negative) excess return than low own-gamma days.
+  * **D1b, override:** with S&P gamma low, that difference shrinks toward zero. Interaction: (high − low own) in not-low S&P gamma minus the same in low S&P gamma, > 0.
+* **Statistics:** differences in means with month-cluster bootstrap 90% CIs and p-values (5,000 draws). Holm across D1a and D1b. Every cell's n is reported.
+* **Regimes per OWNER_NOTES:** the same cells for 2020–21 and 2022–26. Pre-2020 has no TSLA option data on this plan.
+* **Prediction:** D1a positive but small; D1b positive. Confidence is low, because the S&P down days with low S&P gamma will be few once split three ways.
