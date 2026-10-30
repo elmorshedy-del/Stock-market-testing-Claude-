@@ -245,3 +245,14 @@
   * R6 needs VIX ≤ 0.85 × its 10-day max (about 16.5 now). R7 needs ≤ 0.75× (about 14.6).
   * A Friday VIX spike raises the max and so the lines. At VIX 21, R6 sits at ≤ 17.9 and R7 at ≤ 15.75.
   * That is the mechanical link between a flush and the later crush rungs.
+
+### The owner's scenario: SPY closes 760 ± 2
+Same model as `r2_price.py`. Each cell is a range across the two fits.
+
+| Rung | SPY 762 (SPX 7,647) | SPY 760 (7,626) | SPY 758 (7,606) |
+|---|---|---|---|
+| R1 (GEX ≤ 30th) | 37–63% | 53–84% | 69–91% |
+| R2 (+ DIX > 50th) | 21–36% | 31–52% | 40–58% |
+| R3 (GEX ≤ 20th) | 10–12% | 15–16% | 19–30% |
+| R4 / R5 (+ SPX ≤ 7,602) | no: price misses | no | no: needs SPY ≤ ~757.6 |
+| R6 / R7 (VIX crush) | no: VIX rises on a down day; these come in the recovery | | |
