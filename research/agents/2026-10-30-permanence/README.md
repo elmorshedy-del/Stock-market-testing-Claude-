@@ -96,3 +96,27 @@
   * low-volume runs hit the cliff more often (35% vs 28%);
   * gap-ups after thin-liquidity runs fade on the day (−0.18% median).
 * **For exits:** the tested rules are still the earnings-morning fade (confirmed) and the 09:35 read. Run-footprints are not yet reliable enough to set exits.
+
+
+---
+
+## Amendment 1: options regimes (owner, 2026-10-30: "you still are not testing options per regime; the option world is different post 2020"; written before any regime split was computed)
+* **Regimes are fixed by documented market-structure changes, not by our results:**
+  * **R0, 1990–2019:** options a sideshow to large-cap stock flow. For SqueezeMetrics GEX tests, R0 is 2011–2019.
+  * **R1, 2020-01 – 2021-12:** the retail call-buying boom: single-stock call volume and gamma squeezes, commission-free options apps.
+  * **R2, 2022-01 – 2025-12:** the short-dated era. SPX Tuesday/Thursday expiries were added in 2022, then daily SPY and QQQ expiries (Nov 2022). 0DTE became a large share of index option volume.
+* **Mechanism and prediction:** where option hedging is a big share of stock flow, footprints of mechanical flow should matter more for whether a run holds. Footprints should be more negatively related to permanence in R1 + R2 than in R0.
+* **Tests (Holm across these 5; month-cluster bootstrap; two-sided):**
+  * **G1–G3:** the Spearman of X1 (abnormal volume), X2 (thinning liquidity) and X3 (overnight share) with P20, in 2020–2025 minus in 1990–2019 (stock runs). Prediction: < 0 for each.
+  * **G4:** X5 (low dealer gamma share, S&P runs), 2020–2025 minus 2011–2019. Prediction: < 0.
+  * **G5:** the S&P price-up-and-VIX-up run contrast (give-back, forced minus not), 2020–2025 minus 1990–2019. Prediction: > 0.
+* **Within the options era (reported with CIs, not in the Holm family):**
+  * X4 (call skew) and the ATM-IV proxy in R1 vs R2.
+  * The house-of-cards gap-day test (H5) in R1 vs R2.
+* **Earlier option-linked results re-read by regime (descriptive):**
+  * the earnings-gap fade rate (2018–19, 2020–21, 2022–26);
+  * the 09:35 first-5-minute rule;
+  * the forced-flow law's dealer-gamma give-back (if the forced-flow outputs allow it).
+* **Not testable now:**
+  * Single-stock option footprints before 2020. ThetaData returns "requires a STANDARD subscription" for anything before 2020 on the current Value plan.
+  * Queued as TODO T5 for when the owner upgrades.
