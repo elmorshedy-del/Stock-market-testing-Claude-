@@ -98,3 +98,7 @@ Every test is pre-registered in its own folder before it runs.
 
 ## Done
 - (none yet)
+
+- [ ] **WR1. Expiry-day pin vs market selloff:** on S&P down days that are also big single-name expiries, does price hold the top-gamma strike? TSLA Oct 30 held 400 on S&P -1.8% (one case). [week-review](2026-10-31-week-review/).
+- [ ] **WR2. Translator bands:** report D1-style beta translations with the excess-return spread (TSLA SD 3.4 pts), never a point range. [week-review](2026-10-31-week-review/).
+- [ ] **WR3. Score R4 (fired Oct 30):** up-leg (10-day S&P rise >= ~3.5%) by about Nov 27? And the election VIX release (fit -3.8 pts in the 5 sessions after Nov 3).

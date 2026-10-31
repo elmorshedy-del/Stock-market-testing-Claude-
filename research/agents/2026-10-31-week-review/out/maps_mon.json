@@ -1,0 +1,71 @@
+{
+ "SPY": {
+  "spot (Oct 30 close)": 755.72,
+  "flip": 774.06,
+  "total gamma $bn per 1% at spot": -11.65,
+  "call wall": 800.0,
+  "put wall": 750.0,
+  "top positive strikes": {
+   "800.0": 0.599,
+   "780.0": 0.315,
+   "790.0": 0.258,
+   "785.0": 0.175
+  },
+  "top negative strikes": {
+   "750.0": -1.804,
+   "760.0": -0.949,
+   "755.0": -0.886,
+   "757.0": -0.776
+  },
+  "most negative total-gamma price": 739.85,
+  "most positive total-gamma price": 802.57,
+  "short-gamma zone": [
+   702.8,
+   773.9
+  ],
+  "nearest expiry 2026-11-02 share of |gamma|": 0.051
+ },
+ "TSLA": {
+  "spot (Oct 30 close)": 399.81,
+  "flip": 375.28,
+  "total gamma $bn per 1% at spot": 0.31,
+  "call wall": 400.0,
+  "put wall": 350.0,
+  "top positive strikes": {
+   "420.0": 0.043,
+   "400.0": 0.04,
+   "410.0": 0.035,
+   "405.0": 0.018
+  },
+  "top negative strikes": {
+   "390.0": -0.012,
+   "380.0": -0.007,
+   "397.5": -0.005,
+   "392.5": -0.003
+  },
+  "most negative total-gamma price": 371.82,
+  "most positive total-gamma price": 427.8,
+  "short-gamma zone": [
+   371.8,
+   375.0
+  ],
+  "nearest expiry 2026-11-02 share of |gamma|": 0.106
+ },
+ "TSLA state": {
+  "flip": 372.2,
+  "% above flip": 7.43,
+  "near-OI pct": 0.04,
+  "own-gamma pct": 0.602,
+  "call wall": 400.0,
+  "put wall": 350.0
+ },
+ "TSLA skew Oct 30": {
+  "sym": "TSLA",
+  "date": "2026-10-30 00:00:00",
+  "spot": 399.875,
+  "iv_c25": 0.3948,
+  "iv_p25": 0.4424,
+  "rr25": -0.0477,
+  "atm_iv": 0.4137
+ }
+}
