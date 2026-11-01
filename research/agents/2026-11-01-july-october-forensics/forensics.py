@@ -104,7 +104,7 @@ for lab, a, b in (("July", "2026-07-10", "2026-07-31"), ("October", "2026-10-09"
     P[lab] = {"S&P % (start close to month-end)": round(100 * chg(spy, a, b), 2), "max drawdown in window %": round(100 * float((spy.loc[a:b] / spy.loc[a:b].cummax() - 1).min()), 2),
               "VIX start / max / end": [round(float(vix.loc[:a].iloc[-1]), 2), round(float(vix.loc[a:b].max()), 2), round(float(vix.loc[:b].iloc[-1]), 2)],
               "equal-weight minus cap-weight (RSP - S&P) %": round(100 * (chg(rsp, a, b) - chg(spy, a, b)), 2), "QQQ - IWM %": round(100 * (chg(qqq, a, b) - chg(iwm, a, b)), 2),
-              "10y yield change (bp)": round(float(tnx.loc[:b].iloc[-1] - tnx.loc[:a].iloc[-1]) * 10, 1), "dollar index %": round(100 * chg(dxy, a, b), 2),
+              "10y yield change (bp)": round(float(tnx.loc[:b].iloc[-1] - tnx.loc[:a].iloc[-1]) * 100, 1), "dollar index %": round(100 * chg(dxy, a, b), 2),
               "gamma rows on file": int(len(gg)), "share of days spot below flip": round(float((gg.spot < gg.flip_classic).mean()), 2) if len(gg) else None,
               "median GEX classic $bn": round(float(gg.gex_classic.median()) / 1e9, 2) if len(gg) else None}
 res["pieces"] = P

@@ -49,7 +49,7 @@ rows = [("✓", "Same calendar, same weekdays", "opex Fri, VIX-expiry Wed + TSLA
         ("✓", "Same rotation out of tech", f"QQQ−IWM {J['QQQ - IWM %']:+.1f} vs {Oc['QQQ - IWM %']:+.1f} pts (Oct 2x stronger)"),
         ("✗", "Different news at the end", "GOOGL EPS surprise +216% vs −28%; AMZN +2.7% vs −6.0%"),
         ("✗", "Different FOMC reaction", "Jul 29 −1.5% vs Oct 28 +0.3%"),
-        ("–", "Not rates, not the dollar", f"10y {J['10y yield change (bp)']:+.0f} / {Oc['10y yield change (bp)']:+.0f} bp; dollar {J['dollar index %']:+.1f} / {Oc['dollar index %']:+.1f}%")]
+        ("✗", "Different rates", f"10y {J['10y yield change (bp)']:+.0f} vs {Oc['10y yield change (bp)']:+.0f} bp (October: a flight into bonds)")]
 ax.set_title("B. The pieces: what matched and what did not", loc="left", fontsize=12.5, weight="bold", color=INK)
 col = {"✓": "#0ca30c", "✗": "#d03b3b", "–": INK2}
 for i, (mk, a, b) in enumerate(rows):

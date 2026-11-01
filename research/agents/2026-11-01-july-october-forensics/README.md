@@ -69,7 +69,7 @@
 | Gamma | below flip 81% of days, median GEX −$5.2bn | below flip from Oct 14 (live maps: GEX −$12 to −14bn per 1%) | ✓ (short gamma both) |
 | VIX peak | 20.7 | 20.0 | ✓ |
 | Rotation out of tech | QQQ−IWM −3.6 pts; RSP−S&P +1.5 | −8.2; +5.4 | ✓ (October 2× stronger) |
-| Rates / dollar | 10y +2bp; DXY −1.2% | −3bp; −0.3% | – (neither) |
+| Rates / dollar | 10y **+18bp**; DXY −1.2% | **−32bp**; −0.3% | ✗ (corrected: October was a flight into bonds) |
 | End-of-month earnings | GOOGL EPS surprise +216%, AMZN +2.7% | GOOGL −28%, AMZN −6.0% | ✗ (opposite) |
 | FOMC day | −1.5% | +0.3% | ✗ |
 | Window result | −1.1% (then the August breakout) | −2.9% (Friday gap −1.05%, day −1.8%) | ✗ |
@@ -83,3 +83,9 @@
 * **"Sell, drift, gap down" is what most multi-week declines look like.** The eye matches the shape; the statistics match only the timing of the scheduled days.
 * **Forward use (timing only):** Q4 replays the scaffold 13 weeks on: Jan opex Fri Jan 15 2027, VIX expiry Wed Jan 20, month-end Fri Jan 29.
   * Expect volatility to be released on those days if the state is fragile again. Do not expect a direction from the calendar.
+
+### Erratum (2026-11-01, found while building the mechanism ledger)
+* **The 10-year yield change was mis-scaled by 10×** (Yahoo `^TNX` is quoted in percent; the code multiplied by 10 instead of 100).
+* **Corrected:** July window +18bp, October window −32bp.
+* **Consequence:** the "not rates" row was wrong. Rates *differ* between the two months: July's selloff came with yields rising, October's with a flight into bonds (yields falling, credit softer). That points to a growth or risk-off tone in October that July did not have.
+* The figure and table are corrected. No other number changes.
