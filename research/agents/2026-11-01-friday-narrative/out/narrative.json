@@ -1,0 +1,276 @@
+{
+ "C1 open": {
+  "ES signed contracts 09:30-10:30, Fri": -11007,
+  "baseline days": {
+   "2026-10-23": -2552,
+   "2026-10-26": 4353,
+   "2026-10-27": -998,
+   "2026-10-28": -500,
+   "2026-10-29": -5151
+  },
+  "z": -2.88,
+  "Fri corr(ES flow_t, SPY ret_t+1)": 0.007,
+  "Fri corr(SPY ret_t, ES flow_t+1)": 0.336,
+  "Fri same-minute corr": 0.543,
+  "baseline mean lead / reverse": [
+   -0.1,
+   0.109
+  ],
+  "ES price 09:30 -> 10:29": [
+   7664.5,
+   7636.0
+  ],
+  "claim passes (z <= -1 and ES leads)": false
+ },
+ "C2 grind": {
+  "Fri lag-1 autocorr of 5-min ES flow": 0.295,
+  "baseline": {
+   "2026-10-23": 0.157,
+   "2026-10-26": 0.299,
+   "2026-10-27": 0.223,
+   "2026-10-28": -0.112,
+   "2026-10-29": 0.092
+  },
+  "Fri Kyle lambda (bp per 1k signed contracts)": 4.855,
+  "baseline lambda": {
+   "2026-10-23": 3.623,
+   "2026-10-26": 4.011,
+   "2026-10-27": 3.442,
+   "2026-10-28": 8.501,
+   "2026-10-29": 6.021
+  },
+  "Fri signed contracts 10:30-14:30": 22590,
+  "baseline signed": {
+   "2026-10-23": 4843,
+   "2026-10-26": -5450,
+   "2026-10-27": 11662,
+   "2026-10-28": 2088,
+   "2026-10-29": -727
+  },
+  "Fri volume": 906538,
+  "baseline volume mean": 632825,
+  "(a) above median": true,
+  "(b) above median": true,
+  "verdict": "pass"
+ },
+ "C3a 750 bid depth": {
+  "band": "750.00-750.50",
+  "median distance below mid in 14:40-14:55": [
+   0.75,
+   1.25
+  ],
+  "mean Arca bid shares in band, 14:40-14:55": 240,
+  "same-distance band, other 15-min windows: median": 0,
+  "pct rank of 14:40-14:55 among the day's windows": 1.0,
+  "claim passes (top quartile)": true,
+  "falsified (not top half)": false,
+  "avg bid size by 10-cent bucket when visible (14:40-14:55)": {
+   "749.8": null,
+   "749.9": null,
+   "750.0": null,
+   "750.1": null,
+   "750.2": null,
+   "750.3": 1794,
+   "750.4": 2752,
+   "750.5": 1599,
+   "750.6": 1684,
+   "750.7": 1845,
+   "750.8": 1882,
+   "750.9": 2099,
+   "751.0": 1803,
+   "751.1": 2255,
+   "751.2": 1631,
+   "751.3": 2451,
+   "751.4": 1911,
+   "751.5": 2561,
+   "751.6": 1650,
+   "751.7": 2598,
+   "751.8": 2771,
+   "751.9": 2171,
+   "752.0": 3079
+  },
+  "DEVIATION: band test degenerate (top 10 levels span ~$0.10)": true,
+  "alt (post hoc): mean top-10 bid shares when best bid 750.30-750.55": 4014,
+  "alt: all-day median of 10-min mean top-10 bid shares": 4204,
+  "alt: pct rank of the near-750 mean among 10-min windows": 0.31,
+  "alt: seconds with best bid 750.30-750.55 (5s snapshots x5)": 50
+ },
+ "C3b exhaustion": {
+  "ES signed contracts/min 14:07-14:36": 30.4,
+  "14:37-14:51": 166.1,
+  "claim passes (less negative into the low)": true,
+  "most negative 5-min ES flow time": "09:30:00"
+ },
+ "C4a rebound": {
+  "ES signed contracts 14:52-15:02": 1093,
+  "14:52-15:22": 2897,
+  "claim passes (>0)": true,
+  "ES signed contracts 15:00-15:59": 13512,
+  "baseline 15:00-15:59 mean": 2750
+ },
+ "C4b closing imbalance (Arca)": {
+  "Fri": {
+   "15:50": {
+    "side": "A",
+    "imbalance qty": 999422,
+    "paired": 1240964,
+    "ind match": 746.74,
+    "ref": 754.28
+   },
+   "15:55": {
+    "side": "A",
+    "imbalance qty": 934719,
+    "paired": 1434766,
+    "ind match": 748.51,
+    "ref": 756.07
+   },
+   "15:59": {
+    "side": "A",
+    "imbalance qty": 82092,
+    "paired": 2803282,
+    "ind match": 754.92,
+    "ref": 755.45
+   }
+  },
+  "baseline 15:59 sides": {
+   "2026-10-23": "B",
+   "2026-10-26": "B",
+   "2026-10-27": "A",
+   "2026-10-28": "A",
+   "2026-10-29": "A"
+  },
+  "claim passes (buy side)": false,
+  "note": "side B = buy imbalance, A = sell imbalance"
+ },
+ "C5 election premium": {
+  "spot": 756.87,
+  "term structure": [
+   {
+    "expiry": "2026-11-02",
+    "T days": 3,
+    "ATM strike": 757.0,
+    "ATM IV": 0.12292,
+    "total var": 0.00012,
+    "fwd var to next": 0.0001,
+    "fwd vol (ann.) of interval": 0.18641
+   },
+   {
+    "expiry": "2026-11-03",
+    "T days": 4,
+    "ATM strike": 757.0,
+    "ATM IV": 0.14149,
+    "total var": 0.00022,
+    "fwd var to next": 0.00012,
+    "fwd vol (ann.) of interval": 0.21112
+   },
+   {
+    "expiry": "2026-11-04",
+    "T days": 5,
+    "ATM strike": 757.0,
+    "ATM IV": 0.15789,
+    "total var": 0.00034,
+    "fwd var to next": 0.00011,
+    "fwd vol (ann.) of interval": 0.19674
+   },
+   {
+    "expiry": "2026-11-05",
+    "T days": 6,
+    "ATM strike": 755.0,
+    "ATM IV": 0.165,
+    "total var": 0.00045,
+    "fwd var to next": 0.0001,
+    "fwd vol (ann.) of interval": 0.18798
+   },
+   {
+    "expiry": "2026-11-06",
+    "T days": 7,
+    "ATM strike": 757.0,
+    "ATM IV": 0.16848,
+    "total var": 0.00054,
+    "fwd var to next": 0.00013,
+    "fwd vol (ann.) of interval": 0.12695
+   },
+   {
+    "expiry": "2026-11-09",
+    "T days": 10,
+    "ATM strike": 755.0,
+    "ATM IV": 0.15718,
+    "total var": 0.00068,
+    "fwd var to next": 0.00011,
+    "fwd vol (ann.) of interval": 0.20138
+   },
+   {
+    "expiry": "2026-11-10",
+    "T days": 11,
+    "ATM strike": 755.0,
+    "ATM IV": 0.1617,
+    "total var": 0.00079,
+    "fwd var to next": 8e-05,
+    "fwd vol (ann.) of interval": 0.17311
+   },
+   {
+    "expiry": "2026-11-11",
+    "T days": 12,
+    "ATM strike": 755.0,
+    "ATM IV": 0.16268,
+    "total var": 0.00087,
+    "fwd var to next": 8e-05,
+    "fwd vol (ann.) of interval": 0.17304
+   },
+   {
+    "expiry": "2026-11-12",
+    "T days": 13,
+    "ATM strike": 755.0,
+    "ATM IV": 0.1635,
+    "total var": 0.00095,
+    "fwd var to next": 7e-05,
+    "fwd vol (ann.) of interval": 0.15491
+   },
+   {
+    "expiry": "2026-11-13",
+    "T days": 14,
+    "ATM strike": 757.0,
+    "ATM IV": 0.1629,
+    "total var": 0.00102,
+    "fwd var to next": NaN,
+    "fwd vol (ann.) of interval": NaN
+   }
+  ],
+  "election-night interval variance / neighbours' mean": 1.23,
+  "claim passes (>= 1.5x)": false
+ },
+ "C6 put monetization": {
+  "Oct 30 (0DTE) 745-765 13:30-14:30": {
+   "contracts/min": 4039.0,
+   "seller-initiated share": 0.468,
+   "buyer-initiated share": 0.51
+  },
+  "Oct 30 (0DTE) 745-765 14:30-15:00": {
+   "contracts/min": 4347.0,
+   "seller-initiated share": 0.482,
+   "buyer-initiated share": 0.491
+  },
+  "Oct 30 (0DTE) 745-765 15:00-15:30": {
+   "contracts/min": 2098.0,
+   "seller-initiated share": 0.497,
+   "buyer-initiated share": 0.477
+  },
+  "Nov 20 740-760 13:30-14:30": {
+   "contracts/min": 186.0,
+   "seller-initiated share": 0.488,
+   "buyer-initiated share": 0.445
+  },
+  "Nov 20 740-760 14:30-15:00": {
+   "contracts/min": 581.0,
+   "seller-initiated share": 0.507,
+   "buyer-initiated share": 0.469
+  },
+  "Nov 20 740-760 15:00-15:30": {
+   "contracts/min": 331.0,
+   "seller-initiated share": 0.747,
+   "buyer-initiated share": 0.227
+  },
+  "claim passes (more selling at the low in both expiries)": true,
+  "falsified (put trades skew to buying at the low)": false
+ }
+}
