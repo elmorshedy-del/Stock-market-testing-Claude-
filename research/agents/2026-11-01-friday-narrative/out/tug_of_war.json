@@ -1,0 +1,74 @@
+{
+ "Fri": {
+  "sell-min n": 86,
+  "sell-min pts": -171.8,
+  "sell-min avg": -2.0,
+  "buy-min n": 176,
+  "buy-min pts": 95.2,
+  "buy-min avg": 0.54,
+  "total": -77.2,
+  "impact/1k buys": 3.39,
+  "impact/1k sells": -3.63,
+  "drift pts/min": -0.135
+ },
+ "2026-10-23": {
+  "sell-min n": 128,
+  "sell-min pts": -129.0,
+  "sell-min avg": -1.01,
+  "buy-min n": 135,
+  "buy-min pts": 139.2,
+  "buy-min avg": 1.03,
+  "total": 10.2,
+  "impact/1k buys": 2.85,
+  "impact/1k sells": -2.73,
+  "drift pts/min": -0.201
+ },
+ "2026-10-26": {
+  "sell-min n": 133,
+  "sell-min pts": -118.0,
+  "sell-min avg": -0.89,
+  "buy-min n": 130,
+  "buy-min pts": 121.5,
+  "buy-min avg": 0.93,
+  "total": 3.5,
+  "impact/1k buys": 3.35,
+  "impact/1k sells": -2.9,
+  "drift pts/min": -0.513
+ },
+ "2026-10-27": {
+  "sell-min n": 125,
+  "sell-min pts": -77.0,
+  "sell-min avg": -0.62,
+  "buy-min n": 136,
+  "buy-min pts": 103.2,
+  "buy-min avg": 0.76,
+  "total": 26.0,
+  "impact/1k buys": 2.66,
+  "impact/1k sells": -2.66,
+  "drift pts/min": -0.016
+ },
+ "2026-10-28": {
+  "sell-min n": 128,
+  "sell-min pts": -129.0,
+  "sell-min avg": -1.01,
+  "buy-min n": 134,
+  "buy-min pts": 132.0,
+  "buy-min avg": 0.99,
+  "total": 3.0,
+  "impact/1k buys": 7.85,
+  "impact/1k sells": -7.85,
+  "drift pts/min": -0.162
+ },
+ "2026-10-29": {
+  "sell-min n": 126,
+  "sell-min pts": -142.8,
+  "sell-min avg": -1.13,
+  "buy-min n": 137,
+  "buy-min pts": 124.8,
+  "buy-min avg": 0.91,
+  "total": -18.0,
+  "impact/1k buys": 4.46,
+  "impact/1k sells": -4.74,
+  "drift pts/min": 0.294
+ }
+}

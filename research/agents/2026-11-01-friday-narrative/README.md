@@ -101,3 +101,21 @@
   * Return this minute → net flow next minute: **+0.35**. Drops called in more selling.
   * Net flow this minute → return next minute: +0.02 (nothing).
   * This is a feedback pattern (reactive sellers: dealer hedges, stops, trend algos), not an informed seller leading the price.
+
+### Correction after the owner's question ("why isn't it selling market orders where the liquidity is thin?")
+![tug of war](out/tug_of_war.png)
+* **The owner's picture was right, and my earlier wording was wrong.** I wrote that the slide came "not from market-order selling". Splitting 10:30–14:52 into minutes (`tugofwar.py` → `out/tug_of_war.json`) shows otherwise.
+
+| ES, 10:30–14:52 | Sell-dominated minutes | Buy-dominated minutes | Total |
+|---|---|---|---|
+| Friday | **86 min, −172 pts (−2.00/min)** | 176 min, +95 pts (+0.54/min) | **−77** |
+| Normal day (Oct 23–29 avg) | 128 min, −0.93/min | 134 min, +0.92/min | ≈ 0 |
+
+* **Reading:**
+  * Market sells came in fewer, sharper bursts into thin bids, and each burst hit twice as hard as normal.
+  * Buy-dominated minutes were more numerous but moved price half as much as normal: sellers were waiting above.
+  * "Net buying" was a count of many weak buy minutes, not buyers winning.
+* **Regression of 1-minute change on buy and sell volume:**
+  * Price impact per 1k contracts: buys +3.39 pts, sells −3.63 pts.
+  * Drift −0.135 pts/min, which is about −35 pts over the window: quotes sliding down between trades.
+  * Roughly half the decline was the sell bursts' larger impact and half was the drift.
