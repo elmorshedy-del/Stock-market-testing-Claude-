@@ -1,0 +1,483 @@
+{
+ "n days": 1701,
+ "span": [
+  "2020-01-03",
+  "2026-10-12"
+ ],
+ "share of days open below flip": 0.536,
+ "primary (state = 09:30 open vs pre-open flip)": {
+  "rho_short": -0.0232,
+  "rho_long": -0.0346,
+  "cont_short": 0.5055,
+  "cont_long": 0.5032,
+  "O1_short": 1.0258,
+  "O1_long": 0.7701,
+  "n_short": 912.0,
+  "n_long": 789.0,
+  "b (all-state slope)": 0.0743,
+  "c": -0.126,
+  "H1 range diff (sigma units)": {
+   "obs": 0.2557,
+   "p circular shift": 0.0
+  },
+  "H2 rho diff (5-min)": {
+   "obs": 0.0113,
+   "p circular shift": 0.2022
+  },
+  "H3 interaction c": {
+   "obs": -0.126,
+   "p circular shift": 0.7491
+  },
+  "H3 continuation diff": {
+   "obs": 0.0023,
+   "p circular shift": 0.4765
+  },
+  "bootstrap 90% CI H1": [
+   0.224,
+   0.288
+  ],
+  "bootstrap 90% CI H2": [
+   -0.0072,
+   0.0293
+  ],
+  "bootstrap 90% CI H3 cont diff": [
+   -0.039,
+   0.043
+  ],
+  "n shifts": 554
+ },
+ "Holm (H3 uses the smaller of its two p; conservative note: not doubled)": {
+  "H1": 0,
+  "H2": 0.4043,
+  "H3": 0.4765
+ },
+ "dose-response by quintile of distance to flip (q0 = furthest below)": {
+  "0": {
+   "d median": -1.88,
+   "O1 mean": 1.163,
+   "rho5": -0.0146,
+   "cont15": 0.51,
+   "n": 341
+  },
+  "1": {
+   "d median": -0.64,
+   "O1 mean": 0.979,
+   "rho5": -0.0417,
+   "cont15": 0.497,
+   "n": 340
+  },
+  "2": {
+   "d median": -0.09,
+   "O1 mean": 0.869,
+   "rho5": -0.0339,
+   "cont15": 0.521,
+   "n": 340
+  },
+  "3": {
+   "d median": 0.32,
+   "O1 mean": 0.772,
+   "rho5": -0.0333,
+   "cont15": 0.518,
+   "n": 340
+  },
+  "4": {
+   "d median": 0.78,
+   "O1 mean": 0.752,
+   "rho5": -0.0421,
+   "cont15": 0.476,
+   "n": 340
+  }
+ },
+ "Spearman(d, O1)": -0.42,
+ "VR6 mean short/long": [
+  0.919,
+  0.884
+ ],
+ "implied VR6 from rho_short": 0.962,
+ "implied VR6 from rho_long": 0.944,
+ "multiverse": {
+  "flip|5m|open5": {
+   "H1 z": 7.35,
+   "H2 z": 0.84,
+   "H3 c z": -1.8,
+   "H3 cont z": -0.38,
+   "rho_s": -0.0232,
+   "rho_l": -0.0346,
+   "cont_s": 0.497,
+   "cont_l": 0.506
+  },
+  "flip|5m|open15": {
+   "H1 z": 7.35,
+   "H2 z": 0.84,
+   "H3 c z": -0.66,
+   "H3 cont z": 0.11,
+   "rho_s": -0.0232,
+   "rho_l": -0.0346,
+   "cont_s": 0.505,
+   "cont_l": 0.503
+  },
+  "flip|5m|open30": {
+   "H1 z": 7.35,
+   "H2 z": 0.84,
+   "H3 c z": -0.15,
+   "H3 cont z": -0.42,
+   "rho_s": -0.0232,
+   "rho_l": -0.0346,
+   "cont_s": 0.516,
+   "cont_l": 0.526
+  },
+  "flip|10m|open5": {
+   "H1 z": 7.35,
+   "H2 z": -0.02,
+   "H3 c z": -1.8,
+   "H3 cont z": -0.38,
+   "rho_s": -0.0347,
+   "rho_l": -0.0345,
+   "cont_s": 0.497,
+   "cont_l": 0.506
+  },
+  "flip|10m|open15": {
+   "H1 z": 7.35,
+   "H2 z": -0.02,
+   "H3 c z": -0.66,
+   "H3 cont z": 0.11,
+   "rho_s": -0.0347,
+   "rho_l": -0.0345,
+   "cont_s": 0.505,
+   "cont_l": 0.503
+  },
+  "flip|10m|open30": {
+   "H1 z": 7.35,
+   "H2 z": -0.02,
+   "H3 c z": -0.15,
+   "H3 cont z": -0.42,
+   "rho_s": -0.0347,
+   "rho_l": -0.0345,
+   "cont_s": 0.516,
+   "cont_l": 0.526
+  },
+  "flip|15m|open5": {
+   "H1 z": 7.35,
+   "H2 z": 0.73,
+   "H3 c z": -1.8,
+   "H3 cont z": -0.38,
+   "rho_s": -0.0276,
+   "rho_l": -0.0498,
+   "cont_s": 0.497,
+   "cont_l": 0.506
+  },
+  "flip|15m|open15": {
+   "H1 z": 7.35,
+   "H2 z": 0.73,
+   "H3 c z": -0.66,
+   "H3 cont z": 0.11,
+   "rho_s": -0.0276,
+   "rho_l": -0.0498,
+   "cont_s": 0.505,
+   "cont_l": 0.503
+  },
+  "flip|15m|open30": {
+   "H1 z": 7.35,
+   "H2 z": 0.73,
+   "H3 c z": -0.15,
+   "H3 cont z": -0.42,
+   "rho_s": -0.0276,
+   "rho_l": -0.0498,
+   "cont_s": 0.516,
+   "cont_l": 0.526
+  },
+  "gexsign|5m|open5": {
+   "H1 z": 6.76,
+   "H2 z": 0.83,
+   "H3 c z": -1.68,
+   "H3 cont z": -0.27,
+   "rho_s": -0.0234,
+   "rho_l": -0.0346,
+   "cont_s": 0.498,
+   "cont_l": 0.505
+  },
+  "gexsign|5m|open15": {
+   "H1 z": 6.76,
+   "H2 z": 0.83,
+   "H3 c z": -1.04,
+   "H3 cont z": -0.26,
+   "rho_s": -0.0234,
+   "rho_l": -0.0346,
+   "cont_s": 0.501,
+   "cont_l": 0.509
+  },
+  "gexsign|5m|open30": {
+   "H1 z": 6.76,
+   "H2 z": 0.83,
+   "H3 c z": -0.47,
+   "H3 cont z": 0.66,
+   "rho_s": -0.0234,
+   "rho_l": -0.0346,
+   "cont_s": 0.527,
+   "cont_l": 0.513
+  },
+  "gexsign|10m|open5": {
+   "H1 z": 6.76,
+   "H2 z": -0.18,
+   "H3 c z": -1.68,
+   "H3 cont z": -0.27,
+   "rho_s": -0.0354,
+   "rho_l": -0.0313,
+   "cont_s": 0.498,
+   "cont_l": 0.505
+  },
+  "gexsign|10m|open15": {
+   "H1 z": 6.76,
+   "H2 z": -0.18,
+   "H3 c z": -1.04,
+   "H3 cont z": -0.26,
+   "rho_s": -0.0354,
+   "rho_l": -0.0313,
+   "cont_s": 0.501,
+   "cont_l": 0.509
+  },
+  "gexsign|10m|open30": {
+   "H1 z": 6.76,
+   "H2 z": -0.18,
+   "H3 c z": -0.47,
+   "H3 cont z": 0.66,
+   "rho_s": -0.0354,
+   "rho_l": -0.0313,
+   "cont_s": 0.527,
+   "cont_l": 0.513
+  },
+  "gexsign|15m|open5": {
+   "H1 z": 6.76,
+   "H2 z": 0.86,
+   "H3 c z": -1.68,
+   "H3 cont z": -0.27,
+   "rho_s": -0.0271,
+   "rho_l": -0.053,
+   "cont_s": 0.498,
+   "cont_l": 0.505
+  },
+  "gexsign|15m|open15": {
+   "H1 z": 6.76,
+   "H2 z": 0.86,
+   "H3 c z": -1.04,
+   "H3 cont z": -0.26,
+   "rho_s": -0.0271,
+   "rho_l": -0.053,
+   "cont_s": 0.501,
+   "cont_l": 0.509
+  },
+  "gexsign|15m|open30": {
+   "H1 z": 6.76,
+   "H2 z": 0.86,
+   "H3 c z": -0.47,
+   "H3 cont z": 0.66,
+   "rho_s": -0.0271,
+   "rho_l": -0.053,
+   "cont_s": 0.527,
+   "cont_l": 0.513
+  },
+  "gexpct|5m|open5": {
+   "H1 z": 6.0,
+   "H2 z": -0.2,
+   "H3 c z": -1.09,
+   "H3 cont z": 0.86,
+   "rho_s": -0.0234,
+   "rho_l": -0.0196,
+   "cont_s": 0.513,
+   "cont_l": 0.489
+  },
+  "gexpct|5m|open15": {
+   "H1 z": 6.0,
+   "H2 z": -0.2,
+   "H3 c z": -1.33,
+   "H3 cont z": 0.24,
+   "rho_s": -0.0234,
+   "rho_l": -0.0196,
+   "cont_s": 0.509,
+   "cont_l": 0.504
+  },
+  "gexpct|5m|open30": {
+   "H1 z": 6.0,
+   "H2 z": -0.2,
+   "H3 c z": -0.55,
+   "H3 cont z": 0.65,
+   "rho_s": -0.0234,
+   "rho_l": -0.0196,
+   "cont_s": 0.537,
+   "cont_l": 0.519
+  },
+  "gexpct|10m|open5": {
+   "H1 z": 6.0,
+   "H2 z": -0.3,
+   "H3 c z": -1.09,
+   "H3 cont z": 0.86,
+   "rho_s": -0.0405,
+   "rho_l": -0.0322,
+   "cont_s": 0.513,
+   "cont_l": 0.489
+  },
+  "gexpct|10m|open15": {
+   "H1 z": 6.0,
+   "H2 z": -0.3,
+   "H3 c z": -1.33,
+   "H3 cont z": 0.24,
+   "rho_s": -0.0405,
+   "rho_l": -0.0322,
+   "cont_s": 0.509,
+   "cont_l": 0.504
+  },
+  "gexpct|10m|open30": {
+   "H1 z": 6.0,
+   "H2 z": -0.3,
+   "H3 c z": -0.55,
+   "H3 cont z": 0.65,
+   "rho_s": -0.0405,
+   "rho_l": -0.0322,
+   "cont_s": 0.537,
+   "cont_l": 0.519
+  },
+  "gexpct|15m|open5": {
+   "H1 z": 6.0,
+   "H2 z": 0.27,
+   "H3 c z": -1.09,
+   "H3 cont z": 0.86,
+   "rho_s": -0.0413,
+   "rho_l": -0.0513,
+   "cont_s": 0.513,
+   "cont_l": 0.489
+  },
+  "gexpct|15m|open15": {
+   "H1 z": 6.0,
+   "H2 z": 0.27,
+   "H3 c z": -1.33,
+   "H3 cont z": 0.24,
+   "rho_s": -0.0413,
+   "rho_l": -0.0513,
+   "cont_s": 0.509,
+   "cont_l": 0.504
+  },
+  "gexpct|15m|open30": {
+   "H1 z": 6.0,
+   "H2 z": 0.27,
+   "H3 c z": -0.55,
+   "H3 cont z": 0.65,
+   "rho_s": -0.0413,
+   "rho_l": -0.0513,
+   "cont_s": 0.537,
+   "cont_l": 0.519
+  }
+ },
+ "multiverse median z": {
+  "H1 z": 6.76,
+  "H2 z": 0.27,
+  "H3 c z": -1.04,
+  "H3 cont z": 0.11
+ },
+ "controls": {
+  "R1 2020-21": {
+   "H1 diff": 0.372,
+   "H2 rho diff": 0.0063,
+   "H3 c": -0.2104,
+   "cont s/l": [
+    0.479,
+    0.503
+   ],
+   "rho s/l": [
+    -0.0303,
+    -0.0366
+   ],
+   "O1 s/l": [
+    1.054,
+    0.682
+   ],
+   "n s/l": [
+    163,
+    340
+   ]
+  },
+  "R2 2022+": {
+   "H1 diff": 0.183,
+   "H2 rho diff": 0.0143,
+   "H3 c": -0.0854,
+   "cont s/l": [
+    0.511,
+    0.503
+   ],
+   "rho s/l": [
+    -0.0181,
+    -0.0323
+   ],
+   "O1 s/l": [
+    1.02,
+    0.837
+   ],
+   "n s/l": [
+    749,
+    449
+   ]
+  },
+  "VIX low third": {
+   "H1 diff": 0.182,
+   "H2 rho diff": 0.0335,
+   "H3 c": -0.3791,
+   "cont s/l": [
+    0.45,
+    0.502
+   ],
+   "rho s/l": [
+    0.0042,
+    -0.0293
+   ],
+   "O1 s/l": [
+    0.911,
+    0.729
+   ],
+   "n s/l": [
+    278,
+    450
+   ]
+  },
+  "VIX mid third": {
+   "H1 diff": 0.188,
+   "H2 rho diff": 0.0317,
+   "H3 c": 0.2577,
+   "cont s/l": [
+    0.562,
+    0.502
+   ],
+   "rho s/l": [
+    -0.0247,
+    -0.0563
+   ],
+   "O1 s/l": [
+    1.002,
+    0.814
+   ],
+   "n s/l": [
+    203,
+    209
+   ]
+  },
+  "VIX high third": {
+   "H1 diff": 0.197,
+   "H2 rho diff": -0.0266,
+   "H3 c": 0.386,
+   "cont s/l": [
+    0.529,
+    0.44
+   ],
+   "rho s/l": [
+    -0.0269,
+    -0.0004
+   ],
+   "O1 s/l": [
+    1.095,
+    0.898
+   ],
+   "n s/l": [
+    367,
+    75
+   ]
+  }
+ }
+}

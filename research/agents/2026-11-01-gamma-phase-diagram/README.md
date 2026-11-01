@@ -49,3 +49,67 @@
   * At 09:45 the state plus the opening move gives a continuation-or-reversion forecast for the rest of the day, and an expected range.
   * The forecast **updates** if price crosses the flip intraday, as a nowcast would.
   * In exit terms: on short-gamma continuation days, trail rather than take fixed targets; on long-gamma days, take profits into extensions.
+
+## Iteration 1 results (`phase.py` → `out/phase.json`, `out/days.csv`; `figure1.py` → `out/phase_iter1.png`)
+* **Data:**
+  * 1,701 SPY sessions (2020-01-03 to 2026-10-12): 912 opened below the pre-open flip, 789 above.
+  * Databento XNAS 1-minute bars ($2.69 for SPY+QQQ+TSLA).
+  * The first run was interrupted before writing anything; the vectorized rewrite implements the same registered design.
+
+![iteration 1](out/phase_iter1.png)
+
+| | Prediction | Result | Verdict |
+|---|---|---|---|
+| **H1 range** | ×1.2–1.5 below vs above; dose–response | **×1.33** (1.026 vs 0.770 expected daily moves); quintiles 1.16 → 0.98 → 0.87 → 0.77 → 0.75; Spearman −0.42; circular-shift p < 0.002, Holm ≈ 0; multiverse median z **6.8** | **pass**, every year, both eras, every VIX third |
+| **H2 persistence** | ρ_short +0.02…+0.08, ρ_long −0.02…−0.08 | ρ diff **+0.011** (p 0.20, Holm 0.40); multiverse median z 0.3 | **fail**: right sign, about 5–10× too small |
+| **H3 first-15-min signature** | continuation 53–56% vs 44–48% | **50.5% vs 50.3%** (p 0.48); interaction c −0.13 (wrong sign, n.s.); multiverse median z −1.0 / 0.1 | **fail** |
+
+* **Cross-check (METHOD 11):** VR(6) 0.92 below vs 0.88 above, both < 1. The variance difference (×1.33) is **not** accompanied by the persistence that a slow feedback loop would need.
+  * The implied coupling λ_eff·|Γ| at 5–15-minute scales is about 0.01, a feedback multiplier of about 1.01.
+* **Reading:**
+  * Dealer gamma sets the **size** of SPY's day, strongly and monotonically. It does **not** make moves persist from one 5–15-minute interval to the next, and the opening move alone predicts nothing.
+  * In weather terms, the pre-open map forecasts the storm's *intensity*, not its *direction*.
+
+### Anomaly log (METHOD 13: exploratory until confirmed)
+* **A. "Both regimes mean-revert" was partly an artefact (step b).**
+  * Within-day demeaning biases lag-1 autocorrelation by about −1/n (−0.013 at 5 min, −0.04 at 15 min).
+  * On raw returns: 1-minute +0.013 / +0.010, 5-minute −0.012 / −0.021, 15-minute **+0.008 / −0.008**.
+  * The regime difference has the predicted sign at every horizon, growing with horizon (+0.002 → +0.010 → +0.016), but it is tiny.
+  * The H2 difference test is unaffected, since the bias is common to both regimes.
+* **B. Continuation depends on VIX × gamma (found in passing; continuation in the rest of the day):**
+
+| | Above flip | Below flip |
+|---|---|---|
+| low VIX | 50% (n 450) | **45% (n 278)** |
+| mid VIX | 50% (n 209) | **56% (n 203)** |
+| high VIX | 44% (n 75) | 53% (n 367) |
+
+  * Same direction in 2020–23 and 2024–26, and for the 5- and 15-minute opening windows; weaker for 30.
+  * **Candidate mechanism:** feedback strength ∝ λ·|Γ|, and illiquidity λ rises with VIX. Short gamma trends only when liquidity is thin; long gamma damps harder when it is thin (44%).
+  * The low-VIX/below-flip *reversion* (45%) is **not** explained by this mechanism: coupling should be about zero there, giving ~50%. It needs its own explanation, perhaps shallow dips in calm markets getting bought.
+* **C. The H1 ratio drifted:** 1.5 in 2020–21, about 1.1–1.15 in 2022–24, 1.35 in 2025, 1.14 in 2026. In 2022 almost every day was below the flip (220 of 251).
+* **D. The key open question about H1: is it dealer gamma or just "stress"?**
+  * Opening below the flip usually follows a decline, and declines have high realized vol relative to VIX whatever dealers hold.
+  * The dose–response is consistent with both. Iteration 2 separates them.
+
+## Iteration 2 pre-registration (written before running)
+* **I. Is H1 dealer gamma or stress? (separating the cause)**
+  * **I-a Controls.** O1 ~ below-flip + |prior-day return| + prior-day range + |overnight gap| + prior-day ΔVIX + 5-day return, all in σ_d units. **Prediction:** the below-flip coefficient stays positive with p < 0.05 and keeps ≥ half its raw size.
+  * **I-b Natural experiment (move the control parameter, not the system).**
+    * Split the day-to-day change in distance-to-flip, Δd, into a **price part**, Δopen/(σS), and a **flip part**, −Δflip/(σS).
+    * The flip part comes from open-interest changes (expiries, new positions) with price held fixed.
+    * Regress ΔO1 (today's minus yesterday's range in σ units) on both parts.
+    * **Prediction:** the flip-part coefficient is negative (the flip moving above price → bigger day), p < 0.05, and of the same order as the price part. If gamma is only a stress marker, the flip part is ~0.
+  * **I-c Magnitude at fixed distance.** Among below-flip days, the partial correlation of O1 with −gex_open (more short gamma), controlling for d, is > 0.
+* **II. Exploratory B, characterised (no pass bar; confirmation will be forward or on another instrument):**
+  * Continuation and 15-minute raw autocorrelation by VIX tercile × state, with bootstrap CIs.
+  * The same table on QQQ, using its own state (open vs the prior close's QQQ flip from `microstructure/out/td_gamma_QQQ.csv`). QQQ shares SPY's dates, so it is a weak, non-independent check, stated as such.
+* **III. The practical forecast (the owner's "weather"): a 09:45 nowcast of the rest-of-day range.**
+  * Target: rest-of-day high − low after 09:45, in σ_d units.
+  * Predictors: state, d, first-15-minute range (σ units), |r15|, VIX percentile.
+  * Fit on 2020–2023, test on 2024–2026.
+  * Score:
+    * out-of-sample R² vs a VIX-only baseline;
+    * calibration of P(rest range > 1σ_d) by decile;
+    * pinball loss of the 20/50/80% quantiles.
+  * **Prediction:** state + first-15-min range beat the VIX-only baseline out of sample (R² gain > 0 with bootstrap CI excluding 0), and calibration stays within ±5 points per decile.
