@@ -1,0 +1,335 @@
+{
+ "F1": {
+  "corr July vs Oct, 15 aligned sessions": -0.021,
+  "percentile vs all 15-session windows 1993-2026H1": 0.47,
+  "share of windows at least as similar": 0.53,
+  "n windows": 8415,
+  "best of 24 month-end windows (Oct24-Sep26)": 0.739,
+  "which month": "2024-10",
+  "July rank among the 24": 13,
+  "p look-elsewhere (best of 24 at least this similar by chance)": 0.028,
+  "post hoc: first 9 sessions corr": 0.405,
+  "post hoc: 9-session percentile": 0.852,
+  "daily returns July %": [
+   -0.8,
+   0.38,
+   0.38,
+   -0.51,
+   -1.01,
+   -0.19,
+   0.88,
+   -0.14,
+   -1.22,
+   0.05,
+   0.02,
+   0.21,
+   -1.53,
+   1.65,
+   0.7
+  ],
+  "daily returns Oct %": [
+   -0.06,
+   -0.02,
+   -1.11,
+   0.32,
+   -1.1,
+   0.41,
+   0.28,
+   0.58,
+   -1.22,
+   -0.52,
+   0.69,
+   0.6,
+   0.28,
+   -0.31,
+   -1.83
+  ],
+  "_null_hist": [
+   0,
+   0,
+   0,
+   2,
+   4,
+   11,
+   26,
+   44,
+   54,
+   119,
+   134,
+   187,
+   267,
+   306,
+   396,
+   421,
+   519,
+   518,
+   589,
+   577,
+   627,
+   533,
+   517,
+   526,
+   454,
+   393,
+   334,
+   256,
+   176,
+   138,
+   135,
+   66,
+   48,
+   21,
+   11,
+   3,
+   3,
+   0,
+   0,
+   0
+  ]
+ },
+ "F2a profile mean z by session (all months)": {
+  "-5": [
+   0.064,
+   0.039,
+   406
+  ],
+  "-4": [
+   0.063,
+   0.039,
+   406
+  ],
+  "-3": [
+   0.132,
+   0.038,
+   406
+  ],
+  "-2": [
+   0.012,
+   0.039,
+   406
+  ],
+  "-1": [
+   0.037,
+   0.038,
+   406
+  ],
+  "0": [
+   -0.049,
+   0.036,
+   406
+  ],
+  "1": [
+   -0.015,
+   0.04,
+   406
+  ],
+  "2": [
+   0.039,
+   0.036,
+   406
+  ],
+  "3": [
+   0.035,
+   0.036,
+   406
+  ],
+  "4": [
+   -0.009,
+   0.039,
+   406
+  ],
+  "5": [
+   -0.02,
+   0.039,
+   406
+  ],
+  "6": [
+   0.02,
+   0.043,
+   406
+  ],
+  "7": [
+   0.048,
+   0.04,
+   406
+  ],
+  "8": [
+   0.101,
+   0.034,
+   406
+  ],
+  "9": [
+   0.039,
+   0.041,
+   406
+  ],
+  "10": [
+   0.045,
+   0.041,
+   406
+  ]
+ },
+ "F2a profile mean z (Jan/Apr/Jul/Oct)": {
+  "-5": [
+   0.049,
+   0.069,
+   136
+  ],
+  "-4": [
+   0.048,
+   0.067,
+   136
+  ],
+  "-3": [
+   0.13,
+   0.063,
+   136
+  ],
+  "-2": [
+   -0.005,
+   0.069,
+   136
+  ],
+  "-1": [
+   0.023,
+   0.061,
+   136
+  ],
+  "0": [
+   -0.048,
+   0.07,
+   136
+  ],
+  "1": [
+   -0.028,
+   0.064,
+   136
+  ],
+  "2": [
+   0.132,
+   0.067,
+   136
+  ],
+  "3": [
+   0.028,
+   0.064,
+   136
+  ],
+  "4": [
+   -0.011,
+   0.071,
+   136
+  ],
+  "5": [
+   0.058,
+   0.068,
+   136
+  ],
+  "6": [
+   0.001,
+   0.069,
+   136
+  ],
+  "7": [
+   0.056,
+   0.067,
+   136
+  ],
+  "8": [
+   0.058,
+   0.062,
+   136
+  ],
+  "9": [
+   0.073,
+   0.072,
+   136
+  ],
+  "10": [
+   0.03,
+   0.081,
+   136
+  ]
+ },
+ "F2a post-opex sessions +1..+10 minus other sessions (z)": {
+  "estimate": 0.0041,
+  "95% CI": [
+   -0.0225,
+   0.0299
+  ],
+  "p": 0.7538,
+  "Holm": 0.7538,
+  "in bp/day at VIX 17": 0.4
+ },
+ "F2b day after VIX expiry minus other sessions (z, 2004-26)": {
+  "estimate": -0.0805,
+  "95% CI": [
+   -0.155,
+   -0.0105
+  ],
+  "p": 0.0262,
+  "Holm": 0.0524,
+  "n": 271,
+  "share negative": 0.494,
+  "share negative other days": 0.452
+ },
+ "F2c day after VIX expiry in the week after opex (descriptive)": {
+  "n": 95,
+  "mean z": -0.03,
+  "share negative": 0.484,
+  "2026 cases": {
+   "2026-01-22": 0.51,
+   "2026-05-20": 0.94,
+   "2026-07-23": -1.16,
+   "2026-10-22": -1.16
+  }
+ },
+ "pieces": {
+  "July": {
+   "S&P % (start close to month-end)": -1.13,
+   "max drawdown in window %": -3.42,
+   "VIX start / max / end": [
+    15.03,
+    20.66,
+    15.99
+   ],
+   "equal-weight minus cap-weight (RSP - S&P) %": 1.46,
+   "QQQ - IWM %": -3.55,
+   "10y yield change (bp)": 1.8,
+   "dollar index %": -1.16,
+   "gamma rows on file": 16,
+   "share of days spot below flip": 0.81,
+   "median GEX classic $bn": -5.18
+  },
+  "October": {
+   "S&P % (start close to month-end)": -2.96,
+   "max drawdown in window %": -2.96,
+   "VIX start / max / end": [
+    14.84,
+    19.99,
+    19.42
+   ],
+   "equal-weight minus cap-weight (RSP - S&P) %": 5.44,
+   "QQQ - IWM %": -8.23,
+   "10y yield change (bp)": -3.2,
+   "dollar index %": -0.32,
+   "gamma rows on file": 1,
+   "share of days spot below flip": 0.0,
+   "median GEX classic $bn": 4.72
+  }
+ },
+ "exploratory: mean |z| on scheduled days / all days (2004-26)": {
+  "opex": [
+   0.908,
+   271
+  ],
+  "after_vx": [
+   1.032,
+   271
+  ],
+  "month_end": [
+   0.979,
+   271
+  ]
+ }
+}
