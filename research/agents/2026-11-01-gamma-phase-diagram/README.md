@@ -155,3 +155,38 @@
   * If E2 ≥ 52% in the holdout, extend with ES vs NQ futures (RTH, 2010–2017) **one year at a time** (~$2.4/yr), combining yearly z-scores by Stouffer.
   * **Confirm** when the combined z ≥ 3. **Abandon** if the running estimate is ≤ 50% after ≥ 400 disagreement days, or if the holdout itself is ≤ 48%.
 * **One-sided p:** binomial for E2; paired day bootstrap for E1 and E3.
+
+### Pre-registration E result: holdout May 2018 – Dec 2019 (`holdout_e.py` → `out/holdout_e.json`; 411 days; data cost $0.35)
+| | In-sample (2020–26) | **Holdout (2018–19)** |
+|---|---|---|
+| E1: QQQ − SPY continuation | +3.3 pts | **+1.0 pt** (p 0.37) |
+| E2: SPY rest follows QQQ's open on disagreement days | 55.1% (n 370) | **52.5%** (n 80, z 0.45, p 0.33) |
+| E3: SPY from 09:35 − from 09:30 | — | **+1.4 pts** (p 0.29) |
+
+* **Same direction, about half the size:** the usual shrinkage of an in-sample discovery (the winner's curse).
+* **Decision: deviation from the registered sequential rule, stated openly.**
+  * E2 ≥ 52% would trigger the futures extension, but a power calculation made before spending shows it cannot confirm.
+  * At a true rate of 53%, a one-sided z = 3 with 80% power needs ≈ 4,100 disagreement days (≈ 19,000 sessions). At 55% it needs ≈ 1,500 (≈ 7,000 sessions).
+  * All of ES/NQ 2010–2019 gives ≈ 480 disagreement days, for an expected z of ≈ 2.2 even if the effect were 55%.
+  * An edge of 2–5 pts on 1 day in 5 is also of low trading value. Per the data-budget rule, **anomaly E stops here: unconfirmed, small, not worth more spend.**
+  * Logged as a curiosity with the reason (METHOD 13).
+
+## Iteration 3 pre-registration (written before running; free data already in hand): are gamma walls barriers?
+* **Why:** iteration 1 showed the pre-open map forecasts the day's *size*. Can it also forecast *where* the day stops?
+  * Thursday night's "realistic flush low 750–754 at the 750 put wall" was right.
+  * flip-wicks H1 found the flip is a real stall level.
+  * The next physical question: do the **largest open-interest strikes** act as barriers more than ordinary strikes at the same distance?
+* **Mechanism:**
+  * At a strike with very large open interest, dealer gamma is concentrated, and so is resting hedge liquidity and take-profit or monetisation flow.
+  * Price approaching it meets the most offsetting flow, as at a reflecting barrier.
+* **Confound to control (natural control group):** walls are usually round numbers, and round numbers already attract day highs and lows (positioning P4b). So the comparison is **wall vs other $5-multiple strikes at a similar distance**, which separates the open-interest effect from the round-number effect.
+* **Data:**
+  * SPY 1-minute bars 2020-01 → 2026-10 (in hand).
+  * Call and put walls from `microstructure/out/td_gamma_SPY.csv`, using the **prior** session's walls (positions known before the open).
+* **Event:** the day's high comes within 0.10% of the prior call wall (from below), or the day's low comes within 0.10% of the prior put wall (from above).
+* **Outcome W1:** "stall", meaning the day's extreme ends within ±0.10% of the wall, i.e. price touched it and did not run through by more than 0.10%.
+* **Comparison:** the same stall rate for every other $5-multiple strike reached on the same side within ±1% of the wall's distance from the open, on the same days.
+  * A paired day-level difference (wall stall − mean control stall) with a day-block bootstrap.
+* **Prediction:** wall stall rate exceeds the control rate by ≥ 5 pts, p < 0.05, for both walls. **Falsifier:** difference ≤ 0.
+* **Era split:** R1 2020–21 vs R2 2022+.
+* **Secondary W2:** after touching the wall, the close is back inside (below the call wall, above the put wall) more often than for the controls.

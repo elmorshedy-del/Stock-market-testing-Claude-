@@ -1,0 +1,30 @@
+{
+ "days": 411,
+ "span": [
+  "2018-05-01",
+  "2019-12-31"
+ ],
+ "E1": {
+  "SPY continuation": 0.511,
+  "QQQ continuation": 0.521,
+  "diff": 0.0097,
+  "p (diff <= 0)": 0.3672,
+  "in-sample diff": 0.033
+ },
+ "E2": {
+  "disagreement days": 80,
+  "P(SPY rest sign = QQQ opening sign)": 0.525,
+  "z": 0.45,
+  "p one-sided": 0.3274,
+  "in-sample": 0.551,
+  "also P(QQQ rest = QQQ open sign) on these days": 0.5,
+  "decision": "extend sequentially (>= 52%)"
+ },
+ "E3": {
+  "SPY continuation from 09:30": 0.504,
+  "from 09:35": 0.518,
+  "diff": 0.0143,
+  "p (diff <= 0)": 0.2938
+ },
+ "agreement rate of opening signs": 0.805
+}
