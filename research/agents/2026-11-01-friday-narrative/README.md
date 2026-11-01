@@ -88,3 +88,16 @@
 * Arca is one venue, and its top-10 book is shallow.
 * The trade-side split for options uses the mid-quote rule.
 * The C6 effect at the low is small.
+
+### Explainer for the owner (descriptive, not new tests)
+![explainer](out/explainer_buying_falling.png)
+* **Net buying with falling prices:**
+  * In 10:30–14:52, buyer-initiated ES volume was 526k contracts and seller-initiated 502k. Buyers started 2.3% more of the volume: almost a tie.
+  * Price fell 78 points anyway. Price is set by where resting orders sit, not by who crosses the spread.
+  * Sellers who re-post lower offers, and bidders who step back, move the quote down even when market orders are balanced or tilted to buys.
+  * Arca's top-10 book had more resting shares on the ask than the bid about 60–65% of the time all day (imbalance −0.06). That held in the rebound too, so it is context, not a cause.
+* **Price first, selling after (the open):**
+  * Same minute: corr(net flow, return) +0.56. Selling and falling coincide.
+  * Return this minute → net flow next minute: **+0.35**. Drops called in more selling.
+  * Net flow this minute → return next minute: +0.02 (nothing).
+  * This is a feedback pattern (reactive sellers: dealer hedges, stops, trend algos), not an informed seller leading the price.
