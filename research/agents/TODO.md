@@ -96,10 +96,17 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **F4. TSLA short covering:** FINRA short interest for the Oct 30 settlement, published around Nov 10. Sep 30 was 70.9M shares.
 - [ ] **F5. AAPL residual Oct 26 – Nov 2** (R3d, [aapl-decoupling](2026-10-25-aapl-decoupling/)).
 
-## Done
-- (none yet)
-
+## Week-review follow-ups (2026-10-31)
+*Context: Fri Oct 30 S&P −1.8% month-end flush to SPY 750.36 (the put wall); R4 fired; TSLA held 400 on its expiry; third-party "stealth bear market" note checked.*
 - [ ] **WR1. Expiry-day pin vs market selloff:** on S&P down days that are also big single-name expiries, does price hold the top-gamma strike? TSLA Oct 30 held 400 on S&P -1.8% (one case). [week-review](2026-10-31-week-review/).
 - [ ] **WR2. Translator bands:** report D1-style beta translations with the excess-return spread (TSLA SD 3.4 pts), never a point range. [week-review](2026-10-31-week-review/).
 - [ ] **WR3. Score R4 (fired Oct 30):** up-leg (10-day S&P rise >= ~3.5%) by about Nov 27? And the election VIX release (fit -3.8 pts in the 5 sessions after Nov 3).
-- [ ] **ND1. Vol-divergence turn rule (derived from the vanna hedge term):** in short gamma, a price low that is not confirmed by a new implied-vol high marks the end of forced selling. Daily version on free data since 1990 (S&P new 10-day low with VIX below its high at the prior low, SPY below flip where known); intraday version needs SPY ATM IV from OPRA. Pre-register before running. [friday-narrative](2026-11-01-friday-narrative/).
+
+## Friday-narrative follow-ups (2026-11-01)
+*Context: the Fri Oct 30 low at 14:52 (SPY 750.38) was a retest. Price made a slightly lower low than at 14:35 (750.54) while VIX made a lower high (22.8 vs 23.9), and the hedge model's vanna term had flipped to dealer buying at 14:40. The rule below comes from the hedge equation H = −Γ·ΔS − Vanna·Δσ − Charm·Δt. Owner asked (2026-11-01) whether it "would usually work": untested.*
+- [ ] **ND1 (added 2026-11-01, from the Fri Oct 30 14:52 low). Vol-divergence turn rule (derived from the vanna hedge term):** in short gamma, a price low that is not confirmed by a new implied-vol high marks the end of forced selling. Daily version on free data since 1990 (S&P new 10-day low with VIX below its high at the prior low, SPY below flip where known); intraday version needs SPY ATM IV from OPRA. Pre-register before running. [friday-narrative](2026-11-01-friday-narrative/).
+  * Plan: (a) daily version first (free data since 1990); (b) intraday version only after checking the OPRA cost.
+  * Outcome to test: next 1–10 day S&P return and P(up-leg) after a divergence low vs other new lows. Report era splits per OWNER_NOTES (pre-2020 / 2020–21 / 2022+).
+
+## Done
+- (none yet)
