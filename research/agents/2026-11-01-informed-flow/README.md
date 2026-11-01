@@ -87,3 +87,47 @@
 * **Power:** expected to be small (likely fewer than 20 episodes), so CIs will be wide.
   * A famous pattern can also be memory selection: we remember the sales before drops.
   * The test counts every sale.
+
+## Results (`informed.py` → `out/informed.json`, `out/signals.csv`; `insider_tsla.py` → `out/insider_tsla.json`, `out/kimbal_episodes.csv`; figure `out/informed.png`; $0)
+**Process notes:**
+* The first run (with SEC insiders) was stopped by the owner before it produced output; it was replaced by Amendment 1.
+* HYG/IEF was first fetched only from 2020 by mistake; it was re-fetched from 2007 as registered and C re-run. Only C changed.
+* SEC 2026Q2/Q3 data sets are not yet published, so insider data ends 2026-03-31.
+* The insider permutation null used 2,000 draws, not the 10,000 registered (the sample sizes make this immaterial).
+
+### Timely flows (Amendment 1): **none passes** (primary = 40 sessions, Holm across 4)
+| Flow | Reflexivity (corr with past 20-day S&P move) | Next 40 sessions, % per 1 sd [95% CI] | p | Holm | OOS R² (40) | Follow rule: top vs bottom third, next 40 sessions |
+|---|---|---|---|---|---|---|
+| **A** asset managers (E-mini, 4-week change) | **+0.39 (chase price)** | −0.72 [−1.48, −0.02] | 0.04 | 0.16 | +3.6% | **+0.90% vs +2.35%** (contrarian; 5 of 19 years) |
+| **D** dark-pool buying (DIX z) | −0.07 (independent) | +0.11 [−0.59, +0.86] | 0.71 | 1.0 | +0.1% | +2.08% vs +2.18% |
+| **C** credit (HYG/IEF 20-day change) | **+0.74 (moves with stocks)** | +0.02 [−1.21, +1.67] | 0.99 | 1.0 | −0.4% | +1.63% vs +2.19% |
+| **SMI** close vs open (2018 →) | −0.14 | +0.63 [−0.71, +1.79] | 0.39 | 1.0 | +3.3% (40 points) | +1.84% vs +2.36% |
+| L leveraged funds (secondary) | −0.30 (buy weakness) | −0.29 [−1.13, +0.41] | 0.45 | — | −2.1% | +1.89% vs +1.44% |
+
+* **Asset managers are the closest to a signal, and it runs the wrong way for "follow them".**
+  * They add after rallies (+0.39) and the market does *worse* after they add (−0.72% per sd, Holm 0.16).
+  * Strongest in R1 (−2.9); **gone in R2 (+0.04)**.
+* **DIX is genuinely price-independent but carries no forecast** (and its R2 sign is negative).
+* **Credit simply moves with stocks** (+0.74); there is no lead.
+* **SMI** was strong before 2020 (+2.7 per sd) and is ~0 since 2022.
+
+### Kimbal Musk (Amendment 2): **no edge across all his sales**
+| | Kimbal (48 sale episodes with follow-up) | Matched random days | p (owner's hypothesis) |
+|---|---|---|---|
+| TSLA 60 sessions after the filing (O2_60) | **+11.2%** | +7.7% | 0.87 (wrong direction) |
+| TSLA 60 sessions after the trade (O1_60) | +9.7% | +7.7% | 0.75 |
+| Sold within 10% of the local top (O3a) | 31% | 31% | 0.57 |
+| A 20% drop within 60 sessions (O3b) | 27% | 24% | 0.33 |
+
+* **The famous sales were real top-ticks:** Feb 2021 ($26M) −22%, Nov 2021 ($109M) −26%, Feb 2025 ($28M) −25%, May 2025 −12%, Dec 2025 −10%.
+* **The forgotten ones were before big rallies:** Nov 2019 ($23M) +120%, Jun 2020 +125%, Apr 2023 ($20M) +32%, Nov 2024 ($15M) +63%.
+* Most of his 2014–2018 sales were small monthly (plan-like) sales.
+* **Memory keeps the hits.** The full record is a coin flip vs matched days.
+* **Elon Musk** (7 episodes): 20 sessions after the trade −17% vs −6% (p 0.04). With n 7, dominated by 2021–22 tax/Twitter sales, this is not usable.
+* **Other TSLA insiders** (336 episodes): TSLA 2.1 pts weaker over 60 sessions after the filing (+7.5% vs +9.6%, p 0.04); 20% drops 38% vs 34% (p 0.03). A small, real-looking tilt; too small to trade on a stock that moves ±30% in 60 sessions.
+
+### Verdict
+* **No visible, timely group "knows" the next two months.** The flows we can see in real time either react to price or carry no forecast. The one with a hint (asset managers) is a mild *contrarian* signal that has vanished since 2022.
+* **The groups with published forecasting power are slow:** aggregate short interest, non-routine insider buying, net equity issuance. They work over months to years, are released with a lag, and are not the "they know November" kind.
+* **Single famous insiders look prescient because we remember the hits.** Kimbal's full record shows no edge.
+* **What we keep using instead** is our own tested structure: dealer gamma (call wall, flip), the ladder rungs, the forced-move fade. Their edges are in timing and size, not in someone else's knowledge.

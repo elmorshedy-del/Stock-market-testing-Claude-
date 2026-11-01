@@ -1,0 +1,359 @@
+{
+ "insider class counts (filings)": "dropped (Amendment 1)",
+ "A": {
+  "start": "2006-07-17",
+  "end": "2026-10-30",
+  "reflexivity corr(signal, past 20-session return)": 0.388,
+  "f20 slope (log ret per 1 sd)": {
+   "slope %": -0.236,
+   "95% CI %": [
+    -0.624,
+    0.115
+   ],
+   "p two-sided": 0.19,
+   "n days": 5086
+  },
+  "f20 OOS R2 % (vs historical mean)": [
+   0.06,
+   183
+  ],
+  "f20 slope % by era": {
+   "R0 <2020": -0.095,
+   "R1 2020-21": -0.598,
+   "R2 2022+": -0.362
+  },
+  "f40 slope (log ret per 1 sd)": {
+   "slope %": -0.719,
+   "95% CI %": [
+    -1.476,
+    -0.017
+   ],
+   "p two-sided": 0.04,
+   "n days": 5066
+  },
+  "f40 OOS R2 % (vs historical mean)": [
+   3.58,
+   182
+  ],
+  "f40 slope % by era": {
+   "R0 <2020": -0.594,
+   "R1 2020-21": -2.94,
+   "R2 2022+": 0.038
+  },
+  "f60 slope (log ret per 1 sd)": {
+   "slope %": -0.717,
+   "95% CI %": [
+    -1.371,
+    -0.037
+   ],
+   "p two-sided": 0.036,
+   "n days": 5046
+  },
+  "f60 OOS R2 % (vs historical mean)": [
+   0.27,
+   181
+  ],
+  "f60 slope % by era": {
+   "R0 <2020": -0.593,
+   "R1 2020-21": -2.614,
+   "R2 2022+": 0.147
+  },
+  "follow rule (top vs bottom third of trailing 3y), next 40 sessions": {
+   "top mean %": 0.896,
+   "bottom mean %": 2.348,
+   "all-days mean %": 1.579,
+   "years top>bottom": "5 of 19"
+  },
+  "now": {
+   "date": "2026-10-30",
+   "value": -0.0285,
+   "percentile in trailing 3y": 0.22
+  }
+ },
+ "D": {
+  "start": "2012-05-01",
+  "end": "2026-10-30",
+  "reflexivity corr(signal, past 20-session return)": -0.07,
+  "f20 slope (log ret per 1 sd)": {
+   "slope %": 0.101,
+   "95% CI %": [
+    -0.264,
+    0.541
+   ],
+   "p two-sided": 0.551,
+   "n days": 3627
+  },
+  "f20 OOS R2 % (vs historical mean)": [
+   -0.25,
+   113
+  ],
+  "f20 slope % by era": {
+   "R0 <2020": 0.197,
+   "R1 2020-21": 1.124,
+   "R2 2022+": -0.493
+  },
+  "f40 slope (log ret per 1 sd)": {
+   "slope %": 0.109,
+   "95% CI %": [
+    -0.592,
+    0.864
+   ],
+   "p two-sided": 0.706,
+   "n days": 3607
+  },
+  "f40 OOS R2 % (vs historical mean)": [
+   0.1,
+   112
+  ],
+  "f40 slope % by era": {
+   "R0 <2020": 0.279,
+   "R1 2020-21": 1.179,
+   "R2 2022+": -0.601
+  },
+  "f60 slope (log ret per 1 sd)": {
+   "slope %": -0.389,
+   "95% CI %": [
+    -1.474,
+    0.608
+   ],
+   "p two-sided": 0.515,
+   "n days": 3587
+  },
+  "f60 OOS R2 % (vs historical mean)": [
+   -0.42,
+   111
+  ],
+  "f60 slope % by era": {
+   "R0 <2020": -0.159,
+   "R1 2020-21": 0.503,
+   "R2 2022+": -1.403
+  },
+  "follow rule (top vs bottom third of trailing 3y), next 40 sessions": {
+   "top mean %": 2.082,
+   "bottom mean %": 2.183,
+   "all-days mean %": 1.794,
+   "years top>bottom": "9 of 13"
+  },
+  "now": {
+   "date": "2026-10-30",
+   "value": 0.175,
+   "percentile in trailing 3y": 0.65
+  }
+ },
+ "C": {
+  "start": "2007-05-09",
+  "end": "2026-10-30",
+  "reflexivity corr(signal, past 20-session return)": 0.743,
+  "f20 slope (log ret per 1 sd)": {
+   "slope %": -0.124,
+   "95% CI %": [
+    -0.865,
+    0.697
+   ],
+   "p two-sided": 0.667,
+   "n days": 4882
+  },
+  "f20 OOS R2 % (vs historical mean)": [
+   -0.52,
+   172
+  ],
+  "f20 slope % by era": {
+   "R0 <2020": -0.248,
+   "R1 2020-21": 1.25,
+   "R2 2022+": -0.725
+  },
+  "f40 slope (log ret per 1 sd)": {
+   "slope %": 0.019,
+   "95% CI %": [
+    -1.206,
+    1.667
+   ],
+   "p two-sided": 0.99,
+   "n days": 4862
+  },
+  "f40 OOS R2 % (vs historical mean)": [
+   -0.38,
+   171
+  ],
+  "f40 slope % by era": {
+   "R0 <2020": -0.182,
+   "R1 2020-21": 2.773,
+   "R2 2022+": -2.388
+  },
+  "f60 slope (log ret per 1 sd)": {
+   "slope %": 0.969,
+   "95% CI %": [
+    -0.715,
+    2.297
+   ],
+   "p two-sided": 0.255,
+   "n days": 4842
+  },
+  "f60 OOS R2 % (vs historical mean)": [
+   -0.21,
+   170
+  ],
+  "f60 slope % by era": {
+   "R0 <2020": 1.389,
+   "R1 2020-21": 2.368,
+   "R2 2022+": -3.101
+  },
+  "follow rule (top vs bottom third of trailing 3y), next 40 sessions": {
+   "top mean %": 1.631,
+   "bottom mean %": 2.185,
+   "all-days mean %": 1.954,
+   "years top>bottom": "5 of 18"
+  },
+  "now": {
+   "date": "2026-10-30",
+   "value": -0.0232,
+   "percentile in trailing 3y": 0.03
+  }
+ },
+ "SMI": {
+  "start": "2018-05-24",
+  "end": "2026-10-30",
+  "reflexivity corr(signal, past 20-session return)": -0.136,
+  "f20 slope (log ret per 1 sd)": {
+   "slope %": 0.159,
+   "95% CI %": [
+    -0.826,
+    0.998
+   ],
+   "p two-sided": 0.806,
+   "n days": 2101
+  },
+  "f20 OOS R2 % (vs historical mean)": [
+   -5.53,
+   41
+  ],
+  "f20 slope % by era": {
+   "R0 <2020": 1.334,
+   "R1 2020-21": 0.382,
+   "R2 2022+": -0.372
+  },
+  "f40 slope (log ret per 1 sd)": {
+   "slope %": 0.634,
+   "95% CI %": [
+    -0.6,
+    1.773
+   ],
+   "p two-sided": 0.372,
+   "n days": 2081
+  },
+  "f40 OOS R2 % (vs historical mean)": [
+   3.32,
+   40
+  ],
+  "f40 slope % by era": {
+   "R0 <2020": 2.724,
+   "R1 2020-21": 0.706,
+   "R2 2022+": 0.065
+  },
+  "f60 slope (log ret per 1 sd)": {
+   "slope %": 1.002,
+   "95% CI %": [
+    -0.467,
+    2.148
+   ],
+   "p two-sided": 0.188,
+   "n days": 2061
+  },
+  "f60 OOS R2 % (vs historical mean)": [
+   4.84,
+   39
+  ],
+  "f60 slope % by era": {
+   "R0 <2020": 3.574,
+   "R1 2020-21": 1.004,
+   "R2 2022+": 0.576
+  },
+  "follow rule (top vs bottom third of trailing 3y), next 40 sessions": {
+   "top mean %": 1.836,
+   "bottom mean %": 2.361,
+   "all-days mean %": 2.304,
+   "years top>bottom": "4 of 7"
+  },
+  "now": {
+   "date": "2026-10-30",
+   "value": 0.0179,
+   "percentile in trailing 3y": 0.9
+  }
+ },
+ "L": {
+  "start": "2006-07-17",
+  "end": "2026-10-30",
+  "reflexivity corr(signal, past 20-session return)": -0.298,
+  "f20 slope (log ret per 1 sd)": {
+   "slope %": -0.247,
+   "95% CI %": [
+    -0.81,
+    0.218
+   ],
+   "p two-sided": 0.31,
+   "n days": 5086
+  },
+  "f20 OOS R2 % (vs historical mean)": [
+   -1.35,
+   183
+  ],
+  "f20 slope % by era": {
+   "R0 <2020": -0.593,
+   "R1 2020-21": 0.408,
+   "R2 2022+": 0.664
+  },
+  "f40 slope (log ret per 1 sd)": {
+   "slope %": -0.293,
+   "95% CI %": [
+    -1.183,
+    0.394
+   ],
+   "p two-sided": 0.444,
+   "n days": 5066
+  },
+  "f40 OOS R2 % (vs historical mean)": [
+   -2.05,
+   182
+  ],
+  "f40 slope % by era": {
+   "R0 <2020": -0.878,
+   "R1 2020-21": 0.404,
+   "R2 2022+": 1.224
+  },
+  "f60 slope (log ret per 1 sd)": {
+   "slope %": -0.285,
+   "95% CI %": [
+    -1.225,
+    0.574
+   ],
+   "p two-sided": 0.487,
+   "n days": 5046
+  },
+  "f60 OOS R2 % (vs historical mean)": [
+   -3.39,
+   181
+  ],
+  "f60 slope % by era": {
+   "R0 <2020": -0.797,
+   "R1 2020-21": -2.075,
+   "R2 2022+": 1.372
+  },
+  "follow rule (top vs bottom third of trailing 3y), next 40 sessions": {
+   "top mean %": 1.889,
+   "bottom mean %": 1.441,
+   "all-days mean %": 1.579,
+   "years top>bottom": "9 of 19"
+  },
+  "now": {
+   "date": "2026-10-30",
+   "value": 0.0068,
+   "percentile in trailing 3y": 0.62
+  }
+ },
+ "Holm (4 primaries at 40 sessions)": {
+  "A f40": 0.16,
+  "SMI f40": 1,
+  "D f40": 1,
+  "C f40": 1
+ }
+}

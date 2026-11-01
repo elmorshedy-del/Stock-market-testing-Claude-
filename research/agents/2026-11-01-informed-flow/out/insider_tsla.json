@@ -1,0 +1,108 @@
+{
+ "Kimbal Musk": {
+  "episodes": 49,
+  "with 60 sessions of follow-up": 48,
+  "O1_20": {
+   "observed": 1.53,
+   "matched random days": 2.38,
+   "p (one-sided, owner's hypothesis)": 0.353
+  },
+  "O1_60": {
+   "observed": 9.66,
+   "matched random days": 7.72,
+   "p (one-sided, owner's hypothesis)": 0.745
+  },
+  "O2_20": {
+   "observed": 3.19,
+   "matched random days": 2.38,
+   "p (one-sided, owner's hypothesis)": 0.6595
+  },
+  "O2_60": {
+   "observed": 11.18,
+   "matched random days": 7.72,
+   "p (one-sided, owner's hypothesis)": 0.869
+  },
+  "O3a": {
+   "observed": 31.25,
+   "matched random days": 31.45,
+   "p (one-sided, owner's hypothesis)": 0.5665
+  },
+  "O3b": {
+   "observed": 27.08,
+   "matched random days": 23.69,
+   "p (one-sided, owner's hypothesis)": 0.3275
+  },
+  "share of episodes followed by a 60-session decline (O1_60 < 0)": 0.42
+ },
+ "Elon Musk": {
+  "episodes": 7,
+  "with 60 sessions of follow-up": 6,
+  "O1_20": {
+   "observed": -17.45,
+   "matched random days": -5.85,
+   "p (one-sided, owner's hypothesis)": 0.0385
+  },
+  "O1_60": {
+   "observed": -10.21,
+   "matched random days": -13.32,
+   "p (one-sided, owner's hypothesis)": 0.626
+  },
+  "O2_20": {
+   "observed": -8.67,
+   "matched random days": -5.85,
+   "p (one-sided, owner's hypothesis)": 0.3335
+  },
+  "O2_60": {
+   "observed": -4.41,
+   "matched random days": -13.32,
+   "p (one-sided, owner's hypothesis)": 0.835
+  },
+  "O3a": {
+   "observed": 50.0,
+   "matched random days": 30.17,
+   "p (one-sided, owner's hypothesis)": 0.247
+  },
+  "O3b": {
+   "observed": 83.33,
+   "matched random days": 61.87,
+   "p (one-sided, owner's hypothesis)": 0.19
+  },
+  "share of episodes followed by a 60-session decline (O1_60 < 0)": 0.67
+ },
+ "Other TSLA insiders": {
+  "episodes": 336,
+  "with 60 sessions of follow-up": 336,
+  "O1_20": {
+   "observed": 2.01,
+   "matched random days": 3.06,
+   "p (one-sided, owner's hypothesis)": 0.114
+  },
+  "O1_60": {
+   "observed": 7.28,
+   "matched random days": 9.62,
+   "p (one-sided, owner's hypothesis)": 0.029
+  },
+  "O2_20": {
+   "observed": 3.05,
+   "matched random days": 3.06,
+   "p (one-sided, owner's hypothesis)": 0.507
+  },
+  "O2_60": {
+   "observed": 7.53,
+   "matched random days": 9.62,
+   "p (one-sided, owner's hypothesis)": 0.041
+  },
+  "O3a": {
+   "observed": 27.38,
+   "matched random days": 24.65,
+   "p (one-sided, owner's hypothesis)": 0.102
+  },
+  "O3b": {
+   "observed": 38.1,
+   "matched random days": 33.66,
+   "p (one-sided, owner's hypothesis)": 0.028
+  },
+  "share of episodes followed by a 60-session decline (O1_60 < 0)": 0.45
+ },
+ "_note": "O1/O2 in % log return; O3a = sold within 10% of the [-20,+60] peak (% of episodes); O3b = a 20% drop within 60 sessions (%). Null: 2,000 draws of matched random sessions (same year, same past-60 tercile)."
+}
