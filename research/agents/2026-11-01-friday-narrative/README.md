@@ -138,3 +138,13 @@
 * **Would it usually work: untested.**
   * Related tests: intraday gamma momentum is weak in SPY since 2023 (forced-flow A2). The impact propagator law held for TSLA but not ES (flow-physics A3).
   * Added to TODO as ND1: (a) a daily version (S&P new low with VIX below its prior high, while below the gamma flip) on free data since 1990; (b) an intraday version, which needs intraday implied vol (OPRA SPY ATM quotes, ~$ cost to check).
+
+### Refresher: SPY is liquidity-led, TSLA is flow-led (flow-physics A1), checked on Friday
+![liquidity vs flow](out/liquidity_vs_flow.png)
+* **Whole-day net aggression vs the whole-day move** (Oct 5–26 sessions, `2026-10-27-flow-physics/out/a_daily.csv`): ES ρ −0.12 (n 16), TSLA ρ +0.48 (n 26, p 0.013).
+* **Friday, open → close:**
+  * ES: net **+1.5%** of volume while the move was **−0.7%**. This fits liquidity-led.
+  * TSLA on Nasdaq: net **+0.2%** while the move was **+1.8%**. This does **not** fit flow-led. TSLA rose from the open without net aggression on Nasdaq.
+  * Nasdaq is only part of TSLA's volume, and 43% of its prints are unsigned. The untested expiry-pin lead is TODO WR1.
+* **Minute by minute, both co-move with flow:** Friday's 5-minute link was ES +0.70 and TSLA +0.21. That is the same-moment push of every trade. The day-level rule is about what the whole day's flow adds up to.
+* Spend: TSLA Nasdaq trades for Friday, $0.04.
