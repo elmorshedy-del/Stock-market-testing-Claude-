@@ -119,3 +119,22 @@
   * Price impact per 1k contracts: buys +3.39 pts, sells −3.63 pts.
   * Drift −0.135 pts/min, which is about −35 pts over the window: quotes sliding down between trades.
   * Roughly half the decline was the sell bursts' larger impact and half was the drift.
+
+### The mechanics as equations (owner: "a fundamental principle … like physics … that could signal 2:52, and would it usually work")
+![equations](out/equations.png)
+* **The three layers, each derived rather than fitted:**
+  * **(1) Book identity**, Δp ≈ OFI / D (Cont, Kukanov & Stoikov 2014). Price moves with the imbalance of *all* top-of-book events (market orders, additions, cancellations) divided by depth.
+  * **(2) Hedge flow**, H = −Γ ΔS − Vanna Δσ − Charm Δt, from Black–Scholes delta hedging.
+  * **(3) Feedback**, Δp = λ(u + H). With dealers short gamma, every outside push u is multiplied by 1 / (1 − λ|Γ|), and a vol decline adds a buying term.
+* **What they could say at 14:52:**
+  * The conditions for the loop to weaken: σ falling, outside selling fading, liquidity returning. Not the minute.
+  * On Friday VIX peaked at 23.9 (14:35), and the model's vanna term flipped to buying at 14:40.
+  * At the 14:52 retest, price made a slightly lower low (750.38 vs 750.54) while VIX made a lower high (22.8). That is a *vol divergence*: the vol-driven forced selling had stopped.
+* **Size of the multiplier, rough and flagged:**
+  * Using the inelastic-markets estimate (Gabaix–Koijen: $1 of flow moves aggregate value about $5) gives λ ≈ 5 / market cap.
+  * With Friday's SPY-only gamma (~$10bn per 1%), λ|Γ| ≈ 0.08, so the multiplier is about 1.09.
+  * SPX options would add several times that, so the multiplier is plausibly 1.3–1.6: amplification, not explosion.
+  * The parameters are not measurable precisely in real time.
+* **Would it usually work: untested.**
+  * Related tests: intraday gamma momentum is weak in SPY since 2023 (forced-flow A2). The impact propagator law held for TSLA but not ES (flow-physics A3).
+  * Added to TODO as ND1: (a) a daily version (S&P new low with VIX below its prior high, while below the gamma flip) on free data since 1990; (b) an intraday version, which needs intraday implied vol (OPRA SPY ATM quotes, ~$ cost to check).
