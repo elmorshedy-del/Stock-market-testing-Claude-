@@ -1,0 +1,93 @@
+{
+ "1-hour": {
+  "RSI": 34.3,
+  "trailing pct": 0.087,
+  "window bars": 1638,
+  "last 6": [
+   29.9,
+   28.7,
+   26.2,
+   22.0,
+   26.3,
+   34.3
+  ],
+  "classic zone": "neutral"
+ },
+ "4-hour": {
+  "RSI": 35.9,
+  "trailing pct": 0.048,
+  "window bars": 504,
+  "last 6": [
+   53.6,
+   55.5,
+   49.7,
+   51.1,
+   35.7,
+   35.9
+  ],
+  "classic zone": "neutral"
+ },
+ "daily": {
+  "RSI": 40.2,
+  "trailing pct": 0.117,
+  "window bars": 1260,
+  "last 6": [
+   42.1,
+   47.3,
+   51.1,
+   53.3,
+   50.6,
+   40.2
+  ],
+  "classic zone": "neutral",
+  "20-session closing low": {
+   "date": "2026-10-30",
+   "close": 755.72
+  },
+  "ATR14": 7.72,
+  "1-ATR bounce trigger (close at or above)": 763.44,
+  "Friday close": 755.72,
+  "bullish divergence": {
+   "earlier 20d-type low": "2026-10-23",
+   "earlier close": 759.97,
+   "earlier RSI": 42.1,
+   "now close": 755.72,
+   "now RSI": 40.2,
+   "on": false
+  },
+  "SPY vs 50/100/200-day avg %": {
+   "50": -1.53,
+   "100": -0.46,
+   "200": 3.69
+  }
+ },
+ "weekly": {
+  "RSI": 53.6,
+  "trailing pct": 0.308,
+  "window bars": 260,
+  "last 6": [
+   63.1,
+   62.2,
+   65.1,
+   57.2,
+   55.6,
+   53.6
+  ],
+  "classic zone": "neutral"
+ },
+ "monthly": {
+  "RSI": 71.3,
+  "trailing pct": 0.729,
+  "window bars": 240,
+  "last 6": [
+   75.1,
+   72.6,
+   72.6,
+   74.7,
+   73.4,
+   71.3
+  ],
+  "classic zone": "overbought >70"
+ },
+ "weekly RSI third (sp-multivariate)": "weakest third"
+}
