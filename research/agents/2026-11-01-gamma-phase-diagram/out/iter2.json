@@ -1,0 +1,239 @@
+{
+ "I-a controls": {
+  "n": 1695,
+  "raw below-flip coef": 0.255,
+  "with controls": 0.146,
+  "kept share": 0.57,
+  "block-bootstrap 90% CI": [
+   0.104,
+   0.188
+  ],
+  "p (coef <= 0)": 0.0,
+  "control coefs": {
+   "abs_prev_ret": -0.017,
+   "prev_O1": 0.205,
+   "abs_gap": 0.187,
+   "dvix_prev": -0.005,
+   "ret5": -0.03
+  },
+  "pass (p<0.05 and kept >= 0.5)": true
+ },
+ "I-b natural experiment": {
+  "n": 1699,
+  "coef price part": -0.007,
+  "coef flip part": -0.051,
+  "90% CI price part": [
+   -0.044,
+   0.033
+  ],
+  "90% CI flip part": [
+   -0.102,
+   0.007
+  ],
+  "p flip coef >= 0": 0.0765,
+  "sd price part / flip part": [
+   0.781,
+   0.409
+  ],
+  "corr(flip part, dVIX prev)": 0.318,
+  "corr(flip part, price part)": -0.375,
+  "pass (flip coef < 0, p < 0.05)": false
+ },
+ "I-b day after monthly opex": {
+  "n": 81,
+  "coef price part": -0.096,
+  "coef flip part": -0.12,
+  "sd flip part": 0.605
+ },
+ "I-c magnitude": {
+  "n": 848,
+  "partial Spearman(O1, more short gamma | d)": 0.003,
+  "90% CI": [
+   -0.079,
+   0.073
+  ],
+  "p <= 0": 0.525,
+  "pass (> 0, p < 0.05)": false
+ },
+ "II SPY continuation (exploratory)": {
+  "low VIX | above flip": {
+   "cont": 0.502,
+   "90% CI": [
+    0.46,
+    0.542
+   ],
+   "n": 450
+  },
+  "low VIX | below flip": {
+   "cont": 0.45,
+   "90% CI": [
+    0.396,
+    0.496
+   ],
+   "n": 278
+  },
+  "mid VIX | above flip": {
+   "cont": 0.502,
+   "90% CI": [
+    0.435,
+    0.56
+   ],
+   "n": 209
+  },
+  "mid VIX | below flip": {
+   "cont": 0.562,
+   "90% CI": [
+    0.502,
+    0.621
+   ],
+   "n": 203
+  },
+  "high VIX | above flip": {
+   "cont": 0.44,
+   "90% CI": [
+    0.347,
+    0.533
+   ],
+   "n": 75
+  },
+  "high VIX | below flip": {
+   "cont": 0.529,
+   "90% CI": [
+    0.485,
+    0.57
+   ],
+   "n": 367
+  }
+ },
+ "II QQQ check (own prior-close flip; NOT independent dates)": {
+  "n": 1693,
+  "share below flip": 0.527,
+  "H1 range ratio below/above": 1.257,
+  "continuation table": {
+   "low VIX | above flip": {
+    "cont": 0.512,
+    "90% CI": [
+     0.473,
+     0.549
+    ],
+    "n": 455
+   },
+   "low VIX | below flip": {
+    "cont": 0.52,
+    "90% CI": [
+     0.472,
+     0.572
+    ],
+    "n": 271
+   },
+   "mid VIX | above flip": {
+    "cont": 0.554,
+    "90% CI": [
+     0.495,
+     0.608
+    ],
+    "n": 204
+   },
+   "mid VIX | below flip": {
+    "cont": 0.553,
+    "90% CI": [
+     0.495,
+     0.606
+    ],
+    "n": 208
+   },
+   "high VIX | above flip": {
+    "cont": 0.533,
+    "90% CI": [
+     0.44,
+     0.613
+    ],
+    "n": 75
+   },
+   "high VIX | below flip": {
+    "cont": 0.578,
+    "90% CI": [
+     0.537,
+     0.619
+    ],
+    "n": 367
+   }
+  }
+ },
+ "III nowcast (fit 2020-23, test 2024-26)": {
+  "n train/test": [
+   885,
+   697
+  ],
+  "models": {
+   "VIX only (constant in sigma units)": {
+    "OOS R2 vs VIX-only": 0.0,
+    "coverage of 20/50/80% quantiles": [
+     0.218,
+     0.562,
+     0.819
+    ]
+   },
+   "first-15 range only": {
+    "OOS R2 vs VIX-only": 0.118,
+    "coverage of 20/50/80% quantiles": [
+     0.199,
+     0.518,
+     0.788
+    ]
+   },
+   "state only (short, d)": {
+    "OOS R2 vs VIX-only": 0.04,
+    "coverage of 20/50/80% quantiles": [
+     0.208,
+     0.509,
+     0.786
+    ]
+   },
+   "all (short, d, R15, |r15|, VIX pct)": {
+    "OOS R2 vs VIX-only": 0.124,
+    "coverage of 20/50/80% quantiles": [
+     0.224,
+     0.516,
+     0.792
+    ]
+   }
+  },
+  "R2 gain all vs VIX-only, 90% CI": [
+   0.047,
+   0.205
+  ],
+  "R2 gain all vs first-15-range-only (what state adds), 90% CI": [
+   -0.045,
+   0.061
+  ],
+  "calibration P(rest range > 1 sigma) by forecast quintile": {
+   "0": {
+    "forecast": 0.096,
+    "observed": 0.093,
+    "n": 140
+   },
+   "1": {
+    "forecast": 0.143,
+    "observed": 0.252,
+    "n": 139
+   },
+   "2": {
+    "forecast": 0.245,
+    "observed": 0.158,
+    "n": 139
+   },
+   "3": {
+    "forecast": 0.379,
+    "observed": 0.317,
+    "n": 139
+   },
+   "4": {
+    "forecast": 0.558,
+    "observed": 0.421,
+    "n": 140
+   }
+  },
+  "pass (gain CI > 0 and calibration within 5 pts)": false
+ }
+}

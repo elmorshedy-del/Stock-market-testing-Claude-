@@ -113,3 +113,45 @@
     * calibration of P(rest range > 1σ_d) by decile;
     * pinball loss of the 20/50/80% quantiles.
   * **Prediction:** state + first-15-min range beat the VIX-only baseline out of sample (R² gain > 0 with bootstrap CI excluding 0), and calibration stays within ±5 points per decile.
+
+## Iteration 2 results (`iter2.py` → `out/iter2.json`)
+| Test | Result | Verdict |
+|---|---|---|
+| **I-a** stress controls | Below-flip coefficient 0.255 → **0.146** with controls (keeps 57%), 90% CI [0.10, 0.19], p < 0.001. Yesterday's range (0.21) and the overnight gap (0.19) carry most of the rest | **pass** |
+| **I-b** natural experiment | Flip-driven change in distance: **−0.051** (right sign), 90% CI [−0.10, +0.01], p 0.077. Price-driven part −0.007. The flip part correlates with ΔVIX (0.32), so it is not cleanly exogenous. Day after monthly opex (n 81): flip −0.12, price −0.10 | **fail (borderline)** |
+| **I-c** amount of short gamma at a fixed distance | Partial Spearman **0.003** [−0.08, +0.07] | **fail** |
+| **II** VIX × gamma continuation | SPY: low-VIX below-flip 45% [40, 50], mid 56% [50, 62], high 53% [49, 57]. **QQQ does not reproduce the low-VIX reversion** (52%) | exploratory B weakened |
+| **III** 09:45 range nowcast | Out-of-sample R² gain over VIX-only **+0.124** [0.047, 0.205]. Almost all of it comes from the first-15-minute range (+0.118); the gamma state adds +0.006 [−0.045, +0.061]. The 20/50/80% quantiles are well calibrated (22/52/79%), but P(rest range > 1σ) is mis-calibrated (top quintile 56% forecast vs 42% observed) because I used a normal residual where the residuals are not normal | **fail on the registered calibration criterion**; the quantile forecast is usable |
+
+* **Reading:**
+  * The flip predicts the day's size beyond stress (I-a). But neither the *amount* of short gamma (I-c) nor clean day-to-day flip moves (I-b) confirm that dealer hedging is the cause.
+  * The safest statement: the flip is a good **forecasting variable** for range; the mechanism is unproven. One possibility is that the flip marks where price sits relative to recently built positioning.
+  * After 09:45 the opening range supersedes it.
+  * **Practical:** before the open, use the flip distance to set the expected range. At 09:45, use the first 15 minutes' range: a calibrated 20/50/80% band for the rest of the day.
+
+### Anomaly E (found in passing, 2026-11-01): the open's direction is more informative in QQQ than in SPY
+* **On 1,717 common days (2020–2026), first-15-minute continuation:**
+  * QQQ **53.7%** vs SPY **50.4%**. QQQ is higher in 6 of 7 years. TSLA 51.3%.
+  * The gap comes from days when SPY and QQQ **open in opposite directions** (21.5%, n 370). There, SPY's own opening direction continues only **44.9%**, so the rest of the day follows **QQQ's** opening direction ~55% of the time. QQQ's own continues 54.1%.
+  * When they agree: SPY 52.0%, QQQ 53.6%.
+* **Artefact checks so far (b):**
+  * The same pattern appears with 5-, 15-, 30- and 60-minute windows: QQQ ≥ SPY at every window.
+  * The definitions are identical for both, and the effect is year-stable in sign.
+* **Mechanism candidates (c):**
+  1. **Information leadership:** news reaches tech first; SPY's open is diluted.
+  2. **SPY opening-auction noise:** SPY's huge opening cross makes transient moves that revert.
+  3. **Liquidity-led vs flow-led:** flow-physics found SPY liquidity-led and TSLA flow-led.
+* **Independent predictions (d):**
+  * (1) and (3): on disagreement days, QQQ's opening sign predicts SPY's rest-of-day sign.
+  * (2): measuring SPY from 09:35 instead of 09:30 should raise its continuation.
+
+## Pre-registration E (written before pulling the holdout): confirm on May 2018 – Dec 2019, data never used
+* **Data:** SPY + QQQ 1-minute bars, Databento XNAS, 2018-05-01 to 2019-12-31 (cost **$0.35**). This is the smallest slice that can falsify (OWNER_NOTES data budget).
+* **E1:** QQQ first-15-minute continuation > SPY's (paired by day). In-sample +3.3 pts.
+* **E2 (the sharp claim):** on days when the SPY and QQQ first-15-minute moves disagree in sign, P(SPY's rest-of-day sign = QQQ's opening sign) > 50%. In-sample 55.1%.
+* **E3 (mechanism 2):** SPY continuation measured from 09:35 (09:35 → 09:50 vs 09:50 → close) > from 09:30.
+* **Power, stated honestly:** ~420 days and ~90 disagreement days give an SE of ~5 pts on E2. The holdout can **falsify** (e.g. ≤ 48%) but only weakly confirm.
+* **Sequential rule, fixed now (METHOD 14):**
+  * If E2 ≥ 52% in the holdout, extend with ES vs NQ futures (RTH, 2010–2017) **one year at a time** (~$2.4/yr), combining yearly z-scores by Stouffer.
+  * **Confirm** when the combined z ≥ 3. **Abandon** if the running estimate is ≤ 50% after ≥ 400 disagreement days, or if the holdout itself is ≤ 48%.
+* **One-sided p:** binomial for E2; paired day bootstrap for E1 and E3.

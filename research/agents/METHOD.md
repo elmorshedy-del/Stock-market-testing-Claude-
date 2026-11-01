@@ -68,3 +68,7 @@
 | **Market anomalies (January and weekend effects, many published factors)** | Many shrink or vanish after discovery. McLean & Pontiff (2016) find returns about 30–60% lower after publication | Hold-out periods, era splits, mechanism-backed predictions (c–e) |
 
 **So in our loop:** when a test shows something odd, the Lorenz/Bell Burnell instinct is to stop and look rather than move on. The Penzias/OPERA discipline is to kill the artefacts first. A finding needs a second, independent footprint (Bell Burnell's second pulsar, the CMB's spectrum) before it changes a trade.
+14. **Pilot first, scale on promise, with a pre-set sequential rule** (owner's data budget, 2026-11-01).
+    * Start with the cheapest data that can *falsify* the idea.
+    * If it survives, expand in small chunks, and decide the stopping rule **before** looking: e.g. combine chunks by Stouffer z; confirm at z ≥ 3, abandon if the running estimate sits on the wrong side after a set amount of data.
+    * Expanding only when results look good, without a pre-set rule, is optional stopping. It manufactures significance.

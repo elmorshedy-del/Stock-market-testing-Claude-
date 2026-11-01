@@ -47,3 +47,11 @@
   * The price-up + IV-up gap-day fade was mostly a 2020–21 thing.
   * In the 0DTE era, call-skew richening during a run predicts that the run fades (ρ −0.33).
   * **Correction:** the 09:35 rule is weaker than first reported. Strong first 5 minutes → higher next 55 minutes 61% (TSLA/AAPL/NVDA/QQQ) or 55% (others), not 72%, and weak since 2020. A mild tilt only.
+
+## Data budget (owner, 2026-11-01)
+* "Don't consume databento quota unless it's highly valuable and if so start small and if results are promising u can consume more. Don't consume a lot in one chunk."
+* So:
+  * check the cost first;
+  * pull the smallest slice that can falsify the idea;
+  * expand only after a promising result, in small chunks;
+  * never one large pull.
