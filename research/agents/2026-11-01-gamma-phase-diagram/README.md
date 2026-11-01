@@ -241,3 +241,55 @@ Before trusting the call-wall barrier or the put-wall run-through, rule out the 
   * MH difference, call wall vs controls (same strata as iteration 3). Prediction: > 0, one-sided p < 0.05.
 * **Multiple tests:** 6 primary calls (A1, A2i, R-call, R-put, B-call, M2). The call-wall barrier counts as **established** only if A1, A2i and R-call pass and at least one of B-call or M2 passes.
   * The put-wall run-through counts as **supported** if R-put passes; with SPY's 29 events it stays provisional either way.
+
+### Iteration 3b results (`walls_b.py` → `out/walls_b.json`, events in `out/walls_b_events_{SPY,QQQ}.csv`; $0)
+**Instrument check first (METHOD 7):** the new code reproduces iteration 3 exactly (call +15.3, put −22.1).
+
+| Pre-registered check | Result | Verdict |
+|---|---|---|
+| **A1** volatility: σ-distance bins × prior-VIX tercile × roundness | call wall **+10.9 pts** (90% CI +4.2 to +18.0), p 0.005 | **pass**. About 30% of the raw gap was day-type (walls are reached on calmer days); the rest survives |
+| **A2i** walls within 0.25% of the prior 1-/5-day high dropped | 77 of 159 walls sat at a recent high; the other 82 give **+16.1 pts** (CI +6.2 to +27.1), p 0.004 | **pass**. Not a prior-high effect |
+| **A2ii** stale walls (t−10, not current) | +9.0 pts (CI −0.8 to +20.3), p 0.066, n 55 | **mixed**. Below the current wall (as predicted) but not ≈ 0. Stale walls still carry OI, so this cannot separate a weaker dose from level memory |
+| **R-call** QQQ, same design | **+13.4 pts** (CI +6.0 to +19.0), p 0.0015, n 145 | **pass**. Replicates on its own chain and strikes |
+| **R-put** QQQ put wall < 0 | +4.0 pts (CI −4.6 to +13.2), n 90 | **fail**. No run-through in QQQ |
+| **B** bunching (excess mass of highs at the wall) | SPY −0.19 (p 0.68), QQQ −0.25 (p 0.70); put walls −0.22 / +0.22 | **fail, but uninformative** (power, below) |
+| **M2** pinning time after the first touch | **+7.8 pts** of the remaining session within ±0.1% (CI +3.7 to +11.3), p 0.0015 | **pass**. Not fully independent: the same paths, a different functional |
+
+* **Disclosure (bug, fixed before reading any result as final):** in the first run, A2i dropped 0 walls.
+  * The flag column was named `hist`, which pandas resolves to the `DataFrame.hist` plotting method, so the filter compared a method to 1.
+  * Renamed to `nearhist` and re-run; only A2i changed.
+* **Why B failed (power, a lesson for METHOD 14):**
+  * B's sample keeps walls ≥ 0.5σ above the open (so the high ≥ open bound stays clear of the window). That drops 72% of the touches: 115 of SPY's 159 happen with the wall within 0.5σ of the open, leaving ~40.
+  * The +11 to +15-pt stall gap implies an excess mass of about +0.25. The estimator's placebo spread (5th–95th: −1.30 to +0.30) is far wider.
+  * B could not have detected the effect. I registered it without a power check, which is the mistake METHOD 14 warns about.
+* **Era (A1 strata):** SPY R1 +16.9 (CI +3.5 to +31.5), **R2 +7.8 (CI −0.8 to +15.8)**.
+  * Reweighted by % distance only: R2 +14.6, 2024–26 +15.2.
+  * QQQ R2 +6.6, 2024–26 +12.3 (descriptive).
+  * In today's regime the effect is likely +8 to +15 pts, smaller than in 2020–21.
+* **Verdict by the registered rule** (A1, A2i, R-call, plus B or M2): **the call-wall barrier is established**, with M2 carrying the second footprint and the M2 caveat above.
+  * **The put-wall run-through is not supported** (QQQ fails). Logged as anomaly F: SPY only, 29 events, parked.
+
+### What a call-wall touch means for the rest of the day (`walls_exit.py`, `walls_exit_sigma.py`; descriptive, not a new test)
+SPY, the first time the day's high tags the prior call wall (159 days). The comparison is ordinary $5 strikes reweighted to the walls' distance × roundness mix.
+
+| | Call wall | Ordinary $5 strike |
+|---|---|---|
+| That was the day's high (±0.1%) | **43%** | 28% |
+| High ran > 0.5% further | **18%** | 34% |
+| High ran > 1% further | **4%** | 14% |
+| Overshoot median / 75th / 90th pct | 0.16 / 0.39 / **0.71%** | 0.31 / 0.67 / 1.19% |
+| Close back below the strike | **59%** | 53% |
+| First touch before 10:30 | 57% | 68% |
+| **Holding VIX fixed** (σ units, A1 reweighting): > 0.5σ further | **14%** | 22% |
+| Holding VIX fixed: 90th pct overshoot | 0.60σ | 0.76σ |
+
+* **QQQ:** day's high at the wall 32% vs 20%; > 0.5% further 35% vs 45%; > 1% further 18% vs 22%.
+* **Use for call exits:** trim into the first tag of the prior call wall; hold a runner only with a stop just under it.
+  * It is a tilt, not a ceiling: the wall still breaks 57% of the time.
+* **It applies when the wall sits within ~1% above the open** (92% of the touches).
+  * Monday Nov 2: SPY 755.72, call wall 800 (+5.9%), not in play.
+  * Note TSLA closed 399.81 on its 400 call wall: untested for TSLA in this design (next).
+
+### Anomaly log (continued)
+* **F — SPY put wall runs through** (2/29 stopped vs 29% expected). It fits the classic-convention picture (dealer short gamma at the put wall amplifies), but QQQ does not repeat it (+4 pts). Unconfirmed; parked until more put-wall touches accumulate.
+* **G — stale walls keep ~60% of the effect.** Either the old wall still holds large OI (dose) or the level itself is remembered. Separable only with per-strike OI: does the stall scale with the wall's OI dominance? That needs ThetaData, not Databento.

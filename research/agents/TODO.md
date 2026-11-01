@@ -108,5 +108,12 @@ Every test is pre-registered in its own folder before it runs.
   * Plan: (a) daily version first (free data since 1990); (b) intraday version only after checking the OPRA cost.
   * Outcome to test: next 1–10 day S&P return and P(up-leg) after a divergence low vs other new lows. Report era splits per OWNER_NOTES (pre-2020 / 2020–21 / 2022+).
 
+## Gamma-wall follow-ups (2026-11-01)
+*Context: iteration 3/3b of the gamma phase diagram found that the prior day's SPY call wall stops the day's high ~1.4x as often as ordinary $5 strikes (+11 to +15 pts, replicated in QQQ, survives VIX and prior-high controls; smaller since 2022). The put wall did not act as a floor.*
+- [ ] **GW1. TSLA as a third asset (same design):** mechanism-derived prediction. Classic convention (dealer-sign Part B) implies a stall at TSLA's call wall, but weaker since 2023 (call damping p 0.10). Owner's 400 intuition: TSLA closed 399.81 on its 400 call wall Oct 30. Pre-register before running. [gamma-phase-diagram](2026-11-01-gamma-phase-diagram/).
+- [ ] **GW2. Dose-response with per-strike OI** (ThetaData EOD OI, not Databento): does the stall gap scale with the wall's OI dominance (wall OI / next-largest)? Separates gamma dose from level memory (anomaly G).
+- [ ] **GW3. Live forward log of the exit rule:** each SPY day whose high tags the prior call wall, record stall (±0.1%) and the run past it; compare with the 43% / 18% (> 0.5%) base rates.
+- [ ] **GW4. Put wall (anomaly F) parked:** SPY lows ran through the put wall (2/29 stopped) but QQQ did not repeat it. Revisit once >= 60 SPY put-wall touches exist.
+
 ## Done
 - (none yet)
