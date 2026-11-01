@@ -69,3 +69,21 @@
   * C: positive (credit improving → stocks rise), weak.
   * SMI: no reliable effect (folklore; our forced-flow study found last-half-hour momentum died after 2023).
   * A, L, D: as above.
+
+## Amendment 2 (owner, 2026-11-01): one insider's timing. Written before any of the individual's trades was looked at
+**Owner:** "We can also do an individual SEC test… like Elon's brother has been known to sell at intermediate tops."
+* **Who:**
+  * Kimbal Musk (SEC filer CIK 0001494731, a Tesla director): open-market sales (code S) of TSLA (issuer CIK 0001318605) on Form 4, from the SEC data sets 2006Q1–2026Q1 (2026Q2/Q3 not yet published).
+  * Comparison groups: Elon Musk (CIK 0001494730) and all other TSLA insiders.
+* **Sale episodes:** filings whose trade dates are within 10 sessions of each other are merged. The episode date is the first trade date; the actionable date is the session after the first filing date.
+* **Outcomes** (TSLA daily close, split-adjusted, Yahoo):
+  * **O1:** TSLA return from the episode date to +20 and +60 sessions.
+  * **O2 (actionable, primary):** the same from the session after the filing.
+  * **O3 "sold near a top":**
+    * (a) the sale-day close is within 10% of the highest close from −20 to +60 sessions;
+    * (b) TSLA falls ≥ 20% below the sale-day close at some point within the next 60 sessions.
+* **Null:** for each episode, random TSLA sessions from the same calendar year with past-60-session return in the same tercile. Insiders sell after rallies, so this match removes "sold after a run-up" as an explanation. 10,000 permutation draws; one-sided p.
+* **Prediction (owner's hypothesis):** Kimbal's O2 at 60 sessions is below the matched baseline, and his O3 shares are above it.
+* **Power:** expected to be small (likely fewer than 20 episodes), so CIs will be wide.
+  * A famous pattern can also be memory selection: we remember the sales before drops.
+  * The test counts every sale.
