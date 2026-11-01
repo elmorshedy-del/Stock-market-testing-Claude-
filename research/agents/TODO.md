@@ -115,6 +115,7 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **GW3. Live forward log of the exit rule:** each SPY day whose high tags the prior call wall, record stall (±0.1%) and the run past it; compare with the 43% / 18% (> 0.5%) base rates.
 - [ ] **GW4. Put wall (anomaly F) parked:** SPY lows ran through the put wall (2/29 stopped) but QQQ did not repeat it. Revisit once >= 60 SPY put-wall touches exist.
 - [ ] **GW5. Sell the upside at the wall (owner's day-trade ask, 2026-11-01):** short 0DTE call / call spread at the prior call wall, opened at the first touch, held to expiry; SPY daily expiries since late 2022 (~70 touches). ThetaData 0DTE quotes (not Databento). Share-short version failed ([wall-short](2026-11-01-wall-short/)). Pre-register before running.
+- [ ] **YF1. Score the year-end forecast** on Nov 13, Nov 30, Dec 31 (percentile of the SPY close in the B-all distribution; fill the log in [yearend-forecast](2026-11-01-yearend-forecast/)).
 
 ## Done
 - (none yet)

@@ -46,3 +46,39 @@
   * the percentile of SPY's actual close within the B-all forecast distribution (PIT);
   * whether it fell inside the 25–75% and 10–90% bands.
 * A calibrated forecast lands inside 25–75% half the time. **Three dates is far too few to judge.** This starts a running log of forecasts.
+
+## Results (`forecast.py` → `out/forecast.json`, `figure.py` → `out/forecast.png`; $0)
+### Step 1: the 13-week analog fails, so it does not enter the forecast
+| | corr | 95% CI | p | sign agreement | Octobers only (after Oct vs after Jul) |
+|---|---|---|---|---|---|
+| next 20 sessions vs the 20 after the month-end 3 months earlier (n 918) | +0.05 | −0.04 to +0.13 | 0.13 | 52.6% | −0.00 (n 76) |
+| next 40 sessions (n 917) | +0.03 | −0.09 to +0.14 | 0.33 | 56.8% | +0.10 (n 76) |
+
+* What came after July (SPY +5.7% from the Jul 29 low into mid-August, then sideways) says nothing reliable about November.
+
+### Step 2: base rates, vol-scaled (today: S&P 7,580, 3.05% below its 52-week high, 20-day realized vol 11.5%)
+| Reference class | Nov 13: P(up), median SPY | Nov 30: P(up), median | Dec 31: P(up), median, 25–75%, 10–90% |
+|---|---|---|---|
+| **All years 1950–2025 (n 76), headline** | **63%, 764** | **70%, 769** | **78%, 783; 757–804; 740–820** |
+| Midterm years (n 19) | 79%, 765 | 79%, 774 | 68%, 775; 753–804; 734–824 |
+| Pullback years, Oct close 2–8% below the high (n 30) | 63%, 766 | 80%, 769 | 83%, 783; 766–797; 743–821 |
+
+* **Caveat, fixed in the method but worth flagging:** the bands use realized vol (11.5%). VIX 19.4 prices wider swings; ±1σ to Dec 31 is about ±7.9% (SPY ≈ 696–815). Part of that is the election premium the fit expects to drain after Nov 3.
+* The fan maps each year onto 2026's 42 sessions by fraction of the Oct-end → Dec-end span. Years have different session counts, e.g. the 1968 Wednesday closures.
+
+### Step 3–4: signals and calendar (from earlier studies; not refit)
+* **Signals:**
+  * R4 fired Oct 30: 70–74% up-leg odds (WR3, scored ~Nov 27).
+  * Forced-move fade: ~18% of below-flip moves given back in 10 sessions.
+  * Election VIX fit: −3.8 points in the 5 sessions after Nov 3.
+* **Calendar** (when moves are likely, not their direction):
+  * election Tue Nov 3; jobs Fri Nov 6; CPI ~Nov 10–13 (date to confirm);
+  * VIX expiry Wed Nov 18 (NVDA earnings about then; estimate); Nov opex Fri Nov 20; Thanksgiving Nov 26;
+  * jobs Dec 4; FOMC Dec 8–9; VIX expiry Dec 16; quarterly opex Fri Dec 18 (the biggest gamma roll-off; calendar-mechanics A7: a weaker next week, ρ +0.17); year-end Dec 31.
+
+### Scoring log (fill in on the dates; B-all distribution)
+| Date | Forecast median | 25–75% | 10–90% | Actual SPY close | Percentile | Inside 25–75? |
+|---|---|---|---|---|---|---|
+| Fri Nov 13 | 764 | 751–778 | 734–794 | | | |
+| Mon Nov 30 | 769 | 754–784 | 732–801 | | | |
+| Thu Dec 31 | 783 | 757–804 | 740–820 | | | |
