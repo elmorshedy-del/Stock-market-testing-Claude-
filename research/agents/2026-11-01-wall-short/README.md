@@ -51,3 +51,25 @@
   * QQQ adds ~140 trades.
   * A true edge smaller than that can pass in-sample and still fail T1. That would be "not proven", not "disproven".
 * **Not tested here:** options (0DTE puts at the wall), which would need option-price data. That comes only if the share version passes.
+
+## Results (`wall_short.py` → `out/wall_short.json`, trades in `out/trades_*_chosen.csv`, figure `out/wall_short.png`; $0)
+**Chosen on 2020–23:** stop 0.25% above the wall, exit at the close, no filter. In-sample it was +0.060% per trade (n 72), and even that was not significant (p 0.20).
+
+| Test | Result | Verdict |
+|---|---|---|
+| **T1** SPY 2024–26, untouched | +0.040% per trade, n 42, win 48%, p 0.24 | **fail** (positive, not distinguishable from 0) |
+| **T2** QQQ 2020–26, same rules | −0.017% per trade, n 99, win 24% | **fail** |
+| **T3** wall minus ordinary-strike short | +0.080 pts (ordinary short −0.027%, n 609), p 0.058 | **fail** (just short of 0.05) |
+| **Persistence** | SPY 5 of 7 years positive, but R1 −0.011% per trade; **2022 alone is +5.0 of the +6.0% total** | **fail** (needs both eras) |
+
+* **SPY full 2020–26:** +0.053% per trade (≈ $0.40 per share at 760), 114 trades (~17 a year).
+  * Win rate 40%: average win +0.47%, average loss −0.23%.
+  * Summed P&L +6.0% over 7 years at one share-unit per trade, max drawdown 3.8%.
+* **Grid honesty:** only 9 of 32 configs were positive in-sample, but all 32 were positive in 2024–26 (+0.00 to +0.06% per trade, n 25–42).
+  * That fits the stall effect being strong in 2024–26 (+15 pts), but the profits are too small to tell from 0 on 42 trades.
+* **Verdict: not a tradeable candidate as a share short.** The wall stops the rise but does not push price down.
+  * When SPY stalls there, the median close is only 0.07% below the wall; when it breaks, the stop is paid.
+  * The edge is in the **missing upside tail** (big runs past the wall are half as common), not in a drop.
+* **Mechanism-matched next test (GW5):** sell the upside instead of shorting the downside. That is a short 0DTE call or call spread struck at the wall, opened at the touch.
+  * Call premium is priced off the normal upside tail, and the wall removes about half of that tail.
+  * Needs 0DTE option quotes (ThetaData, not Databento). SPY has had daily expiries since late 2022 (~70 touches). Pre-register before running.
