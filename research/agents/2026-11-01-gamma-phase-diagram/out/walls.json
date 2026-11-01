@@ -1,0 +1,71 @@
+{
+ "days": 1701,
+ "reached strike-days": 2224,
+ "wall cases": 188,
+ "call wall (highs) stall": {
+  "wall rate": 0.428,
+  "non-wall rate (raw)": 0.306,
+  "MH diff (matched distance x roundness)": 0.153,
+  "90% CI": [
+   0.083,
+   0.227
+  ],
+  "p (diff <= 0)": 0.0,
+  "n wall": 159
+ },
+ "call wall (highs) inside": {
+  "wall rate": 0.591,
+  "non-wall rate (raw)": 0.542,
+  "MH diff (matched distance x roundness)": 0.059,
+  "90% CI": [
+   -0.012,
+   0.133
+  ],
+  "p (diff <= 0)": 0.084,
+  "n wall": 159
+ },
+ "put wall (lows) stall": {
+  "wall rate": 0.069,
+  "non-wall rate (raw)": 0.293,
+  "MH diff (matched distance x roundness)": -0.221,
+  "90% CI": [
+   -0.302,
+   -0.131
+  ],
+  "p (diff <= 0)": 1.0,
+  "n wall": 29
+ },
+ "put wall (lows) inside": {
+  "wall rate": 0.379,
+  "non-wall rate (raw)": 0.591,
+  "MH diff (matched distance x roundness)": -0.225,
+  "90% CI": [
+   -0.369,
+   -0.091
+  ],
+  "p (diff <= 0)": 0.99,
+  "n wall": 29
+ },
+ "era R1 2020-21": {
+  "up stall MH diff": 0.186,
+  "dn stall MH diff": -0.002,
+  "up n wall": 56,
+  "dn n wall": 12
+ },
+ "era R2 2022+": {
+  "up stall MH diff": 0.15,
+  "dn stall MH diff": -0.316,
+  "up n wall": 103,
+  "dn n wall": 17
+ },
+ "round-number check (non-walls): stall rate $10 vs other $5": {
+  "up": [
+   0.274,
+   0.331
+  ],
+  "dn": [
+   0.277,
+   0.307
+  ]
+ }
+}

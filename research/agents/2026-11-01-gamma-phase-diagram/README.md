@@ -190,3 +190,54 @@
 * **Prediction:** wall stall rate exceeds the control rate by ≥ 5 pts, p < 0.05, for both walls. **Falsifier:** difference ≤ 0.
 * **Era split:** R1 2020–21 vs R2 2022+.
 * **Secondary W2:** after touching the wall, the close is back inside (below the call wall, above the put wall) more often than for the controls.
+* **Design correction, written before running iteration 3:**
+  * The registered "same-day" control is degenerate. If price reached the wall, it necessarily ran through every closer control strike on that day, so those controls can never stall.
+  * The controls are therefore **all other $5-multiple strikes reached on any day, matched by distance from the open** (bins 0–0.5–1–1.5–2–3%) **and by roundness** ($10 multiples vs other $5 multiples).
+  * The statistic is the Mantel–Haenszel-weighted difference in P(the day's extreme stops within ±0.10% of the strike | the strike was reached), wall vs non-wall. CIs come from a 20-day block bootstrap.
+  * **Disclosure:** this correction was written to disk before the run but committed together with the results, not pushed before running (a process slip, logged).
+
+### Iteration 3 result (`walls.py` → `out/walls.json`; 1,701 days, 2,224 strike-days reached, $0)
+| | Wall stall rate | Non-wall (raw) | **MH difference (matched distance × roundness)** | 90% CI | n walls |
+|---|---|---|---|---|---|
+| **Call wall, day highs** | **42.8%** | 30.6% | **+15.3 pts** | +8.3 to +22.7 | 159 |
+| **Put wall, day lows** | **6.9%** | 29.3% | **−22.1 pts** | −30.2 to −13.1 | 29 |
+| W2 call wall: close back below | 59.1% | 54.2% | +5.9 pts (p 0.08) | −1.2 to +13.3 | 159 |
+| W2 put wall: close back above | 37.9% | 59.1% | −22.5 pts | −36.9 to −9.1 | 29 |
+
+* **Era split (stall MH difference):** call wall R1 +18.6 (n 56), R2 +15.0 (n 103); put wall R1 −0.2 (n 12), R2 −31.6 (n 17).
+* **Round numbers alone do not stall here:** among non-walls, $10 strikes stall 27.4% / 27.7% (highs / lows) vs 33.1% / 30.7% for other $5 strikes. The round-number confound therefore biases *against* a wall effect.
+* **Registered verdict: W1 fails as registered** ("both walls"). The call wall passes clearly (+15 pts, p < 0.001); the put wall reverses sign (falsifier hit).
+
+**Reading it as a physicist: the reversal was predictable from our own prior result, and I missed it.**
+* dealer-sign Part B (2026-10-16) found **call gamma damps and put gamma amplifies** SPY/QQQ ranges (classic convention, p < 0.001).
+* At the strike level, that sign structure means:
+  * a **call wall** is dealer *long* gamma, so hedges sell into the approach: a potential **well** (an attractor, a reflecting barrier);
+  * a **put wall** is dealer *short* gamma, so hedges sell more as price falls into it: a potential **hill**, an unstable point that price runs through and overshoots.
+* I registered the folklore ("put wall = support") instead of deriving the put-wall sign from the mechanism (METHOD 2). The data took the mechanism's side.
+* It is still post hoc for this iteration, so it needs the checks below and an independent sample.
+* **Known precedents for the attractor side:** strike pinning at expiry (Ni, Pearson & Poteshman 2005; Golez & Jackwerth 2012 for S&P futures), and the Avellaneda & Lipkin (2003) hedging model, in which long-gamma hedging creates a drift toward the strike.
+* **What is new here:** the effect on *any* day, measured on the day's extreme, using the prior day's largest-OI strike.
+
+## Iteration 3b pre-registration (written and pushed before running; free data in hand, $0)
+Before trusting the call-wall barrier or the put-wall run-through, rule out the artefacts (METHOD 13b) and look for a second footprint (METHOD 11, 13d–e).
+* **A1 — volatility / day-type confound.**
+  * Walls may be reached on calmer days, when any overshoot is small.
+  * Re-run with distance bins in σ units (σ = prior VIX/√252 × open; bins 0–0.5–1–1.5–2–3σ) and **prior-VIX tercile** added to the MH strata.
+  * Pass: call-wall difference ≥ +5 pts, one-sided p < 0.05.
+* **A2 — level-history confound.** Overwriters may sell calls at visible resistance, so the wall could mark a technical level rather than cause the stall.
+  * (i) Drop wall cases within 0.25% of the prior day's high or the prior 5-day high (call) / low (put). Pass: call difference ≥ +5 pts.
+  * (ii) **Stale walls:** the call wall from 10 sessions earlier, on days when it differs from the current wall. The gamma mechanism predicts a stale-wall difference **below** the current wall's and near 0.
+  * A history mechanism predicts a stale-wall difference as large as the current wall's.
+* **R — independent sample: QQQ** (its own chain and strikes; `td_gamma_QQQ.csv` walls, QQQ 1-minute bars 2020–26), same design as iteration 3 (MH, matched % distance × roundness).
+  * Pass: call-wall difference > 0, one-sided p < 0.05.
+  * Put wall: the difference is **< 0**, one-sided p < 0.05. The direction is now derived from the mechanism and stated before looking.
+* **B — second observable: bunching** (the Saez/Chetty excess-mass estimator), SPY and QQQ.
+  * Sample: days with the call wall 0.5–3σ above the open (so the high ≥ open bound sits away from the wall). Histogram x = (high − wall)/σ in 0.05σ bins over [−2.5, +1.5].
+  * Counterfactual: a degree-5 polynomial fitted with [−0.15, +0.15] excluded.
+  * Excess mass = (observed − counterfactual)/counterfactual inside that window. p = share of the 60 placebo window positions (same width, centres at −2.0…+1.0, |centre| ≥ 0.3) with excess ≥ observed.
+  * Prediction: call wall excess > 0, p < 0.05. Put wall (x = (low − wall)/σ, wall 0.5–3σ below the open): excess ≤ 0, with the deficit or run-through sign.
+* **M2 — pinning time (the attractor's footprint in time).**
+  * After the first touch (within ±0.10%) of a reached strike, compute the share of the remaining session's minutes that close within ±0.10% of it.
+  * MH difference, call wall vs controls (same strata as iteration 3). Prediction: > 0, one-sided p < 0.05.
+* **Multiple tests:** 6 primary calls (A1, A2i, R-call, R-put, B-call, M2). The call-wall barrier counts as **established** only if A1, A2i and R-call pass and at least one of B-call or M2 passes.
+  * The put-wall run-through counts as **supported** if R-put passes; with SPY's 29 events it stays provisional either way.
