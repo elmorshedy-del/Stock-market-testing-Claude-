@@ -54,3 +54,18 @@
 * Monthly-horizon market predictors have OOS R² of ~1–3% at best. With 15–20 years of data, a real effect can still fail the test (low power).
 * Aggregate short interest, the literature's top candidate, has only ~2020+ free data via FINRA's API. That is too short to test here; logged as a follow-up.
 * Insider classification is a simplified Cohen–Malloy–Pomorski rule; the 10b5-1 plan flag only exists from 2023.
+
+## Amendment 1 (owner, 2026-11-01, written before any result was computed; the first run was stopped before producing output)
+**Owner:** "SEC aren't reliable and they are really lagging indicators. I meant more like ones we can say: ok, these people know this will bounce in November to EOY, or these know it will sell."
+* **Dropped:** I-opp and I-all (SEC Form 4). No insider numbers were computed or seen.
+* **Kept:** A and L (CFTC asset managers / leveraged funds, weekly, Friday release) and D (DIX, daily).
+* **Added, all timely and free:**
+  * **C — credit investors:** the 20-session log change of HYG/IEF (high-yield vs Treasuries, daily, 2007 →). This is the "bond investors see it first" hypothesis.
+  * **SMI — the "smart money index" (Hays):** SPY's last-60-minute return minus its first-30-minute return, summed over the trailing 20 sessions, from 1-minute bars (2018-05 → 2026-10).
+    * The folklore: the open is emotional retail, the close is institutions.
+* **Horizons:** 20, **40** (≈ Nov → year-end) and 60 sessions. **Primary = the 40-session horizon** for A, D, C, SMI (Holm across 4). The others are secondary.
+* **"What they say now":** each signal's Oct 30 reading and tercile is reported. It is read as "positioned for a bounce" or "offloading" only if that signal passes.
+* **Predictions:**
+  * C: positive (credit improving → stocks rise), weak.
+  * SMI: no reliable effect (folklore; our forced-flow study found last-half-hour momentum died after 2023).
+  * A, L, D: as above.
