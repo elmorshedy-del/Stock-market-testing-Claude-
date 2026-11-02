@@ -536,3 +536,19 @@ S1, S2, S7 and T1–T4 are unchanged.
   * **L4:** the next 2 sessions' spread. Forced selling is price-insensitive, so it tends to bounce back (our forced-flow law). Prediction: positive.
 * **Calibration:** the same numbers on the reported July unwind window (Jul 24–31 2026). If Friday looks like July, the post is plausible; if not, it isn't.
 * **Limits:** this is consistent-with evidence, never proof of a specific seller. The basket is my choice, fixed before looking.
+
+### LQ results (`python liquidation.py <dir>`, `python liquidation_intraday.py <1m dir>`; `out/liquidation*.json`, `out/liquidation.png`)
+* **Fri Oct 30:** basket −7.47% vs RSP −0.79%. Spread −6.68% = **1.4th pct since 2024**; **25 of 25 names down**; RSP at the 12.6th pct.
+  * **L1 ✓, L3 ✓.**
+  * **L2 ✗:** dollar volume 1.33× its 20-day average, the 90th pct, not top 5%.
+* **The July unwind (calibration) looks the same on L1/L3, and its volume wasn't extreme either (0.8–1.13×):**
+  * Jul 24 −6.95 (1.0th pct, 25/25 down, RSP +0.78);
+  * Jul 28 −6.30; Jul 29 −5.56;
+  * then **Jul 30 +12.6 pts (99.9th pct): the relief day.**
+* **What argues against a forced seller on Friday:**
+  * **October's bottom-2% days line up with earnings:** Oct 14, Oct 22 (META's reaction day, −8.4, the 2nd-worst since 2024), Oct 29 (GOOGL/MSFT), Oct 30 (AMZN/INTC after hours).
+  * **Friday's intraday shape:** 69% of the loss came by 10:00 (the overnight gap), the low came at 15:00 (−9.25%), then a bounce into the close (−7.44%). That is not a closing-auction dump.
+  * Price data can't separate de-grossing from news-driven repricing.
+* **L4 (relief):** pending. Monday at 11:00 the basket is −1.93% vs RSP +1.01% (spread −2.94), so no relief yet.
+  * Historically, after bottom-2% days the next-2-session spread averaged +0.05% (47% positive, n 14), so a bounce is not automatic.
+* **Verdict:** consistent with AI-book de-grossing, not confirmable. **The tell to watch: a violent relief day in the basket vs the market (July's +12.6).** It would say the forced selling is done.

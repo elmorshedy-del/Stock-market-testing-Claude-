@@ -1,0 +1,278 @@
+{
+ "days since 2024": 712,
+ "Fri Oct 30 2026": {
+  "basket %": -7.47,
+  "RSP %": -0.79,
+  "spread %": -6.68,
+  "spread pct (low = worse)": 0.014,
+  "share of basket down": 1.0,
+  "RSP pct": 0.1264,
+  "dollar volume vs 20d": 1.33,
+  "volume pct": 0.9017,
+  "next 2 sessions spread %": null,
+  "n names": 25
+ },
+ "Mon Oct 26 to Thu Oct 29 (context)": {
+  "2026-10-26": {
+   "basket %": 1.76,
+   "RSP %": 0.35,
+   "spread %": 1.41,
+   "spread pct (low = worse)": 0.6587,
+   "share of basket down": 0.2,
+   "RSP pct": 0.6475,
+   "dollar volume vs 20d": 0.8,
+   "volume pct": 0.1643,
+   "next 2 sessions spread %": 9.67,
+   "n names": 25
+  },
+  "2026-10-27": {
+   "basket %": 5.6,
+   "RSP %": 0.11,
+   "spread %": 5.49,
+   "spread pct (low = worse)": 0.9831,
+   "share of basket down": 0.04,
+   "RSP pct": 0.5253,
+   "dollar volume vs 20d": 0.89,
+   "volume pct": 0.3216,
+   "next 2 sessions spread %": 0.06,
+   "n names": 25
+  },
+  "2026-10-28": {
+   "basket %": 4.14,
+   "RSP %": -0.04,
+   "spread %": 4.18,
+   "spread pct (low = worse)": 0.9494,
+   "share of basket down": 0.2,
+   "RSP pct": 0.4382,
+   "dollar volume vs 20d": 1.1,
+   "volume pct": 0.684,
+   "next 2 sessions spread %": -10.8,
+   "n names": 25
+  },
+  "2026-10-29": {
+   "basket %": -2.92,
+   "RSP %": 1.2,
+   "spread %": -4.12,
+   "spread pct (low = worse)": 0.0632,
+   "share of basket down": 0.84,
+   "RSP pct": 0.9382,
+   "dollar volume vs 20d": 0.87,
+   "volume pct": 0.2837,
+   "next 2 sessions spread %": -9.6,
+   "n names": 25
+  }
+ },
+ "July unwind window (calibration)": {
+  "2026-07-22": {
+   "basket %": 1.35,
+   "RSP %": -0.03,
+   "spread %": 1.38,
+   "spread pct (low = worse)": 0.6545,
+   "share of basket down": 0.4,
+   "RSP pct": 0.4452,
+   "dollar volume vs 20d": 0.75,
+   "volume pct": 0.0997,
+   "next 2 sessions spread %": -6.58,
+   "n names": 25
+  },
+  "2026-07-23": {
+   "basket %": -0.0,
+   "RSP %": -0.37,
+   "spread %": 0.36,
+   "spread pct (low = worse)": 0.4719,
+   "share of basket down": 0.44,
+   "RSP pct": 0.2584,
+   "dollar volume vs 20d": 0.8,
+   "volume pct": 0.1587,
+   "next 2 sessions spread %": -9.99,
+   "n names": 25
+  },
+  "2026-07-24": {
+   "basket %": -6.17,
+   "RSP %": 0.78,
+   "spread %": -6.95,
+   "spread pct (low = worse)": 0.0098,
+   "share of basket down": 1.0,
+   "RSP pct": 0.8329,
+   "dollar volume vs 20d": 0.8,
+   "volume pct": 0.1559,
+   "next 2 sessions spread %": -9.35,
+   "n names": 25
+  },
+  "2026-07-27": {
+   "basket %": -2.29,
+   "RSP %": 0.75,
+   "spread %": -3.04,
+   "spread pct (low = worse)": 0.0997,
+   "share of basket down": 0.8,
+   "RSP pct": 0.816,
+   "dollar volume vs 20d": 0.97,
+   "volume pct": 0.4677,
+   "next 2 sessions spread %": -11.87,
+   "n names": 25
+  },
+  "2026-07-28": {
+   "basket %": -5.14,
+   "RSP %": 1.17,
+   "spread %": -6.3,
+   "spread pct (low = worse)": 0.0169,
+   "share of basket down": 0.84,
+   "RSP pct": 0.9354,
+   "dollar volume vs 20d": 1.13,
+   "volume pct": 0.7247,
+   "next 2 sessions spread %": 7.04,
+   "n names": 25
+  },
+  "2026-07-29": {
+   "basket %": -6.46,
+   "RSP %": -0.9,
+   "spread %": -5.56,
+   "spread pct (low = worse)": 0.0323,
+   "share of basket down": 0.96,
+   "RSP pct": 0.0899,
+   "dollar volume vs 20d": 1.11,
+   "volume pct": 0.698,
+   "next 2 sessions spread %": 13.18,
+   "n names": 25
+  },
+  "2026-07-30": {
+   "basket %": 12.44,
+   "RSP %": -0.16,
+   "spread %": 12.6,
+   "spread pct (low = worse)": 0.9986,
+   "share of basket down": 0.04,
+   "RSP pct": 0.3778,
+   "dollar volume vs 20d": 1.22,
+   "volume pct": 0.8202,
+   "next 2 sessions spread %": 4.52,
+   "n names": 25
+  },
+  "2026-07-31": {
+   "basket %": 0.41,
+   "RSP %": -0.17,
+   "spread %": 0.58,
+   "spread pct (low = worse)": 0.5112,
+   "share of basket down": 0.36,
+   "RSP pct": 0.3722,
+   "dollar volume vs 20d": 1.04,
+   "volume pct": 0.5927,
+   "next 2 sessions spread %": 8.96,
+   "n names": 25
+  },
+  "2026-08-03": {
+   "basket %": 4.91,
+   "RSP %": 0.98,
+   "spread %": 3.94,
+   "spread pct (low = worse)": 0.9326,
+   "share of basket down": 0.08,
+   "RSP pct": 0.9017,
+   "dollar volume vs 20d": 0.98,
+   "volume pct": 0.4831,
+   "next 2 sessions spread %": 2.88,
+   "n names": 25
+  },
+  "2026-08-04": {
+   "basket %": 6.46,
+   "RSP %": 1.44,
+   "spread %": 5.02,
+   "spread pct (low = worse)": 0.9775,
+   "share of basket down": 0.12,
+   "RSP pct": 0.9677,
+   "dollar volume vs 20d": 1.28,
+   "volume pct": 0.8722,
+   "next 2 sessions spread %": -3.77,
+   "n names": 25
+  }
+ },
+ "12 worst spread days since 2024 [date, spread %, share down, RSP %, dvol ratio]": [
+  [
+   "2025-01-27",
+   -19.44,
+   1.0,
+   0.07,
+   3.1
+  ],
+  [
+   "2026-10-22",
+   -8.37,
+   1.0,
+   0.73,
+   1.12
+  ],
+  [
+   "2025-04-03",
+   -7.93,
+   1.0,
+   -4.76,
+   1.16
+  ],
+  [
+   "2026-06-05",
+   -7.62,
+   1.0,
+   -1.42,
+   1.35
+  ],
+  [
+   "2026-02-04",
+   -7.61,
+   0.92,
+   0.87,
+   1.56
+  ],
+  [
+   "2026-07-16",
+   -7.52,
+   0.96,
+   0.98,
+   0.84
+  ],
+  [
+   "2025-03-06",
+   -6.99,
+   1.0,
+   -1.11,
+   1.03
+  ],
+  [
+   "2026-07-24",
+   -6.95,
+   1.0,
+   0.78,
+   0.8
+  ],
+  [
+   "2025-12-12",
+   -6.87,
+   1.0,
+   -0.68,
+   1.31
+  ],
+  [
+   "2026-10-14",
+   -6.69,
+   1.0,
+   -0.57,
+   1.06
+  ],
+  [
+   "2026-10-30",
+   -6.68,
+   1.0,
+   -0.79,
+   1.33
+  ],
+  [
+   "2024-07-17",
+   -6.53,
+   1.0,
+   -0.41,
+   1.17
+  ]
+ ],
+ "after the worst 2% spread days: mean next-2 spread %, share positive, n": [
+  0.05,
+  0.47,
+  14
+ ]
+}

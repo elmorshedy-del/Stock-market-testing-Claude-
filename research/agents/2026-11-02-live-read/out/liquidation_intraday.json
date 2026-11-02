@@ -1,0 +1,36 @@
+{
+ "2026-10-29": {
+  "basket so far / close %": -2.94,
+  "RSP %": 1.18,
+  "spread %": -4.12,
+  "last bar": "15:59:00",
+  "basket at 10:00 / 12:00 / 15:00 / 15:59 %": [
+   -2.36,
+   -0.9,
+   -3.59,
+   -2.94
+  ],
+  "share of the day's move made after 15:00": -0.22,
+  "share made in the first 30 min": 0.8
+ },
+ "2026-10-30": {
+  "basket so far / close %": -7.44,
+  "RSP %": -0.78,
+  "spread %": -6.66,
+  "last bar": "15:59:00",
+  "basket at 10:00 / 12:00 / 15:00 / 15:59 %": [
+   -5.12,
+   -7.54,
+   -9.25,
+   -7.44
+  ],
+  "share of the day's move made after 15:00": -0.24,
+  "share made in the first 30 min": 0.69
+ },
+ "2026-11-02": {
+  "basket so far / close %": -1.93,
+  "RSP %": 1.01,
+  "spread %": -2.94,
+  "last bar": "11:01:19"
+ }
+}
