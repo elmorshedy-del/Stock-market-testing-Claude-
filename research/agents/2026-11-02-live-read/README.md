@@ -67,7 +67,7 @@ Map = options-implied paths from 758.60, Gaussian, no drift. My call adds the ti
 | S4 | Fri Nov 6 close ≥ 766.4 | 32% | **35%** |
 | S5 | Trades ≤ 750 (the put wall) by Fri | 60% | **50%** |
 | S6 | Fri Nov 6 close > 755.72 | 56% | **60%** |
-| S7 | Any Fri close ≤ 740.6 (channel kill line) this week | 15% | **12%** |
+| S7 | Fri Nov 6 close ≤ 740.6 (channel kill line) | 15% | **12%** |
 | S8 | VIX closes ≤ 16.5 on any day through Nov 6 | – | **25%** |
 
 **Scenarios to Friday (my weights):**
@@ -130,5 +130,6 @@ Map = options-implied paths from 758.60, Gaussian, no drift. My call adds the ti
 * **Election (from tsla-politics, lean):** a Talarico win (75%) is mostly priced. A Paxton upset maps to a large TSLA up-day (CI wide). TSLA's ~1-vol-point election premium should bleed out after Nov 4.
 
 ## Scoring
+* Wording fix at 08:31 ET, before the open: S7 originally read "Any Fri close ≤ 740.6 this week"; the map number (15%) and my call refer to the Fri Nov 6 close.
 * Score S1, S2, T1 and T2 after Monday's close; S3–S8 and T3–T6 on Fri Nov 6 (TODO LR1).
 * Report Brier scores for my calls vs the map, so the tilts are tested over time.
