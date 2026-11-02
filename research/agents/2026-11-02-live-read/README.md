@@ -477,3 +477,11 @@ S1, S2, S7 and T1–T4 are unchanged.
   * RSP's mean on AAPL down days was −0.30%, so down days were still a bit weaker than average.
 * **Mechanical channel (no test needed):** AAPL is 7.7% of SPY. A ±3.5% reaction moves SPY ±27 bp by itself, either way.
 * **Reading:** no evidence that an AAPL drop is "contained" relative to the AI spenders. The up-spills-more lean is the owner's best point. It is consistent with AAPL as the anti-AI-capex hedge (its residual correlates −0.34 with the AI factor; aapl-quirks), but unproven.
+
+### Amendment AS-R (owner: "you're looking way too far back; AI capex only came under close scrutiny lately"). Written before computing.
+* **The same AS1 and AS2 statistics, restricted to the scrutiny regime.** Two start dates, fixed now:
+  * **(a) 2025-01-27**, the DeepSeek shock (the first market-wide AI-capex scare);
+  * **(b) 2025-10-01**, when debt-financed AI capex came under scrutiny.
+* **Also reported:** the event-by-event table (every reaction day with the stock's move and RSP's move), because n is tiny (AAPL 7 / 4 reports).
+* **Owner's prediction:** in the regime, the AI spenders' slope > AAPL's.
+* **Inference:** event bootstrap as before; with n this small the result is descriptive.
