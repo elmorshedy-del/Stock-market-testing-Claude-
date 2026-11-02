@@ -90,6 +90,23 @@
   * extend SPY to 2020-2023 (ARCX.PILLAR, about $0.55) as an out-of-sample check of any Stage-1 regime finding;
   * QQQ, and TSLA on its own flip.
 
+### Amendment A1 (logged after the Stage-1 SPY results, before any new data was pulled)
+* **Stage-1 outcome:**
+  * H1 fails: S0 −1.40 bp/day, shift p 0.79.
+  * H2 fails, and points the wrong way: below the flip −2.20 vs above −0.95, p 0.69.
+  * The 24-variant grid is flat (best t 0.5; joint p 0.97 to follow, 0.55 to fade).
+  * The opening move carries no information: corr(first 5 minutes, rest of day) = 0.008.
+* **Three post-hoc patterns from the Stage-1 exploration,** frozen now for confirmation:
+  * **E1 regime-aligned ORB:** take S0 (5-min, 10R) longs only when the 09:35 price < `flip_incl`, and shorts only when it is ≥ `flip_incl`. SPY 2024-26: +0.46 bp/day on 293 trades (shift p 0.029). Prediction: mean > 0.
+  * **E2 Monday:** S0 on Mondays minus other days. SPY 2024-26: +7.35 bp (shift p 0.016). Prediction: > 0.
+  * **E3 high VIX hurts:** S0 on days with prior-close VIX > 17.86 (the Stage-1 top-tercile cutoff, now fixed) minus other days. SPY 2024-26: about −4.9 bp. Prediction: < 0.
+* **Confirmation sets:**
+  * **(i) SPY 2020-01-02 to 2023-12-29** (ARCX.PILLAR `ohlcv-1m`, quoted about $0.45-0.95; same audit D1-D4; flip from `preopen_levels.csv`). This is the **primary confirmation**: an independent period.
+  * **(ii) QQQ 2024-26** (EQUS.MINI, $0.233): H1 on the paper's own instrument. E1 uses SPY's flip, a cross-asset proxy. Not independent of SPY.
+  * **(iii) TSLA 2024-26** (EQUS.MINI, $0.260): H1, E2 and E3. E1 can't be tested, because there is no daily TSLA flip series in hand.
+* **Pass for each E:** one-sided p < 0.05 under the circular-shift null in set (i). Sets (ii) and (iii) are supporting evidence only.
+* The ML step stays as registered, on SPY 2024-26.
+
 ## Method
 * `fetch.py` pulls the bars into `data/`, which is gitignored.
 * `audit.py` writes `out/audit.json`.
