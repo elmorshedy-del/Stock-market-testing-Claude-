@@ -55,3 +55,5 @@
   * pull the smallest slice that can falsify the idea;
   * expand only after a promising result, in small chunks;
   * never one large pull.
+
+* **TSLA reads (owner, 2026-11-02):** "what are the strong points here that we should keep integrated whenever we analyze tsla". Every TSLA analysis follows `TSLA_PLAYBOOK.md`: the 8-step standard read, with each number tagged proven / map / lean, and Tier-4 failures never used as signals. Update the playbook when a test changes a tier.
