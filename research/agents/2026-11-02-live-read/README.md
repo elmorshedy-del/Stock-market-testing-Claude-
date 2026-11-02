@@ -427,3 +427,20 @@ S1, S2, S7 and T1–T4 are unchanged.
   * tonight's GEX ≥ $6.1bn with no rally (October's failed rebuild);
   * TSLA losing 380;
   * a VIX that stays > 17 all week (machine C2).
+
+---
+
+## Added 10:05 ET: intraday breadth and who pushes SPY (~09:50 ET snapshot)
+* **Method:** `python breadth_now.py <dir>`. SPY weights from SSGA (as of Oct 30); sectors from the 11 sector-SPDR holdings; member moves from Yahoo spark (~4 min delayed).
+* **Validation:** the reconstructed cap-weighted move (+0.56%) matches SPY live (+0.57%, Twelve Data).
+* **Breadth:** 358 up / 144 down (71%). Average stock **+0.81%**, median +0.98%, vs the index +0.56%. The top 10 names add +32 bp; the other 490 add +24 bp.
+* **Pushes:** AMZN +4.2% (+15 bp), NVDA +1.8% (+13), GOOGL/GOOG +2.1% (+10), MSFT +0.7% (+4).
+* **Drags:** AAPL −1.3% (−10 bp; reports after today's close), XOM −2.8%, ORCL −5.9%, MU −1.1%, MRVL −6.0%.
+* **Sectors (average stock):**
+  * up: Discretionary +2.4% (94% up), Industrials +1.6%, Comm +1.5%, Materials +1.4%, Financials +1.2% (92% up), Staples +1.1%;
+  * down: Energy −2.3% (5% up), Utilities −0.3%, Tech −0.3% (53% up).
+* **Chips split:**
+  * AI-capex and memory still sold: STX −5.1, WDC −3.4, SNDK −2.0, MU −1.1, MRVL −6.0, INTC −2.1;
+  * analog and industrial chips up 1.8–3.6% (TXN, ADI, ON, NXPI, MCHP, QCOM, KLAC, MPWR);
+  * NVDA is the exception, +1.8%.
+* **Reading:** the rotation continues: broad participation, with cyclicals leading. For the gamma cycle, a rally *with* breadth is the healthy rebuild.
