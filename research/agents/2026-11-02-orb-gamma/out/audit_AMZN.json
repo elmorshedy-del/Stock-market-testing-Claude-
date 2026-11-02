@@ -1,0 +1,31 @@
+{
+ "symbol": "AMZN",
+ "dataset": "EQUS.MINI",
+ "label": "AMZN",
+ "window": [
+  "2024-01-02",
+  "2026-10-30"
+ ],
+ "sessions (Yahoo)": 711,
+ "status counts": {
+  "clean": 501,
+  "bad_D2": 204,
+  "bad_D1": 6
+ },
+ "clean share of full sessions": 0.7046,
+ "PASS (>= 95% clean)": false,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 1.64,
+  "d_high": 0.48,
+  "d_low": 0.48,
+  "d_close": 1.51
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 8.305,
+  "d_high": 3.715,
+  "d_low": 3.245,
+  "d_close": 7.585
+ },
+ "median bars per full session": 390.0,
+ "days with any missing RTH minute": 7
+}

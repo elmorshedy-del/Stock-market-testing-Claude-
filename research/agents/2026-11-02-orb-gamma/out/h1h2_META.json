@@ -1,0 +1,54 @@
+{
+ "symbol": "META",
+ "sample": "2024-01-02 to 2026-10-30",
+ "sessions": 444,
+ "incl D2-flagged days": false,
+ "H1 S0 (5-min, 10R, primary)": {
+  "days": 444,
+  "trades": 444,
+  "mean bp/day": -7.75,
+  "mean bp/trade": -7.75,
+  "hit rate": 0.286,
+  "ann. Sharpe (daily)": -1.19,
+  "total bp": -3441.2,
+  "shift-null p": 0.9381,
+  "PASS": false,
+  "longs": {
+   "days": 444,
+   "trades": 211,
+   "mean bp/day": -3.541,
+   "mean bp/trade": -7.452,
+   "hit rate": 0.256,
+   "ann. Sharpe (daily)": -0.76,
+   "total bp": -1572.4
+  },
+  "shorts": {
+   "days": 444,
+   "trades": 233,
+   "mean bp/day": -4.209,
+   "mean bp/trade": -8.021,
+   "hit rate": 0.313,
+   "ann. Sharpe (daily)": -0.93,
+   "total bp": -1868.8
+  }
+ },
+ "S1 classic 5-min breakout, exit close (secondary)": {
+  "days": 444,
+  "trades": 444,
+  "mean bp/day": -3.265,
+  "mean bp/trade": -3.265,
+  "hit rate": 0.376,
+  "ann. Sharpe (daily)": -0.43,
+  "total bp": -1449.6,
+  "shift-null p": 0.4629
+ },
+ "benchmark: long 09:35 -> close every day": {
+  "days": 444,
+  "trades": 444,
+  "mean bp/day": 2.422,
+  "mean bp/trade": 2.422,
+  "hit rate": 0.495,
+  "ann. Sharpe (daily)": 0.26,
+  "total bp": 1075.4
+ }
+}

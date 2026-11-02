@@ -125,7 +125,9 @@ Every test is pre-registered in its own folder before it runs.
 
 ## HFT-papers follow-ups (2026-11-02)
 - [x] **HP1 done** ([orb-gamma](2026-11-02-orb-gamma/)): SPY fails, gamma doesn't rescue it, TSLA lives. Follow-ups OG1-OG2.
-- [ ] **OG1. Confirm TSLA 5-min breakout on 2020-23** (XNAS bars, about $0.3-0.5; ask the owner), with the rule frozen as S1_5_close plus Monday/Friday and long-side splits.
+- [x] **OG1 done:** TSLA 5-min breakout passed on 2020-23 (+29.5 bp/day, p 0.018).
+- [ ] **OG3. News-gap / in-play filter, pre-registered:** trade the 5-min breakout on single stocks only on days with |gap| above a fixed ex-ante threshold (e.g. > 1x the 14-day ATR%), test on 2020-23 for NVDA/AMD/NFLX (XNAS, about $1.5; ask the owner).
+- [ ] ~~OG1. Confirm TSLA 5-min breakout on 2020-23~~ (XNAS bars, about $0.3-0.5; ask the owner), with the rule frozen as S1_5_close plus Monday/Friday and long-side splits.
 - [ ] **OG2. Forward-test TSLA S1_5_close from Nov 3 2026** (paper; log each day's trade before 09:40).
 - [ ] ~~HP1. ORB replication conditioned on gamma regime~~ (SPY/QQQ/TSLA 1-min, out-of-sample 2024-26, realistic costs): ORB profit should sit in short-gamma or freed days and vanish in long-gamma or pinned days ([hft-papers](2026-11-02-hft-papers/)).
 - [ ] **HP3. Non-news vs news extreme AI-basket days:** do no-news forced shocks revert over 1-5 sessions (Knight-glitch logic)? Data in hand (LQ) ([hft-papers](2026-11-02-hft-papers/)).

@@ -1,0 +1,456 @@
+{
+ "rule": "S1_5_close: first break of the 09:30-09:34 range, stop at the other side, exit 15:59 close, 1c/side + 1c on stops",
+ "C1 TSLA 2020-23 clean (primary)": {
+  "sessions": 715,
+  "trades": 715,
+  "mean bp/day": 29.52,
+  "shift p": 0.0178,
+  "Sharpe": 1.94,
+  "hit": 0.415,
+  "avg win / loss bp": [
+   253.1,
+   -129.4
+  ],
+  "by year": {
+   "2020": 37.2,
+   "2021": 26.5,
+   "2022": 45.0,
+   "2023": 13.9
+  }
+ },
+ "C1 TSLA 2020-23 all complete days": {
+  "sessions": 994,
+  "trades": 993,
+  "mean bp/day": 24.56,
+  "shift p": 0.0461,
+  "Sharpe": 1.59,
+  "hit": 0.409,
+  "avg win / loss bp": [
+   258.8,
+   -137.4
+  ],
+  "by year": {
+   "2020": 15.8,
+   "2021": 24.2,
+   "2022": 40.9,
+   "2023": 17.0
+  }
+ },
+ "C1 splits, all complete days": {
+  "Mon+Fri minus Tue-Thu": {
+   "n flag": 379,
+   "flag": 32.04,
+   "other": 19.95,
+   "diff": 12.09,
+   "p one-sided": 0.2432
+  },
+  "longs minus shorts (trade days)": {
+   "n flag": 471,
+   "flag": 31.54,
+   "other": 18.32,
+   "diff": 13.21,
+   "p one-sided": 0.2046
+  },
+  "top-tercile opening rel. volume minus rest": {
+   "n flag": 327,
+   "flag": 28.33,
+   "other": 22.83,
+   "diff": 5.5,
+   "p one-sided": 0.3777
+  },
+  "auction-gap days (|Yahoo open - first bar| > 5 bp) minus rest": {
+   "n flag": 160,
+   "flag": -3.62,
+   "other": 29.97,
+   "diff": -33.59,
+   "p one-sided": 0.934
+  }
+ },
+ "C1 splits, clean days": {
+  "Mon+Fri minus Tue-Thu": {
+   "n flag": 264,
+   "flag": 33.79,
+   "other": 27.02,
+   "diff": 6.77,
+   "p one-sided": 0.363
+  },
+  "longs minus shorts (trade days)": {
+   "n flag": 358,
+   "flag": 39.2,
+   "other": 19.81,
+   "diff": 19.38,
+   "p one-sided": 0.1319
+  },
+  "top-tercile opening rel. volume minus rest": {
+   "n flag": 234,
+   "flag": 48.53,
+   "other": 19.55,
+   "diff": 28.98,
+   "p one-sided": 0.0575
+  },
+  "auction-gap days (|Yahoo open - first bar| > 5 bp) minus rest": {
+   "n flag": 0,
+   "flag": NaN,
+   "other": 29.52,
+   "diff": NaN,
+   "p one-sided": 0.0
+  }
+ },
+ "C1 PASS (clean: mean > 0, shift p < 0.05)": true,
+ "C2 clean": {
+  "per name": {
+   "AMD": {
+    "sessions": 438,
+    "trades": 438,
+    "mean bp/day": -7.67,
+    "shift p": 0.7261,
+    "Sharpe": -0.69,
+    "hit": 0.374,
+    "avg win / loss bp": [
+     174.4,
+     -116.7
+    ],
+    "by year": {
+     "2024": -2.4,
+     "2025": 3.8,
+     "2026": -40.6
+    }
+   },
+   "NVDA": {
+    "sessions": 472,
+    "trades": 472,
+    "mean bp/day": 4.0,
+    "shift p": 0.3681,
+    "Sharpe": 0.43,
+    "hit": 0.403,
+    "avg win / loss bp": [
+     153.3,
+     -96.6
+    ],
+    "by year": {
+     "2024": 7.6,
+     "2025": 0.6,
+     "2026": 3.8
+    }
+   },
+   "NFLX": {
+    "sessions": 263,
+    "trades": 263,
+    "mean bp/day": 3.59,
+    "shift p": 0.4439,
+    "Sharpe": 0.51,
+    "hit": 0.437,
+    "avg win / loss bp": [
+     110.5,
+     -79.5
+    ],
+    "by year": {
+     "2024": 7.2,
+     "2025": 9.3,
+     "2026": -3.7
+    }
+   },
+   "META": {
+    "sessions": 444,
+    "trades": 444,
+    "mean bp/day": -3.26,
+    "shift p": 0.4629,
+    "Sharpe": -0.43,
+    "hit": 0.376,
+    "avg win / loss bp": [
+     121.8,
+     -78.7
+    ],
+    "by year": {
+     "2024": -2.6,
+     "2025": -5.2,
+     "2026": -2.0
+    }
+   },
+   "AMZN": {
+    "sessions": 501,
+    "trades": 500,
+    "mean bp/day": -1.84,
+    "shift p": 0.6356,
+    "Sharpe": -0.29,
+    "hit": 0.414,
+    "avg win / loss bp": [
+     95.0,
+     -70.2
+    ],
+    "by year": {
+     "2024": 0.6,
+     "2025": -7.6,
+     "2026": 2.3
+    }
+   },
+   "UNH": {
+    "sessions": 146,
+    "trades": 145,
+    "mean bp/day": -18.97,
+    "shift p": 0.8019,
+    "Sharpe": -2.66,
+    "hit": 0.317,
+    "avg win / loss bp": [
+     116.1,
+     -81.9
+    ],
+    "by year": {
+     "2024": -19.3,
+     "2025": -22.7,
+     "2026": -12.9
+    }
+   },
+   "JPM": {
+    "sessions": 278,
+    "trades": 277,
+    "mean bp/day": 4.32,
+    "shift p": 0.0798,
+    "Sharpe": 0.8,
+    "hit": 0.401,
+    "avg win / loss bp": [
+     88.6,
+     -52.0
+    ],
+    "by year": {
+     "2024": 11.6,
+     "2025": -6.9,
+     "2026": 6.2
+    }
+   },
+   "TSLA": {
+    "sessions": 553,
+    "trades": 552,
+    "mean bp/day": 12.39,
+    "shift p": 0.0487,
+    "Sharpe": 0.99,
+    "hit": 0.418,
+    "avg win / loss bp": [
+     198.6,
+     -121.6
+    ],
+    "by year": {
+     "2024": 1.3,
+     "2025": 28.4,
+     "2026": 5.3
+    }
+   },
+   "SPY": {
+    "sessions": 683,
+    "trades": 683,
+    "mean bp/day": -1.18,
+    "shift p": 0.8663,
+    "Sharpe": -0.51,
+    "hit": 0.23,
+    "avg win / loss bp": [
+     53.5,
+     -17.5
+    ],
+    "by year": {
+     "2024": -1.9,
+     "2025": 0.6,
+     "2026": -2.4
+    }
+   },
+   "QQQ": {
+    "sessions": 682,
+    "trades": 681,
+    "mean bp/day": 1.83,
+    "shift p": 0.0981,
+    "Sharpe": 0.51,
+    "hit": 0.301,
+    "avg win / loss bp": [
+     73.4,
+     -29.1
+    ],
+    "by year": {
+     "2024": 3.7,
+     "2025": 2.6,
+     "2026": -1.3
+    }
+   }
+  },
+  "high-score group mean bp/day (avg of names)": -1.04,
+  "pooled shift p": 0.583,
+  "control group mean bp/day": -7.32,
+  "PASS (a)": false
+ },
+ "C2 all complete days": {
+  "per name": {
+   "AMD": {
+    "sessions": 705,
+    "trades": 701,
+    "mean bp/day": 6.76,
+    "shift p": 0.1188,
+    "Sharpe": 0.5,
+    "hit": 0.391,
+    "avg win / loss bp": [
+     206.9,
+     -121.6
+    ],
+    "by year": {
+     "2024": 8.4,
+     "2025": 13.9,
+     "2026": -3.6
+    }
+   },
+   "NVDA": {
+    "sessions": 705,
+    "trades": 705,
+    "mean bp/day": 8.91,
+    "shift p": 0.2481,
+    "Sharpe": 0.83,
+    "hit": 0.399,
+    "avg win / loss bp": [
+     170.3,
+     -98.1
+    ],
+    "by year": {
+     "2024": 7.1,
+     "2025": 12.1,
+     "2026": 7.3
+    }
+   },
+   "NFLX": {
+    "sessions": 632,
+    "trades": 631,
+    "mean bp/day": 12.8,
+    "shift p": 0.0068,
+    "Sharpe": 1.63,
+    "hit": 0.464,
+    "avg win / loss bp": [
+     120.5,
+     -80.5
+    ],
+    "by year": {
+     "2024": 11.0,
+     "2025": 22.8,
+     "2026": 4.3
+    }
+   },
+   "META": {
+    "sessions": 704,
+    "trades": 703,
+    "mean bp/day": 1.52,
+    "shift p": 0.1416,
+    "Sharpe": 0.19,
+    "hit": 0.385,
+    "avg win / loss bp": [
+     128.4,
+     -78.1
+    ],
+    "by year": {
+     "2024": -1.1,
+     "2025": -0.5,
+     "2026": 7.0
+    }
+   },
+   "AMZN": {
+    "sessions": 705,
+    "trades": 704,
+    "mean bp/day": 0.48,
+    "shift p": 0.4902,
+    "Sharpe": 0.07,
+    "hit": 0.418,
+    "avg win / loss bp": [
+     101.5,
+     -72.0
+    ],
+    "by year": {
+     "2024": 0.8,
+     "2025": 1.1,
+     "2026": -0.6
+    }
+   },
+   "UNH": {
+    "sessions": 608,
+    "trades": 605,
+    "mean bp/day": 10.25,
+    "shift p": 0.0194,
+    "Sharpe": 1.31,
+    "hit": 0.469,
+    "avg win / loss bp": [
+     112.1,
+     -79.8
+    ],
+    "by year": {
+     "2024": 4.3,
+     "2025": 12.0,
+     "2026": 13.3
+    }
+   },
+   "JPM": {
+    "sessions": 696,
+    "trades": 694,
+    "mean bp/day": 5.67,
+    "shift p": 0.0473,
+    "Sharpe": 0.99,
+    "hit": 0.425,
+    "avg win / loss bp": [
+     89.7,
+     -56.4
+    ],
+    "by year": {
+     "2024": 13.8,
+     "2025": 0.1,
+     "2026": 2.3
+    }
+   },
+   "TSLA": {
+    "sessions": 705,
+    "trades": 704,
+    "mean bp/day": 18.48,
+    "shift p": 0.0211,
+    "Sharpe": 1.37,
+    "hit": 0.429,
+    "avg win / loss bp": [
+     206.2,
+     -122.5
+    ],
+    "by year": {
+     "2024": 5.1,
+     "2025": 34.9,
+     "2026": 15.0
+    }
+   },
+   "SPY": {
+    "sessions": 705,
+    "trades": 705,
+    "mean bp/day": -0.74,
+    "shift p": 0.8075,
+    "Sharpe": -0.31,
+    "hit": 0.233,
+    "avg win / loss bp": [
+     55.0,
+     -17.6
+    ],
+    "by year": {
+     "2024": -1.8,
+     "2025": 1.3,
+     "2026": -1.8
+    }
+   },
+   "QQQ": {
+    "sessions": 705,
+    "trades": 704,
+    "mean bp/day": 3.81,
+    "shift p": 0.0586,
+    "Sharpe": 0.85,
+    "hit": 0.304,
+    "avg win / loss bp": [
+     79.4,
+     -29.3
+    ],
+    "by year": {
+     "2024": 4.6,
+     "2025": 7.3,
+     "2026": -1.3
+    }
+   }
+  },
+  "high-score group mean bp/day (avg of names)": 6.1,
+  "pooled shift p": 0.0068,
+  "control group mean bp/day": 7.96,
+  "PASS (a)": true
+ }
+}

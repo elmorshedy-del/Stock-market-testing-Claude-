@@ -1,0 +1,31 @@
+{
+ "symbol": "NVDA",
+ "dataset": "EQUS.MINI",
+ "label": "NVDA",
+ "window": [
+  "2024-01-02",
+  "2026-10-30"
+ ],
+ "sessions (Yahoo)": 711,
+ "status counts": {
+  "clean": 472,
+  "bad_D2": 233,
+  "bad_D1": 6
+ },
+ "clean share of full sessions": 0.6639,
+ "PASS (>= 95% clean)": false,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 0.92,
+  "d_high": 0.44,
+  "d_low": 0.47,
+  "d_close": 2.45
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 5.335,
+  "d_high": 2.745,
+  "d_low": 3.14,
+  "d_close": 11.45
+ },
+ "median bars per full session": 390.0,
+ "days with any missing RTH minute": 6
+}

@@ -1,0 +1,31 @@
+{
+ "symbol": "META",
+ "dataset": "EQUS.MINI",
+ "label": "META",
+ "window": [
+  "2024-01-02",
+  "2026-10-30"
+ ],
+ "sessions (Yahoo)": 711,
+ "status counts": {
+  "clean": 444,
+  "bad_D2": 261,
+  "bad_D1": 6
+ },
+ "clean share of full sessions": 0.6245,
+ "PASS (>= 95% clean)": false,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 2.36,
+  "d_high": 0.84,
+  "d_low": 0.98,
+  "d_close": 1.57
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 10.405000000000001,
+  "d_high": 4.9399999999999995,
+  "d_low": 4.279999999999999,
+  "d_close": 5.734999999999999
+ },
+ "median bars per full session": 390.0,
+ "days with any missing RTH minute": 127
+}

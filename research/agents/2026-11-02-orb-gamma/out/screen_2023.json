@@ -1,0 +1,94 @@
+{
+ "liquid names ranked": [
+  {
+   "sym": "AMD",
+   "days_2023": 250,
+   "atr_pct_2023": 4.03,
+   "dollar_vol_bn_2023": 6.39
+  },
+  {
+   "sym": "NVDA",
+   "days_2023": 250,
+   "atr_pct_2023": 3.68,
+   "dollar_vol_bn_2023": 17.28
+  },
+  {
+   "sym": "NFLX",
+   "days_2023": 250,
+   "atr_pct_2023": 3.01,
+   "dollar_vol_bn_2023": 2.45
+  },
+  {
+   "sym": "META",
+   "days_2023": 250,
+   "atr_pct_2023": 2.99,
+   "dollar_vol_bn_2023": 6.06
+  },
+  {
+   "sym": "AMZN",
+   "days_2023": 250,
+   "atr_pct_2023": 2.84,
+   "dollar_vol_bn_2023": 7.02
+  },
+  {
+   "sym": "AVGO",
+   "days_2023": 250,
+   "atr_pct_2023": 2.57,
+   "dollar_vol_bn_2023": 2.16
+  },
+  {
+   "sym": "GOOGL",
+   "days_2023": 250,
+   "atr_pct_2023": 2.56,
+   "dollar_vol_bn_2023": 3.82
+  },
+  {
+   "sym": "XOM",
+   "days_2023": 250,
+   "atr_pct_2023": 2.31,
+   "dollar_vol_bn_2023": 1.89
+  },
+  {
+   "sym": "MSFT",
+   "days_2023": 250,
+   "atr_pct_2023": 2.16,
+   "dollar_vol_bn_2023": 8.61
+  },
+  {
+   "sym": "AAPL",
+   "days_2023": 250,
+   "atr_pct_2023": 1.89,
+   "dollar_vol_bn_2023": 10.12
+  },
+  {
+   "sym": "UNH",
+   "days_2023": 250,
+   "atr_pct_2023": 1.86,
+   "dollar_vol_bn_2023": 1.62
+  },
+  {
+   "sym": "JPM",
+   "days_2023": 250,
+   "atr_pct_2023": 1.83,
+   "dollar_vol_bn_2023": 1.53
+  }
+ ],
+ "picks": {
+  "high (in play)": [
+   "AMD",
+   "NVDA",
+   "NFLX",
+   "META",
+   "AMZN"
+  ],
+  "controls (low)": [
+   "UNH",
+   "JPM"
+  ]
+ },
+ "TSLA reference": {
+  "days_2023": 250.0,
+  "atr_pct_2023": 4.69,
+  "dollar_vol_bn_2023": 29.26
+ }
+}

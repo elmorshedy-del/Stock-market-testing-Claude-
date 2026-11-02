@@ -1,0 +1,32 @@
+{
+ "symbol": "TSLA",
+ "dataset": "XNAS.ITCH",
+ "label": "TSLA2020",
+ "window": [
+  "2020-01-02",
+  "2023-12-29"
+ ],
+ "sessions (Yahoo)": 1006,
+ "status counts": {
+  "clean": 715,
+  "bad_D2": 279,
+  "bad_D1": 8,
+  "missing_day": 4
+ },
+ "clean share of full sessions": 0.7107,
+ "PASS (>= 95% clean)": false,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 1.93,
+  "d_high": 0.17,
+  "d_low": 0.165,
+  "d_close": 1.49
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 8.939499999999999,
+  "d_high": 2.2789999999999986,
+  "d_low": 1.8394999999999995,
+  "d_close": 8.2095
+ },
+ "median bars per full session": 390.0,
+ "days with any missing RTH minute": 11
+}

@@ -1,0 +1,262 @@
+{
+ "TSLA2020": {
+  "days": 715,
+  "mean bp/day": 29.52,
+  "median trade bp": -75.8,
+  "mean with +2c / +5c / +10c per side": [
+   28.41,
+   26.75,
+   23.99
+  ],
+  "mean without the 10 best days": 16.06,
+  "mean without top-decile |gap| days (news proxy)": 27.97,
+  "mean on top-decile |gap| days": 43.38,
+  "max drawdown (cum bp, 1x)": -2407.0,
+  "share of positive months": 0.62,
+  "worst month bp": -628.0,
+  "clean days mean / flagged (D2) days mean": [
+   29.52,
+   null
+  ]
+ },
+ "TSLA2020_d2": {
+  "days": 994,
+  "mean bp/day": 24.56,
+  "median trade bp": -78.1,
+  "mean with +2c / +5c / +10c per side": [
+   23.54,
+   22.01,
+   19.46
+  ],
+  "mean without the 10 best days": 14.87,
+  "mean without top-decile |gap| days (news proxy)": 26.52,
+  "mean on top-decile |gap| days": 7.08,
+  "max drawdown (cum bp, 1x)": -3502.0,
+  "share of positive months": 0.77,
+  "worst month bp": -2457.0,
+  "clean days mean / flagged (D2) days mean": [
+   29.52,
+   11.87
+  ]
+ },
+ "TSLA": {
+  "days": 553,
+  "mean bp/day": 12.39,
+  "median trade bp": -71.2,
+  "mean with +2c / +5c / +10c per side": [
+   11.02,
+   8.97,
+   5.55
+  ],
+  "mean without the 10 best days": -1.43,
+  "mean without top-decile |gap| days (news proxy)": 8.2,
+  "mean on top-decile |gap| days": 49.58,
+  "max drawdown (cum bp, 1x)": -1915.0,
+  "share of positive months": 0.68,
+  "worst month bp": -1255.0,
+  "clean days mean / flagged (D2) days mean": [
+   12.39,
+   null
+  ]
+ },
+ "TSLA_d2": {
+  "days": 705,
+  "mean bp/day": 18.48,
+  "median trade bp": -64.3,
+  "mean with +2c / +5c / +10c per side": [
+   17.1,
+   15.04,
+   11.6
+  ],
+  "mean without the 10 best days": 5.19,
+  "mean without top-decile |gap| days (news proxy)": 13.52,
+  "mean on top-decile |gap| days": 62.78,
+  "max drawdown (cum bp, 1x)": -2423.0,
+  "share of positive months": 0.65,
+  "worst month bp": -1128.0,
+  "clean days mean / flagged (D2) days mean": [
+   12.39,
+   40.62
+  ]
+ },
+ "NVDA_d2": {
+  "days": 705,
+  "mean bp/day": 8.91,
+  "median trade bp": -59.2,
+  "mean with +2c / +5c / +10c per side": [
+   6.67,
+   3.31,
+   -2.29
+  ],
+  "mean without the 10 best days": -1.32,
+  "mean without top-decile |gap| days (news proxy)": 5.2,
+  "mean on top-decile |gap| days": 42.08,
+  "max drawdown (cum bp, 1x)": -1787.0,
+  "share of positive months": 0.62,
+  "worst month bp": -961.0,
+  "clean days mean / flagged (D2) days mean": [
+   4.0,
+   18.86
+  ]
+ },
+ "AMD_d2": {
+  "days": 705,
+  "mean bp/day": 6.76,
+  "median trade bp": -73.3,
+  "mean with +2c / +5c / +10c per side": [
+   4.5,
+   1.1,
+   -4.55
+  ],
+  "mean without the 10 best days": -6.58,
+  "mean without top-decile |gap| days (news proxy)": 3.96,
+  "mean on top-decile |gap| days": 31.79,
+  "max drawdown (cum bp, 1x)": -3200.0,
+  "share of positive months": 0.44,
+  "worst month bp": -1379.0,
+  "clean days mean / flagged (D2) days mean": [
+   -7.67,
+   30.44
+  ]
+ },
+ "NFLX_d2": {
+  "days": 632,
+  "mean bp/day": 12.8,
+  "median trade bp": -17.0,
+  "mean with +2c / +5c / +10c per side": [
+   10.68,
+   7.49,
+   2.18
+  ],
+  "mean without the 10 best days": 6.18,
+  "mean without top-decile |gap| days (news proxy)": 10.22,
+  "mean on top-decile |gap| days": 35.71,
+  "max drawdown (cum bp, 1x)": -1697.0,
+  "share of positive months": 0.68,
+  "worst month bp": -661.0,
+  "clean days mean / flagged (D2) days mean": [
+   3.59,
+   19.36
+  ]
+ },
+ "META_d2": {
+  "days": 704,
+  "mean bp/day": 1.52,
+  "median trade bp": -45.8,
+  "mean with +2c / +5c / +10c per side": [
+   0.84,
+   -0.18,
+   -1.89
+  ],
+  "mean without the 10 best days": -5.68,
+  "mean without top-decile |gap| days (news proxy)": -0.26,
+  "mean on top-decile |gap| days": 17.44,
+  "max drawdown (cum bp, 1x)": -2225.0,
+  "share of positive months": 0.5,
+  "worst month bp": -735.0,
+  "clean days mean / flagged (D2) days mean": [
+   -3.26,
+   9.7
+  ]
+ },
+ "AMZN_d2": {
+  "days": 705,
+  "mean bp/day": 0.48,
+  "median trade bp": -37.5,
+  "mean with +2c / +5c / +10c per side": [
+   -1.43,
+   -4.3,
+   -9.07
+  ],
+  "mean without the 10 best days": -4.94,
+  "mean without top-decile |gap| days (news proxy)": -0.43,
+  "mean on top-decile |gap| days": 8.61,
+  "max drawdown (cum bp, 1x)": -2285.0,
+  "share of positive months": 0.5,
+  "worst month bp": -613.0,
+  "clean days mean / flagged (D2) days mean": [
+   -1.84,
+   6.17
+  ]
+ },
+ "UNH_d2": {
+  "days": 608,
+  "mean bp/day": 10.25,
+  "median trade bp": -14.3,
+  "mean with +2c / +5c / +10c per side": [
+   9.23,
+   7.7,
+   5.16
+  ],
+  "mean without the 10 best days": 3.26,
+  "mean without top-decile |gap| days (news proxy)": 10.97,
+  "mean on top-decile |gap| days": 3.76,
+  "max drawdown (cum bp, 1x)": -1406.0,
+  "share of positive months": 0.56,
+  "worst month bp": -578.0,
+  "clean days mean / flagged (D2) days mean": [
+   -18.97,
+   19.49
+  ]
+ },
+ "JPM_d2": {
+  "days": 696,
+  "mean bp/day": 5.67,
+  "median trade bp": -27.6,
+  "mean with +2c / +5c / +10c per side": [
+   4.1,
+   1.74,
+   -2.19
+  ],
+  "mean without the 10 best days": 0.57,
+  "mean without top-decile |gap| days (news proxy)": 4.13,
+  "mean on top-decile |gap| days": 19.38,
+  "max drawdown (cum bp, 1x)": -1570.0,
+  "share of positive months": 0.62,
+  "worst month bp": -804.0,
+  "clean days mean / flagged (D2) days mean": [
+   4.32,
+   6.57
+  ]
+ },
+ "SPY_d2": {
+  "days": 705,
+  "mean bp/day": -0.74,
+  "median trade bp": -13.1,
+  "mean with +2c / +5c / +10c per side": [
+   -1.4,
+   -2.38,
+   -4.01
+  ],
+  "mean without the 10 best days": -3.24,
+  "mean without top-decile |gap| days (news proxy)": -1.43,
+  "mean on top-decile |gap| days": 5.38,
+  "max drawdown (cum bp, 1x)": -1158.0,
+  "share of positive months": 0.5,
+  "worst month bp": -389.0,
+  "clean days mean / flagged (D2) days mean": [
+   -1.18,
+   12.87
+  ]
+ },
+ "QQQ_d2": {
+  "days": 705,
+  "mean bp/day": 3.81,
+  "median trade bp": -20.9,
+  "mean with +2c / +5c / +10c per side": [
+   3.07,
+   1.97,
+   0.12
+  ],
+  "mean without the 10 best days": -0.83,
+  "mean without top-decile |gap| days (news proxy)": 3.18,
+  "mean on top-decile |gap| days": 9.49,
+  "max drawdown (cum bp, 1x)": -946.0,
+  "share of positive months": 0.59,
+  "worst month bp": -404.0,
+  "clean days mean / flagged (D2) days mean": [
+   1.83,
+   62.57
+  ]
+ }
+}

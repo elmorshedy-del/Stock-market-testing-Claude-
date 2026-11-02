@@ -1,0 +1,32 @@
+{
+ "symbol": "JPM",
+ "dataset": "EQUS.MINI",
+ "label": "JPM",
+ "window": [
+  "2024-01-02",
+  "2026-10-30"
+ ],
+ "sessions (Yahoo)": 711,
+ "status counts": {
+  "bad_D2": 422,
+  "clean": 280,
+  "half_day": 5,
+  "bad_D1": 4
+ },
+ "clean share of full sessions": 0.3966,
+ "PASS (>= 95% clean)": false,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 4.92,
+  "d_high": 0.68,
+  "d_low": 0.99,
+  "d_close": 1.71
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 24.33,
+  "d_high": 5.395,
+  "d_low": 8.780000000000001,
+  "d_close": 7.625
+ },
+ "median bars per full session": 390.0,
+ "days with any missing RTH minute": 317
+}

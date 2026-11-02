@@ -17,11 +17,16 @@ b["date"] = b.t.dt.tz_localize(None).dt.normalize(); b["hm"] = b.t.dt.strftime("
 rth = b[(b.hm >= "09:30") & (b.hm <= "15:59")].copy()
 
 # Yahoo daily (unadjusted OHLC from the chart endpoint's quote block)
-u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?period1=1575158400&period2=1793750400&interval=1d"
+u = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?period1=1575158400&period2=1793750400&interval=1d&events=splits"
 r = json.load(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0"}), timeout=30))["chart"]["result"][0]
 q = r["indicators"]["quote"][0]
 y = pd.DataFrame({k: q[k] for k in ["open", "high", "low", "close", "volume"]}, index=pd.to_datetime(r["timestamp"], unit="s").tz_localize("UTC").tz_convert("America/New_York").tz_localize(None).normalize())
-y = y[~y.index.duplicated(keep="last")].dropna(); y.to_csv(D / f"{lab}_yahoo_daily.csv")
+y = y[~y.index.duplicated(keep="last")].dropna()
+# A3: undo Yahoo's split adjustment so prices compare with raw intraday bars (raw = yahoo x product of later split ratios)
+for sp in (r.get("events", {}).get("splits", {}) or {}).values():
+    sd = pd.Timestamp(sp["date"], unit="s").tz_localize("UTC").tz_convert("America/New_York").tz_localize(None).normalize(); ratio = sp["numerator"] / sp["denominator"]
+    y.loc[y.index < sd, ["open", "high", "low", "close"]] *= ratio
+y.to_csv(D / f"{lab}_yahoo_daily.csv")
 
 # D4 half days: Yahoo sessions whose last bar in our data is <= 13:00, or known NYSE early closes
 last_hm = b.groupby("date").hm.max(); first_rth = rth.groupby("date").hm.min()

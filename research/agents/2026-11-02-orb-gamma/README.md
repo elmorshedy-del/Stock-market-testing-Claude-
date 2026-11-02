@@ -228,6 +228,57 @@ Figure: `out/orb_gamma.png`. Data cost about $1.68 (Databento).
 * QQQ sits in between, and so does its result.
 * **The flip** predicts multi-day burst asymmetry (§4z), not intraday continuation. Below the flip, SPY's intraday path is more two-sided (V-shapes), which kills stop-based breakouts, especially on the short side.
 
+### A3 results (TSLA out of sample + screened candidates; `python a3.py`, `python robust.py`; `out/a3.json`, `out/robust.json`, `out/orb_a3.png`)
+
+**C1: TSLA 2020-23, out of sample. PASS.**
+
+The frozen S1_5_close rule:
+
+| Set | Sessions | bp/day | Shift p | Sharpe | Hit | Average win / loss | By year |
+|---|---|---|---|---|---|---|---|
+| Clean days (primary) | 715 | **+29.5** | **0.018** | 1.94 | 41.5% | +253 / −129 | 2020 +37, 2021 +27, 2022 +45, 2023 +14 |
+| All complete days | 994 | +24.6 | 0.046 | 1.59 | 40.9% | +259 / −137 | +16, +24, +41, +17 |
+
+* **The four splits are not confirmed** (all complete days):
+  * Mon+Fri +12.1 (p 0.24);
+  * longs over shorts +13.2 (p 0.20);
+  * high opening volume +5.5 (p 0.38; +29 on clean days, p 0.058);
+  * auction-gap days **reversed**: −3.6 vs +30.0 (p 0.93).
+* **So the base rule is what carries over;** the 2024-26 conditions were noise.
+* **Robustness (exploratory)** on 2020-23 clean days:
+  * extra cost +10c/share/side → +24.0;
+  * without the 10 best days → +16.1;
+  * excluding the top-decile |gap| (news) days → +28.0;
+  * max drawdown −24% at 1×, 62% of months positive, worst month −6.3%;
+  * median trade −76 bp. It is a trend-following payoff: many small losses, few big wins.
+* **The 2024-26 TSLA result is more fragile:** without its 10 best days it is −1.4 (clean) or +5.2 (all days). Most of it came from big-gap days: +50 to +63 bp/day vs +8 to +14 on other days.
+
+**C2: screened candidates 2024-26.** The 2023 ATR% screen with the $1.5bn liquidity filter picked AMD, NVDA, NFLX, META, AMZN, with UNH and JPM as controls (`out/screen_2023.json`).
+* **The answer depends on the day set:**
+  * clean days: high group −1.04 bp/day (pooled p 0.58), controls −7.3;
+  * all complete days: high group **+6.1 (pooled p 0.007)**, controls +8.0.
+* **Why the two sets differ:** for single stocks the D2 flag is mostly the opening auction (70-78% of days for the NYSE names UNH and JPM). Flagged days are big opening-imbalance days and much better for the breakout (for example AMD +30 flagged vs −7.7 clean). The clean set is a biased, quiet-open subsample for single stocks, so the all-complete-days set is the fair one. This judgement is made after seeing the data and is flagged as such.
+* **Stress tests** (all complete days; bp/day, then with +5c a side, then without the 10 best days):
+
+  | Name | bp/day | +5c a side | Without 10 best days |
+  |---|---|---|---|
+  | NFLX | +12.8 | +7.5 | +6.2 |
+  | UNH | +10.3 | +7.7 | +3.3 |
+  | NVDA | +8.9 | +3.3 | −1.3 |
+  | AMD | +6.8 | +1.1 | −6.6 |
+  | JPM | +5.7 | +1.7 | +0.6 |
+  | META | +1.5 | −0.2 | −5.7 |
+  | AMZN | +0.5 | −4.3 | −4.9 |
+  | QQQ | +3.8 | +2.0 | −0.8 |
+  | SPY | −0.7 | −2.4 | −3.2 |
+
+* **The screen does not discriminate:** the low-volatility controls did as well as the high group. What separates winners from losers is **single stock vs index**, and **news-gap days.** On the top-decile |gap| days the breakout made +42 (NVDA), +32 (AMD), +36 (NFLX), +19 (JPM), against +4 to +10 on other days.
+
+**What this adds to the mechanism:**
+* The breakout is a bet on a **trend day**. It pays when information or one-sided flow arrives and persists: single stocks, news days, and TSLA most days.
+* It fails where liquidity and index arbitrage absorb the push (SPY).
+* TSLA is special because its trend days are not only news days: in 2020-23, excluding gap days barely changed the result.
+
 ## Threats to validity
 * **Venue:** EQUS.MINI is not the full consolidated tape. Highs and lows can differ slightly, which D2 checks.
 * **Fill realism:** stop fills at bar granularity; there is no queue position.
@@ -237,6 +288,7 @@ Figure: `out/orb_gamma.png`. Data cost about $1.68 (Databento).
 ## Verdict
 * **Contradicts** the practitioner ORB claim for SPY (two periods, two venues, 24 variants).
 * **Contradicts** our own H2 prediction: the gamma regime does not make SPY breakouts work, and below the flip they are worse.
+* **A3 update:** the TSLA 5-minute breakout **passed out of sample on 2020-23** (+29.5 bp/day, p 0.018, every year positive). It is now a tested TSLA rule, with a −24% max drawdown at 1× and a trend-following payoff. Other single stocks are positive but fragile, mostly a few news days; indices fail.
 * **Extends** the playbook with leans only:
   * (1) Below the flip, don't short SPY's opening breakdown (consistent in both periods, untested as a single cell).
   * (2) TSLA's 5-minute breakout is the only live version: +12 to +18 bp/day, p 0.02-0.05 alone, joint p 0.09-0.28. **Next:** confirm on TSLA 2020-23 (Nasdaq bars, about $0.3-0.5, owner's OK) and forward-test from Nov 3 with the rule frozen.

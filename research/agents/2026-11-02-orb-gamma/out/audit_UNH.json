@@ -1,0 +1,32 @@
+{
+ "symbol": "UNH",
+ "dataset": "EQUS.MINI",
+ "label": "UNH",
+ "window": [
+  "2024-01-02",
+  "2026-10-30"
+ ],
+ "sessions (Yahoo)": 711,
+ "status counts": {
+  "bad_D2": 505,
+  "clean": 156,
+  "bad_D1": 49,
+  "half_day": 1
+ },
+ "clean share of full sessions": 0.2197,
+ "PASS (>= 95% clean)": false,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 7.38,
+  "d_high": 1.36,
+  "d_low": 1.46,
+  "d_close": 2.03
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 34.445,
+  "d_high": 9.379999999999999,
+  "d_low": 12.379999999999999,
+  "d_close": 7.755
+ },
+ "median bars per full session": 388.0,
+ "days with any missing RTH minute": 519
+}

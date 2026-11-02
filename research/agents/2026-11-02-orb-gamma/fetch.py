@@ -9,9 +9,9 @@ import databento as db
 HERE = Path(__file__).resolve().parent; D = HERE / "data"; D.mkdir(exist_ok=True)
 sym = sys.argv[1] if len(sys.argv) > 1 else "SPY"
 ds = sys.argv[2] if len(sys.argv) > 2 else "EQUS.MINI"
-start = sys.argv[3] if len(sys.argv) > 3 else "2024-01-01"
+start = sys.argv[3] if len(sys.argv) > 3 else "2024-01-01"; end = sys.argv[4] if len(sys.argv) > 4 else "2026-10-31"
 c = db.Historical(os.environ["DATABENTO_API_KEY"])
-kw = dict(dataset=ds, symbols=[sym], schema="ohlcv-1m", start=start, end="2026-10-31")
+kw = dict(dataset=ds, symbols=[sym], schema="ohlcv-1m", start=start, end=end)
 print("cost $%.3f" % c.metadata.get_cost(**kw))
 df = c.timeseries.get_range(**kw).to_df().reset_index()
 out = D / f"{sym}_{ds.replace('.', '_')}_1m.parquet"

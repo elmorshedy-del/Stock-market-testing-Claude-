@@ -1,0 +1,32 @@
+{
+ "symbol": "NFLX",
+ "dataset": "EQUS.MINI",
+ "label": "NFLX",
+ "window": [
+  "2024-01-02",
+  "2026-10-30"
+ ],
+ "sessions (Yahoo)": 711,
+ "status counts": {
+  "bad_D2": 382,
+  "clean": 269,
+  "bad_D1": 59,
+  "half_day": 1
+ },
+ "clean share of full sessions": 0.3789,
+ "PASS (>= 95% clean)": false,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 3.73,
+  "d_high": 1.13,
+  "d_low": 1.25,
+  "d_close": 1.82
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 15.585,
+  "d_high": 8.15,
+  "d_low": 7.335,
+  "d_close": 6.65
+ },
+ "median bars per full session": 387.0,
+ "days with any missing RTH minute": 434
+}

@@ -1,0 +1,31 @@
+{
+ "symbol": "AMD",
+ "dataset": "EQUS.MINI",
+ "label": "AMD",
+ "window": [
+  "2024-01-02",
+  "2026-10-30"
+ ],
+ "sessions (Yahoo)": 711,
+ "status counts": {
+  "clean": 438,
+  "bad_D2": 267,
+  "bad_D1": 6
+ },
+ "clean share of full sessions": 0.616,
+ "PASS (>= 95% clean)": false,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 2.23,
+  "d_high": 0.78,
+  "d_low": 0.87,
+  "d_close": 1.56
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 11.325,
+  "d_high": 4.805,
+  "d_low": 5.045,
+  "d_close": 7.15
+ },
+ "median bars per full session": 390.0,
+ "days with any missing RTH minute": 30
+}
