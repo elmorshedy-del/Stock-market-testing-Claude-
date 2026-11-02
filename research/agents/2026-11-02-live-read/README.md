@@ -373,3 +373,25 @@ S1, S2, S7 and T1–T4 are unchanged.
   * **Reading:** the rise-early half has support (the positioning cycle, plus the tested Monday up-burst effect, 1.95×). The fade-late half is a coin flip.
   * **This week** has the same setup, but weaker (Monday freed at 23rd vs 14th/16th). The election lands midweek, and the heavy Nov 6 expiry (56%) argues for a late-week pin.
   * Hand-drawn channel lines held 48–50% in our TSLA test (Tier 4), so the owner's steep channel is a guide, not a floor.
+
+---
+
+## Erratum (09:40 ET): TSLA October cycle recomputed with full-coverage chains
+* The owner asked whether the DIX and gamma-reset visuals were accurate. Partly not.
+* **TSLA's DIX (FINRA) and the S&P GEX/DIX were right**: they don't use option chains.
+* **TSLA's own gamma and near-OI for Oct 15–30 were wrong.** The chain file was capped at 70 days. Re-pulled: `TSLA_eod_20261014_20261030` (≤ 125 DTE, ThetaData Value tier, $0). The old rows are kept in `out/tsla_cycle_oct_70d_cap_ERRATUM.csv`.
+* **Validation:** the recomputed Oct 30 own gamma is **0.60**, matching week-review's 60th pct (same OI, full chain).
+
+| Date | Own gamma (old → **new**) | Near-OI pct (old → **new**) | % above flip (new) |
+|---|---|---|---|
+| Oct 16 (reset) | 0.14 → **0.17** | 0.45 → **0.03** | +0.4% |
+| Oct 21 (block 1 top) | 0.87 → **0.75** | 0.91 → **0.25** | +9.1% |
+| Oct 23 (dip) | 0.30 → **0.31** | 0.64 → **0.04** | +2.0% |
+| Oct 27 (block 2 top) | 1.00 → **0.93** | 0.90 → **0.18** | +10.7% |
+| Oct 29 (stall) | 0.96 → **0.90** | 0.96 → **0.29** | +7.7% |
+| Oct 30 | 0.66 → **0.60** | 0.73 → **0.05** | +7.4% |
+
+* **The shape holds:** reset at the flip, rebuild with each block, a second flush at the dip, a pin (≥ 0.90) at the top.
+* **What was wrong:** "stalled into a pile of OI (near-OI 0.93–0.96)". Near-price OI stayed low the whole run (0.03–0.29), so **TSLA was freed throughout**, which fits the tested freed → up-burst result. The stall came with own gamma pinned while the freed reading crept up (0.18 → 0.29 by Oct 29).
+* **Weekly-rhythm figure:** its right panel counts contracts expiring that same day. Those do pin price that day, which is what makes midweek look crowded. Excluding them, the same days read 0.03–0.29. Labels corrected.
+* **Figures re-rendered:** `tsla_cycle_oct.png`, `tsla_cycle_adhd.png` (adds a crowding bar), `weekly_rhythm.png`.

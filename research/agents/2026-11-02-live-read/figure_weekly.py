@@ -10,8 +10,8 @@ BLUE, ORG, BG, INK, INK2, GRID, GRAY, LG = "#2a78d6", "#eb6834", "#fcfcfb", "#0b
 plt.rcParams.update({"font.family": "DejaVu Sans", "axes.edgecolor": GRID, "axes.labelcolor": INK2, "xtick.color": INK2, "ytick.color": INK2, "axes.spines.top": False, "axes.spines.right": False})
 fig = plt.figure(figsize=(17, 10.5), facecolor=BG)
 gs = fig.add_gridspec(2, 2, height_ratios=[1, 0.85], width_ratios=[1, 1.25], hspace=0.38, wspace=0.18, left=0.06, right=0.97, top=0.85, bottom=0.05)
-fig.text(0.02, 0.945, "TSLA's weekly rhythm is real in the positioning: freed on Monday, piled up by midweek", fontsize=20, weight="bold", color=INK)
-fig.text(0.02, 0.9, "Up early, down late in both weeks since Oct 19. The Friday weekly expiry clears contracts near the price, so Mondays start freed. Descriptive, not a test.", fontsize=12, color=INK2)
+fig.text(0.02, 0.945, "TSLA's weekly rhythm: freed every Monday; midweek crowding comes from that day's own expiry", fontsize=20, weight="bold", color=INK)
+fig.text(0.02, 0.9, "Up early, down late in both weeks since Oct 19. Right panel counts contracts expiring that same day (they pin price that day). Without them, TSLA stayed freed the whole run (3rd–29th pct). Descriptive.", fontsize=12, color=INK2)
 ax = fig.add_subplot(gs[0, 0]); ax.set_facecolor(BG)
 wk = W["(c) by week, compounded % [Mon-Wed, Thu-Fri]"]; labs = ["Oct 12 wk\n(the reset)", "Oct 19 wk", "Oct 26 wk"]
 for i, (k, (a, b)) in enumerate(wk.items()):
@@ -26,7 +26,7 @@ cols = [ORG if a[k]["weekday"] == "Mon" else BLUE for k in d]
 ax.bar(range(len(d)), v, color=cols); ax.axhline(33, color=ORG, ls="--", lw=1.2); ax.text(len(d) - 0.5, 35, "freed below 33", fontsize=10, color=ORG, ha="right")
 for i, (k, x) in enumerate(zip(d, v)): ax.text(i, x + 1.5, f"{x:.0f}", ha="center", fontsize=10.5, weight="bold" if a[k]["weekday"] == "Mon" else "normal")
 ax.set_xticks(range(len(d))); ax.set_xticklabels([a[k]["weekday"] + "\n" + k[5:] for k in d], fontsize=9.5); ax.set_ylim(0, 80); ax.set_ylabel("near-price OI pct"); ax.yaxis.grid(True, color=GRID)
-ax.set_title("Positioning: every Monday starts freed (orange)", loc="left", fontsize=14, weight="bold", color=INK)
+ax.set_title("Crowding incl. that day's expiry: Mondays start freed", loc="left", fontsize=14, weight="bold", color=INK)
 ax = fig.add_subplot(gs[1, 0]); ax.axis("off")
 b = W["(b) engine 2023-Oct 2026, mean pct by weekday [near-OI pct, own-gamma pct, n]"]; dd = W["(d) 2023-26 weeks (n, mean Mon-Wed %, mean Thu-Fri %, share of weeks up-then-down)"]; up = W["(d) weeks with Mon-Wed > +5%: n, mean Thu-Fri %, share Thu-Fri down"]
 ax.set_title("Is it a rule? 2023–26 (200 weeks)", loc="left", fontsize=14, weight="bold", color=INK)
