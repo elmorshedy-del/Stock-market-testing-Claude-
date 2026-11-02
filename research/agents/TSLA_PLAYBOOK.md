@@ -48,6 +48,8 @@
 * **Deep freed above own flip:** up-burst 50% vs down 20% within 3 sessions (post hoc, 20 days). [tsla-freed-dpi]
 * **High own gamma → next-day excess +1.1 pts vs low** (p 0.08). [D1 secondary]
 
+* **Politics (2026-11-02):** Musk's standing with the White House moves TSLA (feud day −12.7% vs QQQ, z −4.6; Trump win +10.3%); congressional odds barely do. Lean: TSLA's own move +1.9% per +10 pts of Paxton's (TX Senate) odds (Holm 0.175). Daily odds tests are underpowered (missed 2024's real Trump pricing). Texas-governor link (Holm 0.016) runs the wrong way vs business logic: unexplained, do not use. [tsla-politics]
+
 ## Tier 4: tested and failed. Do not use as signals
 * Kimbal Musk's (or any single insider's) sales as top calls: 48 sales, no edge (memory keeps the hits). Other insiders: a −2-pt tilt, too small. [informed-flow]
 * Option pricing or put/call ratios as forecasts beyond gamma + momentum (none pass, no OOS gain). [tsla-options-signal]

@@ -61,3 +61,104 @@
 ## Limits stated now
 * One election per year, and ~58 sessions per window. The race markets are thin compared with the chamber markets; thin markets add noise, which biases slopes toward 0.
 * Business relevance is argued from sources (Tesla 10-Q, bill trackers, news). It is not tested.
+
+---
+
+## Results (2026-11-02, after the pre-registration push at 3711f29)
+
+![figure](out/tsla_politics.png)
+
+**Bottom line:** TSLA *does* lean "red" in the race Musk bet on (the Texas Senate), but the effect is small, it misses the multiple-testing bar, and it is buried under TSLA's other drivers. TSLA's own move since Aug 10 is **+27.9%**; the politics links account for about ±5% of it.
+* The only race that passes Holm is the **Texas governor race, in the opposite direction** to "red is better", with no business logic behind it.
+* What moves TSLA is Musk's standing with the White House, not Congress odds.
+
+TSLA's beta to QQQ over the 250 sessions to Aug 7 2026 is 1.56. Its raw return from Aug 7 to Oct 30 was +21.7%.
+
+### P1–P3: TSLA's own move vs each Republican's odds (Aug 10 → Oct 30, n 59)
+
+| Market | Odds Aug 7 → Oct 30 | Slope per +10 pts | p | Holm | Detectable at 80% power | TSLA move attributed to the odds change (95% range) |
+|---|---|---|---|---|---|---|
+| **Texas Senate: Paxton (P1)** | 52% → 29% | **+1.9%** (CI +0.4 to +6.9) | 0.025 | 0.175 | 4.6% | −4.4% (−15.8 to −0.9) |
+| House: Republicans | 14% → 7% | +6.6% | 0.037 | 0.22 | 9.0% | −4.6% (−9.3 to −0.3) |
+| Senate: Republicans | 55% → 29% | −1.2% | 0.58 | 1 | 4.7% | +3.1% (−3.5 to +12.4) |
+| **Texas governor: Abbott** | 87% → 62% | **−2.0%** (CI −3.2 to −0.6) | 0.002 | **0.016** | 1.9% | +5.1% (+1.6 to +8.1) |
+| Nevada governor: Lombardo | 48% → 22% | −0.7% | 0.51 | 1 | 2.4% | +1.9% |
+| Arizona governor: Biggs | 17% → 8% | +3.4% | 0.16 | 0.63 | 8.6% | −3.1% |
+| Michigan Senate: Rogers | 41% → 23% | −0.5% | 0.62 | 1 | 2.6% | +0.9% |
+| California governor: Hilton | 5% → 3% | −9.4% | 0.08 | 0.40 | 16.0% | +2.1% |
+
+* **P1 (Paxton): positive as the owner predicted. A lean, not proven.**
+  * p 0.025, Holm 0.175.
+  * Without the Q3 earnings reaction day (Oct 22): +2.2% per +10 pts, p 0.008. Holm was registered on the full sample.
+  * Paxton's slide from 52% to 29% maps to about −4% of TSLA's own move. The range is wide (−16% to −1%).
+* **Texas governor (Abbott): passes Holm (0.016), but TSLA rose when Abbott's odds fell.**
+  * Exploratory robustness checks (not registered):
+    * Spearman −0.29 (p 0.027);
+    * the slope holds when the 3, 5 or 8 biggest odds days are dropped (−2.9, −2.7, −3.0);
+    * dropping the 5 biggest TSLA days gives −1.7;
+    * it holds jointly with Paxton (Abbott −2.4, Paxton +2.7);
+    * it appears both before Oct 14 (−1.5, n 46) and after (−2.4, n 13);
+    * there is no lead or lag (|r| ≤ 0.12).
+  * **It contradicts the business channel.** Abbott is a Musk ally: Musk gave his campaign $500k in May, and Texas granted SpaceX $54M and Musk's Terafab project $1.7B in school tax breaks (per the Hinojosa lawsuit coverage).
+  * In late October, Abbott's odds slid almost daily (Hinojosa's lawsuit for his Musk communications was filed Oct 19–20; the judge's order came Oct 27) while TSLA ran on its own burst.
+  * **Verdict:** treat it as an unexplained statistical link. Do not trade it.
+* **Power (P3):** the smallest effect the test can detect is 1.9–16% per +10 pts. The prediction "null" held for 6 of 8 markets. Two are nominally significant (Paxton, House), and Abbott passes Holm.
+
+### P4: 2024 calibration (Aug 1 → Nov 4 2024, n 67)
+* **Daily slope on P(Trump):** +2.1% per +10 pts, p 0.51; the detectable size is 8.1%. P(Trump) went from 57.5% to 57.9% over the window.
+* **Nov 6 2024:** TSLA +14.75% raw and **+10.4% after QQQ** (z 2.87). The slope's point estimate implied +8.8% for the results day.
+* **So the daily test missed TSLA's political pricing in the year it was clearly there**; only the point estimate was roughly right. Prediction confirmed: "TSLA doesn't seem to care" during the run-up is not evidence either way.
+
+### P5: options, Friday close before the vote (like-for-like weekly pairs)
+
+| | Window | Normal-day move | Extra normal days priced | Excess move-equivalent |
+|---|---|---|---|---|
+| 2024 | Nov 1 → Nov 8 (FOMC Nov 7 inside) | 2.96% | **3.1** | 5.2% |
+| 2026 | Oct 30 → Nov 6 (AAPL reaction and payrolls inside) | 2.48% | **1.9** | 3.4% |
+
+* Prediction "2026 premium smaller than 2024": **confirmed**.
+* In 2024, options priced about a 6% move for the vote (excess plus a normal day). Nov 6 delivered +14.75%.
+* The election-vol study's narrower Nov 2→4 pair gives 1.2 extra days for 2026. The weekly window adds the AAPL reaction, payrolls and weekend loading.
+
+### P6: Musk–White House days (TSLA's own move, z vs its trailing 60-day spread)
+
+| Day | TSLA | QQQ | TSLA's own move | z |
+|---|---|---|---|---|
+| 2024-11-06 Trump wins | +14.75% | +2.72% | +10.3% | +2.84 |
+| 2025-06-05 Trump–Musk feud | −14.26% | −0.75% | −12.7% | **−4.62** |
+| 2025-07-07 "America Party" | −6.79% | −0.75% | −5.3% | −1.69 |
+
+* For comparison: on the 24 biggest daily odds swings across the 8 markets, TSLA's own move never exceeded |z| 2.27.
+* **Prediction "all |z| ≥ 3": 1 of 3.** Two of the three (the feud and the Trump win) exceed every congressional-odds day.
+
+### What is at stake for Tesla the business (sourced, not tested)
+* **Already lost, and a Democratic Congress can't restore it (Trump's veto holds to Jan 2029):**
+  * the $7,500 EV credit ended Sep 30 2025;
+  * regulatory-credit revenue was **$113M in Q3 2026 vs $417M a year earlier (−73%)**. The 10-Q blames government actions restricting the credit programs.
+* **Federal AV law:**
+  * The SELF DRIVE Act (H.R. 7390) would lift the 2,500-vehicle-per-year exemption cap to roughly 90–100k, which the Cybercab needs.
+  * It cleared subcommittee 12–11 in Feb 2026 and has not moved since. It needs 60 Senate votes regardless.
+  * A Democratic House in Jan 2027 lowers its odds further; the lame duck is the last Republican-House window.
+* **Investigations:**
+  * House Oversight Democrats (Garcia, Crockett) pledge probes of Musk, DOGE, contracts and Starlink if they win the House (R House odds 6.5%).
+  * Blumenthal (Senate investigations subcommittee) pledges the same if Democrats win the Senate.
+  * Musk replied "live by the sword…" on Oct 21.
+* **Texas Senate:** Musk's single largest bet, about $158M via the Senate Leadership Fund routed to the pro-Paxton Texas PAC, plus $10M to Lone Star Liberty. Talarico (D) is at 75.5%. One senator does not change law; the cost of a loss is Musk's political capital and attention.
+* **Robotaxi permits are state matters:**
+  * Texas: the only confirmed driverless commercial authorization. Governor Abbott (R) is at 62%.
+  * Nevada: a permit; reports conflict on 5,000 vehicles vs 10. Ford (D) is at 77.5%.
+  * Arizona: a ride-hailing (TNC) permit. Hobbs (D) is at 93.5%.
+  * California: no driverless permit. Becerra (D) is at 98%.
+
+### Playbook tags
+* Paxton slope: **lean** (Holm 0.175).
+* Abbott slope: **unexplained**; do not use.
+* Options election-week premium: **map**.
+* Musk–White House days: **descriptive**.
+* Nothing here is promoted to proven.
+
+### Follow-up (TP1, score Nov 5)
+* TSLA's own move on Nov 4 vs the Texas Senate and House results. The Paxton slope implies about +14% for a Paxton win and about −5% for a Talarico win (point estimates, CI wide).
+* TSLA's realised Nov 3–6 move vs the priced 3.4% excess.
+
+Cost: $0 (Polymarket and Yahoo public APIs; ThetaData chains already on disk).
