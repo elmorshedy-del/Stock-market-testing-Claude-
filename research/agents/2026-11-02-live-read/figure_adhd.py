@@ -46,12 +46,15 @@ def meter(y, x, w, val, lo, hi, line, title, sub, col):
     ax.text(x, y - 5.2, sub, fontsize=11, color=INK2)
 
 
-meter(24, 8, 38, 23, 0, 50, 33, "Freed window closing (near-price OI pct)", "0.6 → 4 → 23 in 3 files. At 33 the 1.8× up-burst edge ends\n(median 4 sessions) → likely shut by Wed–Thu", ORG)
-meter(24, 54, 38, 65, 0, 100, 90, "TSLA own gamma (pct) → pin at 90", "65 now. Dealer gamma nearly doubles from 402 to 420,\nso 420 is where TSLA gets pinned (stall)", BLUE)
+meter(26, 8, 26, 23, 0, 50, 33, "Freed window (near-price OI pct)", "0.6 → 4 → 23. Shuts at 33 (line):\nlikely by Wed–Thu", ORG)
+meter(26, 39, 26, 65, 0, 100, 90, "Own gamma (pct) → pin at 90", "Gamma nearly doubles 402 → 420:\n420 is the pin / stall zone", BLUE)
+meter(26, 70, 26, 65, 0, 100, 10, "TSLA's own DIX (dark-pool, 5-day pct)", "0.512 = 65th pct; warning line at 10th: off.\nMildly supportive (lean)", BLUE)
+ax.text(8, 16.0, "Freed again soon? Yes, usually: the next freed spell starts a median 3 sessions after one ends (73% within 5).", fontsize=12.2, color=INK, weight="bold")
+ax.text(8, 13.3, "Roll-offs that free it (if nobody adds): Fri Nov 6 weekly (30% of near OI) → ~4th pct on Mon Nov 9  •  Fri Nov 20 monthly (28%) → ~0 pct", fontsize=11.2, color=INK2)
 
-ax.add_patch(FancyBboxPatch((3, 1.5), 94, 12, boxstyle="round,pad=0.4,rounding_size=1.5", fc="#f4f3ef", ec=GRID))
-ax.text(5, 11.2, "Watch 3 things", fontsize=15, weight="bold", color=INK)
-ax.text(5, 7.4, "1. Tonight's GEX ≥ $6.1bn with no rally = October's failed rebuild again (leg odds 75% → 61%)", fontsize=12.3, color=INK)
-ax.text(5, 4.9, "2. S&P DIX > 45.4% = R2 on (and R5 if the S&P is still weak) → higher-odds call-spread entry", fontsize=12.3, color=INK)
-ax.text(5, 2.4, "3. SPY close > 766.4 = rebuild WITH price (healthy leg, grind to 780)   •   TSLA at 420 = pin zone, expect a stall", fontsize=12.3, color=INK)
+ax.add_patch(FancyBboxPatch((3, 0.6), 94, 10.4, boxstyle="round,pad=0.4,rounding_size=1.5", fc="#f4f3ef", ec=GRID))
+ax.text(5, 8.9, "Watch 3 things", fontsize=14, weight="bold", color=INK)
+ax.text(5, 6.6, "1. Tonight's GEX ≥ $6.1bn with no rally = October's failed rebuild again (leg odds 75% → 61%)", fontsize=11.8, color=INK)
+ax.text(5, 4.3, "2. S&P DIX > 45.4% = R2 on (and R5 if the S&P is still weak) → higher-odds call-spread entry", fontsize=11.8, color=INK)
+ax.text(5, 2.0, "3. SPY close > 766.4 = rebuild WITH price (healthy leg, grind to 780)   •   TSLA at 420 = pin zone, expect a stall", fontsize=11.8, color=INK)
 fig.savefig(HERE / "out" / "where_1102.png", dpi=110, facecolor=BG); print("ok")

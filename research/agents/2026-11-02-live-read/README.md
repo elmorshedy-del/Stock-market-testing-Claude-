@@ -291,3 +291,23 @@ S1, S2, S7 and T1–T4 are unchanged.
 |---|---|---|---|
 | N1 | "Rebuilt without price" fires by Fri Nov 6 (GEX pct ≥ 0.56 with the S&P inside the band) | 34% after R4 (43% in 2019Q4–26) | **35%** |
 | N2 | TSLA near-price OI back above the 33rd pct in the Nov 4 OI file (Nov 3 close positions) | median 4 sessions from Oct 30 | **60%** |
+
+---
+
+## Added 09:08 ET (pre-open): can TSLA get freed again soon? (owner) + TSLA's DIX on the one-glance picture
+* **Reproduce:** `python tsla_refree.py <td>`. Map plus descriptive history, not a test.
+* **Roll-off schedule.** Share of near-price OI by expiry: Nov 2 19%, Nov 4 8%, **Nov 6 30%**, Nov 13 6%, **Nov 20 monthly 28%**.
+  * If nobody opens new contracts (an upper bound on freeing), the freed pct at 402 runs: now 22 → after today 31 → after Wed 23 → **after Fri Nov 6: 4th pct (Mon Nov 9)** → after Nov 13: 2nd → **after Nov 20: 0th**.
+* **History (2021–26):**
+  * After a freed spell ends, the next one starts in a **median 3 sessions** (IQR 2–7); 73% within 5 sessions, 84% within 10.
+  * Freed odds by place in the monthly cycle: opex day 49%; 4–6 sessions after opex 42%; **4–8 sessions before opex 21%** (OI builds into opex); all days ~33%.
+* **Reading:** yes, freeing recurs fast.
+  * Mechanically, **Mon Nov 9** (after the Nov 6 weekly) is the next chance.
+  * But next week sits 4–8 sessions before the Nov 20 monthly, historically the least-freed stretch, as new OI piles in.
+  * **The bigger, more reliable reset is the week of Nov 23**, after the monthly.
+* **Picture:** TSLA's own DIX (5-day dark-pool index 0.512 = 65th pct; the bottom-tenth warning is off) added as a third TSLA meter.
+
+| # | Forecast (09:08 ET, pre-open) | Map | **My call** |
+|---|---|---|---|
+| N3 | TSLA freed (≤ 33rd pct) in the Nov 9 OI file (Nov 6 close positions) | 4th pct if no new OI | **50%** |
+| N4 | TSLA freed in the Nov 23 OI file (after the Nov 20 monthly) | ~0 pct if no new OI | **70%** |
