@@ -274,6 +274,17 @@ The frozen S1_5_close rule:
 
 * **The screen does not discriminate:** the low-volatility controls did as well as the high group. What separates winners from losers is **single stock vs index**, and **news-gap days.** On the top-decile |gap| days the breakout made +42 (NVDA), +32 (AMD), +36 (NFLX), +19 (JPM), against +4 to +10 on other days.
 
+**Money translation (TSLA, S1_5_close, every tradable day; `out/tsla_money.json`; descriptive):**
+
+| | 1×, the whole account in shares, intraday | Paper sizing (1% risk a trade, ≤ 4×; median 0.75×) |
+|---|---|---|
+| 2020-23 (out of sample) | about +62%/yr simple (CAGR 72%); max drawdown −30%; worst day −5.3%; by year +33 / +75 / +154 / +45%; with +5c costs about +56%/yr | CAGR 66%, max drawdown −19% |
+| 2024-26 | about +47%/yr simple (CAGR 51%); max drawdown −23%; by year +8 / +119 / +33% (2026 to Oct 30) | CAGR 28%, max drawdown −18% |
+
+* The longest losing streak is 10-12 sessions.
+* Returns scale with TSLA's daily range: 2022 was the extreme.
+* The backtest fills at 1-minute granularity. Margin, the PDT rule and taxes are not modelled.
+
 **What this adds to the mechanism:**
 * The breakout is a bet on a **trend day**. It pays when information or one-sided flow arrives and persists: single stocks, news days, and TSLA most days.
 * It fails where liquidity and index arbitrage absorb the push (SPY).
