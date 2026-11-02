@@ -485,3 +485,20 @@ S1, S2, S7 and T1–T4 are unchanged.
 * **Also reported:** the event-by-event table (every reaction day with the stock's move and RSP's move), because n is tiny (AAPL 7 / 4 reports).
 * **Owner's prediction:** in the regime, the AI spenders' slope > AAPL's.
 * **Inference:** event bootstrap as before; with n this small the result is descriptive.
+
+### AS-R results (`python aapl_spill_regime.py`; `out/aapl_spill_regime.json`, `out/aapl_spill_regime.png`)
+* **Since 2025-01-27** (n AAPL 7, AI spenders 32, NVDA 7):
+  * slopes: AAPL −0.061, AI −0.020, NVDA +0.022 (AAPL − AI p 0.64).
+  * mean |RSP| on reaction days: AAPL 0.66%, AI 0.75%, NVDA 0.53%.
+* **Since 2025-10-01** (n 4 / 20 / 4):
+  * slopes ≈ 0 for all;
+  * **mean |RSP|: AAPL 0.23% vs AI 0.77%**.
+* **The owner's prediction (AI slope > AAPL's) is not supported.** In the regime, *none* of them drags the rest of the market along.
+* **The new fact is rotation.** On the 18 days an AI spender fell on earnings, **RSP averaged +0.38%** (+0.39% on 13 such days since Oct 2025):
+  * GOOGL −12.6% on Oct 29 2026 → RSP +1.20%;
+  * META −8.6% and MSFT −3.9% on Apr 30 2026 → RSP +1.51%.
+  * SPY often fell those days through the weights. AI-capex earnings move the market *within* the index.
+* **AAPL in the regime:** 7 reports, no consistent spill. Down reactions: RSP −0.03% (n 5); up: −0.26% (n 2).
+  * The owner's "AAPL down won't hit the market" fits: since Oct 2025, AAPL days were quiet (|RSP| 0.23%).
+  * "Up triggers the rally" has no support; n is 2.
+* **Tonight:** AAPL's move hits SPY mechanically (7.7% weight; ±3.5% ≈ ±27 bp). The broad tape needs its own breadth, and today has it (71% up).
