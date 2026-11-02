@@ -519,3 +519,20 @@ S1, S2, S7 and T1–T4 are unchanged.
   * given 440, a dip to ≤ 408 during Nov 16–20: 33%;
   * the full path: 3% (any specific path is low).
 * **What the overlay shows:** October's shape, aligned on the monthly, puts the **top about 5 sessions before the monthly (≈ Nov 13)**, with this week's push as the first block. The owner's version has the top this week. Both have the dip into the monthly and the reset after it.
+
+---
+
+## Pre-registration LQ (11:15 ET, before computing): was Friday Oct 30 a forced-liquidation day?
+* **Owner** pasted a post ("Tom Lee said on CNBC someone is likely getting liquidated… Leopold?… Griffin will make billions") and asked whether that makes sense for last Friday, and whether it can be confirmed.
+* **News check first:**
+  * I found no report of a named fund being liquidated on Oct 30, and no CNBC segment with that quote dated Oct 30.
+  * The "Leopold" reference matches the **reported late-July 2026 unwind of Situational Awareness LP** (an AI-focused fund that sold its public book to Citadel in a block, per FT/Bloomberg-cited reports).
+  * **Who sold on Friday cannot be confirmed from public data.** What can be tested is whether Friday carries the footprint of forced de-grossing of a crowded AI book.
+* **Basket (fixed now), "AI-crowded":** NVDA, AVGO, AMD, MU, MRVL, TSM, SMCI, ORCL, CRWV, NBIS, VRT, VST, CEG, LITE, COHR, ANET, CLS, WDC, STX, SNDK, IREN, CORZ, PLTR, ALAB, CRDO. **Rest of market** = RSP.
+* **Footprints, each ranked against every day since 2024-01-01:**
+  * **L1:** spread = basket equal-weight return − RSP return. Prediction for a liquidation day: bottom 2%.
+  * **L2:** the basket's dollar volume vs its 20-day average. Prediction: top 5%.
+  * **L3:** breadth of the selling, the share of basket names down. Prediction: ≥ 90% down, while RSP is not in its bottom 5%. That is the concentration signature.
+  * **L4:** the next 2 sessions' spread. Forced selling is price-insensitive, so it tends to bounce back (our forced-flow law). Prediction: positive.
+* **Calibration:** the same numbers on the reported July unwind window (Jul 24–31 2026). If Friday looks like July, the post is plausible; if not, it isn't.
+* **Limits:** this is consistent-with evidence, never proof of a specific seller. The basket is my choice, fixed before looking.
