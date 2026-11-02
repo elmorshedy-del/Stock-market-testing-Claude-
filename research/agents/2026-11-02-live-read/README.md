@@ -444,3 +444,21 @@ S1, S2, S7 and T1–T4 are unchanged.
   * analog and industrial chips up 1.8–3.6% (TXN, ADI, ON, NXPI, MCHP, QCOM, KLAC, MPWR);
   * NVDA is the exception, +1.8%.
 * **Reading:** the rotation continues: broad participation, with cyclicals leading. For the gamma cycle, a rally *with* breadth is the healthy rebuild.
+
+---
+
+## Pre-registration AS (10:12 ET, before any computation): does an AAPL earnings move spill over to the market less than the AI spenders' do?
+* **Owner's thesis:** "AAPL's earnings don't have the widespread implications of the heavy-spending, debt-heavy AI names (MSFT, AMZN, META). Its move down won't cause market-wide impact, but up will bring SPY up and trigger its rally."
+* **Data:**
+  * reaction days = the session after each post-market report (Alpha Vantage `reportedDate`, 2015–2026) for AAPL, MSFT, AMZN, META, GOOGL and NVDA;
+  * daily closes from Yahoo for each stock and for **RSP** (equal-weight S&P, which holds each stock at about 1/500, so it is close to "the rest of the market" with no mechanical overlap).
+* **AS1 (spillover size):** the slope of RSP's reaction-day return on the reporting stock's reaction-day return, AAPL vs the pooled AI spenders (MSFT, AMZN, META, GOOGL).
+  * **Owner's prediction:** AAPL's slope is smaller. Report also the correlation, and NVDA separately (the AI supplier).
+* **AS2 (asymmetry):** AAPL's slope on up reactions vs down reactions.
+  * **Owner's prediction:** down ≈ 0, up > 0.
+* **Inference:** bootstrap over events (5,000), two-sided p for the differences. Report n, and the 2022+ era separately.
+* **Mechanical part (not a test):** AAPL is 7.7% of SPY, so its own move moves SPY by 0.077 × its move whatever the spillover.
+* **Limits:**
+  * n ≈ 45 reports per stock;
+  * reaction days share other news (macro, the other megacaps reporting the same week);
+  * descriptive power is limited.
