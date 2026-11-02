@@ -133,3 +133,97 @@ Map = options-implied paths from 758.60, Gaussian, no drift. My call adds the ti
 * Wording fix at 08:31 ET, before the open: S7 originally read "Any Fri close ≤ 740.6 this week"; the map number (15%) and my call refer to the Fri Nov 6 close.
 * Score S1, S2, T1 and T2 after Monday's close; S3–S8 and T3–T6 on Fri Nov 6 (TODO LR1).
 * Report Brier scores for my calls vs the map, so the tilts are tested over time.
+
+---
+
+## Added 08:35 ET (pre-open): per the ladder and our trigger table
+*Owner: "But u didn't do it per the ladder and the conditions we had before."* Correct. The first pass led with the gamma/options map and mentioned the ladder only in passing. This section walks the ladder rung by rung (REPORT §4i; same definitions as `microstructure/ladder.py`), then the Oct 30 trigger table (S1–S5, T1–T6) with today's lines.
+* `python ladder_now.py <DIX.csv> <^VIX json>` (SqueezeMetrics through Fri Oct 30).
+* `python ladder_week.py <DIX.csv> <^VIX> <GSPC_long> <TSLA>`: what the S&P and TSLA did in the 5 sessions after past rung first-days.
+
+### The ladder at Friday's close (GEX $1.06bn = 6th pct, DIX 43.8% = 22nd pct, VIX 19.42, S&P 7,580.07)
+
+| Rung | Condition | Status | Up-leg within 20 sessions, 2012–26 / 2019Q4–26 | Line this week |
+|---|---|---|---|---|
+| R1 | GEX ≤ 30th pct ($4.53bn) | **ON** (first day Fri) | 61% / 72% | GEX ≤ $4.53bn |
+| R2 | R1 + DIX > 50th pct (45.36%) | off | 65% / 79% | **DIX > 45.36%** (it was 45.8% on Thu) |
+| R3 | GEX ≤ 20th pct ($3.35bn) | **ON** (first day Fri) | 65% / 73% | GEX ≤ $3.35bn |
+| **R4** | R3 + S&P ≥ 2% off its 10-day high | **ON, fired Fri Oct 30** | **70% / 74%**; 2022+ 71% | S&P close ≤ 7,602 (Mon–Tue), ≤ 7,589 (Wed–Fri) |
+| R5 | R4 + DIX > 50th | off | 73% / 83%; 2022+ 84% | a day with R4's price line **and** DIX > 45.36% |
+| R6 | GEX ≤ 20th in the last 15 sessions (live) + VIX ≤ 0.85 × 10-day max | off | 55% / 66% | **VIX ≤ 16.53** (16.51 Fri) |
+| R7 | same + VIX ≤ 0.75 × 10-day max | off | 46% / 52%; the only rung where naked calls pay | **VIX ≤ 14.59** |
+
+* **R4's clock:**
+  * Median lead to the leg is 4 sessions (6.5 in 2022+).
+  * The leg starts within this week in 40% of R4 events (29% in 2022+), vs 21–26% on any day.
+  * The window runs to about Nov 27.
+* **R4's structure:**
+  * A 60-DTE ATM/+5% call spread, not naked calls (−4%).
+  * The odds edge is solid; the spread's payoff edge did not hold in 2019Q4–26 (+11% vs +12.4% any day).
+* **What can fire this week:**
+  * **R2:** DIX back above 45.36% while GEX stays ≤ $4.53bn (GEX was $5.6bn at higher prices on Oct 28–29).
+  * **R5:** a down or flat day that keeps the S&P ≤ 7,602 / 7,589, with dark-pool buying (DIX > 45.36%).
+  * **R6:** VIX ≤ 16.53, i.e. the post-vote relief.
+  * R5 and R6 come from opposite tapes: R5 fires on weakness with buying, R6 on calm.
+
+### The week after past R4 first-days (S&P intraday high/low over the next 5 sessions, in % from the event close, mapped to SPY from 755.72)
+
+| | 2012–26 (n 97) | 2019Q4–26 (n 48) | 2022+ (n 32) |
+|---|---|---|---|
+| Week closes up | 63% (median +0.53%) | 58% (+0.53%) | 53% (+0.27%) |
+| Hits the flip-equivalent (+1.42% = 766.4) | 61% | 65% | 53% |
+| Hits 774 (+2.42%) | 36% | 38% | 22% |
+| **Hits the put-wall-equivalent (−0.76% = 750)** | **61%** | **67%** | **72%** |
+| Hits the pocket floor (−1.60% = 743.6) | 43% | 52% | 62% |
+| Week closes ≥ the flip | 34% | 33% | 25% |
+| TSLA week closes up (median) | 62% (+1.9%) | 54% (+1.7%) | 50% (+0.6%) |
+| TSLA closes ≥ +5% (≈ 420) at some point | 42% | 48% | 41% |
+| TSLA closes ≤ −5% (≈ 380) at some point | 28% | 40% | 44% |
+
+* **Reading:**
+  * The R4 week is **two-sided**: a test of the low side first is usual, and the leg comes after.
+  * The typical path, as medians from Friday's 755.72:
+    * 2012–26: low −0.64% (750.9 ≈ the put wall), high +1.45% (766.7 ≈ the flip), close +0.5% (≈ 760);
+    * 2022+: low −1.58% (≈ 743.8, the pocket floor), high +0.83%.
+  * **The ladder's history and today's gamma map put the same three numbers on the board: 750, 743.6 and 766.**
+* **What this changes vs my 08:26 calls:** I under-weighted the dip side. S5 at 50% sat below both the map (60%) and the ladder (61–72%).
+
+### Revised calls (08:35 ET, pre-open). Both sets are scored; the 08:26 set stays as written above
+
+| # | Forecast | Map | Ladder (2012–26 / 2022+) | 08:26 call | **Revised** |
+|---|---|---|---|---|---|
+| S3 | Hits 766.4 by Fri | 62% | 61% / 53% | 65% | **60%** |
+| S4 | Fri close ≥ 766.4 | 32% | 34% / 25% | 35% | **30%** |
+| S5 | Hits 750 by Fri | 60% | 61% / 72% | 50% | **65%** |
+| S6 | Fri close > 755.72 | 56% | 63% / 53% | 60% | **58%** |
+| S9 (new) | Hits 743.6 (pocket floor) by Fri | 37% | 43% / 62% | – | **45%** |
+| S10 (new) | R2 fires (first day) by Fri | – | – | – | **45%** |
+| S11 (new) | R5 fires by Fri | – | – | – | **25%** |
+| S8 | VIX ≤ 16.5 by Fri (= R6 fires) | – | – | 25% | **25%** |
+| T5 | TSLA hits 380 by Fri | 37% | 28% / 44% (closes) | 30% | **35%** |
+| T6 | TSLA Fri close > 399.81 | 52% | 62% / 50% | 57% | **55%** |
+
+S1, S2, S7 and T1–T4 are unchanged.
+
+### The trigger table (from 2026-10-30-live-read), with today's lines
+
+| # | Trigger | Today | Action it supports | Evidence |
+|---|---|---|---|---|
+| S1 | SPY back to the flip | **766.4** (was 773.6 on stale OI) | Trim short-dated calls there. A close and hold above it means long gamma: damped toward 780, then 800 | Flip-wicks H1: the flip is a stall level (joint p < 0.002) |
+| S2 | SPY in the pocket | **730–745** (−$21bn per 1%), put wall 750 | Moves get amplified. Don't chase puts into it: below the flip, big up-days are 2.8× more likely and big down-days are not | Mechanics; REPORT §4z |
+| S3 | R4 / R5 | **R4 fired Fri.** R5 needs S&P ≤ 7,602 / 7,589 with DIX > 45.36% | 60-DTE ATM/+5% SPX/SPY call spread. Odds yes, payoff edge no in 2019Q4–26 | REPORT §4i |
+| S4 | VIX ≤ 16.53 (R6) / ≤ 14.59 (R7) | VIX 19.4; the election premium is small (election-vol), so no scheduled crush | R6: spread. R7: the only rung where naked calls pay | REPORT §4i |
+| S5 | Friday's big move (−1.82%) | fired | About a third back within 5 sessions (+0.6%). Not significant in 2020–26 | forced-flow (p 0.026 pooled) |
+| T1 | TSLA 400 | call wall, today's pin candidate (+15.6k calls Fri; 18% of gamma expires today) | Above 400 and holding: damped | mechanics |
+| T2 | Freed | **23rd pct** (was 0.4–4th); still ≤ 33rd | Up-bursts 1.8×. ATM IV 41% is no longer at a 1-year low, so long premium is less cheap | REPORT §4z |
+| T3 | Risk reversal climbs above about −0.8 while price rises | **−4.8** (puts bid) | Not triggered. If it fires: take call profits faster | regimes, 2022+ |
+| T4 | TSLA below its flip while freed | flip ~377–381; TSLA 402 | Full setup (39% up vs 17% down bursts within 3 sessions) if it gets there | REPORT §4t–4z |
+| **T5** | TSLA dips while the S&P is in R4/R5 | **live now (R4 on)** | **Don't buy TSLA calls on a TSLA dip** (−25% to −27% vs +12% / +22%); use SPX/SPY spreads | REPORT §4k |
+| T6 | A TSLA rally made in high own gamma | own gamma 65th pct | More likely to hold than a low-gamma rally | forced-flow |
+
+**Other standing conditions:**
+* **July/October machine C1–C4** (scored Nov 13 and Nov 20):
+  * VIX ≤ 16.5 through Nov 6 → SPY ≥ 774 by Nov 13;
+  * VIX > 17 at every close through Nov 6 → no 774 by Nov 13;
+  * QQQ/IWM ≤ 90.50 on Nov 13 → no SPY close > 779.14 by Nov 20.
+* **Channel dip rule:** kill line S&P close ≤ 7,427.98 (SPY ≈ 740.6).

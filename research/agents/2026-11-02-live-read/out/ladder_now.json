@@ -1,0 +1,228 @@
+{
+ "day": "2026-10-30",
+ "SPX": 7580.07,
+ "VIX": 19.42,
+ "GEX $bn / pct": [
+  1.06,
+  0.06
+ ],
+ "DIX / pct": [
+  0.4379,
+  0.219
+ ],
+ "rungs on (Fri close)": {
+  "R1 GEX<=30th": true,
+  "R2 GEX<=30th + DIX>50th": false,
+  "R3 GEX<=20th": true,
+  "R4 GEX<=20th + S&P 2% off 10d high": true,
+  "R5 R4 + DIX>50th": false,
+  "R6 low GEX recently + VIX<=0.85x 10d max": false,
+  "R7 low GEX recently + VIX<=0.75x 10d max": false
+ },
+ "first day on (current episode)": {
+  "R1 GEX<=30th": "2026-10-30",
+  "R2 GEX<=30th + DIX>50th": null,
+  "R3 GEX<=20th": "2026-10-30",
+  "R4 GEX<=20th + S&P 2% off 10d high": "2026-10-30",
+  "R5 R4 + DIX>50th": null,
+  "R6 low GEX recently + VIX<=0.85x 10d max": null,
+  "R7 low GEX recently + VIX<=0.75x 10d max": null
+ },
+ "lines (1-year distributions to Oct 30)": {
+  "GEX 20th pct $bn": 3.35,
+  "GEX 30th pct $bn": 4.53,
+  "DIX 50th pct": 0.4536
+ },
+ "GEX pct last 15 sessions min": 0.036,
+ "this week's lines (if no new 10d high / VIX max)": {
+  "Mon Nov 2": {
+   "S&P 10d high (from prior sessions)": 7757.17,
+   "R4 needs S&P close <=": 7602.03,
+   "VIX 10d max (prior sessions)": 19.45,
+   "R6 needs VIX <=": 16.53,
+   "R7 needs VIX <=": 14.59
+  },
+  "Tue Nov 3": {
+   "S&P 10d high (from prior sessions)": 7757.17,
+   "R4 needs S&P close <=": 7602.03,
+   "VIX 10d max (prior sessions)": 19.45,
+   "R6 needs VIX <=": 16.53,
+   "R7 needs VIX <=": 14.59
+  },
+  "Wed Nov 4": {
+   "S&P 10d high (from prior sessions)": 7743.98,
+   "R4 needs S&P close <=": 7589.1,
+   "VIX 10d max (prior sessions)": 19.45,
+   "R6 needs VIX <=": 16.53,
+   "R7 needs VIX <=": 14.59
+  },
+  "Thu Nov 5": {
+   "S&P 10d high (from prior sessions)": 7743.98,
+   "R4 needs S&P close <=": 7589.1,
+   "VIX 10d max (prior sessions)": 19.45,
+   "R6 needs VIX <=": 16.53,
+   "R7 needs VIX <=": 14.59
+  },
+  "Fri Nov 6": {
+   "S&P 10d high (from prior sessions)": 7743.98,
+   "R4 needs S&P close <=": 7589.1,
+   "VIX 10d max (prior sessions)": 19.42,
+   "R6 needs VIX <=": 16.51,
+   "R7 needs VIX <=": 14.57
+  }
+ },
+ "event history": {
+  "R4 GEX<=20th + S&P 2% off 10d high": {
+   "2012-26": {
+    "n": 96,
+    "P(leg <= 20)": 0.7,
+    "P(leg starts <= 5 sessions)": 0.4,
+    "median lead": 4.0,
+    "5-session return median %": 0.54,
+    "P(up after 5)": 0.64,
+    "5-session low median %": -0.64,
+    "5-session high median %": 1.45,
+    "20-session return median %": 2.31,
+    "20-session worst median %": -1.66
+   },
+   "2019Q4-26": {
+    "n": 47,
+    "P(leg <= 20)": 0.74,
+    "P(leg starts <= 5 sessions)": 0.4,
+    "median lead": 4.0,
+    "5-session return median %": 0.55,
+    "P(up after 5)": 0.6,
+    "5-session low median %": -1.24,
+    "5-session high median %": 1.61,
+    "20-session return median %": 2.95,
+    "20-session worst median %": -1.72
+   },
+   "2022+": {
+    "n": 31,
+    "P(leg <= 20)": 0.71,
+    "P(leg starts <= 5 sessions)": 0.29,
+    "median lead": 6.5,
+    "5-session return median %": 0.4,
+    "P(up after 5)": 0.55,
+    "5-session low median %": -1.58,
+    "5-session high median %": 0.83,
+    "20-session return median %": 1.63,
+    "20-session worst median %": -2.32
+   },
+   "last 6 events": [
+    "2026-02-05",
+    "2026-03-06",
+    "2026-03-26",
+    "2026-06-05",
+    "2026-06-23",
+    "2026-07-23"
+   ]
+  },
+  "R5 R4 + DIX>50th": {
+   "2012-26": {
+    "n": 83,
+    "P(leg <= 20)": 0.73,
+    "P(leg starts <= 5 sessions)": 0.43,
+    "median lead": 3.0,
+    "5-session return median %": 0.37,
+    "P(up after 5)": 0.6,
+    "5-session low median %": -0.69,
+    "5-session high median %": 1.42,
+    "20-session return median %": 2.52,
+    "20-session worst median %": -1.81
+   },
+   "2019Q4-26": {
+    "n": 36,
+    "P(leg <= 20)": 0.83,
+    "P(leg starts <= 5 sessions)": 0.47,
+    "median lead": 4.5,
+    "5-session return median %": -0.08,
+    "P(up after 5)": 0.5,
+    "5-session low median %": -1.14,
+    "5-session high median %": 1.34,
+    "20-session return median %": 3.08,
+    "20-session worst median %": -2.37
+   },
+   "2022+": {
+    "n": 25,
+    "P(leg <= 20)": 0.84,
+    "P(leg starts <= 5 sessions)": 0.36,
+    "median lead": 7.0,
+    "5-session return median %": -0.29,
+    "P(up after 5)": 0.48,
+    "5-session low median %": -1.39,
+    "5-session high median %": 1.28,
+    "20-session return median %": -0.94,
+    "20-session worst median %": -3.15
+   },
+   "last 6 events": [
+    "2025-02-21",
+    "2025-03-12",
+    "2025-03-28",
+    "2026-03-06",
+    "2026-06-10",
+    "2026-07-23"
+   ]
+  },
+  "R6 low GEX recently + VIX<=0.85x 10d max": {
+   "2012-26": {
+    "n": 116,
+    "P(leg <= 20)": 0.55,
+    "P(leg starts <= 5 sessions)": 0.29,
+    "median lead": 4.5,
+    "5-session return median %": 0.81,
+    "P(up after 5)": 0.67,
+    "5-session low median %": -0.22,
+    "5-session high median %": 1.44,
+    "20-session return median %": 1.64,
+    "20-session worst median %": -1.51
+   },
+   "2019Q4-26": {
+    "n": 56,
+    "P(leg <= 20)": 0.66,
+    "P(leg starts <= 5 sessions)": 0.36,
+    "median lead": 5.0,
+    "5-session return median %": 0.59,
+    "P(up after 5)": 0.57,
+    "5-session low median %": -0.42,
+    "5-session high median %": 1.45,
+    "20-session return median %": 2.71,
+    "20-session worst median %": -1.97
+   },
+   "2022+": {
+    "n": 33,
+    "P(leg <= 20)": 0.64,
+    "P(leg starts <= 5 sessions)": 0.33,
+    "median lead": 5.0,
+    "5-session return median %": -0.02,
+    "P(up after 5)": 0.48,
+    "5-session low median %": -0.69,
+    "5-session high median %": 1.22,
+    "20-session return median %": 2.37,
+    "20-session worst median %": -2.03
+   },
+   "last 6 events": [
+    "2026-02-09",
+    "2026-03-10",
+    "2026-03-31",
+    "2026-06-12",
+    "2026-06-30",
+    "2026-07-30"
+   ]
+  }
+ },
+ "any day": {
+  "2012-26": {
+   "P(leg <= 20)": 0.5,
+   "P(leg starts <= 5)": 0.21
+  },
+  "2019Q4-26": {
+   "P(leg <= 20)": 0.57,
+   "P(leg starts <= 5)": 0.26
+  },
+  "2022+": {
+   "P(leg <= 20)": 0.52,
+   "P(leg starts <= 5)": 0.23
+  }
+ }
+}
