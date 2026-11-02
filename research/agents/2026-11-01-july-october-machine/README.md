@@ -96,3 +96,9 @@
 * The calendar row "AAPL/AMZN Thu Oct 29" was wrong: only AMZN reported Oct 29. **AAPL reports Mon Nov 2** (Alpha Vantage: last report Jul 30 2026; confirmed by a third-party note, see [note-check](../2026-11-02-note-check/)).
 * July's AAPL report (Thu Jul 30, +7.4% surprise) was part of July's turn. In October, AAPL is a pending catalyst: its reaction lands Tue Nov 3, election day.
 * The machine ledger's "megacap tech retakes the lead: absent" becomes "pending: AAPL Nov 2, then NVDA ~Nov 18–19". Forecasts C1–C4 are unchanged (written before this was known).
+
+### Erratum 3 (2026-11-02): the "event kink" is not an election premium
+* The ledger read VIX9D/VIX at 0.99 (G3) as a scheduled event premium, and wrote "Vol event passes → VIX crush: scheduled: the election".
+* The [election-vol](../2026-11-02-election-vol/) study priced the sessions directly from SPY daily expiries. The election results session (Nov 4) is priced at a 1.08% move vs a ~1.0% normal day: 17–31% extra variance on one day, depending on the baseline, and ≤ 0.11 vol points of IV30. The election explains ≤ 0.2 of October's +3.0-point IV30 rise.
+* **So the near-term kink is broad October stress (plus AAPL and payrolls), not the election.** A July-size VIX crush is not scheduled by the vote; it needs the stress itself to fade. Precedent: in the 2022 midterm, VIX rose on the results day and fell only after CPI two sessions later. 2024's big crush was a presidential election with a 1.9% premium.
+* C1–C4 are unchanged: their conditions are observed VIX levels, so they still score cleanly. The C1 rationale ("a July-size crush after the event") is weaker than written.

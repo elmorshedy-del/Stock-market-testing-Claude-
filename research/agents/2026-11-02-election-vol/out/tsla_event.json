@@ -1,0 +1,49 @@
+{
+ "sessions": [
+  {
+   "pair": "2026-10-30->2026-11-02",
+   "sessions": 1,
+   "per-session move %": 3.01
+  },
+  {
+   "pair": "2026-11-02->2026-11-04",
+   "sessions": 2,
+   "per-session move %": 3.26
+  },
+  {
+   "pair": "2026-11-04->2026-11-06",
+   "sessions": 2,
+   "per-session move %": 2.48
+  },
+  {
+   "pair": "2026-11-06->2026-11-09",
+   "sessions": 1,
+   "per-session move %": 2.77
+  },
+  {
+   "pair": "2026-11-09->2026-11-11",
+   "sessions": 2,
+   "per-session move %": 2.66
+  },
+  {
+   "pair": "2026-11-11->2026-11-13",
+   "sessions": 2,
+   "per-session move %": 2.44
+  },
+  {
+   "pair": "2026-11-13->2026-11-20",
+   "sessions": 5,
+   "per-session move %": 2.48
+  },
+  {
+   "pair": "2026-11-20->2026-11-27",
+   "sessions": 4,
+   "per-session move %": 2.43
+  }
+ ],
+ "baseline session move % (Nov 6-20 pairs)": 2.57,
+ "election pair": "2026-11-02->2026-11-04",
+ "sessions in pair": 2,
+ "excess variance (move-equivalent %)": 2.83,
+ "excess as % of one normal session's variance": 120.8
+}

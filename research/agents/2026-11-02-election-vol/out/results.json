@@ -1,0 +1,469 @@
+{
+ "A1 Oct 30 per-session implied moves (SPY)": [
+  {
+   "pair": "2026-10-30->2026-11-02",
+   "sessions": 1,
+   "per-session move %": 1.12
+  },
+  {
+   "pair": "2026-11-02->2026-11-03",
+   "sessions": 1,
+   "per-session move %": 0.982
+  },
+  {
+   "pair": "2026-11-03->2026-11-04",
+   "sessions": 1,
+   "per-session move %": 1.079
+  },
+  {
+   "pair": "2026-11-04->2026-11-05",
+   "sessions": 1,
+   "per-session move %": 0.944
+  },
+  {
+   "pair": "2026-11-05->2026-11-06",
+   "sessions": 1,
+   "per-session move %": 1.056
+  },
+  {
+   "pair": "2026-11-06->2026-11-09",
+   "sessions": 1,
+   "per-session move %": 1.038
+  },
+  {
+   "pair": "2026-11-09->2026-11-10",
+   "sessions": 1,
+   "per-session move %": 1.026
+  },
+  {
+   "pair": "2026-11-10->2026-11-11",
+   "sessions": 1,
+   "per-session move %": 0.884
+  },
+  {
+   "pair": "2026-11-11->2026-11-12",
+   "sessions": 1,
+   "per-session move %": 0.883
+  },
+  {
+   "pair": "2026-11-12->2026-11-13",
+   "sessions": 1,
+   "per-session move %": 0.997
+  }
+ ],
+ "A1 election session (Nov 4)": {
+  "pair": "2026-11-03->2026-11-04",
+  "sessions in pair": 1,
+  "pair variance": 0.0001,
+  "baseline per session": 0.0001,
+  "excess": 0.0,
+  "implied move of results session %": 1.0787,
+  "normal session move %": 0.9872
+ },
+ "A1 verdict (excess > 20% of baseline variance)": false,
+ "A2 October": {
+  "IV30 first / Oct 9 / Oct 30 %": [
+   13.62,
+   12.1,
+   15.07
+  ],
+  "election share of IV30 (vol pts) first / Oct 9 / Oct 30": [
+   0.0,
+   0.2,
+   0.08
+  ],
+  "first date with an election estimate": "2026-10-01",
+  "pairs used (first, last)": [
+   "2026-10-30->2026-11-06",
+   "2026-11-03->2026-11-04"
+  ]
+ },
+ "A3 2022": {
+  "evaluated on": "2022-11-03",
+  "pair": "2022-11-07->2022-11-09",
+  "sessions in pair": 2,
+  "implied excess move of election sessions %": 0.197,
+  "normal session move %": 1.451,
+  "realised SPY on the results session %": -2.06,
+  "VIX day before -> results day -> +3 sessions": [
+   25.54,
+   26.09,
+   23.73
+  ],
+  "SPY IV30 day before -> results day %": [
+   24.07,
+   24.55
+  ]
+ },
+ "A3 2024": {
+  "evaluated on": "2024-10-31",
+  "pair": "2024-11-05->2024-11-06",
+  "sessions in pair": 1,
+  "implied excess move of election sessions %": 1.89,
+  "normal session move %": 1.011,
+  "realised SPY on the results session %": 2.49,
+  "VIX day before -> results day -> +3 sessions": [
+   20.49,
+   16.27,
+   14.97
+  ],
+  "SPY IV30 day before -> results day %": [
+   16.45,
+   12.8
+  ]
+ },
+ "A3 2026 (Oct 29, T-3)": {
+  "pair": "2026-11-03->2026-11-04",
+  "implied excess move of election session %": 0.26,
+  "normal session move %": 0.912
+ },
+ "B2 2026: P(R House) betas": {
+  "XLF": {
+   "per +10 pts": -0.513,
+   "p": 0.865,
+   "Holm": 1
+  },
+  "KRE": {
+   "per +10 pts": -1.992,
+   "p": 0.118,
+   "Holm": 1
+  },
+  "IWM": {
+   "per +10 pts": -1.051,
+   "p": 0.396,
+   "Holm": 1
+  },
+  "XLE": {
+   "per +10 pts": -2.362,
+   "p": 0.452,
+   "Holm": 1
+  },
+  "ITA": {
+   "per +10 pts": 2.299,
+   "p": 0.146,
+   "Holm": 1
+  },
+  "XLV": {
+   "per +10 pts": -3.15,
+   "p": 0.223,
+   "Holm": 1
+  },
+  "XBI": {
+   "per +10 pts": -2.907,
+   "p": 0.442,
+   "Holm": 1
+  },
+  "TAN": {
+   "per +10 pts": 2.783,
+   "p": 0.537,
+   "Holm": 1
+  },
+  "ICLN": {
+   "per +10 pts": 1.494,
+   "p": 0.629,
+   "Holm": 1
+  },
+  "XLU": {
+   "per +10 pts": -0.236,
+   "p": 0.998,
+   "Holm": 1
+  },
+  "TLT": {
+   "per +10 pts": -0.682,
+   "p": 0.632,
+   "Holm": 1
+  },
+  "DX-Y.NYB": {
+   "per +10 pts": -0.125,
+   "p": 0.626,
+   "Holm": 1
+  },
+  "BTC-USD": {
+   "per +10 pts": -9.892,
+   "p": 0.041,
+   "Holm": 0.697
+  },
+  "TSLA": {
+   "per +10 pts": 4.671,
+   "p": 0.289,
+   "Holm": 1
+  },
+  "SPY": {
+   "per +10 pts": 0.093,
+   "p": 0.841,
+   "Holm": 1
+  },
+  "QQQ": {
+   "per +10 pts": 0.759,
+   "p": 0.97,
+   "Holm": 1
+  },
+  "10y bp": {
+   "per +10 pts": 10.083,
+   "p": 0.378,
+   "Holm": 1
+  }
+ },
+ "B2 2026: P(R Senate) betas": {
+  "XLF": {
+   "per +10 pts": -0.089,
+   "p": 0.638,
+   "Holm": 1
+  },
+  "KRE": {
+   "per +10 pts": -0.694,
+   "p": 0.228,
+   "Holm": 1
+  },
+  "IWM": {
+   "per +10 pts": 0.037,
+   "p": 0.406,
+   "Holm": 1
+  },
+  "XLE": {
+   "per +10 pts": -0.958,
+   "p": 0.764,
+   "Holm": 1
+  },
+  "ITA": {
+   "per +10 pts": 1.011,
+   "p": 0.43,
+   "Holm": 1
+  },
+  "XLV": {
+   "per +10 pts": -0.054,
+   "p": 0.745,
+   "Holm": 1
+  },
+  "XBI": {
+   "per +10 pts": 0.975,
+   "p": 0.506,
+   "Holm": 1
+  },
+  "TAN": {
+   "per +10 pts": -0.983,
+   "p": 0.196,
+   "Holm": 1
+  },
+  "ICLN": {
+   "per +10 pts": -1.698,
+   "p": 0.003,
+   "Holm": 0.051
+  },
+  "XLU": {
+   "per +10 pts": -1.062,
+   "p": 0.317,
+   "Holm": 1
+  },
+  "TLT": {
+   "per +10 pts": -1.011,
+   "p": 0.036,
+   "Holm": 0.576
+  },
+  "DX-Y.NYB": {
+   "per +10 pts": 0.121,
+   "p": 0.636,
+   "Holm": 1
+  },
+  "BTC-USD": {
+   "per +10 pts": -1.333,
+   "p": 0.286,
+   "Holm": 1
+  },
+  "TSLA": {
+   "per +10 pts": 0.365,
+   "p": 0.887,
+   "Holm": 1
+  },
+  "SPY": {
+   "per +10 pts": 0.681,
+   "p": 0.683,
+   "Holm": 1
+  },
+  "QQQ": {
+   "per +10 pts": 1.386,
+   "p": 0.701,
+   "Holm": 1
+  },
+  "10y bp": {
+   "per +10 pts": 6.854,
+   "p": 0.225,
+   "Holm": 1
+  }
+ },
+ "B2 2024: P(Trump) betas": {
+  "XLF": {
+   "per +10 pts": -0.546,
+   "p": 0.143,
+   "Holm": 1
+  },
+  "KRE": {
+   "per +10 pts": 0.688,
+   "p": 0.582,
+   "Holm": 1
+  },
+  "IWM": {
+   "per +10 pts": 0.417,
+   "p": 0.345,
+   "Holm": 1
+  },
+  "XLE": {
+   "per +10 pts": -0.311,
+   "p": 0.157,
+   "Holm": 1
+  },
+  "ITA": {
+   "per +10 pts": -0.479,
+   "p": 0.231,
+   "Holm": 1
+  },
+  "XLV": {
+   "per +10 pts": -1.024,
+   "p": 0.041,
+   "Holm": 0.697
+  },
+  "XBI": {
+   "per +10 pts": -0.568,
+   "p": 0.201,
+   "Holm": 1
+  },
+  "TAN": {
+   "per +10 pts": -1.353,
+   "p": 0.188,
+   "Holm": 1
+  },
+  "ICLN": {
+   "per +10 pts": -0.89,
+   "p": 0.099,
+   "Holm": 1
+  },
+  "XLU": {
+   "per +10 pts": -1.705,
+   "p": 0.048,
+   "Holm": 0.768
+  },
+  "TLT": {
+   "per +10 pts": 0.379,
+   "p": 0.868,
+   "Holm": 1
+  },
+  "DX-Y.NYB": {
+   "per +10 pts": -0.273,
+   "p": 0.911,
+   "Holm": 1
+  },
+  "BTC-USD": {
+   "per +10 pts": 3.709,
+   "p": 0.508,
+   "Holm": 1
+  },
+  "TSLA": {
+   "per +10 pts": 2.802,
+   "p": 0.734,
+   "Holm": 1
+  },
+  "SPY": {
+   "per +10 pts": 0.201,
+   "p": 0.6,
+   "Holm": 1
+  },
+  "QQQ": {
+   "per +10 pts": 0.752,
+   "p": 0.948,
+   "Holm": 1
+  },
+  "10y bp": {
+   "per +10 pts": 1.543,
+   "p": 0.801,
+   "Holm": 1
+  }
+ },
+ "B2 2024 validation: predicted vs actual Nov 6 moves": {
+  "P(Trump) at Nov 5 16:00": 0.619,
+  "corr across assets": 0.531,
+  "sign agreement": "10 of 17",
+  "table": {
+   "XLF": {
+    "predicted": -2.08,
+    "actual Nov 6 2024": 5.9
+   },
+   "KRE": {
+    "predicted": 2.62,
+    "actual Nov 6 2024": 12.58
+   },
+   "IWM": {
+    "predicted": 1.59,
+    "actual Nov 6 2024": 5.63
+   },
+   "XLE": {
+    "predicted": -1.18,
+    "actual Nov 6 2024": 3.69
+   },
+   "ITA": {
+    "predicted": -1.82,
+    "actual Nov 6 2024": 3.14
+   },
+   "XLV": {
+    "predicted": -3.9,
+    "actual Nov 6 2024": 0.13
+   },
+   "XBI": {
+    "predicted": -2.16,
+    "actual Nov 6 2024": 1.79
+   },
+   "TAN": {
+    "predicted": -5.15,
+    "actual Nov 6 2024": -11.5
+   },
+   "ICLN": {
+    "predicted": -3.39,
+    "actual Nov 6 2024": -7.62
+   },
+   "XLU": {
+    "predicted": -6.5,
+    "actual Nov 6 2024": -1.04
+   },
+   "TLT": {
+    "predicted": 1.44,
+    "actual Nov 6 2024": -2.78
+   },
+   "DX-Y.NYB": {
+    "predicted": -1.04,
+    "actual Nov 6 2024": 1.6
+   },
+   "BTC-USD": {
+    "predicted": 14.13,
+    "actual Nov 6 2024": 0.35
+   },
+   "TSLA": {
+    "predicted": 10.68,
+    "actual Nov 6 2024": 13.76
+   },
+   "SPY": {
+    "predicted": 0.77,
+    "actual Nov 6 2024": 2.46
+   },
+   "QQQ": {
+    "predicted": 2.87,
+    "actual Nov 6 2024": 2.68
+   },
+   "10y bp": {
+    "predicted": 5.88,
+    "actual Nov 6 2024": 13.7
+   }
+  }
+ },
+ "B1 corr(election excess var, Senate closeness) Oct 2026": 0.013,
+ "B1 n days": 22,
+ "now: Balance of Power odds": {
+  "Democrats Sweep": 0.715,
+  "D Senate, R House": 0.006,
+  "R Senate, D House": 0.225,
+  "Republicans Sweep": 0.055,
+  "Other": 0.001
+ },
+ "now: P(R House), P(R Senate)": [
+  0.055,
+  0.275
+ ]
+}
