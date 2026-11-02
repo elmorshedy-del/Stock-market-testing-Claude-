@@ -358,3 +358,18 @@ S1, S2, S7 and T1–T4 are unchanged.
 | W1 | TSLA's high Mon–Wed ≥ 412 (a first-half pop of ≥ +3% from Friday's close) | **60%** |
 | W2 | TSLA's Fri Nov 6 close < its Wed Nov 4 close (a second-half fade) | **60%** |
 | W3 | TSLA's Fri Nov 6 close ≥ 420 (keeps pace with the owner's steep channel) | **20%** (= T4) |
+* **Weekly rhythm, the numbers** (`python weekly_rhythm.py <TSLA yahoo> <OI dirs>`; descriptive). See `out/weekly_rhythm.png`.
+  * **Near-price OI pct going into each day**, from the OI files only (full ≤ 120-day denominator, spot = prior close):
+    * week of Oct 19: Mon **14** → Tue 27 → Wed 12 → Thu 33 → Fri 35;
+    * week of Oct 26: Mon **16** → Tue 35 → Wed 66 → Thu 29 → Fri 52;
+    * Mon Nov 2: **23**.
+    * **Every Monday since Oct 19 started freed**, right after the Friday weekly roll-off. 45–62% of near-price OI expires by each Friday; this week 56%.
+  * **Engine 2023–Oct 2026, mean near-OI pct by weekday:** Mon 45, Tue 61, Wed 62, Thu 63, Fri 39 (the Friday row excludes Friday's own expiry). Own gamma is flat (47–54). A structural weekly cycle.
+  * **Price:** Mon–Wed vs Thu–Fri, compounded:
+    * Oct 12 week −4.1 / −3.4 (the reset);
+    * **Oct 19 week +9.0 / −3.7; Oct 26 week +8.6 / −1.1**.
+    * 2023–26 (200 weeks): Mon–Wed mean +1.02%, Thu–Fri −0.14%; up-then-down in 33% of weeks.
+    * **After Mon–Wed > +5% (44 weeks), Thu–Fri fell only 50% (mean −0.4%).**
+  * **Reading:** the rise-early half has support (the positioning cycle, plus the tested Monday up-burst effect, 1.95×). The fade-late half is a coin flip.
+  * **This week** has the same setup, but weaker (Monday freed at 23rd vs 14th/16th). The election lands midweek, and the heavy Nov 6 expiry (56%) argues for a late-week pin.
+  * Hand-drawn channel lines held 48–50% in our TSLA test (Tier 4), so the owner's steep channel is a guide, not a floor.

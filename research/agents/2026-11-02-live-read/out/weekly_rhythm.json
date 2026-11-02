@@ -1,0 +1,164 @@
+{
+ "(a) going into each day (OI files only)": {
+  "2026-10-15": {
+   "weekday": "Thu",
+   "prior close": 367.16,
+   "near share": 0.112,
+   "near pct": 0.53,
+   "near OI expiring by this Friday": 0.47
+  },
+  "2026-10-16": {
+   "weekday": "Fri",
+   "prior close": 362.44,
+   "near share": 0.1184,
+   "near pct": 0.66,
+   "near OI expiring by this Friday": 0.47
+  },
+  "2026-10-19": {
+   "weekday": "Mon",
+   "prior close": 354.72,
+   "near share": 0.0855,
+   "near pct": 0.14,
+   "near OI expiring by this Friday": 0.49
+  },
+  "2026-10-20": {
+   "weekday": "Tue",
+   "prior close": 368.06,
+   "near share": 0.0946,
+   "near pct": 0.27,
+   "near OI expiring by this Friday": 0.37
+  },
+  "2026-10-21": {
+   "weekday": "Wed",
+   "prior close": 373.71,
+   "near share": 0.0831,
+   "near pct": 0.12,
+   "near OI expiring by this Friday": 0.43
+  },
+  "2026-10-22": {
+   "weekday": "Thu",
+   "prior close": 386.47,
+   "near share": 0.0991,
+   "near pct": 0.33,
+   "near OI expiring by this Friday": 0.46
+  },
+  "2026-10-23": {
+   "weekday": "Fri",
+   "prior close": 374.58,
+   "near share": 0.1018,
+   "near pct": 0.35,
+   "near OI expiring by this Friday": 0.45
+  },
+  "2026-10-26": {
+   "weekday": "Mon",
+   "prior close": 372.22,
+   "near share": 0.0867,
+   "near pct": 0.16,
+   "near OI expiring by this Friday": 0.53
+  },
+  "2026-10-27": {
+   "weekday": "Tue",
+   "prior close": 391.62,
+   "near share": 0.1016,
+   "near pct": 0.35,
+   "near OI expiring by this Friday": 0.53
+  },
+  "2026-10-28": {
+   "weekday": "Wed",
+   "prior close": 407.46,
+   "near share": 0.1187,
+   "near pct": 0.66,
+   "near OI expiring by this Friday": 0.62
+  },
+  "2026-10-29": {
+   "weekday": "Thu",
+   "prior close": 404.22,
+   "near share": 0.0965,
+   "near pct": 0.29,
+   "near OI expiring by this Friday": 0.45
+  },
+  "2026-10-30": {
+   "weekday": "Fri",
+   "prior close": 403.3,
+   "near share": 0.1109,
+   "near pct": 0.52,
+   "near OI expiring by this Friday": 0.45
+  },
+  "2026-11-02": {
+   "weekday": "Mon",
+   "prior close": 399.81,
+   "near share": 0.0921,
+   "near pct": 0.23,
+   "near OI expiring by this Friday": 0.56
+  }
+ },
+ "(b) engine 2023-Oct 2026, mean pct by weekday [near-OI pct, own-gamma pct, n]": {
+  "Mon": [
+   0.45,
+   0.52,
+   158
+  ],
+  "Tue": [
+   0.61,
+   0.53,
+   172
+  ],
+  "Wed": [
+   0.62,
+   0.54,
+   170
+  ],
+  "Thu": [
+   0.63,
+   0.51,
+   164
+  ],
+  "Fri": [
+   0.39,
+   0.47,
+   166
+  ]
+ },
+ "(c) TSLA daily returns %, Oct 12-30": {
+  "2026-10-12 Mon": -1.22,
+  "2026-10-13 Tue": -0.74,
+  "2026-10-14 Wed": -2.15,
+  "2026-10-15 Thu": -1.29,
+  "2026-10-16 Fri": -2.13,
+  "2026-10-19 Mon": 3.76,
+  "2026-10-20 Tue": 1.54,
+  "2026-10-21 Wed": 3.41,
+  "2026-10-22 Thu": -3.08,
+  "2026-10-23 Fri": -0.63,
+  "2026-10-26 Mon": 5.21,
+  "2026-10-27 Tue": 4.04,
+  "2026-10-28 Wed": -0.8,
+  "2026-10-29 Thu": -0.23,
+  "2026-10-30 Fri": -0.87
+ },
+ "(c) by week, compounded % [Mon-Wed, Thu-Fri]": {
+  "2026-10-12": [
+   -4.1,
+   -3.4
+  ],
+  "2026-10-19": [
+   9.0,
+   -3.7
+  ],
+  "2026-10-26": [
+   8.6,
+   -1.1
+  ]
+ },
+ "(d) 2023-26 weeks (n, mean Mon-Wed %, mean Thu-Fri %, share of weeks up-then-down)": [
+  200,
+  1.02,
+  -0.14,
+  0.33
+ ],
+ "(d) weeks with Mon-Wed > +5%: n, mean Thu-Fri %, share Thu-Fri down": [
+  44,
+  -0.4,
+  0.5
+ ]
+}
