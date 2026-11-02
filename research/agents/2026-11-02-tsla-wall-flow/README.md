@@ -42,3 +42,29 @@
   * If dealers are short those calls, approaching them could accelerate (a squeeze) rather than damp.
   * Our dealer-sign test supports the damping convention for TSLA overall, but more weakly since 2023 (p 0.10).
   * The call-wall ceiling result is SPY/QQQ-only so far (TSLA untested: TODO GW1).
+
+## Addendum: against the owner's own named bursts (`named.py`, `figure_named.py` → `out/named.csv`, `out/named_paths.csv`, `out/named_bursts.png`; descriptive, n = 11)
+**Owner:** "By snap I meant going up fast. And I was talking about the bursts I had identified by date." Those are the 11 dates in `microstructure/burst_compare.NAMED`.
+
+| Burst | Buying (net buy share) | Volume | Day 3 | Day 10 | Day 20 |
+|---|---|---|---|---|---|
+| Sep '25 | 16% | 2.0× | +7.5% | +11% | +4% |
+| Jul '24 (call-wall break) | 15% | 2.3× | +9.4% | +7% | +0% |
+| Oct '24 report | 14% | 2.5× | **−4.2%** (−7.5% by day 5) | **+19%** | +31% |
+| **NOW, Oct 26–27 '26** | **13%** | **1.5×** | **−1.9%** | ? | ? |
+| Nov '24 election | 8% | 1.7× | +10.6% | +14% | +31% |
+| May '25 | 8% | 1.2× | +4.8% | +7% | −2% |
+| Jun '24 | 5% | 1.2× | **−1.2%** | **+34%** | +35% |
+| Oct '25 b | 5% | 0.7× | +2.4% | +7% | +2% |
+| Nov '25 | 4% | 0.9× | +2.6% | +8% | +16% |
+| late May '25 | 4% | 1.0× | −4.0% | −9% | −9% |
+| Apr '25 report | 1% | 0.8× | +12.5% | +10% | +31% |
+| Oct '25 a | 1% | 0.9× | −4.5% | +2% | +3% |
+
+* **Going up fast (≥ +5% by day 3):** 4 of 11 (Jul '24, Nov '24, Apr '25, Sep '25). All were already up by day 3. Now is −1.9%, so the immediate fast path has not shown up.
+* **Dipped by day 3:** 4 of 11.
+  * The 2 on above-normal volume ran: Jun '24 +34% and Oct '24 +19% by day 10, with the run starting between days 5 and 8.
+  * The 2 on normal volume faded or went flat: late May '25 and Oct '25 a.
+* **Now** has 13% buying (3rd-highest of the 12) on 1.5× volume. Its closest twin is **Oct '24**: similar buying, about half the move from gaps, an early dip.
+* Across the 11, buying aggression vs the day-10 gain has Spearman ρ +0.49 (n 11, not significant).
+* **Read (a lean, not proof):** not a fast snap from here. If it follows the dip-then-run twins, the up-leg comes after a few more sessions of pause or dip. The gamma map's first stop is 420, then 440–455.
