@@ -123,5 +123,13 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **LR1. Score the Nov 2 live-read forecasts** (S1-S8 SPY, T1-T6 TSLA): S1/S2/T1/T2 after Mon close, the rest Fri Nov 6; Brier for my calls vs the options-implied map ([2026-11-02-live-read](2026-11-02-live-read/)).
 - [ ] **BP1. Composite top score (TSLA, then SPY/QQQ):** flat skew + IV rising with price + fading buy aggression + near the call wall + opex within ~5 sessions; pre-register weights/thresholds before testing on tops vs kept-going days (16 tops in-sample; extend to other high-option stocks for out-of-sample). [tsla-breaking-point](2026-11-02-tsla-breaking-point/).
 
+## HFT-papers follow-ups (2026-11-02)
+- [ ] **HP1. ORB replication conditioned on gamma regime** (SPY/QQQ/TSLA 1-min, out-of-sample 2024-26, realistic costs): ORB profit should sit in short-gamma or freed days and vanish in long-gamma or pinned days ([hft-papers](2026-11-02-hft-papers/)).
+- [ ] **HP3. Non-news vs news extreme AI-basket days:** do no-news forced shocks revert over 1-5 sessions (Knight-glitch logic)? Data in hand (LQ) ([hft-papers](2026-11-02-hft-papers/)).
+- [ ] **HP4. VIX overnight vs intraday split by weekday;** rung hits on open vs close; post-event Wednesday pattern (Yahoo VIX OHLC) ([hft-papers](2026-11-02-hft-papers/)).
+- [ ] **HP5. TSLA aggressor imbalance near round $10 levels** (Databento trades; cost quote first) ([hft-papers](2026-11-02-hft-papers/)).
+- [ ] **HP6. BJZZ retail-flow measure for TSLA and 1-15 day volatility** (Databento/TAQ prints) ([hft-papers](2026-11-02-hft-papers/)).
+- [ ] **HP2. First-30-min signed option flow -> TSLA rest-of-day return** (blocked: ThetaData Options Standard trades) ([hft-papers](2026-11-02-hft-papers/)).
+
 ## Done
 - (none yet)
