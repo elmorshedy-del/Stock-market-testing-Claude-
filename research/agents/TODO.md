@@ -124,7 +124,10 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **BP1. Composite top score (TSLA, then SPY/QQQ):** flat skew + IV rising with price + fading buy aggression + near the call wall + opex within ~5 sessions; pre-register weights/thresholds before testing on tops vs kept-going days (16 tops in-sample; extend to other high-option stocks for out-of-sample). [tsla-breaking-point](2026-11-02-tsla-breaking-point/).
 
 ## HFT-papers follow-ups (2026-11-02)
-- [ ] **HP1. ORB replication conditioned on gamma regime** (SPY/QQQ/TSLA 1-min, out-of-sample 2024-26, realistic costs): ORB profit should sit in short-gamma or freed days and vanish in long-gamma or pinned days ([hft-papers](2026-11-02-hft-papers/)).
+- [x] **HP1 done** ([orb-gamma](2026-11-02-orb-gamma/)): SPY fails, gamma doesn't rescue it, TSLA lives. Follow-ups OG1-OG2.
+- [ ] **OG1. Confirm TSLA 5-min breakout on 2020-23** (XNAS bars, about $0.3-0.5; ask the owner), with the rule frozen as S1_5_close plus Monday/Friday and long-side splits.
+- [ ] **OG2. Forward-test TSLA S1_5_close from Nov 3 2026** (paper; log each day's trade before 09:40).
+- [ ] ~~HP1. ORB replication conditioned on gamma regime~~ (SPY/QQQ/TSLA 1-min, out-of-sample 2024-26, realistic costs): ORB profit should sit in short-gamma or freed days and vanish in long-gamma or pinned days ([hft-papers](2026-11-02-hft-papers/)).
 - [ ] **HP3. Non-news vs news extreme AI-basket days:** do no-news forced shocks revert over 1-5 sessions (Knight-glitch logic)? Data in hand (LQ) ([hft-papers](2026-11-02-hft-papers/)).
 - [ ] **HP4. VIX overnight vs intraday split by weekday;** rung hits on open vs close; post-event Wednesday pattern (Yahoo VIX OHLC) ([hft-papers](2026-11-02-hft-papers/)).
 - [ ] **HP5. TSLA aggressor imbalance near round $10 levels** (Databento trades; cost quote first) ([hft-papers](2026-11-02-hft-papers/)).

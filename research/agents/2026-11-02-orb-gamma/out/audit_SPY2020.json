@@ -1,0 +1,31 @@
+{
+ "symbol": "SPY",
+ "dataset": "ARCX.PILLAR",
+ "label": "SPY2020",
+ "window": [
+  "2020-01-02",
+  "2023-12-29"
+ ],
+ "sessions (Yahoo)": 1006,
+ "status counts": {
+  "clean": 899,
+  "bad_D2": 102,
+  "bad_D1": 5
+ },
+ "clean share of full sessions": 0.8936,
+ "PASS (>= 95% clean)": false,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 0.25,
+  "d_high": 0.0,
+  "d_low": 0.0,
+  "d_close": 0.68
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 1.79,
+  "d_high": 1.9324999999999999,
+  "d_low": 3.0300000000000002,
+  "d_close": 2.165
+ },
+ "median bars per full session": 390.0,
+ "days with any missing RTH minute": 9
+}

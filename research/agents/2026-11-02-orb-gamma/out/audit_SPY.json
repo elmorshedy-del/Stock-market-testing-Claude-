@@ -1,0 +1,31 @@
+{
+ "symbol": "SPY",
+ "dataset": "EQUS.MINI",
+ "label": "SPY",
+ "window": [
+  "2024-01-02",
+  "2026-10-30"
+ ],
+ "sessions (Yahoo)": 711,
+ "status counts": {
+  "clean": 683,
+  "bad_D2": 22,
+  "bad_D1": 6
+ },
+ "clean share of full sessions": 0.9606,
+ "PASS (>= 95% clean)": true,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 0.19,
+  "d_high": 0.16,
+  "d_low": 0.17,
+  "d_close": 0.87
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 1.005,
+  "d_high": 0.89,
+  "d_low": 1.02,
+  "d_close": 2.875
+ },
+ "median bars per full session": 390.0,
+ "days with any missing RTH minute": 7
+}

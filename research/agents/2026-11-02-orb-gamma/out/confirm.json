@@ -1,0 +1,682 @@
+{
+ "SPY2020": {
+  "sessions": 899,
+  "S0 mean bp/day": -0.46,
+  "E1 regime-aligned (SPY flip)": {
+   "days": 898,
+   "aligned trades": 423,
+   "aligned mean bp/day": 1.37,
+   "aligned mean bp/trade": 2.9,
+   "counter-aligned mean bp/trade": -3.48,
+   "p one-sided (aligned > 0 vs shifted regime)": 0.1876,
+   "by cell bp/trade [n]": {
+    "below long": [
+     2.71,
+     236
+    ],
+    "below short": [
+     -6.92,
+     249
+    ],
+    "above long": [
+     0.41,
+     220
+    ],
+    "above short": [
+     3.14,
+     187
+    ]
+   }
+  },
+  "E2 Monday minus other": {
+   "n flag": 159,
+   "mean flag": -4.63,
+   "mean other": 0.44,
+   "diff": -5.07,
+   "p one-sided": 0.8743
+  },
+  "E3 VIX>17.86 minus other": {
+   "n flag": 636,
+   "mean flag": -1.15,
+   "mean other": 1.22,
+   "diff": -2.37,
+   "p one-sided": 0.17
+  },
+  "grid": {
+   "best variant": "S1_30_10R",
+   "best t": 1.02,
+   "joint p (max-t over 24)": 0.6671,
+   "S1_5_close mean bp/day, shift p": [
+    0.72,
+    0.3248
+   ],
+   "top 6 [mean bp/day, t, hit]": {
+    "S1_30_10R": [
+     2.33,
+     1.02,
+     0.426
+    ],
+    "S1_30_close": [
+     2.25,
+     0.99,
+     0.426
+    ],
+    "S1_15_10R": [
+     1.83,
+     0.84,
+     0.357
+    ],
+    "S1_15_close": [
+     1.75,
+     0.81,
+     0.357
+    ],
+    "S1_1_2R": [
+     0.39,
+     0.59,
+     0.393
+    ],
+    "S0_30_close": [
+     1.05,
+     0.5,
+     0.341
+    ]
+   }
+  }
+ },
+ "SPY2020_d2": {
+  "sessions": 1001,
+  "S0 mean bp/day": 0.38,
+  "E1 regime-aligned (SPY flip)": {
+   "days": 999,
+   "aligned trades": 471,
+   "aligned mean bp/day": 1.46,
+   "aligned mean bp/trade": 3.09,
+   "counter-aligned mean bp/trade": -2.59,
+   "p one-sided (aligned > 0 vs shifted regime)": 0.0991,
+   "by cell bp/trade [n]": {
+    "below long": [
+     2.8,
+     265
+    ],
+    "below short": [
+     -6.46,
+     281
+    ],
+    "above long": [
+     1.93,
+     241
+    ],
+    "above short": [
+     3.45,
+     206
+    ]
+   }
+  },
+  "E2 Monday minus other": {
+   "n flag": 183,
+   "mean flag": -4.17,
+   "mean other": 1.4,
+   "diff": -5.58,
+   "p one-sided": 0.9188
+  },
+  "E3 VIX>17.86 minus other": {
+   "n flag": 716,
+   "mean flag": 0.36,
+   "mean other": 0.44,
+   "diff": -0.08,
+   "p one-sided": 0.4672
+  },
+  "grid": {
+   "best variant": "S1_1_2R",
+   "best t": 0.99,
+   "joint p (max-t over 24)": 0.795,
+   "S1_5_close mean bp/day, shift p": [
+    0.97,
+    0.4142
+   ],
+   "top 6 [mean bp/day, t, hit]": {
+    "S1_1_2R": [
+     0.72,
+     0.99,
+     0.396
+    ],
+    "S1_30_10R": [
+     2.0,
+     0.86,
+     0.435
+    ],
+    "S1_30_close": [
+     1.92,
+     0.83,
+     0.435
+    ],
+    "S1_15_10R": [
+     1.83,
+     0.82,
+     0.367
+    ],
+    "S1_15_close": [
+     1.76,
+     0.79,
+     0.367
+    ],
+    "S0_30_10R": [
+     1.6,
+     0.75,
+     0.349
+    ]
+   }
+  }
+ },
+ "QQQ": {
+  "sessions": 682,
+  "S0 mean bp/day": 1.02,
+  "E1 regime-aligned (SPY flip)": {
+   "days": 668,
+   "aligned trades": 332,
+   "aligned mean bp/day": -0.78,
+   "aligned mean bp/trade": -1.58,
+   "counter-aligned mean bp/trade": 3.38,
+   "p one-sided (aligned > 0 vs shifted regime)": 0.8838,
+   "by cell bp/trade [n]": {
+    "below long": [
+     -4.96,
+     168
+    ],
+    "below short": [
+     3.79,
+     178
+    ],
+    "above long": [
+     2.92,
+     158
+    ],
+    "above short": [
+     1.88,
+     164
+    ]
+   }
+  },
+  "E2 Monday minus other": {
+   "n flag": 130,
+   "mean flag": 1.45,
+   "mean other": 0.92,
+   "diff": 0.53,
+   "p one-sided": 0.4533
+  },
+  "E3 VIX>17.86 minus other": {
+   "n flag": 227,
+   "mean flag": -3.12,
+   "mean other": 3.09,
+   "diff": -6.21,
+   "p one-sided": 0.0218
+  },
+  "grid": {
+   "best variant": "S1_1_close",
+   "best t": 1.7,
+   "joint p (max-t over 24)": 0.405,
+   "S1_5_close mean bp/day, shift p": [
+    1.83,
+    0.0981
+   ],
+   "top 6 [mean bp/day, t, hit]": {
+    "S1_1_close": [
+     2.97,
+     1.7,
+     0.196
+    ],
+    "S1_1_10R": [
+     2.75,
+     1.64,
+     0.2
+    ],
+    "S1_1_2R": [
+     1.39,
+     1.48,
+     0.38
+    ],
+    "S0_15_2R": [
+     2.68,
+     1.45,
+     0.405
+    ],
+    "S0_15_close": [
+     3.12,
+     1.36,
+     0.321
+    ],
+    "S0_1_close": [
+     2.03,
+     1.3,
+     0.146
+    ]
+   }
+  }
+ },
+ "QQQ_d2": {
+  "sessions": 705,
+  "S0 mean bp/day": 1.21,
+  "E1 regime-aligned (SPY flip)": {
+   "days": 691,
+   "aligned trades": 346,
+   "aligned mean bp/day": -0.37,
+   "aligned mean bp/trade": -0.73,
+   "counter-aligned mean bp/trade": 2.95,
+   "p one-sided (aligned > 0 vs shifted regime)": 0.8111,
+   "by cell bp/trade [n]": {
+    "below long": [
+     -2.42,
+     174
+    ],
+    "below short": [
+     2.98,
+     187
+    ],
+    "above long": [
+     2.92,
+     158
+    ],
+    "above short": [
+     0.98,
+     172
+    ]
+   }
+  },
+  "E2 Monday minus other": {
+   "n flag": 135,
+   "mean flag": 1.95,
+   "mean other": 1.03,
+   "diff": 0.92,
+   "p one-sided": 0.4211
+  },
+  "E3 VIX>17.86 minus other": {
+   "n flag": 239,
+   "mean flag": -2.31,
+   "mean other": 3.01,
+   "diff": -5.33,
+   "p one-sided": 0.0541
+  },
+  "grid": {
+   "best variant": "S1_1_10R",
+   "best t": 1.9,
+   "joint p (max-t over 24)": 0.397,
+   "S1_5_close mean bp/day, shift p": [
+    3.81,
+    0.0586
+   ],
+   "top 6 [mean bp/day, t, hit]": {
+    "S1_1_10R": [
+     3.33,
+     1.9,
+     0.201
+    ],
+    "S1_1_close": [
+     4.48,
+     1.88,
+     0.195
+    ],
+    "S0_15_close": [
+     5.0,
+     1.81,
+     0.323
+    ],
+    "S0_15_2R": [
+     3.34,
+     1.77,
+     0.407
+    ],
+    "S0_15_10R": [
+     4.42,
+     1.7,
+     0.323
+    ],
+    "S1_30_10R": [
+     4.78,
+     1.69,
+     0.478
+    ]
+   }
+  }
+ },
+ "TSLA": {
+  "sessions": 553,
+  "S0 mean bp/day": 6.1,
+  "E1 regime-aligned (SPY flip)": {
+   "days": 544,
+   "aligned trades": 286,
+   "aligned mean bp/day": 10.02,
+   "aligned mean bp/trade": 19.06,
+   "counter-aligned mean bp/trade": -9.11,
+   "p one-sided (aligned > 0 vs shifted regime)": 0.0278,
+   "by cell bp/trade [n]": {
+    "below long": [
+     10.5,
+     147
+    ],
+    "below short": [
+     -18.61,
+     128
+    ],
+    "above long": [
+     0.24,
+     130
+    ],
+    "above short": [
+     28.1,
+     139
+    ]
+   }
+  },
+  "E2 Monday minus other": {
+   "n flag": 97,
+   "mean flag": 34.48,
+   "mean other": 0.07,
+   "diff": 34.41,
+   "p one-sided": 0.039
+  },
+  "E3 VIX>17.86 minus other": {
+   "n flag": 191,
+   "mean flag": -0.96,
+   "mean other": 9.83,
+   "diff": -10.79,
+   "p one-sided": 0.1988
+  },
+  "grid": {
+   "best variant": "S0_15_2R",
+   "best t": 1.89,
+   "joint p (max-t over 24)": 0.2827,
+   "S1_5_close mean bp/day, shift p": [
+    12.39,
+    0.0487
+   ],
+   "top 6 [mean bp/day, t, hit]": {
+    "S0_15_2R": [
+     13.73,
+     1.89,
+     0.429
+    ],
+    "S1_5_2R": [
+     13.44,
+     1.8,
+     0.435
+    ],
+    "S1_1_close": [
+     10.87,
+     1.58,
+     0.28
+    ],
+    "S1_1_10R": [
+     10.44,
+     1.56,
+     0.28
+    ],
+    "S1_5_close": [
+     12.39,
+     1.47,
+     0.418
+    ],
+    "S1_5_10R": [
+     12.39,
+     1.47,
+     0.418
+    ]
+   }
+  }
+ },
+ "TSLA_d2": {
+  "sessions": 705,
+  "S0 mean bp/day": 13.02,
+  "E1 regime-aligned (SPY flip)": {
+   "days": 691,
+   "aligned trades": 356,
+   "aligned mean bp/day": 12.1,
+   "aligned mean bp/trade": 23.48,
+   "counter-aligned mean bp/trade": 1.05,
+   "p one-sided (aligned > 0 vs shifted regime)": 0.0691,
+   "by cell bp/trade [n]": {
+    "below long": [
+     24.52,
+     187
+    ],
+    "below short": [
+     10.44,
+     174
+    ],
+    "above long": [
+     -9.1,
+     161
+    ],
+    "above short": [
+     22.33,
+     169
+    ]
+   }
+  },
+  "E2 Monday minus other": {
+   "n flag": 135,
+   "mean flag": 41.79,
+   "mean other": 6.2,
+   "diff": 35.58,
+   "p one-sided": 0.0226
+  },
+  "E3 VIX>17.86 minus other": {
+   "n flag": 239,
+   "mean flag": 18.5,
+   "mean other": 10.2,
+   "diff": 8.3,
+   "p one-sided": 0.7444
+  },
+  "grid": {
+   "best variant": "S1_1_close",
+   "best t": 2.75,
+   "joint p (max-t over 24)": 0.0857,
+   "S1_5_close mean bp/day, shift p": [
+    18.48,
+    0.0211
+   ],
+   "top 6 [mean bp/day, t, hit]": {
+    "S1_1_close": [
+     19.48,
+     2.75,
+     0.293
+    ],
+    "S0_15_2R": [
+     17.74,
+     2.67,
+     0.444
+    ],
+    "S1_1_10R": [
+     16.86,
+     2.65,
+     0.293
+    ],
+    "S1_1_2R": [
+     10.97,
+     2.62,
+     0.396
+    ],
+    "S1_5_2R": [
+     15.88,
+     2.37,
+     0.445
+    ],
+    "S0_15_10R": [
+     18.15,
+     2.36,
+     0.408
+    ]
+   }
+  }
+ },
+ "SPY": {
+  "sessions": 683,
+  "S0 mean bp/day": -1.4,
+  "E1 regime-aligned (SPY flip)": {
+   "days": 669,
+   "aligned trades": 293,
+   "aligned mean bp/day": 0.46,
+   "aligned mean bp/trade": 1.05,
+   "counter-aligned mean bp/trade": -3.69,
+   "p one-sided (aligned > 0 vs shifted regime)": 0.0286,
+   "by cell bp/trade [n]": {
+    "below long": [
+     0.41,
+     156
+    ],
+    "below short": [
+     -4.42,
+     186
+    ],
+    "above long": [
+     -2.97,
+     186
+    ],
+    "above short": [
+     1.78,
+     137
+    ]
+   }
+  },
+  "E2 Monday minus other": {
+   "n flag": 132,
+   "mean flag": 4.53,
+   "mean other": -2.82,
+   "diff": 7.35,
+   "p one-sided": 0.0156
+  },
+  "E3 VIX>17.86 minus other": {
+   "n flag": 228,
+   "mean flag": -4.27,
+   "mean other": 0.04,
+   "diff": -4.31,
+   "p one-sided": 0.0327
+  },
+  "grid": {
+   "best variant": "S1_1_2R",
+   "best t": 0.5,
+   "joint p (max-t over 24)": 0.9705,
+   "S1_5_close mean bp/day, shift p": [
+    -1.18,
+    0.8663
+   ],
+   "top 6 [mean bp/day, t, hit]": {
+    "S1_1_2R": [
+     0.31,
+     0.5,
+     0.35
+    ],
+    "S1_30_close": [
+     0.72,
+     0.4,
+     0.417
+    ],
+    "S1_30_10R": [
+     0.72,
+     0.4,
+     0.417
+    ],
+    "S1_30_2R": [
+     0.66,
+     0.39,
+     0.432
+    ],
+    "S0_30_2R": [
+     0.51,
+     0.3,
+     0.389
+    ],
+    "S0_5_2R": [
+     0.18,
+     0.21,
+     0.337
+    ]
+   }
+  }
+ },
+ "SPY_d2": {
+  "sessions": 705,
+  "S0 mean bp/day": -1.16,
+  "E1 regime-aligned (SPY flip)": {
+   "days": 691,
+   "aligned trades": 304,
+   "aligned mean bp/day": 0.13,
+   "aligned mean bp/trade": 0.3,
+   "counter-aligned mean bp/trade": -2.65,
+   "p one-sided (aligned > 0 vs shifted regime)": 0.0906,
+   "by cell bp/trade [n]": {
+    "below long": [
+     -0.57,
+     163
+    ],
+    "below short": [
+     -2.8,
+     195
+    ],
+    "above long": [
+     -2.49,
+     188
+    ],
+    "above short": [
+     1.31,
+     141
+    ]
+   }
+  },
+  "E2 Monday minus other": {
+   "n flag": 135,
+   "mean flag": 4.99,
+   "mean other": -2.61,
+   "diff": 7.6,
+   "p one-sided": 0.003
+  },
+  "E3 VIX>17.86 minus other": {
+   "n flag": 239,
+   "mean flag": -3.54,
+   "mean other": 0.07,
+   "diff": -3.6,
+   "p one-sided": 0.0586
+  },
+  "grid": {
+   "best variant": "S1_30_2R",
+   "best t": 0.53,
+   "joint p (max-t over 24)": 0.9699,
+   "S1_5_close mean bp/day, shift p": [
+    -0.74,
+    0.8075
+   ],
+   "top 6 [mean bp/day, t, hit]": {
+    "S1_30_2R": [
+     0.91,
+     0.53,
+     0.433
+    ],
+    "S0_30_2R": [
+     0.84,
+     0.5,
+     0.391
+    ],
+    "S1_1_2R": [
+     0.3,
+     0.48,
+     0.349
+    ],
+    "S1_30_close": [
+     0.8,
+     0.45,
+     0.419
+    ],
+    "S1_30_10R": [
+     0.8,
+     0.45,
+     0.419
+    ],
+    "S0_5_2R": [
+     0.3,
+     0.34,
+     0.337
+    ]
+   }
+  }
+ }
+}

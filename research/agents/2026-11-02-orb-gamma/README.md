@@ -130,13 +130,95 @@
 * `figure.py` makes the figures.
 
 ## Results
-(pending)
+
+**Bottom line:**
+* The ORB does not work on SPY. In 2020-23 and 2024-26, on two venues, all 24 variants lose or are flat.
+* The gamma regime does not rescue it. Below the flip, SPY breakouts do **worse**.
+* ML adds nothing.
+* The one place the breakout has life is **TSLA**: the classic 5-minute breakout held to the close made +12 to +18 bp/day in 2024-26, positive in each year. That is a single-asset, single-period exploratory result, not yet confirmed.
+
+Figure: `out/orb_gamma.png`. Data cost about $1.68 (Databento).
+
+### Data audit (D1-D4)
+* **Pass:** SPY EQUS.MINI 2024-26 (96.1% clean, 683 sessions), SPY ARCX 2024-26 (96.5%), QQQ (95.9%).
+* **Fail on the 5 bp D2 tolerance:** SPY ARCX 2020-23 (89.4%) and TSLA (77.8%). The flags are definitional (amendment A2):
+  * Yahoo's high or low is the more extreme one on 91-100% of flagged days;
+  * TSLA's open and close come from auctions on Yahoo but from first and last trades in our bars.
+* Bars are complete (median 390 a session). Half days are dropped. Every result is shown on clean days and on all complete days (`_d2`).
+* **Engine hand-check:** Oct 30 2026 short +55.9 bp and Aug 5 2024 long +101.7 bp, both matching manual fills.
+
+### H1 (replication), S0 = the paper's 5-min rule with a 10R target. **FAILS** on SPY.
+
+| Set | Sessions | S0 bp/day | Shift p | S1 classic breakout bp/day (shift p) | Long 09:35 → close |
+|---|---|---|---|---|---|
+| SPY 2024-26 (EQUS) | 683 | **−1.40** | 0.79 | −1.18 (0.87) | −0.71 |
+| SPY 2024-26 (ARCX) | 686 | −0.66 | 0.44 | −1.40 | −0.15 |
+| SPY 2020-23 (ARCX) | 899 | −0.46 | 0.73 | +0.72 (0.32) | +1.68 |
+| QQQ 2024-26 | 682 | +1.02 | 0.28 | +1.83 (0.10) | −1.69 |
+| **TSLA 2024-26** | 553 | **+6.10** | 0.47 | **+12.39 (0.049)** | +0.92 |
+| TSLA, all complete days | 705 | +13.02 | 0.18 | **+18.48 (0.021)** | +0.50 |
+
+* **Why SPY fails:** the opening move carries no information. Corr(first-5-min return, rest of day) = 0.008 (2024 −0.06, 2025 +0.01, 2026 +0.06).
+  * 81% of S0 trades are stopped out and 2% reach 10R.
+  * Costs are not the issue (about 0.36 bp a trade); it loses before costs too.
+* **H3 grid (24 variants):**
+  * SPY: best t = 0.5, joint p 0.97 (2024-26) and 0.67 (2020-23). No parameter choice rescues it, and fading it doesn't work either (joint p 0.55).
+  * TSLA: best t = 1.9-2.75, joint p 0.28 (clean) and 0.086 (all days). Positive, but it does not survive the 24-variant multiple-testing bar.
+
+### H2 (gamma regime, the main question). **FAILS, in the opposite direction**, in both SPY periods.
+
+| SPY S0 bp/day | Below `flip_incl` | Above | Diff | Shift p (predicted below > above) |
+|---|---|---|---|---|
+| 2024-26 | −2.20 (345) | −0.95 (324) | −1.25 | 0.69 |
+| 2020-23 | −2.2 | +1.7 | −3.88 | 0.91 |
+
+* **Secondary definitions** (`flip_excl`; S&P GEX bottom vs top tercile, 2024-26): diffs −0.47 and −1.41, Holm p 1.0.
+* **The one consistent cell:** shorting SPY's opening breakdown **while SPY is below its flip** is the worst trade in both periods: −4.4 bp a trade (2024-26, n 186) and −6.9 (2020-23, n 249). Longs below the flip are slightly positive (+0.4 and +2.7).
+* That is the intraday face of REPORT §4z: below the flip, down-moves do not extend, and up-bursts are 2.8× as likely. **Practical lean:** below the flip, don't short the open breakdown in SPY.
+
+### A1 confirmations: E1-E3, frozen on SPY 2024-26, tested on SPY 2020-23. **None confirm.**
+
+| Test | SPY 2024-26 (found) | **SPY 2020-23 (confirm)** | QQQ | TSLA |
+|---|---|---|---|---|
+| E1 regime-aligned (longs below the flip, shorts above) | +0.46 bp/day, p 0.029 | **+1.37, p 0.19** (all days +1.46, p 0.10) | −0.78, p 0.88 | +10.0, p 0.028 |
+| E2 Monday minus other days | +7.35, p 0.016 | **−5.07, p 0.87** | +0.53, p 0.45 | **+34.4, p 0.039** |
+| E3 VIX > 17.86 minus other days | −4.3, p 0.033 | **−2.37, p 0.17** | **−6.2, p 0.022** | −10.8, p 0.20 |
+
+* E1 has the right sign in 3 of 4 sets but is not significant out of sample. E2 for SPY was a fluke.
+* For TSLA, Monday agrees with the proven TSLA Monday up-burst rule (REPORT §4o, 1.95×). That is an independent prior, but this test is still exploratory.
+
+### ML (registered on SPY; exploratory on TSLA). **FAILS** everywhere.
+* Gradient boosting: train AUC 0.99-1.00 (memorised), validation 0.47-0.53, test 0.51-0.56. Logistic regression: test AUC 0.50-0.58.
+* No ML filter beat the unfiltered rule on test (2026), and every Sharpe-difference CI includes 0.
+* Top features (unstable) were the regime-alignment flag, VIX, the 0DTE share and opening volume. With about 300 training days the conditioning variables don't generalise.
+
+### TSLA: what worked (exploratory; all complete days, classic 5-min breakout)
+* **By year:** +5.1 (2024), +34.9 (2025), +15.0 (2026) bp/day. Sharpe 1.37 (clean set: 0.99).
+* **Win/loss:** 43% wins; average win +206 bp vs average loss −123 bp. A trend-following payoff.
+* **Longs beat shorts:** +24 vs +13 bp a trade.
+* **Weekday:** Mon +43 and Fri +42 (TSLA's weekly expiry); Tue −2, Wed −3, Thu +14.
+* **Opening volume vs its 14-day norm:** high tercile +48, mid −5, low +17. Not monotone.
+* **Auction-gap days** (large open-auction move, the D2-flagged days): +41 vs +12 on other days.
+
+### Why (the mechanism, tied to proven rules)
+* **SPY is liquidity-driven** (playbook rule 5; order-flow study: day net flow vs move ρ −0.12). A deep book and dealer hedging absorb the opening imbalance, so the first 5 minutes don't tell you where SPY closes. Breakouts get faded and stops get run.
+* **TSLA is flow-driven** (ρ +0.48). When the opening crowd pushes it, the push tends to persist. A breakout is a bet on persistence, so it works where persistence exists.
+* QQQ sits in between, and so does its result.
+* **The flip** predicts multi-day burst asymmetry (§4z), not intraday continuation. Below the flip, SPY's intraday path is more two-sided (V-shapes), which kills stop-based breakouts, especially on the short side.
 
 ## Threats to validity
 * **Venue:** EQUS.MINI is not the full consolidated tape. Highs and lows can differ slightly, which D2 checks.
 * **Fill realism:** stop fills at bar granularity; there is no queue position.
 * **Period:** 2024-26 is mostly a bull market. The regime split shrinks the samples.
 * **The flip** is a model level that depends on our convention (classic dealer sign).
+
+## Verdict
+* **Contradicts** the practitioner ORB claim for SPY (two periods, two venues, 24 variants).
+* **Contradicts** our own H2 prediction: the gamma regime does not make SPY breakouts work, and below the flip they are worse.
+* **Extends** the playbook with leans only:
+  * (1) Below the flip, don't short SPY's opening breakdown (consistent in both periods, untested as a single cell).
+  * (2) TSLA's 5-minute breakout is the only live version: +12 to +18 bp/day, p 0.02-0.05 alone, joint p 0.09-0.28. **Next:** confirm on TSLA 2020-23 (Nasdaq bars, about $0.3-0.5, owner's OK) and forward-test from Nov 3 with the rule frozen.
+* No change to the originals.
 
 ## Reproduce
 ```bash

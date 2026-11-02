@@ -1,0 +1,103 @@
+{
+ "label": "TSLA",
+ "variant": "S0_5_10R",
+ "n train/val/test": [
+  288,
+  108,
+  157
+ ],
+ "features": [
+  "dir",
+  "gap_bp",
+  "gap_x_dir",
+  "r5_atr",
+  "or_width_atr",
+  "rvol5",
+  "atr_bp",
+  "prior_ret_bp",
+  "dow",
+  "opex_week",
+  "vix_prev",
+  "vix_overnight",
+  "spy_gap_bp",
+  "spy_dist_flip_bp",
+  "spy_below_x_dir",
+  "share_0dte",
+  "gex_pct_prev",
+  "dix_pct_prev"
+ ],
+ "note": "SPY = registered; others exploratory (A2)",
+ "logistic L2": {
+  "val: kept share, mean bp/day": [
+   0.5,
+   16.61
+  ],
+  "AUC train/val/test": [
+   0.702,
+   0.588,
+   0.516
+  ],
+  "TEST unfiltered: mean bp/day, Sharpe, trades": [
+   2.47,
+   0.27,
+   157
+  ],
+  "TEST ML-filtered: mean bp/day, Sharpe, trades": [
+   -3.19,
+   -0.6,
+   44
+  ],
+  "TEST Sharpe diff 90% CI (10-day blocks)": [
+   -2.89,
+   0.75
+  ],
+  "top features (val permutation AUC drop)": {
+   "r5_atr": 0.0549,
+   "dir": 0.0446,
+   "rvol5": 0.0428,
+   "or_width_atr": 0.0329,
+   "share_0dte": 0.0222,
+   "spy_below_x_dir": 0.0211
+  },
+  "ML PASS (test Sharpe > unfiltered, CI excludes 0)": false
+ },
+ "gradient boosting d3": {
+  "val: kept share, mean bp/day": [
+   0.8,
+   9.74
+  ],
+  "AUC train/val/test": [
+   0.995,
+   0.507,
+   0.508
+  ],
+  "TEST unfiltered: mean bp/day, Sharpe, trades": [
+   2.47,
+   0.27,
+   157
+  ],
+  "TEST ML-filtered: mean bp/day, Sharpe, trades": [
+   0.56,
+   0.07,
+   106
+  ],
+  "TEST Sharpe diff 90% CI (10-day blocks)": [
+   -1.61,
+   0.92
+  ],
+  "top features (val permutation AUC drop)": {
+   "rvol5": 0.0407,
+   "gap_bp": 0.0095,
+   "share_0dte": 0.0066,
+   "dix_pct_prev": 0.0063,
+   "vix_overnight": 0.0043,
+   "vix_prev": 0.0035
+  },
+  "ML PASS (test Sharpe > unfiltered, CI excludes 0)": false
+ },
+ "TEST E1 regime-aligned filter: mean bp/day, Sharpe, trades": [
+  -0.77,
+  -0.13,
+  70
+ ]
+}

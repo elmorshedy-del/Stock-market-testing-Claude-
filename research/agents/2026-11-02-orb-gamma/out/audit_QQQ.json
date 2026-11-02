@@ -1,0 +1,31 @@
+{
+ "symbol": "QQQ",
+ "dataset": "EQUS.MINI",
+ "label": "QQQ",
+ "window": [
+  "2024-01-02",
+  "2026-10-30"
+ ],
+ "sessions (Yahoo)": 711,
+ "status counts": {
+  "clean": 682,
+  "bad_D2": 23,
+  "bad_D1": 6
+ },
+ "clean share of full sessions": 0.9592,
+ "PASS (>= 95% clean)": true,
+ "median |dev| bp open/high/low/close": {
+  "d_open": 0.23,
+  "d_high": 0.2,
+  "d_low": 0.25,
+  "d_close": 0.75
+ },
+ "p95 |dev| bp open/high/low/close": {
+  "d_open": 1.525,
+  "d_high": 1.245,
+  "d_low": 1.34,
+  "d_close": 3.48
+ },
+ "median bars per full session": 390.0,
+ "days with any missing RTH minute": 53
+}

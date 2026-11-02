@@ -1,0 +1,109 @@
+{
+ "symbol": "SPY2020",
+ "sample": "2020-01-02 to 2023-12-29",
+ "sessions": 899,
+ "incl D2-flagged days": false,
+ "H1 S0 (5-min, 10R, primary)": {
+  "days": 899,
+  "trades": 893,
+  "mean bp/day": -0.46,
+  "mean bp/trade": -0.463,
+  "hit rate": 0.186,
+  "ann. Sharpe (daily)": -0.15,
+  "total bp": -413.7,
+  "shift-null p": 0.7288,
+  "PASS": false,
+  "longs": {
+   "days": 899,
+   "trades": 457,
+   "mean bp/day": 0.802,
+   "mean bp/trade": 1.577,
+   "hit rate": 0.212,
+   "ann. Sharpe (daily)": 0.35,
+   "total bp": 720.6
+  },
+  "shorts": {
+   "days": 899,
+   "trades": 436,
+   "mean bp/day": -1.262,
+   "mean bp/trade": -2.602,
+   "hit rate": 0.158,
+   "ann. Sharpe (daily)": -0.58,
+   "total bp": -1134.3
+  }
+ },
+ "S1 classic 5-min breakout, exit close (secondary)": {
+  "days": 899,
+  "trades": 896,
+  "mean bp/day": 0.72,
+  "mean bp/trade": 0.723,
+  "hit rate": 0.249,
+  "ann. Sharpe (daily)": 0.2,
+  "total bp": 647.5,
+  "shift-null p": 0.3248
+ },
+ "benchmark: long 09:35 -> close every day": {
+  "days": 899,
+  "trades": 899,
+  "mean bp/day": 1.682,
+  "mean bp/trade": 1.684,
+  "hit rate": 0.546,
+  "ann. Sharpe (daily)": 0.29,
+  "total bp": 1512.3
+ },
+ "H2 gamma regime (S0 5-min 10R)": {
+  "primary: 09:35 price < flip_incl": {
+   "n below/low": 487,
+   "n above/high": 411,
+   "mean bp/day below": -2.224,
+   "mean bp/day above": 1.651,
+   "diff": -3.875,
+   "shift-null p (one-sided, below > above)": 0.9079,
+   "longs mean bp/trade below vs above": [
+    2.71,
+    0.41
+   ],
+   "shorts mean bp/trade below vs above": [
+    -6.92,
+    3.14
+   ],
+   "Holm p": 1.0
+  },
+  "secondary: 09:35 price < flip_excl": {
+   "n below/low": 487,
+   "n above/high": 411,
+   "mean bp/day below": -1.953,
+   "mean bp/day above": 1.33,
+   "diff": -3.283,
+   "shift-null p (one-sided, below > above)": 0.8974,
+   "longs mean bp/trade below vs above": [
+    3.38,
+    -0.37
+   ],
+   "shorts mean bp/trade below vs above": [
+    -7.19,
+    3.29
+   ],
+   "Holm p": 1.0
+  },
+  "secondary: S&P GEX bottom vs top tercile (prior close)": {
+   "n below/low": 0,
+   "n above/high": 15,
+   "mean bp/day below": NaN,
+   "mean bp/day above": 7.542,
+   "diff": NaN,
+   "shift-null p (one-sided, below > above)": NaN,
+   "longs mean bp/trade below vs above": [
+    NaN,
+    4.95
+   ],
+   "shorts mean bp/trade below vs above": [
+    NaN,
+    17.91
+   ],
+   "Holm p": 1.0
+  },
+  "PASS (primary p < 0.05, diff > 0)": false,
+  "sessions with gamma state": "2020-01-03 to 2023-12-29 (898)"
+ }
+}
