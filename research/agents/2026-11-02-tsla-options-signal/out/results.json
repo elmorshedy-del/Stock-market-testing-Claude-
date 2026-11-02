@@ -1,0 +1,317 @@
+{
+ "n days": 1592,
+ "start": "2020-07-01",
+ "end": "2026-10-30",
+ "O1": {
+  "f5": {
+   "slope % per sd (beyond momentum + gamma)": 0.259,
+   "95% CI": [
+    -0.284,
+    0.793
+   ],
+   "p": 0.325,
+   "n": 1527
+  },
+  "f5 slope by era": {
+   "R1 2020-21": 0.182,
+   "R2 2022+": 0.299
+  },
+  "f10": {
+   "slope % per sd (beyond momentum + gamma)": 0.514,
+   "95% CI": [
+    -0.344,
+    1.575
+   ],
+   "p": 0.237,
+   "n": 1527
+  },
+  "f10 slope by era": {
+   "R1 2020-21": -0.48,
+   "R2 2022+": 0.74
+  },
+  "f20": {
+   "slope % per sd (beyond momentum + gamma)": 0.851,
+   "95% CI": [
+    -0.751,
+    2.699
+   ],
+   "p": 0.278,
+   "n": 1518
+  },
+  "f20 slope by era": {
+   "R1 2020-21": -0.43,
+   "R2 2022+": 1.199
+  },
+  "OOS R2 % 2023-26 (10 sessions)": {
+   "signal+controls": -1.18,
+   "controls only": -1.12,
+   "n forecasts": 186
+  },
+  "next 10 sessions: top third vs bottom third (trailing year)": [
+   1.09,
+   -0.06,
+   515,
+   436
+  ],
+  "now (Oct 30)": {
+   "value": -0.0153,
+   "percentile vs trailing year": 0.0
+  }
+ },
+ "O2": {
+  "f5": {
+   "slope % per sd (beyond momentum + gamma)": 0.281,
+   "95% CI": [
+    -0.889,
+    1.205
+   ],
+   "p": 0.554,
+   "n": 1525
+  },
+  "f5 slope by era": {
+   "R1 2020-21": 0.058,
+   "R2 2022+": -0.051
+  },
+  "f10": {
+   "slope % per sd (beyond momentum + gamma)": 1.006,
+   "95% CI": [
+    -1.27,
+    2.926
+   ],
+   "p": 0.304,
+   "n": 1525
+  },
+  "f10 slope by era": {
+   "R1 2020-21": 0.88,
+   "R2 2022+": 0.141
+  },
+  "f20": {
+   "slope % per sd (beyond momentum + gamma)": 2.462,
+   "95% CI": [
+    -1.468,
+    6.044
+   ],
+   "p": 0.181,
+   "n": 1516
+  },
+  "f20 slope by era": {
+   "R1 2020-21": 3.056,
+   "R2 2022+": 0.621
+  },
+  "OOS R2 % 2023-26 (10 sessions)": {
+   "signal+controls": -3.6,
+   "controls only": -3.41,
+   "n forecasts": 186
+  },
+  "next 10 sessions: top third vs bottom third (trailing year)": [
+   2.36,
+   -0.47,
+   446,
+   547
+  ],
+  "now (Oct 30)": {
+   "value": 0.0414,
+   "percentile vs trailing year": 0.88
+  }
+ },
+ "O3": {
+  "f5": {
+   "slope % per sd (beyond momentum + gamma)": 0.227,
+   "95% CI": [
+    -0.645,
+    1.342
+   ],
+   "p": 0.497,
+   "n": 1527
+  },
+  "f5 slope by era": {
+   "R1 2020-21": 0.135,
+   "R2 2022+": 0.35
+  },
+  "f10": {
+   "slope % per sd (beyond momentum + gamma)": 0.544,
+   "95% CI": [
+    -1.247,
+    2.824
+   ],
+   "p": 0.433,
+   "n": 1527
+  },
+  "f10 slope by era": {
+   "R1 2020-21": 0.709,
+   "R2 2022+": 0.522
+  },
+  "f20": {
+   "slope % per sd (beyond momentum + gamma)": 1.206,
+   "95% CI": [
+    -2.084,
+    5.086
+   ],
+   "p": 0.345,
+   "n": 1518
+  },
+  "f20 slope by era": {
+   "R1 2020-21": 1.97,
+   "R2 2022+": 0.821
+  },
+  "OOS R2 % 2023-26 (10 sessions)": {
+   "signal+controls": -1.83,
+   "controls only": -1.12,
+   "n forecasts": 186
+  },
+  "next 10 sessions: top third vs bottom third (trailing year)": [
+   1.12,
+   0.24,
+   512,
+   465
+  ],
+  "now (Oct 30)": {
+   "value": -0.1472,
+   "percentile vs trailing year": 0.94
+  }
+ },
+ "O4": {
+  "f5": {
+   "slope % per sd (beyond momentum + gamma)": 0.534,
+   "95% CI": [
+    -0.925,
+    1.185
+   ],
+   "p": 0.482,
+   "n": 1527
+  },
+  "f5 slope by era": {
+   "R1 2020-21": 1.152,
+   "R2 2022+": -0.659
+  },
+  "f10": {
+   "slope % per sd (beyond momentum + gamma)": 0.991,
+   "95% CI": [
+    -1.864,
+    2.322
+   ],
+   "p": 0.52,
+   "n": 1527
+  },
+  "f10 slope by era": {
+   "R1 2020-21": 2.279,
+   "R2 2022+": -1.529
+  },
+  "f20": {
+   "slope % per sd (beyond momentum + gamma)": 1.913,
+   "95% CI": [
+    -2.803,
+    4.502
+   ],
+   "p": 0.41,
+   "n": 1518
+  },
+  "f20 slope by era": {
+   "R1 2020-21": 3.93,
+   "R2 2022+": -2.556
+  },
+  "OOS R2 % 2023-26 (10 sessions)": {
+   "signal+controls": -5.25,
+   "controls only": -1.12,
+   "n forecasts": 186
+  },
+  "next 10 sessions: top third vs bottom third (trailing year)": [
+   0.76,
+   -0.89,
+   311,
+   627
+  ],
+  "now (Oct 30)": {
+   "value": -0.2654,
+   "percentile vs trailing year": 0.28
+  }
+ },
+ "Holm (10 sessions, O1-O4)": {
+  "O1": 0.948,
+  "O2": 0.948,
+  "O3": 0.948,
+  "O4": 0.948
+ },
+ "named bursts: percentile the day before (O1 IVS, O2 SKEW)": {
+  "2024-06-17": [
+   0.98,
+   0.35
+  ],
+  "2024-07-01": [
+   0.12,
+   0.01
+  ],
+  "2024-10-24": [
+   0.84,
+   0.18
+  ],
+  "2024-11-06": [
+   0.77,
+   0.25
+  ],
+  "2025-04-23": [
+   0.02,
+   0.96
+  ],
+  "2025-05-12": [
+   0.17,
+   0.61
+  ],
+  "2025-05-27": [
+   0.96,
+   0.63
+  ],
+  "2025-09-11": [
+   0.82,
+   0.52
+  ],
+  "2025-10-06": [
+   0.56,
+   0.48
+  ],
+  "2025-10-13": [
+   0.17,
+   0.82
+  ],
+  "2025-11-24": [
+   0.34,
+   0.94
+  ]
+ },
+ "named tops: percentile on the top day (O1, O2)": {
+  "2021-11-04": [
+   0.41,
+   0.65
+  ],
+  "2023-02-15": [
+   0.31,
+   0.1
+  ],
+  "2023-07-05": [
+   0.63,
+   0.02
+  ],
+  "2024-07-10": [
+   0.77,
+   0.02
+  ],
+  "2024-12-11": [
+   0.72,
+   0.04
+  ],
+  "2025-05-27": [
+   0.58,
+   0.5
+  ],
+  "2025-10-01": [
+   0.41,
+   0.24
+  ],
+  "2025-11-03": [
+   0.64,
+   0.29
+  ]
+ },
+ "_headline": "TSLA calls and puts add no proven forecast beyond gamma; fear readings lean contrarian",
+ "_reading": "None of the 4 passes (Holm 0.95), and none\nimproves out-of-sample forecasts.\n\nLeans (not proof):\n\u2022 calls priced above puts \u2192 TSLA a bit better\n  next 10 sessions (+1.1% vs \u22120.1%)\n\u2022 steep put skew \u2192 also a bit better\n  (+2.4% vs \u22120.5%): fear was contrarian\n\u2022 at 4 of your 8 named tops the skew was\n  unusually flat (\u2264 10th pct): no one hedging\n\nNow (Oct 30): puts priced over calls (lowest\nin a year: a bearish lean) but skew 88th pct\nand put volume 94th pct (contrarian-bullish).\nMixed, and none of it is proven.\n\nSo: gamma = where and how fast. Option\npricing = a fear gauge, a lean at best."
+}
