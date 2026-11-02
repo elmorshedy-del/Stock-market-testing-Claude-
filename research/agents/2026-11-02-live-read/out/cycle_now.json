@@ -1,0 +1,142 @@
+{
+ "GEX pct, last 12 sessions": {
+  "2026-10-15": [
+   6.02,
+   0.518
+  ],
+  "2026-10-16": [
+   0.09,
+   0.036
+  ],
+  "2026-10-19": [
+   4.63,
+   0.295
+  ],
+  "2026-10-20": [
+   4.42,
+   0.259
+  ],
+  "2026-10-21": [
+   6.03,
+   0.526
+  ],
+  "2026-10-22": [
+   3.17,
+   0.183
+  ],
+  "2026-10-23": [
+   4.0,
+   0.235
+  ],
+  "2026-10-26": [
+   4.3,
+   0.255
+  ],
+  "2026-10-27": [
+   5.52,
+   0.45
+  ],
+  "2026-10-28": [
+   5.61,
+   0.47
+  ],
+  "2026-10-29": [
+   5.62,
+   0.482
+  ],
+  "2026-10-30": [
+   1.06,
+   0.06
+  ]
+ },
+ "GEX $bn at pct 0.30 / 0.50 / 0.56 / 0.70 / 0.90": [
+  4.53,
+  5.71,
+  6.1,
+  6.78,
+  8.47
+ ],
+ "this week's 'ran' lines": {
+  "Mon Nov 2": {
+   "7-session-ago S&P": 7663.43,
+   "'no price' band for the S&P close": [
+    7587.2,
+    7857.4
+   ],
+   "GEX pct needed (7-day low + 0.50)": 0.56,
+   "\u2248 GEX $bn needed": 6.09
+  },
+  "Tue Nov 3": {
+   "7-session-ago S&P": 7623.68,
+   "'no price' band for the S&P close": [
+    7547.8,
+    7816.7
+   ],
+   "GEX pct needed (7-day low + 0.50)": 0.56,
+   "\u2248 GEX $bn needed": 6.09
+  },
+  "Wed Nov 4": {
+   "7-session-ago S&P": 7676.77,
+   "'no price' band for the S&P close": [
+    7600.4,
+    7871.1
+   ],
+   "GEX pct needed (7-day low + 0.50)": 0.56,
+   "\u2248 GEX $bn needed": 6.09
+  },
+  "Thu Nov 5": {
+   "7-session-ago S&P": 7722.6,
+   "'no price' band for the S&P close": [
+    7645.8,
+    7918.1
+   ],
+   "GEX pct needed (7-day low + 0.50)": 0.56,
+   "\u2248 GEX $bn needed": 6.09
+  },
+  "Fri Nov 6": {
+   "7-session-ago S&P": 7743.98,
+   "'no price' band for the S&P close": [
+    7666.9,
+    7940.0
+   ],
+   "GEX pct needed (7-day low + 0.50)": 0.56,
+   "\u2248 GEX $bn needed": 6.09
+  }
+ },
+ "history": {
+  "2012-26": {
+   "any day P(leg within 20)": 0.5,
+   "'ran' first days: n, P(leg within 20)": [
+    115,
+    0.36
+   ],
+   "R4 first days: n": 96,
+   "R4 then 'ran' within 7 sessions: n, P(leg within 20 of R4)": [
+    33,
+    0.61
+   ],
+   "R4 without 'ran': n, P(leg within 20 of R4)": [
+    63,
+    0.75
+   ],
+   "R4 then gamma rebuilt WITH price (rise >= 0.5, S&P 7d > +2.5%) within 7: n": 12
+  },
+  "2019Q4-26": {
+   "any day P(leg within 20)": 0.57,
+   "'ran' first days: n, P(leg within 20)": [
+    57,
+    0.49
+   ],
+   "R4 first days: n": 47,
+   "R4 then 'ran' within 7 sessions: n, P(leg within 20 of R4)": [
+    20,
+    0.7
+   ],
+   "R4 without 'ran': n, P(leg within 20 of R4)": [
+    27,
+    0.78
+   ],
+   "R4 then gamma rebuilt WITH price (rise >= 0.5, S&P 7d > +2.5%) within 7: n": 8
+  }
+ }
+}

@@ -258,3 +258,36 @@ S1, S2, S7 and T1–T4 are unchanged.
 | T7 | TSLA trades ≤ 400.5 today (tests 400 from above) | ~85% (from 402.5, driftless) | **80%** |
 | T8 | TSLA's low today ≥ 395 (400 zone holds within 1.25%) | ~53% | **60%** |
 | S12 | The first day SPY's high reaches 766.4 this week, that high stays ≤ 767.55 (the +0.15% stall band) | base 31% | **45%** |
+
+---
+
+## Added 08:55 ET (pre-open): the gamma cycle (owner: "both SPY and TSLA gamma rebuilding again; remember it cycles low → building → dropping, and its implications for a trend")
+* **Reproduce:** `python cycle_now.py <DIX.csv> <^VIX json>` (definitions copied from microstructure/reset.py) and `python figure_cycle.py`.
+
+![cycle](out/cycle_1102.png)
+
+* **S&P (tested, REPORT §4d / §4p):**
+  * A leg starts from a reset (GEX ≤ 30th pct). 88% / 90% of legs had one within 20 days.
+  * The rally then rebuilds gamma until it pins (≥ 90th, ≈ $8.5bn). Ending pinned means a pause, not a top.
+  * **Rebuilding without price is the failure mode:** GEX up ≥ 50 pct-points from its 7-day low while the S&P moves only −1% to +2.5% over 7 sessions.
+    * Leg odds within 20 sessions: 36% vs 50% (2012–26, n 115); 49% vs 57% (2019Q4–26).
+* **Where it stands:**
+  * Is SPY rebuilding? **Not yet by the market-wide measure.** GEX fell to $1.06bn (6th pct) on Friday; Monday's print comes tonight.
+  * Our own SPY map shows a small positions-driven rebuild: the flip moved 774 → 766, and total gamma at 755.7 went −11.7 → −10.5.
+  * **October was the failure pattern three times.** Resets on Oct 16, 22 and 30, each rebuilt only to 0.45–0.53 and dropped, with lower S&P lows (7,659 → 7,663 → 7,580). No pin since Oct 9.
+  * Earlier 2026 cycles completed, e.g. Jul 30 reset 7,438 → Aug 5 pin 7,724, and Sep 28 reset 7,684 → Oct 6 pin 7,819.
+  * **This week's warning line:** GEX back to ≥ 56th pct (≈ $6.1bn) while the S&P stays inside the "no price" band (Mon 7,587–7,857 … Fri 7,667–7,940).
+  * **After R4 first-days**, that rebuild came within 7 sessions in 33 of 96 cases (34%). Leg odds were **61% with it vs 75% without** (2019Q4–26: 70% vs 78%).
+  * In only 12 of 96 did gamma rebuild *with* a > 2.5% rally inside 7 sessions.
+  * GEX also builds into monthly opex (Nov 20) and drops about 17 pts that day.
+* **TSLA:**
+  * **It is rebuilding.** Near-price OI went 0.6th → 4th → 23rd pct across the last three OI files, and own gamma 60th → 65th pct (Friday added +96k calls and +57k puts).
+  * Deep-freed states rebuild past the 33rd pct in a median 4 sessions (IQR 2–8.5). So the freed up-burst window (1.8×) likely closes by about Wed–Thu.
+  * Freed and above the flip: 27% up / 19% down bursts in 3 sessions, vs 17% / 17% not freed (post hoc).
+  * TSLA's own move cycle (REPORT §4v): blocks start as own gamma rebuilds after a flush. Today's flush came from the expiry roll-off, not a price dip into the flip. One loose analog: Oct–Nov 2024 had a second flush (own gamma 0.91 → 0.62) before the election block. n = 1, and Trump-specific.
+
+### Added forecasts (08:55 ET, pre-open)
+| # | Forecast | Base | **My call** |
+|---|---|---|---|
+| N1 | "Rebuilt without price" fires by Fri Nov 6 (GEX pct ≥ 0.56 with the S&P inside the band) | 34% after R4 (43% in 2019Q4–26) | **35%** |
+| N2 | TSLA near-price OI back above the 33rd pct in the Nov 4 OI file (Nov 3 close positions) | median 4 sessions from Oct 30 | **60%** |
