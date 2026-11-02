@@ -311,3 +311,33 @@ S1, S2, S7 and T1–T4 are unchanged.
 |---|---|---|---|
 | N3 | TSLA freed (≤ 33rd pct) in the Nov 9 OI file (Nov 6 close positions) | 4th pct if no new OI | **50%** |
 | N4 | TSLA freed in the Nov 23 OI file (after the Nov 20 monthly) | ~0 pct if no new OI | **70%** |
+
+---
+
+## Added 09:15 ET: TSLA's October cycle, mapped (owner: "map the cycling for DIX and gamma buildup since its uptrend on Oct 19; does it align?")
+* **Reproduce:** `python tsla_cycle_oct.py <TSLA Oct EOD> <OI Oct 15/16/19 dir> <OI Oct 20–30 dir> -- <FINRA rows> <DIX.csv>` and `python figure_tsla_cycle.py`.
+  * Engine recipe: day-t EOD + OI dated t. History to Oct 14 is from the engine file.
+  * Oct 15–30 are new rows; TSLA OI for Oct 15, 16 and 19 was pulled from ThetaData ($0, Value tier).
+  * **Descriptive, not a test.**
+
+![tsla cycle](out/tsla_cycle_oct.png)
+
+| Phase | Dates | Price | Own gamma pct | % above flip | TSLA DIX 5d pct | Fits the §4v template? |
+|---|---|---|---|---|---|---|
+| Reset | Oct 14–16 | 367 → 355 | 0.27 → **0.14** | **−0.2%** (at the flip) | **0.01–0.02** | ✓ flush at the flip; dark-pool selling washed out; S&P GEX 0.04 too |
+| Block 1 | Oct 19–21 | 368 → 387 (+9%) | 0.50 → 0.87 | +8.6% | 0.03 → 0.53 | ✓ gamma rebuilt with price |
+| Dip | Oct 22–23 | 375 → 372 | 0.60 → **0.30** | **+1.2%** | 0.62 → 0.73 | ✓ dip into the flip (second flush); dark-pool buying into the dip |
+| Block 2 | Oct 26–27 | 392 → 408 (+9.5%) | 0.91 → **1.00** | +9.5% | 0.75 | ✓ the bigger block came second (5 of 7 named moves) |
+| Pinned stall | Oct 28–30 | 404 → 400 | 0.95 → 0.66 (expiry) | +5–8% | 0.71 → 0.65 | ✓ stalled into a pile of OI (near-OI 0.93–0.96). The call wall rolled 400 → 420 on Oct 29 |
+
+* **It aligns:**
+  * Own gamma reset at the flip, then rebuilt with each block.
+  * TSLA's DIX went from the 1st pct to the 75th while the move ran, and peaked with the pin.
+  * The S&P's own cycle failed over the same days (GEX 0.04 → 0.53 → 0.18 → 0.48 → 0.06, no pin). TSLA's move was its own, consistent with REPORT §4k (S&P gamma does not drive TSLA legs).
+* **Where it is now:** the post-pin pause.
+  * Own gamma is partly flushed by the expiry (0.66; 65th on Friday positions). TSLA's DIX is fading from its peak (75 → 65).
+  * Price is 5–6% above the flip. Past tops sat 15–22% above it, so this looks like a pause, not a top location.
+* **What the template says comes next:**
+  * Either consolidation, or a new flush toward the flip (about 377–381; a full setup if freed) that starts the next block.
+  * Flush candidates: the Nov 6 weekly roll-off (30% of near OI) and the Nov 20 monthly.
+  * Watch TSLA's DIX: holding the top third (≥ 67th) keeps the buying story. Sliding below its median says the dark-pool bid is done.
