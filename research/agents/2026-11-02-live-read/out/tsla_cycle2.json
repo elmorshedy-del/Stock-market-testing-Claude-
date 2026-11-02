@@ -1,0 +1,37 @@
+{
+ "start": 413.5,
+ "storyboard closes": {
+  "2026-11-02": 412,
+  "2026-11-03": 422,
+  "2026-11-04": 437,
+  "2026-11-05": 432,
+  "2026-11-06": 428,
+  "2026-11-09": 435,
+  "2026-11-10": 438,
+  "2026-11-11": 433,
+  "2026-11-12": 429,
+  "2026-11-13": 427,
+  "2026-11-16": 423,
+  "2026-11-17": 417,
+  "2026-11-18": 412,
+  "2026-11-19": 407,
+  "2026-11-20": 404,
+  "2026-11-23": 416,
+  "2026-11-24": 424,
+  "2026-11-25": 431,
+  "2026-11-27": 433
+ },
+ "options-implied odds (no drift)": {
+  "touch >= 440 by Fri Nov 6": 0.26,
+  "...and Fri Nov 13 close >= 420 (consolidating up there)": 0.2,
+  "...and dip <= 408 during Nov 16-20 (the whole storyboard)": 0.03,
+  "dip <= 408 during Nov 16-20, given 440 was touched": 0.33
+ },
+ "October template (actual)": {
+  "pin": "Oct 6 381.0 (own gamma 0.89)",
+  "high": "Oct 9 382.7",
+  "dip into the Oct 16 monthly": "354.7 (-7.3% from Oct 9)",
+  "reset": "Oct 16 own gamma 0.17, at the flip, freed 0.03, TSLA DIX 2nd pct",
+  "new cycle": "Oct 19 +3.8%, then +9% Mon-Wed"
+ }
+}

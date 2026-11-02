@@ -502,3 +502,20 @@ S1, S2, S7 and T1–T4 are unchanged.
   * The owner's "AAPL down won't hit the market" fits: since Oct 2025, AAPL days were quiet (|RSP| 0.23%).
   * "Up triggers the rally" has no support; n is 2.
 * **Tonight:** AAPL's move hits SPY mechanically (7.7% weight; ±3.5% ≈ ±27 bp). The broad tape needs its own breadth, and today has it (71% up).
+
+---
+
+## Added 11:00 ET: owner's TSLA "repeat October" storyboard (a scenario, NOT a forecast)
+* `python tsla_cycle2.py`, `python figure_tsla_cycle2.py <TSLA yahoo>` → `out/tsla_cycle2.png`.
+* **The path:**
+  1. Push to 440 this week (top Wed Nov 4).
+  2. Thick-OI consolidation at 425–440 next week (4–8 sessions before the monthly, historically the least-freed stretch, 21%).
+  3. Dip into the Nov 20 monthly, to ~405 (−8%, like October's −7.3% into the Oct 16 monthly).
+  4. Reset, then a new cycle from Mon Nov 23.
+* **The October template (actual):** pin Oct 6–9 (381–383; own gamma 0.89) → dip −7.3% into the Oct 16 monthly → reset at the flip (own gamma 0.17, freed 0.03, TSLA DIX 2nd pct) → new cycle Oct 19.
+* **Options-implied odds from 413.5:**
+  * 440 by Fri Nov 6: 26%;
+  * then Nov 13 close ≥ 420: 20% joint;
+  * given 440, a dip to ≤ 408 during Nov 16–20: 33%;
+  * the full path: 3% (any specific path is low).
+* **What the overlay shows:** October's shape, aligned on the monthly, puts the **top about 5 sessions before the monthly (≈ Nov 13)**, with this week's push as the first block. The owner's version has the top this week. Both have the dip into the monthly and the reset after it.

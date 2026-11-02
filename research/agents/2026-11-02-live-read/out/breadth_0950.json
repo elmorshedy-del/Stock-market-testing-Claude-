@@ -1,0 +1,234 @@
+{
+ "members with quotes": 503,
+ "quote time (median, Yahoo spark, delayed)": "09:50:32",
+ "share of members up": 0.712,
+ "advancers / decliners": [
+  358,
+  144
+ ],
+ "equal-weight move %": 0.81,
+ "median move %": 0.98,
+ "cap-weight move % (reconstructed)": 0.56,
+ "top 10 weight: move % / contribution bp": 31.8,
+ "other 490: contribution bp": 24.4,
+ "top 12 by weight [weight %, move %, contribution bp]": {
+  "AAPL": [
+   7.7,
+   -1.31,
+   -10.1
+  ],
+  "NVDA": [
+   7.58,
+   1.77,
+   13.4
+  ],
+  "MSFT": [
+   5.93,
+   0.66,
+   3.9
+  ],
+  "AMZN": [
+   3.61,
+   4.18,
+   15.1
+  ],
+  "GOOGL": [
+   2.51,
+   2.13,
+   5.4
+  ],
+  "AVGO": [
+   2.37,
+   0.47,
+   1.1
+  ],
+  "META": [
+   2.08,
+   0.0,
+   0.0
+  ],
+  "GOOG": [
+   2.02,
+   2.1,
+   4.3
+  ],
+  "LLY": [
+   1.74,
+   -0.83,
+   -1.4
+  ],
+  "TSLA": [
+   1.72,
+   0.04,
+   0.1
+  ],
+  "BRK.B": [
+   1.55,
+   0.97,
+   1.5
+  ],
+  "MU": [
+   1.53,
+   -1.08,
+   -1.7
+  ]
+ },
+ "biggest pushes up [move %, bp]": {
+  "AMZN": [
+   4.18,
+   15.1
+  ],
+  "NVDA": [
+   1.77,
+   13.4
+  ],
+  "GOOGL": [
+   2.13,
+   5.4
+  ],
+  "GOOG": [
+   2.1,
+   4.3
+  ],
+  "MSFT": [
+   0.66,
+   3.9
+  ],
+  "V": [
+   1.9,
+   2.0
+  ],
+  "GE": [
+   4.03,
+   1.9
+  ],
+  "JPM": [
+   1.32,
+   1.8
+  ]
+ },
+ "biggest drags [move %, bp]": {
+  "AAPL": [
+   -1.31,
+   -10.1
+  ],
+  "XOM": [
+   -2.84,
+   -3.3
+  ],
+  "ORCL": [
+   -5.93,
+   -2.1
+  ],
+  "ABBV": [
+   -2.09,
+   -1.7
+  ],
+  "MU": [
+   -1.08,
+   -1.7
+  ],
+  "MRVL": [
+   -5.95,
+   -1.6
+  ],
+  "CVX": [
+   -2.18,
+   -1.6
+  ],
+  "JNJ": [
+   -1.5,
+   -1.5
+  ]
+ },
+ "by sector": {
+  "Discretionary": {
+   "weight %": 9.0,
+   "eq-wt move %": 2.39,
+   "share up": 0.94,
+   "contribution bp": 23.8
+  },
+  "Financials": {
+   "weight %": 12.2,
+   "eq-wt move %": 1.19,
+   "share up": 0.92,
+   "contribution bp": 16.2
+  },
+  "Industrials": {
+   "weight %": 8.1,
+   "eq-wt move %": 1.62,
+   "share up": 0.89,
+   "contribution bp": 11.4
+  },
+  "Comm": {
+   "weight %": 8.4,
+   "eq-wt move %": 1.47,
+   "share up": 0.91,
+   "contribution bp": 11.2
+  },
+  "Staples": {
+   "weight %": 5.0,
+   "eq-wt move %": 1.13,
+   "share up": 0.76,
+   "contribution bp": 5.5
+  },
+  "Materials": {
+   "weight %": 1.7,
+   "eq-wt move %": 1.41,
+   "share up": 0.88,
+   "contribution bp": 3.3
+  },
+  "Real estate": {
+   "weight %": 1.8,
+   "eq-wt move %": 0.63,
+   "share up": 0.8,
+   "contribution bp": 0.6
+  },
+  "Utilities": {
+   "weight %": 2.1,
+   "eq-wt move %": -0.31,
+   "share up": 0.29,
+   "contribution bp": -0.5
+  },
+  "Tech": {
+   "weight %": 37.4,
+   "eq-wt move %": -0.29,
+   "share up": 0.53,
+   "contribution bp": -1.5
+  },
+  "Health": {
+   "weight %": 10.2,
+   "eq-wt move %": 0.45,
+   "share up": 0.48,
+   "contribution bp": -4.1
+  },
+  "Energy": {
+   "weight %": 3.9,
+   "eq-wt move %": -2.31,
+   "share up": 0.05,
+   "contribution bp": -9.7
+  }
+ },
+ "chips & memory [move %]": {
+  "NVDA": 1.77,
+  "AVGO": 0.47,
+  "AMD": -0.36,
+  "MU": -1.08,
+  "INTC": -2.14,
+  "QCOM": 2.12,
+  "TXN": 2.06,
+  "AMAT": 0.41,
+  "LRCX": -0.17,
+  "KLAC": 1.83,
+  "ADI": 2.49,
+  "MRVL": -5.95,
+  "WDC": -3.42,
+  "STX": -5.11,
+  "SNDK": -1.95,
+  "MCHP": 1.85,
+  "ON": 2.18,
+  "NXPI": 2.25,
+  "MPWR": 3.6,
+  "TER": -1.87
+ }
+}
