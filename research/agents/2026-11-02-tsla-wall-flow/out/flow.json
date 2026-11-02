@@ -1,0 +1,60 @@
+{
+ "n earlier bursts (2-day >= +7%, 2020-2026)": 70,
+ "this burst (Oct 26-27) vs earlier: value, percentile among earlier": {
+  "burst %": [
+   9.47,
+   0.53
+  ],
+  "gap share of move": [
+   0.51,
+   0.69
+  ],
+  "burst rel. volume": [
+   1.46,
+   0.81
+  ],
+  "burst buy imbalance %": [
+   12.95,
+   0.9
+  ],
+  "consolidation 3d %": [
+   -1.87,
+   0.4
+  ],
+  "consolidation imbalance %": [
+   2.51,
+   0.71
+  ],
+  "consolidation rel. volume": [
+   0.91,
+   0.41
+  ]
+ },
+ "earlier bursts: share that snapped (+5% within 3 days after the 3-day pause)": 0.24,
+ "earlier bursts: median days to clear the burst high +2% (NaN = not within 10)": 1.0,
+ "earlier bursts: share clearing the burst high +2% within 10 days": 0.73,
+ "after: pause held with net buying (cons > -3%, cons imbalance > 0)": {
+  "n": 32,
+  "snap share": 0.25,
+  "median next-10d max %": 7.7,
+  "median next-10d end %": 3.1
+ },
+ "after: pause with net selling (cons imbalance <= 0)": {
+  "n": 37,
+  "snap share": 0.24,
+  "median next-10d max %": 6.6,
+  "median next-10d end %": -1.3
+ },
+ "after: high-aggression burst (imbalance above median)": {
+  "n": 35,
+  "snap share": 0.23,
+  "median next-10d max %": 7.4,
+  "median next-10d end %": -0.5
+ },
+ "after: low-aggression burst (imbalance below median)": {
+  "n": 35,
+  "snap share": 0.26,
+  "median next-10d max %": 6.1,
+  "median next-10d end %": 1.8
+ }
+}
