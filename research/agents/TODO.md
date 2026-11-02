@@ -118,6 +118,7 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **YF1. Score the year-end forecast** on Nov 13, Nov 30, Dec 31 (percentile of the SPY close in the B-all distribution; fill the log in [yearend-forecast](2026-11-01-yearend-forecast/)).
 - [ ] **MC1. Score the July/October machine forecasts C1-C4** on Nov 13 and Nov 20 ([july-october-machine](2026-11-01-july-october-machine/)).
 - [ ] **OS1. Flat-skew top warning (TSLA):** put skew <= 10th pct after a >= 30% run at 4 of 8 named tops; pre-register a test on all run-tops (and SPY/QQQ). [tsla-options-signal](2026-11-02-tsla-options-signal/).
+- [ ] **BP1. Composite top score (TSLA, then SPY/QQQ):** flat skew + IV rising with price + fading buy aggression + near the call wall + opex within ~5 sessions; pre-register weights/thresholds before testing on tops vs kept-going days (16 tops in-sample; extend to other high-option stocks for out-of-sample). [tsla-breaking-point](2026-11-02-tsla-breaking-point/).
 
 ## Done
 - (none yet)
