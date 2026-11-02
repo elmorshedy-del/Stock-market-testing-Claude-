@@ -227,3 +227,34 @@ S1, S2, S7 and T1–T4 are unchanged.
   * VIX > 17 at every close through Nov 6 → no 774 by Nov 13;
   * QQQ/IWM ≤ 90.50 on Nov 13 → no SPY close > 779.14 by Nov 20.
 * **Channel dip rule:** kill line S&P close ≤ 7,427.98 (SPY ≈ 740.6).
+
+---
+
+## Added 08:45 ET (pre-open): owner follow-ups (TSLA's DIX, SPY above the flip, TSLA at/above 400)
+* **Reproduce:** `python tsla_dpi_pin.py <FINRA TSLA rows, Sep 2025–Oct 30 2026> <td>`.
+* **TSLA's own "DIX"** (the FINRA dark-pool index, recipe from [tsla-freed-dpi](../2026-10-28-tsla-freed-dpi/)):
+  * Daily: 0.537 / 0.539 / 0.530 (Oct 28–30); the one-year median is 0.483 and the top tercile starts at 0.518.
+  * **5-day 0.512 = 65th pct** (was 75th on Oct 27).
+  * The bottom-tenth warning (5-day ≤ 0.444, which added down-bursts at p 0.049) is **off**.
+  * Top-tercile DPI has led to +5.6% vs +2.5% over 20 days (p 0.19) → **lean, mildly supportive**. S&P DIX is 43.8% (22nd pct), which is the R2/R5 input.
+* **SPY above the flip (766.4):**
+  * **First touch from below stalls.** Highs stop within ±0.15% of the flip 43% vs 31% (flip-wicks H1, joint p < 0.002). Closing back below after a touch is chance.
+  * **A close above it (a reclaim after ≥ 3 closes below):** still above 10 sessions later 65% of the time; mean 10-day return +0.90% (median +1.25%) vs +0.57% on all days (79 events since 2020).
+  * **Up-days that close above the flip add +13%** over 10 sessions vs **−53%** below it (p 0.097, suggestive).
+  * From above, the flip is a stronger floor (+9.5 pts).
+  * The gamma above is positive and rising (+5.9 at 775, +8.5 at 780, +12.5 at 800), so expect a damped grind toward 780, with the call-wall soft ceiling at 800 (proven).
+  * **Warning:** a down day that breaks back through from above tends to continue (+79%).
+* **TSLA at and above 400:**
+  * **400 is a durable level, not just today's pin.** Only 7% of the 400 strike's gamma expires today; 93% sits in later expiries.
+  * Today's expiring gamma sits at **402.5–407.5** (52–57% of those strikes) and at 397.5, which is put-heavy and negative.
+  * So **today** damping is extra thick at 402–408. **Tomorrow** (vote day) that layer is gone, and 400–410 trades freer.
+  * **Round numbers (proven #11):** day lows cluster just above round levels (p 5e-5), so with an open above 400, **400 is the floor to watch**. The +0.6% gap is small; tested gaps fill the same day 32% of the time (all sizes).
+  * **Punch-through up:** the next step is 410 (+6.6k calls Friday; mostly later expiries), then the 420 wall, then the 420–440 plateau. Expect a grind, not a snap (damping thickens 0.39 → 0.72 from 400 to 410).
+  * **Close back below 400:** 397.5 (small negative) → 390–395 → 380 put wall / flip zone.
+
+### Added forecasts (08:45 ET, pre-open)
+| # | Forecast | Map | **My call** |
+|---|---|---|---|
+| T7 | TSLA trades ≤ 400.5 today (tests 400 from above) | ~85% (from 402.5, driftless) | **80%** |
+| T8 | TSLA's low today ≥ 395 (400 zone holds within 1.25%) | ~53% | **60%** |
+| S12 | The first day SPY's high reaches 766.4 this week, that high stays ≤ 767.55 (the +0.15% stall band) | base 31% | **45%** |
