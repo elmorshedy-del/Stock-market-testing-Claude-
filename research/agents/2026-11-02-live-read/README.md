@@ -395,3 +395,35 @@ S1, S2, S7 and T1–T4 are unchanged.
 * **What was wrong:** "stalled into a pile of OI (near-OI 0.93–0.96)". Near-price OI stayed low the whole run (0.03–0.29), so **TSLA was freed throughout**, which fits the tested freed → up-burst result. The stall came with own gamma pinned while the freed reading crept up (0.18 → 0.29 by Oct 29).
 * **Weekly-rhythm figure:** its right panel counts contracts expiring that same day. Those do pin price that day, which is what makes midweek look crowded. Excluding them, the same days read 0.03–0.29. Labels corrected.
 * **Figures re-rendered:** `tsla_cycle_oct.png`, `tsla_cycle_adhd.png` (adds a crowding bar), `weekly_rhythm.png`.
+
+---
+
+## Added 10:00 ET: one clean bull-case storyboard to Nov 27 (owner asked; a scenario, NOT a forecast)
+* `python scenario.py 759.9 404.1` and `python figure_scenario.py <SPY yahoo> <TSLA yahoo>` → `out/scenario_1102.png`.
+* **The logic:** the two cycles are out of sync now. SPY is at the reset (start line); TSLA is in its post-pin pause. They **sync at the Nov 20 monthly expiry**, where both pin, then both reset in the week of Nov 23.
+* **SPY:**
+  1. Shakeout this week: vote, AAPL, results. Tag 750 and hold; R4 weeks tagged 750 61–72% of the time.
+  2. Reclaim the 766.4 flip by Nov 9–11, with gamma rebuilding *with* price.
+  3. Grind to the 778–781 pin into opex. Temporary top 781.
+  4. Opex roll-off; dip to ~770.
+* **TSLA:**
+  1. Pop to 413–416 by Wednesday, then a fade into the Nov 6 weekly pin (the rhythm).
+  2. Freed again on Mon Nov 9; through the 420 wall into the lighter 420–440 stretch (431).
+  3. Run to the 450–455 damping peak into opex. Temporary top 451, about 17% above today's flip, which is where past tops sat (15–22%).
+  4. Monthly roll-off flush to ~420.
+* **Options-implied odds of the waypoints** (no drift; ρ 0.6):
+
+| Waypoint | Odds |
+|---|---|
+| SPY ≤ 751 by Nov 4 | 48% |
+| SPY ≥ 766.4 by Nov 11 | 74% |
+| SPY ≥ 780 by Nov 20 | 48% |
+| TSLA ≥ 420 by Nov 11 | 57% |
+| TSLA ≥ 450 by Nov 20 | 27% |
+| **Both tops by Nov 20** | **21%** |
+
+* **What breaks it:**
+  * an SPY close ≤ 740.6;
+  * tonight's GEX ≥ $6.1bn with no rally (October's failed rebuild);
+  * TSLA losing 380;
+  * a VIX that stays > 17 all week (machine C2).
