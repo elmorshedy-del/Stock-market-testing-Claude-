@@ -121,6 +121,28 @@
   * the registered ML pipeline re-run on TSLA with the same time split (train 2024-01 to 2025-06, validate 2025-07 to 2025-12, test 2026).
   * All of it exploratory, and labelled as such.
 
+### Amendment A3 (logged after the results above, before any new data or screen was computed). Owner: "test more, and see what other stocks can be good candidates and test them too."
+* **C1, TSLA out of sample:** 2020-01-02 to 2023-12-29, XNAS.ITCH `ohlcv-1m` (Nasdaq is TSLA's primary venue).
+  * Frozen rule: **S1_5_close** (the first break of the 09:30-09:34 range, stop at the other side, exit at the close; same costs).
+  * **Pass:** mean > 0 and shift p < 0.05 on clean days. All complete days are reported too.
+  * **Splits to confirm,** with the prediction in brackets:
+    * Mon+Fri minus Tue-Thu [> 0];
+    * longs minus shorts [> 0];
+    * the top tercile of first-5-minute relative volume minus the other two [> 0];
+    * auction-gap days (|Yahoo open vs the first bar's open| > 5 bp) minus other days [> 0].
+  * One-sided, circular-shift null on the label. A split is supported at p < 0.05.
+  * The audit's Yahoo comparison is split-adjusted, because TSLA split 5:1 in 2020 and 3:1 in 2022 (factors come from Yahoo's split events).
+* **C2, which other stocks?** A candidate screen fixed now, computed only on **2023** daily data, before the 2024-26 test window.
+  * **Universe (fixed list):** NVDA, AMD, AVGO, MU, TSM, SMCI, PLTR, COIN, MSTR, HOOD, RIVN, SOFI, MARA, RIOT, AFRM, UPST, RBLX, SHOP, ARM, MRVL, INTC, CRWD, SNOW, NFLX, UBER, ABNB, BA, AAPL, MSFT, GOOGL, AMZN, META, ORCL, JPM, XOM, UNH, LLY, COST, WMT. (ARM listed in Sep 2023; it is screened on its available days.)
+  * **Liquidity filter:** 2023 average daily dollar volume ≥ $1.5bn.
+  * **Score:** 2023 mean ATR% (14-day average true range / close). This follows the mechanism: flow-driven, high-idiosyncratic-movement names.
+  * **Picks:** the **5 highest-scoring** liquid names (the "in play" group) and the **2 lowest-scoring** liquid names (controls).
+* **C2 test:** S1_5_close on each pick, 2024-26 (EQUS.MINI), same audit.
+  * **Predictions:**
+    * (a) the mean S1 P&L across the 5 high-score names > 0 (shift null applied to every name at once, using the pooled average);
+    * (b) high-score names beat the controls (permutation of group labels across the 7 names is too coarse to test, so (b) is reported descriptively).
+* **Cost:** all quotes are taken before any pull. Total cap for A3 is about $2.5, and stocks are dropped from the bottom of the ranking if the quote exceeds it.
+
 ## Method
 * `fetch.py` pulls the bars into `data/`, which is gitignored.
 * `audit.py` writes `out/audit.json`.
