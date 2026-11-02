@@ -82,6 +82,8 @@
 ### A2. October decomposition (SPY)
 * 30-day ATM IV: 13.62% (Oct 1) → 12.10% (Oct 9) → 15.07% (Oct 30), a rise of +3.0 points from Oct 9.
 * The election session's share of IV30 was 0.0, 0.2 and 0.08 vol points on those dates. There is an election estimate for every October date, because daily expiries bracketing Nov 4 exist from Oct 1.
+* **Premium path.** As a share of a normal day's variance, the election premium ran 30–68% on most October dates. It was noisy: before Oct 19 the pairs spanned 5 sessions (Oct 30→Nov 6), and a few dates came out ≤ 0. It fell to 19% on Oct 30 as normal-day vol rose from 0.83% to 0.99%. In absolute terms it never exceeded 0.21 vol points of IV30.
+  * **So October's rise came from normal days getting more expensive, not from the election day.**
 * **B1:** across 22 October days, the correlation of the election excess with Senate closeness is 0.013, a null.
 
 ### A3. Precedents: implied move vs realised, and the "crush"
