@@ -462,3 +462,18 @@ S1, S2, S7 and T1–T4 are unchanged.
   * n ≈ 45 reports per stock;
   * reaction days share other news (macro, the other megacaps reporting the same week);
   * descriptive power is limited.
+
+### AS results (`python aapl_spill.py <dates> <yahoo>`; `out/aapl_spill.json`, `out/aapl_spill.png`)
+* **Data:** reaction days, 2015–2026: AAPL 47, AI spenders 192 (MSFT, AMZN, META, GOOGL), NVDA 47. Earnings dates are saved in `out/earnings_dates_2015_2026.json`.
+* **AS1 fails: the owner's direction is wrong.**
+  * RSP moved **0.056 per 1% of AAPL's move vs 0.018 for the AI spenders** (2015–26; diff +0.038, p 0.29).
+  * 2022+: **0.157 vs 0.024** (diff +0.132, p 0.062).
+  * In absolute terms, AAPL's average 3.7% reaction came with about a 0.21% RSP co-move, vs about 0.10% for the AI spenders' 5.7%.
+  * **Sensitivity:** with no other megacap reacting the same day, the slopes are AAPL 0.020 vs AI 0.018 (n 25 / 79) for 2015–26, and 0.168 vs 0.024 (n 7 / 29) for 2022+.
+  * **Confound:** AAPL's reaction Friday is often payrolls day. Tonight's reaction day is election day.
+* **AS2 has the owner's sign, but not proven.**
+  * AAPL up reactions: slope **0.177** (n 23); down reactions: **0.047** (n 24); diff p 0.25.
+  * 2022+: 0.441 (n 9) vs 0.107 (n 10), p 0.17.
+  * RSP's mean on AAPL down days was −0.30%, so down days were still a bit weaker than average.
+* **Mechanical channel (no test needed):** AAPL is 7.7% of SPY. A ±3.5% reaction moves SPY ±27 bp by itself, either way.
+* **Reading:** no evidence that an AAPL drop is "contained" relative to the AI spenders. The up-spills-more lean is the owner's best point. It is consistent with AAPL as the anti-AI-capex hedge (its residual correlates −0.34 with the AI factor; aapl-quirks), but unproven.

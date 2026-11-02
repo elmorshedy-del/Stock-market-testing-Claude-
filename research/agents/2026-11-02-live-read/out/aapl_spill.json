@@ -1,0 +1,300 @@
+{
+ "2015-26": {
+  "n AAPL / AI spenders / NVDA": [
+   47,
+   192,
+   47
+  ],
+  "AAPL": {
+   "slope of RSP on the stock's move": 0.056,
+   "corr": 0.22,
+   "mean |stock move| %": 3.73,
+   "n": 47
+  },
+  "AI spenders (MSFT, AMZN, META, GOOGL)": {
+   "slope of RSP on the stock's move": 0.018,
+   "corr": 0.13,
+   "mean |stock move| %": 5.74,
+   "n": 192
+  },
+  "NVDA": {
+   "slope of RSP on the stock's move": 0.009,
+   "corr": 0.09,
+   "mean |stock move| %": 7.07,
+   "n": 47
+  },
+  "MSFT": {
+   "slope of RSP on the stock's move": 0.022,
+   "corr": 0.11,
+   "mean |stock move| %": 4.21,
+   "n": 48
+  },
+  "AMZN": {
+   "slope of RSP on the stock's move": 0.01,
+   "corr": 0.06,
+   "mean |stock move| %": 6.06,
+   "n": 48
+  },
+  "META": {
+   "slope of RSP on the stock's move": 0.013,
+   "corr": 0.16,
+   "mean |stock move| %": 7.69,
+   "n": 48
+  },
+  "GOOGL": {
+   "slope of RSP on the stock's move": 0.041,
+   "corr": 0.25,
+   "mean |stock move| %": 4.99,
+   "n": 48
+  },
+  "AS1: AAPL slope \u2212 AI slope [diff, 95% CI, p]": [
+   0.038,
+   [
+    -0.03,
+    0.116
+   ],
+   0.294
+  ],
+  "AS2 AAPL up reactions: n, slope, mean RSP %": [
+   23,
+   0.177,
+   -0.04
+  ],
+  "AS2 AAPL down reactions: n, slope, mean RSP %": [
+   24,
+   0.047,
+   -0.3
+  ],
+  "AS2: up slope \u2212 down slope [diff, 95% CI, p]": [
+   0.13,
+   [
+    -0.097,
+    0.377
+   ],
+   0.254
+  ],
+  "AI up: n, slope, mean RSP %": [
+   103,
+   0.048,
+   -0.07
+  ],
+  "AI down: n, slope, mean RSP %": [
+   89,
+   0.032,
+   -0.1
+  ],
+  "sensitivity (no other megacap reacting the same day): AAPL slope / AI slope / n": [
+   0.02,
+   0.018,
+   [
+    25,
+    79
+   ]
+  ]
+ },
+ "2022+": {
+  "n AAPL / AI spenders / NVDA": [
+   19,
+   80,
+   19
+  ],
+  "AAPL": {
+   "slope of RSP on the stock's move": 0.157,
+   "corr": 0.47,
+   "mean |stock move| %": 3.2,
+   "n": 19
+  },
+  "AI spenders (MSFT, AMZN, META, GOOGL)": {
+   "slope of RSP on the stock's move": 0.024,
+   "corr": 0.21,
+   "mean |stock move| %": 7.21,
+   "n": 80
+  },
+  "NVDA": {
+   "slope of RSP on the stock's move": 0.028,
+   "corr": 0.24,
+   "mean |stock move| %": 6.5,
+   "n": 19
+  },
+  "MSFT": {
+   "slope of RSP on the stock's move": -0.017,
+   "corr": -0.12,
+   "mean |stock move| %": 4.93,
+   "n": 20
+  },
+  "AMZN": {
+   "slope of RSP on the stock's move": 0.036,
+   "corr": 0.23,
+   "mean |stock move| %": 7.12,
+   "n": 20
+  },
+  "META": {
+   "slope of RSP on the stock's move": 0.022,
+   "corr": 0.3,
+   "mean |stock move| %": 11.06,
+   "n": 20
+  },
+  "GOOGL": {
+   "slope of RSP on the stock's move": 0.049,
+   "corr": 0.37,
+   "mean |stock move| %": 5.73,
+   "n": 20
+  },
+  "AS1: AAPL slope \u2212 AI slope [diff, 95% CI, p]": [
+   0.132,
+   [
+    -0.008,
+    0.296
+   ],
+   0.062
+  ],
+  "AS2 AAPL up reactions: n, slope, mean RSP %": [
+   9,
+   0.441,
+   0.4
+  ],
+  "AS2 AAPL down reactions: n, slope, mean RSP %": [
+   10,
+   0.107,
+   -0.2
+  ],
+  "AS2: up slope \u2212 down slope [diff, 95% CI, p]": [
+   0.334,
+   [
+    -0.312,
+    0.705
+   ],
+   0.166
+  ],
+  "AI up: n, slope, mean RSP %": [
+   38,
+   0.046,
+   0.11
+  ],
+  "AI down: n, slope, mean RSP %": [
+   42,
+   0.04,
+   -0.09
+  ],
+  "sensitivity (no other megacap reacting the same day): AAPL slope / AI slope / n": [
+   0.168,
+   0.024,
+   [
+    7,
+    29
+   ]
+  ]
+ },
+ "AAPL reactions >= 4%: [day, AAPL %, RSP %]": [
+  [
+   "2015-01-28",
+   5.7,
+   -1.53
+  ],
+  [
+   "2015-07-22",
+   -4.2,
+   0.02
+  ],
+  [
+   "2015-10-28",
+   4.1,
+   1.18
+  ],
+  [
+   "2016-01-27",
+   -6.6,
+   -0.76
+  ],
+  [
+   "2016-04-27",
+   -6.3,
+   0.65
+  ],
+  [
+   "2016-07-27",
+   6.5,
+   -0.52
+  ],
+  [
+   "2017-02-01",
+   6.1,
+   -0.25
+  ],
+  [
+   "2017-08-02",
+   4.7,
+   -0.32
+  ],
+  [
+   "2018-02-02",
+   -4.3,
+   -2.05
+  ],
+  [
+   "2018-05-02",
+   4.4,
+   -0.83
+  ],
+  [
+   "2018-08-01",
+   5.9,
+   -0.65
+  ],
+  [
+   "2018-11-02",
+   -6.6,
+   -0.36
+  ],
+  [
+   "2019-01-30",
+   6.8,
+   1.06
+  ],
+  [
+   "2019-05-01",
+   4.9,
+   -1.01
+  ],
+  [
+   "2020-07-31",
+   10.5,
+   -0.05
+  ],
+  [
+   "2020-10-30",
+   -5.6,
+   -0.32
+  ],
+  [
+   "2022-01-28",
+   7.0,
+   1.71
+  ],
+  [
+   "2022-10-28",
+   7.6,
+   2.08
+  ],
+  [
+   "2023-05-05",
+   4.7,
+   1.68
+  ],
+  [
+   "2023-08-04",
+   -4.8,
+   -0.45
+  ],
+  [
+   "2024-05-03",
+   6.0,
+   0.71
+  ],
+  [
+   "2026-07-31",
+   -7.4,
+   -0.17
+  ]
+ ]
+}
