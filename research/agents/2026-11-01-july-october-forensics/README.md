@@ -89,3 +89,8 @@
 * **Corrected:** July window +18bp, October window −32bp.
 * **Consequence:** the "not rates" row was wrong. Rates *differ* between the two months: July's selloff came with yields rising, October's with a flight into bonds (yields falling, credit softer). That points to a growth or risk-off tone in October that July did not have.
 * The figure and table are corrected. No other number changes.
+
+### Erratum 2 (2026-11-02): Apple's report date
+* The calendar row "AAPL/AMZN Thu Oct 29" was wrong: only AMZN reported Oct 29. **AAPL reports Mon Nov 2** (Alpha Vantage: last report Jul 30 2026; confirmed by a third-party note, see [note-check](../2026-11-02-note-check/)).
+* July's AAPL report (Thu Jul 30, +7.4% surprise) was part of July's turn. In October, AAPL is a pending catalyst: its reaction lands Tue Nov 3, election day.
+* The machine ledger's "megacap tech retakes the lead: absent" becomes "pending: AAPL Nov 2, then NVDA ~Nov 18–19". Forecasts C1–C4 are unchanged (written before this was known).

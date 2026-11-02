@@ -91,3 +91,8 @@
 | C2 | VIX stays > 17 at every close through Nov 6 | SPY does **not** close ≥ 774 by Nov 13 | Nov 13 | |
 | C3 | QQQ/IWM (log ×100) on Nov 13 ≤ its Oct 30 level (90.50) | **no** SPY close > 779.14 (the Oct 6 high) by Nov 20 | Nov 20 | |
 | C4 | QQQ/IWM on Nov 13 ≥ 95.0 (+4.5, July's turn size) | SPY closes > 779.14 by Nov 20 | Nov 20 | |
+
+### Erratum 2 (2026-11-02): Apple's report date
+* The calendar row "AAPL/AMZN Thu Oct 29" was wrong: only AMZN reported Oct 29. **AAPL reports Mon Nov 2** (Alpha Vantage: last report Jul 30 2026; confirmed by a third-party note, see [note-check](../2026-11-02-note-check/)).
+* July's AAPL report (Thu Jul 30, +7.4% surprise) was part of July's turn. In October, AAPL is a pending catalyst: its reaction lands Tue Nov 3, election day.
+* The machine ledger's "megacap tech retakes the lead: absent" becomes "pending: AAPL Nov 2, then NVDA ~Nov 18–19". Forecasts C1–C4 are unchanged (written before this was known).
