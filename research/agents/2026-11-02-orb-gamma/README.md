@@ -107,6 +107,20 @@
 * **Pass for each E:** one-sided p < 0.05 under the circular-shift null in set (i). Sets (ii) and (iii) are supporting evidence only.
 * The ML step stays as registered, on SPY 2024-26.
 
+### Amendment A2 (logged after the H1 runs on all sets, before E1-E3, the TSLA exploration or any ML)
+* **Fetch overrun:** the SPY ARCX pull ran from 2020 to 2026-10-31 (the fetch end date was hard-coded), so it cost about $0.96, not the quoted $0.45. Total Databento spend for this study is about $1.68. The extra 2024-26 ARCX bars serve as a cross-venue check of Stage 1.
+* **The D2 flags are definitional, not bad bars:**
+  * Yahoo's high or low is the more extreme one on 91-100% of flagged days. That points to consolidated-tape outlier prints.
+  * For TSLA, the flags are mostly the open and the close (66 and 56 days). Yahoo uses the opening and closing auction prices; our first and last 1-minute bars use the first and last trades.
+  * The audit's 95% bar fails for SPY 2020-23 (89% clean) and TSLA (78%) only on this tolerance. The bars themselves are complete.
+  * So every set is reported **twice**: clean days (as registered) and all complete days (`_d2`). Neither is chosen after the fact.
+  * For TSLA the dropped days (22%) are not random. They are days with large auction moves.
+* **TSLA exploration** (H1 S0 is positive but not significant):
+  * the same 24-variant grid with a joint max-t null;
+  * the same conditioning variables, using the S&P GEX percentile and SPY's flip state as cross-asset regimes;
+  * the registered ML pipeline re-run on TSLA with the same time split (train 2024-01 to 2025-06, validate 2025-07 to 2025-12, test 2026).
+  * All of it exploratory, and labelled as such.
+
 ## Method
 * `fetch.py` pulls the bars into `data/`, which is gitignored.
 * `audit.py` writes `out/audit.json`.
