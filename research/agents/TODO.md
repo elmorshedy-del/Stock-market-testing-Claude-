@@ -120,6 +120,7 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **OS1. Flat-skew top warning (TSLA):** put skew <= 10th pct after a >= 30% run at 4 of 8 named tops; pre-register a test on all run-tops (and SPY/QQQ). [tsla-options-signal](2026-11-02-tsla-options-signal/).
 - [ ] **EV1. Score the election-vol read on Nov 5:** realised SPY Nov 4 move vs implied 1.08%; TSLA Nov 3-4 move vs implied ~4.6% (two-day); TSLA IV30 Nov 2 close -> Nov 5 close (expect ~-1 pt, all else equal); ICLN/TLT results-day direction vs the Senate outcome ([election-vol](2026-11-02-election-vol/)).
 - [ ] **TP1. Score the TSLA politics read on Nov 5:** TSLA residual (vs 1.56x QQQ) on Nov 4 vs the Texas Senate and House results (Paxton slope implies ~+14% if Paxton wins, ~-5% if Talarico wins; CI wide); realised Nov 3-6 move vs the priced 3.4% excess ([tsla-politics](2026-11-02-tsla-politics/)).
+- [ ] **LR1. Score the Nov 2 live-read forecasts** (S1-S8 SPY, T1-T6 TSLA): S1/S2/T1/T2 after Mon close, the rest Fri Nov 6; Brier for my calls vs the options-implied map ([2026-11-02-live-read](2026-11-02-live-read/)).
 - [ ] **BP1. Composite top score (TSLA, then SPY/QQQ):** flat skew + IV rising with price + fading buy aggression + near the call wall + opex within ~5 sessions; pre-register weights/thresholds before testing on tops vs kept-going days (16 tops in-sample; extend to other high-option stocks for out-of-sample). [tsla-breaking-point](2026-11-02-tsla-breaking-point/).
 
 ## Done
