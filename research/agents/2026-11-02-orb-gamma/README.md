@@ -143,6 +143,24 @@
     * (b) high-score names beat the controls (permutation of group labels across the 7 names is too coarse to test, so (b) is reported descriptively).
 * **Cost:** all quotes are taken before any pull. Total cap for A3 is about $2.5, and stocks are dropped from the bottom of the ranking if the quote exceeds it.
 
+### Amendment A4 (logged before any exit-rule or option run). Owner: "Can I reduce the frequency or size of losses with an exit rule, or by spotting a loser early? I can use calls instead of stock."
+* **Base:** TSLA S1_5_close on every tradable day (`_d2` sets).
+* **Exit variants, frozen.** All decisions use bars that are already closed. Stops fill like the base (bar open if gapped, plus 2c); close-based exits fill at that bar's close less 1c.
+  * **T15 / T30 / T60, time stop:** if the trade is not in profit at the close of the bar T minutes after entry, exit there.
+  * **BE1R:** after +1R in favour, move the stop to entry.
+  * **MID:** the initial stop at the opening-range midpoint, not the far side. That halves the risk.
+  * **REIN30, failed breakout:** within 30 minutes of entry, a 1-minute close back inside the range exits.
+  * **TRAIL1R:** after +1R, trail the stop 1R behind the best price.
+  * **REIN30+BE1R:** the two combined.
+* **Design / confirm:** variants are compared on TSLA 2024-26, and the best by Sharpe is named there. **It is confirmed on TSLA 2020-23** if its Sharpe beats the base there, its mean bp/day is at least 80% of the base's, and the 10-day block-bootstrap 90% CI of the daily difference in mean P&L is not entirely below 0. All variants are reported for both periods.
+* **Early-loss diagnostics** (descriptive): P(trade ends a winner | its P&L at +15, +30 and +60 minutes); how far eventual winners first go against you (MAE in R).
+* **Options (stage A5, run only after A4):**
+  * Same entries.
+  * Buy the nearest-expiry **at-the-money call** (long breaks) or **put** (short breaks): the expiry at least 1 day out, plus a 0DTE variant where one exists.
+  * Price = the option's 1-minute bar, with half the quoted spread paid on each side (ThetaData 1-minute quotes). Exit on the underlying's stop or at 15:55.
+  * Report the return on premium per trade and per day, and compare with shares on the same days.
+  * Start with 2024-26 to check coverage. The data is included in the plan.
+
 ## Method
 * `fetch.py` pulls the bars into `data/`, which is gitignored.
 * `audit.py` writes `out/audit.json`.
