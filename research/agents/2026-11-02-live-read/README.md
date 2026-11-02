@@ -341,3 +341,20 @@ S1, S2, S7 and T1–T4 are unchanged.
   * Either consolidation, or a new flush toward the flip (about 377–381; a full setup if freed) that starts the next block.
   * Flush candidates: the Nov 6 weekly roll-off (30% of near OI) and the Nov 20 monthly.
   * Watch TSLA's DIX: holding the top third (≥ 67th) keeps the buying story. Sliding below its median says the dark-pool bid is done.
+
+---
+
+## Added 09:22 ET (pre-open): the owner's weekly rhythm and steep channel
+* **Owner:** "Each week it rises first half and falls second half since October 19. Shouldn't our numbers support that? And should the pattern follow this week?"
+  * The owner's chart shows a steep rising channel from the Oct 16 low. Friday's low tagged its lower line. TSLA is at 404.5 pre-market.
+* **Correction first (numbers check):**
+  * The Oct 15–30 own-gamma and near-OI rows in `tsla_cycle_oct.csv` used an October chain file capped at 70 days. It is missing the Jan 15 and Feb 19 2027 expiries, while the engine history uses 120 days.
+  * Missing long-dated OI shrinks the denominators, so **those rows overstate own gamma and near-OI pct**. The phase *shape* comes from same-convention rows, but the levels (e.g. "1.00 pinned", "near-OI 0.93–0.96") are not comparable with the history. Erratum; recomputed below from the OI files alone.
+  * The live maps (Friday positions: own gamma 60–65th, freed 23rd) used a full-coverage chain and stand.
+* **Forecasts (pre-open, 09:22 ET):**
+
+| # | Forecast | **My call** |
+|---|---|---|
+| W1 | TSLA's high Mon–Wed ≥ 412 (a first-half pop of ≥ +3% from Friday's close) | **60%** |
+| W2 | TSLA's Fri Nov 6 close < its Wed Nov 4 close (a second-half fade) | **60%** |
+| W3 | TSLA's Fri Nov 6 close ≥ 420 (keeps pace with the owner's steep channel) | **20%** (= T4) |
