@@ -1,0 +1,298 @@
+{
+ "2024-26 design": {
+  "days": 705,
+  "variants": {
+   "base": {
+    "mean bp/day": 18.48,
+    "Sharpe": 1.37,
+    "win %": 42.9,
+    "avg win bp": 206.2,
+    "avg loss bp": -122.5,
+    "worst day bp": -328.0,
+    "max drawdown bp (1x, simple)": -2423.0
+   },
+   "T15": {
+    "mean bp/day": 15.82,
+    "Sharpe": 1.29,
+    "win %": 32.1,
+    "avg win bp": 221.7,
+    "avg loss bp": -81.5,
+    "worst day bp": -328.0,
+    "max drawdown bp (1x, simple)": -2843.0,
+    "mean diff vs base, 90% CI": [
+     -8.56,
+     3.23
+    ]
+   },
+   "T30": {
+    "mean bp/day": 13.96,
+    "Sharpe": 1.09,
+    "win %": 34.4,
+    "avg win bp": 221.7,
+    "avg loss bp": -94.8,
+    "worst day bp": -312.0,
+    "max drawdown bp (1x, simple)": -2381.0,
+    "mean diff vs base, 90% CI": [
+     -8.86,
+     -0.1
+    ]
+   },
+   "T60": {
+    "mean bp/day": 15.1,
+    "Sharpe": 1.16,
+    "win %": 35.9,
+    "avg win bp": 225.0,
+    "avg loss bp": -102.6,
+    "worst day bp": -312.0,
+    "max drawdown bp (1x, simple)": -2643.0,
+    "mean diff vs base, 90% CI": [
+     -7.1,
+     0.14
+    ]
+   },
+   "BE1R": {
+    "mean bp/day": 16.01,
+    "Sharpe": 1.31,
+    "win %": 34.2,
+    "avg win bp": 222.1,
+    "avg loss bp": -91.2,
+    "worst day bp": -328.0,
+    "max drawdown bp (1x, simple)": -1981.0,
+    "mean diff vs base, 90% CI": [
+     -8.51,
+     2.68
+    ]
+   },
+   "MID": {
+    "mean bp/day": 10.84,
+    "Sharpe": 1.06,
+    "win %": 28.0,
+    "avg win bp": 218.1,
+    "avg loss bp": -69.7,
+    "worst day bp": -165.0,
+    "max drawdown bp (1x, simple)": -2569.0,
+    "mean diff vs base, 90% CI": [
+     -17.38,
+     0.81
+    ]
+   },
+   "REIN30": {
+    "mean bp/day": 10.63,
+    "Sharpe": 1.29,
+    "win %": 12.8,
+    "avg win bp": 266.4,
+    "avg loss bp": -26.8,
+    "worst day bp": -240.0,
+    "max drawdown bp (1x, simple)": -1612.0,
+    "mean diff vs base, 90% CI": [
+     -17.08,
+     1.13
+    ]
+   },
+   "TRAIL1R": {
+    "mean bp/day": 16.97,
+    "Sharpe": 1.5,
+    "win %": 52.4,
+    "avg win bp": 147.0,
+    "avg loss bp": -126.2,
+    "worst day bp": -328.0,
+    "max drawdown bp (1x, simple)": -2295.0,
+    "mean diff vs base, 90% CI": [
+     -8.95,
+     5.56
+    ]
+   },
+   "REIN30+BE1R": {
+    "mean bp/day": 9.81,
+    "Sharpe": 1.26,
+    "win %": 10.2,
+    "avg win bp": 297.0,
+    "avg loss bp": -22.9,
+    "worst day bp": -240.0,
+    "max drawdown bp (1x, simple)": -1832.0,
+    "mean diff vs base, 90% CI": [
+     -18.37,
+     0.73
+    ]
+   }
+  },
+  "early-loss diagnostics (base)": {
+   "at +15 min: P(final win | in profit) / P(final win | not in profit) / share not in profit": [
+    0.644,
+    0.299,
+    0.42
+   ],
+   "at +15 min: P(final win | below -0.5R)": 0.212,
+   "at +30 min: P(final win | in profit) / P(final win | not in profit) / share not in profit": [
+    0.689,
+    0.311,
+    0.355
+   ],
+   "at +30 min: P(final win | below -0.5R)": 0.101,
+   "at +60 min: P(final win | in profit) / P(final win | not in profit) / share not in profit": [
+    0.776,
+    0.329,
+    0.314
+   ],
+   "at +60 min: P(final win | below -0.5R)": 0.05,
+   "winners' worst point (MAE, R): median / 75th / 90th pct": [
+    -0.27,
+    -0.52,
+    -0.75
+   ],
+   "exit mix (base)": {
+    "close": 0.513,
+    "stop": 0.487
+   }
+  }
+ },
+ "named best (2024-26, by Sharpe)": "TRAIL1R",
+ "2020-23 confirm": {
+  "days": 994,
+  "variants": {
+   "base": {
+    "mean bp/day": 24.56,
+    "Sharpe": 1.59,
+    "win %": 40.9,
+    "avg win bp": 258.8,
+    "avg loss bp": -137.4,
+    "worst day bp": -534.0,
+    "max drawdown bp (1x, simple)": -3502.0
+   },
+   "T15": {
+    "mean bp/day": 19.97,
+    "Sharpe": 1.41,
+    "win %": 32.3,
+    "avg win bp": 270.7,
+    "avg loss bp": -99.8,
+    "worst day bp": -534.0,
+    "max drawdown bp (1x, simple)": -3470.0,
+    "mean diff vs base, 90% CI": [
+     -10.14,
+     0.72
+    ]
+   },
+   "T30": {
+    "mean bp/day": 23.29,
+    "Sharpe": 1.59,
+    "win %": 34.0,
+    "avg win bp": 275.8,
+    "avg loss bp": -107.0,
+    "worst day bp": -569.0,
+    "max drawdown bp (1x, simple)": -3791.0,
+    "mean diff vs base, 90% CI": [
+     -5.79,
+     2.68
+    ]
+   },
+   "T60": {
+    "mean bp/day": 23.66,
+    "Sharpe": 1.58,
+    "win %": 36.9,
+    "avg win bp": 269.0,
+    "avg loss bp": -119.7,
+    "worst day bp": -534.0,
+    "max drawdown bp (1x, simple)": -3158.0,
+    "mean diff vs base, 90% CI": [
+     -4.15,
+     2.02
+    ]
+   },
+   "BE1R": {
+    "mean bp/day": 21.89,
+    "Sharpe": 1.51,
+    "win %": 29.5,
+    "avg win bp": 300.1,
+    "avg loss bp": -94.5,
+    "worst day bp": -534.0,
+    "max drawdown bp (1x, simple)": -3820.0,
+    "mean diff vs base, 90% CI": [
+     -7.17,
+     1.46
+    ]
+   },
+   "MID": {
+    "mean bp/day": 20.32,
+    "Sharpe": 1.59,
+    "win %": 25.9,
+    "avg win bp": 293.9,
+    "avg loss bp": -75.2,
+    "worst day bp": -302.0,
+    "max drawdown bp (1x, simple)": -2107.0,
+    "mean diff vs base, 90% CI": [
+     -11.3,
+     2.67
+    ]
+   },
+   "REIN30": {
+    "mean bp/day": 12.47,
+    "Sharpe": 1.37,
+    "win %": 12.3,
+    "avg win bp": 306.3,
+    "avg loss bp": -28.7,
+    "worst day bp": -254.0,
+    "max drawdown bp (1x, simple)": -2361.0,
+    "mean diff vs base, 90% CI": [
+     -22.77,
+     -1.84
+    ]
+   },
+   "TRAIL1R": {
+    "mean bp/day": 17.75,
+    "Sharpe": 1.43,
+    "win %": 54.1,
+    "avg win bp": 155.9,
+    "avg loss bp": -144.9,
+    "worst day bp": -534.0,
+    "max drawdown bp (1x, simple)": -2697.0,
+    "mean diff vs base, 90% CI": [
+     -13.5,
+     -0.56
+    ]
+   },
+   "REIN30+BE1R": {
+    "mean bp/day": 12.92,
+    "Sharpe": 1.48,
+    "win %": 9.4,
+    "avg win bp": 359.1,
+    "avg loss bp": -22.8,
+    "worst day bp": -254.0,
+    "max drawdown bp (1x, simple)": -2092.0,
+    "mean diff vs base, 90% CI": [
+     -22.45,
+     -1.15
+    ]
+   }
+  },
+  "early-loss diagnostics (base)": {
+   "at +15 min: P(final win | in profit) / P(final win | not in profit) / share not in profit": [
+    0.626,
+    0.287,
+    0.366
+   ],
+   "at +15 min: P(final win | below -0.5R)": 0.165,
+   "at +30 min: P(final win | in profit) / P(final win | not in profit) / share not in profit": [
+    0.694,
+    0.294,
+    0.322
+   ],
+   "at +30 min: P(final win | below -0.5R)": 0.145,
+   "at +60 min: P(final win | in profit) / P(final win | not in profit) / share not in profit": [
+    0.741,
+    0.303,
+    0.211
+   ],
+   "at +60 min: P(final win | below -0.5R)": 0.194,
+   "winners' worst point (MAE, R): median / 75th / 90th pct": [
+    -0.27,
+    -0.54,
+    -0.71
+   ],
+   "exit mix (base)": {
+    "stop": 0.536,
+    "close": 0.464
+   }
+  }
+ },
+ "CONFIRMED on 2020-23": false
+}

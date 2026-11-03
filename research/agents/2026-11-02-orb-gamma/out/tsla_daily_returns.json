@@ -1,0 +1,26 @@
+{
+ "TSLA2020_d2": {
+  "1x mean %/day": 0.246,
+  "1x median day %": -0.78,
+  "avg win day %": 2.59,
+  "avg loss day %": -1.37,
+  "paper-sizing mean %/day": 0.215,
+  "paper avg win/loss day %": [
+   1.89,
+   -0.94
+  ],
+  "share of days up": 0.408
+ },
+ "TSLA_d2": {
+  "1x mean %/day": 0.185,
+  "1x median day %": -0.64,
+  "avg win day %": 2.06,
+  "avg loss day %": -1.23,
+  "paper-sizing mean %/day": 0.108,
+  "paper avg win/loss day %": [
+   1.47,
+   -0.92
+  ],
+  "share of days up": 0.428
+ }
+}

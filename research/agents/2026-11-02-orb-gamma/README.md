@@ -303,6 +303,27 @@ The frozen S1_5_close rule:
 * Returns scale with TSLA's daily range: 2022 was the extreme.
 * The backtest fills at 1-minute granularity. Margin, the PDT rule and taxes are not modelled.
 
+### A4 results: exit rules and early-loss diagnostics (`python exits.py`, `out/exits.json`; post-hoc cut in `posthoc_cut.py`)
+* **Bug caught and fixed before reading any result.** The first run divided short-trade P&L by a negative mirrored price, which flipped the sign of every short. The base then read +5 bp/day instead of the engine's +18.5 / +24.6. After the fix, the base matches `orb.py` exactly.
+* **Named best on 2024-26:** TRAIL1R (Sharpe 1.50 vs 1.37).
+* **Not confirmed on 2020-23:** Sharpe 1.43 vs 1.59, mean 17.8 vs 24.6 bp/day, CI of the difference [−13.5, −0.6].
+* **No exit rule improves the base in both periods.** Rules that cut losses shrink them, but cut the winners about as much. Sharpe stays about the same or falls; it is the same as trading smaller.
+
+  | Rule (2024-26 / 2020-23) | bp/day | Win % | Average loss bp | Worst day bp | Max drawdown bp | Sharpe |
+  |---|---|---|---|---|---|---|
+  | Base | 18.5 / 24.6 | 43 / 41 | −123 / −137 | −328 / −534 | −2,423 / −3,502 | 1.37 / 1.59 |
+  | MID stop (half the risk) | 10.8 / 20.3 | 28 / 26 | −70 / −75 | **−165 / −302** | −2,569 / −2,107 | 1.06 / 1.59 |
+  | REIN30 (failed-breakout exit) | 10.6 / 12.5 | 13 / 12 | **−27 / −29** | −240 / −254 | **−1,612 / −2,361** | 1.29 / 1.37 |
+  | Time stop T30 | 14.0 / 23.3 | 34 / 34 | −95 / −107 | −312 / −569 | −2,381 / −3,791 | 1.09 / 1.59 |
+  | BE1R | 16.0 / 21.9 | 34 / 30 | −91 / −95 | −328 / −534 | −1,981 / −3,820 | 1.31 / 1.51 |
+
+* **Early-loss diagnostics** (base rule, both periods agree):
+  * At +30 minutes, a trade **in profit** ends a winner 69% of the time; one **not in profit**, 29-31%.
+  * One down **−0.5R or more**: only 10-15%.
+  * But winners also dip: the median winner first goes −0.27R against you, the 75th percentile −0.5R, the 90th −0.7R.
+* **Post-hoc rule** "exit at +30 minutes only if ≤ −0.5R": 2024-26 +19.6 (vs 18.5; max drawdown −1,959 vs −2,423); 2020-23 +23.3 (vs 24.6). That is neutral. The deep losers would mostly hit the −1R stop anyway, and the 10-15% that recover are big winners.
+* **Daily return on capital at 1×** (`out/tsla_daily_returns.json`): see the owner summary.
+
 **What this adds to the mechanism:**
 * The breakout is a bet on a **trend day**. It pays when information or one-sided flow arrives and persists: single stocks, news days, and TSLA most days.
 * It fails where liquidity and index arbitrage absorb the push (SPY).

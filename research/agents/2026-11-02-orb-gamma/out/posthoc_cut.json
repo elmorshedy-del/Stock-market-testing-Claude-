@@ -1,0 +1,54 @@
+{
+ "TSLA cut@30min if <= -0.5R": {
+  "mean bp/day": 19.57,
+  "Sharpe": 1.47,
+  "win %": 41.9,
+  "avg win bp": 209.0,
+  "avg loss bp": -117.0,
+  "worst day bp": -328.0,
+  "max drawdown bp (1x, simple)": -1959.0,
+  "mean diff vs base, 90% CI": [
+   -0.68,
+   2.58
+  ]
+ },
+ "TSLA cut@30min if <= -0.3R": {
+  "mean bp/day": 16.75,
+  "Sharpe": 1.27,
+  "win %": 38.8,
+  "avg win bp": 215.7,
+  "avg loss bp": -109.2,
+  "worst day bp": -312.0,
+  "max drawdown bp (1x, simple)": -2570.0,
+  "mean diff vs base, 90% CI": [
+   -4.75,
+   1.33
+  ]
+ },
+ "TSLA2020 cut@30min if <= -0.5R": {
+  "mean bp/day": 23.33,
+  "Sharpe": 1.52,
+  "win %": 40.1,
+  "avg win bp": 259.3,
+  "avg loss bp": -134.5,
+  "worst day bp": -569.0,
+  "max drawdown bp (1x, simple)": -3478.0,
+  "mean diff vs base, 90% CI": [
+   -3.48,
+   0.67
+  ]
+ },
+ "TSLA2020 cut@30min if <= -0.3R": {
+  "mean bp/day": 22.74,
+  "Sharpe": 1.5,
+  "win %": 38.6,
+  "avg win bp": 262.5,
+  "avg loss bp": -127.7,
+  "worst day bp": -569.0,
+  "max drawdown bp (1x, simple)": -3934.0,
+  "mean diff vs base, 90% CI": [
+   -4.99,
+   0.81
+  ]
+ }
+}
