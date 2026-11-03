@@ -324,6 +324,23 @@ The frozen S1_5_close rule:
 * **Post-hoc rule** "exit at +30 minutes only if ≤ −0.5R": 2024-26 +19.6 (vs 18.5; max drawdown −1,959 vs −2,423); 2020-23 +23.3 (vs 24.6). That is neutral. The deep losers would mostly hit the −1R stop anyway, and the 10-15% that recover are big winners.
 * **Daily return on capital at 1×** (`out/tsla_daily_returns.json`): see the owner summary.
 
+### A5 results: the TSLA breakout with options, 2024-26 (`python opts.py`, `opts_itm.py`, `opts_diag.py`; `out/opts*.json`, `out/orb_opts.png`)
+* **Data:** ThetaData 1-minute option bars and quotes, 921 option-days (nearest expiry plus 0DTE), included in the plan.
+* **Fills:** buy at the ask of the next-minute quote; sell at the bid after the underlying stop, or at 15:55. Hand-checked: Apr 9 2025, ask $10.40 → bid $42.50 = +309%.
+* **Pre-registered (ATM, nearest expiry ≥ 1 day; median 3 days to expiry, held a median 5.8 h):**
+  * 702 trades: **mean +0.4% on premium (t ≈ 0), median −20%**, 35.5% wins, average win +58%, average loss −31%.
+  * Shares on the same days: +16.8 bp a trade. **The share edge does not carry over.**
+* **0DTE ATM** (217 expiry days): mean +13.9%, median −53%, worst −100%. Not significant (t ≈ 1.3), and driven by 2025 (+32%; 2024 −2%).
+* **Exploratory in-the-money versions** (2 and 4 strikes ITM): next expiry −0.4% and −0.8%; 0DTE +7.4% and +4.2% (t 1.1-1.3). No improvement.
+* **Why (decomposition; mid-to-mid regression):**
+  * Leverage is about 26× per 1% stock move.
+  * The breakout's directional move is worth **+3.7%** of premium.
+  * Convexity costs −0.8%: implied volatility falls on big moves.
+  * Time decay and IV drift cost −0.3%.
+  * **The bid-ask spread costs −2.2%** per round trip.
+  * That leaves +0.4%.
+* **Verdict for A5:** don't use short-dated TSLA options for this rule. Shares, or a delta-equivalent stock position, keep the edge; options give it back to the spread.
+
 **What this adds to the mechanism:**
 * The breakout is a bet on a **trend day**. It pays when information or one-sided flow arrives and persists: single stocks, news days, and TSLA most days.
 * It fails where liquidity and index arbitrage absorb the push (SPY).

@@ -1,0 +1,60 @@
+{
+ "days with a trade": 704,
+ "rule": "ATM call/put, buy ask (next-minute quote), sell bid at the stop or 15:55",
+ "next": {
+  "trades": 702,
+  "mean return on premium %": 0.4,
+  "median %": -20.0,
+  "win %": 35.5,
+  "avg win %": 57.9,
+  "avg loss %": -31.4,
+  "best / worst %": [
+   387.0,
+   -75.0
+  ],
+  "same days, shares bp/trade": 16.8,
+  "by year mean %": {
+   "2024": -2.7,
+   "2025": 3.5,
+   "2026": 0.4
+  },
+  "median entry spread % of mid": 1.6,
+  "median premium % of stock price": 2.08,
+  "stopped trades: n, mean %": [
+   338,
+   -34.2
+  ],
+  "held to 15:55: n, mean %": [
+   364,
+   32.6
+  ]
+ },
+ "0dte": {
+  "trades": 217,
+  "mean return on premium %": 13.9,
+  "median %": -53.1,
+  "win %": 33.2,
+  "avg win %": 178.3,
+  "avg loss %": -68.3,
+  "best / worst %": [
+   994.0,
+   -100.0
+  ],
+  "same days, shares bp/trade": 38.8,
+  "by year mean %": {
+   "2024": -2.3,
+   "2025": 32.0,
+   "2026": 13.0
+  },
+  "median entry spread % of mid": 2.4,
+  "median premium % of stock price": 0.93,
+  "stopped trades: n, mean %": [
+   98,
+   -67.0
+  ],
+  "held to 15:55: n, mean %": [
+   119,
+   80.4
+  ]
+ }
+}

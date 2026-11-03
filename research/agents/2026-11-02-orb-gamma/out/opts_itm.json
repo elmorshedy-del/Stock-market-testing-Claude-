@@ -1,0 +1,80 @@
+{
+ "next 0 strikes ITM": {
+  "trades": 702,
+  "mean %": 0.1,
+  "median %": -19.8,
+  "win %": 35.8,
+  "premium % of stock": 2.15,
+  "t-stat": 0.03,
+  "by year mean %": {
+   "2024": -3.1,
+   "2025": 3.5,
+   "2026": -0.2
+  }
+ },
+ "next 2 strikes ITM": {
+  "trades": 701,
+  "mean %": -0.4,
+  "median %": -16.2,
+  "win %": 36.7,
+  "premium % of stock": 3.31,
+  "t-stat": -0.22,
+  "by year mean %": {
+   "2024": -3.3,
+   "2025": 2.8,
+   "2026": -0.7
+  }
+ },
+ "next 4 strikes ITM": {
+  "trades": 701,
+  "mean %": -0.8,
+  "median %": -13.2,
+  "win %": 37.5,
+  "premium % of stock": 4.44,
+  "t-stat": -0.57,
+  "by year mean %": {
+   "2024": -3.2,
+   "2025": 2.0,
+   "2026": -1.2
+  }
+ },
+ "0dte 0 strikes ITM": {
+  "trades": 217,
+  "mean %": 12.4,
+  "median %": -49.3,
+  "win %": 35.5,
+  "premium % of stock": 1.01,
+  "t-stat": 1.31,
+  "by year mean %": {
+   "2024": -0.7,
+   "2025": 34.2,
+   "2026": 8.6
+  }
+ },
+ "0dte 2 strikes ITM": {
+  "trades": 218,
+  "mean %": 7.4,
+  "median %": -27.5,
+  "win %": 40.8,
+  "premium % of stock": 2.04,
+  "t-stat": 1.28,
+  "by year mean %": {
+   "2024": -1.1,
+   "2025": 21.2,
+   "2026": 5.2
+  }
+ },
+ "0dte 4 strikes ITM": {
+  "trades": 217,
+  "mean %": 4.2,
+  "median %": -17.0,
+  "win %": 41.9,
+  "premium % of stock": 3.24,
+  "t-stat": 1.09,
+  "by year mean %": {
+   "2024": -1.6,
+   "2025": 14.3,
+   "2026": 2.4
+  }
+ }
+}
