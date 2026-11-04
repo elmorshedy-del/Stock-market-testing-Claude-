@@ -50,3 +50,27 @@
 **Other on-file leans:**
 * **Forced-flow rule:** moves made with high own dealer gamma extend (+8% over 10 sessions); low-gamma moves fade. Today's move is the high-gamma kind.
 * **Record call OI** before weaker months: −1.6 points (p 0.25), a lean.
+
+## Was Nov 3 set up like Jul 29, the close before the July burst? (`compare.py` → `out/compare.json`)
+*Owner: "Was the setup on as of yesterday close like July's? … Will this week and next be an analog?"* Same definitions as §4aa, recomputed with today's SqueezeMetrics file. Own-options state from the td_gamma CSV (July) and the same recipe for Nov 3 (OI dated Nov 3).
+
+| | Jul 29 (before the burst) | Nov 3 (yesterday) |
+|---|---|---|
+| Release setup | Off that day (S&P GEX 49th pct), but **on Jul 17–21 and Jul 23–28** | **Off by a hair:** 20-day lead 66th pct (needs 67th); S&P GEX 18th pct ✓ |
+| Drawdown from 52-week high | **−28%** | −4% |
+| Vs 200-day average | **−10%** | +19% |
+| RSI | 50 | 49 |
+| VIX / 10-day change | 20.7 / +5.0 | 20.8 / +3.5 |
+| Own near-price OI | **11th pct (freed)** | 53rd pct (not freed) |
+| Own dealer gamma, $bn per 1% | **0.45** | 1.11 |
+| Put/call OI | 0.45 | 0.51 |
+| ATM IV, 30-day | **45%** | 30% |
+| Event | **Earnings that night** | None (earnings were Oct 28; Nov 20 expiry next) |
+
+* **The July path after the Jul 29 close:** +15.5% on day 1, +24.9% by day 3, peak +29.6% on Aug 10 (8 sessions), +26.8% after 12 sessions.
+* **Not an analog.**
+  * July was an under-owned, washed-out stock with freed options, high IV and an earnings gap.
+  * Nov 3 was a stock near its high, already stretched, not freed, with 2.5× the dealer gamma and no event.
+  * The only shared pieces: low S&P gamma (in the days before July) and a VIX that had risen 4–5 points.
+* **Recent setup runs:** Oct 14, Oct 16–20, Oct 22–26 and Oct 30, with no up-leg until today. Today's move (+6.2% from the Oct 30 close in 3 sessions) is plausibly the Oct 30 episode paying.
+* **Data vintage:** REPORT §4aa says the setup was on Jul 17–29. Today's SqueezeMetrics file puts Jul 29 at the 49th pct, so July runs Jul 17–28 plus Jul 30.
