@@ -43,3 +43,39 @@
   | SPY | 750 | 745.9 | 740 | 734.5 | 730 | 725 |
   |---|---|---|---|---|---|---|
   | TSLA | ≈394 | 390 | 383 | **377 (its flip)** | **373 (full-setup zone)** | 367 |
+
+## Refresh v2: Wed Nov 4, 08:00 ET (Tuesday's closing positions)
+*Owner: "Everything changed over night."* `map_v2.py` is `map.py` with OI dated Nov 4 (Tuesday's closing positions) and premarket references (SPY 760.1, TSLA 376.0). `map.py` is unchanged. `figure_v2.py` → `out/what_changed.png`.
+
+**What happened overnight** (Yahoo 5-min bars; Twelve Data checked AMD)
+* **The SPY scare came and went in futures.**
+  * ES fell to about 7,490 at 22:05 ET. That is SPY ≈ 744.2, the top of the core pocket.
+  * It then rallied +2.6% to SPY ≈ 763.2 by 06:45.
+  * Cash trading never tested 740 or 735.
+  * Reasons in the coverage (Reuters, Investing.com):
+    * divided government;
+    * the new Congress does not sit until January;
+    * the dollar and long yields fell;
+    * VIX −12% to 18.3.
+* **TSLA decoupled from SPY.** At 08:00 it was −5.6% against Tuesday's 398.50 close, while SPY was +0.8%. The cause was Musk-specific political risk: Texas lost, Congress gone, scrutiny of a SpaceX merger. That made the 2× S&P drag rule irrelevant. TP1 had estimated about −5% for a Talarico win; TSLA is tracking that estimate (scored at the close).
+* **AI started selling good news at 07:00.**
+  * AMD went from +7.4% (its earnings beat) to −1.2% / −2.4%, Twelve Data extended price 478.
+  * NVDA went from +1.9% to −1.6%, and SMH from 527 to 511.
+  * Solar and the Dow are strong. That is rotation, not liquidation: RSP was +0.8%.
+
+**SPY (Tuesday positions)**
+* Flip **765.9** including 0DTE (768.5 excluding it), down from 768.8.
+* Put wall 740, call wall 800.
+* Trough at **735** (−21.2 $bn per 1%); the core pocket is about 723–745.
+* Steepest drop above the trough: 757.5.
+* Short gamma below 765.5. The biggest negative strikes are 750 (−1.39) and 740 (−1.23).
+* Wednesday 0DTE OI: 770 calls 13.4k, 760 calls 10.1k, 755 calls/puts 9.6k / 9.7k.
+
+**TSLA (Tuesday positions)**
+* Engine flip **377.5** (was 376.8); `fine_flip` 376.9 excluding 0DTE, 386.1 including it.
+* Short gamma below 386.
+* Biggest negative strikes: 380 (−0.067), then 370. Wednesday 0DTE puts: 380 5.2k, 385 3.0k, 375 2.5k.
+* **Freed at every hypothetical close ≤ 390** (near-OI pct 4–28%); 6th pct at 376.
+* **So the full setup (freed and a close below 377.5) is live today.** From 376 at the Nov 6 ATM IV of 67%, P(close ≤ 377.5) ≈ 52%.
+* Its 20-day closing low is 354.7, so a close near 376 is not a new 20-day low (playbook rule 8 not triggered).
+* Late-October gap: from 372.2 (Oct 23 close) to 391.6.
