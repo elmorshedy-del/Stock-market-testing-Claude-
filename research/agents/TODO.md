@@ -136,5 +136,64 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **HP6. BJZZ retail-flow measure for TSLA and 1-15 day volatility** (Databento/TAQ prints) ([hft-papers](2026-11-02-hft-papers/)).
 - [ ] **HP2. First-30-min signed option flow -> TSLA rest-of-day return** (blocked: ThetaData Options Standard trades) ([hft-papers](2026-11-02-hft-papers/)).
 
+## Earnings-mechanics follow-ups (2026-11-04, from the MSFT July-vs-now comparison)
+*Owner: "This gives us tests to do for this kind of vanna and charm unwind … think what will be high value tests that we can do that can be used to trade earnings."*
+
+**Background.** [msft-read](2026-11-04-msft-read/) found four reasons July's walls didn't slow MSFT while today's do:
+1. The options were far from the price (freed: near-price OI 11th pct, dealer gamma $0.45bn per 1%, call wall 18% away).
+2. An overnight gap skips dealer hedging.
+3. The IV crush (45% IV) releases put hedges (vanna), on top of time decay (charm).
+4. Customers chase new calls, which flips the dealer sign.
+
+These come from **one case**; each needs a test.
+
+**Data and rules.**
+* ThetaData Value (2020+, EOD chains + daily OI). It costs only pull time, at about 1 minute per symbol-day, so pull days −1, +1 and +5 only.
+* Events: the 690 in `microstructure/out/earnings_events.csv` (40+ names), plus the six `td_gamma_*.csv` series, which already carry daily vanna/charm for TSLA, MSFT, NVDA and MU.
+* Report R1 (2020–21) and R2 (2022+) separately.
+* Pre-register each test in its own folder before it runs.
+* Related open items: E1, RG2, HC3, K2.
+
+- [ ] **EQ0. Data step (first).**
+  * Build one row per event with the pre-report state at the report-day close (OI dated that day, the report day's chain):
+    * near-price OI percentile;
+    * own dealer gamma, vanna and charm;
+    * the call/put walls and the biggest call pile within the implied move;
+    * put/call OI;
+    * the implied move (front-expiry ATM straddle / spot);
+    * the IV term kink;
+    * drawdown from the 52-week high and distance from the 200-day average.
+  * Add the outcomes:
+    * the gap;
+    * the close→close returns on days 1, 2–5 and 2–10;
+    * the IV crush (day +1);
+    * the new OI by strike on day +1.
+- [ ] **EQ1. Earnings straddle by positioning state (highest value: a direct trade).**
+  * **Trade:** buy the front-expiry ATM straddle at the ask at the report-day close; sell at the bid at the day +1 close, and separately at day +5.
+  * **Prediction:** freed + low own gamma → realized move > implied, straddle P&L > 0. Pinned (high gamma, a big call pile inside the implied move) → realized < implied, so selling it (or an iron fly) pays.
+  * **Null:** circular shift of the state across events within each name; the bootstrap is blocked by quarter.
+- [ ] **EQ2. Vanna/charm-unwind fuel (the July MSFT mechanism).**
+  * **Fuel:** pre-report dealer vanna exposure × the realized IV crush (IV day −1 minus IV day +1), with charm to the next expiry as a second term.
+  * **Prediction:** after **up**-gaps, the day 1→5 continuation rises with fuel. Down-gaps get no help (the effect is asymmetric).
+  * **Controls:** gap size, surprise size, the market's move (beta-adjusted).
+  * **Tension to resolve:** this is the case where the tested earnings-morning fade (calendar-mechanics B2) should **not** happen.
+- [ ] **EQ3. Where the gap lands relative to the call pile.**
+  * **Classes:** (a) the gap open lands below the biggest call pile within +5%; (b) it jumps through the call wall.
+  * **Prediction:** (a) a smaller day 2–5 range, pinned toward the pile; (b) continuation.
+  * **Dose:** wall OI ÷ next-largest strike (like GW2).
+- [ ] **EQ4. Call chase after the gap (Value-tier OI version).**
+  * **Measure:** new call OI on day +1 at strikes above the gap open, as a multiple of prior OI, plus the day-1 call/put volume ratio.
+  * **Prediction:** a big chase → day 2–5 continuation (dealers short gamma).
+  * The signed version (who opened) needs ThetaData Standard (see T4).
+- [ ] **EQ5. Charm into the first monthly expiry after the report.**
+  * **Measure:** post-report drift by sessions to that expiry and by the expiring share of put gamma that is OTM after the gap.
+  * **Prediction:** when the expiry falls 3–8 sessions after the report and large OTM put OI expires, the drift into the expiry is up.
+- [ ] **EQ6. Under-owned + surprise.**
+  * **Classes:** a pre-report drawdown ≥ 20% and below the 200-day (MSFT July), vs at-highs stretched (MSFT now).
+  * **Prediction:** larger, longer post-beat drift for the under-owned class (the conditioned version of post-earnings drift). Links to R2 (the MSFT stretched release).
+- [ ] **EQ7. Shares vs calls for the follow-through.**
+  * **Trade:** buy at the day +1 close, after the crush, either an ATM call (30–45 DTE) or the shares; exit at day 5 and day 10. Bid/ask both sides.
+  * **Prediction:** in the EQ2/EQ3 continuation states, calls beat shares per dollar risked. Elsewhere the spread eats the edge (as in orb-gamma A5).
+
 ## Done
 - (none yet)

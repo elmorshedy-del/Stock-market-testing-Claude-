@@ -67,3 +67,16 @@
 * **Fallback** (connector down, or inside Python scripts that can't call the connector): the Yahoo chart API. **Always print `regularMarketTime` and the lag vs the clock**, and say it's delayed.
 * **Rule:** every intraday price quoted to the owner carries its source and timestamp (e.g. "TSLA 399.39, Twelve Data 09:50 ET").
 * Not used for live quotes: Databento (data budget), ThetaData (end-of-day / OI tier), Alpha Vantage (25 calls a day).
+
+## Earnings and the vanna/charm unwind (owner, 2026-11-04)
+* **The owner's question:** "why wasn't there any gamma or walls slowing it down in July and now there is". The comparison is in [msft-read](2026-11-04-msft-read/) (`compare.py`).
+* **Working explanation, from one case (not yet tested):** walls only slow moves that happen during trading, near strikes with real open interest. They fail when:
+  * the options sit far from the price (freed);
+  * the move comes as an overnight gap;
+  * a big IV crush releases put hedges (vanna) and time decay adds to it (charm);
+  * customers chase new calls, so dealers end up short gamma.
+* **The owner's goal:** use this to trade earnings.
+  * Know ahead of the report whether to own the straddle, sell it, or hold the gap for follow-through.
+  * Know whether calls or shares are the better tool after the crush.
+* **The tests:** TODO EQ0–EQ7. The highest value is EQ1 (straddle P&L by pre-report positioning).
+* **Don't contradict what's tested:** earnings gap-ups fade in the first hour on average (calendar-mechanics B2). Moves made on low dealer gamma fade on average (forced-flow). EQ2/EQ3 ask when those averages break, as in July.
