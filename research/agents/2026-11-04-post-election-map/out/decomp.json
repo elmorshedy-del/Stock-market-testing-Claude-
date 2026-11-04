@@ -1,0 +1,39 @@
+{
+ "as of (ET)": "2026-11-04 08:24",
+ "TSLA = a + bQ*QQQ + bAI*AIfactor (1y daily)": {
+  "bQ": 1.43,
+  "bAI": 0.01,
+  "resid sd %": 2.16,
+  "n": 250
+ },
+ "today log %": {
+  "TSLA": -4.73,
+  "QQQ part": 0.35,
+  "AI-infra part": -0.06,
+  "leftover (Musk/Texas)": -5.02,
+  "leftover in resid sd": -2.3,
+  "AI-infra factor today": -7.06
+ },
+ "moves % since Tue close": {
+  "MSFT": 2.07,
+  "AAPL": 1.8,
+  "AMZN": 3.83,
+  "GOOGL": 0.69,
+  "META": 0.16,
+  "NVDA": -1.21,
+  "AVGO": -1.24,
+  "AMD": -0.6,
+  "ORCL": -4.23,
+  "PLTR": -4.79,
+  "CRWV": -7.57,
+  "IREN": -6.17,
+  "VST": -9.03,
+  "TSLA": -4.62,
+  "SPCX": -7.33,
+  "DJT": -10.92,
+  "SPY": 0.93,
+  "QQQ": 0.25,
+  "RSP": 1.42,
+  "IWM": 1.65
+ }
+}

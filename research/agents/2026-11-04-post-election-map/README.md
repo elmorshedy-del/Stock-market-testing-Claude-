@@ -79,3 +79,19 @@
 * **So the full setup (freed and a close below 377.5) is live today.** From 376 at the Nov 6 ATM IV of 67%, P(close ≤ 377.5) ≈ 52%.
 * Its 20-day closing low is 354.7, so a close near 376 is not a new 20-day low (playbook rule 8 not triggered).
 * Late-October gap: from 372.2 (Oct 23 close) to 391.6.
+
+### v2 note: how much of TSLA's drop is the Musk/Texas story? (08:24 ET, `decomp.py` → `out/decomp.json`, `out/tsla_decomp.png`)
+* **Model:** TSLA = 1.43 × QQQ + 0.01 × AI-infrastructure factor.
+  * The factor is the mean QQQ-residual of CRWV, ORCL, VST, PLTR and IREN.
+  * Fit on 250 daily returns to Nov 3; R² 0.42; residual sd 2.16%.
+* **Over the past year TSLA has had no link to the AI-infrastructure trade** beyond QQQ (residual correlation 0.01). Its residuals also do not correlate with SpaceX's (−0.05 over 99 days). Today's joint drop is a one-off political shock, not a normal "Musk factor".
+* **Today, log % since Tue close:**
+
+  | Part | % |
+  |---|---|
+  | TSLA total | −4.73 |
+  | QQQ part | +0.35 |
+  | AI-infrastructure part | −0.06 (factor −7.1% today) |
+  | **Leftover, Musk/Texas** | **−5.02 (−2.3 residual sd)** |
+
+* **Timing agrees.** 20:00→04:00: NQ +2.0%, TSLA −2.1%. 04:00→07:00: NQ flat, TSLA −2%. 07:00→08:00, during the AI fade: TSLA flat to up.
