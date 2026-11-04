@@ -569,3 +569,5 @@ S1, S2, S7 and T1–T4 are unchanged.
   * 5-day return from the open > 0;
   * (e) undercut ≤ 50%.
 * **Descriptive.** The event count is small, so no rule is claimed.
+
+* **GD cancelled** (22:08 ET) at the owner's request, before any data was computed. The owner wanted a judgement call, not another base-rate table. Nothing was run.
