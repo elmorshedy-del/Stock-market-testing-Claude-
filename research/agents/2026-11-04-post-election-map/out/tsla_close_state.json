@@ -1,0 +1,97 @@
+{
+ "official state at Nov 4 close (OI dated Nov 4 + Nov 4 chain)": {
+  "flip": 377.6,
+  "close vs flip %": 2.0,
+  "near-OI pct": 0.24,
+  "freed": true,
+  "own-gamma pct": 0.3,
+  "ATM IV 30d": 0.433
+ },
+ "same positions with Tue Nov 3 IVs (isolates today's IV move)": {
+  "flip": 377.5,
+  "close vs flip %": 2.02,
+  "near-OI pct": 0.24,
+  "freed": true,
+  "own-gamma pct": 0.29,
+  "ATM IV 30d": 0.452
+ },
+ "+25% of today's volume as new OI (all)": {
+  "flip": 378.9,
+  "close vs flip %": 1.66,
+  "near-OI pct": 0.66,
+  "freed": false,
+  "own-gamma pct": 0.31,
+  "ATM IV 30d": 0.433
+ },
+ "+25% of today's PUT volume as new OI": {
+  "flip": 387.5,
+  "close vs flip %": -0.6,
+  "near-OI pct": 0.44,
+  "freed": false,
+  "own-gamma pct": 0.13,
+  "ATM IV 30d": 0.433
+ },
+ "+50% of today's volume as new OI (all)": {
+  "flip": 379.5,
+  "close vs flip %": 1.49,
+  "near-OI pct": 0.91,
+  "freed": false,
+  "own-gamma pct": 0.32,
+  "ATM IV 30d": 0.433
+ },
+ "+50% of today's PUT volume as new OI": {
+  "flip": 393.4,
+  "close vs flip %": -2.08,
+  "near-OI pct": 0.66,
+  "freed": false,
+  "own-gamma pct": 0.04,
+  "ATM IV 30d": 0.433
+ },
+ "+100% of today's volume as new OI (all)": {
+  "flip": 380.2,
+  "close vs flip %": 1.32,
+  "near-OI pct": 1.0,
+  "freed": false,
+  "own-gamma pct": 0.35,
+  "ATM IV 30d": 0.433
+ },
+ "+100% of today's PUT volume as new OI": {
+  "flip": 400.5,
+  "close vs flip %": -3.83,
+  "near-OI pct": 0.91,
+  "freed": false,
+  "own-gamma pct": 0.0,
+  "ATM IV 30d": 0.433
+ },
+ "today's volume, strikes 360-410, expiries after today": {
+  "calls": 296016,
+  "puts": 269193,
+  "top put strikes by volume": {
+   "380.0": 53470,
+   "385.0": 34044,
+   "360.0": 30295,
+   "390.0": 25183,
+   "370.0": 23970
+  },
+  "top call strikes by volume": {
+   "400.0": 58504,
+   "390.0": 40484,
+   "410.0": 35532,
+   "385.0": 26207,
+   "405.0": 21557
+  }
+ },
+ "other conditions": {
+  "close": 385.19,
+  "RSI14 / pct of year": [
+   51.4,
+   0.61
+  ],
+  "RSI needed for washed-out (bottom tenth)": 38.3,
+  "ATR% 14 / pct of year": [
+   4.1,
+   0.63
+  ],
+  "20-day closing low (excl today)": 354.72
+ }
+}

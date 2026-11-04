@@ -1,0 +1,98 @@
+{
+ "P 0.05": {
+  "flip": 380.1,
+  "close vs flip %": 1.34,
+  "near-OI pct": 0.28,
+  "freed": true,
+  "own-gamma pct": 0.23,
+  "ATM IV 30d": 0.433
+ },
+ "P 0.1": {
+  "flip": 382.3,
+  "close vs flip %": 0.76,
+  "near-OI pct": 0.3,
+  "freed": true,
+  "own-gamma pct": 0.2,
+  "ATM IV 30d": 0.433
+ },
+ "P 0.15": {
+  "flip": 384.2,
+  "close vs flip %": 0.25,
+  "near-OI pct": 0.34,
+  "freed": false,
+  "own-gamma pct": 0.17,
+  "ATM IV 30d": 0.433
+ },
+ "P 0.2": {
+  "flip": 385.9,
+  "close vs flip %": -0.19,
+  "near-OI pct": 0.39,
+  "freed": false,
+  "own-gamma pct": 0.14,
+  "ATM IV 30d": 0.433
+ },
+ "both 0.05": {
+  "flip": 378.0,
+  "close vs flip %": 1.91,
+  "near-OI pct": 0.3,
+  "freed": true,
+  "own-gamma pct": 0.31,
+  "ATM IV 30d": 0.433
+ },
+ "both 0.1": {
+  "flip": 378.2,
+  "close vs flip %": 1.84,
+  "near-OI pct": 0.39,
+  "freed": false,
+  "own-gamma pct": 0.31,
+  "ATM IV 30d": 0.433
+ },
+ "both 0.15": {
+  "flip": 378.5,
+  "close vs flip %": 1.77,
+  "near-OI pct": 0.46,
+  "freed": false,
+  "own-gamma pct": 0.31,
+  "ATM IV 30d": 0.433
+ },
+ "both 0.2": {
+  "flip": 378.7,
+  "close vs flip %": 1.71,
+  "near-OI pct": 0.57,
+  "freed": false,
+  "own-gamma pct": 0.31,
+  "ATM IV 30d": 0.433
+ },
+ "C 0.05": {
+  "flip": 375.5,
+  "close vs flip %": 2.58,
+  "near-OI pct": 0.28,
+  "freed": true,
+  "own-gamma pct": 0.33,
+  "ATM IV 30d": 0.433
+ },
+ "C 0.1": {
+  "flip": 373.6,
+  "close vs flip %": 3.1,
+  "near-OI pct": 0.3,
+  "freed": true,
+  "own-gamma pct": 0.4,
+  "ATM IV 30d": 0.433
+ },
+ "C 0.15": {
+  "flip": 371.9,
+  "close vs flip %": 3.59,
+  "near-OI pct": 0.34,
+  "freed": false,
+  "own-gamma pct": 0.43,
+  "ATM IV 30d": 0.433
+ },
+ "C 0.2": {
+  "flip": 370.3,
+  "close vs flip %": 4.03,
+  "near-OI pct": 0.39,
+  "freed": false,
+  "own-gamma pct": 0.48,
+  "ATM IV 30d": 0.433
+ }
+}

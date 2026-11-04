@@ -95,3 +95,31 @@
   | **Leftover, Musk/Texas** | **−5.02 (−2.3 residual sd)** |
 
 * **Timing agrees.** 20:00→04:00: NQ +2.0%, TSLA −2.1%. 04:00→07:00: NQ flat, TSLA −2%. 07:00→08:00, during the AI fade: TSLA flat to up.
+
+## v3: TSLA at the Nov 4 close (`tsla_close_state.py`, `figure_tsla_checklist.py` → `out/tsla_close_state.json`, `out/tsla_flip_grid.json`, `out/tsla_checklist.png`)
+*Owner: "what conditions it hit and which not and how far … could have today options and iv crush actually put it below its last computed flip."*
+
+**Official state** (engine definition: OI dated Nov 4 + the Nov 4 closing chain):
+* flip **377.6**, close 385.19 (**+2.0% above**);
+* near-price OI at the 24th pct (**freed**), own gamma at the 30th pct;
+* **not a full setup.**
+
+**IV crush:** TSLA's 30-day ATM IV only fell from 45.2% to 43.3% (VIX fell 20%), moving the flip from 377.5 to 377.6. No effect.
+
+**Today's trading** (decides tomorrow's state; the real positions publish about 6–7am Nov 5). Scenarios add a share of today's volume as new OI:
+* **Mixed opening** (calls and puts in proportion): flip 378–380, and freed turns off from about 10% of the volume.
+* **Put-only opening:** the flip passes the close at about 20% of put volume (385.9), but freed turns off at about 15%.
+* **No scenario gives both conditions at once.**
+* **Call-only opening:** the flip falls (373.6 at 10%).
+
+**Other conditions:**
+
+| Condition | Now | Needs | Status |
+|---|---|---|---|
+| RSI | 51 (61st pct) | ≤ 38.3 for washed-out | ✗ |
+| ATR% | 4.1% (63rd pct) | not low | ✓ |
+| 20-day closing low | — | 354.72 | not near |
+| S&P gamma | 17th pct (Nov 3) | reset | ✓ |
+| R4 / T5 | SPY −0.7% from its 10-day high | R4 needs ≥ 2% off | off, pending tonight's GEX |
+| R7 | VIX −21.5% vs its 10-day max | ≥ 25% off (VIX ≤ 15.86) | ✗ |
+| TSLA's own DPI | 76th pct | top third | ✓ lean |
