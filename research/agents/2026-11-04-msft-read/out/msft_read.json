@@ -1,0 +1,107 @@
+{
+ "ref price": 554.5,
+ "flip": 478.51,
+ "call wall (max call OI, <=45d)": 575.0,
+ "put wall (max put OI, <=45d)": 500.0,
+ "top call OI strikes <=45d": {
+  "575": 147971,
+  "625": 103821,
+  "525": 66518,
+  "550": 48382,
+  "580": 41274
+ },
+ "top put OI strikes <=45d": {
+  "500": 32948,
+  "475": 23622,
+  "480": 21439,
+  "450": 19701,
+  "490": 17410
+ },
+ "total gamma $bn/1% at": {
+  "480": 0.011,
+  "490": 0.111,
+  "500": 0.296,
+  "510": 0.626,
+  "520": 1.125,
+  "530": 1.655,
+  "540": 2.052,
+  "550": 2.244,
+  "560": 2.325,
+  "570": 2.355,
+  "580": 2.342,
+  "590": 2.279,
+  "600": 2.137,
+  "610": 1.986,
+  "620": 1.833
+ },
+ "gamma at ref": 2.288,
+ "most negative point": [
+  440.0,
+  -0.149
+ ],
+ "short-gamma zone": [
+  440.0,
+  478.5
+ ],
+ "peak positive gamma": [
+  571.0,
+  2.355
+ ],
+ "biggest strikes by dealer gamma near price ($bn)": {
+  "575.0": 0.413,
+  "550.0": 0.217,
+  "560.0": 0.141,
+  "580.0": 0.129,
+  "540.0": 0.114,
+  "570.0": 0.112
+ },
+ "share of |gamma| by expiry": {
+  "2026-12-18": 0.311,
+  "2026-11-20": 0.238,
+  "2027-01-15": 0.196,
+  "2026-11-06": 0.125
+ },
+ "state": {
+  "MSFT 10-day lead vs SPY (Tue close) pct of trailing year": 0.55,
+  "MSFT 10-day lead value %": -0.13,
+  "MSFT 20-day lead vs SPY (Tue close) pct of trailing year": 0.65,
+  "MSFT 20-day lead value %": 1.61,
+  "MSFT 40-day lead vs SPY (Tue close) pct of trailing year": 0.79,
+  "MSFT 40-day lead value %": 6.99,
+  "S&P GEX (SqueezeMetrics) last": [
+   "2026-11-03",
+   3.06
+  ],
+  "S&P GEX pct of trailing year": 0.17,
+  "DIX last / pct": [
+   0.422,
+   0.08
+  ],
+  "MSFT 52w closing high": [
+   "2026-10-13",
+   543.45
+  ],
+  "drawdown from 52w high at ref %": 2.0,
+  "MSFT 2026 low close": [
+   "2026-06-25",
+   352.83
+  ],
+  "VIX 10 sessions ago / Tue close": [
+   17.31,
+   20.83
+  ],
+  "MSFT closes since Oct 20": {
+   "2026-10-20": 531.87,
+   "2026-10-21": 532.95,
+   "2026-10-22": 521.08,
+   "2026-10-23": 524.51,
+   "2026-10-26": 532.6,
+   "2026-10-27": 531.33,
+   "2026-10-28": 531.01,
+   "2026-10-29": 530.14,
+   "2026-10-30": 521.91,
+   "2026-11-02": 507.12,
+   "2026-11-03": 520.99
+  }
+ }
+}
