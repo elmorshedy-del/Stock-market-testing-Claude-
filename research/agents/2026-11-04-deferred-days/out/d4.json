@@ -1,0 +1,338 @@
+{
+ "A1/A2 ES": {
+  "ret %": 0.3,
+  "delta % of vol": 1.63,
+  "lambda (pts per 1k net)": 2.4172,
+  "hawkes n median": 0.633,
+  "pctile vs baseline (delta, lambda, n)": [
+   1.0,
+   0.31,
+   1.0
+  ],
+  "baseline sessions": 16,
+  "baseline median (delta, lambda, n)": [
+   0.07,
+   2.5081,
+   0.59
+  ]
+ },
+ "A1/A2 TSLA": {
+  "ret %": 2.41,
+  "delta % of vol": 8.81,
+  "lambda (pts per 1k net)": 0.0095,
+  "hawkes n median": 0.575,
+  "pctile vs baseline (delta, lambda, n)": [
+   0.81,
+   0.0,
+   0.92
+  ],
+  "baseline sessions": 26,
+  "baseline median (delta, lambda, n)": [
+   4.14,
+   0.0216,
+   0.539
+  ]
+ },
+ "A4 ES Oct 27 (flip-wick day)": {
+  "high": 7772.75,
+  "high time ET": "15:45:23",
+  "final segment minutes": 13.8,
+  "buy/min ratio (final 0.1% vs earlier run)": 1.364,
+  "exhaustion (ratio < 1)": false,
+  "absorption ratio": 1.888,
+  "sell/min next 10 min vs earlier run": 3.472,
+  "registered prediction": "exhaustion (buy/min ratio < 1)",
+  "prior summary (flip days / other days)": {
+   "flip-wick days": {
+    "n": 3,
+    "median buy/min ratio": 1.556,
+    "median absorption ratio": 3.603,
+    "share exhaustion (buy/min ratio < 1)": 0.0,
+    "median sell/min after high vs run": 1.176
+   },
+   "other days": {
+    "n": 9,
+    "median buy/min ratio": 1.085,
+    "median absorption ratio": 4.001,
+    "share exhaustion (buy/min ratio < 1)": 0.333,
+    "median sell/min after high vs run": 1.141
+   }
+  }
+ },
+ "A4 MBO Oct 27": {
+  "day high": 7772.75,
+  "time ET": "15:45:23",
+  "at the high": {
+   "added/min": 46.4,
+   "cancelled/min": 41.5,
+   "filled/min": 1.6,
+   "refill ratio (added/filled contracts)": 29.0,
+   "net new offers/min": 4.9
+  },
+  "placebo median net new offers/min (10 other swing highs)": 6.05,
+  "placebo values": [
+   13.0,
+   -5.6,
+   9.3,
+   5.3,
+   15.0,
+   1.8,
+   1.3,
+   2.1,
+   6.8,
+   8.0
+  ],
+  "Oct 20 for comparison": {
+   "added/min": 42.3,
+   "cancelled/min": 35.4,
+   "filled/min": 1.0,
+   "refill ratio (added/filled contracts)": 42.3,
+   "net new offers/min": 6.9
+  }
+ },
+ "ES 15:45-16:00 by minute (net aggressive contracts, last price)": {
+  "15:45": [
+   1884,
+   7771.25
+  ],
+  "15:46": [
+   536,
+   7770.25
+  ],
+  "15:47": [
+   1096,
+   7770.25
+  ],
+  "15:48": [
+   35,
+   7768.5
+  ],
+  "15:49": [
+   72,
+   7769.25
+  ],
+  "15:50": [
+   -801,
+   7765.75
+  ],
+  "15:51": [
+   -1160,
+   7764.75
+  ],
+  "15:52": [
+   266,
+   7764.5
+  ],
+  "15:53": [
+   334,
+   7764.75
+  ],
+  "15:54": [
+   -745,
+   7762.5
+  ],
+  "15:55": [
+   -676,
+   7761.75
+  ],
+  "15:56": [
+   -96,
+   7760.75
+  ],
+  "15:57": [
+   961,
+   7762.25
+  ],
+  "15:58": [
+   576,
+   7761.25
+  ],
+  "15:59": [
+   -2233,
+   7758.25
+  ]
+ },
+ "ES day per-minute net aggression sd": 360.8,
+ "A5 Oct 27 rows": [
+  {
+   "sym": "SPY",
+   "day": "2026-10-27",
+   "imb $m": -25.9666,
+   "imb % of day $vol": -0.1178,
+   "ret 15:50-close %": -0.1401,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "TSLA",
+   "day": "2026-10-27",
+   "imb $m": -64.5079,
+   "imb % of day $vol": -0.3492,
+   "ret 15:50-close %": -0.0172,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "GOOGL",
+   "day": "2026-10-27",
+   "imb $m": 150.6,
+   "imb % of day $vol": 1.6407,
+   "ret 15:50-close %": -0.6632,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "AMZN",
+   "day": "2026-10-27",
+   "imb $m": 36.5658,
+   "imb % of day $vol": 0.419,
+   "ret 15:50-close %": -0.3621,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "NVDA",
+   "day": "2026-10-27",
+   "imb $m": -202.1511,
+   "imb % of day $vol": -1.0938,
+   "ret 15:50-close %": -0.1489,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "AVGO",
+   "day": "2026-10-27",
+   "imb $m": -582.4247,
+   "imb % of day $vol": -6.6544,
+   "ret 15:50-close %": -0.2447,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "MSFT",
+   "day": "2026-10-27",
+   "imb $m": -273.628,
+   "imb % of day $vol": -2.6366,
+   "ret 15:50-close %": -0.0865,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "AAPL",
+   "day": "2026-10-27",
+   "imb $m": -514.2797,
+   "imb % of day $vol": -3.7056,
+   "ret 15:50-close %": -0.0216,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "META",
+   "day": "2026-10-27",
+   "imb $m": -213.0545,
+   "imb % of day $vol": -0.6692,
+   "ret 15:50-close %": -0.0878,
+   "msg time": "15:50:00"
+  },
+  {
+   "sym": "QQQ",
+   "day": "2026-10-27",
+   "imb $m": 136.684,
+   "imb % of day $vol": 0.6125,
+   "ret 15:50-close %": -0.1398,
+   "msg time": "15:50:00"
+  }
+ ],
+ "A5 pooled with Oct 27": {
+  "symbol-days": 270,
+  "Spearman rho": 0.356,
+  "p (bootstrap by day, rho <= 0)": 0.0,
+  "passes (rho > 0, p < 0.05)": true,
+  "Oct 27 alone: share moving with the imbalance": 0.7
+ },
+ "A6 TSLA Oct 27 round-dollar crosses": {
+  "400 cross": [
+   {
+    "level": 400,
+    "time ET": "09:36:08",
+    "buy events/s before": 9.1,
+    "after": 14.62,
+    "after/before": 1.61
+   }
+  ],
+  "other crosses: median after/before": 1.08,
+  "400 pctile among the day's crosses": 0.73,
+  "n crosses": 11,
+  "all crosses": [
+   {
+    "level": 398,
+    "time ET": "09:30:00",
+    "buy events/s before": 0.12,
+    "after": 20.43,
+    "after/before": 175.14
+   },
+   {
+    "level": 399,
+    "time ET": "09:32:48",
+    "buy events/s before": 10.53,
+    "after": 7.48,
+    "after/before": 0.71
+   },
+   {
+    "level": 400,
+    "time ET": "09:36:08",
+    "buy events/s before": 9.1,
+    "after": 14.62,
+    "after/before": 1.61
+   },
+   {
+    "level": 401,
+    "time ET": "09:37:24",
+    "buy events/s before": 8.27,
+    "after": 8.75,
+    "after/before": 1.06
+   },
+   {
+    "level": 402,
+    "time ET": "09:41:23",
+    "buy events/s before": 7.82,
+    "after": 8.58,
+    "after/before": 1.1
+   },
+   {
+    "level": 403,
+    "time ET": "09:42:04",
+    "buy events/s before": 10.08,
+    "after": 6.9,
+    "after/before": 0.68
+   },
+   {
+    "level": 404,
+    "time ET": "09:45:32",
+    "buy events/s before": 6.03,
+    "after": 4.9,
+    "after/before": 0.81
+   },
+   {
+    "level": 405,
+    "time ET": "11:20:14",
+    "buy events/s before": 7.9,
+    "after": 9.43,
+    "after/before": 1.19
+   },
+   {
+    "level": 406,
+    "time ET": "11:21:35",
+    "buy events/s before": 8.12,
+    "after": 6.13,
+    "after/before": 0.76
+   },
+   {
+    "level": 407,
+    "time ET": "11:58:05",
+    "buy events/s before": 2.1,
+    "after": 2.93,
+    "after/before": 1.4
+   },
+   {
+    "level": 408,
+    "time ET": "15:17:55",
+    "buy events/s before": 2.13,
+    "after": 3.73,
+    "after/before": 1.75
+   }
+  ]
+ }
+}

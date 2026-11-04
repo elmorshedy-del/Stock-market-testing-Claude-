@@ -37,7 +37,7 @@ Every test is pre-registered in its own folder before it runs.
   - Source: [positioning-tests](2026-10-26-positioning-tests/) P2.
 
 ### Databento, reserved (~$5.8 left of the owner's $15)
-- [ ] **D4. Add Oct 27 to flow-physics** once published: ES trades + MBO (the 771 wicks and the 15:50 drop), SPY/Nasdaq closing imbalances (did a sell imbalance print at 15:50?), TSLA trades (the 400 break). About $1.6.
+- [x] **D4 done** ([deferred-days](2026-11-04-deferred-days/), $1.25 with G1): sell imbalance at 15:50 confirmed; A4 exhaustion fails again. ~~D4. Add Oct 27 to flow-physics~~ once published: ES trades + MBO (the 771 wicks and the 15:50 drop), SPY/Nasdaq closing imbalances (did a sell imbalance print at 15:50?), TSLA trades (the 400 break). About $1.6.
 
 ## Can run now (data in hand)
 - [ ] **N1. SqueezeMetrics GEX vs our engine when they disagree.** Example: on Oct 23 SqueezeMetrics showed +$4.0bn while our engine showed −$8.8bn. Only SqueezeMetrics carries P2; our flip carries the rally-hold result. Test which measure predicts better on the days they disagree.
@@ -58,7 +58,7 @@ Every test is pre-registered in its own folder before it runs.
 - [ ] **R4. SPCX–TSLA lead-lag:** retest around Feb 2027. [spcx-tsla-lead-lag](2026-10-16-spcx-tsla-lead-lag/).
 
 ## Gap-teardown follow-ups (2026-10-28)
-- [ ] **G1. TSLA Oct 28 on Databento** (publishes about Oct 29): trades, book and cross; place on the T1/T3 distributions. About $0.2.
+- [x] **G1 done** ([deferred-days](2026-11-04-deferred-days/)): Oct 28 flagged at 09:35 only. ~~G1. TSLA Oct 28 on Databento~~ (publishes about Oct 29): trades, book and cross; place on the T1/T3 distributions. About $0.2.
 - [ ] **G2. The other 9 names** (AMD, META as FB before 2022-06-09, MSFT, AMZN, GOOGL, AVGO, NFLX, MU, ORCL with no Nasdaq cross). Labels already fetched for about 170 dates. About $40+ for the book pull.
 - [ ] **G3. "Depth builds behind the move"** as a pre-registered test: do offers stacking above a falling price within 30 minutes cap rebounds (and bids under a rising one stop pullbacks)?
 - [ ] **G4. Hidden selling at the high:** MBO executions vs displayed size (iceberg refills) at the first-hour high on VF days vs SC days. Needs mbo, about $0.3 an event.
