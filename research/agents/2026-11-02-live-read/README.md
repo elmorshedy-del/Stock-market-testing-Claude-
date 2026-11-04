@@ -552,3 +552,20 @@ S1, S2, S7 and T1–T4 are unchanged.
 * **L4 (relief):** pending. Monday at 11:00 the basket is −1.93% vs RSP +1.01% (spread −2.94), so no relief yet.
   * Historically, after bottom-2% days the next-2-session spread averaged +0.05% (47% positive, n 14), so a bounce is not automatic.
 * **Verdict:** consistent with AI-book de-grossing, not confirmable. **The tell to watch: a violent relief day in the basket vs the market (July's +12.6).** It would say the forced selling is done.
+
+
+## Pre-registration GD (Tue Nov 3, 22:05 ET, before computing): do gap-down floors give way, or reverse?
+* **Owner:** "Will the floors give way, or is this another knee-jerk one-day scare where the floor looks like it's breaking, then holds and everything reverses?"
+* **Events:** SPY opens ≤ −1.0% vs the prior close (regular-session 1-minute bars: ARCX 2020-23, EQUS.MINI 2024-26, from the orb-gamma study; daily Yahoo 1993-2026 for the long run).
+* **Measures, each vs all days as the baseline:**
+  * **(a)** close > open (an intraday reversal off the gap);
+  * **(b)** the day's low prints by 10:30 (the open area is the floor);
+  * **(c)** the close recovers ≥ 50% of the gap;
+  * **(d)** next-day and 5-day returns from the close;
+  * **(e)** the open-day low is undercut within the next 5 sessions (the floor gives way).
+* **Split:** gap-down days with the open below the pre-open `flip_incl` (`preopen_levels.csv`, 2020-26) vs above it.
+* **Predictions (from §4z: below the flip, up-bursts are 2.8× as likely):**
+  * gap-downs below the flip reverse more: (a) ≥ 55%;
+  * 5-day return from the open > 0;
+  * (e) undercut ≤ 50%.
+* **Descriptive.** The event count is small, so no rule is claimed.
