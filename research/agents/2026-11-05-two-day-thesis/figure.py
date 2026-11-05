@@ -19,19 +19,21 @@ for i in range(4):
     for off, v in ((-0.27, aidr[i]), (0, restr[i]), (0.27, oil[i])): a.text(i + off, v + (0.3 if v >= 0 else -0.3), f"{v:+.1f}", ha="center", va="bottom" if v >= 0 else "top", fontsize=7.5)
 a.axhline(0, color="k", lw=0.8); a.set_xticks(x); a.set_xticklabels([d[0] for d in days], fontsize=9); a.set_ylabel("% move")
 a.legend(frameon=False, fontsize=8, loc="lower left"); a.set_ylim(min(aidr + oil) - 3, max(restr + oil + [3]) + 2.5)
-a.set_title("A. One pattern, four days: AI sold whenever there was news;\n    the rest held up only when oil fell (a cushion)", loc="left", fontweight="bold", fontsize=11)
+spr = [ai_ - re_ for ai_, re_ in zip(aidr, restr)]
+a.text(0.99, 0.02, "AI minus rest: " + "  ".join(f"{v:+.1f}" for v in spr), transform=a.transAxes, ha="right", fontsize=8.5, fontweight="bold")
+a.set_title("A. One seesaw, four days: AI and oil together, the rest opposite;\n    Thursday broke it (no oil cushion)", loc="left", fontweight="bold", fontsize=11)
 # B: Day 1 anomaly scatter
 b = fig.add_subplot(gs[0, 1]); px = pd.DataFrame({s: lc.yahoo(s, "2022-12-01").close for s in ("RSP", "SMH")}).dropna(); rr = px.pct_change().dropna()
 hist = rr[(rr.index >= "2023-01-01") & (rr.index <= "2026-10-30")]
 b.scatter(100 * hist.SMH, 100 * hist.RSP, s=6, color="#bdbdbd", alpha=0.6, label="every day 2023 → Oct 2026")
-g = np.linspace(-11, 8, 100); rc = A2["B4 recent 2023-2026"]; s1, s2 = rc["slope above -4%"], rc["extra slope below -4%"]
+g = np.linspace(-12.5, 8, 100); rc = A2["B4 recent 2023-2026"]; s1, s2 = rc["slope above -4%"], rc["extra slope below -4%"]
 yb = s1 * np.maximum(g / 100, -0.04) + s2 * np.minimum(g / 100 + 0.04, 0); b.plot(g, 100 * yb, color="#1565c0", lw=1.6, label="normal relationship (with tail)")
 for lab, d, col in (("Mon Nov 2", "2026-11-02", "#ef6c00"), ("Day 1 (Wed)", "2026-11-04", "#2e7d32"), ("Day 2 (Thu)", "2026-11-05", "#c62828")):
     t = pd.Timestamp(d)
     if t in rr.index: b.scatter(100 * rr.SMH.loc[t], 100 * rr.RSP.loc[t], s=90, color=col, zorder=5, edgecolor="k"); b.annotate(lab, (100 * rr.SMH.loc[t], 100 * rr.RSP.loc[t]), xytext=(8, 4), textcoords="offset points", fontsize=9, fontweight="bold", color=col)
-b.axhline(0, color="k", lw=0.6); b.axvline(0, color="k", lw=0.6); b.set_xlabel("chips (SMH) daily %"); b.set_ylabel("equal-weight S&P (RSP) daily %"); b.set_xlim(-11, 8); b.set_ylim(-6, 5)
+b.axhline(0, color="k", lw=0.6); b.axvline(0, color="k", lw=0.6); b.set_xlabel("chips (SMH) daily %"); b.set_ylabel("equal-weight S&P (RSP) daily %"); b.set_xlim(-12.5, 8); b.set_ylim(-6, 5)
 z1, z2 = rc["Day1"]["z"], rc["Day2"]["z"]
-b.text(0.02, 0.97, f"Day 1: z {z1:+.1f} (rare: the broad market rose while chips fell)\nDay 2: z {z2:+.1f} (ordinary for a −9% chip day)", transform=b.transAxes, va="top", fontsize=9, bbox=dict(fc="white", ec="#ccc"))
+b.text(0.02, 0.97, f"Day 1: z {z1:+.1f} (rare: the broad market rose while chips fell)\nDay 2: z {z2:+.1f} (ordinary for this chip drop in the 2023–26 regime)", transform=b.transAxes, va="top", fontsize=9, bbox=dict(fc="white", ec="#ccc"))
 b.legend(frameon=False, fontsize=8, loc="lower right")
 b.set_title("B. Day 1 was the anomaly; Day 2 was the rule", loc="left", fontweight="bold", fontsize=11)
 # C: cross-section loadings
@@ -42,18 +44,22 @@ for i, k in enumerate(ks):
     for off, v in ((-0.2, d1[k]), (0.2, d2[k])): c.text(i + off, v[0] + (0.08 if v[0] >= 0 else -0.08), f"t {v[1]:+.0f}", ha="center", va="bottom" if v[0] >= 0 else "top", fontsize=7.5)
 c.axhline(0, color="k", lw=0.8); c.set_xticks(xx); c.set_xticklabels([lab[k] for k in ks], fontsize=9); c.set_ylabel("% return per 1 SD of exposure (500 stocks)")
 c.legend(frameon=False, fontsize=8.5, loc="lower right")
-c.set_title("C. Same AI shock both days; Day 1 had the oil/rates cushion,\n    Day 2 had market-beta selling instead", loc="left", fontweight="bold", fontsize=11)
+c.set_title("C. Day 1: AI shock + oil/rates cushion. Day 2: AI shock + selling\n    by market beta and of crowded winners, no cushion", loc="left", fontweight="bold", fontsize=11)
 # D: intraday Day 2
-d = fig.add_subplot(gs[1, 1]); P = pd.read_csv(O / f"intraday_paths_{label}.csv", index_col=0, parse_dates=True).dropna()
+d = fig.add_subplot(gs[1, 1]); M5 = pd.read_parquet(f"{dl}/m5.parquet").reset_index(); M5 = M5[M5.ts.dt.date == pd.Timestamp("2026-11-05").date()]
+M5 = M5[(M5.ts.dt.time >= pd.Timestamp("09:30").time()) & (M5.ts.dt.time < pd.Timestamp("16:00").time())].assign(ts=lambda q: q.ts.dt.floor("5min"))
+Cc = M5.pivot_table(index="ts", columns="sym", values="close", aggfunc="last"); Oo = M5.pivot_table(index="ts", columns="sym", values="open", aggfunc="first").iloc[0]
+pth = lambda nm: (Cc[[s for s in nm if s in Cc]].div(Oo[[s for s in nm if s in Cc]]) - 1).mean(axis=1)
+P = pd.DataFrame({"AI_cum": pth(ai10), "rest_cum": pth(rest)}).dropna()
 tt = [t.strftime("%H:%M") for t in P.index]; xi = np.arange(len(P))
 d.plot(xi, 100 * P.AI_cum, color="#c62828", lw=2, label="AI suppliers (top 10%)"); d.plot(xi, 100 * P.rest_cum, color="#2e7d32", lw=2, label="rest of the S&P (bottom 70%)")
 for col, ser in (("#c62828", P.AI_cum), ("#2e7d32", P.rest_cum)):
     i = int(np.argmin(ser.values)); d.scatter(i, 100 * ser.iloc[i], color=col, s=40, zorder=5); d.annotate(f"low {tt[i]}", (i, 100 * ser.iloc[i]), xytext=(5, -12), textcoords="offset points", fontsize=8.5, color=col)
 tk = [i for i, t in enumerate(tt) if t.endswith(":00")]; d.set_xticks(tk); d.set_xticklabels([tt[i] for i in tk], fontsize=8.5); d.axhline(0, color="k", lw=0.6)
 d.set_ylabel("% from the open (equal weight)"); d.legend(frameon=False, fontsize=8.5, loc="lower left")
-d.set_title("D. Day 2 intraday: AI front-loaded; the rest kept\n    falling even while AI bounced (11:00–12:00)", loc="left", fontweight="bold", fontsize=11)
+d.set_title("D. Day 2 intraday: the rest sold as a basket 10:00–13:00, then stopped;\n    AI fell, bounced, and fell again into the close", loc="left", fontweight="bold", fontsize=11)
 for ax in (a, b, c, d): ax.spines[["top", "right"]].set_visible(False)
 two = lambda names: 100 * ((1 + R.loc[pd.Timestamp("2026-11-04"), names]) * (1 + R.loc[pd.Timestamp("2026-11-05"), names]) - 1).mean()
-fig.suptitle(f"Same AI shock twice; only the cushion changed. Two days net: AI suppliers {two(ai10):+.1f}%, the rest of the S&P {two(rest):+.1f}% (equal weight).", x=0.01, ha="left", fontsize=13.5, fontweight="bold")
-fig.text(0.01, 0.005, f"Tested and rejected: momentum crash (H2), crowding outside AI (H3), Day-1 reversal (H5), AI-first timing at 5-min (H6, L), 'rotation zone' threshold (A3), AI as war shelter (A4-C1); 'AI = funding leg' suggestive only (A5 p 0.065). Data: Yahoo, S&P 500 constituents; label: {label}.", fontsize=7.5, color="#555")
+fig.suptitle(f"Same relative shock both days (AI build-out about −9% vs the rest); only the cushion changed. Two days net: AI {two(ai10):+.1f}%, rest of the S&P {two(rest):+.1f}%.", x=0.01, ha="left", fontsize=13, fontweight="bold")
+fig.text(0.01, 0.005, f"Passed: H1 (Day-1 AI/oil/rates), H3 (crowded winners outside AI, Day 2), H4 (beta selling, Day 2), Day-1 anomaly (B1/B4), Day-2 basket co-movement 98th pct (B5), Monday same pattern (C2). Rejected: momentum crash (H2), reversal (H5), AI-first timing (H6, L), rotation-zone threshold (A3), AI war shelter (C1); funding leg suggestive (A5 p 0.065). Yahoo data; {label}.", fontsize=7.2, color="#555")
 plt.savefig(O / f"two_day_thesis_{label}.png", bbox_inches="tight"); print("ok")

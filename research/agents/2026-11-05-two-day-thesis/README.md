@@ -228,3 +228,56 @@ Data: Yahoo daily and intraday bars, plus the Yahoo Finance, Reuters and CNBC ti
 **What it implies (a map, not a forecast):**
 * While the AI build-out keeps being repriced, the rest of the market's direction depends on whether a cushion shows up (oil or yields falling).
 * Friday's payrolls is the next test: a weak print means lower yields, a cushion. A hot print removes it.
+
+---
+
+# FINAL results (16:00 close; rerun 16:06–16:07 ET). These supersede the preview where they differ.
+Files: `out/*_final.*`, figure `out/two_day_thesis_final.png`.
+
+**Closes, Day 2:** SPY 733.11 (−4.39%), QQQ 647.05 (−6.49%), RSP −2.89%, IWM −4.58%, **SMH −11.21%** (preview −8.69%). AI basket EW −11.39%, rest EW −1.73%, TSLA 343.69.
+
+| Test | Preview | **Final** |
+|---|---|---|
+| H1 Day-1 AI/OIL/RATE | pass | **pass** (t −11.6 / −9.6 / +4.2) |
+| H2 Day-1 momentum crash | fail | **fail** (t +0.3) |
+| H3 Day-2 crowding outside AI | fail (Holm 0.20) | **pass**: −0.83%/SD, t −3.1, Holm p 0.0009; Huber −5.2, sector-demeaned −2.8 |
+| H4 Day-2 beta selling | pass | **pass** (t −14.2) |
+| H5 Day-1 residual reverses | fail | **fail** (corr +0.11) |
+| H6 AI lows earlier | fail | **fail, reversed**: high-AI median low 14:25 vs low-AI 13:00 |
+| B1 Day 2 vs linear model | z −3.7 / −4.0 | z −3.72 (RSP) / −4.08 (non-AI) |
+| B4 Day 2 vs recent tail model | z −1.1 | **z −0.85** (normal). Full-sample z +3.33: RSP fell *less* than the 2004–26 tail implies. The 2 SMH-within-1.5pt analogs were 2020-03-12 (−10.1%) and 2025-01-27 (+0.1%). |
+| B4 Day 1 | z +3.5 / +4.6 | z +3.46 / +4.62 |
+| B5 non-AI co-movement | Day 2 missing | **Day 2 0.253 = 98th pct of 58 days (z +2.5)**; Day 1 0.149 (52nd pct) |
+| B2 5-min lead-lag | L −0.40 | L −0.31 (CI −0.59..+0.28): none |
+| C2 Day-2 cross-section | — | AI −2.93 (t −22.4), MKT −1.68, OIL −0.05 (n.s.) |
+
+**Intraday Day 2** (EW from the open):
+* AI basket −7.2% at 11:00, recovered to −4.6% at 14:45, then fell to **−7.3% at 15:55, its low, at the close**.
+* Rest: low −3.0% at 13:00, then flat (−2.6% at the close). The final hour's selling was AI-only.
+
+**AI basket minus the rest:** Mon −5.0, Tue +3.9, **Wed −9.0, Thu −9.7**.
+**Net:** two days AI basket **−16.5%**, rest **+1.4%**. Four days −16.8% vs +2.2%.
+**TSLA:** stock-specific −4.2% (Day 1) and −2.9% (Day 2) beyond its exposures.
+
+## Final thesis (v5): "same relative shock, different level"
+1. **The relative shock was the same both days.** The data-defined AI build-out basket (chips, memory and storage, networking and optics, servers, power and electrical equipment) lost **9–10% against the rest of the S&P on each day** (−9.0%, −9.7%).
+   * In cross-sectional loadings, Day 2 was about 20% larger (−2.93 vs −2.45%/SD).
+2. **Only the level of the rest changed.**
+   * **Day 1 was cushioned:** the election's Iran-peace odds sent oil −8.1% and yields −6bp, and the rest rose **+3.2%**. That is a rare decoupling (z +2.5 to +4.6); normally a −2.75% chip day drags the broad market down.
+   * **Day 2 had no cushion:** the rest fell **−1.7%**. The size is ordinary for an −11% chip day in the 2023–26 regime (z −0.85).
+3. **Day 2's broad selling had the signature of portfolio de-risking, not news about those companies.**
+   * Non-AI stocks moved as one basket (98th-percentile co-movement).
+   * Selling was in proportion to market beta (t −14), with crowded winners outside AI sold too (t −3.1).
+   * Yields fell and defensives held.
+   * It ran 10:00–13:00 and stopped as SPY reached its 735 gamma trough and put block. The AI leg alone kept falling into the close.
+4. **Not new.** Monday (Iran talks) had the same pattern and Tuesday mirrored it: a Mon–Wed seesaw (AI and oil together, the rest opposite) that Thursday broke.
+
+**Corrections to the v4 preview text:**
+* "same intensity" holds for the AI-minus-rest spread, not the loadings (Day 2 about 20% larger);
+* "crowding outside AI rejected" is reversed: H3 passes at the close;
+* "AI front-loaded" is wrong for the full day: AI had two legs and its low came at the close.
+
+**Open:**
+* Why AI began falling on peace news in November after rising on it during the war (C3).
+* The funding-leg hypothesis (A5, p 0.065).
+* What drove the AI-only final hour. Leveraged-ETF rebalancing or closing-auction imbalances could test it, using Databento closing-imbalance data (cost to be quoted first).

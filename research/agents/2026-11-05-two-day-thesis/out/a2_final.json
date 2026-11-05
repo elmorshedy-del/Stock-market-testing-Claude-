@@ -1,0 +1,100 @@
+{
+ "label": "final",
+ "B4 full 2004-2026": {
+  "n": 5172,
+  "slope above -4%": 0.434,
+  "extra slope below -4%": 0.57,
+  "t extra": 4.74,
+  "n tail days": 130,
+  "resid sd %": 0.845,
+  "Day1": {
+   "actual %": 1.86,
+   "predicted %": -2.05,
+   "z": 4.62,
+   "SMH %": -2.75
+  },
+  "Day2": {
+   "actual %": -2.89,
+   "predicted %": -5.7,
+   "z": 3.33,
+   "SMH %": -11.21
+  },
+  "days with SMH within 1.5pt of Day 2": {
+   "n": 2,
+   "RSP mean %": -5.01,
+   "RSP median %": -5.01,
+   "dates": {
+    "2020-03-12": [
+     -10.6,
+     -10.1
+    ],
+    "2025-01-27": [
+     -9.8,
+     0.1
+    ]
+   }
+  }
+ },
+ "B4 recent 2023-2026": {
+  "n": 961,
+  "slope above -4%": 0.212,
+  "extra slope below -4%": 0.212,
+  "t extra": 1.27,
+  "n tail days": 32,
+  "resid sd %": 0.711,
+  "Day1": {
+   "actual %": 1.86,
+   "predicted %": -0.6,
+   "z": 3.46,
+   "SMH %": -2.75
+  },
+  "Day2": {
+   "actual %": -2.89,
+   "predicted %": -2.29,
+   "z": -0.85,
+   "SMH %": -11.21
+  },
+  "days with SMH within 1.5pt of Day 2": {
+   "n": 1,
+   "RSP mean %": 0.07,
+   "RSP median %": 0.07,
+   "dates": {
+    "2025-01-27": [
+     -9.8,
+     0.1
+    ]
+   }
+  }
+ },
+ "B5 avg pairwise 5-min corr, 150 non-AI names": {
+  "n baseline days": 58,
+  "baseline median": 0.147,
+  "baseline 95th pct": 0.211,
+  "Day1": {
+   "corr": 0.149,
+   "percentile vs baseline": 0.517,
+   "z": -0.12
+  },
+  "Day2": {
+   "corr": 0.253,
+   "percentile vs baseline": 0.983,
+   "z": 2.48
+  },
+  "top 5 baseline days": {
+   "2026-09-16": 0.276,
+   "2026-08-18": 0.221,
+   "2026-09-28": 0.216,
+   "2026-11-03": 0.21,
+   "2026-09-25": 0.206
+  }
+ },
+ "B2 lead-lag fixed": {
+  "L": -0.307,
+  "bootstrap 90% CI": [
+   -0.587,
+   0.284
+  ],
+  "n bars": 76,
+  "corr lag0": 0.366
+ }
+}

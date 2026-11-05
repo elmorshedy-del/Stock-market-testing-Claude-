@@ -1,0 +1,234 @@
+{
+ "label": "final",
+ "n stocks": 500,
+ "Day1": "2026-11-04",
+ "Day2": "2026-11-05 (final)",
+ "D1 model A": {
+  "R2": 0.456,
+  "coef % per 1 SD (t)": {
+   "MKT": [
+    0.27,
+    1.5
+   ],
+   "AI": [
+    -2.45,
+    -11.6
+   ],
+   "OIL": [
+    -1.43,
+    -9.6
+   ],
+   "RATE": [
+    0.81,
+    4.2
+   ],
+   "GOLD": [
+    0.33,
+    1.3
+   ]
+  }
+ },
+ "D1 model B": {
+  "R2": 0.468,
+  "coef % per 1 SD (t)": {
+   "MKT": [
+    0.05,
+    0.2
+   ],
+   "AI": [
+    -2.87,
+    -9.4
+   ],
+   "OIL": [
+    -1.39,
+    -8.4
+   ],
+   "RATE": [
+    0.95,
+    5.0
+   ],
+   "GOLD": [
+    0.21,
+    0.8
+   ],
+   "MOM": [
+    0.09,
+    0.3
+   ],
+   "STR": [
+    -0.72,
+    -3.0
+   ]
+  }
+ },
+ "D2 model A": {
+  "R2": 0.681,
+  "coef % per 1 SD (t)": {
+   "MKT": [
+    -1.68,
+    -10.3
+   ],
+   "AI": [
+    -2.93,
+    -22.4
+   ],
+   "OIL": [
+    -0.05,
+    -0.4
+   ],
+   "RATE": [
+    0.04,
+    0.2
+   ],
+   "GOLD": [
+    0.09,
+    0.4
+   ]
+  }
+ },
+ "D2 model B": {
+  "R2": 0.708,
+  "coef % per 1 SD (t)": {
+   "MKT": [
+    -1.8,
+    -14.2
+   ],
+   "AI": [
+    -2.62,
+    -15.1
+   ],
+   "OIL": [
+    0.11,
+    1.1
+   ],
+   "RATE": [
+    0.05,
+    0.4
+   ],
+   "GOLD": [
+    0.1,
+    0.5
+   ],
+   "MOM": [
+    -0.83,
+    -5.2
+   ],
+   "STR": [
+    -0.38,
+    -2.5
+   ]
+  }
+ },
+ "H details": {
+  "H1 Day1 A: AI, OIL, RATE (coef, t)": {
+   "AI": [
+    -2.45,
+    -11.6
+   ],
+   "OIL": [
+    -1.43,
+    -9.6
+   ],
+   "RATE": [
+    0.81,
+    4.2
+   ]
+  },
+  "H2 Day1 B: MOM": [
+   0.09,
+   0.3
+  ],
+  "H3 Day2 B, AI below 70th pct: MOM": [
+   -0.83,
+   -3.1,
+   350
+  ],
+  "H4 Day2 B: MKT": [
+   -1.8,
+   -14.2
+  ],
+  "H5 corr(resid D1, resid D2), Model A": [
+   0.11,
+   "spearman",
+   0.128
+  ]
+ },
+ "Holm": {
+  "H4": {
+   "p": 0.0,
+   "adj": 0.0,
+   "PASS": true
+  },
+  "H1": {
+   "p": 1e-05,
+   "adj": 5e-05,
+   "PASS": true
+  },
+  "H3": {
+   "p": 0.00086,
+   "adj": 0.00259,
+   "PASS": true
+  },
+  "H2": {
+   "p": 0.62621,
+   "adj": 1,
+   "PASS": false
+  },
+  "H5": {
+   "p": 0.993,
+   "adj": 1,
+   "PASS": false
+  }
+ },
+ "robustness": {
+  "Huber": {
+   "H1 AI/OIL/RATE t": [
+    -17.4,
+    -12.0,
+    6.7
+   ],
+   "H2 MOM t": -0.3,
+   "H3 MOM t (low AI)": -5.2,
+   "H4 MKT t": -19.4
+  },
+  "sector-demeaned": {
+   "H1 AI/OIL/RATE t": [
+    -9.3,
+    -4.6,
+    3.7
+   ],
+   "H2 MOM t": -0.6,
+   "H3 MOM t (low AI)": -2.8,
+   "H4 MKT t": -11.2
+  }
+ },
+ "H6 time of Day-2 low (min after 09:30)": {
+  "high AI median": 295.0,
+  "low AI median": 210.0,
+  "mid AI median": 275.0,
+  "p (Mann-Whitney, high earlier)": 0.9994844723883234,
+  "n": [
+   167,
+   167
+  ],
+  "last bar": "2026-11-05 15:55:00-05:00"
+ },
+ "corr raw D1,D2": 0.439
+}
+sector means %:
+  Energy                   D1 -5.19  D2 -3.38
+  Information Technology   D1 -1.52  D2 -7.78
+  Industrials              D1 -0.05  D2 -3.78
+  Utilities                D1 +0.04  D2 -0.75
+  Materials                D1 +2.69  D2 -2.42
+  Financials               D1 +3.03  D2 -2.22
+  Real Estate              D1 +3.59  D2 -1.56
+  Communication Services   D1 +3.86  D2 -1.25
+  Health Care              D1 +3.92  D2 -2.22
+  Consumer Staples         D1 +4.15  D2 -0.54
+  Consumer Discretionary   D1 +5.52  D2 -2.41
+sector median minute of Day-2 low: {'Communication Services': 197.5, 'Consumer Discretionary': 210.0, 'Consumer Staples': 210.0, 'Information Technology': 210.0, 'Materials': 235.0, 'Health Care': 250.0, 'Financials': 275.0, 'Real Estate': 290.0, 'Utilities': 290.0, 'Industrials': 305.0, 'Energy': 385.0}
+suppliers {'NVDA': [np.float64(-3.2), np.float64(-9.3), np.float64(13.0)], 'AVGO': [np.float64(-2.0), np.float64(-10.4), np.float64(-4.0)], 'AMD': [np.float64(1.0), np.float64(-17.3), np.float64(139.0)], 'MU': [np.float64(-7.0), np.float64(-17.5), np.float64(376.0)], 'AMAT': [np.float64(-3.3), np.float64(-13.6), np.float64(121.0)], 'LRCX': [np.float64(-4.0), np.float64(-16.4), np.float64(110.0)], 'KLAC': [np.float64(-4.1), np.float64(-13.3), np.float64(62.0)], 'VRT': [np.float64(-12.9), np.float64(-14.1), np.float64(25.0)], 'ETN': [np.float64(-9.9), np.float64(-7.5), np.float64(14.0)], 'GEV': [np.float64(-9.3), np.float64(-7.4), np.float64(63.0)], 'VST': [np.float64(-13.8), np.float64(-6.1), np.float64(-26.0)], 'CEG': [np.float64(-6.7), np.float64(-2.5), np.float64(-32.0)], 'DELL': [np.float64(-8.8), np.float64(-15.0), np.float64(235.0)], 'SMCI': [np.float64(-5.7), np.float64(-8.5), np.float64(-21.0)], 'ANET': [np.float64(5.0), np.float64(-10.8), np.float64(29.0)]}
+spenders {'MSFT': [np.float64(6.7), np.float64(-3.6), np.float64(-0.0)], 'AMZN': [np.float64(6.1), np.float64(-2.2), np.float64(2.0)], 'GOOGL': [np.float64(3.2), np.float64(-2.2), np.float64(23.0)], 'META': [np.float64(1.4), np.float64(-4.0), np.float64(12.0)], 'AAPL': [np.float64(5.3), np.float64(-1.5), np.float64(24.0)]}
+software AI winners {'PLTR': [np.float64(-2.1), np.float64(-9.7), np.float64(-7.0)], 'CRWD': [np.float64(-1.5), np.float64(-9.9), np.float64(95.0)], 'PANW': [np.float64(-0.6), np.float64(-9.6), np.float64(80.0)], 'ORCL': [np.float64(-1.9), np.float64(-7.0), np.float64(-47.0)], 'DDOG': [np.float64(-14.4), np.float64(-7.5), np.float64(68.0)], 'APP': [np.float64(10.7), np.float64(31.0), np.float64(-54.0)]}
+software AI losers {'CRM': [np.float64(2.2), np.float64(-2.1), np.float64(-11.0)], 'ADBE': [np.float64(1.0), np.float64(-0.8), np.float64(-29.0)], 'NOW': [np.float64(-0.3), np.float64(-5.9), np.float64(-27.0)], 'INTU': [np.float64(3.5), np.float64(-0.5), np.float64(-58.0)], 'WDAY': [np.float64(2.0), np.float64(-0.8), np.float64(-21.0)]}
