@@ -96,3 +96,29 @@ Data: Yahoo daily and intraday bars, plus the Yahoo Finance, Reuters and CNBC ti
   * Descriptive: when each group completed half of its day's decline.
 * **B3 (history, descriptive):** "rotation days" since 2004 (SMH − RSP ≤ −3% and RSP ≥ +1%). Next-day and next-3-day RSP returns, with the share negative vs the base rate.
 * **Final:** all tests rerun on the 16:00 close (`label = final`).
+
+---
+
+# A1 preview results and Amendment A2 (pre-registered before running A2)
+**A1 preview** (`out/a1_preview.json`):
+* **B1:** A1's Day-2 prediction fails.
+  * RSP Day 2: actual −2.64% vs predicted −0.47%, z −3.72.
+  * Non-AI EW stocks: −1.81% vs +0.97%, z −3.97.
+  * Day 1 was also abnormal: RSP z +1.95; non-AI z +2.54.
+* **B2 (descriptive):**
+  * Top AI decile: half its decline by 10:10, low at 11:00 (−7.5%).
+  * Rest: half by 11:10, low at 13:00 (−3.1%).
+  * The rest fell −1.0% from 11:00 to 12:00 while the AI decile bounced +1.1%.
+  * The lead-lag L returned NaN (a NaN bar) and is fixed below.
+* **B3:** 15 rotation days since 2003. Next-day RSP was negative 33% of the time (base 45%); next 3 days negative 60% (base 43%). Day 2's contagion is unusual for the day after a rotation.
+
+## A2: is Day 2 "abnormal contagion" or "normal tail co-movement"?
+* **B4 (tail co-movement):** piecewise regression of RSP on SMH, with separate slopes above and below SMH = −4%, plus USO, TLT and GLD.
+  * Fit 2004-01-01 → 2026-10-30, with 2023-01 → 2026-10 as robustness.
+  * Report both slopes, then the Day 1 and Day 2 predictions and residual z.
+  * "Tail-normal" (Day 2 is the rule) predicts Day 2 |z| < 2.
+  * "Abnormal contagion" predicts Day 2 z ≤ −2 even with the tail slope.
+* **B5 (basket-selling signature):** average pairwise correlation of 5-min returns among 150 non-AI S&P stocks (AI exposure below its 70th percentile, seeded random sample).
+  * Compare Day 1 and Day 2 with the prior ~55 sessions (Yahoo 60-day 5-min). Report each day's percentile and z.
+  * "Portfolio problem" predicts Day 2 ≥ 95th percentile of baseline days. "Rotation" predicts Day 1 below the baseline median.
+* **B2 fix:** drop NaN bars before computing L.
