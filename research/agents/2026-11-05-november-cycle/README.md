@@ -58,3 +58,69 @@
 
 ## Reproduce
 `python cycle.py <DIX.csv>` → `out/cycle.json`, `out/months.csv`
+
+---
+
+# Results (run ~10:45 ET; Nov 2026 is live and provisional)
+Weak start = first 4 sessions ≤ −1.03% (bottom 20%). Tech-rotation start = NDX/SPX ≤ −0.96%. 921 complete months.
+
+**Holm across P1–P4:** P1 fails (adj 1.0), **P2 passes (adj < 0.001)**, P3 fails (adj 0.10), P4 fails (adj 1.0).
+
+## Q1. November
+**N1: "even in bear markets Novembers close flat or up"**
+* Only partly true.
+* All 76 Novembers: 82% closed ≥ −1%, vs 70% for any month.
+* The 24 bear Novembers: 71%, no better than an average month.
+* Big losers (all bear): 1973 −11.4%, 1987 −8.5%, 2000 −8.0%, 2008 −7.5%, 1974 −5.3%.
+
+**P1: does November rescue a weak start?** Fails.
+* After a weak start, the rest of November averaged +0.97% (69% up, n = 13).
+* Other months after a weak start: +1.11% (58% up, n = 172).
+* Permutation p 0.53.
+* November's edge is mostly that it rarely starts weak, not that it repairs a bad start.
+* Weak-start Novembers that kept falling: 1973, 1994, 2007, 2008.
+
+**N3: Novembers with a tech-rotation start** (7 cases: 1989, 1993, 1997, 2016, 2018, 2022, 2025)
+* The S&P rose over the rest of the month in 7/7 (+0.2% to +8.2%).
+* The NDX rose in 6/7.
+* But tech's lead over the S&P recovered in only 3/7 (1989, 1993, 2022).
+* Across all 99 months with a tech-rotation start, the ratio's rest of month averaged +0.09% (49.5% up), vs +0.28% for all months. No snap-back tendency.
+
+**Exploratory, not pre-registered: extreme tech-rotation starts**
+* Today's NDX/SPX start is −3.4%: 2nd percentile of all months, deeper than any November (prior worst: 2022, −2.25%).
+* 17 months since 1985 opened ≤ −3%. Eight of them were in 2000–02; July 2026 is one too.
+* Over the rest of those months: S&P up only 41% (median −0.19%), NDX up 53%, tech's lead recovered only 41% (median −0.82%).
+* Small, overlapping and dot-com-heavy, but it points the other way from the mild-rotation Novembers.
+
+## Q2. Monthly cycle (one observation per month; bull 652 months, bear 260)
+S&P average return in bp/day, bull / bear:
+
+| | Days 1–4 | To expiry week | Expiry week | After expiry |
+|---|---|---|---|---|
+| Bull | 10.8 | 3.3 | 4.8 | 1.8 |
+| Bear | 5.7 | −0.7 | −0.2 | 3.0 |
+
+* **P2 passes.** In bull months, days 1–4 beat the rest of the month by 7.9 bp/day (p < 0.001). It holds in both eras: 9.3 bp/day in 1950–99, 5.5 bp/day in 2000–26 (p 0.048). This is the well-known turn-of-month effect, not something new.
+* **P3 fails after Holm.** In bull months, moves are only 4.6% bigger in days 1–4 than in expiry week (raw p 0.034, adj 0.10).
+  * It is larger after 2000: +6.9% (p 0.05) vs +3.3% in 1950–99 (p 0.14). That is the direction an options-driven story predicts, but it isn't proven.
+* **Mechanism, 2012–:** GEX percentile in bull months is 0.57 in days 1–4, 0.62 into and through expiry, and 0.50 after. Options gamma does build into expiry and drop after. The damping of moves it implies is small.
+* **P4 fails.** Bear months are not the opposite.
+  * Days 1–4 are still their best stretch: +5.1 bp/day over the rest (p 0.87 for the "opposite" claim).
+  * Bear-market weakness sits mid-month, into expiry (−0.7 and −0.2 bp/day). Bear months then do better after expiry (+3.0).
+
+## Q3. Weak start → rest of month
+* Bull months: +0.63% (58% up, n 111), vs +0.47% for all bull months.
+* Bear months: +1.81% (59% up, n 74), vs +0.14%. That is rebound size (bear rallies are big), not reliability.
+
+## Today (live, session 4)
+* S&P start about −1.0%, right at the weak-start line (−1.03%); it crossed and recrossed during the morning.
+* NDX/SPX start −3.4% (2nd percentile).
+* Regime is Bull: S&P was above its 200-day average at the Oct close, 3% off its high.
+* Context, descriptive: since Oct 30, AAPL +1.6%, MSFT +3.9%, AMZN +7.0%, GOOGL +1.6%. Meanwhile NVDA −9.0%, AVGO −7.0%, AMD −16.7%, MU −21.1%, ORCL −10.0%, CRWV −22.3%, SMH −11.3%. RSP +1.4%, XLP +4.1%, XLV +3.6%.
+* The selling is in chips and AI infrastructure, not in cash-rich megacaps.
+
+**Verdict**
+* November seasonality does not rescue a weak start (P1 fails).
+* The owner's bull-month cycle is half right: the first days are strongest, but "slowing into expiry" is too small to prove.
+* The bear-month "opposite" is wrong: bear weakness is mid-month, not the first week.
+* Mild tech-rotation Novembers saw the S&P recover. Extreme rotation starts like today's leaned weaker (exploratory, dot-com-heavy).

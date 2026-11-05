@@ -1,0 +1,410 @@
+{
+ "as of": "2026-11-05 intraday (Nov 2026 start is LIVE, provisional)",
+ "months complete": 921,
+ "weak start threshold (bottom 20%)": -1.03,
+ "tech-rotation threshold (bottom 20%, 1985-)": -0.96,
+ "N1": {
+  "Novembers": 76,
+  "share >= -1%": 0.816,
+  "share up": 0.697,
+  "median %": 2.03,
+  "bear Novembers": 24,
+  "bear share >= -1%": 0.708,
+  "losers (< -1%)": {
+   "1956": {
+    "Nov %": -1.1,
+    "bull": false,
+    "dd %": -8.18
+   },
+   "1963": {
+    "Nov %": -1.05,
+    "bull": true,
+    "dd %": -0.63
+   },
+   "1969": {
+    "Nov %": -3.41,
+    "bull": false,
+    "dd %": -10.38
+   },
+   "1973": {
+    "Nov %": -11.39,
+    "bull": false,
+    "dd %": -9.94
+   },
+   "1974": {
+    "Nov %": -5.32,
+    "bull": false,
+    "dd %": -30.98
+   },
+   "1984": {
+    "Nov %": -1.51,
+    "bull": true,
+    "dd %": -1.88
+   },
+   "1987": {
+    "Nov %": -8.53,
+    "bull": false,
+    "dd %": -25.23
+   },
+   "1988": {
+    "Nov %": -1.89,
+    "bull": true,
+    "dd %": -1.65
+   },
+   "1991": {
+    "Nov %": -4.39,
+    "bull": true,
+    "dd %": -1.06
+   },
+   "1993": {
+    "Nov %": -1.29,
+    "bull": true,
+    "dd %": -0.36
+   },
+   "1994": {
+    "Nov %": -3.95,
+    "bull": true,
+    "dd %": -2.0
+   },
+   "2000": {
+    "Nov %": -8.01,
+    "bull": false,
+    "dd %": -6.42
+   },
+   "2007": {
+    "Nov %": -4.4,
+    "bull": true,
+    "dd %": -1.01
+   },
+   "2008": {
+    "Nov %": -7.48,
+    "bull": false,
+    "dd %": -36.28
+   }
+  },
+  "all months share >= -1%": 0.696
+ },
+ "P1": {
+  "weak-start Novembers": {
+   "1951": {
+    "start %": -1.96,
+    "rest %": 1.73,
+    "full %": -0.26,
+    "bull": true
+   },
+   "1963": {
+    "start %": -1.28,
+    "rest %": 0.23,
+    "full %": -1.05,
+    "bull": true
+   },
+   "1967": {
+    "start %": -1.95,
+    "rest %": 2.75,
+    "full %": 0.75,
+    "bull": true
+   },
+   "1973": {
+    "start %": -3.08,
+    "rest %": -8.57,
+    "full %": -11.39,
+    "bull": false
+   },
+   "1976": {
+    "start %": -2.02,
+    "rest %": 1.27,
+    "full %": -0.78,
+    "bull": true
+   },
+   "1989": {
+    "start %": -2.28,
+    "rest %": 4.02,
+    "full %": 1.65,
+    "bull": true
+   },
+   "1993": {
+    "start %": -2.21,
+    "rest %": 0.94,
+    "full %": -1.29,
+    "bull": true
+   },
+   "1994": {
+    "start %": -2.13,
+    "rest %": -1.86,
+    "full %": -3.95,
+    "bull": true
+   },
+   "2007": {
+    "start %": -1.88,
+    "rest %": -2.57,
+    "full %": -4.4,
+    "bull": true
+   },
+   "2008": {
+    "start %": -6.59,
+    "rest %": -0.95,
+    "full %": -7.48,
+    "bull": false
+   },
+   "2016": {
+    "start %": -1.93,
+    "rest %": 5.45,
+    "full %": 3.42,
+    "bull": true
+   },
+   "2022": {
+    "start %": -2.62,
+    "rest %": 8.21,
+    "full %": 5.38,
+    "bull": false
+   },
+   "2025": {
+    "start %": -1.75,
+    "rest %": 1.92,
+    "full %": 0.13,
+    "bull": true
+   }
+  },
+  "weak-start other months": 172,
+  "Nov rest mean %": 0.97,
+  "Nov rest share up": 0.692,
+  "other rest mean %": 1.11,
+  "other rest share up": 0.576,
+  "all months rest mean %": 0.37,
+  "diff %": -0.14,
+  "p (one-sided, permutation)": 0.5306,
+  "eligible (>=8 Novembers)": true
+ },
+ "N3": {
+  "1989": {
+   "SPX start %": -2.28,
+   "NDX/SPX start %": -1.09,
+   "SPX rest %": 4.02,
+   "NDX rest %": 4.3,
+   "NDX/SPX rest %": 0.27,
+   "SPX Nov %": 1.65,
+   "bull": true
+  },
+  "1993": {
+   "SPX start %": -2.21,
+   "NDX/SPX start %": -1.28,
+   "SPX rest %": 0.94,
+   "NDX rest %": 2.46,
+   "NDX/SPX rest %": 1.51,
+   "SPX Nov %": -1.29,
+   "bull": true
+  },
+  "1997": {
+   "SPX start %": 2.56,
+   "NDX/SPX start %": -1.1,
+   "SPX rest %": 1.85,
+   "NDX rest %": 1.58,
+   "NDX/SPX rest %": -0.27,
+   "SPX Nov %": 4.46,
+   "bull": true
+  },
+  "2016": {
+   "SPX start %": -1.93,
+   "NDX/SPX start %": -1.03,
+   "SPX rest %": 5.45,
+   "NDX rest %": 3.23,
+   "NDX/SPX rest %": -2.11,
+   "SPX Nov %": 3.42,
+   "bull": true
+  },
+  "2018": {
+   "SPX start %": 1.61,
+   "NDX/SPX start %": -1.28,
+   "SPX rest %": 0.17,
+   "NDX rest %": -0.57,
+   "NDX/SPX rest %": -0.74,
+   "SPX Nov %": 1.79,
+   "bull": false
+  },
+  "2022": {
+   "SPX start %": -2.62,
+   "NDX/SPX start %": -2.25,
+   "SPX rest %": 8.21,
+   "NDX rest %": 10.8,
+   "NDX/SPX rest %": 2.4,
+   "SPX Nov %": 5.38,
+   "bull": false
+  },
+  "2025": {
+   "SPX start %": -1.75,
+   "NDX/SPX start %": -1.08,
+   "SPX rest %": 1.92,
+   "NDX rest %": 1.21,
+   "NDX/SPX rest %": -0.69,
+   "SPX Nov %": 0.13,
+   "bull": true
+  }
+ },
+ "N3 all months with tech-rotation start": {
+  "n": 99,
+  "ratio rest mean %": 0.09,
+  "ratio rest share up": 0.495,
+  "all months ratio rest mean %": 0.28
+ },
+ "P2 bull: S1 > rest (daily ret)": {
+  "n": 652,
+  "mean diff (bp/day)": 7.943,
+  "p t": 7.1620983513615705e-06,
+  "p boot": 0.0,
+  "p used (larger)": 7.1620983513615705e-06,
+  "1950-1999": {
+   "n": 417,
+   "mean diff (bp/day)": 9.344,
+   "p t": 1.0795298417810652e-05,
+   "p boot": 0.0,
+   "p used (larger)": 1.0795298417810652e-05
+  },
+  "2000-2026": {
+   "n": 235,
+   "mean diff (bp/day)": 5.455,
+   "p t": 0.046912103694006835,
+   "p boot": 0.0477,
+   "p used (larger)": 0.0477
+  }
+ },
+ "P3 bull: movement S1 > S3": {
+  "n": 652,
+  "mean diff (x normal)": 0.046,
+  "p t": 0.032156627858910825,
+  "p boot": 0.034,
+  "p used (larger)": 0.034,
+  "1950-1999": {
+   "n": 417,
+   "mean diff (x normal)": 0.033,
+   "p t": 0.14130062586067568,
+   "p boot": 0.1402,
+   "p used (larger)": 0.14130062586067568
+  },
+  "2000-2026": {
+   "n": 235,
+   "mean diff (x normal)": 0.069,
+   "p t": 0.05156091926935819,
+   "p boot": 0.0498,
+   "p used (larger)": 0.05156091926935819
+  }
+ },
+ "P4 bear: S1 < rest (daily ret)": {
+  "n": 260,
+  "mean diff (bp/day)": 5.082,
+  "p t": 0.8698554944036883,
+  "p boot": 0.8657,
+  "p used (larger)": 0.8698554944036883,
+  "1950-1999": {
+   "n": 173,
+   "mean diff (bp/day)": 7.602,
+   "p t": 0.9475759370720306,
+   "p boot": 0.9478,
+   "p used (larger)": 0.9478
+  },
+  "2000-2026": {
+   "n": 87,
+   "mean diff (bp/day)": 0.071,
+   "p t": 0.5028701500152615,
+   "p boot": 0.5089,
+   "p used (larger)": 0.5089
+  }
+ },
+ "Holm": {
+  "P1": {
+   "p": 0.5306,
+   "adj": 1,
+   "PASS": false
+  },
+  "P2": {
+   "p": 0.0,
+   "adj": 0.0,
+   "PASS": true
+  },
+  "P3": {
+   "p": 0.034,
+   "adj": 0.102,
+   "PASS": false
+  },
+  "P4": {
+   "p": 0.8699,
+   "adj": 1,
+   "PASS": false
+  }
+ },
+ "segment profile": {
+  "bull": {
+   "S1": {
+    "ret bp/day": 10.75,
+    "movement x": 1.072,
+    "GEX pct (2011-)": 0.57
+   },
+   "S2": {
+    "ret bp/day": 3.34,
+    "movement x": 1.01,
+    "GEX pct (2011-)": 0.619
+   },
+   "S3": {
+    "ret bp/day": 4.83,
+    "movement x": 1.025,
+    "GEX pct (2011-)": 0.617
+   },
+   "S4": {
+    "ret bp/day": 1.81,
+    "movement x": 1.047,
+    "GEX pct (2011-)": 0.503
+   },
+   "n months": 652
+  },
+  "bear": {
+   "S1": {
+    "ret bp/day": 5.73,
+    "movement x": 1.138,
+    "GEX pct (2011-)": 0.296
+   },
+   "S2": {
+    "ret bp/day": -0.7,
+    "movement x": 1.059,
+    "GEX pct (2011-)": 0.359
+   },
+   "S3": {
+    "ret bp/day": -0.16,
+    "movement x": 1.026,
+    "GEX pct (2011-)": 0.425
+   },
+   "S4": {
+    "ret bp/day": 3.0,
+    "movement x": 1.067,
+    "GEX pct (2011-)": 0.414
+   },
+   "n months": 260
+  }
+ },
+ "Q3": {
+  "bull": {
+   "n": 111,
+   "rest mean %": 0.63,
+   "rest share up": 0.577,
+   "all-months rest mean %": 0.47,
+   "all-months share up": 0.594
+  },
+  "bear": {
+   "n": 74,
+   "rest mean %": 1.81,
+   "rest share up": 0.595,
+   "all-months rest mean %": 0.14,
+   "all-months share up": 0.504
+  }
+ },
+ "TODAY Nov 2026 (live)": {
+  "SPX start %": -1.08,
+  "start pct rank": 0.195,
+  "weak": true,
+  "NDX/SPX start %": -3.44,
+  "ratio start pct rank": 0.024,
+  "tech-rotation": true,
+  "bull (Oct close vs 200d)": true,
+  "dd from 252d high %": -3.05,
+  "last SPX": 7498.07,
+  "last date": "2026-11-05"
+ }
+}
