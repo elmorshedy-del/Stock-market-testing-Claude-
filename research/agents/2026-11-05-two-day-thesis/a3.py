@@ -23,7 +23,7 @@ def avgcorr(C):
 res = {}
 for d in ("2026-10-30", "2026-11-02", "2026-11-03", "2026-11-04", "2026-11-05"):
     x = M5[M5.ts.dt.date == pd.Timestamp(d).date()]; x = x[(x.ts.dt.time >= pd.Timestamp("09:30").time()) & (x.ts.dt.time < pd.Timestamp("16:00").time())]
-    C = x.pivot_table(index="ts", columns="sym", values="close"); v, shp = avgcorr(C); res[d] = {"corr": round(float(v), 3), "bars x names": list(shp)}
+    x = x.assign(ts=x.ts.dt.floor("5min")); C = x.pivot_table(index="ts", columns="sym", values="close", aggfunc="last"); v, shp = avgcorr(C); res[d] = {"corr": round(float(v), 3), "bars x names": list(shp)}
 a2 = json.load(open(O / f"a2_{label}.json"))["B5 avg pairwise 5-min corr, 150 non-AI names"]
 out["B5 fix (5-day pull)"] = {"by day": res, "baseline median (60-day pull)": a2["baseline median"], "baseline 95th pct": a2["baseline 95th pct"],
                               "Day 2 vs baseline 95th": "above" if res["2026-11-05"]["corr"] > a2["baseline 95th pct"] else "not above"}

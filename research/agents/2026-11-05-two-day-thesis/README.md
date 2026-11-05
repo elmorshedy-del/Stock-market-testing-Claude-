@@ -185,3 +185,46 @@ Data: Yahoo daily and intraday bars, plus the Yahoo Finance, Reuters and CNBC ti
   * **T5 predicts:** the post-peak correlation is negative and lower than before.
   * Also reported: the same on war-period peace days vs Nov peace days (descriptive), and a rolling 20-day correlation.
 * All tests are then rerun on the 16:00 close with `label = final`.
+
+---
+
+# A5 preview result and synthesis (PREVIEW: Day 2 data to 14:44 ET; the automatic rerun on the 16:00 close follows below)
+**A5 fails:**
+* corr(RSP, SMH − RSP) was +0.188 (Mar 2 – Oct 2, n 150) and −0.177 after the peak (n 22). Fisher z −1.51, p 0.065.
+* Rolling 20-day: +0.63 in March, +0.43 to +0.46 in May–Jun, −0.35 in July, −0.1 to −0.3 in Oct–Nov.
+* Suggestive only.
+
+**Exploratory, not pre-registered:**
+* 12-1 momentum correlates 0.64 with AI exposure. AI + OIL explains each day better than MOM alone (Day 1 R² 0.42 vs 0.15).
+* Only the top momentum decile moves differently (Day 1 −3.7%, Day 2 −7.7%; deciles 0–8 alike). Crowding is the AI exposure, not a separate force.
+* Post-peak days with SMH − RSP ≤ −3% (n 7): RSP rose on 4, each with a macro cushion (oil −7/−8%, or TLT +0.9/+1.9). It fell on the 3 without one, Day 2 included.
+
+## Thesis v4, "same AI shock twice; only the cushion changed"
+1. **One shock both days.** The data-defined AI basket (top 10% by AI exposure) is the **data-center build-out supply chain**: chips, memory and storage, networking and optics, servers, power and electrical equipment.
+   * It was repriced at the same intensity both days: −2.45 vs −2.21%/SD, t −12 and −18 (H1, C2).
+2. **Day 1 had a cushion.** The election lifted Iran-war-ending odds: oil −8.1%, 10-year −6bp. Oil exposure −1.43%/SD (t −9.6), rate exposure +0.81 (t +4.2).
+   * The rest of the S&P rose **+3.2%** (equal weight), a rare decoupling for a −2.75% chip day. RSP z +3.5 (recent tail model), +4.6 (full sample).
+3. **Day 2 had none.** Oil rose 2%, so the rest did what it normally does on a −9% chip day: −1.8% (RSP z −1.1 in the recent tail model; the 5 recent analogs had a median of −1.4%).
+   * Selling was proportional to market beta (H4, t −13).
+   * Intraday, the AI basket front-loaded (low 11:00) and the rest kept falling to 13:00.
+4. **Not new.** Monday Nov 2 (Iran talks) had the same pattern (AI −1.43/SD, OIL −1.32/SD; corr 0.54 with Day 1), and Tuesday mirrored it.
+   * A **seesaw** ran Mon–Wed: AI and oil moved together, the rest opposite. Thursday broke it.
+5. **Net:** over the two days the AI basket fell **−14.2%** and the rest of the S&P rose **+1.4%**. Over four days: −14.5% vs +2.1%. A rotation that, on Day 2, briefly dragged everything.
+
+**Rejected:**
+* momentum crash (H2);
+* crowding outside AI (H3);
+* Day-1 reversal (H5);
+* AI-first timing at 5-minute resolution (H6, L);
+* a "rotation zone" threshold (A3);
+* AI as a war shelter (C1).
+* The linear 1-year model (B1) flags Day 2 as abnormal; the tail model does not.
+
+**Open:**
+* Why AI started *falling* on peace news in November after *rising* on it all war (C3: predicted +1.2–1.4%, actual −3.5/−4.6%). It fits an AI trade that peaked Oct 6 and an election that made data centers political. A5 (p 0.065) only hints at it. Not tested causally.
+
+**TSLA:** about −8% stock-specific over the two days (Day 1 −4.2%, Day 2 −3.9% beyond exposures; Musk/Texas/SpaceX-merger news). The rest is its market beta (z +2.0).
+
+**What it implies (a map, not a forecast):**
+* While the AI build-out keeps being repriced, the rest of the market's direction depends on whether a cushion shows up (oil or yields falling).
+* Friday's payrolls is the next test: a weak print means lower yields, a cushion. A hot print removes it.
