@@ -1,0 +1,112 @@
+{
+ "SPY": {
+  "days": 1589,
+  "k=1": {
+   "test days": 710,
+   "R2 baseline (IV + ranges)": 0.369,
+   "R2 + thinness": 0.371,
+   "gain": 0.0018,
+   "gain 90% CI": [
+    -0.0131,
+    0.0158
+   ],
+   "coef on thinness pct (train)": 0.154,
+   "R2 + thinness + gamma state": 0.383,
+   "coef on gamma state (train)": -0.311
+  },
+  "k=5": {
+   "test days": 706,
+   "R2 baseline (IV + ranges)": 0.382,
+   "R2 + thinness": 0.346,
+   "gain": -0.0359,
+   "gain 90% CI": [
+    -0.1116,
+    0.0185
+   ],
+   "coef on thinness pct (train)": 0.228,
+   "R2 + thinness + gamma state": 0.365,
+   "coef on gamma state (train)": -0.165
+  },
+  "k=20": {
+   "test days": 691,
+   "R2 baseline (IV + ranges)": 0.194,
+   "R2 + thinness": -0.177,
+   "gain": -0.3708,
+   "gain 90% CI": [
+    -0.9723,
+    -0.1064
+   ],
+   "coef on thinness pct (train)": 0.472,
+   "R2 + thinness + gamma state": -0.18,
+   "coef on gamma state (train)": 0.016
+  }
+ },
+ "TSLA": {
+  "days": 1576,
+  "k=1": {
+   "test days": 704,
+   "R2 baseline (IV + ranges)": 0.233,
+   "R2 + thinness": 0.221,
+   "gain": -0.0112,
+   "gain 90% CI": [
+    -0.0213,
+    0.0021
+   ],
+   "coef on thinness pct (train)": 0.125,
+   "R2 + thinness + gamma state": 0.214,
+   "coef on gamma state (train)": -0.269
+  },
+  "k=5": {
+   "test days": 700,
+   "R2 baseline (IV + ranges)": 0.311,
+   "R2 + thinness": 0.296,
+   "gain": -0.0156,
+   "gain 90% CI": [
+    -0.0375,
+    0.012
+   ],
+   "coef on thinness pct (train)": 0.096,
+   "R2 + thinness + gamma state": 0.298,
+   "coef on gamma state (train)": -0.227
+  },
+  "k=20": {
+   "test days": 685,
+   "R2 baseline (IV + ranges)": 0.349,
+   "R2 + thinness": 0.287,
+   "gain": -0.0613,
+   "gain 90% CI": [
+    -0.1223,
+    -0.0153
+   ],
+   "coef on thinness pct (train)": 0.086,
+   "R2 + thinness + gamma state": 0.281,
+   "coef on gamma state (train)": -0.21
+  }
+ },
+ "split k=1 (SPY gain - TSLA gain)": {
+  "common days": 704,
+  "diff": 0.0138,
+  "90% CI": [
+   -0.0053,
+   0.0275
+  ]
+ },
+ "split k=5 (SPY gain - TSLA gain)": {
+  "common days": 700,
+  "diff": -0.0196,
+  "90% CI": [
+   -0.0977,
+   0.0313
+  ]
+ },
+ "split k=20 (SPY gain - TSLA gain)": {
+  "common days": 685,
+  "diff": -0.3129,
+  "90% CI": [
+   -0.9232,
+   -0.049
+  ]
+ },
+ "VERDICT Q1-SPY (k=5 gain > 0, CI above 0)": false,
+ "VERDICT Q1-split (k=5 SPY - TSLA > 0, CI above 0)": false
+}

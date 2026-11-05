@@ -63,3 +63,78 @@
 
 ## Reproduce
 `python size.py <bars dir> <DIX.csv>` → `out/q1.json`; `python cycle.py <DIX.csv> <bars dir>` → `out/q2.json`; `python figure.py` → `out/liquidity_cycle.png`.
+
+---
+
+# Results (written after the run; everything above was fixed before any result was seen)
+
+**Data:**
+* SPY Arca 1-minute bars 2020-01 to 2026-10 (1,589 usable days).
+* TSLA Nasdaq/EQUS 1-minute bars (1,576 days).
+* S&P GEX (SqueezeMetrics) and VIX / ^GSPC (Yahoo), 2012-04 to 2026-11-04 (3,651 days).
+* $0.
+
+**Bug caught before reading results:** Yahoo's `range=max` silently returns **monthly** bars. The first Q1 run used monthly VIX. The loader now uses explicit dates and asserts daily spacing, and both Q1 and Q2 were rerun. All numbers below are from the fixed run.
+
+![liquidity cycle](out/liquidity_cycle.png)
+
+## Q1: does thinness predict move size? **Fails**
+| | Next day | Next 5 days (primary) | Next 20 days |
+|---|---|---|---|
+| SPY: out-of-sample R² baseline → + thinness | 0.369 → 0.371 (gain +0.002, CI −0.013 to +0.016) | 0.382 → 0.346 (gain −0.036, CI −0.112 to +0.019) | 0.194 → −0.177 (gain −0.37) |
+| TSLA | 0.233 → 0.221 (−0.011) | 0.311 → 0.296 (−0.016, CI −0.038 to +0.012) | 0.349 → 0.287 (−0.061) |
+| SPY gain − TSLA gain | +0.014 (CI −0.005 to +0.028) | −0.020 (CI −0.098 to +0.031) | −0.31 |
+
+* **Q1-SPY fails; Q1-split fails.** Once implied vol and recent ranges are known, book thinness adds nothing for either stock. Out of sample it makes the 20-day forecast worse.
+* **Calibration (METHOD 7):** the known law reproduces. The baseline (IV + ranges) explains 37–38% of next-day and 5-day range out of sample. Adding S&P gamma helps SPY's next day (0.369 → 0.383) but not 5 days. Its train coefficient is negative (high gamma → smaller range), as before.
+* **Read:** at daily and weekly frames, "liquidity" carries no information beyond what VIX and recent volatility already say. The day-level "SPY is liquidity-led" claim was explanatory at best; it is **not predictive**.
+
+## Q2: the cycle
+* **D1 order: passes as registered, but partly by construction.**
+  * 52% of 705 transitions go to the canonical next phase, vs 33% at random (95th pct 37%; p < 0.0001).
+  * **Caveat found after the run:** RECOVERY requires gamma ≤ 0.20 within 15 sessions, so THIN → RECOVERY is partly built in. THINNING requires a fall, so it mostly comes from above. The shuffle null does not preserve that.
+  * The informative transitions are the ones the rules don't force:
+
+    | From | Go to | Instead of |
+    |---|---|---|
+    | CALM | THINNING **64%** | THIN directly 20% |
+    | THINNING | back to CALM **58%** (most thinnings are false alarms) | THIN 29% |
+    | RECOVERY | CALM **51%** | relapse to THIN **42%** |
+
+* **D2 forecast:**
+
+  | Phase (share of days) | Forward 10-day mean range | Up-leg within 20 sessions | Forward 20-day return |
+  |---|---|---|---|
+  | **THIN (15%)** | **1.59% vs 1.06%** (Holm ≈ 0) ✓ | **72% vs 51%** (Holm ≈ 0) | +1.41% vs +0.96% (p 0.22) |
+  | **CALM (42%)** | **0.86%** (Holm ≈ 0) ✓ | **41%** (Holm ≈ 0) | +0.62% (p 0.13) |
+  | THINNING (9%) | n.s. | 55% (n.s.) | n.s. |
+  | **RECOVERY (24%)** | n.s. | **49% (no lift)** ✗ | +1.06% (n.s.) ✗ |
+
+  * **RECOVERY's predictions fail.** Up-legs come from the THIN phase itself, not from the recovery after it. This matches REPORT §4p, where legs need a reset.
+  * **Exploratory (added after seeing results): down-legs too.**
+    * THIN has more of both: 72% up and 41% down. Its up-minus-down tilt is +31 vs +18 on all days.
+    * THINNING: 55% up vs 25.5% down, a +29 tilt.
+    * CALM: +10. RECOVERY: +15.
+    * So low gamma means bigger moves **and** an upward tilt, the same message as the ladder (R1–R5).
+* **D3 timing:**
+  * Phases flicker: median episode 1–3 sessions.
+  * Full CALM → THINNING → THIN → RECOVERY → CALM loops: **35 since 2012, median 27 sessions** (IQR 22–42), about one to two monthly expiry cycles.
+* **D4 calendar:**
+  * CALM is most common in the 5 sessions before the monthly expiry (46% vs 38% at 15+ sessions).
+  * THINNING is twice as common 10+ sessions before the expiry (11% vs 6%).
+  * So gamma builds into the expiry and thins after it, a mild calendar alignment.
+* **Cross-check (METHOD 11):** SPY's intraday thinness percentile by phase: CALM 0.33 < THINNING 0.51 < RECOVERY 0.57 < THIN 0.69. The gamma cycle lines up with book thinness. This is partly mechanical too, because the measure contains |return|, which is higher in THIN.
+* **Today (Nov 4 close): RECOVERY.**
+  * Gamma pct 0.45 after Nov 4's jump to $5.46bn. VIX 16.61 is below the recovery line of 17.98.
+  * Last 10 phases: THIN ×3 → RECOVERY.
+  * By D2, RECOVERY has no edge. The next step is CALM 51% or a relapse to THIN 42%.
+
+## Verdict
+* **Refines flow-physics A1.** "SPY is liquidity-led" does not extend to prediction. Book thinness adds nothing to IV + recent range at 1/5/20 days, for SPY or TSLA.
+* **The tradable structure is the dealer-gamma cycle,** with liquidity as its symptom:
+  * THIN (gamma ≤ 20th pct) is where large, up-tilted moves start;
+  * CALM means small moves;
+  * a full loop takes about 27 sessions;
+  * most THINNING episodes are false alarms;
+  * RECOVERY by itself is not a buy signal.
+* **Not tested:** aggressor-flow prediction at scale (needs signed trades; see "Not tested here").

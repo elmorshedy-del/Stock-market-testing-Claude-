@@ -1,0 +1,32 @@
+{
+ "CALM": {
+  "up-leg %": 41.2,
+  "down-leg %": 30.8,
+  "up minus down": 10.4,
+  "days": 1512
+ },
+ "THINNING": {
+  "up-leg %": 54.8,
+  "down-leg %": 25.5,
+  "up minus down": 29.4,
+  "days": 310
+ },
+ "THIN": {
+  "up-leg %": 72.3,
+  "down-leg %": 41.3,
+  "up minus down": 30.9,
+  "days": 537
+ },
+ "RECOVERY": {
+  "up-leg %": 49.4,
+  "down-leg %": 34.1,
+  "up minus down": 15.3,
+  "days": 880
+ },
+ "ALL": {
+  "up-leg %": 50.7,
+  "down-leg %": 33.0,
+  "up minus down": 17.7,
+  "days": 3621
+ }
+}

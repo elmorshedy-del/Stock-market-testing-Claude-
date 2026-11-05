@@ -1,0 +1,292 @@
+{
+ "days": 3651,
+ "span": [
+  "2012-04-30",
+  "2026-11-04"
+ ],
+ "phase share of days": {
+  "CALM": 0.417,
+  "RECOVERY": 0.242,
+  "THIN": 0.148,
+  "OTHER": 0.106,
+  "THINNING": 0.087
+ },
+ "D1 order": {
+  "episodes (non-OTHER, merged)": 705,
+  "share of transitions to the canonical next phase": 0.518,
+  "null mean / 95th pct": [
+   0.334,
+   0.369
+  ],
+  "p": 0.0,
+  "PASS (p < 0.05)": true,
+  "transition matrix (row = from)": {
+   "CALM": {
+    "CALM": 0.0,
+    "THINNING": 0.64,
+    "THIN": 0.2,
+    "RECOVERY": 0.16
+   },
+   "THINNING": {
+    "CALM": 0.58,
+    "THINNING": 0.0,
+    "THIN": 0.29,
+    "RECOVERY": 0.12
+   },
+   "THIN": {
+    "CALM": 0.11,
+    "THINNING": 0.26,
+    "THIN": 0.0,
+    "RECOVERY": 0.63
+   },
+   "RECOVERY": {
+    "CALM": 0.51,
+    "THINNING": 0.07,
+    "THIN": 0.42,
+    "RECOVERY": 0.0
+   }
+  }
+ },
+ "D2 forecast by phase": {
+  "CALM": {
+   "fwd 20d return %": {
+    "phase mean": 0.618,
+    "all days": 0.96,
+    "diff": -0.342,
+    "p (2-sided, circular shift)": 0.1265,
+    "days / episodes": [
+     1518,
+     244
+    ],
+    "Holm p": 1
+   },
+   "up-leg within 20 sessions %": {
+    "phase mean": 41.204,
+    "all days": 50.677,
+    "diff": -9.473,
+    "p (2-sided, circular shift)": 0.0,
+    "days / episodes": [
+     1512,
+     244
+    ],
+    "Holm p": 0
+   },
+   "fwd 10d mean range %": {
+    "phase mean": 0.861,
+    "all days": 1.064,
+    "diff": -0.202,
+    "p (2-sided, circular shift)": 0.0,
+    "days / episodes": [
+     1523,
+     244
+    ],
+    "Holm p": 0
+   }
+  },
+  "THINNING": {
+   "fwd 20d return %": {
+    "phase mean": 1.181,
+    "all days": 0.96,
+    "diff": 0.221,
+    "p (2-sided, circular shift)": 0.492,
+    "days / episodes": [
+     311,
+     195
+    ],
+    "Holm p": 1
+   },
+   "up-leg within 20 sessions %": {
+    "phase mean": 54.839,
+    "all days": 50.677,
+    "diff": 4.162,
+    "p (2-sided, circular shift)": 0.3165,
+    "days / episodes": [
+     310,
+     195
+    ],
+    "Holm p": 1
+   },
+   "fwd 10d mean range %": {
+    "phase mean": 1.029,
+    "all days": 1.064,
+    "diff": -0.034,
+    "p (2-sided, circular shift)": 0.48,
+    "days / episodes": [
+     313,
+     195
+    ],
+    "Holm p": 1
+   }
+  },
+  "THIN": {
+   "fwd 20d return %": {
+    "phase mean": 1.409,
+    "all days": 0.96,
+    "diff": 0.449,
+    "p (2-sided, circular shift)": 0.2175,
+    "days / episodes": [
+     537,
+     189
+    ],
+    "Holm p": 1
+   },
+   "up-leg within 20 sessions %": {
+    "phase mean": 72.253,
+    "all days": 50.677,
+    "diff": 21.577,
+    "p (2-sided, circular shift)": 0.0,
+    "days / episodes": [
+     537,
+     189
+    ],
+    "Holm p": 0
+   },
+   "fwd 10d mean range %": {
+    "phase mean": 1.585,
+    "all days": 1.064,
+    "diff": 0.521,
+    "p (2-sided, circular shift)": 0.0,
+    "days / episodes": [
+     538,
+     189
+    ],
+    "Holm p": 0
+   }
+  },
+  "RECOVERY": {
+   "fwd 20d return %": {
+    "phase mean": 1.059,
+    "all days": 0.96,
+    "diff": 0.099,
+    "p (2-sided, circular shift)": 0.742,
+    "days / episodes": [
+     880,
+     174
+    ],
+    "Holm p": 1
+   },
+   "up-leg within 20 sessions %": {
+    "phase mean": 49.432,
+    "all days": 50.677,
+    "diff": -1.245,
+    "p (2-sided, circular shift)": 0.7235,
+    "days / episodes": [
+     880,
+     174
+    ],
+    "Holm p": 1
+   },
+   "fwd 10d mean range %": {
+    "phase mean": 1.071,
+    "all days": 1.064,
+    "diff": 0.008,
+    "p (2-sided, circular shift)": 0.868,
+    "days / episodes": [
+     881,
+     174
+    ],
+    "Holm p": 1
+   }
+  }
+ },
+ "D2 predictions passed (Holm < 0.05, right sign)": {
+  "RECOVERY fwd return >": false,
+  "RECOVERY up-leg odds >": false,
+  "THIN range >": true,
+  "CALM range <": true
+ },
+ "D3 median episode length, sessions (IQR)": {
+  "CALM": [
+   2.0,
+   [
+    1.0,
+    7.0
+   ]
+  ],
+  "THINNING": [
+   1.0,
+   [
+    1.0,
+    2.0
+   ]
+  ],
+  "THIN": [
+   2.0,
+   [
+    1.0,
+    4.0
+   ]
+  ],
+  "RECOVERY": [
+   3.0,
+   [
+    1.0,
+    8.0
+   ]
+  ]
+ },
+ "D3 full cycles CALM -> THINNING -> THIN -> RECOVERY -> CALM": {
+  "count": 35,
+  "median sessions": 27.0,
+  "IQR": [
+   22.5,
+   41.5
+  ]
+ },
+ "D4 phase share by sessions to monthly expiry": {
+  "0-4": {
+   "CALM": 0.457,
+   "OTHER": 0.091,
+   "RECOVERY": 0.257,
+   "THIN": 0.131,
+   "THINNING": 0.064
+  },
+  "5-9": {
+   "CALM": 0.427,
+   "OTHER": 0.111,
+   "RECOVERY": 0.256,
+   "THIN": 0.149,
+   "THINNING": 0.057
+  },
+  "10-14": {
+   "CALM": 0.412,
+   "OTHER": 0.105,
+   "RECOVERY": 0.217,
+   "THIN": 0.158,
+   "THINNING": 0.108
+  },
+  "15+": {
+   "CALM": 0.379,
+   "OTHER": 0.115,
+   "RECOVERY": 0.238,
+   "THIN": 0.155,
+   "THINNING": 0.112
+  }
+ },
+ "cross-check: SPY thinness pct by phase (2020-26)": {
+  "CALM": 0.325,
+  "OTHER": 0.628,
+  "RECOVERY": 0.565,
+  "THIN": 0.689,
+  "THINNING": 0.514
+ },
+ "today": {
+  "date": "2026-11-04",
+  "phase": "RECOVERY",
+  "GEX pct": 0.454,
+  "VIX": 16.61,
+  "VIX needed for RECOVERY (0.85 x 10d max)": 17.98,
+  "last 10 phases": [
+   "THIN",
+   "THINNING",
+   "THINNING",
+   "THINNING",
+   "RECOVERY",
+   "OTHER",
+   "THIN",
+   "THIN",
+   "THIN",
+   "RECOVERY"
+  ]
+ }
+}
