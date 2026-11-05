@@ -66,3 +66,33 @@ Data: Yahoo daily and intraday bars, plus the Yahoo Finance, Reuters and CNBC ti
 * history of "rotation days" (SMH − RSP ≤ −3% with RSP ≥ +1%) and what followed.
 
 **Elegance yardstick (stated now):** the fewest mechanisms whose predictions pass while rivals' fail, that explain both days, including why the broad market flipped from up to down.
+
+---
+
+# Preview results (14:44 ET, Day 2 live) and Amendment A1 (pre-registered before running A1)
+**Preview** (`out/tests_preview.json`):
+* H1 passes: Day 1 AI −2.45%/SD (t −11.6), OIL −1.43 (t −9.6), RATE +0.81 (t +4.2); R² 0.46.
+* H4 passes: Day 2 MKT −1.56 (t −13.4).
+* **H2 fails:** Day 1 MOM +0.09 (t 0.3). There was no momentum crash. Instead, October's losers rose (STR −0.72, t −3.0).
+* **H3 fails:** within low-AI stocks MOM −0.38 (t −1.5, Holm 0.20), though −3.7 on the full sample.
+* **H5 fails:** residual corr +0.07, so Day 1's unexplained part did not reverse.
+* **H6 fails:** median time of the low was the same for the high- and low-AI terciles. By sector, tech's low came at ~11:05 and utilities' at ~14:20.
+* **Reading:** T2 as registered mostly fails. The AI loading was about equal on both days (−2.45 vs −2.21%/SD). The market loading went from ~0 on Day 1 to −1.5%/SD on Day 2.
+
+## A1 thesis ("same shock, different offset")
+* Both days carried the **same AI-buildout shock**.
+* On Day 1 a **peace-trade offset** (oil −8%, yields −6bp) lifted everything else, so breadth **decoupled** from AI.
+* On Day 2 the offset partly reversed (oil +2.7%). The decoupling ended, and normal co-movement plus the AI shock dragged the broad market down.
+* Rival A1-R (contagion beyond normal): Day 2 broad-market selling exceeded normal co-movement with AI.
+
+## A1 tests
+* **B1 (time series):** fit the daily equal-weight S&P (RSP) return on SMH, USO, TLT and GLD, 2025-11-03 → 2026-10-30, OLS. Compute the prediction and the residual z for Day 1 and Day 2.
+  * **A1 predicts** Day 1 residual z ≥ +2 (breadth rallied beyond normal) and Day 2 |z| < 2 (normal co-movement).
+  * **A1-R predicts** Day 2 z ≤ −2.
+  * Robustness: the same fit for the equal-weighted mean of S&P stocks with AI exposure below its 70th percentile (no AI names inside).
+* **B2 (intraday lead-lag, Day 2, 5-min):** equal-weight returns of the top AI-exposure decile vs stocks below the 70th percentile.
+  * Lead-lag statistic L = Σ_{k=1..3} corr(AI_t, rest_{t+k}) − Σ_{k=1..3} corr(rest_t, AI_{t+k}).
+  * Contagion predicts L > 0, with a block bootstrap 90% CI.
+  * Descriptive: when each group completed half of its day's decline.
+* **B3 (history, descriptive):** "rotation days" since 2004 (SMH − RSP ≤ −3% and RSP ≥ +1%). Next-day and next-3-day RSP returns, with the share negative vs the base rate.
+* **Final:** all tests rerun on the 16:00 close (`label = final`).
