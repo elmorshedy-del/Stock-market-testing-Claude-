@@ -165,3 +165,16 @@ Each name's own past days or months as extreme as now, one episode at a time. Lo
 * QQQ's 4-week move matches only crash months (2008, 2020).
 
 `figure_1310.py` → `out/extremes_1310.png`.
+
+---
+
+## Erratum (13:30 ET): the "closes at the lows" claim was selection-biased
+* In chat I said that "16 of 17 similar days closed in the bottom 20% of the range." Those days were selected by their **close-to-close** drop, so they closed near their lows by construction. That statistic cannot say where an intraday −6σ day closes.
+* **Corrected selection:** days whose **intraday low** was ≤ −5σ from the prior close (SPY, 1994–): 17 days.
+  * 12 closed in the bottom 20% of the range.
+  * **5 recovered at least a third of the range:** 1996-03-08 (jobs day), 2001-09-17 (post-9/11 reopening), 2010-05-06 (flash crash), 2015-08-24 (flash open), 2024-08-05 (yen-carry unwind).
+  * Only 1 (2010) recovered more than half of the low's σ.
+* A residual bias remains: daily bars do not show *when* the low printed, and late lows make a near-low close mechanical.
+* Today's low so far: −6.4σ at 13:00.
+* **Headline check:** press coverage ties today to Wednesday's Democratic sweep of Congress and fears of AI data-center regulation. Chips had their worst day since March 2020. The 10-year yield fell (≈4.85%).
+  * This is a policy-fear narrative with no concrete action today. Closer to Feb/Oct 2018 (mechanical or soft) than to the hard shocks of 1997 or 2007.
