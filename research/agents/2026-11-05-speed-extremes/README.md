@@ -37,3 +37,23 @@
 
 ## Reproduce
 `python extremes.py` → `out/extremes.json`
+
+---
+
+## Deviation note
+* The first run's Holm set included SPX by mistake; the plan says NDX and SOX only. Fixed in `extremes.py`.
+* Holm over NDX and SOX: SOX p 0.050 → adj 0.10; NDX p 0.18 → adj 0.18. Both fail H1.
+
+# Amendment A1 (pre-registered before computing outcomes): per name, not pooled
+**Owner:** "It's not just today. But past weeks too and different stock … Stop lumping stats. Also include today individually."
+
+* **Dashboard** (`dashboard.py`, descriptive, done): 26 AI-complex names plus SOX, SMH, QQQ, SPY and RSP. For each: today's 1-day z, 5-day z, 20-day z, the drop from the 60-day high in σ√t, and daily and weekly RSI, each ranked against **its own** history.
+* **Per-name episodes** (`per_name.py`):
+  * **Weeks:** for each name with today's 20-day z ≤ −1.5, the past days when its 20-day z was ≤ today's value (its own threshold). Declustered 20 sessions.
+  * **Today:** for each name with today's 1-day z ≤ −2.5, the past days when its 1-day z was ≤ today's value. Declustered 20 sessions.
+  * **Per episode:** 20- and 60-session forward return; whether a lower close came within 20 sessions; the best bounce within 20 sessions.
+  * Every episode is reported individually, with counts per name. Nothing is averaged across names.
+* **Today's index-level signature** (`per_name.py`): every past day with S&P 1-day z ≤ −4.0 and SOX 1-day z ≤ −3.0 (since 1994), listed one by one with its next 1/5/20/60-session moves.
+* **Caveats:**
+  * The names are today's survivors (no Nortel or Lucent).
+  * Today's values are live intraday.
