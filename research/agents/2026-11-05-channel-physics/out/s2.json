@@ -1,0 +1,24 @@
+{
+ "observed": {
+  "finished events": 20,
+  "share fell 10%+ within a year": 1.0,
+  "share became 20%+ bears": 0.35
+ },
+ "surrogates (M0)": {
+  "paths": 500,
+  "paths with events": 500,
+  "median events per path": 16.0,
+  "share 10%+: median / 5-95%": [
+   0.86,
+   0.692,
+   1.0
+  ],
+  "share 20%+: median / 5-95%": [
+   0.375,
+   0.187,
+   0.572
+  ],
+  "share of paths with 10%+ share >= observed": 0.086,
+  "share of paths with 20%+ share >= observed": 0.63
+ }
+}

@@ -86,3 +86,79 @@ A negative β could also come from a time-varying risk premium (expected returns
 * H-A2 holds: the channel adds nothing.
 
 **Also exploratory (not a test), added with A1:** S2 re-runs the channels-deep P2 event rule on the M0 surrogates. It asks whether "short channel broken → 10%+ fall within a year" is more than volatility clustering would produce.
+
+## Results (run 2026-11-05)
+Files:
+* `physics.py` → `out/physics.json`, `out/surrogates.npz` (T1-T3);
+* `a1_first_passage.py` → `out/a1.json`;
+* `s2_surrogate_p2.py` → `out/s2.json`;
+* `figure.py` → `out/physics_tests.png`.
+
+### T1. Variance ratios: H-T1 FAILS (no restoring force)
+| index | VR 1m / 3m / 6m / 1y / 2y / 3y | 3y random-walk 2.5 / 50 / 97.5 | p (3y below) |
+|---|---|---|---|
+| S&P 500 (1950-) | 0.92 / 0.86 / 0.91 / 0.94 / 0.87 / 0.77 | 0.53 / 0.93 / 1.59 | 0.24 |
+| Nasdaq-100 (1985-) | 0.85 / 0.88 / 0.90 / 1.00 / 1.08 / 1.00 | 0.42 / 0.85 / 1.98 | 0.65 |
+| SOX (1994-) | 0.81 / 0.84 / 0.89 / 0.90 / 0.68 / 0.64 | 0.35 / 0.81 / 1.91 | 0.29 |
+
+* Holm p = S&P 500 0.73, Nasdaq-100 0.73, SOX 0.73.
+* **Against my prediction:** VR(756) landed in my 0.6-0.95 range for the S&P (0.77) and SOX (0.64), but not for NDX (1.00). None cleared the surrogates.
+
+### T2. Channel force: H-T2 FAILS (position in the channel predicts nothing)
+| index | β 21d / 63d / 252d (forward log return per 1σ of z) | 63d random-walk 95% band | p (below) 21 / 63 / 252 |
+|---|---|---|---|
+| S&P 500 | +0.0009 / +0.0038 / +0.0068 | -0.0064 to +0.0060 | 0.80 / 0.90 / 0.76 |
+| Nasdaq-100 | +0.0018 / +0.0050 / +0.0145 | -0.0140 to +0.0143 | 0.77 / 0.77 / 0.77 |
+| SOX | +0.0030 / +0.0080 / -0.0088 | -0.0233 to +0.0226 | 0.78 / 0.77 / 0.43 |
+
+* All 9 cells sit inside the random-walk bands; Holm p = 1.0 everywhere.
+* **My prediction had the wrong sign.** I predicted a slightly negative β. Eight of the 9 are slightly positive, which is weak momentum, the opposite of a pull back to the line. None is significant.
+
+### T3. How tight is each current channel (descriptive)
+| | residual SD of the 2023 channel | random-walk median | ratio | percentile among random walks |
+|---|---|---|---|---|
+| S&P 500 | 3.92% | 6.65% | 0.59 | 3.5 |
+| QQQ | 5.72% | 9.07% | 0.63 | 4.5 |
+| SMH | 13.23% | 16.1% | 0.82 | 23.2 |
+
+* The S&P and QQQ channels since 2023 are smoother than about 96% of random walks built from the same daily moves. SMH's is ordinary.
+* The window was picked after the fact, starting at the 2022 low. That is the look-elsewhere effect, and T2 shows past smoothness did not predict anything.
+
+### A1. Volatility first-passage model: H-A1 FAILS on the strict bar; H-A2 HOLDS
+Fit on 1990-2007: k = 0.812 (prediction 0.75-0.85, correct); drift 14.9% a year. Out of sample, 2008-2026:
+
+| cell | Brier skill vs climatology | 90% CI | mean predicted | observed |
+|---|---|---|---|---|
+| -5% within 21 sessions | +0.049 | -0.054 to +0.125 | 0.188 | 0.179 |
+| -5% within 63 sessions | -0.016 | -0.145 to +0.076 | 0.341 | 0.333 |
+| -10% within 21 sessions | +0.085 | -0.067 to +0.189 | 0.034 | 0.049 |
+| -10% within 63 sessions | +0.004 | -0.152 to +0.141 | 0.113 | 0.155 |
+
+* **H-A1 fails.** No cell has a CI lower bound above 0. My prediction (pass in all 4) was wrong; skill was higher at 21 sessions than at 63, as predicted.
+* **Reliability shows how it fails, and both ways are physical:**
+  * At high VIX the model over-predicts falls, because fear decays (an aftershock-like fade in volatility).
+  * At low VIX it under-predicts them (falls from calm; fat tails).
+  * Overall, real 10% falls came about 1.4 times as often as the model said.
+  * Both point to the same missing ingredient: self-exciting, mean-reverting volatility with jumps.
+* **Nasdaq-100 / VXN (descriptive):** k = 0.767; BSS -5% within 21 +0.09, -5% within 63 +0.05, -10% within 21 +0.11, -10% within 63 +0.08. The CI clears 0 for both 21-session cells.
+* **H-A2 holds.** Adding the trailing channel position changes out-of-sample log loss by -0.10%, +0.11%, -0.40%, -0.10%, so the drawn channel adds nothing beyond volatility.
+
+### S2 (exploratory). The channels-deep P2 rule on random walks
+* **On random walks:** the same channel-break rule gives a median 16 events per path. A median 86% of them fell 10%+ within a year (5-95%: 69-100%), and 38% became bears (19-57%).
+* **Actual:** 100% and 35%. 63% of random walks had at least the actual bear share, and 8.6% had at least the actual 10%+ share.
+* **So** P2's elevated risk is what volatility clustering produces. The channel itself carried no information.
+
+### Today's odds from the A1 model
+The lines rise with each trend, so the model uses drift minus trend. The deeper odds are floors, because of fat tails.
+* S&P 500 line through the 2026 low (7,076.2): 24% within 5 sessions, 58% within 21, 76% within 63 (implied vol 28.18).
+* S&P 500 line through the 2025 low (6,616.1): 0% within 5 sessions, 12% within 21, 39% within 63 (implied vol 28.18).
+* QQQ (Nasdaq-100 model, VXN) line through the 2026 low (641.6): 85% within 5 sessions, 94% within 21, 97% within 63 (implied vol 38.26).
+* QQQ (Nasdaq-100 model, VXN) line through the 2025 low (596.8): 6% within 5 sessions, 40% within 21, 67% within 63 (implied vol 38.26).
+
+### Conclusion
+* **Drawn channels fail.** Tested against a random walk that keeps every real daily move, they show no restoring force and no predictive power. Their one real signal, more risk after a break, is volatility clustering.
+* **The physics that survives is volatility.** A two-constant Brownian first-passage model is right on average. It fails exactly where physics says a Gaussian diffusion fails: it misses decaying fear and jumps from calm.
+* **Next models:**
+  1. Self-exciting volatility: Hawkes and aftershock (Omori) decay, from 5-minute data.
+  2. Forced flows plus the square-root impact law, for where a low forms.
+  3. Earnings × multiple, for a channel's slope.
