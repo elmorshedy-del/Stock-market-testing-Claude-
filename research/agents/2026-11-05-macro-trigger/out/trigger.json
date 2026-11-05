@@ -1,0 +1,415 @@
+{
+ "span": [
+  "2012-05-01",
+  "2026-11-04"
+ ],
+ "all days": {
+  "release n": 340,
+  "release mean %": 0.075,
+  "release share up": 0.568,
+  "non-release n": 3310,
+  "non-release mean %": 0.05,
+  "non-release share up": 0.54,
+  "release |r| %": 0.79,
+  "non-release |r| %": 0.685,
+  "jobs n / mean % / up": [
+   169,
+   0.083,
+   0.58
+  ],
+  "cpi n / mean % / up": [
+   171,
+   0.068,
+   0.556
+  ],
+  "NDX release mean % / non": [
+   0.097,
+   0.07
+  ],
+  "S&P t-1->t+5 release mean % / non": [
+   0.286,
+   0.31
+  ]
+ },
+ "H1 SETUP": {
+  "release n": 33,
+  "release mean %": -0.555,
+  "release share up": 0.424,
+  "non-release n": 388,
+  "non-release mean %": 0.209,
+  "non-release share up": 0.582,
+  "release |r| %": 1.58,
+  "non-release |r| %": 1.413,
+  "jobs n / mean % / up": [
+   12,
+   -1.136,
+   0.25
+  ],
+  "cpi n / mean % / up": [
+   21,
+   -0.222,
+   0.524
+  ],
+  "NDX release mean % / non": [
+   -0.622,
+   0.277
+  ],
+  "S&P t-1->t+5 release mean % / non": [
+   -0.524,
+   0.813
+  ],
+  "diff %": -0.764,
+  "p": 0.9769,
+  "eligible (>=15 release days)": true
+ },
+ "H2 DROP": {
+  "release n": 36,
+  "release mean %": -0.339,
+  "release share up": 0.444,
+  "non-release n": 430,
+  "non-release mean %": 0.197,
+  "non-release share up": 0.577,
+  "release |r| %": 1.663,
+  "non-release |r| %": 1.357,
+  "jobs n / mean % / up": [
+   14,
+   -0.935,
+   0.286
+  ],
+  "cpi n / mean % / up": [
+   22,
+   0.04,
+   0.545
+  ],
+  "NDX release mean % / non": [
+   -0.354,
+   0.257
+  ],
+  "S&P t-1->t+5 release mean % / non": [
+   -0.187,
+   0.716
+  ],
+  "diff %": -0.537,
+  "p": 0.9394,
+  "eligible (>=15 release days)": true
+ },
+ "H3 LOWG": {
+  "release n": 90,
+  "release mean %": -0.186,
+  "release share up": 0.456,
+  "non-release n": 898,
+  "non-release mean %": 0.127,
+  "non-release share up": 0.579,
+  "release |r| %": 1.175,
+  "non-release |r| %": 1.076,
+  "jobs n / mean % / up": [
+   49,
+   -0.256,
+   0.408
+  ],
+  "cpi n / mean % / up": [
+   41,
+   -0.104,
+   0.512
+  ],
+  "NDX release mean % / non": [
+   -0.228,
+   0.175
+  ],
+  "S&P t-1->t+5 release mean % / non": [
+   0.301,
+   0.571
+  ],
+  "diff %": -0.313,
+  "p": 0.9646,
+  "eligible (>=15 release days)": true
+ },
+ "Holm": {
+  "H2": {
+   "adj": 1,
+   "PASS": false
+  },
+  "H3": {
+   "adj": 1,
+   "PASS": false
+  },
+  "H1": {
+   "adj": 1,
+   "PASS": false
+  }
+ },
+ "SETUP release days": {
+  "2012-05-15": {
+   "what": "cpi",
+   "S&P %": -0.575,
+   "NDX %": -0.368,
+   "S&P t-1->t+5 %": -1.623,
+   "dd10 prior %": -4.799,
+   "GEX pct prior": 0.147
+  },
+  "2012-11-15": {
+   "what": "cpi",
+   "S&P %": -0.159,
+   "NDX %": -0.297,
+   "S&P t-1->t+5 %": 3.959,
+   "dd10 prior %": -5.104,
+   "GEX pct prior": 0.008
+  },
+  "2014-04-15": {
+   "what": "cpi",
+   "S&P %": 0.676,
+   "NDX %": 0.38,
+   "S&P t-1->t+5 %": 2.446,
+   "dd10 prior %": -3.188,
+   "GEX pct prior": 0.183
+  },
+  "2014-10-03": {
+   "what": "jobs",
+   "S&P %": 1.117,
+   "NDX %": 1.04,
+   "S&P t-1->t+5 %": -2.057,
+   "dd10 prior %": -3.195,
+   "GEX pct prior": 0.068
+  },
+  "2014-12-17": {
+   "what": "cpi",
+   "S&P %": 2.035,
+   "NDX %": 1.846,
+   "S&P t-1->t+5 %": 5.532,
+   "dd10 prior %": -4.945,
+   "GEX pct prior": 0.028
+  },
+  "2015-01-16": {
+   "what": "cpi",
+   "S&P %": 1.342,
+   "NDX %": 1.283,
+   "S&P t-1->t+5 %": 3.233,
+   "dd10 prior %": -3.369,
+   "GEX pct prior": 0.032
+  },
+  "2015-12-15": {
+   "what": "cpi",
+   "S&P %": 1.062,
+   "NDX %": 0.595,
+   "S&P t-1->t+5 %": 0.842,
+   "dd10 prior %": -3.838,
+   "GEX pct prior": 0.159
+  },
+  "2016-01-08": {
+   "what": "jobs",
+   "S&P %": -1.084,
+   "NDX %": -0.811,
+   "S&P t-1->t+5 %": -3.23,
+   "dd10 prior %": -6.509,
+   "GEX pct prior": 0.0
+  },
+  "2016-01-20": {
+   "what": "cpi",
+   "S&P %": -1.169,
+   "NDX %": -0.26,
+   "S&P t-1->t+5 %": 0.086,
+   "dd10 prior %": -6.713,
+   "GEX pct prior": 0.068
+  },
+  "2018-02-14": {
+   "what": "cpi",
+   "S&P %": 1.34,
+   "NDX %": 1.849,
+   "S&P t-1->t+5 %": 1.54,
+   "dd10 prior %": -5.697,
+   "GEX pct prior": 0.036
+  },
+  "2018-10-11": {
+   "what": "cpi",
+   "S&P %": -2.057,
+   "NDX %": -1.142,
+   "S&P t-1->t+5 %": -0.607,
+   "dd10 prior %": -4.78,
+   "GEX pct prior": 0.004
+  },
+  "2018-11-14": {
+   "what": "cpi",
+   "S&P %": -0.757,
+   "NDX %": -0.894,
+   "S&P t-1->t+5 %": -2.654,
+   "dd10 prior %": -3.259,
+   "GEX pct prior": 0.072
+  },
+  "2018-12-07": {
+   "what": "jobs",
+   "S&P %": -2.332,
+   "NDX %": -3.298,
+   "S&P t-1->t+5 %": -3.561,
+   "dd10 prior %": -3.384,
+   "GEX pct prior": 0.147
+  },
+  "2018-12-12": {
+   "what": "cpi",
+   "S&P %": 0.542,
+   "NDX %": 0.891,
+   "S&P t-1->t+5 %": -4.923,
+   "dd10 prior %": -5.504,
+   "GEX pct prior": 0.096
+  },
+  "2019-08-13": {
+   "what": "cpi",
+   "S&P %": 1.513,
+   "NDX %": 2.201,
+   "S&P t-1->t+5 %": 0.618,
+   "dd10 prior %": -4.33,
+   "GEX pct prior": 0.215
+  },
+  "2020-03-06": {
+   "what": "jobs",
+   "S&P %": -1.705,
+   "NDX %": -1.63,
+   "S&P t-1->t+5 %": -10.348,
+   "dd10 prior %": -9.402,
+   "GEX pct prior": 0.032
+  },
+  "2020-03-11": {
+   "what": "cpi",
+   "S&P %": -4.887,
+   "NDX %": -4.373,
+   "S&P t-1->t+5 %": -16.797,
+   "dd10 prior %": -7.92,
+   "GEX pct prior": 0.036
+  },
+  "2020-04-03": {
+   "what": "jobs",
+   "S&P %": -1.514,
+   "NDX %": -1.409,
+   "S&P t-1->t+5 %": 9.289,
+   "dd10 prior %": -3.923,
+   "GEX pct prior": 0.104
+  },
+  "2020-09-11": {
+   "what": "cpi",
+   "S&P %": 0.053,
+   "NDX %": -0.598,
+   "S&P t-1->t+5 %": -0.591,
+   "dd10 prior %": -6.748,
+   "GEX pct prior": 0.155
+  },
+  "2021-03-05": {
+   "what": "jobs",
+   "S&P %": 1.95,
+   "NDX %": 1.641,
+   "S&P t-1->t+5 %": 4.64,
+   "dd10 prior %": -3.999,
+   "GEX pct prior": 0.0
+  },
+  "2022-04-12": {
+   "what": "cpi",
+   "S&P %": -0.342,
+   "NDX %": -0.357,
+   "S&P t-1->t+5 %": 1.063,
+   "dd10 prior %": -4.73,
+   "GEX pct prior": 0.108
+  },
+  "2022-05-06": {
+   "what": "jobs",
+   "S&P %": -0.567,
+   "NDX %": -1.222,
+   "S&P t-1->t+5 %": -2.966,
+   "dd10 prior %": -3.565,
+   "GEX pct prior": 0.072
+  },
+  "2022-05-11": {
+   "what": "cpi",
+   "S&P %": -1.646,
+   "NDX %": -3.064,
+   "S&P t-1->t+5 %": -1.934,
+   "dd10 prior %": -6.956,
+   "GEX pct prior": 0.036
+  },
+  "2022-06-10": {
+   "what": "cpi",
+   "S&P %": -2.911,
+   "NDX %": -3.561,
+   "S&P t-1->t+5 %": -8.536,
+   "dd10 prior %": -3.807,
+   "GEX pct prior": 0.1
+  },
+  "2022-09-02": {
+   "what": "jobs",
+   "S&P %": -1.074,
+   "NDX %": -1.435,
+   "S&P t-1->t+5 %": 3.619,
+   "dd10 prior %": -6.187,
+   "GEX pct prior": 0.096
+  },
+  "2022-10-13": {
+   "what": "cpi",
+   "S&P %": 2.597,
+   "NDX %": 2.299,
+   "S&P t-1->t+5 %": 2.481,
+   "dd10 prior %": -5.642,
+   "GEX pct prior": 0.064
+  },
+  "2023-03-10": {
+   "what": "jobs",
+   "S&P %": -1.448,
+   "NDX %": -1.38,
+   "S&P t-1->t+5 %": -0.043,
+   "dd10 prior %": -3.214,
+   "GEX pct prior": 0.155
+  },
+  "2023-03-14": {
+   "what": "cpi",
+   "S&P %": 1.648,
+   "NDX %": 2.32,
+   "S&P t-1->t+5 %": 3.815,
+   "dd10 prior %": -4.759,
+   "GEX pct prior": 0.175
+  },
+  "2025-03-07": {
+   "what": "jobs",
+   "S&P %": 0.552,
+   "NDX %": 0.742,
+   "S&P t-1->t+5 %": -1.735,
+   "dd10 prior %": -4.567,
+   "GEX pct prior": 0.008
+  },
+  "2025-03-12": {
+   "what": "cpi",
+   "S&P %": 0.489,
+   "NDX %": 1.131,
+   "S&P t-1->t+5 %": 1.852,
+   "dd10 prior %": -6.447,
+   "GEX pct prior": 0.0
+  },
+  "2025-04-04": {
+   "what": "jobs",
+   "S&P %": -5.975,
+   "NDX %": -6.067,
+   "S&P t-1->t+5 %": -0.614,
+   "dd10 prior %": -6.58,
+   "GEX pct prior": 0.004
+  },
+  "2025-04-10": {
+   "what": "cpi",
+   "S&P %": -3.461,
+   "NDX %": -4.186,
+   "S&P t-1->t+5 %": -3.192,
+   "dd10 prior %": -4.152,
+   "GEX pct prior": 0.127
+  },
+  "2025-11-20": {
+   "what": "jobs",
+   "S&P %": -1.557,
+   "NDX %": -2.379,
+   "S&P t-1->t+5 %": 3.115,
+   "dd10 prior %": -3.047,
+   "GEX pct prior": 0.211
+  }
+ },
+ "TODAY (live)": {
+  "date": "2026-11-05",
+  "S&P dd from 10d high %": -3.407,
+  "DROP at today's close (live)": true,
+  "last GEX date": "2026-11-04",
+  "last GEX pct": 0.454,
+  "LOWG on last GEX": false
+ }
+}

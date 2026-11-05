@@ -39,3 +39,39 @@
 
 ## Reproduce
 `python trigger.py <DIX.csv>` → `out/trigger.json`. Release dates are saved in `out/release_dates.csv` (public FRED data).
+
+---
+
+# Results (run ~11:30 ET)
+Span: 2012-05 → 2026-11-04. 340 release days (169 jobs, 171 CPI).
+
+**H1–H3 all fail (Holm adj 1.0).** The sign is the opposite of the claim.
+
+**H1, SETUP (drop ≥ 3% and GEX ≤ 30th pct):** 33 release days.
+* S&P −0.56% on average, 42% up. Non-release SETUP days: +0.21%, 58% up. Permutation p 0.98.
+* Jobs days: −1.14%, 3 of 12 up. CPI days: −0.22%, 11 of 21 up.
+* NDX: −0.62% vs +0.28%.
+* S&P t−1 → t+5: −0.52% vs +0.81%.
+* Size: release |r| 1.58% vs 1.41%. Bigger moves, in either direction.
+  * Big up days (≥ +1%): 9. Big down days (≤ −1%): 14.
+
+**H2, DROP only:** 36 days, −0.34%, 44% up; jobs days 4 of 14 up (p 0.94).
+
+**H3, LOWG only:** 90 days, −0.19%, 46% up (p 0.96).
+
+**All days, unconditional:** release days +0.075% vs +0.05%, 57% vs 54% up. Normal-sized moves on average (|r| 0.79% vs 0.69%).
+
+**Robustness (exploratory):** without the COVID (Mar 2020) and tariff-crash (Apr 2025) days, SETUP release days are flat.
+* −0.08%, 48% up, n 29.
+* Jobs days 3 of 10 up; CPI days 11 of 19 up (+0.19%).
+* The negative tilt partly comes from shock days, but the claim ("surge") still fails.
+
+**Memorable surges exist but are not the norm:** 2022-10 CPI +2.6%, 2014-12 CPI +2.0%, 2021-03 jobs +1.95%, 2023-03 CPI +1.65%.
+
+**Today (live):**
+* DROP is met: S&P −3.4% from its 10-day high.
+* LOWG is not met on the last published GEX: Nov 4, 45th pct. Nov 5's value comes tonight.
+
+**Verdict**
+* Release days in this setup are a trigger for a *big* move, not a reliably *up* one.
+* After drops, jobs days have leaned down (n small). CPI days are close to a coin flip, slightly up without the shock days.
