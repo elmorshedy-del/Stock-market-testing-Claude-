@@ -1,0 +1,44 @@
+{
+ "^GSPC": {
+  "trend %/yr": 19.7,
+  "close": 7353.73,
+  "2026 scare low": {
+   "anchor close": 6343.72,
+   "line today": 7076.2,
+   "gap from today's close %": -3.8
+  },
+  "2025 crash low": {
+   "anchor close": 4982.77,
+   "line today": 6616.1,
+   "gap from today's close %": -10.0
+  }
+ },
+ "QQQ": {
+  "trend %/yr": 25.7,
+  "close": 647.05,
+  "2026 scare low": {
+   "anchor close": 558.28,
+   "line today": 641.6,
+   "gap from today's close %": -0.8
+  },
+  "2025 crash low": {
+   "anchor close": 416.06,
+   "line today": 596.8,
+   "gap from today's close %": -7.8
+  }
+ },
+ "SMH": {
+  "trend %/yr": 50.9,
+  "close": 447.73,
+  "2026 scare low": {
+   "anchor close": 362.53,
+   "line today": 465.4,
+   "gap from today's close %": 3.9
+  },
+  "2025 crash low": {
+   "anchor close": 179.95,
+   "line today": 344.0,
+   "gap from today's close %": -23.2
+  }
+ }
+}

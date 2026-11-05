@@ -222,3 +222,27 @@ Earlier today I gave 65% (correction within the uptrend) / 30% (full correction 
   * Baa − 10y above about 1.9 or HY OAS above about 4;
   * unemployment 0.3 pp or more above its 12-month low (Friday's jobs report is the first check);
   * AI capex cuts.
+
+## Addendum (descriptive, after the owner's SMH chart question; not a test)
+**Question:** why does the owner's SMH channel leave room to fall when the SPY and QQQ channels look finished?
+
+**Method:** `same_rule.py` → `out/same_rule_lines.png`, `out/same_rule.json`. All three charts use one rule: lines parallel to each 2023 OLS trend, through the 2026 scare low (2026-03-30 close) and through the 2025 crash low (2025-04-08 close).
+
+| | close Nov 5 | line through the 2026 low | line through the 2025 low |
+|---|---|---|---|
+| S&P | 7,353.73 | 7,076 (−3.8%) | 6,616 (−10.0%) |
+| QQQ | 647.05 | 642 (−0.8%) | 597 (−7.8%) |
+| SMH | 447.73 | 465 (broken: close is 3.8% below it) | 344 (−23.2%) |
+
+**Read:**
+* The owner's SMH lower line matches the line through the 2025 crash low.
+* The SPY and QQQ readings ("looks over") match the line through the 2026 low, or the −2σ band.
+* Measured by one rule, the three agree:
+  * on the 2026 lines, the S&P has about 4% left, QQQ sits on its line and SMH is already through it;
+  * on the 2025 lines, all three have room.
+* Chips' extra room, about 2.3 times the S&P's, reflects their bigger swings: a trend of +51% a year vs +20%, and a residual SD of 13% vs 4%.
+* In both 2025 and 2026, all three bottomed on the same day (Apr 8, 2025 and Mar 30, 2026).
+
+**SMH one-day drops of 9.5% or worse since 2000 (5 before today):**
+* Three came within a week of the low: 2002-10-16, 2020-03-12 and 2020-03-16.
+* Two were followed by much lower lows: 2002-07-25 (−31% within 60 sessions) and 2025-01-27 (−24% by 2025-04-08).
