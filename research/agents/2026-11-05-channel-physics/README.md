@@ -49,3 +49,40 @@ A negative β could also come from a time-varying risk premium (expected returns
   * Flows: leveraged-ETF rebalancing, which is an identity, ΔExposure = L(L−1) × AUM × daily return; vol-target deleveraging; dealer gamma hedging.
   * Impact: the square-root law.
 * **Self-excitation:** a Hawkes branching ratio and Omori aftershock decay, estimated on 5-minute data.
+
+## Amendment A1: a model derived from first principles, the volatility first-passage model
+**Pre-registered at the commit that first adds this section.** T1-T3 had been run; A1 had not.
+
+**Motivation.** T1 and T2 found no restoring force (see the results, added later). If channels carry no direction, the physics left is volatility. A random walk's chance of falling a given distance has a closed form (the reflection principle, i.e. Brownian first passage) with one measured input: volatility. That gives "how much further, how likely" from first principles, with nothing drawn.
+
+**Model.**
+* log price is a Brownian motion with drift μ and per-session volatility σₜ = k × VIXₜ/100/√252.
+* P(the close falls by a = −ln(1 − x) within T sessions) = Φ((−a − μT)/(σₜ√T)) + exp(−2μa/σₜ²) Φ((−a + μT)/(σₜ√T)).
+* Two parameters, shared by every cell:
+  * k, the implied-to-realized volatility scale (it also absorbs daily-close monitoring);
+  * μ, the drift.
+
+**Data.** S&P 500 (^GSPC) closes and VIX (^VIX), 1990-01-02 to today. Secondary: Nasdaq-100 (^NDX) with VXN (^VXN, 2001 on).
+
+**Cells.** x = 5% and 10%; T = 21 and 63 sessions. Outcome = 1 if any close within T sessions is ≤ today's close × (1 − x).
+
+**Fit and test.**
+* Fit k and μ by maximum likelihood on 1990–2007 (all 4 cells jointly).
+* Test out of sample on 2008-01-01 to the last complete window.
+* Metric: Brier skill score (BSS) against climatology, where climatology = the in-sample base rate for each cell.
+* 90% CI from a block bootstrap with 252-session blocks.
+
+**Hypotheses.**
+* **H-A1 (primary):** S&P out-of-sample BSS > 0, with the 90% CI lower bound > 0, in at least 3 of 4 cells.
+* **H-A2 (secondary):** adding the trailing 756-session channel position z as a logistic covariate does not improve out-of-sample log loss by more than 0.5%. In other words, the drawn channel adds nothing beyond volatility.
+* **Descriptive:**
+  * NDX/VXN, with the same k and μ re-fitted on 2001–2007;
+  * reliability table (10 bins);
+  * today's touch probabilities for the same-rule lines (S&P 7,076 and 6,616; QQQ 642 and 597).
+
+**My predictions (stated before running).**
+* k ≈ 0.75–0.85, because implied volatility exceeds realized.
+* H-A1 passes in all 4 cells, with more skill at 21 sessions than at 63.
+* H-A2 holds: the channel adds nothing.
+
+**Also exploratory (not a test), added with A1:** S2 re-runs the channels-deep P2 event rule on the M0 surrogates. It asks whether "short channel broken → 10%+ fall within a year" is more than volatility clustering would produce.
