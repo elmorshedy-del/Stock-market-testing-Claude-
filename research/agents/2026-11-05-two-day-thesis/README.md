@@ -122,3 +122,21 @@ Data: Yahoo daily and intraday bars, plus the Yahoo Finance, Reuters and CNBC ti
   * Compare Day 1 and Day 2 with the prior ~55 sessions (Yahoo 60-day 5-min). Report each day's percentile and z.
   * "Portfolio problem" predicts Day 2 ≥ 95th percentile of baseline days. "Rotation" predicts Day 1 below the baseline median.
 * **B2 fix:** drop NaN bars before computing L.
+
+---
+
+# A2 preview results and Amendment A3 (pre-registered before running A3)
+**A2 preview** (`out/a2_preview.json`):
+* **B4 tail model.** The extra slope below SMH −4% is +0.57 (t 4.7) over 2004–26, and +0.21 (t 1.3) over 2023–26.
+  * **Day 2 is not abnormal once tail co-movement is allowed:** z +2.07 (full sample; RSP fell *less* than predicted) and −1.12 (recent).
+  * **Day 1 is abnormal under every model:** z +4.62 (full), +3.46 (recent), +1.95 (linear).
+  * The 5 recent days with SMH within 1.5pt of −8.7% had a median RSP move of −1.42% (mean −2.6%).
+* **B5:** Day 1 pairwise correlation among non-AI stocks was 0.149 (median, 52nd percentile). Day 2 came back missing: the 60-day 5-min pull had no Nov 5 bars, so it is recomputed from the 5-day pull below.
+* **B2 fixed:** L = −0.40 (90% CI −0.66 to +0.26). No 5-min lead-lag; the ordering is at the hour scale only.
+* **Revised reading:** "Day 1 was the anomaly; Day 2 was the rule."
+
+## A3: is there a rotation zone and a coupling zone?
+* **B6:** bin SMH daily returns (≤ −6, −6..−4, −4..−2, −2..0, 0..+2, > +2%) over 2023-01 → 2026-10 and over 2004 → 2026-10. Per bin, report mean RSP, share of RSP < 0, and the coupling ratio = mean RSP ÷ mean SMH.
+  * **Prediction:** the coupling ratio in the ≤ −4% bins is at least twice that of the −4..−2 bin.
+  * In the recent regime, the −4..−2 bin's mean RSP is ≥ −0.3% (a rotation zone).
+* **B5 fix:** compute Day 2's pairwise correlation for the same 150 names from the 5-day 5-min pull, against the same baseline.
