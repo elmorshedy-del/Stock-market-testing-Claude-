@@ -1,0 +1,87 @@
+{
+ "as of": "2026-11-05 09:51 ET (live Yahoo)",
+ "SMH / RSP ratio now vs its peak": {
+  "peak date": "2026-06-22",
+  "drawdown %": -33.7,
+  "sessions since peak": 96
+ },
+ "today's one-day ratio move %": -6.26,
+ "past episodes (ratio -15% or more), all": [
+  {
+   "peak": "2004-01-12",
+   "trough": "2013-04-03",
+   "depth %": -56.2,
+   "sessions peak->trough": 2321,
+   "recovered": true,
+   "sessions to new high": 4075
+  },
+  {
+   "peak": "2021-02-16",
+   "trough": "2021-05-13",
+   "depth %": -19.2,
+   "sessions peak->trough": 61,
+   "recovered": true,
+   "sessions to new high": 193
+  },
+  {
+   "peak": "2021-12-01",
+   "trough": "2022-10-18",
+   "depth %": -33.4,
+   "sessions peak->trough": 221,
+   "recovered": true,
+   "sessions to new high": 372
+  },
+  {
+   "peak": "2024-07-10",
+   "trough": "2025-04-04",
+   "depth %": -32.5,
+   "sessions peak->trough": 185,
+   "recovered": true,
+   "sessions to new high": 301
+  },
+  {
+   "peak": "2026-06-22",
+   "trough": "2026-11-05",
+   "depth %": -33.7,
+   "sessions peak->trough": 96,
+   "recovered": false,
+   "sessions to new high": null
+  }
+ ],
+ "past completed episodes": 4,
+ "of those, reached at least today's depth": 1,
+ "their final depth % (median, range)": [
+  -56.2,
+  [
+   -56.2,
+   -56.2
+  ]
+ ],
+ "their sessions peak->trough (median, range)": [
+  2321.0,
+  [
+   2321,
+   2321
+  ]
+ ],
+ "further ratio drop from here in those episodes % (median, 25-75%)": [
+  -34.0,
+  [
+   -34.0,
+   -34.0
+  ]
+ ],
+ "share of those episodes whose trough was within 5% of today's depth": 0.0,
+ "after top-1% one-day rotation drops (ratio), excl today": {
+  "days": 55,
+  "threshold %": -3.85,
+  "next 5 sessions ratio median % / share up": [
+   1.08,
+   0.62
+  ],
+  "next 20 sessions ratio median % / share up": [
+   2.22,
+   0.62
+  ]
+ }
+}
