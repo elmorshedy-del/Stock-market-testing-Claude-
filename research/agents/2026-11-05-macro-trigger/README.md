@@ -125,3 +125,38 @@ What was wrong with H1–H3:
 * Robustness: jobs and CPI separately; 2012–19 vs 2020–26; binary SETUP instead of continuous; without Mar–Apr 2020 and Apr 2025.
 
 **For Friday, descriptive:** which payrolls surprise direction the market has rewarded over the last 24 releases, and the model's predicted reaction under today's state.
+
+---
+
+# A1 results (run ~12:10 ET)
+* 339 release days, 2012-05 → 2026-10: 169 jobs, 170 CPI.
+* ForexFactory dates matched the FRED main release dates for 95% of jobs and 94% of CPI releases.
+
+**A, amplification: PASSES (Holm adj 0.047).**
+* δ = +0.168 σ of gap per unit |z| per unit LOW (HC3 t 2.15; year-bootstrap p 0.005; 90% CI 0.06–0.29).
+* Sensitivity is about 0 in high gamma and about 0.13σ per |z| at GEX near the 10th pct.
+* Descriptive: big surprises (|z| > 1.5) gapped 1.01% in low gamma (n 25) vs 0.48% in high gamma (n 41).
+* Fragile:
+  * Strongest in 2012–19 (p 0.01); 2020–26 p 0.29.
+  * Jobs-only p 0.14 and CPI-only p 0.11. Same sign, lower power.
+  * The binary version fails (p 0.24).
+  * Stronger without the shock days (p 0.002).
+
+**B, asymmetric relief after drops: FAILS (p 0.95).**
+* b3 − b4 = −0.06: good prints do not get bigger rallies than bad prints get selloffs after a drawdown.
+* Secondary b5 (a relief gap per 1% drawdown, regardless of the surprise): +0.05σ, t 1.1, not significant.
+
+**C, follow-through in low gamma: FAILS (p 0.57).**
+* Low gamma does not make the post-open move extend the gap on release days.
+* It does not on non-release days either (control: t 0.4).
+
+**For Friday, descriptive:**
+* Over the last 24 payrolls, corr(surprise, gap) is +0.06, i.e. no stable "good news" direction.
+* The last 6: weak prints gapped up 3/3 (Jul, Aug, Oct 2026). Strong prints gapped down 2/3 (Jun, Sep; May gapped up).
+* Core CPI over the last 24: corr −0.13 (hot = down, mildly).
+* State: DROP 4.0% at the live close, LOW 0.55 (Nov 4 GEX); Nov 5's GEX is due tonight.
+
+## Erratum to H1–H3 interpretation (the originals above are left unchanged)
+* The H1–H3 descriptive "jobs days lean down after drops (3/12 up)" should **not** be used.
+* It averaged over surprises and shock days. With the surprise and the state modelled (A1-B), there is no directional tilt on release days after drops, up or down.
+* What survives is A: **release days in low gamma move more per unit of surprise.** The direction comes from the surprise, not from the setup.
