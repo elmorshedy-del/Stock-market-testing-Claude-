@@ -337,3 +337,12 @@ Latest week, raw:
 * On every 50–200-day version, today sits at the **5th–24th percentile** of the 21 past dips; at the 10th on every 50-day version and the 5th on most 100-day versions.
 * In 47% of all 58 versions, today's breadth is below every one of the 8 corrections.
 * The bounce reading holds across definitions. Short-term breadth (10-day) sits high, at the 62nd–90th percentile, because the market bounced within the dip. That is exactly the kind of reading that carries no information here.
+
+---
+
+## Live-call outcome (recorded 2026-11-05, after the close)
+* **The call failed.** The S&P closed at **7,353.73 on 2026-11-05**, at or below the 7,427.98 line, before any new closing high above 7,818.93. The highest close after Oct 23 was 7,743.98.
+* **Where this dip now sits in the study's taxonomy:** it started from narrow breadth but still became a ≥5% correction. That makes it the **third narrow-breadth exception**.
+  * The first two (Feb 2023, Nov 2025) were rates shocks and stayed shallow (−7.8%, −5.1%).
+  * This one is an AI-sector and policy shock (see [two-day-thesis](../2026-11-05-two-day-thesis/)), currently at −5.95%.
+* **Updated base rate with narrow breadth at the dip's start:** 13 of 16 bounced (was 13 of 15).
