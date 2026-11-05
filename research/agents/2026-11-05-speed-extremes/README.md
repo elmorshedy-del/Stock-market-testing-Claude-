@@ -130,3 +130,38 @@ Each name's own past days or months as extreme as now, one episode at a time. Lo
 * **Indicative:** of a **bounce** within about a month, in most names. **Not of the low:** in nearly every name a lower close came first in most past cases (TSM 10/10, AMD 29/32, RSP 20/21).
 * The tested entry filter remains the 1-ATR bounce ([technical-indicators](../2026-10-16-technical-indicators/)). Triggers off today's live lows: QQQ close ≥ 673.3, SMH ≥ 484.2, TSLA ≥ 361.5, NVDA ≥ 193.8, SPY ≥ 752.6.
 * **Intraday breadth at 11:55:** RSP −2.3% and IWM −3.5% at new lows while QQQ bounced from 647.4 (10:50). The average stock is joining in, which is the 2000-lens watch item.
+
+---
+
+# 13:10 ET update (live; descriptive)
+* The noon outputs are preserved as `out/*_1200.*`. `out/per_name.json` and `out/dashboard.json` are now the 13:10 rerun.
+* **Correction:** the dashboard rounded percentiles to 0.1, so "never before" was printed for cases with a few precedents. Exact counts are in `out/exact_counts_1310.json`.
+
+**Today, 1-day (σ = prior 60-day stdev)**
+* SPY −6.0σ: 4 past days since 1994 (1997-10-27, 2007-02-27, 2018-02-05, 2018-10-10).
+* QQQ −5.2σ: 4 past days since 1999 (2007-02-27, 2017-05-17, 2018-02-05, 2018-10-10).
+* TSM −4.9σ: 4. TSLA −4.7σ: 7 (mostly earnings days).
+
+**Past weeks**
+* QQQ 20-day −2.6σ: 3 past days (2008-10-09, 2008-10-10, 2020-03-12).
+* SMH 20-day −2.5σ: 3 (2016-01-15, 2018-10-24, 2020-03-12).
+* SMH 5-day −3.7σ: 2 (2014-10-10, 2018-10-10).
+* TSM 5-day −3.9σ: **0 since 1997**.
+* LRCX 20-day: 2. AMAT 20-day: 3.
+
+**After SPY's 4 days, one by one** (next day / 20 days / 60 days; deepest close in the next 20 days)
+
+| Day | Event | Next day | 20 days | 60 days | Deepest close, next 20 |
+|---|---|---|---|---|---|
+| 1997-10-27 | Asian crisis | +5.8% | +9.0% | +10.0% | none lower |
+| 2007-02-27 | Shanghai crash | +1.0% | +2.4% | +9.3% | −1.5% |
+| 2018-02-05 | Volmageddon | +2.0% | +3.4% | −0.3% | −2.4% |
+| 2018-10-10 | Fed hiking, yields up | −2.2% | +1.0% | **−7.7%** | −5.2% |
+
+**Reading**
+* At once-a-decade 1-day extremes after a calm stretch, the S&P was higher 20 days later every time (4/4).
+* The lower lows came within 1–3 weeks and were small (−1.5% to −5.2%).
+* The macro twin, Oct 2018 (a hiking Fed, rising yields, chips leading down), bounced and then broke lower into December.
+* QQQ's 4-week move matches only crash months (2008, 2020).
+
+`figure_1310.py` → `out/extremes_1310.png`.

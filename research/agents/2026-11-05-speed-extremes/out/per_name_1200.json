@@ -1,0 +1,4983 @@
+{
+ "weeks": {
+  "NVDA": {
+   "today value": -1.91,
+   "episodes": {
+    "2001-09-20": {
+     "z20": -1.96,
+     "fwd20 %": 50.5,
+     "fwd60 %": 127.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 53.4
+    },
+    "2002-06-27": {
+     "z20": -2.09,
+     "fwd20 %": -13.9,
+     "fwd60 %": -48.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 28.2
+    },
+    "2003-08-08": {
+     "z20": -2.35,
+     "fwd20 %": 26.1,
+     "fwd60 %": 16.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 26.1
+    },
+    "2004-05-03": {
+     "z20": -2.01,
+     "fwd20 %": 15.6,
+     "fwd60 %": -24.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 15.7
+    },
+    "2004-07-14": {
+     "z20": -2.07,
+     "fwd20 %": -34.5,
+     "fwd60 %": -2.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.6
+    },
+    "2006-05-30": {
+     "z20": -2.26,
+     "fwd20 %": -15.2,
+     "fwd60 %": 14.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.3
+    },
+    "2008-07-02": {
+     "z20": -1.93,
+     "fwd20 %": -36.6,
+     "fwd60 %": -35.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": -30.7
+    },
+    "2010-05-14": {
+     "z20": -2.3,
+     "fwd20 %": -12.3,
+     "fwd60 %": -28.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.2
+    },
+    "2012-04-27": {
+     "z20": -1.97,
+     "fwd20 %": -4.5,
+     "fwd60 %": -1.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.9
+    },
+    "2018-10-24": {
+     "z20": -2.38,
+     "fwd20 %": -27.4,
+     "fwd60 %": -25.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.4
+    },
+    "2019-05-20": {
+     "z20": -1.93,
+     "fwd20 %": 0.7,
+     "fwd60 %": -1.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.2
+    },
+    "2022-09-13": {
+     "z20": -1.96,
+     "fwd20 %": -11.8,
+     "fwd60 %": 22.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.9
+    }
+   }
+  },
+  "AMD": {
+   "today value": -1.89,
+   "episodes": {
+    "1994-10-13": {
+     "z20": -1.91,
+     "fwd20 %": 6.5,
+     "fwd60 %": 25.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.4
+    },
+    "1995-10-04": {
+     "z20": -2.37,
+     "fwd20 %": -17.3,
+     "fwd60 %": -40.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.4
+    },
+    "1996-06-17": {
+     "z20": -1.89,
+     "fwd20 %": -27.1,
+     "fwd60 %": -19.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": -2.3
+    },
+    "1997-10-01": {
+     "z20": -2.05,
+     "fwd20 %": -10.6,
+     "fwd60 %": -35.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.5
+    },
+    "1999-02-09": {
+     "z20": -1.91,
+     "fwd20 %": 3.7,
+     "fwd60 %": 3.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.3
+    },
+    "2001-10-01": {
+     "z20": -1.9,
+     "fwd20 %": 20.6,
+     "fwd60 %": 97.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 33.8
+    },
+    "2002-09-19": {
+     "z20": -2.04,
+     "fwd20 %": -30.9,
+     "fwd60 %": 16.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.1
+    },
+    "2004-07-26": {
+     "z20": -1.95,
+     "fwd20 %": 5.2,
+     "fwd60 %": 26.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.2
+    },
+    "2005-01-11": {
+     "z20": -2.32,
+     "fwd20 %": 20.7,
+     "fwd60 %": 15.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 20.7
+    },
+    "2006-06-19": {
+     "z20": -2.0,
+     "fwd20 %": -17.6,
+     "fwd60 %": 8.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.9
+    },
+    "2006-07-21": {
+     "z20": -2.19,
+     "fwd20 %": 31.1,
+     "fwd60 %": 39.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 32.5
+    },
+    "2007-01-24": {
+     "z20": -2.0,
+     "fwd20 %": -9.3,
+     "fwd60 %": -11.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.2
+    },
+    "2007-08-14": {
+     "z20": -2.06,
+     "fwd20 %": 2.3,
+     "fwd60 %": 3.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.0
+    },
+    "2007-11-26": {
+     "z20": -1.94,
+     "fwd20 %": -24.3,
+     "fwd60 %": -34.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.8
+    },
+    "2008-07-03": {
+     "z20": -2.1,
+     "fwd20 %": -19.2,
+     "fwd60 %": -19.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.3
+    },
+    "2010-08-24": {
+     "z20": -2.05,
+     "fwd20 %": 4.5,
+     "fwd60 %": 22.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.7
+    },
+    "2011-06-10": {
+     "z20": -1.93,
+     "fwd20 %": -10.9,
+     "fwd60 %": -17.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.1
+    },
+    "2012-05-16": {
+     "z20": -1.98,
+     "fwd20 %": -9.9,
+     "fwd60 %": -32.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.1
+    },
+    "2012-07-20": {
+     "z20": -1.9,
+     "fwd20 %": -2.8,
+     "fwd60 %": -34.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.3
+    },
+    "2012-10-12": {
+     "z20": -1.96,
+     "fwd20 %": -23.7,
+     "fwd60 %": -2.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.1
+    },
+    "2014-10-09": {
+     "z20": -2.5,
+     "fwd20 %": -6.4,
+     "fwd60 %": -10.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": -2.7
+    },
+    "2015-07-17": {
+     "z20": -2.19,
+     "fwd20 %": 2.8,
+     "fwd60 %": 4.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 22.9
+    },
+    "2017-05-02": {
+     "z20": -2.0,
+     "fwd20 %": 8.4,
+     "fwd60 %": 36.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 23.5
+    },
+    "2018-10-25": {
+     "z20": -2.11,
+     "fwd20 %": 0.6,
+     "fwd60 %": 8.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.3
+    },
+    "2022-09-23": {
+     "z20": -2.12,
+     "fwd20 %": -13.4,
+     "fwd60 %": -5.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.6
+    },
+    "2024-08-06": {
+     "z20": -2.0,
+     "fwd20 %": 8.2,
+     "fwd60 %": 14.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 21.2
+    }
+   }
+  },
+  "MU": {
+   "today value": -2.02,
+   "episodes": {
+    "1996-01-12": {
+     "z20": -2.07,
+     "fwd20 %": 17.4,
+     "fwd60 %": -0.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 26.9
+    },
+    "1996-07-11": {
+     "z20": -2.42,
+     "fwd20 %": 24.4,
+     "fwd60 %": 45.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 26.2
+    },
+    "1997-11-11": {
+     "z20": -2.03,
+     "fwd20 %": -2.8,
+     "fwd60 %": 44.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.6
+    },
+    "2000-09-25": {
+     "z20": -2.16,
+     "fwd20 %": -22.3,
+     "fwd60 %": -25.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.4
+    },
+    "2001-09-18": {
+     "z20": -2.09,
+     "fwd20 %": -13.3,
+     "fwd60 %": 24.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.3
+    },
+    "2004-05-03": {
+     "z20": -2.14,
+     "fwd20 %": 8.6,
+     "fwd60 %": -1.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.6
+    },
+    "2007-08-16": {
+     "z20": -2.16,
+     "fwd20 %": 3.8,
+     "fwd60 %": -9.1,
+     "lower close within 20": false,
+     "best bounce within 20 %": 9.8
+    },
+    "2008-01-04": {
+     "z20": -2.46,
+     "fwd20 %": 22.0,
+     "fwd60 %": -0.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 22.0
+    },
+    "2008-07-02": {
+     "z20": -2.04,
+     "fwd20 %": -18.3,
+     "fwd60 %": -21.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": -2.4
+    },
+    "2011-06-24": {
+     "z20": -2.43,
+     "fwd20 %": 9.4,
+     "fwd60 %": -5.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 12.2
+    },
+    "2015-01-28": {
+     "z20": -2.03,
+     "fwd20 %": 5.2,
+     "fwd60 %": 0.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.1
+    },
+    "2015-06-25": {
+     "z20": -2.04,
+     "fwd20 %": -23.6,
+     "fwd60 %": -34.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": -16.2
+    },
+    "2016-01-20": {
+     "z20": -2.4,
+     "fwd20 %": 14.3,
+     "fwd60 %": 6.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.3
+    },
+    "2019-05-31": {
+     "z20": -2.06,
+     "fwd20 %": 18.3,
+     "fwd60 %": 33.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 18.3
+    },
+    "2020-03-12": {
+     "z20": -2.32,
+     "fwd20 %": 18.9,
+     "fwd60 %": 38.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 24.4
+    },
+    "2022-07-01": {
+     "z20": -2.13,
+     "fwd20 %": 16.6,
+     "fwd60 %": -5.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 18.6
+    },
+    "2024-08-02": {
+     "z20": -2.14,
+     "fwd20 %": 3.8,
+     "fwd60 %": 14.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 17.2
+    }
+   }
+  },
+  "TSM": {
+   "today value": -2.33,
+   "episodes": {
+    "1998-06-10": {
+     "z20": -2.53,
+     "fwd20 %": 12.1,
+     "fwd60 %": -11.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.0
+    },
+    "2001-09-20": {
+     "z20": -2.33,
+     "fwd20 %": 25.0,
+     "fwd60 %": 104.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 30.7
+    },
+    "2002-08-05": {
+     "z20": -2.39,
+     "fwd20 %": 8.6,
+     "fwd60 %": 8.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 41.0
+    },
+    "2006-06-05": {
+     "z20": -2.4,
+     "fwd20 %": 2.8,
+     "fwd60 %": 0.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.8
+    },
+    "2018-10-24": {
+     "z20": -2.53,
+     "fwd20 %": -0.8,
+     "fwd60 %": 0.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.4
+    },
+    "2019-05-20": {
+     "z20": -2.44,
+     "fwd20 %": 1.4,
+     "fwd60 %": 4.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.4
+    }
+   }
+  },
+  "ASML": {
+   "today value": -1.94,
+   "episodes": {
+    "1996-07-15": {
+     "z20": -2.04,
+     "fwd20 %": 3.7,
+     "fwd60 %": 7.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 12.2
+    },
+    "1998-06-12": {
+     "z20": -2.6,
+     "fwd20 %": 2.1,
+     "fwd60 %": -27.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.9
+    },
+    "2001-09-17": {
+     "z20": -2.42,
+     "fwd20 %": 7.6,
+     "fwd60 %": 42.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 16.9
+    },
+    "2002-06-20": {
+     "z20": -1.98,
+     "fwd20 %": 4.9,
+     "fwd60 %": -47.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.5
+    },
+    "2008-01-04": {
+     "z20": -1.99,
+     "fwd20 %": -5.3,
+     "fwd60 %": -5.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.7
+    },
+    "2008-07-16": {
+     "z20": -1.97,
+     "fwd20 %": 10.9,
+     "fwd60 %": -35.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.9
+    },
+    "2008-09-26": {
+     "z20": -1.95,
+     "fwd20 %": -16.0,
+     "fwd60 %": -7.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": -4.3
+    },
+    "2010-05-07": {
+     "z20": -2.2,
+     "fwd20 %": -8.3,
+     "fwd60 %": 11.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.3
+    },
+    "2010-08-30": {
+     "z20": -2.22,
+     "fwd20 %": 17.8,
+     "fwd60 %": 32.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 17.8
+    },
+    "2013-11-07": {
+     "z20": -1.97,
+     "fwd20 %": 4.8,
+     "fwd60 %": -2.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.4
+    },
+    "2014-04-30": {
+     "z20": -1.98,
+     "fwd20 %": 4.7,
+     "fwd60 %": 4.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.7
+    },
+    "2014-07-29": {
+     "z20": -2.11,
+     "fwd20 %": 14.7,
+     "fwd60 %": 10.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.7
+    },
+    "2016-01-15": {
+     "z20": -1.97,
+     "fwd20 %": 8.4,
+     "fwd60 %": 31.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 19.1
+    },
+    "2020-03-12": {
+     "z20": -2.13,
+     "fwd20 %": 15.0,
+     "fwd60 %": 45.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.7
+    },
+    "2021-10-04": {
+     "z20": -2.01,
+     "fwd20 %": 13.3,
+     "fwd60 %": 12.5,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.1
+    }
+   }
+  },
+  "AMAT": {
+   "today value": -2.36,
+   "episodes": {
+    "2000-10-03": {
+     "z20": -2.39,
+     "fwd20 %": 2.9,
+     "fwd60 %": -23.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.0
+    },
+    "2001-09-28": {
+     "z20": -2.39,
+     "fwd20 %": 29.6,
+     "fwd60 %": 41.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 31.6
+    },
+    "2008-10-07": {
+     "z20": -2.56,
+     "fwd20 %": 7.8,
+     "fwd60 %": -13.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.4
+    },
+    "2018-09-06": {
+     "z20": -2.48,
+     "fwd20 %": -5.9,
+     "fwd60 %": -7.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.0
+    },
+    "2020-03-12": {
+     "z20": -2.36,
+     "fwd20 %": 9.9,
+     "fwd60 %": 32.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.1
+    }
+   }
+  },
+  "LRCX": {
+   "today value": -2.4,
+   "episodes": {
+    "1996-06-18": {
+     "z20": -2.54,
+     "fwd20 %": -9.0,
+     "fwd60 %": -14.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.4
+    },
+    "2011-08-08": {
+     "z20": -2.54,
+     "fwd20 %": 0.5,
+     "fwd60 %": 19.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 12.6
+    }
+   }
+  },
+  "KLAC": {
+   "today value": -2.23,
+   "episodes": {
+    "1997-10-30": {
+     "z20": -2.28,
+     "fwd20 %": -5.3,
+     "fwd60 %": -7.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 27.8
+    },
+    "1998-06-03": {
+     "z20": -2.36,
+     "fwd20 %": -3.1,
+     "fwd60 %": -11.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.4
+    },
+    "2001-10-02": {
+     "z20": -2.33,
+     "fwd20 %": 35.3,
+     "fwd60 %": 72.5,
+     "lower close within 20": false,
+     "best bounce within 20 %": 54.4
+    },
+    "2004-05-03": {
+     "z20": -2.46,
+     "fwd20 %": 13.8,
+     "fwd60 %": -7.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.9
+    },
+    "2008-01-09": {
+     "z20": -2.26,
+     "fwd20 %": -2.8,
+     "fwd60 %": 0.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.7
+    },
+    "2008-10-07": {
+     "z20": -2.26,
+     "fwd20 %": -3.3,
+     "fwd60 %": -8.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.3
+    },
+    "2010-01-29": {
+     "z20": -2.47,
+     "fwd20 %": 6.9,
+     "fwd60 %": 19.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 9.3
+    },
+    "2012-05-24": {
+     "z20": -2.37,
+     "fwd20 %": 6.0,
+     "fwd60 %": 16.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.8
+    },
+    "2012-10-12": {
+     "z20": -2.31,
+     "fwd20 %": 2.0,
+     "fwd60 %": 8.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 8.3
+    },
+    "2014-10-10": {
+     "z20": -3.19,
+     "fwd20 %": 17.5,
+     "fwd60 %": -0.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 19.4
+    },
+    "2019-05-23": {
+     "z20": -2.31,
+     "fwd20 %": 9.0,
+     "fwd60 %": 34.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.3
+    },
+    "2020-03-12": {
+     "z20": -2.31,
+     "fwd20 %": 19.8,
+     "fwd60 %": 53.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 21.5
+    }
+   }
+  },
+  "MRVL": {
+   "today value": -2.18,
+   "episodes": {
+    "2008-01-08": {
+     "z20": -2.38,
+     "fwd20 %": -5.1,
+     "fwd60 %": 3.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.5
+    },
+    "2008-09-15": {
+     "z20": -2.33,
+     "fwd20 %": -27.4,
+     "fwd60 %": -40.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.4
+    },
+    "2012-05-18": {
+     "z20": -2.38,
+     "fwd20 %": -6.0,
+     "fwd60 %": -7.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.8
+    },
+    "2015-09-11": {
+     "z20": -2.87,
+     "fwd20 %": 6.4,
+     "fwd60 %": 2.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.4
+    }
+   }
+  },
+  "INTC": {
+   "today value": -1.99,
+   "episodes": {
+    "1994-04-18": {
+     "z20": -2.19,
+     "fwd20 %": -0.4,
+     "fwd60 %": 5.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.1
+    },
+    "1994-10-17": {
+     "z20": -2.09,
+     "fwd20 %": 7.0,
+     "fwd60 %": 15.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 7.4
+    },
+    "1997-10-27": {
+     "z20": -2.33,
+     "fwd20 %": 4.5,
+     "fwd60 %": 3.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.7
+    },
+    "1998-06-03": {
+     "z20": -2.07,
+     "fwd20 %": 14.0,
+     "fwd60 %": 20.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 17.3
+    },
+    "2000-09-22": {
+     "z20": -2.69,
+     "fwd20 %": -10.2,
+     "fwd60 %": -30.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": -5.3
+    },
+    "2001-09-20": {
+     "z20": -2.24,
+     "fwd20 %": 16.4,
+     "fwd60 %": 61.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 21.0
+    },
+    "2002-07-02": {
+     "z20": -2.11,
+     "fwd20 %": 13.4,
+     "fwd60 %": -8.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 17.9
+    },
+    "2004-07-14": {
+     "z20": -2.62,
+     "fwd20 %": -5.2,
+     "fwd60 %": -9.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.5
+    },
+    "2006-01-18": {
+     "z20": -2.29,
+     "fwd20 %": -5.5,
+     "fwd60 %": -13.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.9
+    },
+    "2006-06-06": {
+     "z20": -2.02,
+     "fwd20 %": 5.4,
+     "fwd60 %": 11.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.8
+    },
+    "2008-01-16": {
+     "z20": -2.14,
+     "fwd20 %": 2.9,
+     "fwd60 %": 4.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.5
+    },
+    "2008-09-15": {
+     "z20": -2.16,
+     "fwd20 %": -12.2,
+     "fwd60 %": -26.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.6
+    },
+    "2010-08-31": {
+     "z20": -2.04,
+     "fwd20 %": 8.9,
+     "fwd60 %": 21.1,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.4
+    },
+    "2011-08-19": {
+     "z20": -2.21,
+     "fwd20 %": 14.3,
+     "fwd60 %": 28.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.5
+    },
+    "2012-05-31": {
+     "z20": -2.29,
+     "fwd20 %": -0.0,
+     "fwd60 %": -3.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.0
+    },
+    "2014-10-16": {
+     "z20": -2.0,
+     "fwd20 %": 9.2,
+     "fwd60 %": 18.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 12.0
+    },
+    "2015-07-24": {
+     "z20": -2.21,
+     "fwd20 %": -5.3,
+     "fwd60 %": 19.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.6
+    },
+    "2016-01-15": {
+     "z20": -2.4,
+     "fwd20 %": -3.3,
+     "fwd60 %": 8.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.2
+    },
+    "2016-11-04": {
+     "z20": -2.06,
+     "fwd20 %": 2.3,
+     "fwd60 %": 9.1,
+     "lower close within 20": false,
+     "best bounce within 20 %": 5.7
+    },
+    "2019-05-09": {
+     "z20": -2.14,
+     "fwd20 %": -1.3,
+     "fwd60 %": 0.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.9
+    },
+    "2020-03-09": {
+     "z20": -2.22,
+     "fwd20 %": 14.9,
+     "fwd60 %": 21.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.9
+    },
+    "2022-09-23": {
+     "z20": -2.06,
+     "fwd20 %": -2.0,
+     "fwd60 %": -2.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.7
+    },
+    "2024-04-26": {
+     "z20": -2.67,
+     "fwd20 %": -3.6,
+     "fwd60 %": -0.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.7
+    },
+    "2024-08-02": {
+     "z20": -3.54,
+     "fwd20 %": 2.6,
+     "fwd60 %": 6.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.6
+    },
+    "2026-10-30": {
+     "z20": -2.6,
+     "fwd20 %": null,
+     "fwd60 %": null,
+     "lower close within 20": null,
+     "best bounce within 20 %": -7.9
+    }
+   }
+  },
+  "ARM": {
+   "today value": -1.78,
+   "episodes": {
+    "2024-08-05": {
+     "z20": -1.81,
+     "fwd20 %": 12.0,
+     "fwd60 %": 42.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 22.8
+    },
+    "2026-01-09": {
+     "z20": -2.0,
+     "fwd20 %": 11.5,
+     "fwd60 %": 33.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.5
+    }
+   }
+  },
+  "SMCI": {
+   "today value": -1.64,
+   "episodes": {
+    "2008-10-06": {
+     "z20": -1.96,
+     "fwd20 %": -18.7,
+     "fwd60 %": -17.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.4
+    },
+    "2008-11-12": {
+     "z20": -1.72,
+     "fwd20 %": 48.5,
+     "fwd60 %": 17.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 52.5
+    },
+    "2010-05-20": {
+     "z20": -2.02,
+     "fwd20 %": 13.1,
+     "fwd60 %": -32.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.1
+    },
+    "2010-08-10": {
+     "z20": -1.67,
+     "fwd20 %": 1.3,
+     "fwd60 %": 20.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.6
+    },
+    "2011-08-01": {
+     "z20": -1.88,
+     "fwd20 %": 1.8,
+     "fwd60 %": 5.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.9
+    },
+    "2012-05-24": {
+     "z20": -1.76,
+     "fwd20 %": -3.7,
+     "fwd60 %": -23.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.1
+    },
+    "2012-07-23": {
+     "z20": -1.8,
+     "fwd20 %": -2.3,
+     "fwd60 %": -26.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.9
+    },
+    "2012-10-04": {
+     "z20": -1.72,
+     "fwd20 %": -27.4,
+     "fwd60 %": -6.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.5
+    },
+    "2013-04-22": {
+     "z20": -2.06,
+     "fwd20 %": 10.4,
+     "fwd60 %": 20.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.8
+    },
+    "2015-07-09": {
+     "z20": -2.23,
+     "fwd20 %": 4.1,
+     "fwd60 %": 7.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.1
+    },
+    "2016-04-15": {
+     "z20": -1.82,
+     "fwd20 %": -6.6,
+     "fwd60 %": -3.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.2
+    },
+    "2016-07-19": {
+     "z20": -2.99,
+     "fwd20 %": 13.6,
+     "fwd60 %": 16.8,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.4
+    },
+    "2017-09-15": {
+     "z20": -1.68,
+     "fwd20 %": -3.2,
+     "fwd60 %": -6.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.4
+    },
+    "2018-02-20": {
+     "z20": -1.68,
+     "fwd20 %": -0.8,
+     "fwd60 %": 26.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.8
+    },
+    "2018-08-03": {
+     "z20": -1.96,
+     "fwd20 %": -2.3,
+     "fwd60 %": -36.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.2
+    },
+    "2018-10-04": {
+     "z20": -2.22,
+     "fwd20 %": 9.4,
+     "fwd60 %": 19.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 17.1
+    },
+    "2019-05-23": {
+     "z20": -1.82,
+     "fwd20 %": -4.0,
+     "fwd60 %": -1.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.3
+    },
+    "2020-03-16": {
+     "z20": -2.49,
+     "fwd20 %": 26.0,
+     "fwd60 %": 67.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 26.0
+    },
+    "2021-05-12": {
+     "z20": -1.69,
+     "fwd20 %": 8.2,
+     "fwd60 %": 15.8,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.0
+    },
+    "2022-09-23": {
+     "z20": -1.73,
+     "fwd20 %": 20.8,
+     "fwd60 %": 46.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 20.8
+    },
+    "2024-08-07": {
+     "z20": -2.27,
+     "fwd20 %": -15.9,
+     "fwd60 %": -40.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 27.6
+    },
+    "2024-11-06": {
+     "z20": -1.74,
+     "fwd20 %": 81.2,
+     "fwd60 %": 38.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 85.0
+    },
+    "2025-11-05": {
+     "z20": -1.82,
+     "fwd20 %": -18.6,
+     "fwd60 %": -29.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": -4.0
+    },
+    "2026-03-20": {
+     "z20": -1.98,
+     "fwd20 %": 40.3,
+     "fwd60 %": 42.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 40.3
+    }
+   }
+  },
+  "CRWV": {
+   "today value": -1.8,
+   "episodes": {
+    "2025-11-13": {
+     "z20": -1.87,
+     "fwd20 %": 0.3,
+     "fwd60 %": 21.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.7
+    }
+   }
+  },
+  "GOOGL": {
+   "today value": -1.9,
+   "episodes": {
+    "2006-02-09": {
+     "z20": -2.1,
+     "fwd20 %": -5.9,
+     "fwd60 %": 10.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.8
+    },
+    "2008-01-23": {
+     "z20": -2.19,
+     "fwd20 %": -8.3,
+     "fwd60 %": -1.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.7
+    },
+    "2010-01-25": {
+     "z20": -2.03,
+     "fwd20 %": -0.9,
+     "fwd60 %": 2.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.6
+    },
+    "2011-03-15": {
+     "z20": -1.95,
+     "fwd20 %": 0.2,
+     "fwd60 %": -9.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.9
+    },
+    "2012-11-15": {
+     "z20": -1.97,
+     "fwd20 %": 8.5,
+     "fwd60 %": 20.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.6
+    },
+    "2014-10-16": {
+     "z20": -2.01,
+     "fwd20 %": 3.6,
+     "fwd60 %": -6.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.8
+    },
+    "2018-10-24": {
+     "z20": -1.97,
+     "fwd20 %": -1.3,
+     "fwd60 %": 2.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.8
+    },
+    "2020-03-09": {
+     "z20": -2.24,
+     "fwd20 %": -2.7,
+     "fwd60 %": 18.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.9
+    },
+    "2022-01-25": {
+     "z20": -2.2,
+     "fwd20 %": 0.5,
+     "fwd60 %": -1.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 16.6
+    },
+    "2024-08-02": {
+     "z20": -2.01,
+     "fwd20 %": -2.0,
+     "fwd60 %": 0.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.3
+    },
+    "2026-10-29": {
+     "z20": -2.39,
+     "fwd20 %": null,
+     "fwd60 %": null,
+     "lower close within 20": null,
+     "best bounce within 20 %": 1.8
+    }
+   }
+  },
+  "PLTR": {
+   "today value": -1.69,
+   "episodes": {
+    "2021-12-01": {
+     "z20": -1.86,
+     "fwd20 %": -3.6,
+     "fwd60 %": -38.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.3
+    },
+    "2022-01-21": {
+     "z20": -2.13,
+     "fwd20 %": -18.6,
+     "fwd60 %": -4.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.0
+    },
+    "2022-05-09": {
+     "z20": -1.88,
+     "fwd20 %": 22.4,
+     "fwd60 %": 51.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 24.7
+    },
+    "2022-09-02": {
+     "z20": -1.75,
+     "fwd20 %": 11.4,
+     "fwd60 %": -4.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.4
+    },
+    "2026-02-05": {
+     "z20": -1.9,
+     "fwd20 %": 20.9,
+     "fwd60 %": 12.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 20.9
+    },
+    "2026-06-30": {
+     "z20": -1.7,
+     "fwd20 %": 5.4,
+     "fwd60 %": 65.1,
+     "lower close within 20": false,
+     "best bounce within 20 %": 15.6
+    }
+   }
+  },
+  "ANET": {
+   "today value": -1.59,
+   "episodes": {
+    "2015-09-11": {
+     "z20": -1.9,
+     "fwd20 %": 4.3,
+     "fwd60 %": 15.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.5
+    },
+    "2016-01-27": {
+     "z20": -1.63,
+     "fwd20 %": 11.2,
+     "fwd60 %": 7.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.2
+    },
+    "2016-06-27": {
+     "z20": -1.61,
+     "fwd20 %": 16.5,
+     "fwd60 %": 37.5,
+     "lower close within 20": false,
+     "best bounce within 20 %": 17.2
+    },
+    "2018-10-11": {
+     "z20": -1.8,
+     "fwd20 %": 17.1,
+     "fwd60 %": 0.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 19.6
+    },
+    "2019-05-10": {
+     "z20": -1.65,
+     "fwd20 %": -5.4,
+     "fwd60 %": -10.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.2
+    },
+    "2019-08-12": {
+     "z20": -1.75,
+     "fwd20 %": 6.0,
+     "fwd60 %": -15.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.0
+    },
+    "2019-11-01": {
+     "z20": -2.24,
+     "fwd20 %": 4.2,
+     "fwd60 %": 25.1,
+     "lower close within 20": false,
+     "best bounce within 20 %": 6.8
+    },
+    "2020-02-25": {
+     "z20": -1.69,
+     "fwd20 %": -9.4,
+     "fwd60 %": 9.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.4
+    },
+    "2021-03-04": {
+     "z20": -1.85,
+     "fwd20 %": 13.6,
+     "fwd60 %": 25.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.7
+    },
+    "2022-05-09": {
+     "z20": -1.61,
+     "fwd20 %": 1.8,
+     "fwd60 %": 20.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.0
+    },
+    "2023-05-02": {
+     "z20": -2.26,
+     "fwd20 %": 23.2,
+     "fwd60 %": 11.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 29.2
+    },
+    "2024-04-19": {
+     "z20": -1.61,
+     "fwd20 %": 30.0,
+     "fwd60 %": 36.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 32.5
+    },
+    "2025-03-10": {
+     "z20": -1.81,
+     "fwd20 %": -12.1,
+     "fwd60 %": 22.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 12.8
+    },
+    "2025-11-21": {
+     "z20": -1.7,
+     "fwd20 %": 11.3,
+     "fwd60 %": 13.1,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.4
+    }
+   }
+  },
+  "DELL": {
+   "today value": -1.87,
+   "episodes": {
+    "2017-06-29": {
+     "z20": -2.02,
+     "fwd20 %": 4.8,
+     "fwd60 %": 24.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.3
+    },
+    "2018-02-05": {
+     "z20": -1.95,
+     "fwd20 %": 11.9,
+     "fwd60 %": 4.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.9
+    },
+    "2018-10-11": {
+     "z20": -1.95,
+     "fwd20 %": 7.8,
+     "fwd60 %": -7.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.8
+    },
+    "2018-12-24": {
+     "z20": -3.22,
+     "fwd20 %": 0.9,
+     "fwd60 %": 33.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.6
+    },
+    "2019-06-14": {
+     "z20": -2.27,
+     "fwd20 %": 7.6,
+     "fwd60 %": 8.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.6
+    },
+    "2019-08-28": {
+     "z20": -1.96,
+     "fwd20 %": 15.1,
+     "fwd60 %": 18.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 22.5
+    },
+    "2020-02-28": {
+     "z20": -2.04,
+     "fwd20 %": -4.2,
+     "fwd60 %": 9.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.2
+    },
+    "2022-09-23": {
+     "z20": -2.14,
+     "fwd20 %": 3.7,
+     "fwd60 %": 9.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.6
+    },
+    "2023-03-13": {
+     "z20": -1.88,
+     "fwd20 %": 13.8,
+     "fwd60 %": 30.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 13.8
+    },
+    "2024-08-07": {
+     "z20": -2.09,
+     "fwd20 %": 21.9,
+     "fwd60 %": 40.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 31.5
+    }
+   }
+  },
+  "^SOX": {
+   "today value": -2.25,
+   "episodes": {
+    "1996-07-15": {
+     "z20": -2.49,
+     "fwd20 %": 15.3,
+     "fwd60 %": 28.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 20.2
+    },
+    "1997-10-27": {
+     "z20": -2.87,
+     "fwd20 %": 2.8,
+     "fwd60 %": -4.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.5
+    },
+    "1998-06-02": {
+     "z20": -2.29,
+     "fwd20 %": -2.4,
+     "fwd60 %": -7.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.5
+    },
+    "2001-10-01": {
+     "z20": -2.36,
+     "fwd20 %": 23.4,
+     "fwd60 %": 43.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 33.8
+    },
+    "2008-01-09": {
+     "z20": -2.25,
+     "fwd20 %": -4.3,
+     "fwd60 %": 1.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.6
+    },
+    "2008-10-23": {
+     "z20": -2.32,
+     "fwd20 %": -20.9,
+     "fwd60 %": -5.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.3
+    },
+    "2011-08-08": {
+     "z20": -2.35,
+     "fwd20 %": 2.3,
+     "fwd60 %": 12.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.5
+    },
+    "2014-10-10": {
+     "z20": -2.39,
+     "fwd20 %": 13.6,
+     "fwd60 %": 18.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.6
+    },
+    "2015-08-25": {
+     "z20": -2.37,
+     "fwd20 %": 5.6,
+     "fwd60 %": 18.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 12.0
+    },
+    "2018-10-24": {
+     "z20": -2.6,
+     "fwd20 %": 2.9,
+     "fwd60 %": 3.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.7
+    },
+    "2019-05-31": {
+     "z20": -2.27,
+     "fwd20 %": 12.6,
+     "fwd60 %": 12.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 12.6
+    },
+    "2020-03-12": {
+     "z20": -2.58,
+     "fwd20 %": 15.1,
+     "fwd60 %": 43.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 17.8
+    }
+   }
+  },
+  "SMH": {
+   "today value": -2.32,
+   "episodes": {
+    "2011-08-04": {
+     "z20": -2.34,
+     "fwd20 %": -3.4,
+     "fwd60 %": 9.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.6
+    },
+    "2016-01-15": {
+     "z20": -2.53,
+     "fwd20 %": 3.0,
+     "fwd60 %": 19.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.9
+    },
+    "2018-10-24": {
+     "z20": -2.63,
+     "fwd20 %": 2.5,
+     "fwd60 %": 1.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.3
+    },
+    "2020-03-12": {
+     "z20": -2.52,
+     "fwd20 %": 14.1,
+     "fwd60 %": 40.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 16.8
+    }
+   }
+  },
+  "QQQ": {
+   "today value": -2.37,
+   "episodes": {
+    "2008-10-07": {
+     "z20": -2.4,
+     "fwd20 %": 3.4,
+     "fwd60 %": -5.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.6
+    },
+    "2019-06-03": {
+     "z20": -2.49,
+     "fwd20 %": 11.3,
+     "fwd60 %": 8.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 11.3
+    },
+    "2020-03-12": {
+     "z20": -2.65,
+     "fwd20 %": 13.3,
+     "fwd60 %": 36.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.3
+    },
+    "2022-01-25": {
+     "z20": -2.4,
+     "fwd20 %": -4.5,
+     "fwd60 %": -3.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.8
+    },
+    "2024-08-05": {
+     "z20": -2.42,
+     "fwd20 %": 6.1,
+     "fwd60 %": 14.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.8
+    }
+   }
+  }
+ },
+ "today": {
+  "NVDA": {
+   "today value": -3.1,
+   "episodes": {
+    "2002-06-19": {
+     "z1": -3.18,
+     "fwd20 %": -20.4,
+     "fwd60 %": -55.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.9
+    },
+    "2002-07-31": {
+     "z1": -5.35,
+     "fwd20 %": -7.5,
+     "fwd60 %": -5.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.0
+    },
+    "2002-11-08": {
+     "z1": -3.4,
+     "fwd20 %": 14.4,
+     "fwd60 %": -10.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 50.8
+    },
+    "2003-08-08": {
+     "z1": -5.67,
+     "fwd20 %": 26.1,
+     "fwd60 %": 16.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 26.1
+    },
+    "2004-08-06": {
+     "z1": -13.24,
+     "fwd20 %": 35.9,
+     "fwd60 %": 56.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 40.2
+    },
+    "2005-11-29": {
+     "z1": -3.15,
+     "fwd20 %": 7.4,
+     "fwd60 %": 33.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 7.4
+    },
+    "2006-05-12": {
+     "z1": -3.21,
+     "fwd20 %": -23.4,
+     "fwd60 %": -7.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.4
+    },
+    "2007-01-18": {
+     "z1": -3.27,
+     "fwd20 %": 6.5,
+     "fwd60 %": -4.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.9
+    },
+    "2008-02-14": {
+     "z1": -3.85,
+     "fwd20 %": -19.0,
+     "fwd60 %": -3.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.1
+    },
+    "2008-07-03": {
+     "z1": -10.23,
+     "fwd20 %": -13.2,
+     "fwd60 %": -19.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": -3.1
+    },
+    "2010-05-14": {
+     "z1": -4.95,
+     "fwd20 %": -12.3,
+     "fwd60 %": -28.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.2
+    },
+    "2011-05-13": {
+     "z1": -3.37,
+     "fwd20 %": -6.9,
+     "fwd60 %": -29.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.7
+    },
+    "2011-08-04": {
+     "z1": -3.61,
+     "fwd20 %": -0.9,
+     "fwd60 %": 16.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.1
+    },
+    "2012-10-19": {
+     "z1": -3.37,
+     "fwd20 %": -5.1,
+     "fwd60 %": 0.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.5
+    },
+    "2014-07-18": {
+     "z1": -3.65,
+     "fwd20 %": 3.3,
+     "fwd60 %": -8.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.3
+    },
+    "2014-10-10": {
+     "z1": -3.5,
+     "fwd20 %": 17.4,
+     "fwd60 %": 13.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 20.0
+    },
+    "2015-01-27": {
+     "z1": -3.13,
+     "fwd20 %": 12.8,
+     "fwd60 %": 13.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.0
+    },
+    "2015-03-25": {
+     "z1": -3.3,
+     "fwd20 %": 5.6,
+     "fwd60 %": 3.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.2
+    },
+    "2015-05-08": {
+     "z1": -4.16,
+     "fwd20 %": 4.4,
+     "fwd60 %": -2.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.4
+    },
+    "2016-02-05": {
+     "z1": -3.27,
+     "fwd20 %": 22.4,
+     "fwd60 %": 34.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 24.6
+    },
+    "2017-02-23": {
+     "z1": -3.57,
+     "fwd20 %": 6.6,
+     "fwd60 %": 35.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.9
+    },
+    "2017-04-04": {
+     "z1": -3.14,
+     "fwd20 %": 3.4,
+     "fwd60 %": 45.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.8
+    },
+    "2017-11-29": {
+     "z1": -3.69,
+     "fwd20 %": 0.5,
+     "fwd60 %": 25.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.2
+    },
+    "2018-02-05": {
+     "z1": -3.86,
+     "fwd20 %": 13.3,
+     "fwd60 %": 5.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 16.6
+    },
+    "2018-08-17": {
+     "z1": -3.18,
+     "fwd20 %": 11.9,
+     "fwd60 %": -22.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 15.9
+    },
+    "2018-10-10": {
+     "z1": -4.37,
+     "fwd20 %": -13.0,
+     "fwd60 %": -43.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.3
+    },
+    "2020-02-24": {
+     "z1": -3.2,
+     "fwd20 %": -22.2,
+     "fwd60 %": 28.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.1
+    },
+    "2020-09-03": {
+     "z1": -3.87,
+     "fwd20 %": 0.4,
+     "fwd60 %": 3.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.6
+    },
+    "2021-02-25": {
+     "z1": -3.74,
+     "fwd20 %": -5.8,
+     "fwd60 %": 12.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.0
+    },
+    "2025-01-27": {
+     "z1": -6.68,
+     "fwd20 %": 6.9,
+     "fwd60 %": -13.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 18.3
+    }
+   }
+  },
+  "AMD": {
+   "today value": -3.64,
+   "episodes": {
+    "1994-10-03": {
+     "z1": -6.2,
+     "fwd20 %": -0.5,
+     "fwd60 %": -9.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.5
+    },
+    "1995-04-11": {
+     "z1": -3.96,
+     "fwd20 %": 10.8,
+     "fwd60 %": 6.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.8
+    },
+    "1996-06-21": {
+     "z1": -4.56,
+     "fwd20 %": -23.7,
+     "fwd60 %": -0.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.9
+    },
+    "1997-10-01": {
+     "z1": -5.14,
+     "fwd20 %": -10.6,
+     "fwd60 %": -35.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.5
+    },
+    "1998-07-09": {
+     "z1": -3.87,
+     "fwd20 %": 5.5,
+     "fwd60 %": 18.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.4
+    },
+    "1998-10-07": {
+     "z1": -4.09,
+     "fwd20 %": 59.5,
+     "fwd60 %": 77.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 59.5
+    },
+    "1999-01-14": {
+     "z1": -4.14,
+     "fwd20 %": -21.9,
+     "fwd60 %": -33.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.6
+    },
+    "2000-09-21": {
+     "z1": -4.04,
+     "fwd20 %": -8.9,
+     "fwd60 %": -32.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.7
+    },
+    "2001-07-06": {
+     "z1": -5.39,
+     "fwd20 %": -7.5,
+     "fwd60 %": -58.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.1
+    },
+    "2002-06-19": {
+     "z1": -3.8,
+     "fwd20 %": 0.2,
+     "fwd60 %": -17.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.7
+    },
+    "2002-10-03": {
+     "z1": -7.53,
+     "fwd20 %": 69.1,
+     "fwd60 %": 74.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 74.1
+    },
+    "2005-01-11": {
+     "z1": -8.28,
+     "fwd20 %": 20.7,
+     "fwd60 %": 15.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 20.7
+    },
+    "2005-10-12": {
+     "z1": -5.73,
+     "fwd20 %": 16.8,
+     "fwd60 %": 58.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 18.5
+    },
+    "2006-07-21": {
+     "z1": -5.46,
+     "fwd20 %": 31.1,
+     "fwd60 %": 39.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 32.5
+    },
+    "2006-10-19": {
+     "z1": -4.38,
+     "fwd20 %": 3.5,
+     "fwd60 %": -14.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.5
+    },
+    "2008-09-29": {
+     "z1": -3.99,
+     "fwd20 %": -31.5,
+     "fwd60 %": -54.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 22.4
+    },
+    "2011-01-11": {
+     "z1": -4.41,
+     "fwd20 %": -1.6,
+     "fwd60 %": 0.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.5
+    },
+    "2012-07-10": {
+     "z1": -3.93,
+     "fwd20 %": -19.4,
+     "fwd60 %": -37.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.8
+    },
+    "2012-10-12": {
+     "z1": -4.23,
+     "fwd20 %": -23.7,
+     "fwd60 %": -2.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.1
+    },
+    "2013-10-18": {
+     "z1": -6.46,
+     "fwd20 %": -0.8,
+     "fwd60 %": 26.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.3
+    },
+    "2014-01-22": {
+     "z1": -6.88,
+     "fwd20 %": 0.5,
+     "fwd60 %": 0.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.4
+    },
+    "2014-07-18": {
+     "z1": -7.75,
+     "fwd20 %": 7.8,
+     "fwd60 %": -28.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.1
+    },
+    "2014-10-09": {
+     "z1": -4.07,
+     "fwd20 %": -6.4,
+     "fwd60 %": -10.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": -2.7
+    },
+    "2015-07-07": {
+     "z1": -5.84,
+     "fwd20 %": 1.9,
+     "fwd60 %": -17.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.3
+    },
+    "2017-05-02": {
+     "z1": -7.36,
+     "fwd20 %": 8.4,
+     "fwd60 %": 36.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 23.5
+    },
+    "2017-10-25": {
+     "z1": -5.92,
+     "fwd20 %": -7.8,
+     "fwd60 %": 4.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": -2.3
+    },
+    "2020-03-12": {
+     "z1": -4.25,
+     "fwd20 %": 24.0,
+     "fwd60 %": 35.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 25.1
+    },
+    "2022-10-07": {
+     "z1": -4.35,
+     "fwd20 %": 6.4,
+     "fwd60 %": 10.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.4
+    },
+    "2023-05-03": {
+     "z1": -3.76,
+     "fwd20 %": 46.4,
+     "fwd60 %": 40.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 55.6
+    },
+    "2024-07-17": {
+     "z1": -3.96,
+     "fwd20 %": -11.7,
+     "fwd60 %": 3.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": -2.2
+    },
+    "2024-10-30": {
+     "z1": -3.84,
+     "fwd20 %": -8.3,
+     "fwd60 %": -21.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.8
+    },
+    "2026-02-04": {
+     "z1": -5.11,
+     "fwd20 %": -0.4,
+     "fwd60 %": 80.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.9
+    }
+   }
+  },
+  "AVGO": {
+   "today value": -2.77,
+   "episodes": {
+    "2010-05-04": {
+     "z1": -2.99,
+     "fwd20 %": 5.3,
+     "fwd60 %": 8.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.4
+    },
+    "2010-08-11": {
+     "z1": -3.83,
+     "fwd20 %": -2.8,
+     "fwd60 %": 25.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.1
+    },
+    "2010-12-03": {
+     "z1": -2.94,
+     "fwd20 %": 4.7,
+     "fwd60 %": 22.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.8
+    },
+    "2011-05-23": {
+     "z1": -3.34,
+     "fwd20 %": 6.4,
+     "fwd60 %": -4.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.3
+    },
+    "2011-07-27": {
+     "z1": -3.3,
+     "fwd20 %": -4.0,
+     "fwd60 %": 1.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.0
+    },
+    "2012-04-19": {
+     "z1": -3.18,
+     "fwd20 %": -15.8,
+     "fwd60 %": -8.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.8
+    },
+    "2012-12-14": {
+     "z1": -3.84,
+     "fwd20 %": 8.8,
+     "fwd60 %": 17.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.0
+    },
+    "2013-04-17": {
+     "z1": -4.26,
+     "fwd20 %": 5.5,
+     "fwd60 %": 20.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.5
+    },
+    "2013-11-14": {
+     "z1": -3.59,
+     "fwd20 %": 6.3,
+     "fwd60 %": 37.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.8
+    },
+    "2014-10-10": {
+     "z1": -6.13,
+     "fwd20 %": 19.2,
+     "fwd60 %": 38.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 22.8
+    },
+    "2016-06-24": {
+     "z1": -4.25,
+     "fwd20 %": 7.4,
+     "fwd60 %": 13.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.4
+    },
+    "2016-12-01": {
+     "z1": -2.91,
+     "fwd20 %": 8.6,
+     "fwd60 %": 32.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 12.0
+    },
+    "2017-04-12": {
+     "z1": -3.3,
+     "fwd20 %": 10.5,
+     "fwd60 %": 15.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.6
+    },
+    "2017-05-17": {
+     "z1": -3.56,
+     "fwd20 %": 2.9,
+     "fwd60 %": 5.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.3
+    },
+    "2018-07-12": {
+     "z1": -9.66,
+     "fwd20 %": 3.1,
+     "fwd60 %": 16.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.6
+    },
+    "2018-10-10": {
+     "z1": -2.98,
+     "fwd20 %": 1.1,
+     "fwd60 %": 1.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.8
+    },
+    "2018-11-12": {
+     "z1": -2.87,
+     "fwd20 %": 14.0,
+     "fwd60 %": 23.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.0
+    },
+    "2019-01-03": {
+     "z1": -3.42,
+     "fwd20 %": 15.5,
+     "fwd60 %": 32.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 17.3
+    },
+    "2019-05-20": {
+     "z1": -3.47,
+     "fwd20 %": 2.0,
+     "fwd60 %": -0.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.0
+    },
+    "2020-01-27": {
+     "z1": -3.22,
+     "fwd20 %": -8.5,
+     "fwd60 %": -15.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.1
+    },
+    "2020-03-09": {
+     "z1": -3.83,
+     "fwd20 %": 1.9,
+     "fwd60 %": 25.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.1
+    },
+    "2020-09-03": {
+     "z1": -3.36,
+     "fwd20 %": 1.3,
+     "fwd60 %": 14.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.7
+    },
+    "2021-02-25": {
+     "z1": -3.08,
+     "fwd20 %": 1.0,
+     "fwd60 %": -1.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.1
+    },
+    "2023-05-02": {
+     "z1": -2.88,
+     "fwd20 %": 31.9,
+     "fwd60 %": 46.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 32.7
+    },
+    "2024-03-08": {
+     "z1": -2.85,
+     "fwd20 %": 2.1,
+     "fwd60 %": 1.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.2
+    },
+    "2024-07-17": {
+     "z1": -2.79,
+     "fwd20 %": 1.1,
+     "fwd60 %": 19.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.0
+    },
+    "2025-01-27": {
+     "z1": -4.1,
+     "fwd20 %": 0.2,
+     "fwd60 %": -12.5,
+     "lower close within 20": false,
+     "best bounce within 20 %": 16.9
+    },
+    "2025-04-03": {
+     "z1": -2.8,
+     "fwd20 %": 32.2,
+     "fwd60 %": 71.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 32.2
+    },
+    "2025-12-12": {
+     "z1": -4.05,
+     "fwd20 %": -1.5,
+     "fwd60 %": -6.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.5
+    },
+    "2026-06-04": {
+     "z1": -4.76,
+     "fwd20 %": -10.7,
+     "fwd60 %": -11.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.8
+    }
+   }
+  },
+  "MU": {
+   "today value": -3.42,
+   "episodes": {
+    "1995-05-30": {
+     "z1": -3.7,
+     "fwd20 %": 31.8,
+     "fwd60 %": 77.8,
+     "lower close within 20": false,
+     "best bounce within 20 %": 38.7
+    },
+    "1996-07-11": {
+     "z1": -5.79,
+     "fwd20 %": 24.4,
+     "fwd60 %": 45.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 26.2
+    },
+    "1997-08-13": {
+     "z1": -4.24,
+     "fwd20 %": -3.8,
+     "fwd60 %": -36.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.6
+    },
+    "2000-09-21": {
+     "z1": -3.86,
+     "fwd20 %": -37.1,
+     "fwd60 %": -34.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": -4.3
+    },
+    "2001-09-18": {
+     "z1": -3.79,
+     "fwd20 %": -13.3,
+     "fwd60 %": 24.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.3
+    },
+    "2002-06-19": {
+     "z1": -3.83,
+     "fwd20 %": 13.4,
+     "fwd60 %": -17.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 21.8
+    },
+    "2002-12-18": {
+     "z1": -4.35,
+     "fwd20 %": -10.4,
+     "fwd60 %": -21.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.6
+    },
+    "2006-10-06": {
+     "z1": -6.7,
+     "fwd20 %": -7.7,
+     "fwd60 %": -8.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.2
+    },
+    "2007-07-26": {
+     "z1": -3.54,
+     "fwd20 %": -8.4,
+     "fwd60 %": -17.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.0
+    },
+    "2007-10-03": {
+     "z1": -3.68,
+     "fwd20 %": -2.1,
+     "fwd60 %": -32.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.6
+    },
+    "2008-06-27": {
+     "z1": -4.41,
+     "fwd20 %": -24.9,
+     "fwd60 %": -33.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.6
+    },
+    "2008-09-15": {
+     "z1": -3.82,
+     "fwd20 %": -3.0,
+     "fwd60 %": -49.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.5
+    },
+    "2010-06-29": {
+     "z1": -3.83,
+     "fwd20 %": -5.0,
+     "fwd60 %": -23.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.5
+    },
+    "2011-06-24": {
+     "z1": -5.97,
+     "fwd20 %": 9.4,
+     "fwd60 %": -5.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 12.2
+    },
+    "2013-10-11": {
+     "z1": -3.56,
+     "fwd20 %": 7.5,
+     "fwd60 %": 41.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.5
+    },
+    "2014-10-10": {
+     "z1": -3.77,
+     "fwd20 %": 18.8,
+     "fwd60 %": 15.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 21.3
+    },
+    "2015-06-26": {
+     "z1": -11.1,
+     "fwd20 %": -7.8,
+     "fwd60 %": -21.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.3
+    },
+    "2017-05-17": {
+     "z1": -3.73,
+     "fwd20 %": 13.2,
+     "fwd60 %": 3.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 20.4
+    },
+    "2017-11-29": {
+     "z1": -4.04,
+     "fwd20 %": -4.4,
+     "fwd60 %": 11.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.6
+    },
+    "2018-09-06": {
+     "z1": -4.28,
+     "fwd20 %": -1.1,
+     "fwd60 %": -13.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.2
+    },
+    "2018-10-24": {
+     "z1": -3.54,
+     "fwd20 %": 2.7,
+     "fwd60 %": -3.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.5
+    },
+    "2019-09-27": {
+     "z1": -4.69,
+     "fwd20 %": 11.2,
+     "fwd60 %": 28.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.2
+    },
+    "2020-03-09": {
+     "z1": -3.75,
+     "fwd20 %": 0.9,
+     "fwd60 %": 6.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.1
+    },
+    "2024-12-19": {
+     "z1": -4.84,
+     "fwd20 %": 25.4,
+     "fwd60 %": 18.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 25.6
+    },
+    "2025-04-03": {
+     "z1": -4.02,
+     "fwd20 %": 8.6,
+     "fwd60 %": 62.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.6
+    }
+   }
+  },
+  "TSM": {
+   "today value": -4.28,
+   "episodes": {
+    "2000-09-21": {
+     "z1": -4.33,
+     "fwd20 %": -5.6,
+     "fwd60 %": -17.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.9
+    },
+    "2001-09-17": {
+     "z1": -4.72,
+     "fwd20 %": 0.0,
+     "fwd60 %": 74.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.2
+    },
+    "2002-07-25": {
+     "z1": -4.54,
+     "fwd20 %": 1.1,
+     "fwd60 %": -19.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.2
+    },
+    "2007-07-26": {
+     "z1": -4.3,
+     "fwd20 %": -2.6,
+     "fwd60 %": -4.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.6
+    },
+    "2013-07-18": {
+     "z1": -5.9,
+     "fwd20 %": -4.8,
+     "fwd60 %": 7.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.6
+    },
+    "2014-07-16": {
+     "z1": -6.04,
+     "fwd20 %": -2.9,
+     "fwd60 %": -2.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.2
+    },
+    "2015-06-29": {
+     "z1": -4.47,
+     "fwd20 %": -2.2,
+     "fwd60 %": -10.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.4
+    },
+    "2017-11-27": {
+     "z1": -4.84,
+     "fwd20 %": -5.2,
+     "fwd60 %": 6.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.4
+    },
+    "2020-03-16": {
+     "z1": -5.25,
+     "fwd20 %": 12.8,
+     "fwd60 %": 28.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 12.8
+    },
+    "2025-01-27": {
+     "z1": -5.58,
+     "fwd20 %": -1.5,
+     "fwd60 %": -17.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.5
+    }
+   }
+  },
+  "ASML": {
+   "today value": -2.82,
+   "episodes": {
+    "1995-12-18": {
+     "z1": -2.89,
+     "fwd20 %": 19.4,
+     "fwd60 %": 15.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 22.7
+    },
+    "1996-06-11": {
+     "z1": -3.08,
+     "fwd20 %": -8.8,
+     "fwd60 %": -26.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.1
+    },
+    "1997-10-27": {
+     "z1": -3.71,
+     "fwd20 %": -6.5,
+     "fwd60 %": -5.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 19.7
+    },
+    "1998-06-11": {
+     "z1": -3.23,
+     "fwd20 %": -11.5,
+     "fwd60 %": -45.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": -6.7
+    },
+    "1998-08-31": {
+     "z1": -4.66,
+     "fwd20 %": -2.5,
+     "fwd60 %": 66.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 19.1
+    },
+    "1999-07-20": {
+     "z1": -2.95,
+     "fwd20 %": -1.8,
+     "fwd60 %": 14.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.5
+    },
+    "2000-03-29": {
+     "z1": -3.02,
+     "fwd20 %": -3.0,
+     "fwd60 %": 11.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 12.2
+    },
+    "2000-10-17": {
+     "z1": -3.46,
+     "fwd20 %": 4.1,
+     "fwd60 %": 17.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 24.9
+    },
+    "2001-09-17": {
+     "z1": -3.81,
+     "fwd20 %": 7.6,
+     "fwd60 %": 42.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 16.9
+    },
+    "2002-07-25": {
+     "z1": -4.29,
+     "fwd20 %": 17.3,
+     "fwd60 %": -24.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 17.3
+    },
+    "2003-03-24": {
+     "z1": -3.32,
+     "fwd20 %": 7.2,
+     "fwd60 %": 39.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.2
+    },
+    "2004-07-14": {
+     "z1": -2.95,
+     "fwd20 %": -10.8,
+     "fwd60 %": -8.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.6
+    },
+    "2004-09-03": {
+     "z1": -2.96,
+     "fwd20 %": 9.6,
+     "fwd60 %": 23.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 15.8
+    },
+    "2005-04-13": {
+     "z1": -3.6,
+     "fwd20 %": -0.9,
+     "fwd60 %": 5.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.6
+    },
+    "2006-10-18": {
+     "z1": -3.87,
+     "fwd20 %": 9.8,
+     "fwd60 %": 16.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.8
+    },
+    "2007-08-15": {
+     "z1": -3.1,
+     "fwd20 %": 13.0,
+     "fwd60 %": 13.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 17.9
+    },
+    "2007-10-01": {
+     "z1": -3.84,
+     "fwd20 %": 3.1,
+     "fwd60 %": -6.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.7
+    },
+    "2008-01-16": {
+     "z1": -3.44,
+     "fwd20 %": -0.7,
+     "fwd60 %": -6.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 12.2
+    },
+    "2008-09-17": {
+     "z1": -2.98,
+     "fwd20 %": -22.5,
+     "fwd60 %": -17.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.9
+    },
+    "2010-04-27": {
+     "z1": -3.21,
+     "fwd20 %": -17.5,
+     "fwd60 %": -5.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.9
+    },
+    "2010-08-11": {
+     "z1": -3.02,
+     "fwd20 %": -7.9,
+     "fwd60 %": 20.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.8
+    },
+    "2011-01-19": {
+     "z1": -3.03,
+     "fwd20 %": 19.9,
+     "fwd60 %": 6.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 19.9
+    },
+    "2011-04-13": {
+     "z1": -2.93,
+     "fwd20 %": 2.3,
+     "fwd60 %": -6.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.9
+    },
+    "2011-08-08": {
+     "z1": -3.11,
+     "fwd20 %": 7.6,
+     "fwd60 %": 30.8,
+     "lower close within 20": false,
+     "best bounce within 20 %": 15.2
+    },
+    "2012-02-29": {
+     "z1": -2.94,
+     "fwd20 %": 7.3,
+     "fwd60 %": 1.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.6
+    },
+    "2012-10-17": {
+     "z1": -3.69,
+     "fwd20 %": 9.6,
+     "fwd60 %": -1.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.8
+    },
+    "2012-11-29": {
+     "z1": -9.99,
+     "fwd20 %": 1.1,
+     "fwd60 %": 14.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.6
+    },
+    "2013-11-07": {
+     "z1": -2.96,
+     "fwd20 %": 4.8,
+     "fwd60 %": -2.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.4
+    },
+    "2014-01-16": {
+     "z1": -4.21,
+     "fwd20 %": 4.6,
+     "fwd60 %": 1.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.1
+    },
+    "2015-03-25": {
+     "z1": -3.21,
+     "fwd20 %": 3.9,
+     "fwd60 %": 4.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.9
+    },
+    "2015-07-16": {
+     "z1": -2.91,
+     "fwd20 %": -5.6,
+     "fwd60 %": -9.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.6
+    },
+    "2016-01-15": {
+     "z1": -4.33,
+     "fwd20 %": 8.4,
+     "fwd60 %": 31.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 19.1
+    },
+    "2016-06-24": {
+     "z1": -4.22,
+     "fwd20 %": 12.1,
+     "fwd60 %": 10.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.8
+    },
+    "2016-10-11": {
+     "z1": -3.25,
+     "fwd20 %": 2.0,
+     "fwd60 %": 8.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.8
+    },
+    "2017-04-19": {
+     "z1": -2.82,
+     "fwd20 %": 4.7,
+     "fwd60 %": 10.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 8.2
+    },
+    "2017-06-09": {
+     "z1": -3.17,
+     "fwd20 %": 3.7,
+     "fwd60 %": 19.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.8
+    },
+    "2017-11-29": {
+     "z1": -5.02,
+     "fwd20 %": 1.0,
+     "fwd60 %": 14.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.7
+    },
+    "2018-09-06": {
+     "z1": -2.92,
+     "fwd20 %": 1.6,
+     "fwd60 %": -7.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.0
+    },
+    "2018-10-10": {
+     "z1": -3.04,
+     "fwd20 %": 3.2,
+     "fwd60 %": -9.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.6
+    },
+    "2019-05-13": {
+     "z1": -3.01,
+     "fwd20 %": 5.1,
+     "fwd60 %": 13.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.1
+    },
+    "2019-10-16": {
+     "z1": -2.9,
+     "fwd20 %": 6.1,
+     "fwd60 %": 18.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.4
+    },
+    "2020-01-27": {
+     "z1": -3.6,
+     "fwd20 %": 0.1,
+     "fwd60 %": 3.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.7
+    },
+    "2021-09-28": {
+     "z1": -4.12,
+     "fwd20 %": 1.4,
+     "fwd60 %": 1.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.7
+    },
+    "2023-07-19": {
+     "z1": -2.92,
+     "fwd20 %": -9.7,
+     "fwd60 %": -13.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.4
+    },
+    "2024-01-02": {
+     "z1": -3.23,
+     "fwd20 %": 21.3,
+     "fwd60 %": 35.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 23.1
+    },
+    "2024-04-17": {
+     "z1": -3.03,
+     "fwd20 %": 3.3,
+     "fwd60 %": 17.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.3
+    },
+    "2024-07-17": {
+     "z1": -5.54,
+     "fwd20 %": -5.6,
+     "fwd60 %": -10.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.0
+    },
+    "2024-10-15": {
+     "z1": -5.04,
+     "fwd20 %": -8.4,
+     "fwd60 %": -0.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.0
+    },
+    "2025-01-27": {
+     "z1": -2.95,
+     "fwd20 %": 5.8,
+     "fwd60 %": -4.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 12.6
+    },
+    "2025-02-27": {
+     "z1": -3.25,
+     "fwd20 %": -1.0,
+     "fwd60 %": 5.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.0
+    },
+    "2025-07-16": {
+     "z1": -4.76,
+     "fwd20 %": 0.1,
+     "fwd60 %": 30.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.1
+    },
+    "2026-10-22": {
+     "z1": -2.95,
+     "fwd20 %": null,
+     "fwd60 %": null,
+     "lower close within 20": null,
+     "best bounce within 20 %": 7.4
+    }
+   }
+  },
+  "AMAT": {
+   "today value": -3.18,
+   "episodes": {
+    "1994-11-30": {
+     "z1": -3.27,
+     "fwd20 %": -9.7,
+     "fwd60 %": -5.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": -2.9
+    },
+    "1996-07-15": {
+     "z1": -3.27,
+     "fwd20 %": -1.0,
+     "fwd60 %": 10.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.1
+    },
+    "1997-10-16": {
+     "z1": -3.35,
+     "fwd20 %": -29.7,
+     "fwd60 %": -32.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": -6.1
+    },
+    "2006-07-20": {
+     "z1": -3.24,
+     "fwd20 %": 6.0,
+     "fwd60 %": 27.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.0
+    },
+    "2007-01-18": {
+     "z1": -3.99,
+     "fwd20 %": 4.6,
+     "fwd60 %": 5.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.6
+    },
+    "2008-09-29": {
+     "z1": -4.01,
+     "fwd20 %": -22.8,
+     "fwd60 %": -33.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.4
+    },
+    "2010-01-22": {
+     "z1": -3.41,
+     "fwd20 %": -1.4,
+     "fwd60 %": 14.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.2
+    },
+    "2011-08-04": {
+     "z1": -3.49,
+     "fwd20 %": -3.7,
+     "fwd60 %": 9.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.4
+    },
+    "2012-11-07": {
+     "z1": -3.5,
+     "fwd20 %": -0.5,
+     "fwd60 %": 22.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.5
+    },
+    "2015-04-27": {
+     "z1": -4.92,
+     "fwd20 %": 0.1,
+     "fwd60 %": -12.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.2
+    },
+    "2016-12-01": {
+     "z1": -4.55,
+     "fwd20 %": 7.2,
+     "fwd60 %": 22.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.7
+    },
+    "2017-05-17": {
+     "z1": -4.58,
+     "fwd20 %": 0.9,
+     "fwd60 %": 0.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.9
+    },
+    "2017-11-29": {
+     "z1": -4.6,
+     "fwd20 %": -2.2,
+     "fwd60 %": 8.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.9
+    },
+    "2018-08-17": {
+     "z1": -4.82,
+     "fwd20 %": -11.6,
+     "fwd60 %": -25.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.0
+    },
+    "2020-03-09": {
+     "z1": -4.19,
+     "fwd20 %": -11.4,
+     "fwd60 %": 11.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.9
+    },
+    "2020-09-08": {
+     "z1": -4.13,
+     "fwd20 %": 8.6,
+     "fwd60 %": 53.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.0
+    },
+    "2021-09-28": {
+     "z1": -3.87,
+     "fwd20 %": -0.7,
+     "fwd60 %": 14.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.3
+    },
+    "2022-01-18": {
+     "z1": -3.21,
+     "fwd20 %": -8.2,
+     "fwd60 %": -23.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": -5.4
+    },
+    "2024-07-17": {
+     "z1": -5.44,
+     "fwd20 %": -8.4,
+     "fwd60 %": -7.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.5
+    },
+    "2024-10-15": {
+     "z1": -3.24,
+     "fwd20 %": -2.3,
+     "fwd60 %": -10.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.6
+    },
+    "2024-11-15": {
+     "z1": -3.38,
+     "fwd20 %": 0.3,
+     "fwd60 %": 0.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.5
+    },
+    "2025-02-14": {
+     "z1": -3.31,
+     "fwd20 %": -8.1,
+     "fwd60 %": 2.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.0
+    },
+    "2025-04-03": {
+     "z1": -3.28,
+     "fwd20 %": 14.5,
+     "fwd60 %": 35.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.5
+    },
+    "2025-08-15": {
+     "z1": -7.9,
+     "fwd20 %": 5.7,
+     "fwd60 %": 45.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.7
+    }
+   }
+  },
+  "LRCX": {
+   "today value": -3.29,
+   "episodes": {
+    "1995-11-07": {
+     "z1": -4.45,
+     "fwd20 %": -5.8,
+     "fwd60 %": -17.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.1
+    },
+    "1996-01-09": {
+     "z1": -4.27,
+     "fwd20 %": 49.6,
+     "fwd60 %": 1.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 49.6
+    },
+    "1996-06-18": {
+     "z1": -3.56,
+     "fwd20 %": -9.0,
+     "fwd60 %": -14.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.4
+    },
+    "1997-04-15": {
+     "z1": -5.08,
+     "fwd20 %": 25.8,
+     "fwd60 %": 76.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 34.7
+    },
+    "1997-12-11": {
+     "z1": -3.77,
+     "fwd20 %": -10.6,
+     "fwd60 %": 2.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 17.3
+    },
+    "1998-08-31": {
+     "z1": -3.91,
+     "fwd20 %": -6.9,
+     "fwd60 %": 82.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.7
+    },
+    "2002-07-25": {
+     "z1": -3.42,
+     "fwd20 %": 22.9,
+     "fwd60 %": -6.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 27.7
+    },
+    "2004-07-14": {
+     "z1": -4.05,
+     "fwd20 %": -2.9,
+     "fwd60 %": 5.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.4
+    },
+    "2005-07-21": {
+     "z1": -5.19,
+     "fwd20 %": -1.3,
+     "fwd60 %": 12.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.2
+    },
+    "2006-07-20": {
+     "z1": -4.4,
+     "fwd20 %": 4.7,
+     "fwd60 %": 31.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.6
+    },
+    "2007-01-18": {
+     "z1": -6.59,
+     "fwd20 %": -2.3,
+     "fwd60 %": 13.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.9
+    },
+    "2008-10-07": {
+     "z1": -3.47,
+     "fwd20 %": 9.5,
+     "fwd60 %": -2.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.7
+    },
+    "2011-08-04": {
+     "z1": -3.37,
+     "fwd20 %": -2.6,
+     "fwd60 %": 18.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.0
+    },
+    "2014-01-24": {
+     "z1": -3.93,
+     "fwd20 %": 2.6,
+     "fwd60 %": 3.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.7
+    },
+    "2014-10-10": {
+     "z1": -7.19,
+     "fwd20 %": 19.8,
+     "fwd60 %": 17.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 21.0
+    },
+    "2015-03-25": {
+     "z1": -5.26,
+     "fwd20 %": 6.0,
+     "fwd60 %": 14.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.7
+    },
+    "2016-01-06": {
+     "z1": -3.73,
+     "fwd20 %": -2.8,
+     "fwd60 %": 12.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.3
+    },
+    "2016-06-24": {
+     "z1": -4.32,
+     "fwd20 %": 10.2,
+     "fwd60 %": 11.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.9
+    },
+    "2016-12-01": {
+     "z1": -5.0,
+     "fwd20 %": 7.3,
+     "fwd60 %": 21.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.6
+    },
+    "2017-11-29": {
+     "z1": -5.28,
+     "fwd20 %": -4.7,
+     "fwd60 %": -0.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.2
+    },
+    "2018-09-06": {
+     "z1": -3.65,
+     "fwd20 %": -6.9,
+     "fwd60 %": -1.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.3
+    },
+    "2020-03-09": {
+     "z1": -3.84,
+     "fwd20 %": -6.3,
+     "fwd60 %": 7.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.5
+    },
+    "2020-09-08": {
+     "z1": -3.69,
+     "fwd20 %": 12.6,
+     "fwd60 %": 58.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.1
+    },
+    "2024-07-17": {
+     "z1": -4.88,
+     "fwd20 %": -12.6,
+     "fwd60 %": -15.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.0
+    },
+    "2025-04-03": {
+     "z1": -4.32,
+     "fwd20 %": 14.3,
+     "fwd60 %": 48.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.3
+    },
+    "2025-08-15": {
+     "z1": -3.98,
+     "fwd20 %": 19.8,
+     "fwd60 %": 67.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 19.8
+    }
+   }
+  },
+  "KLAC": {
+   "today value": -3.2,
+   "episodes": {
+    "1995-05-30": {
+     "z1": -3.43,
+     "fwd20 %": 9.1,
+     "fwd60 %": 28.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 15.2
+    },
+    "1995-11-20": {
+     "z1": -3.93,
+     "fwd20 %": 0.8,
+     "fwd60 %": -6.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 21.3
+    },
+    "1997-11-12": {
+     "z1": -3.29,
+     "fwd20 %": -1.0,
+     "fwd60 %": 12.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 29.7
+    },
+    "1998-08-31": {
+     "z1": -3.29,
+     "fwd20 %": 25.3,
+     "fwd60 %": 85.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 27.1
+    },
+    "2003-10-23": {
+     "z1": -3.45,
+     "fwd20 %": 2.1,
+     "fwd60 %": 15.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.8
+    },
+    "2004-07-14": {
+     "z1": -3.46,
+     "fwd20 %": -8.7,
+     "fwd60 %": 7.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.6
+    },
+    "2005-04-13": {
+     "z1": -3.25,
+     "fwd20 %": -5.5,
+     "fwd60 %": 8.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.5
+    },
+    "2006-05-22": {
+     "z1": -5.99,
+     "fwd20 %": -0.4,
+     "fwd60 %": 10.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.1
+    },
+    "2007-01-18": {
+     "z1": -3.65,
+     "fwd20 %": 6.3,
+     "fwd60 %": 14.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.3
+    },
+    "2008-03-12": {
+     "z1": -4.32,
+     "fwd20 %": 14.2,
+     "fwd60 %": 13.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.2
+    },
+    "2008-10-07": {
+     "z1": -3.94,
+     "fwd20 %": -3.3,
+     "fwd60 %": -8.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.3
+    },
+    "2012-04-27": {
+     "z1": -3.44,
+     "fwd20 %": -11.7,
+     "fwd60 %": -8.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.1
+    },
+    "2013-04-26": {
+     "z1": -4.8,
+     "fwd20 %": 4.9,
+     "fwd60 %": 15.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 7.6
+    },
+    "2014-04-25": {
+     "z1": -6.38,
+     "fwd20 %": 2.0,
+     "fwd60 %": 18.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.2
+    },
+    "2014-10-01": {
+     "z1": -3.79,
+     "fwd20 %": -0.3,
+     "fwd60 %": -6.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.1
+    },
+    "2014-11-26": {
+     "z1": -10.69,
+     "fwd20 %": 6.7,
+     "fwd60 %": -2.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.9
+    },
+    "2016-06-24": {
+     "z1": -4.07,
+     "fwd20 %": 5.4,
+     "fwd60 %": -4.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.7
+    },
+    "2016-08-10": {
+     "z1": -10.52,
+     "fwd20 %": 1.4,
+     "fwd60 %": 7.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.1
+    },
+    "2016-12-01": {
+     "z1": -4.24,
+     "fwd20 %": 3.6,
+     "fwd60 %": 20.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 5.4
+    },
+    "2017-04-28": {
+     "z1": -5.74,
+     "fwd20 %": 6.6,
+     "fwd60 %": 0.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 6.8
+    },
+    "2017-06-09": {
+     "z1": -5.46,
+     "fwd20 %": -6.2,
+     "fwd60 %": -8.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.5
+    },
+    "2017-07-28": {
+     "z1": -3.46,
+     "fwd20 %": -4.2,
+     "fwd60 %": 14.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.9
+    },
+    "2017-11-29": {
+     "z1": -4.12,
+     "fwd20 %": 7.5,
+     "fwd60 %": 13.1,
+     "lower close within 20": false,
+     "best bounce within 20 %": 12.1
+    },
+    "2018-09-06": {
+     "z1": -4.81,
+     "fwd20 %": -5.5,
+     "fwd60 %": -8.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.5
+    },
+    "2019-05-07": {
+     "z1": -4.74,
+     "fwd20 %": -9.1,
+     "fwd60 %": 16.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": -2.1
+    },
+    "2019-11-21": {
+     "z1": -4.08,
+     "fwd20 %": 9.8,
+     "fwd60 %": 3.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.8
+    },
+    "2020-03-12": {
+     "z1": -4.85,
+     "fwd20 %": 19.8,
+     "fwd60 %": 53.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 21.5
+    },
+    "2020-09-08": {
+     "z1": -4.25,
+     "fwd20 %": 14.5,
+     "fwd60 %": 46.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.6
+    },
+    "2024-01-26": {
+     "z1": -3.55,
+     "fwd20 %": 14.1,
+     "fwd60 %": 8.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.1
+    },
+    "2024-07-17": {
+     "z1": -4.77,
+     "fwd20 %": 1.6,
+     "fwd60 %": 2.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.3
+    },
+    "2024-10-15": {
+     "z1": -4.21,
+     "fwd20 %": -6.1,
+     "fwd60 %": -2.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.6
+    },
+    "2025-01-27": {
+     "z1": -3.24,
+     "fwd20 %": 3.2,
+     "fwd60 %": -6.5,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.7
+    },
+    "2025-04-03": {
+     "z1": -4.13,
+     "fwd20 %": 12.5,
+     "fwd60 %": 44.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.3
+    },
+    "2025-08-15": {
+     "z1": -4.5,
+     "fwd20 %": 13.0,
+     "fwd60 %": 39.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.0
+    },
+    "2026-01-30": {
+     "z1": -5.6,
+     "fwd20 %": 7.5,
+     "fwd60 %": 26.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.3
+    }
+   }
+  },
+  "QCOM": {
+   "today value": -3.75,
+   "episodes": {
+    "1996-04-16": {
+     "z1": -5.49,
+     "fwd20 %": 47.6,
+     "fwd60 %": 38.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 47.6
+    },
+    "1997-12-12": {
+     "z1": -4.0,
+     "fwd20 %": -3.9,
+     "fwd60 %": -3.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.6
+    },
+    "2005-01-20": {
+     "z1": -4.62,
+     "fwd20 %": -6.4,
+     "fwd60 %": -13.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.1
+    },
+    "2008-09-29": {
+     "z1": -3.85,
+     "fwd20 %": -14.8,
+     "fwd60 %": -14.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.7
+    },
+    "2009-10-01": {
+     "z1": -3.89,
+     "fwd20 %": -1.0,
+     "fwd60 %": 8.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.2
+    },
+    "2010-01-28": {
+     "z1": -10.65,
+     "fwd20 %": -9.4,
+     "fwd60 %": -5.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.7
+    },
+    "2011-08-08": {
+     "z1": -4.7,
+     "fwd20 %": 4.6,
+     "fwd60 %": 6.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.8
+    },
+    "2012-04-19": {
+     "z1": -6.48,
+     "fwd20 %": -8.6,
+     "fwd60 %": -13.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.7
+    },
+    "2013-04-25": {
+     "z1": -4.78,
+     "fwd20 %": 2.4,
+     "fwd60 %": -0.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.7
+    },
+    "2013-11-07": {
+     "z1": -3.81,
+     "fwd20 %": 9.9,
+     "fwd60 %": 7.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 9.9
+    },
+    "2014-07-24": {
+     "z1": -10.16,
+     "fwd20 %": 0.8,
+     "fwd60 %": -4.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.8
+    },
+    "2014-11-06": {
+     "z1": -7.85,
+     "fwd20 %": 4.0,
+     "fwd60 %": -5.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.4
+    },
+    "2015-01-29": {
+     "z1": -6.5,
+     "fwd20 %": 13.8,
+     "fwd60 %": 8.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.8
+    },
+    "2015-08-21": {
+     "z1": -3.79,
+     "fwd20 %": -5.6,
+     "fwd60 %": -8.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.3
+    },
+    "2015-11-05": {
+     "z1": -9.09,
+     "fwd20 %": 2.5,
+     "fwd60 %": -12.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.6
+    },
+    "2016-06-24": {
+     "z1": -5.27,
+     "fwd20 %": 16.5,
+     "fwd60 %": 20.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 17.3
+    },
+    "2017-01-23": {
+     "z1": -8.18,
+     "fwd20 %": 3.4,
+     "fwd60 %": -4.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.7
+    },
+    "2017-07-20": {
+     "z1": -4.48,
+     "fwd20 %": -3.1,
+     "fwd60 %": -2.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.2
+    },
+    "2017-10-31": {
+     "z1": -6.45,
+     "fwd20 %": 30.4,
+     "fwd60 %": 32.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 35.1
+    },
+    "2018-02-05": {
+     "z1": -5.15,
+     "fwd20 %": 0.7,
+     "fwd60 %": -18.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 8.5
+    },
+    "2018-11-08": {
+     "z1": -4.93,
+     "fwd20 %": -1.4,
+     "fwd60 %": -12.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.9
+    },
+    "2020-03-12": {
+     "z1": -3.96,
+     "fwd20 %": 6.8,
+     "fwd60 %": 36.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.1
+    },
+    "2021-02-04": {
+     "z1": -4.05,
+     "fwd20 %": -12.3,
+     "fwd60 %": -7.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.0
+    },
+    "2023-08-03": {
+     "z1": -3.97,
+     "fwd20 %": -3.5,
+     "fwd60 %": -10.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.4
+    },
+    "2025-04-03": {
+     "z1": -5.21,
+     "fwd20 %": 0.3,
+     "fwd60 %": 14.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.6
+    },
+    "2025-07-31": {
+     "z1": -5.07,
+     "fwd20 %": 9.6,
+     "fwd60 %": 15.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.6
+    },
+    "2025-10-10": {
+     "z1": -4.42,
+     "fwd20 %": 11.3,
+     "fwd60 %": 17.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 22.2
+    },
+    "2026-02-05": {
+     "z1": -4.85,
+     "fwd20 %": -0.4,
+     "fwd60 %": 23.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.0
+    },
+    "2026-10-30": {
+     "z1": -4.32,
+     "fwd20 %": null,
+     "fwd60 %": null,
+     "lower close within 20": null,
+     "best bounce within 20 %": 5.1
+    }
+   }
+  },
+  "TSLA": {
+   "today value": -4.01,
+   "episodes": {
+    "2012-01-13": {
+     "z1": -6.3,
+     "fwd20 %": 38.2,
+     "fwd60 %": 45.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 43.0
+    },
+    "2013-02-21": {
+     "z1": -4.74,
+     "fwd20 %": 2.4,
+     "fwd60 %": 160.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.3
+    },
+    "2013-11-06": {
+     "z1": -4.96,
+     "fwd20 %": -7.1,
+     "fwd60 %": 18.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": -4.3
+    },
+    "2014-09-15": {
+     "z1": -4.66,
+     "fwd20 %": -11.5,
+     "fwd60 %": -14.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.9
+    },
+    "2015-08-06": {
+     "z1": -4.49,
+     "fwd20 %": -0.2,
+     "fwd60 %": -15.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.9
+    },
+    "2016-06-22": {
+     "z1": -4.77,
+     "fwd20 %": 12.1,
+     "fwd60 %": 4.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 16.1
+    },
+    "2018-02-08": {
+     "z1": -4.39,
+     "fwd20 %": 3.8,
+     "fwd60 %": -4.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.4
+    },
+    "2019-07-25": {
+     "z1": -4.88,
+     "fwd20 %": -2.9,
+     "fwd60 %": 12.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.9
+    },
+    "2020-02-05": {
+     "z1": -4.26,
+     "fwd20 %": -1.4,
+     "fwd60 %": -4.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 24.9
+    },
+    "2020-09-08": {
+     "z1": -4.16,
+     "fwd20 %": 25.4,
+     "fwd60 %": 72.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 36.2
+    },
+    "2021-11-09": {
+     "z1": -4.42,
+     "fwd20 %": 4.4,
+     "fwd60 %": -9.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.0
+    },
+    "2024-01-25": {
+     "z1": -4.89,
+     "fwd20 %": 5.1,
+     "fwd60 %": -22.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.8
+    },
+    "2026-07-23": {
+     "z1": -4.71,
+     "fwd20 %": 8.0,
+     "fwd60 %": 11.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.8
+    }
+   }
+  },
+  "PLTR": {
+   "today value": -3.23,
+   "episodes": {
+    "2021-11-09": {
+     "z1": -3.37,
+     "fwd20 %": -18.3,
+     "fwd60 %": -46.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": -3.5
+    },
+    "2022-02-17": {
+     "z1": -4.61,
+     "fwd20 %": 8.9,
+     "fwd60 %": -31.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.9
+    },
+    "2022-05-09": {
+     "z1": -4.33,
+     "fwd20 %": 22.4,
+     "fwd60 %": 51.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 24.7
+    },
+    "2022-11-07": {
+     "z1": -3.8,
+     "fwd20 %": -0.4,
+     "fwd60 %": 19.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 19.8
+    },
+    "2024-05-07": {
+     "z1": -5.07,
+     "fwd20 %": 7.3,
+     "fwd60 %": 15.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.3
+    },
+    "2026-02-04": {
+     "z1": -3.73,
+     "fwd20 %": 9.4,
+     "fwd60 %": 3.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.8
+    }
+   }
+  },
+  "ANET": {
+   "today value": -2.72,
+   "episodes": {
+    "2014-10-10": {
+     "z1": -2.73,
+     "fwd20 %": -0.4,
+     "fwd60 %": -16.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 11.7
+    },
+    "2015-02-06": {
+     "z1": -2.74,
+     "fwd20 %": 20.8,
+     "fwd60 %": 12.5,
+     "lower close within 20": false,
+     "best bounce within 20 %": 22.4
+    },
+    "2015-08-20": {
+     "z1": -3.36,
+     "fwd20 %": -9.7,
+     "fwd60 %": -12.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.6
+    },
+    "2016-02-08": {
+     "z1": -3.33,
+     "fwd20 %": 14.7,
+     "fwd60 %": 15.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 28.3
+    },
+    "2016-03-14": {
+     "z1": -2.94,
+     "fwd20 %": 9.4,
+     "fwd60 %": 32.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.0
+    },
+    "2016-06-24": {
+     "z1": -5.18,
+     "fwd20 %": 6.8,
+     "fwd60 %": 22.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.1
+    },
+    "2016-10-11": {
+     "z1": -3.04,
+     "fwd20 %": 3.7,
+     "fwd60 %": 22.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.7
+    },
+    "2017-01-17": {
+     "z1": -7.36,
+     "fwd20 %": 14.2,
+     "fwd60 %": 49.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.2
+    },
+    "2017-05-17": {
+     "z1": -2.88,
+     "fwd20 %": 6.2,
+     "fwd60 %": 16.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.5
+    },
+    "2017-11-02": {
+     "z1": -5.63,
+     "fwd20 %": 26.2,
+     "fwd60 %": 52.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 34.4
+    },
+    "2017-12-04": {
+     "z1": -3.44,
+     "fwd20 %": 12.5,
+     "fwd60 %": 29.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.9
+    },
+    "2018-02-16": {
+     "z1": -7.67,
+     "fwd20 %": 11.2,
+     "fwd60 %": 0.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 19.6
+    },
+    "2019-05-03": {
+     "z1": -5.12,
+     "fwd20 %": -13.3,
+     "fwd60 %": -1.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.8
+    },
+    "2019-08-02": {
+     "z1": -4.82,
+     "fwd20 %": -7.2,
+     "fwd60 %": 2.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": -3.4
+    },
+    "2019-11-01": {
+     "z1": -12.82,
+     "fwd20 %": 4.2,
+     "fwd60 %": 25.1,
+     "lower close within 20": false,
+     "best bounce within 20 %": 6.8
+    },
+    "2020-01-31": {
+     "z1": -2.89,
+     "fwd20 %": -12.0,
+     "fwd60 %": -2.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.4
+    },
+    "2020-08-05": {
+     "z1": -5.13,
+     "fwd20 %": -2.8,
+     "fwd60 %": -13.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.5
+    },
+    "2021-02-22": {
+     "z1": -4.22,
+     "fwd20 %": -0.7,
+     "fwd60 %": 11.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": -0.7
+    },
+    "2023-05-02": {
+     "z1": -8.12,
+     "fwd20 %": 23.2,
+     "fwd60 %": 11.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 29.2
+    },
+    "2023-10-26": {
+     "z1": -4.85,
+     "fwd20 %": 28.6,
+     "fwd60 %": 54.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 28.6
+    },
+    "2024-01-31": {
+     "z1": -3.36,
+     "fwd20 %": 7.3,
+     "fwd60 %": 2.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.2
+    },
+    "2024-04-12": {
+     "z1": -3.49,
+     "fwd20 %": 15.8,
+     "fwd60 %": 34.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.8
+    },
+    "2024-09-03": {
+     "z1": -2.73,
+     "fwd20 %": 16.9,
+     "fwd60 %": 25.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 18.8
+    },
+    "2024-11-08": {
+     "z1": -3.22,
+     "fwd20 %": 5.8,
+     "fwd60 %": 18.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.1
+    },
+    "2025-01-27": {
+     "z1": -9.12,
+     "fwd20 %": -7.4,
+     "fwd60 %": -29.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 19.9
+    },
+    "2025-09-12": {
+     "z1": -2.75,
+     "fwd20 %": 10.6,
+     "fwd60 %": -7.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 13.5
+    },
+    "2025-11-05": {
+     "z1": -3.1,
+     "fwd20 %": -8.5,
+     "fwd60 %": -0.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": -2.3
+    },
+    "2026-03-26": {
+     "z1": -2.73,
+     "fwd20 %": 44.4,
+     "fwd60 %": 32.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 45.0
+    },
+    "2026-05-06": {
+     "z1": -4.05,
+     "fwd20 %": 12.9,
+     "fwd60 %": 25.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 19.2
+    },
+    "2026-10-30": {
+     "z1": -2.83,
+     "fwd20 %": null,
+     "fwd60 %": null,
+     "lower close within 20": null,
+     "best bounce within 20 %": 5.7
+    }
+   }
+  },
+  "VRT": {
+   "today value": -3.05,
+   "episodes": {
+    "2018-11-28": {
+     "z1": -3.89,
+     "fwd20 %": -0.8,
+     "fwd60 %": 1.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.7
+    },
+    "2019-08-20": {
+     "z1": -4.85,
+     "fwd20 %": 1.0,
+     "fwd60 %": 1.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 1.3
+    },
+    "2020-03-03": {
+     "z1": -3.63,
+     "fwd20 %": -22.4,
+     "fwd60 %": 12.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.9
+    },
+    "2021-09-08": {
+     "z1": -6.34,
+     "fwd20 %": -11.2,
+     "fwd60 %": -1.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": -3.5
+    },
+    "2022-02-23": {
+     "z1": -13.92,
+     "fwd20 %": 5.9,
+     "fwd60 %": -11.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.4
+    },
+    "2024-07-24": {
+     "z1": -3.81,
+     "fwd20 %": -0.8,
+     "fwd60 %": 45.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.6
+    },
+    "2025-01-27": {
+     "z1": -8.27,
+     "fwd20 %": -10.4,
+     "fwd60 %": -24.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 22.6
+    },
+    "2026-07-29": {
+     "z1": -4.12,
+     "fwd20 %": 18.3,
+     "fwd60 %": -12.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 31.7
+    },
+    "2026-11-04": {
+     "z1": -3.15,
+     "fwd20 %": null,
+     "fwd60 %": null,
+     "lower close within 20": null,
+     "best bounce within 20 %": -13.6
+    }
+   }
+  },
+  "^SOX": {
+   "today value": -3.48,
+   "episodes": {
+    "1997-10-27": {
+     "z1": -4.76,
+     "fwd20 %": 2.8,
+     "fwd60 %": -4.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.5
+    },
+    "2008-09-29": {
+     "z1": -3.54,
+     "fwd20 %": -28.6,
+     "fwd60 %": -32.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.1
+    },
+    "2011-08-04": {
+     "z1": -3.63,
+     "fwd20 %": -2.1,
+     "fwd60 %": 10.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.5
+    },
+    "2014-10-10": {
+     "z1": -6.02,
+     "fwd20 %": 13.6,
+     "fwd60 %": 18.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 15.6
+    },
+    "2015-03-25": {
+     "z1": -3.82,
+     "fwd20 %": 3.0,
+     "fwd60 %": 5.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.7
+    },
+    "2016-06-24": {
+     "z1": -5.0,
+     "fwd20 %": 10.5,
+     "fwd60 %": 18.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 10.5
+    },
+    "2016-12-01": {
+     "z1": -3.93,
+     "fwd20 %": 8.3,
+     "fwd60 %": 17.7,
+     "lower close within 20": false,
+     "best bounce within 20 %": 12.2
+    },
+    "2017-05-17": {
+     "z1": -4.59,
+     "fwd20 %": 4.0,
+     "fwd60 %": 3.5,
+     "lower close within 20": false,
+     "best bounce within 20 %": 10.5
+    },
+    "2017-11-29": {
+     "z1": -4.7,
+     "fwd20 %": 0.1,
+     "fwd60 %": 8.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.6
+    },
+    "2018-10-10": {
+     "z1": -4.26,
+     "fwd20 %": 1.2,
+     "fwd60 %": -6.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.3
+    },
+    "2019-05-13": {
+     "z1": -3.57,
+     "fwd20 %": 0.6,
+     "fwd60 %": 3.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.2
+    },
+    "2020-01-27": {
+     "z1": -3.6,
+     "fwd20 %": -5.6,
+     "fwd60 %": -9.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.1
+    },
+    "2020-03-09": {
+     "z1": -4.09,
+     "fwd20 %": 2.2,
+     "fwd60 %": 24.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.3
+    },
+    "2024-07-17": {
+     "z1": -3.91,
+     "fwd20 %": -8.8,
+     "fwd60 %": -2.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.3
+    },
+    "2025-01-27": {
+     "z1": -4.76,
+     "fwd20 %": 0.7,
+     "fwd60 %": -17.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 9.4
+    },
+    "2025-04-03": {
+     "z1": -4.08,
+     "fwd20 %": 12.9,
+     "fwd60 %": 41.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 12.9
+    },
+    "2025-10-10": {
+     "z1": -4.42,
+     "fwd20 %": 8.4,
+     "fwd60 %": 18.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 14.4
+    },
+    "2026-06-05": {
+     "z1": -3.9,
+     "fwd20 %": 0.7,
+     "fwd60 %": -7.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 19.8
+    }
+   }
+  },
+  "SMH": {
+   "today value": -3.66,
+   "episodes": {
+    "2008-09-29": {
+     "z1": -4.52,
+     "fwd20 %": -22.0,
+     "fwd60 %": -29.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.3
+    },
+    "2011-08-04": {
+     "z1": -3.71,
+     "fwd20 %": -3.4,
+     "fwd60 %": 9.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.6
+    },
+    "2014-10-10": {
+     "z1": -6.16,
+     "fwd20 %": 13.2,
+     "fwd60 %": 16.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 14.2
+    },
+    "2015-03-25": {
+     "z1": -3.92,
+     "fwd20 %": 4.8,
+     "fwd60 %": 6.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.9
+    },
+    "2016-01-15": {
+     "z1": -3.73,
+     "fwd20 %": 3.0,
+     "fwd60 %": 19.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.9
+    },
+    "2016-06-24": {
+     "z1": -5.17,
+     "fwd20 %": 13.0,
+     "fwd60 %": 20.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 13.0
+    },
+    "2016-12-01": {
+     "z1": -4.11,
+     "fwd20 %": 5.9,
+     "fwd60 %": 14.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 9.0
+    },
+    "2017-05-17": {
+     "z1": -4.8,
+     "fwd20 %": 3.2,
+     "fwd60 %": 4.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 9.2
+    },
+    "2017-11-29": {
+     "z1": -4.5,
+     "fwd20 %": -0.9,
+     "fwd60 %": 7.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.6
+    },
+    "2018-10-10": {
+     "z1": -4.32,
+     "fwd20 %": 1.5,
+     "fwd60 %": -9.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.4
+    },
+    "2020-01-27": {
+     "z1": -3.83,
+     "fwd20 %": -4.8,
+     "fwd60 %": -7.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.4
+    },
+    "2020-03-09": {
+     "z1": -4.09,
+     "fwd20 %": 1.9,
+     "fwd60 %": 22.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.2
+    },
+    "2024-07-17": {
+     "z1": -3.9,
+     "fwd20 %": -7.0,
+     "fwd60 %": 0.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.4
+    },
+    "2025-01-27": {
+     "z1": -5.53,
+     "fwd20 %": 1.0,
+     "fwd60 %": -15.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 9.3
+    },
+    "2025-10-10": {
+     "z1": -4.4,
+     "fwd20 %": 7.0,
+     "fwd60 %": 18.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 13.3
+    },
+    "2026-06-05": {
+     "z1": -3.97,
+     "fwd20 %": 2.1,
+     "fwd60 %": -4.3,
+     "lower close within 20": false,
+     "best bounce within 20 %": 17.4
+    }
+   }
+  },
+  "QQQ": {
+   "today value": -4.35,
+   "episodes": {
+    "2007-02-27": {
+     "z1": -5.29,
+     "fwd20 %": 1.9,
+     "fwd60 %": 8.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.8
+    },
+    "2008-09-29": {
+     "z1": -4.43,
+     "fwd20 %": -24.1,
+     "fwd60 %": -23.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.9
+    },
+    "2011-08-08": {
+     "z1": -4.66,
+     "fwd20 %": 5.3,
+     "fwd60 %": 11.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 8.8
+    },
+    "2015-08-21": {
+     "z1": -4.81,
+     "fwd20 %": 3.2,
+     "fwd60 %": 8.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.6
+    },
+    "2016-06-24": {
+     "z1": -5.16,
+     "fwd20 %": 9.0,
+     "fwd60 %": 12.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 9.0
+    },
+    "2017-05-17": {
+     "z1": -5.75,
+     "fwd20 %": 2.2,
+     "fwd60 %": 4.4,
+     "lower close within 20": false,
+     "best bounce within 20 %": 5.5
+    },
+    "2018-02-05": {
+     "z1": -5.5,
+     "fwd20 %": 6.6,
+     "fwd60 %": 2.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.8
+    },
+    "2018-10-10": {
+     "z1": -5.79,
+     "fwd20 %": 2.2,
+     "fwd60 %": -7.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.2
+    },
+    "2019-05-13": {
+     "z1": -4.81,
+     "fwd20 %": 2.7,
+     "fwd60 %": 3.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.6
+    },
+    "2020-02-24": {
+     "z1": -4.63,
+     "fwd20 %": -23.0,
+     "fwd60 %": 2.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": -1.4
+    },
+    "2025-10-10": {
+     "z1": -4.98,
+     "fwd20 %": 3.4,
+     "fwd60 %": 5.9,
+     "lower close within 20": false,
+     "best bounce within 20 %": 7.8
+    }
+   }
+  },
+  "SPY": {
+   "today value": -4.82,
+   "episodes": {
+    "1997-10-27": {
+     "z1": -6.08,
+     "fwd20 %": 9.0,
+     "fwd60 %": 10.0,
+     "lower close within 20": false,
+     "best bounce within 20 %": 11.0
+    },
+    "1998-08-31": {
+     "z1": -5.29,
+     "fwd20 %": 9.3,
+     "fwd60 %": 23.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 11.5
+    },
+    "2007-02-27": {
+     "z1": -8.6,
+     "fwd20 %": 2.4,
+     "fwd60 %": 9.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.8
+    },
+    "2011-08-04": {
+     "z1": -4.84,
+     "fwd20 %": 0.6,
+     "fwd60 %": 6.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.6
+    },
+    "2015-08-24": {
+     "z1": -5.1,
+     "fwd20 %": 2.3,
+     "fwd60 %": 8.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.6
+    },
+    "2016-06-24": {
+     "z1": -5.71,
+     "fwd20 %": 6.6,
+     "fwd60 %": 5.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.9
+    },
+    "2018-02-02": {
+     "z1": -4.91,
+     "fwd20 %": -1.2,
+     "fwd60 %": -3.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.9
+    },
+    "2018-10-10": {
+     "z1": -7.49,
+     "fwd20 %": 1.0,
+     "fwd60 %": -7.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.0
+    },
+    "2020-02-24": {
+     "z1": -5.23,
+     "fwd20 %": -30.9,
+     "fwd60 %": -9.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": -3.0
+    },
+    "2025-04-03": {
+     "z1": -4.83,
+     "fwd20 %": 5.6,
+     "fwd60 %": 15.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.6
+    },
+    "2025-10-10": {
+     "z1": -4.96,
+     "fwd20 %": 2.7,
+     "fwd60 %": 5.6,
+     "lower close within 20": false,
+     "best bounce within 20 %": 5.3
+    }
+   }
+  },
+  "RSP": {
+   "today value": -3.45,
+   "episodes": {
+    "2007-02-27": {
+     "z1": -7.61,
+     "fwd20 %": 2.0,
+     "fwd60 %": 8.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.6
+    },
+    "2007-07-26": {
+     "z1": -3.51,
+     "fwd20 %": -1.9,
+     "fwd60 %": -1.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.2
+    },
+    "2008-09-29": {
+     "z1": -3.98,
+     "fwd20 %": -30.9,
+     "fwd60 %": -29.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.8
+    },
+    "2010-05-06": {
+     "z1": -3.83,
+     "fwd20 %": -4.8,
+     "fwd60 %": 0.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 5.0
+    },
+    "2011-02-22": {
+     "z1": -3.58,
+     "fwd20 %": -1.5,
+     "fwd60 %": 3.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.3
+    },
+    "2011-08-04": {
+     "z1": -4.93,
+     "fwd20 %": 0.7,
+     "fwd60 %": 7.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.1
+    },
+    "2013-04-15": {
+     "z1": -4.0,
+     "fwd20 %": 6.4,
+     "fwd60 %": 7.8,
+     "lower close within 20": true,
+     "best bounce within 20 %": 6.5
+    },
+    "2014-01-24": {
+     "z1": -3.84,
+     "fwd20 %": 4.7,
+     "fwd60 %": 6.0,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.7
+    },
+    "2014-07-31": {
+     "z1": -3.92,
+     "fwd20 %": 3.8,
+     "fwd60 %": 1.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.9
+    },
+    "2015-06-29": {
+     "z1": -3.75,
+     "fwd20 %": 0.3,
+     "fwd60 %": -6.7,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.3
+    },
+    "2015-08-21": {
+     "z1": -3.73,
+     "fwd20 %": -0.9,
+     "fwd60 %": 1.5,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.0
+    },
+    "2016-06-24": {
+     "z1": -5.92,
+     "fwd20 %": 6.9,
+     "fwd60 %": 4.9,
+     "lower close within 20": true,
+     "best bounce within 20 %": 7.1
+    },
+    "2018-02-02": {
+     "z1": -4.41,
+     "fwd20 %": -1.4,
+     "fwd60 %": -3.1,
+     "lower close within 20": true,
+     "best bounce within 20 %": 0.2
+    },
+    "2018-10-10": {
+     "z1": -6.54,
+     "fwd20 %": 1.1,
+     "fwd60 %": -7.2,
+     "lower close within 20": true,
+     "best bounce within 20 %": 1.1
+    },
+    "2019-05-13": {
+     "z1": -3.82,
+     "fwd20 %": 2.4,
+     "fwd60 %": 1.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 2.5
+    },
+    "2019-08-05": {
+     "z1": -3.69,
+     "fwd20 %": 1.1,
+     "fwd60 %": 6.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.1
+    },
+    "2020-01-27": {
+     "z1": -3.55,
+     "fwd20 %": -4.1,
+     "fwd60 %": -21.6,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.3
+    },
+    "2021-11-26": {
+     "z1": -3.63,
+     "fwd20 %": 3.7,
+     "fwd60 %": -4.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.7
+    },
+    "2024-12-18": {
+     "z1": -4.68,
+     "fwd20 %": 4.2,
+     "fwd60 %": 0.3,
+     "lower close within 20": true,
+     "best bounce within 20 %": 4.2
+    },
+    "2025-04-03": {
+     "z1": -5.84,
+     "fwd20 %": 3.2,
+     "fwd60 %": 10.4,
+     "lower close within 20": true,
+     "best bounce within 20 %": 3.2
+    },
+    "2025-10-10": {
+     "z1": -3.48,
+     "fwd20 %": 1.3,
+     "fwd60 %": 5.2,
+     "lower close within 20": false,
+     "best bounce within 20 %": 3.8
+    }
+   }
+  }
+ },
+ "index signature (S&P z<=-4 & SOX z<=-3)": {
+  "1997-10-27": {
+   "S&P day %": -6.9,
+   "SOX day %": -9.8,
+   "S&P z": -6.5,
+   "SOX z": -4.8,
+   "S&P +1/+5/+20/+60 %": [
+    5.1,
+    7.1,
+    7.9,
+    9.2
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    10.2,
+    12.1,
+    2.8,
+    -4.6
+   ]
+  },
+  "2008-09-29": {
+   "S&P day %": -8.8,
+   "SOX day %": -7.5,
+   "S&P z": -4.7,
+   "SOX z": -3.5,
+   "S&P +1/+5/+20/+60 %": [
+    5.4,
+    -4.5,
+    -23.3,
+    -22.0
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    3.1,
+    -7.7,
+    -28.6,
+    -32.5
+   ]
+  },
+  "2011-08-04": {
+   "S&P day %": -4.8,
+   "SOX day %": -5.8,
+   "S&P z": -4.9,
+   "SOX z": -3.6,
+   "S&P +1/+5/+20/+60 %": [
+    -0.1,
+    -2.3,
+    0.4,
+    7.1
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    -2.0,
+    -0.1,
+    -2.1,
+    10.9
+   ]
+  },
+  "2011-08-08": {
+   "S&P day %": -6.7,
+   "SOX day %": -5.4,
+   "S&P z": -5.9,
+   "SOX z": -3.1,
+   "S&P +1/+5/+20/+60 %": [
+    4.7,
+    7.6,
+    4.1,
+    8.8
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    4.6,
+    9.5,
+    2.3,
+    12.9
+   ]
+  },
+  "2016-06-24": {
+   "S&P day %": -3.6,
+   "SOX day %": -5.8,
+   "S&P z": -5.8,
+   "SOX z": -5.0,
+   "S&P +1/+5/+20/+60 %": [
+    -1.8,
+    3.2,
+    6.4,
+    5.0
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    -4.0,
+    1.4,
+    10.5,
+    18.3
+   ]
+  },
+  "2017-05-17": {
+   "S&P day %": -1.8,
+   "SOX day %": -4.4,
+   "S&P z": -4.3,
+   "SOX z": -4.6,
+   "S&P +1/+5/+20/+60 %": [
+    0.4,
+    2.0,
+    3.2,
+    3.6
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    1.9,
+    4.4,
+    4.0,
+    3.5
+   ]
+  },
+  "2018-02-05": {
+   "S&P day %": -4.1,
+   "SOX day %": -4.7,
+   "S&P z": -7.5,
+   "SOX z": -3.4,
+   "S&P +1/+5/+20/+60 %": [
+    1.7,
+    0.3,
+    3.0,
+    -0.5
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    3.7,
+    1.9,
+    11.2,
+    0.3
+   ]
+  },
+  "2018-10-10": {
+   "S&P day %": -3.3,
+   "SOX day %": -4.5,
+   "S&P z": -7.8,
+   "SOX z": -4.3,
+   "S&P +1/+5/+20/+60 %": [
+    -2.1,
+    0.8,
+    1.0,
+    -7.6
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    -1.0,
+    2.8,
+    1.2,
+    -6.6
+   ]
+  },
+  "2018-10-24": {
+   "S&P day %": -3.1,
+   "SOX day %": -6.6,
+   "S&P z": -4.1,
+   "SOX z": -5.1,
+   "S&P +1/+5/+20/+60 %": [
+    1.9,
+    2.1,
+    -0.2,
+    -0.7
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    2.3,
+    4.9,
+    2.9,
+    3.4
+   ]
+  },
+  "2019-05-13": {
+   "S&P day %": -2.4,
+   "SOX day %": -4.7,
+   "S&P z": -4.0,
+   "SOX z": -3.6,
+   "S&P +1/+5/+20/+60 %": [
+    0.8,
+    1.0,
+    2.6,
+    2.6
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    2.4,
+    -4.5,
+    0.6,
+    3.1
+   ]
+  },
+  "2020-02-24": {
+   "S&P day %": -3.4,
+   "SOX day %": -4.7,
+   "S&P z": -5.3,
+   "SOX z": -3.1,
+   "S&P +1/+5/+20/+60 %": [
+    -3.0,
+    -4.2,
+    -30.6,
+    -9.4
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    -3.1,
+    -2.0,
+    -25.5,
+    -1.4
+   ]
+  },
+  "2020-03-09": {
+   "S&P day %": -7.6,
+   "SOX day %": -8.3,
+   "S&P z": -5.3,
+   "SOX z": -4.1,
+   "S&P +1/+5/+20/+60 %": [
+    4.9,
+    -13.1,
+    -3.0,
+    13.7
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    6.3,
+    -16.6,
+    2.2,
+    24.3
+   ]
+  },
+  "2020-03-12": {
+   "S&P day %": -9.5,
+   "SOX day %": -10.9,
+   "S&P z": -4.9,
+   "SOX z": -4.3,
+   "S&P +1/+5/+20/+60 %": [
+    9.3,
+    -2.9,
+    12.5,
+    30.3
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    10.9,
+    -3.7,
+    15.1,
+    43.6
+   ]
+  },
+  "2020-03-16": {
+   "S&P day %": -12.0,
+   "SOX day %": -15.9,
+   "S&P z": -4.6,
+   "SOX z": -4.9,
+   "S&P +1/+5/+20/+60 %": [
+    6.0,
+    -6.2,
+    19.3,
+    33.7
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    9.8,
+    3.3,
+    30.6,
+    54.3
+   ]
+  },
+  "2025-04-03": {
+   "S&P day %": -4.8,
+   "SOX day %": -9.9,
+   "S&P z": -4.7,
+   "SOX z": -4.1,
+   "S&P +1/+5/+20/+60 %": [
+    -6.0,
+    -2.4,
+    5.4,
+    14.9
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    -7.6,
+    -0.0,
+    12.9,
+    41.4
+   ]
+  },
+  "2025-10-10": {
+   "S&P day %": -2.7,
+   "SOX day %": -6.3,
+   "S&P z": -5.0,
+   "SOX z": -4.4,
+   "S&P +1/+5/+20/+60 %": [
+    1.6,
+    1.7,
+    2.7,
+    5.6
+   ],
+   "SOX +1/+5/+20/+60 %": [
+    4.9,
+    5.8,
+    8.4,
+    18.2
+   ]
+  }
+ },
+ "TODAY index": {
+  "S&P z": -4.86,
+  "SOX z": -3.65,
+  "date": "2026-11-05"
+ }
+}

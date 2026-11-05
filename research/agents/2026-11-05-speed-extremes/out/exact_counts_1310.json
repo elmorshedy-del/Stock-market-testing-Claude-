@@ -1,0 +1,403 @@
+{
+ "SPY": {
+  "1d": {
+   "today": -6.04,
+   "past days as extreme": 4,
+   "of": 8205,
+   "dates": [
+    "1997-10-27",
+    "2007-02-27",
+    "2018-02-05",
+    "2018-10-10"
+   ]
+  },
+  "5d": {
+   "today": -2.91,
+   "past days as extreme": 53,
+   "of": 8205,
+   "dates": null
+  },
+  "20d": {
+   "today": -1.65,
+   "past days as extreme": 177,
+   "of": 8205,
+   "dates": null
+  },
+  "RSI": {
+   "today": 34.54,
+   "past days as extreme": 378,
+   "of": 8265,
+   "dates": null
+  }
+ },
+ "QQQ": {
+  "1d": {
+   "today": -5.24,
+   "past days as extreme": 4,
+   "of": 6897,
+   "dates": [
+    "2007-02-27",
+    "2017-05-17",
+    "2018-02-05",
+    "2018-10-10"
+   ]
+  },
+  "5d": {
+   "today": -3.56,
+   "past days as extreme": 14,
+   "of": 6897,
+   "dates": null
+  },
+  "20d": {
+   "today": -2.56,
+   "past days as extreme": 3,
+   "of": 6897,
+   "dates": [
+    "2008-10-09",
+    "2008-10-10",
+    "2020-03-12"
+   ]
+  },
+  "RSI": {
+   "today": 27.6,
+   "past days as extreme": 50,
+   "of": 6957,
+   "dates": null
+  }
+ },
+ "^SOX": {
+  "1d": {
+   "today": -4.17,
+   "past days as extreme": 11,
+   "of": 8121,
+   "dates": null
+  },
+  "5d": {
+   "today": -3.54,
+   "past days as extreme": 6,
+   "of": 8121,
+   "dates": [
+    "1997-10-27",
+    "2011-08-08",
+    "2014-10-10",
+    "2015-08-24",
+    "2018-10-10",
+    "2020-02-27"
+   ]
+  },
+  "20d": {
+   "today": -2.37,
+   "past days as extreme": 12,
+   "of": 8121,
+   "dates": null
+  },
+  "RSI": {
+   "today": 26.88,
+   "past days as extreme": 81,
+   "of": 8181,
+   "dates": null
+  }
+ },
+ "SMH": {
+  "1d": {
+   "today": -4.38,
+   "past days as extreme": 9,
+   "of": 6584,
+   "dates": null
+  },
+  "5d": {
+   "today": -3.73,
+   "past days as extreme": 2,
+   "of": 6584,
+   "dates": [
+    "2014-10-10",
+    "2018-10-10"
+   ]
+  },
+  "20d": {
+   "today": -2.45,
+   "past days as extreme": 3,
+   "of": 6584,
+   "dates": [
+    "2016-01-15",
+    "2018-10-24",
+    "2020-03-12"
+   ]
+  },
+  "RSI": {
+   "today": 26.68,
+   "past days as extreme": 64,
+   "of": 6644,
+   "dates": null
+  }
+ },
+ "TSLA": {
+  "1d": {
+   "today": -4.66,
+   "past days as extreme": 7,
+   "of": 4053,
+   "dates": [
+    "2012-01-13",
+    "2013-02-21",
+    "2013-11-06",
+    "2016-06-22",
+    "2019-07-25",
+    "2024-01-25",
+    "2026-07-23"
+   ]
+  },
+  "5d": {
+   "today": -2.77,
+   "past days as extreme": 7,
+   "of": 4053,
+   "dates": [
+    "2016-02-08",
+    "2016-02-09",
+    "2017-07-06",
+    "2018-03-28",
+    "2020-03-18",
+    "2020-09-08",
+    "2022-12-27"
+   ]
+  },
+  "20d": {
+   "today": -0.83,
+   "past days as extreme": 583,
+   "of": 4053,
+   "dates": null
+  },
+  "RSI": {
+   "today": 34.61,
+   "past days as extreme": 298,
+   "of": 4113,
+   "dates": null
+  }
+ },
+ "NVDA": {
+  "1d": {
+   "today": -4.03,
+   "past days as extreme": 11,
+   "of": 6929,
+   "dates": null
+  },
+  "5d": {
+   "today": -2.95,
+   "past days as extreme": 16,
+   "of": 6929,
+   "dates": null
+  },
+  "20d": {
+   "today": -2.09,
+   "past days as extreme": 40,
+   "of": 6929,
+   "dates": null
+  },
+  "RSI": {
+   "today": 25.56,
+   "past days as extreme": 67,
+   "of": 6989,
+   "dates": null
+  }
+ },
+ "MU": {
+  "1d": {
+   "today": -4.16,
+   "past days as extreme": 12,
+   "of": 8205,
+   "dates": null
+  },
+  "5d": {
+   "today": -3.42,
+   "past days as extreme": 9,
+   "of": 8205,
+   "dates": null
+  },
+  "20d": {
+   "today": -2.15,
+   "past days as extreme": 50,
+   "of": 8205,
+   "dates": null
+  },
+  "RSI": {
+   "today": 27.96,
+   "past days as extreme": 189,
+   "of": 8265,
+   "dates": null
+  }
+ },
+ "AMD": {
+  "1d": {
+   "today": -4.18,
+   "past days as extreme": 23,
+   "of": 8205,
+   "dates": null
+  },
+  "5d": {
+   "today": -3.23,
+   "past days as extreme": 24,
+   "of": 8205,
+   "dates": null
+  },
+  "20d": {
+   "today": -1.99,
+   "past days as extreme": 142,
+   "of": 8205,
+   "dates": null
+  },
+  "RSI": {
+   "today": 30.35,
+   "past days as extreme": 458,
+   "of": 8265,
+   "dates": null
+  }
+ },
+ "TSM": {
+  "1d": {
+   "today": -4.91,
+   "past days as extreme": 4,
+   "of": 7252,
+   "dates": [
+    "2013-07-18",
+    "2014-07-16",
+    "2020-03-16",
+    "2025-01-27"
+   ]
+  },
+  "5d": {
+   "today": -3.86,
+   "past days as extreme": 0,
+   "of": 7252,
+   "dates": []
+  },
+  "20d": {
+   "today": -2.45,
+   "past days as extreme": 6,
+   "of": 7252,
+   "dates": [
+    "1998-06-10",
+    "1998-06-11",
+    "1998-06-12",
+    "1998-06-15",
+    "2018-10-24",
+    "2018-10-29"
+   ]
+  },
+  "RSI": {
+   "today": 27.0,
+   "past days as extreme": 63,
+   "of": 7312,
+   "dates": null
+  }
+ },
+ "LRCX": {
+  "1d": {
+   "today": -3.88,
+   "past days as extreme": 20,
+   "of": 8205,
+   "dates": null
+  },
+  "5d": {
+   "today": -3.1,
+   "past days as extreme": 9,
+   "of": 8205,
+   "dates": null
+  },
+  "20d": {
+   "today": -2.5,
+   "past days as extreme": 2,
+   "of": 8205,
+   "dates": [
+    "1996-06-18",
+    "2011-08-08"
+   ]
+  },
+  "RSI": {
+   "today": 23.39,
+   "past days as extreme": 23,
+   "of": 8265,
+   "dates": null
+  }
+ },
+ "AMAT": {
+  "1d": {
+   "today": -3.62,
+   "past days as extreme": 16,
+   "of": 8205,
+   "dates": null
+  },
+  "5d": {
+   "today": -3.08,
+   "past days as extreme": 9,
+   "of": 8205,
+   "dates": null
+  },
+  "20d": {
+   "today": -2.44,
+   "past days as extreme": 3,
+   "of": 8205,
+   "dates": [
+    "2008-10-07",
+    "2018-09-06",
+    "2018-09-12"
+   ]
+  },
+  "RSI": {
+   "today": 26.55,
+   "past days as extreme": 68,
+   "of": 8265,
+   "dates": null
+  }
+ },
+ "AVGO": {
+  "1d": {
+   "today": -3.55,
+   "past days as extreme": 15,
+   "of": 4278,
+   "dates": null
+  },
+  "5d": {
+   "today": -2.54,
+   "past days as extreme": 28,
+   "of": 4278,
+   "dates": null
+  },
+  "20d": {
+   "today": -1.6,
+   "past days as extreme": 63,
+   "of": 4278,
+   "dates": null
+  },
+  "RSI": {
+   "today": 32.86,
+   "past days as extreme": 105,
+   "of": 4338,
+   "dates": null
+  }
+ },
+ "RSP": {
+  "1d": {
+   "today": -4.47,
+   "past days as extreme": 16,
+   "of": 5856,
+   "dates": null
+  },
+  "5d": {
+   "today": -1.02,
+   "past days as extreme": 723,
+   "of": 5856,
+   "dates": null
+  },
+  "20d": {
+   "today": 0.77,
+   "past days as extreme": 4113,
+   "of": 5856,
+   "dates": null
+  },
+  "RSI": {
+   "today": 50.54,
+   "past days as extreme": 2046,
+   "of": 5916,
+   "dates": null
+  }
+ }
+}
