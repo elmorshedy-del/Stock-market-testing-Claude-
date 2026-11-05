@@ -195,5 +195,10 @@ These come from **one case**; each needs a test.
   * **Trade:** buy at the day +1 close, after the crush, either an ATM call (30–45 DTE) or the shares; exit at day 5 and day 10. Bid/ask both sides.
   * **Prediction:** in the EQ2/EQ3 continuation states, calls beat shares per dollar risked. Elsewhere the spread eats the edge (as in orb-gamma A5).
 
+## Liquidity-cycle follow-ups (2026-11-05; owner: "hold to these tests and results for now. We will go back to them.")
+- [ ] **LC1. What separates a real THINNING from a false alarm?** 29% of THINNING episodes reach THIN and 58% return to CALM ([liquidity-cycle](2026-11-05-liquidity-cycle/)). Candidate early-warning features: speed of the gamma drop, VIX rising with it, breadth, the expiry calendar. Pre-register before running.
+- [ ] **LC2. TSLA flow persistence at scale** (does multi-day net aggression predict the next days?). Needs aggressor-signed trades (Databento); BVC from bars would build the answer in.
+- [ ] **LC3. Claims ledger + harness refresh** (offered 2026-11-05, owner deferred): refetch bars for `rule_checks.py`, add CLAIMS.md with evidence grades, downgrade "SPY liquidity-led" in the playbook.
+
 ## Done
 - (none yet)
