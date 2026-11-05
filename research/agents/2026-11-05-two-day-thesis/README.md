@@ -164,3 +164,24 @@ Data: Yahoo daily and intraday bars, plus the Yahoo Finance, Reuters and CNBC ti
 * **C2:** the Monday Nov 2 cross-section (Model A, same exposures) has AI < 0 and OIL < 0, each with t ≤ −3. If so, the rotation existed before the election result.
 * **C3:** war-period OLS of (SMH − RSP) on USO, used to predict the Nov 2 and Nov 4 spreads. Report the share of each actual spread explained by oil.
 * **C4 (descriptive):** the same prediction for Day 2 (oil up), to size the non-oil driver.
+
+---
+
+# A4 preview results and Amendment A5 (pre-registered before running A5)
+**A4 preview** (`out/a4_preview.json`):
+* **C1 fails, opposite sign.**
+  * War-period corr(USO, SMH − RSP) = −0.193, vs +0.004 pre-war. AI *outperformed* on oil-down days during the war.
+  * On 16 war-period peace days (USO ≤ −4%), SMH − RSP averaged **+1.2%** (negative on only 31% of them). AI was not a war shelter.
+* **C3, the sign flipped.** The war-period relation predicted SMH − RSP of +1.22% on Nov 2 and +1.36% on Nov 4. The actual spreads were **−3.48% and −4.60%**. From Nov 2, peace news coincided with AI *under*performance.
+* **C2 passes.** Monday Nov 2's cross-section matches Day 1: AI −1.43%/SD (t −11.5), OIL −1.32 (t −11.9), RATE +0.45 (t 2.6), R² 0.53. Stock returns correlate 0.54 between Monday and Day 1. The rotation predates the election result.
+* Election day (Tue) partly reversed it: AI +0.92 (t 8.7).
+
+## T5 ("AI became the funding leg")
+* Since the October peak, the AI suppliers are where money is *taken from* when risk appetite improves. Good news for the economy now means AI is sold to buy the rest.
+* Earlier in 2026, the rest of the market and the AI spread rose together.
+
+## A5 test
+* **D1:** corr(RSP return, SMH − RSP spread), 2026-03-02 → 2026-10-02 (war, before the AI peak) vs 2026-10-05 → 2026-11-03 (after the peak, before Day 1). Fisher z, one-sided.
+  * **T5 predicts:** the post-peak correlation is negative and lower than before.
+  * Also reported: the same on war-period peace days vs Nov peace days (descriptive), and a rolling 20-day correlation.
+* All tests are then rerun on the 16:00 close with `label = final`.
