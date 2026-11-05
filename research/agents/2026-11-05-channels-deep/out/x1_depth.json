@@ -1,0 +1,431 @@
+{
+ "today": {
+  "close": 7353.73,
+  "record": 7818.93,
+  "record date": "2026-10-06",
+  "depth %": -5.95,
+  "sessions since record": 22
+ },
+ "since 1950, every decline from a record that reached today's depth": {
+  "n": 51,
+  "reached -10%": 24,
+  "reached -20%": 11,
+  "stopped above -10%": 27
+ },
+ "same, but it reached today's depth at least as fast as now": {
+  "n": 35,
+  "reached -10%": 17,
+  "reached -20%": 7,
+  "stopped above -10%": 18
+ },
+ "episodes": [
+  {
+   "record": "1955-03-04",
+   "month": 3,
+   "sessions to reach today's depth": 6,
+   "final depth %": -6.8,
+   "trough": "1955-03-14",
+   "sessions to new record": 26
+  },
+  {
+   "record": "1955-09-23",
+   "month": 9,
+   "sessions to reach today's depth": 1,
+   "final depth %": -10.6,
+   "trough": "1955-10-11",
+   "sessions to new record": 35
+  },
+  {
+   "record": "1955-11-14",
+   "month": 11,
+   "sessions to reach today's depth": 46,
+   "final depth %": -7.1,
+   "trough": "1956-01-23",
+   "sessions to new record": 80
+  },
+  {
+   "record": "1956-03-20",
+   "month": 3,
+   "sessions to reach today's depth": 44,
+   "final depth %": -9.8,
+   "trough": "1956-05-28",
+   "sessions to new record": 81
+  },
+  {
+   "record": "1956-08-02",
+   "month": 8,
+   "sessions to reach today's depth": 29,
+   "final depth %": -21.5,
+   "trough": "1957-10-22",
+   "sessions to new record": 540
+  },
+  {
+   "record": "1959-08-03",
+   "month": 8,
+   "sessions to reach today's depth": 27,
+   "final depth %": -14.0,
+   "trough": "1960-10-25",
+   "sessions to new record": 375
+  },
+  {
+   "record": "1961-04-17",
+   "month": 4,
+   "sessions to reach today's depth": 5,
+   "final depth %": -6.2,
+   "trough": "1961-04-24",
+   "sessions to new record": 138
+  },
+  {
+   "record": "1961-12-12",
+   "month": 12,
+   "sessions to reach today's depth": 28,
+   "final depth %": -28.0,
+   "trough": "1962-06-26",
+   "sessions to new record": 434
+  },
+  {
+   "record": "1963-10-28",
+   "month": 10,
+   "sessions to reach today's depth": 18,
+   "final depth %": -6.5,
+   "trough": "1963-11-22",
+   "sessions to new record": 33
+  },
+  {
+   "record": "1965-05-13",
+   "month": 5,
+   "sessions to reach today's depth": 19,
+   "final depth %": -9.6,
+   "trough": "1965-06-28",
+   "sessions to new record": 94
+  },
+  {
+   "record": "1966-02-09",
+   "month": 2,
+   "sessions to reach today's depth": 17,
+   "final depth %": -22.2,
+   "trough": "1966-10-07",
+   "sessions to new record": 310
+  },
+  {
+   "record": "1967-05-08",
+   "month": 5,
+   "sessions to reach today's depth": 19,
+   "final depth %": -6.5,
+   "trough": "1967-06-05",
+   "sessions to new record": 58
+  },
+  {
+   "record": "1967-09-25",
+   "month": 9,
+   "sessions to reach today's depth": 29,
+   "final depth %": -10.1,
+   "trough": "1968-03-05",
+   "sessions to new record": 147
+  },
+  {
+   "record": "1968-11-29",
+   "month": 11,
+   "sessions to reach today's depth": 22,
+   "final depth %": -36.1,
+   "trough": "1970-05-26",
+   "sessions to new record": 820
+  },
+  {
+   "record": "1973-01-11",
+   "month": 1,
+   "sessions to reach today's depth": 30,
+   "final depth %": -48.2,
+   "trough": "1974-10-03",
+   "sessions to new record": 1898
+  },
+  {
+   "record": "1980-11-28",
+   "month": 11,
+   "sessions to reach today's depth": 6,
+   "final depth %": -27.1,
+   "trough": "1982-08-12",
+   "sessions to new record": 488
+  },
+  {
+   "record": "1982-11-09",
+   "month": 11,
+   "sessions to reach today's depth": 9,
+   "final depth %": -7.1,
+   "trough": "1982-11-23",
+   "sessions to new record": 40
+  },
+  {
+   "record": "1983-06-22",
+   "month": 6,
+   "sessions to reach today's depth": 32,
+   "final depth %": -6.9,
+   "trough": "1983-08-08",
+   "sessions to new record": 76
+  },
+  {
+   "record": "1983-10-10",
+   "month": 10,
+   "sessions to reach today's depth": 20,
+   "final depth %": -14.4,
+   "trough": "1984-07-24",
+   "sessions to new record": 324
+  },
+  {
+   "record": "1985-07-17",
+   "month": 7,
+   "sessions to reach today's depth": 40,
+   "final depth %": -7.7,
+   "trough": "1985-09-25",
+   "sessions to new record": 81
+  },
+  {
+   "record": "1986-07-02",
+   "month": 7,
+   "sessions to reach today's depth": 8,
+   "final depth %": -7.5,
+   "trough": "1986-07-15",
+   "sessions to new record": 38
+  },
+  {
+   "record": "1986-09-04",
+   "month": 9,
+   "sessions to reach today's depth": 5,
+   "final depth %": -9.4,
+   "trough": "1986-09-29",
+   "sessions to new record": 62
+  },
+  {
+   "record": "1987-04-06",
+   "month": 4,
+   "sessions to reach today's depth": 6,
+   "final depth %": -7.9,
+   "trough": "1987-05-20",
+   "sessions to new record": 48
+  },
+  {
+   "record": "1987-08-25",
+   "month": 8,
+   "sessions to reach today's depth": 8,
+   "final depth %": -33.5,
+   "trough": "1987-12-04",
+   "sessions to new record": 485
+  },
+  {
+   "record": "1989-10-09",
+   "month": 10,
+   "sessions to reach today's depth": 4,
+   "final depth %": -10.2,
+   "trough": "1990-01-30",
+   "sessions to new record": 160
+  },
+  {
+   "record": "1990-07-16",
+   "month": 7,
+   "sessions to reach today's depth": 14,
+   "final depth %": -19.9,
+   "trough": "1990-10-11",
+   "sessions to new record": 148
+  },
+  {
+   "record": "1992-01-15",
+   "month": 1,
+   "sessions to reach today's depth": 59,
+   "final depth %": -6.2,
+   "trough": "1992-04-08",
+   "sessions to new record": 136
+  },
+  {
+   "record": "1994-02-02",
+   "month": 2,
+   "sessions to reach today's depth": 38,
+   "final depth %": -8.9,
+   "trough": "1994-04-04",
+   "sessions to new record": 260
+  },
+  {
+   "record": "1996-05-24",
+   "month": 5,
+   "sessions to reach today's depth": 34,
+   "final depth %": -7.6,
+   "trough": "1996-07-24",
+   "sessions to new record": 77
+  },
+  {
+   "record": "1997-02-18",
+   "month": 2,
+   "sessions to reach today's depth": 28,
+   "final depth %": -9.6,
+   "trough": "1997-04-11",
+   "sessions to new record": 53
+  },
+  {
+   "record": "1997-08-06",
+   "month": 8,
+   "sessions to reach today's depth": 7,
+   "final depth %": -6.3,
+   "trough": "1997-08-29",
+   "sessions to new record": 40
+  },
+  {
+   "record": "1997-10-07",
+   "month": 10,
+   "sessions to reach today's depth": 14,
+   "final depth %": -10.8,
+   "trough": "1997-10-27",
+   "sessions to new record": 42
+  },
+  {
+   "record": "1998-07-17",
+   "month": 7,
+   "sessions to reach today's depth": 11,
+   "final depth %": -19.3,
+   "trough": "1998-08-31",
+   "sessions to new record": 90
+  },
+  {
+   "record": "1999-05-13",
+   "month": 5,
+   "sessions to reach today's depth": 8,
+   "final depth %": -6.3,
+   "trough": "1999-05-27",
+   "sessions to new record": 33
+  },
+  {
+   "record": "1999-07-16",
+   "month": 7,
+   "sessions to reach today's depth": 10,
+   "final depth %": -12.1,
+   "trough": "1999-10-15",
+   "sessions to new record": 86
+  },
+  {
+   "record": "1999-12-31",
+   "month": 12,
+   "sessions to reach today's depth": 19,
+   "final depth %": -9.2,
+   "trough": "2000-02-25",
+   "sessions to new record": 55
+  },
+  {
+   "record": "2000-03-24",
+   "month": 3,
+   "sessions to reach today's depth": 15,
+   "final depth %": -49.1,
+   "trough": "2002-10-09",
+   "sessions to new record": 1803
+  },
+  {
+   "record": "2007-07-19",
+   "month": 7,
+   "sessions to reach today's depth": 6,
+   "final depth %": -9.4,
+   "trough": "2007-08-15",
+   "sessions to new record": 55
+  },
+  {
+   "record": "2007-10-09",
+   "month": 10,
+   "sessions to reach today's depth": 23,
+   "final depth %": -56.8,
+   "trough": "2009-03-09",
+   "sessions to new record": 1376
+  },
+  {
+   "record": "2014-09-18",
+   "month": 9,
+   "sessions to reach today's depth": 17,
+   "final depth %": -7.4,
+   "trough": "2014-10-15",
+   "sessions to new record": 31
+  },
+  {
+   "record": "2015-05-21",
+   "month": 5,
+   "sessions to reach today's depth": 64,
+   "final depth %": -14.2,
+   "trough": "2016-02-11",
+   "sessions to new record": 286
+  },
+  {
+   "record": "2018-01-26",
+   "month": 1,
+   "sessions to reach today's depth": 6,
+   "final depth %": -10.2,
+   "trough": "2018-02-08",
+   "sessions to new record": 146
+  },
+  {
+   "record": "2018-09-20",
+   "month": 9,
+   "sessions to reach today's depth": 15,
+   "final depth %": -19.8,
+   "trough": "2018-12-24",
+   "sessions to new record": 146
+  },
+  {
+   "record": "2019-04-30",
+   "month": 4,
+   "sessions to reach today's depth": 22,
+   "final depth %": -6.8,
+   "trough": "2019-06-03",
+   "sessions to new record": 36
+  },
+  {
+   "record": "2019-07-26",
+   "month": 7,
+   "sessions to reach today's depth": 6,
+   "final depth %": -6.1,
+   "trough": "2019-08-14",
+   "sessions to new record": 65
+  },
+  {
+   "record": "2020-02-19",
+   "month": 2,
+   "sessions to reach today's depth": 4,
+   "final depth %": -33.9,
+   "trough": "2020-03-23",
+   "sessions to new record": 126
+  },
+  {
+   "record": "2020-09-02",
+   "month": 9,
+   "sessions to reach today's depth": 3,
+   "final depth %": -9.6,
+   "trough": "2020-09-23",
+   "sessions to new record": 51
+  },
+  {
+   "record": "2022-01-03",
+   "month": 1,
+   "sessions to reach today's depth": 12,
+   "final depth %": -25.4,
+   "trough": "2022-10-12",
+   "sessions to new record": 513
+  },
+  {
+   "record": "2024-07-16",
+   "month": 7,
+   "sessions to reach today's depth": 14,
+   "final depth %": -8.5,
+   "trough": "2024-08-05",
+   "sessions to new record": 46
+  },
+  {
+   "record": "2025-02-19",
+   "month": 2,
+   "sessions to reach today's depth": 9,
+   "final depth %": -18.9,
+   "trough": "2025-04-08",
+   "sessions to new record": 89
+  },
+  {
+   "record": "2026-01-27",
+   "month": 1,
+   "sessions to reach today's depth": 37,
+   "final depth %": -9.1,
+   "trough": "2026-03-30",
+   "sessions to new record": 54
+  }
+ ]
+}

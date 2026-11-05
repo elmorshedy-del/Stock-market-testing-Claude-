@@ -1,0 +1,967 @@
+{
+ "P1 today's readings, robustness": {
+  "SPX": {
+   "long OLS 2009-03-09 / 2010-01-04 / 2012-01-03": [
+    0.69,
+    0.77,
+    0.75
+   ],
+   "short OLS 2022-10-12 / 2023-01-03 / 2023-06-01": [
+    -2.04,
+    -1.99,
+    -1.81
+   ],
+   "LAD long 2009 / short 2023": [
+    0.63,
+    -2.07
+   ],
+   "% above lower envelope long 2009 / short 2023": [
+    14.1,
+    0.6
+   ],
+   "trailing 3y z / trailing 15y z": [
+    -1.68,
+    0.73
+   ]
+  },
+  "QQQ": {
+   "long OLS 2009-03-09 / 2010-01-04 / 2012-01-03": [
+    -0.45,
+    -0.4,
+    -0.48
+   ],
+   "short OLS 2022-10-12 / 2023-01-03 / 2023-06-01": [
+    -2.71,
+    -2.67,
+    -2.63
+   ],
+   "LAD long 2009 / short 2023": [
+    -0.45,
+    -2.69
+   ],
+   "% above lower envelope long 2009 / short 2023": [
+    6.4,
+    -4.2
+   ],
+   "trailing 3y z / trailing 15y z": [
+    -2.49,
+    -0.49
+   ]
+  },
+  "SMH": {
+   "long OLS 2009-03-09 / 2010-01-04 / 2012-01-03": [
+    1.37,
+    1.28,
+    1.0
+   ],
+   "short OLS 2022-10-12 / 2023-01-03 / 2023-06-01": [
+    -1.69,
+    -1.61,
+    -1.5
+   ],
+   "LAD long 2009 / short 2023": [
+    1.71,
+    -1.51
+   ],
+   "% above lower envelope long 2009 / short 2023": [
+    61.2,
+    0.9
+   ],
+   "trailing 3y z / trailing 15y z": [
+    -1.45,
+    1.02
+   ]
+  },
+  "RSP": {
+   "long OLS 2009-03-09 / 2010-01-04 / 2012-01-03": [
+    -0.18,
+    0.04,
+    0.31
+   ],
+   "short OLS 2022-10-12 / 2023-01-03 / 2023-06-01": [
+    0.2,
+    0.14,
+    0.01
+   ],
+   "LAD long 2009 / short 2023": [
+    0.09,
+    0.16
+   ],
+   "% above lower envelope long 2009 / short 2023": [
+    4.9,
+    7.5
+   ],
+   "trailing 3y z / trailing 15y z": [
+    0.11,
+    0.25
+   ]
+  }
+ },
+ "P2 events (short z<=-1.75, long z>-1)": {
+  "1965-05-27": {
+   "short z": -1.85,
+   "long z": -0.45,
+   "avg-stock short z": null,
+   "dd at event %": -2.7,
+   "max dd next 252 (from running peak) %": -11.1,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    -0.8,
+    4.8,
+    -0.9
+   ],
+   "sessions to new high": 84,
+   "complete (252 sessions observed)": true
+  },
+  "1966-02-24": {
+   "short z": -1.88,
+   "long z": -0.61,
+   "avg-stock short z": null,
+   "dd at event %": -3.4,
+   "max dd next 252 (from running peak) %": -22.2,
+   "became >=20% bear": true,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    -4.2,
+    -13.0,
+    -3.8
+   ],
+   "sessions to new high": 300,
+   "complete (252 sessions observed)": true
+  },
+  "1973-03-22": {
+   "short z": -1.85,
+   "long z": -0.58,
+   "avg-stock short z": -2.2,
+   "dd at event %": -9.5,
+   "max dd next 252 (from running peak) %": -24.6,
+   "became >=20% bear": true,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    -5.2,
+    -1.9,
+    -10.6
+   ],
+   "sessions to new high": 1850,
+   "complete (252 sessions observed)": true
+  },
+  "1977-08-08": {
+   "short z": -1.77,
+   "long z": -0.48,
+   "avg-stock short z": -1.73,
+   "dd at event %": -9.1,
+   "max dd next 252 (from running peak) %": -19.4,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    -6.5,
+    -8.7,
+    5.7
+   ],
+   "sessions to new high": 511,
+   "complete (252 sessions observed)": true
+  },
+  "1980-03-26": {
+   "short z": -1.75,
+   "long z": -0.18,
+   "avg-stock short z": -1.96,
+   "dd at event %": -16.7,
+   "max dd next 252 (from running peak) %": -17.1,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    18.3,
+    32.1,
+    38.1
+   ],
+   "sessions to new high": 75,
+   "complete (252 sessions observed)": true
+  },
+  "1981-08-24": {
+   "short z": -1.75,
+   "long z": 1.15,
+   "avg-stock short z": -1.68,
+   "dd at event %": -10.7,
+   "max dd next 252 (from running peak) %": -27.1,
+   "became >=20% bear": true,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    -3.0,
+    -11.1,
+    -7.5
+   ],
+   "sessions to new high": 303,
+   "complete (252 sessions observed)": true
+  },
+  "1984-07-24": {
+   "short z": -1.82,
+   "long z": 0.63,
+   "avg-stock short z": -1.78,
+   "dd at event %": -14.4,
+   "max dd next 252 (from running peak) %": -13.8,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    13.2,
+    18.7,
+    30.3
+   ],
+   "sessions to new high": 125,
+   "complete (252 sessions observed)": true
+  },
+  "1987-10-15": {
+   "short z": -1.85,
+   "long z": 1.8,
+   "avg-stock short z": -2.08,
+   "dd at event %": -11.5,
+   "max dd next 252 (from running peak) %": -33.5,
+   "became >=20% bear": true,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    -15.4,
+    -12.9,
+    -7.7
+   ],
+   "sessions to new high": 449,
+   "complete (252 sessions observed)": true
+  },
+  "1990-08-22": {
+   "short z": -1.93,
+   "long z": -0.41,
+   "avg-stock short z": -1.97,
+   "dd at event %": -14.2,
+   "max dd next 252 (from running peak) %": -19.9,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    -0.4,
+    15.3,
+    23.4
+   ],
+   "sessions to new high": 121,
+   "complete (252 sessions observed)": true
+  },
+  "1997-04-11": {
+   "short z": -2.08,
+   "long z": 0.57,
+   "avg-stock short z": -1.96,
+   "dd at event %": -9.6,
+   "max dd next 252 (from running peak) %": -10.8,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    24.3,
+    31.6,
+    50.4
+   ],
+   "sessions to new high": 16,
+   "complete (252 sessions observed)": true
+  },
+  "1997-10-27": {
+   "short z": -1.9,
+   "long z": 1.59,
+   "avg-stock short z": -1.64,
+   "dd at event %": -10.8,
+   "max dd next 252 (from running peak) %": -19.3,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    11.5,
+    24.8,
+    21.5
+   ],
+   "sessions to new high": 28,
+   "complete (252 sessions observed)": true
+  },
+  "1998-08-04": {
+   "short z": -1.78,
+   "long z": 1.9,
+   "avg-stock short z": -2.49,
+   "dd at event %": -9.7,
+   "max dd next 252 (from running peak) %": -19.3,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    3.7,
+    18.6,
+    21.8
+   ],
+   "sessions to new high": 78,
+   "complete (252 sessions observed)": true
+  },
+  "1999-08-10": {
+   "short z": -1.86,
+   "long z": 1.61,
+   "avg-stock short z": -1.79,
+   "dd at event %": -9.7,
+   "max dd next 252 (from running peak) %": -12.1,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    7.5,
+    12.5,
+    15.7
+   ],
+   "sessions to new high": 69,
+   "complete (252 sessions observed)": true
+  },
+  "2007-08-15": {
+   "short z": -1.92,
+   "long z": -0.62,
+   "avg-stock short z": -2.9,
+   "dd at event %": -9.4,
+   "max dd next 252 (from running peak) %": -22.4,
+   "became >=20% bear": true,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    5.3,
+    -4.1,
+    -8.1
+   ],
+   "sessions to new high": 36,
+   "complete (252 sessions observed)": true
+  },
+  "2011-08-22": {
+   "short z": -1.76,
+   "long z": -0.55,
+   "avg-stock short z": -2.0,
+   "dd at event %": -17.6,
+   "max dd next 252 (from running peak) %": -19.4,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    8.2,
+    20.8,
+    25.7
+   ],
+   "sessions to new high": 128,
+   "complete (252 sessions observed)": true
+  },
+  "2014-10-07": {
+   "short z": -1.83,
+   "long z": 1.66,
+   "avg-stock short z": -2.13,
+   "dd at event %": -3.8,
+   "max dd next 252 (from running peak) %": -12.4,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    4.7,
+    8.1,
+    3.1
+   ],
+   "sessions to new high": 18,
+   "complete (252 sessions observed)": true
+  },
+  "2018-10-11": {
+   "short z": -2.36,
+   "long z": 0.89,
+   "avg-stock short z": -3.06,
+   "dd at event %": -6.9,
+   "max dd next 252 (from running peak) %": -19.8,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    -5.3,
+    6.5,
+    8.7
+   ],
+   "sessions to new high": 131,
+   "complete (252 sessions observed)": true
+  },
+  "2020-03-09": {
+   "short z": -3.52,
+   "long z": -0.04,
+   "avg-stock short z": -4.82,
+   "dd at event %": -18.9,
+   "max dd next 252 (from running peak) %": -33.9,
+   "became >=20% bear": true,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    17.7,
+    24.8,
+    41.1
+   ],
+   "sessions to new high": 113,
+   "complete (252 sessions observed)": true
+  },
+  "2022-04-26": {
+   "short z": -2.01,
+   "long z": 0.4,
+   "avg-stock short z": -0.95,
+   "dd at event %": -13.0,
+   "max dd next 252 (from running peak) %": -25.4,
+   "became >=20% bear": true,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    -3.6,
+    -7.6,
+    -1.0
+   ],
+   "sessions to new high": 435,
+   "complete (252 sessions observed)": true
+  },
+  "2025-04-03": {
+   "short z": -1.77,
+   "long z": -0.58,
+   "avg-stock short z": -1.31,
+   "dd at event %": -12.2,
+   "max dd next 252 (from running peak) %": -18.9,
+   "became >=20% bear": false,
+   "became >=10% correction": true,
+   "fwd 63/126/252 %": [
+    15.4,
+    24.4,
+    22.6
+   ],
+   "sessions to new high": 58,
+   "complete (252 sessions observed)": true
+  },
+  "2026-03-13": {
+   "short z": -1.8,
+   "long z": 0.58,
+   "avg-stock short z": -0.87,
+   "dd at event %": -5.0,
+   "max dd next 252 (from running peak) %": -9.1,
+   "became >=20% bear": false,
+   "became >=10% correction": false,
+   "fwd 63/126/252 %": [
+    12.1,
+    14.9,
+    null
+   ],
+   "sessions to new high": 22,
+   "complete (252 sessions observed)": false
+  }
+ },
+ "P2 summary": {
+  "events": 21,
+  "completed": 20,
+  "became >=20% bear": 7,
+  "became >=10% correction": 20,
+  "narrow (avg stock z > -1): n / bears": [
+   1,
+   1
+  ],
+  "broad (avg stock z <= -1): n / bears": [
+   17,
+   5
+  ],
+  "base rate: share of days followed by a >=20% bear within 252 sessions": 0.267,
+  "H-P2 (<=30% became bears)": false,
+  "today": {
+   "short z (trailing 3y)": -1.68,
+   "long z (trailing 15y)": 0.73,
+   "avg-stock short z (RSP trailing 3y)": 0.11,
+   "qualifies": false
+  }
+ },
+ "P3 bear markets (>=20% from a record close, pre-registered, 1928-)": {
+  "n": 12,
+  "peak month counts": {
+   "1": 2,
+   "2": 2,
+   "3": 1,
+   "8": 2,
+   "9": 1,
+   "10": 1,
+   "11": 2,
+   "12": 1
+  },
+  "peaks in Nov-Dec": 3,
+  "share": 0.25,
+  "expected share (2/12)": 0.167,
+  "H-P3 binomial p (fewer than chance)": 0.8748219073199976,
+  "peaks in Jan-Jun": 5,
+  "list": [
+   {
+    "peak": "1929-09-16",
+    "trough": "1932-06-01",
+    "depth %": -86.2,
+    "sessions": 678,
+    "closed": true
+   },
+   {
+    "peak": "1956-08-02",
+    "trough": "1957-10-22",
+    "depth %": -21.5,
+    "sessions": 307,
+    "closed": true
+   },
+   {
+    "peak": "1961-12-12",
+    "trough": "1962-06-26",
+    "depth %": -28.0,
+    "sessions": 135,
+    "closed": true
+   },
+   {
+    "peak": "1966-02-09",
+    "trough": "1966-10-07",
+    "depth %": -22.2,
+    "sessions": 167,
+    "closed": true
+   },
+   {
+    "peak": "1968-11-29",
+    "trough": "1970-05-26",
+    "depth %": -36.1,
+    "sessions": 369,
+    "closed": true
+   },
+   {
+    "peak": "1973-01-11",
+    "trough": "1974-10-03",
+    "depth %": -48.2,
+    "sessions": 436,
+    "closed": true
+   },
+   {
+    "peak": "1980-11-28",
+    "trough": "1982-08-12",
+    "depth %": -27.1,
+    "sessions": 430,
+    "closed": true
+   },
+   {
+    "peak": "1987-08-25",
+    "trough": "1987-12-04",
+    "depth %": -33.5,
+    "sessions": 71,
+    "closed": true
+   },
+   {
+    "peak": "2000-03-24",
+    "trough": "2002-10-09",
+    "depth %": -49.1,
+    "sessions": 637,
+    "closed": true
+   },
+   {
+    "peak": "2007-10-09",
+    "trough": "2009-03-09",
+    "depth %": -56.8,
+    "sessions": 355,
+    "closed": true
+   },
+   {
+    "peak": "2020-02-19",
+    "trough": "2020-03-23",
+    "depth %": -33.9,
+    "sessions": 23,
+    "closed": true
+   },
+   {
+    "peak": "2022-01-03",
+    "trough": "2022-10-12",
+    "depth %": -25.4,
+    "sessions": 195,
+    "closed": true
+   }
+  ]
+ },
+ "P3 corrections (>=10% from a record close, pre-registered) by peak month": {
+  "n": 26,
+  "Sep-Nov peaks: n / became >=20%": [
+   10,
+   4
+  ],
+  "other months: n / became >=20%": [
+   16,
+   8
+  ],
+  "share bear | Sep-Nov": 0.4,
+  "share bear | other": 0.5,
+  "Fisher p": 0.7014941445685826,
+  "Sep-Nov list": [
+   "1929-09-16 -86.2%",
+   "1955-09-23 -10.6%",
+   "1967-09-25 -10.1%",
+   "1968-11-29 -36.1%",
+   "1980-11-28 -27.1%",
+   "1983-10-10 -14.4%",
+   "1989-10-09 -10.2%",
+   "1997-10-07 -10.8%",
+   "2007-10-09 -56.8%",
+   "2018-09-20 -19.8%"
+  ],
+  "all corrections": [
+   {
+    "peak": "1928-05-14",
+    "trough": "1928-06-12",
+    "depth %": -10.3,
+    "sessions": 20,
+    "closed": true
+   },
+   {
+    "peak": "1929-09-16",
+    "trough": "1932-06-01",
+    "depth %": -86.2,
+    "sessions": 678,
+    "closed": true
+   },
+   {
+    "peak": "1955-09-23",
+    "trough": "1955-10-11",
+    "depth %": -10.6,
+    "sessions": 12,
+    "closed": true
+   },
+   {
+    "peak": "1956-08-02",
+    "trough": "1957-10-22",
+    "depth %": -21.5,
+    "sessions": 307,
+    "closed": true
+   },
+   {
+    "peak": "1959-08-03",
+    "trough": "1960-10-25",
+    "depth %": -14.0,
+    "sessions": 311,
+    "closed": true
+   },
+   {
+    "peak": "1961-12-12",
+    "trough": "1962-06-26",
+    "depth %": -28.0,
+    "sessions": 135,
+    "closed": true
+   },
+   {
+    "peak": "1966-02-09",
+    "trough": "1966-10-07",
+    "depth %": -22.2,
+    "sessions": 167,
+    "closed": true
+   },
+   {
+    "peak": "1967-09-25",
+    "trough": "1968-03-05",
+    "depth %": -10.1,
+    "sessions": 110,
+    "closed": true
+   },
+   {
+    "peak": "1968-11-29",
+    "trough": "1970-05-26",
+    "depth %": -36.1,
+    "sessions": 369,
+    "closed": true
+   },
+   {
+    "peak": "1973-01-11",
+    "trough": "1974-10-03",
+    "depth %": -48.2,
+    "sessions": 436,
+    "closed": true
+   },
+   {
+    "peak": "1980-11-28",
+    "trough": "1982-08-12",
+    "depth %": -27.1,
+    "sessions": 430,
+    "closed": true
+   },
+   {
+    "peak": "1983-10-10",
+    "trough": "1984-07-24",
+    "depth %": -14.4,
+    "sessions": 199,
+    "closed": true
+   },
+   {
+    "peak": "1987-08-25",
+    "trough": "1987-12-04",
+    "depth %": -33.5,
+    "sessions": 71,
+    "closed": true
+   },
+   {
+    "peak": "1989-10-09",
+    "trough": "1990-01-30",
+    "depth %": -10.2,
+    "sessions": 78,
+    "closed": true
+   },
+   {
+    "peak": "1990-07-16",
+    "trough": "1990-10-11",
+    "depth %": -19.9,
+    "sessions": 62,
+    "closed": true
+   },
+   {
+    "peak": "1997-10-07",
+    "trough": "1997-10-27",
+    "depth %": -10.8,
+    "sessions": 14,
+    "closed": true
+   },
+   {
+    "peak": "1998-07-17",
+    "trough": "1998-08-31",
+    "depth %": -19.3,
+    "sessions": 31,
+    "closed": true
+   },
+   {
+    "peak": "1999-07-16",
+    "trough": "1999-10-15",
+    "depth %": -12.1,
+    "sessions": 64,
+    "closed": true
+   },
+   {
+    "peak": "2000-03-24",
+    "trough": "2002-10-09",
+    "depth %": -49.1,
+    "sessions": 637,
+    "closed": true
+   },
+   {
+    "peak": "2007-10-09",
+    "trough": "2009-03-09",
+    "depth %": -56.8,
+    "sessions": 355,
+    "closed": true
+   },
+   {
+    "peak": "2015-05-21",
+    "trough": "2016-02-11",
+    "depth %": -14.2,
+    "sessions": 183,
+    "closed": true
+   },
+   {
+    "peak": "2018-01-26",
+    "trough": "2018-02-08",
+    "depth %": -10.2,
+    "sessions": 9,
+    "closed": true
+   },
+   {
+    "peak": "2018-09-20",
+    "trough": "2018-12-24",
+    "depth %": -19.8,
+    "sessions": 65,
+    "closed": true
+   },
+   {
+    "peak": "2020-02-19",
+    "trough": "2020-03-23",
+    "depth %": -33.9,
+    "sessions": 23,
+    "closed": true
+   },
+   {
+    "peak": "2022-01-03",
+    "trough": "2022-10-12",
+    "depth %": -25.4,
+    "sessions": 195,
+    "closed": true
+   },
+   {
+    "peak": "2025-02-19",
+    "trough": "2025-04-08",
+    "depth %": -18.9,
+    "sessions": 34,
+    "closed": true
+   }
+  ]
+ },
+ "P3 sensitivity: zigzag episodes (first run; includes rallies inside bear markets)": {
+  "bears n": 27,
+  "bear peaks in Nov-Dec": 5,
+  "binomial p (fewer than chance)": 0.711605206501289,
+  "peak month counts": {
+   "1": 4,
+   "2": 4,
+   "3": 2,
+   "4": 1,
+   "5": 1,
+   "6": 2,
+   "7": 1,
+   "8": 2,
+   "9": 2,
+   "10": 3,
+   "11": 4,
+   "12": 1
+  },
+  "corrections n": 103,
+  "Sep-Nov n / bears": [
+   36,
+   10
+  ],
+  "other n / bears": [
+   67,
+   25
+  ],
+  "Fisher p": 0.3871796724391283,
+  "bear list": [
+   {
+    "peak": "1929-09-16",
+    "trough": "1929-11-13",
+    "depth %": -44.6,
+    "sessions": 40
+   },
+   {
+    "peak": "1930-04-10",
+    "trough": "1930-12-16",
+    "depth %": -44.3,
+    "sessions": 171
+   },
+   {
+    "peak": "1931-02-24",
+    "trough": "1931-06-02",
+    "depth %": -32.9,
+    "sessions": 69
+   },
+   {
+    "peak": "1931-06-26",
+    "trough": "1931-10-05",
+    "depth %": -42.5,
+    "sessions": 70
+   },
+   {
+    "peak": "1931-11-09",
+    "trough": "1932-06-01",
+    "depth %": -61.8,
+    "sessions": 140
+   },
+   {
+    "peak": "1932-09-07",
+    "trough": "1933-02-27",
+    "depth %": -40.6,
+    "sessions": 116
+   },
+   {
+    "peak": "1933-07-18",
+    "trough": "1933-10-19",
+    "depth %": -29.4,
+    "sessions": 65
+   },
+   {
+    "peak": "1934-02-06",
+    "trough": "1935-03-14",
+    "depth %": -31.8,
+    "sessions": 273
+   },
+   {
+    "peak": "1937-03-10",
+    "trough": "1938-03-31",
+    "depth %": -54.5,
+    "sessions": 267
+   },
+   {
+    "peak": "1938-10-10",
+    "trough": "1939-04-11",
+    "depth %": -25.1,
+    "sessions": 122
+   },
+   {
+    "peak": "1939-10-25",
+    "trough": "1940-06-10",
+    "depth %": -31.9,
+    "sessions": 155
+   },
+   {
+    "peak": "1940-11-07",
+    "trough": "1942-04-28",
+    "depth %": -34.4,
+    "sessions": 365
+   },
+   {
+    "peak": "1946-05-29",
+    "trough": "1947-05-19",
+    "depth %": -28.5,
+    "sessions": 243
+   },
+   {
+    "peak": "1948-06-15",
+    "trough": "1949-06-13",
+    "depth %": -20.6,
+    "sessions": 250
+   },
+   {
+    "peak": "1956-08-02",
+    "trough": "1957-10-22",
+    "depth %": -21.5,
+    "sessions": 307
+   },
+   {
+    "peak": "1961-12-12",
+    "trough": "1962-06-26",
+    "depth %": -28.0,
+    "sessions": 135
+   },
+   {
+    "peak": "1966-02-09",
+    "trough": "1966-10-07",
+    "depth %": -22.2,
+    "sessions": 167
+   },
+   {
+    "peak": "1968-11-29",
+    "trough": "1970-05-26",
+    "depth %": -36.1,
+    "sessions": 369
+   },
+   {
+    "peak": "1973-01-11",
+    "trough": "1974-10-03",
+    "depth %": -48.2,
+    "sessions": 436
+   },
+   {
+    "peak": "1980-11-28",
+    "trough": "1982-08-12",
+    "depth %": -27.1,
+    "sessions": 430
+   },
+   {
+    "peak": "1987-08-25",
+    "trough": "1987-12-04",
+    "depth %": -33.5,
+    "sessions": 71
+   },
+   {
+    "peak": "2000-03-24",
+    "trough": "2001-09-21",
+    "depth %": -36.8,
+    "sessions": 373
+   },
+   {
+    "peak": "2002-01-04",
+    "trough": "2002-07-23",
+    "depth %": -32.0,
+    "sessions": 137
+   },
+   {
+    "peak": "2007-10-09",
+    "trough": "2008-11-20",
+    "depth %": -51.9,
+    "sessions": 283
+   },
+   {
+    "peak": "2009-01-06",
+    "trough": "2009-03-09",
+    "depth %": -27.6,
+    "sessions": 42
+   },
+   {
+    "peak": "2020-02-19",
+    "trough": "2020-03-23",
+    "depth %": -33.9,
+    "sessions": 23
+   },
+   {
+    "peak": "2022-01-03",
+    "trough": "2022-10-12",
+    "depth %": -25.4,
+    "sessions": 195
+   }
+  ]
+ }
+}
