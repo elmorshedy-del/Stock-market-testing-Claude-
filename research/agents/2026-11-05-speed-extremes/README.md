@@ -57,3 +57,76 @@
 * **Caveats:**
   * The names are today's survivors (no Nortel or Lucent).
   * Today's values are live intraday.
+
+---
+
+# Results (run ~12:00 ET; today's row live)
+
+## H1 (index level, declustered fast-drop episodes)
+* **Fails.** SOX: 12 episodes, p 0.050 (adj 0.10). NDX: 18 episodes, p 0.18. SPX (context): 23 episodes, p 0.47.
+* Descriptive: after fast drops, **the low held for 20 sessions in SOX 2/12 and NDX 7/18 cases.** That is a bit more often than random days for NDX (base 18%) and about the same for SOX (base 15%).
+* 60 sessions later: SOX up 10/12, NDX 14/18.
+
+## A1-1 Dashboard: each name vs its own history (`out/dashboard.json`)
+**Today (1-day, live)**
+* TSM −4.2σ (0.1st pct), TSLA −3.9σ, QCOM −3.8σ, AMD −3.6σ, MU −3.3σ, PLTR −3.2σ, LRCX −3.3σ, NVDA −3.1σ, AMAT −3.1σ, VRT −3.0σ.
+* Indices: QQQ −4.3σ, SPY −4.8σ, RSP −3.3σ.
+* Not extreme today: MSFT, AMZN, AAPL, GOOGL, INTC.
+
+**4 weeks (20-day)**
+* LRCX −2.4σ (0.0 pct), AMAT −2.4σ, TSM −2.3σ, QQQ −2.4σ, SOX −2.3σ, MRVL −2.2σ, KLAC −2.2σ, MU −2.0σ, INTC −2.0σ.
+* Not extreme: MSFT, AMZN, AAPL.
+
+**Weekly RSI**
+* Bottom 5% of own history: AVGO (3.7th pct), CRWV (1.3), GOOGL (1.9).
+* Most others sit around the 15th–30th pct. The weekly frame is not washed out the way the daily is.
+
+## A1-2 Per name (`out/per_name.json`, `out/speed_extremes.png`)
+Each name's own past days or months as extreme as now, one episode at a time. Low held = no lower close within 20 sessions.
+
+**Today-type days**
+
+| Name | Past days this bad | Bounced ≥5% within 20 sessions | Low held |
+|---|---|---|---|
+| TSLA | 13 | 11 | 2 |
+| TSM | 10 | 5 | **0** |
+| NVDA | 30 | 18 | 5 |
+| AMD | 32 | 20 | 3 |
+| MU | 25 | 14 | 3 |
+| QQQ | 11 | 5 | 2 |
+| SPY | 11 | 6 | 3 |
+| RSP | 21 | **3** | **1** |
+
+**4-week-type moves**
+
+| Name | Past months this bad | Bounced ≥5% within 20 sessions | Low held |
+|---|---|---|---|
+| QQQ | 5 | **5** | 1 |
+| SOX | 12 | 10 | 2 |
+| MU | 17 | 14 | 3 |
+| NVDA | 12 | **6** | 2 |
+| AMD | 26 | 12 | 2 |
+| DELL | 10 | **10** | 3 |
+
+## A1-3 Today's index signature (S&P ≤ −4σ and SOX ≤ −3σ), 16 days since 1994, each listed in `out/per_name.json`
+* S&P higher 20 sessions later in 12/16.
+* The 4 lower ones:
+  * Lehman / TARP (2008-09-29): −23%.
+  * COVID start (2020-02-24): −31%.
+  * 2020-03-09: −3%.
+  * 2018-10-24: −0.2%.
+* The five most similar in shape (chips hit 2–3× the S&P), with the S&P's next day and 20 sessions:
+
+| Day | Event | S&P next day | S&P 20 sessions | SOX 20 sessions |
+|---|---|---|---|---|
+| 1997-10-27 | Asian crisis | +5.1% | +7.9% | +2.8% |
+| 2016-06-24 | Brexit | −1.8% | +6.4% | +10.5% |
+| 2018-10-24 | Q4 2018 selloff | +1.9% | −0.2% | +2.9% |
+| 2025-04-03 | tariff shock | −6.0% | +5.4% | +12.9% |
+| 2025-10-10 | China tariff threat | +1.6% | +2.7% | +8.4% |
+
+## Reading
+* **Extreme:** yes, today and over 4 weeks, in most AI names, each vs its own history.
+* **Indicative:** of a **bounce** within about a month, in most names. **Not of the low:** in nearly every name a lower close came first in most past cases (TSM 10/10, AMD 29/32, RSP 20/21).
+* The tested entry filter remains the 1-ATR bounce ([technical-indicators](../2026-10-16-technical-indicators/)). Triggers off today's live lows: QQQ close ≥ 673.3, SMH ≥ 484.2, TSLA ≥ 361.5, NVDA ≥ 193.8, SPY ≥ 752.6.
+* **Intraday breadth at 11:55:** RSP −2.3% and IWM −3.5% at new lows while QQQ bounced from 647.4 (10:50). The average stock is joining in, which is the 2000-lens watch item.
