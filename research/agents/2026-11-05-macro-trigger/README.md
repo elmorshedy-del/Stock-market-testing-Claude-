@@ -75,3 +75,53 @@ Span: 2012-05 → 2026-11-04. 340 release days (169 jobs, 171 CPI).
 **Verdict**
 * Release days in this setup are a trigger for a *big* move, not a reliably *up* one.
 * After drops, jobs days have leaned down (n small). CPI days are close to a coin flip, slightly up without the shock days.
+
+---
+
+# Amendment A1 (pre-registered before running): the test done properly
+**Owner's critique (fair):** "U lump data together and do very shallow statistics."
+
+What was wrong with H1–H3:
+* They averaged good and bad prints (no surprise measure).
+* They used close-to-close returns, mixing the 08:30 reaction with the rest of the day.
+* They lumped regimes in which "good" news has opposite signs.
+* They cut 340 days down to 33 with arbitrary thresholds.
+
+## Data added
+* **Consensus vs actual** from the ForexFactory calendar (via the Firecrawl Alexandria provider):
+  * Non-Farm Employment Change, 2010-03 →.
+  * Core CPI m/m, 2010-01 →.
+  * The raw values stay out of git (`data/`). Only aggregates are committed.
+* **SPY daily OHLC** (Yahoo):
+  * gap = prior close → open, which holds the 08:30 reaction;
+  * follow-through (ft) = open → close.
+  * Both are divided by the trailing 20-day stdev of daily returns, so they are in sigma units, not raw %.
+* **Surprise z**
+  * Payrolls: (actual − forecast) ÷ the median |surprise| of the prior 24 releases, clipped at ±4.
+  * Core CPI: (actual − forecast) ÷ 0.1.
+* **"Good for stocks"**
+  * s = z × the sign of the correlation between surprise and gap over the prior 24 releases of that type. Out of sample, so it is the direction the market has *recently* been rewarding, not one I assume.
+* **State at t−1, continuous**
+  * LOW = 1 − GEX percentile.
+  * DROP = −(drawdown from the 10-day high), in %.
+  * VIX_{t−1} as a control.
+* **Sample:** all jobs and CPI release days 2012-05 → 2026-10 (FRED dates, matched to the ForexFactory points by date).
+
+## Hypotheses (one primary coefficient each; HC3 robust SEs plus a by-year block bootstrap; one-sided)
+* **A (amplification):** low gamma makes the data reaction bigger per unit of surprise.
+  * Model: |gap_σ| = α + type + β|z| + γ·LOW + **δ·|z|·LOW** + VIX.
+  * Test: δ > 0.
+* **B (asymmetric relief):** after a drop, good prints get a bigger rally than bad prints get a selloff.
+  * Model: gap_σ = α + type + b1·s⁺ + b2·s⁻ + **b3·s⁺·DROP** + **b4·s⁻·DROP** + b5·DROP + VIX, where s⁺ = max(s, 0) and s⁻ = min(s, 0).
+  * Test: b3 − b4 > 0.
+  * Secondary: b5 > 0 (a relief gap regardless of the surprise).
+* **C (follow-through):** in low gamma the move after the open continues in the gap's direction.
+  * Model: ft_σ = α + type + c1·gap_σ + **c2·gap_σ·LOW** + c3·LOW + c4·DROP + VIX.
+  * Test: c2 > 0.
+  * Control, descriptive: the same model on non-release days, to see whether it is specific to release days.
+
+## Rules
+* Holm across A, B and C; pass at adjusted p < 0.05.
+* Robustness: jobs and CPI separately; 2012–19 vs 2020–26; binary SETUP instead of continuous; without Mar–Apr 2020 and Apr 2025.
+
+**For Friday, descriptive:** which payrolls surprise direction the market has rewarded over the last 24 releases, and the model's predicted reaction under today's state.
