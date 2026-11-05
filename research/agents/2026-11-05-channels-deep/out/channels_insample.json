@@ -1,0 +1,58 @@
+{
+ "S&P 500 2009 channel": {
+  "z": 0.68,
+  "-2\u03c3 now": 5970.67,
+  "mid now": 6975.2,
+  "+2\u03c3 now": 8148.73,
+  "trend %/yr": 11.8
+ },
+ "S&P 500 2023 channel": {
+  "z": -1.95,
+  "-2\u03c3 now": 7340.42,
+  "mid now": 7939.29,
+  "+2\u03c3 now": 8587.01,
+  "trend %/yr": 19.6
+ },
+ "Nasdaq-100 (QQQ) 2009 channel": {
+  "z": -0.46,
+  "-2\u03c3 now": 553.96,
+  "mid now": 677.63,
+  "+2\u03c3 now": 828.91,
+  "trend %/yr": 17.9
+ },
+ "Nasdaq-100 (QQQ) 2023 channel": {
+  "z": -2.64,
+  "-2\u03c3 now": 671.13,
+  "mid now": 752.6,
+  "+2\u03c3 now": 843.95,
+  "trend %/yr": 25.6
+ },
+ "Chips (SMH) 2009 channel": {
+  "z": 1.37,
+  "-2\u03c3 now": 215.92,
+  "mid now": 332.91,
+  "+2\u03c3 now": 513.27,
+  "trend %/yr": 23.2
+ },
+ "Chips (SMH) 2023 channel": {
+  "z": -1.59,
+  "-2\u03c3 now": 424.28,
+  "mid now": 552.73,
+  "+2\u03c3 now": 720.08,
+  "trend %/yr": 50.5
+ },
+ "Equal-weight S&P (RSP) 2009 channel": {
+  "z": -0.18,
+  "-2\u03c3 now": 181.04,
+  "mid now": 220.83,
+  "+2\u03c3 now": 269.35,
+  "trend %/yr": 10.4
+ },
+ "Equal-weight S&P (RSP) 2023 channel": {
+  "z": 0.16,
+  "-2\u03c3 now": 200.16,
+  "mid now": 215.59,
+  "+2\u03c3 now": 232.21,
+  "trend %/yr": 12.0
+ }
+}
