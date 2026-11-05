@@ -140,3 +140,27 @@ Data: Yahoo daily and intraday bars, plus the Yahoo Finance, Reuters and CNBC ti
   * **Prediction:** the coupling ratio in the ≤ −4% bins is at least twice that of the −4..−2 bin.
   * In the recent regime, the −4..−2 bin's mean RSP is ≥ −0.3% (a rotation zone).
 * **B5 fix:** compute Day 2's pairwise correlation for the same 150 names from the 5-day 5-min pull, against the same baseline.
+
+---
+
+# A3 preview results and Amendment A4 (pre-registered before running A4)
+**A3 preview** (`out/a3_preview.json`):
+* **B6 fails.** No rotation-then-coupling threshold.
+  * Recent coupling ≈ 0.18–0.24 in every bin; tail 0.184 vs mid 0.194 (ratio 0.95). The mid bin's mean RSP is −0.56% (not ≥ −0.3%).
+  * Full sample: ratio 1.11.
+* What stands: on days with SMH −2..−4%, RSP is down 75% of the time (mean −0.56%). Day 1's +1.86% is a rare decoupling.
+* B5 Day-2 correlation is still NaN (irregular live timestamps); fixed in the final run by flooring to 5-min bars.
+
+## New observation (from §0 data, previously unused)
+* **Monday Nov 2, the day before the election, already showed the Day-1 pattern** on an Iran peace-talk headline: oil −7.4%, SMH −2.71% vs RSP +0.76%, CRWV −8.6%, ORCL −8.8%, AMD −7.5%, ITB +4.6%, JETS +4.2%, XLY +2.4%.
+
+## T4 ("war-shelter eviction")
+* During the Iran war (since end-Feb 2026), AI was the growth shelter from oil. When oil spikes, money hides in AI; on peace news it rotates into oil-sensitive cyclicals.
+* The election added peace odds (oil −8.3%) on top of the data-center politics. T4 explains Day 1 mostly through oil.
+* Day 2 (oil +2.7%) cannot be oil-driven, so T4 needs a non-oil driver on Day 2.
+
+## A4 tests
+* **C1:** corr(USO, SMH − RSP) over the war period 2026-03-02 → 2026-10-30 is > 0, and higher than pre-war (2025-06-02 → 2026-02-27). Fisher z-test, one-sided.
+* **C2:** the Monday Nov 2 cross-section (Model A, same exposures) has AI < 0 and OIL < 0, each with t ≤ −3. If so, the rotation existed before the election result.
+* **C3:** war-period OLS of (SMH − RSP) on USO, used to predict the Nov 2 and Nov 4 spreads. Report the share of each actual spread explained by oil.
+* **C4 (descriptive):** the same prediction for Day 2 (oil up), to size the non-oil driver.

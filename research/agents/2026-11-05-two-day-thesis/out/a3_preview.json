@@ -1,0 +1,145 @@
+{
+ "label": "preview",
+ "B6 recent 2023-2026": {
+  "<=-6": {
+   "n": 11,
+   "SMH mean %": -7.58,
+   "RSP mean %": -1.81,
+   "share RSP<0": 0.909,
+   "coupling": 0.239
+  },
+  "-6..-4": {
+   "n": 21,
+   "SMH mean %": -4.75,
+   "RSP mean %": -0.66,
+   "share RSP<0": 0.762,
+   "coupling": 0.139
+  },
+  "-4..-2": {
+   "n": 92,
+   "SMH mean %": -2.87,
+   "RSP mean %": -0.56,
+   "share RSP<0": 0.75,
+   "coupling": 0.194
+  },
+  "-2..0": {
+   "n": 303,
+   "SMH mean %": -0.83,
+   "RSP mean %": -0.18,
+   "share RSP<0": 0.601,
+   "coupling": 0.212
+  },
+  "0..+2": {
+   "n": 366,
+   "SMH mean %": 0.92,
+   "RSP mean %": 0.17,
+   "share RSP<0": 0.388,
+   "coupling": 0.185
+  },
+  ">+2": {
+   "n": 168,
+   "SMH mean %": 3.27,
+   "RSP mean %": 0.73,
+   "share RSP<0": 0.173,
+   "coupling": 0.224
+  },
+  "test": {
+   "coupling tail (<=-4)": 0.184,
+   "coupling -4..-2": 0.194,
+   "ratio": 0.95,
+   "mid-bin RSP mean %": -0.56
+  }
+ },
+ "B6 full 2004-2026": {
+  "<=-6": {
+   "n": 31,
+   "SMH mean %": -7.69,
+   "RSP mean %": -4.46,
+   "share RSP<0": 0.968,
+   "coupling": 0.58
+  },
+  "-6..-4": {
+   "n": 104,
+   "SMH mean %": -4.72,
+   "RSP mean %": -2.19,
+   "share RSP<0": 0.923,
+   "coupling": 0.464
+  },
+  "-4..-2": {
+   "n": 472,
+   "SMH mean %": -2.74,
+   "RSP mean %": -1.24,
+   "share RSP<0": 0.886,
+   "coupling": 0.453
+  },
+  "-2..0": {
+   "n": 2114,
+   "SMH mean %": -0.79,
+   "RSP mean %": -0.31,
+   "share RSP<0": 0.658,
+   "coupling": 0.396
+  },
+  "0..+2": {
+   "n": 2340,
+   "SMH mean %": 0.83,
+   "RSP mean %": 0.37,
+   "share RSP<0": 0.26,
+   "coupling": 0.443
+  },
+  ">+2": {
+   "n": 683,
+   "SMH mean %": 3.19,
+   "RSP mean %": 1.45,
+   "share RSP<0": 0.081,
+   "coupling": 0.453
+  },
+  "test": {
+   "coupling tail (<=-4)": 0.502,
+   "coupling -4..-2": 0.453,
+   "ratio": 1.11,
+   "mid-bin RSP mean %": -1.24
+  }
+ },
+ "B5 fix (5-day pull)": {
+  "by day": {
+   "2026-10-30": {
+    "corr": 0.177,
+    "bars x names": [
+     58,
+     150
+    ]
+   },
+   "2026-11-02": {
+    "corr": 0.126,
+    "bars x names": [
+     67,
+     150
+    ]
+   },
+   "2026-11-03": {
+    "corr": 0.21,
+    "bars x names": [
+     69,
+     150
+    ]
+   },
+   "2026-11-04": {
+    "corr": 0.149,
+    "bars x names": [
+     69,
+     150
+    ]
+   },
+   "2026-11-05": {
+    "corr": NaN,
+    "bars x names": [
+     127,
+     0
+    ]
+   }
+  },
+  "baseline median (60-day pull)": 0.147,
+  "baseline 95th pct": 0.211,
+  "Day 2 vs baseline 95th": "not above"
+ }
+}
