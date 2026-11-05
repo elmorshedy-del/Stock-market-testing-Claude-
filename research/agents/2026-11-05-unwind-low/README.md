@@ -43,3 +43,17 @@
 
 ## Reproduce
 `python unwind.py <DIX.csv>` → `out/unwind.json`
+
+---
+
+# Results (09:58 ET; today's row is live and provisional; rerun at the close)
+* **Core signature (deep + violent + concentrated): 1 past episode since 2007,** on **2022-07-01**.
+  * Ratio +8.9% and SMH +8.4% over the next 10 sessions; it marked the local low.
+  * But the 2022 rotation's real trough came in Oct 2022, so it was a bounce, not the bottom.
+  * One-episode p 0.02, but with n = 1 the registered rule says **insufficient evidence (needs ≥ 8 episodes).**
+* **Full signature (+ fear calm + credit calm): 0 past episodes.**
+* **Today (live): core met (D, V, B), full NOT met.**
+  * VIX +13% fails the ≤ +10% condition, and HYG/IEF −0.33% just misses the ≥ −0.3% line.
+  * Fear and credit are not fully calm, unlike a pure positioning flush.
+* **July 29 itself did not match the signature:** D, B and C were met; V and F were not. Jul 28 met V/B/F/C but not D. The July low had a catalyst (MSFT/META earnings that night) and a different shape.
+* **Verdict: insufficient evidence** to call today a July-29-type low with confidence. The core conditions are rare and their one precedent bounced, which leans bounce, not bottom. Rerun at the close.
