@@ -7,14 +7,24 @@ Read this first, then LESSONS.md.
 
 ## Where we are
 * **Program:** laws-first (PROGRAM.md, revision 2026-11-06). The theory is FOUNDATION.md: 16 laws in three layers.
-* **Last task done:** the M3 signature test (`2026-11-06-signature-test/`).
+* **Current task:** test #4, the crash law (owner approved on 2026-11-06 once the full papers were read).
+  * All seven crash-law papers read in full, with cards: KO2023, KO2016, Benzaquen 2016, Bucci 2019 and 2020, Donier–Bouchaud 2015, Donier–Bonart 2015.
+  * **What the reading changed:**
+    * KO's crash sizes need linear impact for giant sales. Their own data favour square root (exponent 0.57 ± 0.04), and their theory excludes market risk.
+    * In the physics, impact is linear only for slow selling; fast selling is square root; liquidity breaks under sustained pressure.
+    * Rival theory: thin buyers after run-ups.
+    * **So #4 is now: giant sellers (linear law) or thin liquidity (square root + liquidity state)?**
+  * Next step: pre-register #4, push, run on free data. Then ask the owner about the decisive paid step: ES/NQ signed flow on selloff days vs normal days, about $34.
+* **Previous task:** the M3 signature test (`2026-11-06-signature-test/`).
   * H1 (fade) passes narrowly: p 0.049, corrected joint p 0.08.
   * H2 (memory condition) not established, but in the predicted direction.
   * H3 (second legs) fails.
   * Live forecast logged: the Nov 5 shock is build-up in all three indices; score around 2027-03-16.
-* **Papers read in full** (cards in memory/papers/): Marcaccioli 2021, Sornette–Malevergne–Muzy 2002, Sornette–Helmstetter 2003, Patzelt–Bouchaud 2018, Muhle-Karbe 2026.
-* **Reading queue:** Tóth 2011; Sato–Kanazawa 2024; Maitrier 2025; Cont–Kukanov–Stoikov 2014; Kyle–Obizhaeva 2016; Benzaquen 2016; Hartzmark–Solomon 2025; Gabaix–Koijen. Get the text from arxiv.org/pdf/<id> with pdftotext.
-  * **Before M1, read:** Kyle–Obizhaeva 2016, Benzaquen et al. 2016, Ané–Geman 2000.
+* **Papers read in full** (cards in memory/papers/):
+  * Marcaccioli 2021; Sornette–Malevergne–Muzy 2002; Sornette–Helmstetter 2003; Patzelt–Bouchaud 2018; Muhle-Karbe 2026;
+  * the crash set: KO2023, KO2016, Benzaquen 2016, Bucci 2019, Bucci 2020, Donier–Bouchaud 2015, Donier–Bonart 2015.
+* **Reading queue:** Tóth 2011; Sato–Kanazawa 2024; Maitrier 2025; Cont–Kukanov–Stoikov 2014; Hartzmark–Solomon 2025; Gabaix–Koijen; Farmer–Gillemot–Lillo 2004 ("What really causes large price changes?"); Joulin 2008. Get the text from arxiv.org/pdf/<id> with pdftotext.
+  * **Before M1, read:** Ané–Geman 2000 (KO2016 and Benzaquen 2016 are done).
 * **Agenda proposed to the owner on 2026-11-06 (waiting for their reaction). Literature-led, laws first:**
   1. **How mechanical is the market?** The share of ES/NQ price moves explained by order flow through the impact law, vs news. This is the order-driven vs fundamental debate (Maitrier & Bouchaud 2025; Joulin 2008).
   2. **Did 0DTE options and dealer gamma change the physics?** Impact constant, depth, pinning and liquidity feedback, by year and by gamma sign. No paper measures this.

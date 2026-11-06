@@ -3,6 +3,12 @@ Write a card right after reading a paper, before doing anything else; long sessi
 
 | Read | Paper | Laws | Card |
 |---|---|---|---|
+| 2026-11-06 | Kyle & Obizhaeva (2016). Market microstructure invariance: empirical hypotheses. Econometrica 84(4). doi:10.3982/ecta10486 (with supplement) | M1, F1, F7, S4 | [card](2016-kyle-obizhaeva-invariance.md) |
+| 2026-11-06 | Benzaquen, Donier & Bouchaud (2016). Unravelling the trading invariance hypothesis. Market Microstructure and Liquidity. arXiv:1602.03011 | M1, S4, F7 | [card](2016-benzaquen-donier-bouchaud-invariance.md) |
+| 2026-11-06 | Bucci, Lillo, Bouchaud & Benzaquen (2020). Are trading invariants really invariant? Trading costs matter. Quant. Finance. arXiv:1902.03457 | M1, S4, F7 | [card](2020-bucci-lillo-bouchaud-benzaquen-invariants.md) |
+| 2026-11-06 | Bucci, Benzaquen, Lillo & Bouchaud (2019). Crossover from linear to square-root market impact. PRL 122. arXiv:1811.05230 | F1, F4, S4 | [card](2019-bucci-benzaquen-lillo-bouchaud-crossover.md) |
+| 2026-11-06 | Donier & Bouchaud (2015). Why do markets crash? Bitcoin data offers unprecedented insights. arXiv:1503.06704 | S4, F4, F1 | [card](2015-donier-bouchaud-bitcoin-crash.md) |
+| 2026-11-06 | Donier & Bonart (2015). A million metaorder analysis of market impact on the Bitcoin. Market Microstructure and Liquidity. arXiv:1412.4503 | F1, F6, S4, F4 | [card](2015-donier-bonart-bitcoin-metaorders.md) |
 | 2026-11-06 | Marcaccioli, Bouchaud & Benzaquen (2021). Exogenous and endogenous price jumps belong to different dynamical classes. arXiv:2106.07040 | M3, M2, F4 | [card](2021-marcaccioli-endo-exo.md) |
 | 2026-11-06 | Kyle & Obizhaeva (2023). Large bets and stock market crashes. Review of Finance 27(6). doi:10.1093/rof/rfad008 | S4, M1, F1 | [card](2023-kyle-obizhaeva-large-bets-crashes.md) |
 | 2026-11-06 | Sornette, Malevergne & Muzy (2002). Volatility fingerprints of large shocks: endogeneous versus exogeneous. arXiv:cond-mat/0204626 | M3, M2 | [card](2002-sornette-malevergne-muzy-fingerprints.md) |

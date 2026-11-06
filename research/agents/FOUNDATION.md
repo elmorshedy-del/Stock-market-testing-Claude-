@@ -232,6 +232,26 @@ Almost every stylized fact we have tested so far sits inside this picture: fat t
 * **2026-11-06, F4 (Patzelt & Bouchaud 2018), read in full.**
   * **Confirmed:** pinning. Over 100 one-sided market orders can leave the mid unmoved while refills absorb them. P(mid change) against the mean trade sign is tent-shaped and reaches zero at extreme imbalance, for N ≥ 50, across all 30 instruments.
   * **Not covered:** what happens after a pinned episode ends. That is the owner's "absorption must complete" question, still open.
+* **2026-11-06, S4, M1 and F1: the crash-law papers, read in full.** Kyle & Obizhaeva 2023 and 2016 (with supplement), Benzaquen–Donier–Bouchaud 2016, Bucci et al. 2019 and 2020, Donier & Bouchaud 2015, Donier & Bonart 2015.
+  * **S4: grade should read "Contested: mechanism unresolved", not "Supported".**
+    * KO's crash sizes come out right only if impact is **linear** for giant sales. Under square-root impact the W^(1/3) business-time amplification cancels exactly (KO2016 Eq. 18), and 1987 is predicted at about 1.3%.
+    * KO's own data favour square root: exponent 0.57 ± 0.04, with square root the better fit up to the 99th percentile. The case for linear is one top-size bin plus the five crashes. Crash-sized bets lie more than 10× beyond the largest order in the calibration data.
+    * KO's theory assumes "a bet transfers only idiosyncratic risk … not market risk", and the cost regressions remove the market return. The whole-market crash law is therefore outside what was derived and tested.
+    * **Physics regimes:**
+      * impact is linear only for slow, low-participation selling, and then shrinks as 1/√T;
+      * fast selling is square root and independent of execution time (Bucci 2019, 8 million metaorders);
+      * sustained one-sided pressure near full participation breaks liquidity, and impact steepens toward linear (Donier & Bonart 2015, Bitcoin, qualitative).
+    * **Rival mechanism:** crash size = sell imbalance ÷ *current* buy-side liquidity, which thins after run-ups (Donier & Bouchaud 2015, 14 Bitcoin falls).
+  * **M1: correction to "Invariance".**
+    * The 3/2 law holds at the trade level and the bet level.
+    * The invariant's level is not universal: it varies over 10× across futures, futures vs stocks differ by about 10×, and it tracks trading costs (R² ≈ 0.8).
+    * The 3/2 law follows from diffusion + additive volume + spread ∝ volatility per trade, so it does not by itself prove invariance of bets.
+    * For the crash law: the bet-cost constant enters as C^(−1/3), so a 10× uncertainty in C means about 2.2× in a predicted fall.
+  * **F1: refinement.**
+    * Square-root impact holds for participation above about 3×10⁻³ and does not depend on execution time; below that, impact is linear ∝ Q/√T.
+    * Y ≈ 0.9 on Bitcoin (no market makers), and KO2016's square-root calibration also implies Y ≈ 0.9.
+    * No study covers metaorders comparable in size to the whole market.
+  * **F6: addition.** Isolated, uninformed metaorders revert to about zero permanent impact (Bitcoin, all trader IDs).
 
 ## Test log (our own measurements of the laws; newest first)
 * **2026-11-06, M3 signature test** (`2026-11-06-signature-test/`, pre-registered @ f04844b; 101 down shocks across S&P, NDX and SOX).
