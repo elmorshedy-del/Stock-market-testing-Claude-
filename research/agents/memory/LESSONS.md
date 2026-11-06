@@ -2,6 +2,8 @@
 Each entry: what went wrong → the rule that prevents it. Read this at the start of every session.
 
 ## 2026-11-06
+* **I read the literature through the owner's questions:** M3 because of the signature idea, F4 because of absorption. I ignored the field's own central claims and open questions.
+  → The literature sets the agenda: measure the field's core laws on our market and look for where they fail. The owner's questions are food for thought, to be re-posed as sub-questions of the laws. I lead the brainstorm and propose the order.
 * **The owner rated the M3 signature test low-value.** It mostly confirmed volatility clustering, which traders already know. The part that could have been useful (second legs) failed.
   → Before running a test, ask: is the answer unknown to a trader, and would it change a trade? Volatility-only tests rarely pass. Edge in direction must come from flow mechanics (who is forced to trade, where liquidity sits), not from price-history signatures.
 * **Multiverse joint p.** I permuted each specification independently, so the joint p came out under 0.001; coupled permutations gave 0.08.

@@ -15,9 +15,14 @@ Read this first, then LESSONS.md.
 * **Papers read in full** (cards in memory/papers/): Marcaccioli 2021, Sornette–Malevergne–Muzy 2002, Sornette–Helmstetter 2003, Patzelt–Bouchaud 2018, Muhle-Karbe 2026.
 * **Reading queue:** Tóth 2011; Sato–Kanazawa 2024; Maitrier 2025; Cont–Kukanov–Stoikov 2014; Kyle–Obizhaeva 2016; Benzaquen 2016; Hartzmark–Solomon 2025; Gabaix–Koijen. Get the text from arxiv.org/pdf/<id> with pdftotext.
   * **Before M1, read:** Kyle–Obizhaeva 2016, Benzaquen et al. 2016, Ané–Geman 2000.
-* **Next (proposed to the owner, waiting):** deprioritize M1, which likely confirms what traders know. Go to direction-relevant mechanics:
-  1. A free absorption pilot (F4) on the ES/TSLA days we hold: find pinned episodes and look at what happened after each.
-  2. The paid wide test: absorption follow-through on ES/NQ, plus the close (S2: auction imbalance, expiry hedge unwinds). About $100.
+* **Agenda proposed to the owner on 2026-11-06 (waiting for their reaction). Literature-led, laws first:**
+  1. **How mechanical is the market?** The share of ES/NQ price moves explained by order flow through the impact law, vs news. This is the order-driven vs fundamental debate (Maitrier & Bouchaud 2025; Joulin 2008).
+  2. **Did 0DTE options and dealer gamma change the physics?** Impact constant, depth, pinning and liquidity feedback, by year and by gamma sign. No paper measures this.
+  3. **Cross-impact in an AI-concentrated market:** how selling in NVDA and the AI names moves QQQ and SMH (Hey et al. 2025).
+  4. **Crash law** (Kyle & Obizhaeva 2023): can business time plus estimated forced flows predict selloff size (Aug 2024, Apr 2025, Jun 2026, Nov 2026)? Mostly free.
+  5. **Distance to instability:** liquidity feedback (Fosset 2020) and branching ratio, intraday, and whether negative gamma moves the market closer to the edge.
+  * The owner's ideas sit inside these as applications: absorption (1, 5), exhaustion (1), levels (5), close and forced flows (4 and S2).
+  * Items 1–3 and 5 need tick data. Get a quote before spending.
 
 ## Waiting on the owner
 1. About $100 of order-flow data, for the fast-layer laws and the close.
