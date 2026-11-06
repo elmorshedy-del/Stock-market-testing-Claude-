@@ -113,3 +113,25 @@ Out-of-sample log-likelihood gain over a constant rate, 2008–2026:
   * Fear has lingered more strongly since 2008.
 * **Second forecast, logged now and scored with the first on 2026-12-07.** The size-conditioned analog expects 5.0 (pre-2008 rates) to 6.7 (post-2008 rates) S&P big days in the next 21 sessions. That compares with 2.4 [0–6] from the pre-registered Hawkes model and 2.3 at the constant rate.
 * **Next model:** ETAS (epidemic-type aftershock sequence), the standard earthquake model, in which the triggering grows with shock size.
+
+## Addendum 2 (exploratory, after the owner's challenge): does a pause mean the fall is over?
+**Correction.** In chat I told the owner "quiet for the next 1–2 weeks means this was a single shock that's fading." That was overstated, and it mixed volatility with direction. The Hawkes model forecasts how often big days come, not whether price follows through. Even inside the model, triggering is spread over weeks and fear lingers for about 4 months, so a lull is normal within a cascade.
+
+**Data.** S&P 500 down shocks of at least 6 times the 5-year median, with no 6× shock in the prior 21 sessions, 1955–2026 (n = 54). The first-leg low is the lowest close from the shock day to 5 sessions after it. A "new leg" is a close more than 2% below that low within about 4 months.
+* **About half (28 of 54) had a new leg.**
+* **Continuations usually paused first:**
+  * median 12 sessions from the first-leg low to the new leg;
+  * median bounce 1.9% in between; half bounced 2% or more;
+  * only 29% went straight down (bounce under 1%).
+* **The longer the price holds above the first-leg low, the lower the odds of a new leg:**
+
+| held this many sessions without a new closing low | 1 | 3 | 5 | 10 | 15 | 20 |
+|---|---|---|---|---|---|---|
+| episodes | 46 | 42 | 37 | 29 | 23 | 21 |
+| then a new leg | 48% | 43% | 38% | 28% | 17% | 10% |
+
+* **During the pauses,** volatility was about 23% lower than in the leg (median ratio 0.77).
+* **Since 2000:**
+  * the gap before the new leg ranged from 1 session (2022-04-29, 2022-08-26) to 43 (2022-03-07, after an 11% bounce);
+  * COVID: 6 sessions with a 6% bounce, then −24%.
+* **Reading.** The owner's "digest, then follow-through" pattern holds: most continuations paused first. A quiet stretch lowers the odds of another leg only gradually: about 1 in 3 after a week, 1 in 4 after two weeks, 1 in 10 after four.
