@@ -27,3 +27,16 @@ If a check fails, or you can show a rule or result is wrong, write it up as rese
   * **Breadth:** share of large caps above their 50- to 200-day averages vs normal near-high days. See `research/agents/2026-10-25-channel-correction-theory/` (`dips.py`, `breadth_multiverse.py`).
   * **Gamma levels:** the flip, the call and put walls, and where SPY closes vs the flip. See `research/agents/2026-10-25-spy-gamma-levels/spy_gamma.py`.
   * **Gamma pockets:** strikes and price zones where dealer gamma is most negative (moves amplified) or most positive (magnets).
+
+## Agent memory (added 2026-11-06 at the owner's request)
+Agents keep nothing between sessions, and long sessions get summarized. These files are the memory. Read them first and keep them current.
+* **Start of every session:** read `research/agents/memory/STATE.md` (where we are, open decisions, next step) and `research/agents/memory/LESSONS.md` (mistakes not to repeat). The theory is `research/agents/FOUNDATION.md`; the plan is `research/agents/PROGRAM.md`.
+* **Reading papers:**
+  * Read the full text before building a test on a paper; abstracts hide scope limits.
+  * Write the paper's card in `research/agents/memory/papers/` immediately (template in `papers/INDEX.md`) and add its line to the index.
+  * If a card changes a claim in FOUNDATION.md, append a correction there.
+* **Before designing a test:** read the FOUNDATION.md entry for its law and every card tagged with that law.
+* **End of every task:**
+  * Overwrite STATE.md.
+  * Append any new mistake, and the rule that prevents it, to LESSONS.md.
+  * Commit and push. The container is wiped, so unpushed memory is lost.

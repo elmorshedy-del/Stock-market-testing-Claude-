@@ -212,3 +212,11 @@ Almost every stylized fact we have tested so far sits inside this picture: fat t
 | Volatility signature sets pause length | M3, M2 | Supported in the literature, open for us | **Free, first:** self-made vs news shocks |
 | Up and down are symmetric | F1 vs M4 | Mechanics yes; volatility response no, for indices | Within the M3 test |
 | Options give the signature in advance | S2 | Gamma sign sets reversal vs momentum, modestly; expiry unwinds move the close | Paid or partly free: dealer delta at 3:30 |
+
+---
+
+## Full-reading log (appended as papers are read in full; cards in memory/papers/)
+* **2026-11-06, M3 (Marcaccioli et al. 2021), read in full.**
+  * **Confirmed.** Self-made jumps are preceded by about 75 minutes of volatility and trend build-up, and relax more slowly (exponent 0.40 vs 0.68 for news). Volatility after news undershoots the baseline. Only about 1% of jumps were news-related. Single-event classification reaches out-of-sample AUC 0.72.
+  * **Scope limit missed from the abstract:** market-wide and sector-wide events were removed. So M3 is untested on index-level shocks, and our M3 test is an extension, not a replication.
+  * Grade unchanged: Supported.
