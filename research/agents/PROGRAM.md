@@ -33,3 +33,30 @@
 * Aftershock forecasts: 2026-11-13, 12-07, 2027-02-05.
 * Year-end forecast: 2026-11-13.
 * Overdue follow-ups EV1 and TP1 (due Nov 5) and live-read LR1 (due Nov 6 close).
+
+## Literature read (as outside work, not a guide)
+**Muhle-Karbe, Ouazzani Chahdi, Rosenbaum, Szymanski (2026), "A unified theory of order flow, market impact, and volatility", arXiv:2601.23172 (preprint).**
+Read: the main text (Sections 1–5) and the data appendix. The reference list and the proof appendices were not read.
+
+* **Claim.** Order flow = slow "core" orders (fundamental investors, split metaorders, trend followers) + "reaction" orders (market makers, HFT), each a near-critical Hawkes process with power-law memory.
+  * One parameter, the core-flow persistence H0, fixes all of these:
+    * signed flow: mixed fractional, Brownian at high frequency and persistent at coarse scales;
+    * volume roughness: H0 − 1/2;
+    * impact exponent: 2 − 2H0;
+    * volatility roughness: 2H0 − 3/2.
+  * The estimate H0 ≈ 0.75 gives square-root impact and very rough volatility.
+  * Data: BMLL trades, 2021–2024, 40 large caps (20 Paris, 20 NYSE).
+* **Strengths.** It unifies four known laws from one mechanism. It explains why Hurst estimates of order flow rise with the sampling interval, and the mixed-fractional estimate is stable across scales.
+* **Problems.**
+  * The key number is inconsistent: the introduction says H0 is 0.75–0.80, but Section 3.3 says it "stabilizes around 0.65". That matters, because Section 4 needs H0 > 3/4.
+  * The impact and volatility links rest on stated approximations, at the H0 = 3/4 boundary.
+  * Impact and volatility are not estimated on the same data. The paper compares them with published values, so this is not a joint or out-of-sample test.
+  * No index futures, ETFs, tech names or stress episodes.
+  * The model has no price levels. Liquidity is the same at every price.
+* **Fit with our program.**
+  * Agrees with the medium layer: markets near criticality (our branching ratio is 0.87–0.95 on daily big moves).
+  * Explains the forced-flows failure through its price rule: price = today's expectation of all future signed flow. Predictable flow is priced when it becomes predictable, not when it trades.
+  * Does not cover the owner's liquidity landscape (price-level-dependent liquidity, absorption, exhaustion). That idea stays our own, open, contribution.
+* **Plan changes (no new tests):**
+  * In step 2, measure signed-flow persistence in legs vs pauses (core flow dominating vs reaction flow absorbing).
+  * If the auction data is bought, split the closing imbalance into its predictable part and its surprise part. Only the surprise part should move the close.
