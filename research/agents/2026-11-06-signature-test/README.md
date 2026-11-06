@@ -124,3 +124,5 @@ python test.py       # everything above -> out/signature.json, out/figure
 * **One correction to the intuition:** reassessment raises volatility in both directions. Deep shocks did not bring more lower lows (50% vs 53%). They brought bigger swings, including sharp rallies.
 
 **A possible test** (logged, not run): if reassessment drives the slow fade, the gap should be larger for shocks concentrated in one sector or theme than for broad shocks, and volatility should stay elevated on scheduled news days (earnings, CPI) after build-up shocks.
+
+**Clarification from the owner (2026-11-06):** "reassessing" meant uncertainty in both directions. So the "correction to the intuition" above was my misreading. The owner's view and the data agree fully: a deep shock leaves ongoing uncertainty, which shows up as lasting volatility in both directions, not as a directional bias.
