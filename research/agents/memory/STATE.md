@@ -7,19 +7,14 @@ Read this first, then LESSONS.md.
 
 ## Where we are
 * **Program:** laws-first (PROGRAM.md, revision 2026-11-06). The theory is FOUNDATION.md: 16 laws in three layers.
-* **Current task:** read the core papers in full before any test. The owner asked; abstracts were not enough.
-  * **Read in full:** Marcaccioli, Bouchaud & Benzaquen 2021 ([card](papers/2021-marcaccioli-endo-exo.md)); Muhle-Karbe et al. 2026 (main text; [review](../2026-11-06-paper-unified-flow/README.md)).
-  * **Queue, in order:**
-    1. Sornette, Malevergne & Muzy 2002 (cond-mat/0204626)
-    2. Patzelt & Bouchaud 2018 (1706.04163)
-    3. Sornette & Helmstetter 2003 (cond-mat/0206047)
-    4. Then: Tóth et al. 2011; Sato & Kanazawa 2024; Maitrier et al. 2025; Cont, Kukanov & Stoikov 2014; Kyle & Obizhaeva 2016; Benzaquen et al. 2016; Hartzmark & Solomon 2025; Gabaix & Koijen.
-  * **How to get the text:** download `https://arxiv.org/pdf/<id>`, then run `pdftotext`. Put downloads in their own scratch folder.
-* **Next test (waiting for the owner's go):** the M3 signature test. Do self-made shocks relax more slowly, and more often start a new leg, than news shocks?
+* **Current task:** the M3 signature test. The owner said go on 2026-11-06.
+  * **Papers read in full** (cards in memory/papers/): Marcaccioli 2021, Sornette–Malevergne–Muzy 2002, Sornette–Helmstetter 2003, Patzelt–Bouchaud 2018, Muhle-Karbe 2026.
+  * **Reading queue after M3:** Tóth 2011; Sato–Kanazawa 2024; Maitrier 2025; Cont–Kukanov–Stoikov 2014; Kyle–Obizhaeva 2016; Benzaquen 2016; Hartzmark–Solomon 2025; Gabaix–Koijen. Get the text from arxiv.org/pdf/<id> with pdftotext.
+  * **Key design input from the cards:** the self-made vs news gap needs long memory (Sornette & Helmstetter). Our aftershock study says the memory is a power law for NDX and SOX, but unresolved for the S&P. So predict a bigger gap in NDX and SOX.
+* **Next:** pre-register M3 in `2026-11-06-signature-test/`, push, run, report.
 
 ## Waiting on the owner
-1. Go on the M3 test (free).
-2. About $100 of order-flow data, for the fast-layer laws and the close.
+1. About $100 of order-flow data, for the fast-layer laws and the close.
 
 ## Scheduled scoring
 * Aftershock forecasts: 2026-11-13, 2026-12-07, 2027-02-05.

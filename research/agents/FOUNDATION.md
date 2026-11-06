@@ -220,3 +220,15 @@ Almost every stylized fact we have tested so far sits inside this picture: fat t
   * **Confirmed.** Self-made jumps are preceded by about 75 minutes of volatility and trend build-up, and relax more slowly (exponent 0.40 vs 0.68 for news). Volatility after news undershoots the baseline. Only about 1% of jumps were news-related. Single-event classification reaches out-of-sample AUC 0.72.
   * **Scope limit missed from the abstract:** market-wide and sector-wide events were removed. So M3 is untested on index-level shocks, and our M3 test is an extension, not a replication.
   * Grade unchanged: Supported.
+* **2026-11-06, M3 (Sornette, Malevergne & Muzy 2002; Sornette & Helmstetter 2003), read in full.**
+  * **Key condition missed from the abstracts:** the self-made vs news difference in recovery speed exists only if market memory is long.
+    * With exponential memory, the two recover at the same speed; the origin is invisible in the recovery.
+    * Memory decaying slower than 1/t gives self-made decay 1/t^(1−2θ) against outside-shock decay 1/t^(1−θ).
+  * **The log-volatility model (2002) predicts:**
+    * outside shocks decay as 1/√t whatever their size;
+    * self-made shocks have an exponent that falls as the shock grows.
+  * **Evidence is thin:** two labelled outside events (the 1991 coup, 9/11) and one self-made event (1987). The daily-index claim is not shown.
+  * **Consequence for our test:** our aftershock study measured the memory shape (power law beats exponential for NDX and SOX; not resolved for the S&P). So the theory predicts the self-made vs news gap in NDX and SOX more than in the S&P.
+* **2026-11-06, F4 (Patzelt & Bouchaud 2018), read in full.**
+  * **Confirmed:** pinning. Over 100 one-sided market orders can leave the mid unmoved while refills absorb them. P(mid change) against the mean trade sign is tent-shaped and reaches zero at extreme imbalance, for N ≥ 50, across all 30 instruments.
+  * **Not covered:** what happens after a pinned episode ends. That is the owner's "absorption must complete" question, still open.
