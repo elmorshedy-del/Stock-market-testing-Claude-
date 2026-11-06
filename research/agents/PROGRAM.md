@@ -60,3 +60,17 @@ Read: the main text (Sections 1–5) and the data appendix. The reference list a
 * **Plan changes (no new tests):**
   * In step 2, measure signed-flow persistence in legs vs pauses (core flow dominating vs reaction flow absorbing).
   * If the auction data is bought, split the closing imbalance into its predictable part and its surprise part. Only the surprise part should move the close.
+
+**Correction to the review above (same day, after checking the paper's figure files and stock table).** Three of the "Problems" bullets were wrong or overstated. The lines above stay as written.
+1. **"The key number is inconsistent" is resolved; it was a text slip.**
+   * Values read from Figure 4's vector file: the mixed-fractional H0 averages 0.741–0.785 across 25 bin sizes (10 s to 80 min), mean 0.762.
+   * The "0.65" in Section 3.3 matches the naive estimator in Figure 3 (0.657 at 1 h, 0.666 at 80 min). It is not the value Figure 4 shows.
+   * The real weakness is different: the average is only about one standard error above 3/4. The median z is 1.2 assuming independent stocks, and less once stocks are correlated.
+   * The 5–95% band across stocks runs from 0.56–0.69 at the low edge to 0.84–0.93 at the high edge. With a normal approximation, about 43% of stock-level estimates fall below 3/4 (26–54% depending on bin size).
+   * Below 3/4 the price link in Section 4 does not apply. The data show H0 ≈ 3/4, not clearly above it. The paper does not test H0 > 3/4 and does not separate estimation noise from real differences between stocks.
+2. **"No tech names" is wrong.** The sample includes STMicroelectronics (a chipmaker), Uber, Shopify, Alibaba and Visa. What is missing is Nasdaq-listed names (the AI megacaps), index ETFs and futures.
+3. **"No stress episodes" is wrong.** 2021–2024 includes the 2022 bear market, the March 2023 bank stress and the August 2024 volatility spike. What is missing is a regime split: every estimate pools the whole four years.
+
+**Additions.**
+* **Strength.** Volume roughness, measured at 5–12 s bins (mean 0.239–0.293), implies H0 = 0.739–0.793. This matches the signed-flow estimate: a genuine cross-check on the paper's own data.
+* **Scope.** All the evidence sits between 5 seconds and 80 minutes. Nothing is shown at daily or weekly scales, which is where our medium layer works.
