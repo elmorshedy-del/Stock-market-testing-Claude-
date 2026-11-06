@@ -51,3 +51,50 @@
 * p is about 0.7–1.0.
 * H-SE2 passes.
 * H-OM1 is a coin flip: there are few out-of-sample mainshocks.
+
+## Results (run 2026-11-06, before the open)
+Files: `hawkes.py` → `out/hawkes.json`.
+
+### H-SE2: self-excitation is real (PASSES, by a lot)
+Out-of-sample log-likelihood gain over a constant rate, 2008–2026:
+
+| | power-law Hawkes vs constant | exponential Hawkes vs constant | branching ratio n (fit on data before 2008) | share of out-of-sample big days attributed to triggering |
+|---|---|---|---|---|
+| S&P 500 | +387 [222, 583] | +384 [225, 574] | 0.87 | 90% |
+| Nasdaq-100 | +274 [160, 414] | +264 [150, 404] | 0.95 | 96% |
+| SOX | +269 [133, 410] | +256 [118, 397] | 0.90 | 97% |
+
+* All three markets are near-critical. Each big day (|r| ≥ 3 × the 5-year median, about 1.7% for the S&P now) triggers 0.87–0.95 more big days on average.
+* About 9 in 10 big days are aftershocks of earlier big days rather than shocks out of calm.
+
+### H-SE1: power-law vs exponential memory (FAILS on the primary S&P; PASSES in both replications)
+* **S&P:** ΔLL +2.5, 90% CI [−2.5, +7.2]. This is the primary test, and it fails.
+* **Nasdaq-100:** +10.5 [2.6, 19.5]. **SOX:** +12.7 [2.2, 26.4]. Long-memory triggering beats short memory for tech and chips.
+* **Kernel exponents:**
+  * S&P: p = 2.13, c = 14.7 days;
+  * Nasdaq-100: p = 1.67, c = 14.1;
+  * SOX: p = 1.46, c = 7.1.
+* Chips have the longest memory of fear. My predicted p of 0.7–1.0 was wrong: the bare kernel decays faster.
+
+### H-OM1: Omori law after mainshocks (not supported; underpowered)
+* **S&P, 21 in-sample and 11 out-of-sample mainshocks:** ΔLL +0.1, CI [0.00, 0.21].
+  * The power-law fit collapsed into an exponential (c = 1,614, p = 13.7, which is about e^(−t/118)), so the two models are the same curve. This is not support for a power law.
+* **Nasdaq-100 and SOX:** only 5 and 1 in-sample mainshocks, so the fits are meaningless.
+* **Descriptive:** after an S&P mainshock, the extra big-day rate decays with a time constant of about 120 sessions. Fear lingers for months.
+* **Consistency check.** A linear Hawkes process with kernel time τ and branching ratio n decays after a shock with time constant τ/(1 − n).
+  * The all-days exponential fit gives 16.0/(1 − 0.821) ≈ 89 sessions.
+  * The mainshock stacking gives about 122.
+  * Two separate analyses agree in order of magnitude.
+
+### Forward forecast (logged 2026-11-06 before the open; to be scored)
+* **Status of the latest move:** the S&P's event threshold is now 1.71%. Nov 5 (−4.45%) just missed the mainshock bar (4.55%). Recent event days are Oct 30 and Nov 5 only, so this is not yet a cluster.
+* **Probability today (Nov 6) is a big day:** 13.4%, against 10.1% unconditional.
+* **Expected S&P big days (80% interval in brackets):**
+
+| window | Hawkes forecast | constant rate | score on |
+|---|---|---|---|
+| next 5 sessions | 0.63 [0–2] | 0.55 | 2026-11-13 |
+| next 21 sessions | 2.36 [0–6] | 2.31 | 2026-12-07 |
+| next 63 sessions | 6.44 [1–14] | 6.92 | 2027-02-05 |
+
+* **Read:** the model sees one shock, not a storm. The storm signature would be more big days within the next two weeks, because each one raises the odds of the next.

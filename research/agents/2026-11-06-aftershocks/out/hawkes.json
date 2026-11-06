@@ -1,0 +1,349 @@
+{
+ "S&P 500": {
+  "sample": "1955-01-17 to 2026-11-05",
+  "event threshold now (3 x 5y median |r|) %": 1.71,
+  "events in-sample / oos": [
+   1320,
+   637
+  ],
+  "fits (in-sample <2008)": {
+   "const": {
+    "mu (background prob/day)": 0.1009
+   },
+   "exp": {
+    "mu (background prob/day)": 0.018,
+    "n (branching ratio)": 0.821,
+    "tau (days)": 16.0
+   },
+   "pow": {
+    "mu (background prob/day)": 0.0131,
+    "n (branching ratio)": 0.871,
+    "c": 14.7,
+    "p (Omori exponent)": 2.132
+   }
+  },
+  "oos log-lik: pow, exp, const": [
+   -1511.1,
+   -1513.6,
+   -1897.6
+  ],
+  "oos dLL pow-exp [90% CI]": [
+   2.5,
+   [
+    -2.46,
+    7.2
+   ]
+  ],
+  "oos dLL pow-const [90% CI]": [
+   386.54,
+   [
+    221.79,
+    583.31
+   ]
+  ],
+  "oos dLL exp-const [90% CI]": [
+   384.03,
+   [
+    224.85,
+    573.99
+   ]
+  ],
+  "share of oos event days attributed to triggering (pow)": 0.901,
+  "Omori mainshocks": {
+   "mainshocks in-sample / oos": [
+    21,
+    11
+   ],
+   "oos mainshock dates": [
+    "2008-03-18",
+    "2008-09-15",
+    "2011-08-04",
+    "2015-08-24",
+    "2018-02-05",
+    "2018-10-10",
+    "2019-08-05",
+    "2020-02-24",
+    "2022-05-18",
+    "2022-09-13",
+    "2025-04-03"
+   ],
+   "in-sample pow fit": {
+    "b": 0.0,
+    "K": 1.7522503848227386e+43,
+    "c": 1614.19,
+    "p": 13.653
+   },
+   "in-sample exp fit": {
+    "b": 0.0,
+    "K": 0.278,
+    "tau": 122.3
+   },
+   "oos dLL pow-exp [90% CI]": [
+    0.1,
+    [
+     0.0,
+     0.21
+    ]
+   ],
+   "oos dLL pow-const": 30.02
+  },
+  "full-sample pow fit": {
+   "mu (background prob/day)": 0.015,
+   "n (branching ratio)": 0.864,
+   "c": 14.97,
+   "p (Omori exponent)": 2.37
+  },
+  "today's event probability (Nov 6)": 0.134,
+  "forward forecast from 2026-11-05 (S&P days with |r| >= threshold)": {
+   "next 5 sessions": {
+    "expected": 0.63,
+    "80% interval": [
+     0,
+     2
+    ],
+    "constant-rate expectation": 0.55
+   },
+   "next 21 sessions": {
+    "expected": 2.36,
+    "80% interval": [
+     0,
+     6
+    ],
+    "constant-rate expectation": 2.31
+   },
+   "next 63 sessions": {
+    "expected": 6.44,
+    "80% interval": [
+     1,
+     14
+    ],
+    "constant-rate expectation": 6.92
+   }
+  },
+  "last 10 sessions: date, |r| %, event": [
+   [
+    "2026-10-23",
+    0.52,
+    0
+   ],
+   [
+    "2026-10-26",
+    0.69,
+    0
+   ],
+   [
+    "2026-10-27",
+    0.6,
+    0
+   ],
+   [
+    "2026-10-28",
+    0.28,
+    0
+   ],
+   [
+    "2026-10-29",
+    0.31,
+    0
+   ],
+   [
+    "2026-10-30",
+    1.83,
+    1
+   ],
+   [
+    "2026-11-02",
+    0.51,
+    0
+   ],
+   [
+    "2026-11-03",
+    0.36,
+    0
+   ],
+   [
+    "2026-11-04",
+    1.57,
+    0
+   ],
+   [
+    "2026-11-05",
+    4.45,
+    1
+   ]
+  ],
+  "Nov 5 2026 is a mainshock": false
+ },
+ "Nasdaq-100": {
+  "sample": "1990-09-26 to 2026-11-05",
+  "event threshold now (3 x 5y median |r|) %": 2.46,
+  "events in-sample / oos": [
+   398,
+   599
+  ],
+  "fits (in-sample <2008)": {
+   "const": {
+    "mu (background prob/day)": 0.0971
+   },
+   "exp": {
+    "mu (background prob/day)": 0.0073,
+    "n (branching ratio)": 0.921,
+    "tau (days)": 28.9
+   },
+   "pow": {
+    "mu (background prob/day)": 0.0049,
+    "n (branching ratio)": 0.946,
+    "c": 14.11,
+    "p (Omori exponent)": 1.665
+   }
+  },
+  "oos log-lik: pow, exp, const": [
+   -1545.8,
+   -1556.3,
+   -1820.1
+  ],
+  "oos dLL pow-exp [90% CI]": [
+   10.45,
+   [
+    2.59,
+    19.53
+   ]
+  ],
+  "oos dLL pow-const [90% CI]": [
+   274.28,
+   [
+    159.55,
+    414.37
+   ]
+  ],
+  "oos dLL exp-const [90% CI]": [
+   263.82,
+   [
+    150.05,
+    403.66
+   ]
+  ],
+  "share of oos event days attributed to triggering (pow)": 0.956,
+  "Omori mainshocks": {
+   "mainshocks in-sample / oos": [
+    5,
+    9
+   ],
+   "oos mainshock dates": [
+    "2008-09-29",
+    "2009-03-10",
+    "2011-08-08",
+    "2015-08-26",
+    "2018-02-05",
+    "2018-10-10",
+    "2020-02-27",
+    "2022-11-10",
+    "2025-04-09"
+   ],
+   "in-sample pow fit": {
+    "b": 0.1443,
+    "K": 0.488,
+    "c": 0.0,
+    "p": 0.441
+   },
+   "in-sample exp fit": {
+    "b": 0.2042,
+    "K": 0.242,
+    "tau": 20.8
+   },
+   "oos dLL pow-exp [90% CI]": [
+    -2.68,
+    [
+     -6.1,
+     0.63
+    ]
+   ],
+   "oos dLL pow-const": 19.4
+  }
+ },
+ "SOX": {
+  "sample": "1999-05-03 to 2026-11-05",
+  "event threshold now (3 x 5y median |r|) %": 4.45,
+  "events in-sample / oos": [
+   119,
+   531
+  ],
+  "fits (in-sample <2008)": {
+   "const": {
+    "mu (background prob/day)": 0.0617
+   },
+   "exp": {
+    "mu (background prob/day)": 0.003,
+    "n (branching ratio)": 0.89,
+    "tau (days)": 28.5
+   },
+   "pow": {
+    "mu (background prob/day)": 0.0026,
+    "n (branching ratio)": 0.899,
+    "c": 7.06,
+    "p (Omori exponent)": 1.456
+   }
+  },
+  "oos log-lik: pow, exp, const": [
+   -1478.2,
+   -1490.9,
+   -1747.2
+  ],
+  "oos dLL pow-exp [90% CI]": [
+   12.69,
+   [
+    2.17,
+    26.4
+   ]
+  ],
+  "oos dLL pow-const [90% CI]": [
+   268.94,
+   [
+    132.54,
+    409.83
+   ]
+  ],
+  "oos dLL exp-const [90% CI]": [
+   256.25,
+   [
+    117.89,
+    397.17
+   ]
+  ],
+  "share of oos event days attributed to triggering (pow)": 0.968,
+  "Omori mainshocks": {
+   "mainshocks in-sample / oos": [
+    1,
+    7
+   ],
+   "oos mainshock dates": [
+    "2008-10-13",
+    "2014-10-10",
+    "2018-10-24",
+    "2020-03-09",
+    "2022-11-10",
+    "2025-04-09",
+    "2026-06-05"
+   ],
+   "in-sample pow fit": {
+    "b": 0.3417,
+    "K": 0.001,
+    "c": 0.93,
+    "p": 40.297
+   },
+   "in-sample exp fit": {
+    "b": 0.3388,
+    "K": 0.016,
+    "tau": 22.2
+   },
+   "oos dLL pow-exp [90% CI]": [
+    -1.23,
+    [
+     -2.08,
+     -0.57
+    ]
+   ],
+   "oos dLL pow-const": 0.0
+  }
+ }
+}
