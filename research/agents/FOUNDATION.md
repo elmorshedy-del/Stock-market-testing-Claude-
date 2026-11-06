@@ -232,3 +232,10 @@ Almost every stylized fact we have tested so far sits inside this picture: fat t
 * **2026-11-06, F4 (Patzelt & Bouchaud 2018), read in full.**
   * **Confirmed:** pinning. Over 100 one-sided market orders can leave the mid unmoved while refills absorb them. P(mid change) against the mean trade sign is tent-shaped and reaches zero at extreme imbalance, for N ≥ 50, across all 30 instruments.
   * **Not covered:** what happens after a pinned episode ends. That is the owner's "absorption must complete" question, still open.
+
+## Test log (our own measurements of the laws; newest first)
+* **2026-11-06, M3 signature test** (`2026-11-06-signature-test/`, pre-registered @ f04844b; 101 down shocks across S&P, NDX and SOX).
+  * **Fade (H1):** build-up shocks fade more slowly. Median persistence 0.32 vs 0.15, p = 0.049, corrected joint p across 18 specifications = 0.08. Weakly supported; largely shared with plain volatility clustering.
+  * **Memory condition (H2):** the gaps rise as memory lengthens (S&P +0.10, NDX +0.37, SOX +0.56). The S&P decay exponents are identical (0.33 vs 0.33); NDX+SOX differ (0.29 vs 0.62). Not significant.
+  * **Second legs (H3):** the signature does not predict them (50% vs 53%). They come at the rate random signs with the same volatility would give.
+  * **M3 grade unchanged:** Supported, now with daily index evidence in the predicted direction.

@@ -63,3 +63,54 @@
 python prep.py       # data and the shock-set check
 python test.py       # everything above -> out/signature.json, out/figure
 ```
+
+---
+
+## Results (run 2026-11-06 on data to the 2026-11-05 close)
+**Deviations from the pre-registration, reported:**
+* **S&P has 53 complete shocks, not 54.** The 1955-03-14 shock came only 39 sessions into the usable sample, too early for the 70-session baseline.
+* **The joint p across the 18 specifications was miscomputed in `test.py`.** The permutations were not coupled across specifications, so the joint p came out under 0.001, which is too optimistic. `addendum.py` recomputes it with one random rank per shock (index and date), shared by every specification, as the pre-registration intended. **The corrected joint p is the one to use.**
+
+### Verdicts
+* **H1 (build-up shocks fade more slowly): passes narrowly.**
+  * Median persistence: 0.32 build-up vs 0.15 abrupt. A month later, build-up shocks still carry about a third of their early excess volatility; abrupt shocks about a seventh.
+  * One-sided permutation p = 0.049. 90% bootstrap interval of the difference: [−0.14, +0.55].
+  * All 18 specifications are positive. Corrected joint p = 0.08.
+  * **Dropped shocks:** all 13 shocks removed by the E1 ≤ 0 rule were abrupt shocks whose volatility was back below normal within 20 days (0 of 34 build-up shocks vs 13 of 34 abrupt). These are the fastest fades, so the rule worked against H1. Keeping them as the fastest fades (post-hoc rank test, `sensitivity.py`) gives p < 0.0001.
+  * **Caveat:** most of this effect is also what plain volatility clustering predicts (recent high volatility stays high). The part only the theory predicts is H2.
+* **H2 (the gap needs long memory): not established, as expected.** The direction matches the theory.
+
+  | | S&P (short memory) | NDX | SOX (longest memory) |
+  |---|---|---|---|
+  | θ (from the aftershock study) | 1.13 | 0.67 | 0.46 |
+  | Gap in persistence (build-up − abrupt) | +0.10 | +0.37 | +0.56 |
+  | Decay exponent, build-up vs abrupt (exploratory O4) | 0.33 vs 0.33 | 0.29 vs 0.62 (NDX and SOX pooled) | |
+
+  * The gaps rise in order as memory lengthens.
+  * Long-memory gap minus S&P gap: +0.26, 90% CI [−0.39, +1.21].
+  * The S&P exponents are identical, as Sornette & Helmstetter predict for short memory. For NDX and SOX the exponent gap has 90% CI [−0.14, +1.20], with an 81% chance of being above zero.
+  * The abrupt exponent of 0.62 is close to Marcaccioli's 0.68 for news shocks. The build-up exponent of 0.29–0.33 is close to their 0.40 for self-made shocks and to the 0.3 decay after the 1987 crash.
+* **H3 (build-up shocks bring more second legs): fails.**
+  * New-leg rate: 50% build-up vs 53% abrupt; p = 0.68.
+  * Corrected joint p = 0.87; only 3 of 18 specifications are positive.
+  * **Direction beyond volatility (O2x):** second legs came about as often as random signs with the same realized volatility would produce: 50% vs 56% expected (build-up), 53% vs 54% (abrupt).
+* **O3 (pause length):** 12 vs 11.5 sessions from the first-leg low to the new leg. No difference.
+
+### Named events
+* **9/11 (2001-09-17):** classified as build-up (B 1.24), although it is a textbook news shock. It faded fast (P 0.15). The signature misreads news that arrives in an already-volatile market, as Marcaccioli et al. also found (classification accuracy about 0.72).
+* **Tariffs, 2025-04-03:** classified as middle or abrupt in all three indices. Volatility was below normal within two months (P −0.19 to −0.30): the calm after news.
+
+### Live forecast (score after day 89, around mid-March 2027)
+* **Class:** the 2026-11-05 shock has a build-up signature in all three indices (B = 1.42 S&P, 1.60 NDX, 1.74 SOX; the build-up cut-off is about 1.2).
+* **Forecast 1:** its persistence P will be above the abrupt-class median in each index (0.16 / 0.20 / −0.30). That is, the storm fades slowly.
+* **Forecast 2:** second-leg odds about 50%, i.e. no edge from the signature.
+
+### What this means
+* **The owner's signature idea is half right.**
+  * The build-up before a shock predicts how long the storm lasts (volatility), most clearly in the long-memory markets (NDX, chips), as the physics predicts.
+  * It does not predict whether a second leg comes. Given the volatility that follows, the direction is a coin flip (law C1).
+* **"Digest, then follow-through"** remains a fair description, since most second legs pause first. But whether the follow-through comes cannot be called from the signature.
+
+### Next for M3
+* **More power for H2:** run the same test on the 1-minute bars we already hold (SPY and QQQ, 2020–26). There are many more shocks there, but intraday memory has to be measured first.
+* **Separate the theory from plain clustering:** simulate each index's fitted memory model, then check whether the model alone reproduces the class gaps.

@@ -1,0 +1,414 @@
+{
+ "pre-registration": "f04844b",
+ "n complete / build-up / abrupt per index": {
+  "S&P 500": [
+   53,
+   18,
+   18
+  ],
+  "Nasdaq-100": [
+   30,
+   10,
+   10
+  ],
+  "SOX": [
+   18,
+   6,
+   6
+  ]
+ },
+ "dropped (E1<=0)": 13,
+ "H1": {
+  "observed": 0.177,
+  "one-sided permutation p": 0.0491,
+  "median P build-up / abrupt": [
+   0.323,
+   0.146
+  ],
+  "90% bootstrap CI of difference": [
+   -0.143,
+   0.55
+  ]
+ },
+ "H3": {
+  "observed": -0.029,
+  "one-sided permutation p": 0.6839,
+  "new-leg rate build-up / abrupt / middle": [
+   0.5,
+   0.529,
+   0.545
+  ]
+ },
+ "per index": {
+  "S&P 500": {
+   "median P build-up / abrupt": [
+    0.254,
+    0.158
+   ],
+   "gap": 0.096,
+   "new-leg build-up / abrupt": [
+    "9/18",
+    "10/18"
+   ]
+  },
+  "Nasdaq-100": {
+   "median P build-up / abrupt": [
+    0.571,
+    0.196
+   ],
+   "gap": 0.374,
+   "new-leg build-up / abrupt": [
+    "5/10",
+    "6/10"
+   ]
+  },
+  "SOX": {
+   "median P build-up / abrupt": [
+    0.261,
+    -0.297
+   ],
+   "gap": 0.558,
+   "new-leg build-up / abrupt": [
+    "3/6",
+    "2/6"
+   ]
+  }
+ },
+ "H2": {
+  "gap long-memory (NDX+SOX) minus gap S&P": 0.255,
+  "90% CI": [
+   -0.387,
+   1.212
+  ],
+  "gap long-memory / S&P": [
+   0.351,
+   0.096
+  ]
+ },
+ "O2x excess new-leg rate over random-sign paths": {
+  "build-up": -0.058,
+  "abrupt": -0.01,
+  "all complete": -0.019,
+  "expected rate build-up / abrupt": [
+   0.558,
+   0.54
+  ],
+  "two-sided permutation p (difference)": 0.6426
+ },
+ "O3 pause sessions (median, among new legs) build-up / abrupt": [
+  12.0,
+  11.5
+ ],
+ "O4 decay exponent alpha (1 - slope of cumulative excess)": {
+  "build-up all": 0.308,
+  "build-up S&P": 0.326,
+  "build-up NDX+SOX": 0.286,
+  "abrupt all": 0.434,
+  "abrupt S&P": 0.33,
+  "abrupt NDX+SOX": 0.619
+ },
+ "multiverse": [
+  {
+   "spec": "5x, iso 21, win 5",
+   "n": 90,
+   "H1": 0.206,
+   "H1 p": 0.037,
+   "H3": 0.044,
+   "H3 p": 0.418
+  },
+  {
+   "spec": "5x, iso 21, win 10",
+   "n": 90,
+   "H1": 0.232,
+   "H1 p": 0.045,
+   "H3": -0.044,
+   "H3 p": 0.72
+  },
+  {
+   "spec": "5x, iso 21, win 20",
+   "n": 90,
+   "H1": 0.304,
+   "H1 p": 0.004,
+   "H3": -0.111,
+   "H3 p": 0.894
+  },
+  {
+   "spec": "5x, iso 42, win 5",
+   "n": 76,
+   "H1": 0.241,
+   "H1 p": 0.081,
+   "H3": 0.026,
+   "H3 p": 0.501
+  },
+  {
+   "spec": "5x, iso 42, win 10",
+   "n": 76,
+   "H1": 0.266,
+   "H1 p": 0.012,
+   "H3": -0.026,
+   "H3 p": 0.681
+  },
+  {
+   "spec": "5x, iso 42, win 20",
+   "n": 76,
+   "H1": 0.238,
+   "H1 p": 0.042,
+   "H3": -0.132,
+   "H3 p": 0.91
+  },
+  {
+   "spec": "6x, iso 21, win 5",
+   "n": 68,
+   "H1": 0.133,
+   "H1 p": 0.086,
+   "H3": 0.029,
+   "H3 p": 0.5
+  },
+  {
+   "spec": "6x, iso 21, win 10",
+   "n": 68,
+   "H1": 0.177,
+   "H1 p": 0.042,
+   "H3": -0.029,
+   "H3 p": 0.695
+  },
+  {
+   "spec": "6x, iso 21, win 20",
+   "n": 68,
+   "H1": 0.131,
+   "H1 p": 0.074,
+   "H3": -0.118,
+   "H3 p": 0.879
+  },
+  {
+   "spec": "6x, iso 42, win 5",
+   "n": 58,
+   "H1": 0.035,
+   "H1 p": 0.439,
+   "H3": -0.069,
+   "H3 p": 0.778
+  },
+  {
+   "spec": "6x, iso 42, win 10",
+   "n": 58,
+   "H1": 0.047,
+   "H1 p": 0.311,
+   "H3": -0.207,
+   "H3 p": 0.971
+  },
+  {
+   "spec": "6x, iso 42, win 20",
+   "n": 58,
+   "H1": 0.085,
+   "H1 p": 0.17,
+   "H3": -0.241,
+   "H3 p": 0.984
+  },
+  {
+   "spec": "8x, iso 21, win 5",
+   "n": 28,
+   "H1": 0.148,
+   "H1 p": 0.131,
+   "H3": -0.214,
+   "H3 p": 0.923
+  },
+  {
+   "spec": "8x, iso 21, win 10",
+   "n": 28,
+   "H1": 0.122,
+   "H1 p": 0.249,
+   "H3": -0.214,
+   "H3 p": 0.923
+  },
+  {
+   "spec": "8x, iso 21, win 20",
+   "n": 28,
+   "H1": 0.122,
+   "H1 p": 0.235,
+   "H3": -0.286,
+   "H3 p": 0.97
+  },
+  {
+   "spec": "8x, iso 42, win 5",
+   "n": 22,
+   "H1": 0.149,
+   "H1 p": 0.226,
+   "H3": -0.364,
+   "H3 p": 0.981
+  },
+  {
+   "spec": "8x, iso 42, win 10",
+   "n": 22,
+   "H1": 0.136,
+   "H1 p": 0.269,
+   "H3": -0.364,
+   "H3 p": 0.978
+  },
+  {
+   "spec": "8x, iso 42, win 20",
+   "n": 22,
+   "H1": 0.136,
+   "H1 p": 0.218,
+   "H3": -0.364,
+   "H3 p": 0.98
+  }
+ ],
+ "multiverse joint p (mean z)": {
+  "H1": 0.0,
+  "H3": 0.998
+ },
+ "live forecast (score after day 89, ~2027-03)": {
+  "S&P 500": {
+   "date": "2026-11-05",
+   "B": 1.422,
+   "tercile cut-offs": [
+    0.873,
+    1.184
+   ],
+   "class": "build-up",
+   "class base rates: median P / new-leg rate / n": [
+    0.254,
+    0.5,
+    18
+   ]
+  },
+  "Nasdaq-100": {
+   "date": "2026-11-05",
+   "B": 1.601,
+   "tercile cut-offs": [
+    0.91,
+    1.207
+   ],
+   "class": "build-up",
+   "class base rates: median P / new-leg rate / n": [
+    0.571,
+    0.5,
+    10
+   ]
+  },
+  "SOX": {
+   "date": "2026-11-05",
+   "B": 1.743,
+   "tercile cut-offs": [
+    0.879,
+    1.229
+   ],
+   "class": "build-up",
+   "class base rates: median P / new-leg rate / n": [
+    0.261,
+    0.5,
+    6
+   ]
+  }
+ },
+ "named events": [
+  {
+   "index": "S&P 500",
+   "date": "2001-09-17",
+   "r0 %": -5.05,
+   "B": 1.243,
+   "cls": "build-up",
+   "P": 0.15,
+   "new leg": false
+  },
+  {
+   "index": "S&P 500",
+   "date": "2011-08-04",
+   "r0 %": -4.9,
+   "B": 1.257,
+   "cls": "build-up",
+   "P": 0.604,
+   "new leg": false
+  },
+  {
+   "index": "S&P 500",
+   "date": "2020-02-24",
+   "r0 %": -3.41,
+   "B": 1.009,
+   "cls": "mid",
+   "P": 0.396,
+   "new leg": true
+  },
+  {
+   "index": "S&P 500",
+   "date": "2025-04-03",
+   "r0 %": -4.96,
+   "B": 0.894,
+   "cls": "mid",
+   "P": -0.185,
+   "new leg": false
+  },
+  {
+   "index": "Nasdaq-100",
+   "date": "2011-08-04",
+   "r0 %": -4.67,
+   "B": 1.095,
+   "cls": "mid",
+   "P": 0.447,
+   "new leg": false
+  },
+  {
+   "index": "Nasdaq-100",
+   "date": "2020-02-24",
+   "r0 %": -3.96,
+   "B": 1.194,
+   "cls": "mid",
+   "P": 0.375,
+   "new leg": true
+  },
+  {
+   "index": "Nasdaq-100",
+   "date": "2025-04-03",
+   "r0 %": -5.57,
+   "B": 0.921,
+   "cls": "mid",
+   "P": -0.291,
+   "new leg": false
+  },
+  {
+   "index": "Nasdaq-100",
+   "date": "2026-06-05",
+   "r0 %": -4.89,
+   "B": 0.548,
+   "cls": "abrupt",
+   "P": -0.029,
+   "new leg": true
+  },
+  {
+   "index": "SOX",
+   "date": "2008-09-29",
+   "r0 %": -7.76,
+   "B": 1.407,
+   "cls": "build-up",
+   "P": 1.192,
+   "new leg": true
+  },
+  {
+   "index": "SOX",
+   "date": "2020-03-09",
+   "r0 %": -8.71,
+   "B": 2.623,
+   "cls": "build-up",
+   "P": 0.202,
+   "new leg": false
+  },
+  {
+   "index": "SOX",
+   "date": "2025-04-03",
+   "r0 %": -10.41,
+   "B": 0.839,
+   "cls": "abrupt",
+   "P": -0.297,
+   "new leg": false
+  },
+  {
+   "index": "SOX",
+   "date": "2026-06-05",
+   "r0 %": -10.82,
+   "B": 0.956,
+   "cls": "mid",
+   "P": 0.056,
+   "new leg": true
+  }
+ ]
+}

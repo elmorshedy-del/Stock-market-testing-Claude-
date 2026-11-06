@@ -124,3 +124,8 @@ The review of arXiv:2601.23172 above says the paper "explains the forced-flows f
   * Predictable flows still move prices on the day (Hartzmark & Solomon 2025).
   * Expiry hedge unwinds move the last 30 minutes (Garcia-Ares et al. 2026).
 * **Status.** The erratum is in the forced-flows README. Closing-auction data in step 3 would settle the question.
+
+### Progress log
+* **2026-11-06, step 1 (M3) done.**
+  * The signature predicts how long the volatility lasts (weakly; most clearly in long-memory NDX and SOX), not second legs.
+  * Next: step 2 (M1 clock law, free), waiting for the owner's go. Optional M3 follow-up: rerun on the 1-minute bars we hold, for power.

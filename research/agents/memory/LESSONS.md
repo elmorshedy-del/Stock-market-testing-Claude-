@@ -2,6 +2,10 @@
 Each entry: what went wrong → the rule that prevents it. Read this at the start of every session.
 
 ## 2026-11-06
+* **Multiverse joint p.** I permuted each specification independently, so the joint p came out under 0.001; coupled permutations gave 0.08.
+  → Couple permutations across specifications: one random rank per event, shared by every specification. Otherwise the joint p is too optimistic.
+* **A pre-registered drop rule can bias one class.** All 13 shocks dropped for E1 ≤ 0 were abrupt shocks.
+  → Always report which group a drop rule removes, and run a sensitivity check that keeps them.
 * **Built a law map from abstracts only.** The owner asked why I hadn't read the papers.
   → Read the full text before building on a paper; abstracts hide scope limits. Example: Marcaccioli et al. 2021 removed market-wide events, which are exactly the index shocks we want to test.
 * **Explained the forced-flows null without checking the literature.** I said "predictable flow is priced early"; Hartzmark & Solomon 2025 contradicts it.

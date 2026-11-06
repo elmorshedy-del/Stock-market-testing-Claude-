@@ -1,0 +1,124 @@
+{
+ "(1) dropped by E1<=0, by class": {
+  "abrupt": 13
+ },
+ "(1) dropped list": [
+  {
+   "index": "S&P 500",
+   "date": "1986-07-07",
+   "cls": "abrupt",
+   "E1": -0.034,
+   "new leg": true
+  },
+  {
+   "index": "S&P 500",
+   "date": "1998-01-09",
+   "cls": "abrupt",
+   "E1": -0.196,
+   "new leg": false
+  },
+  {
+   "index": "S&P 500",
+   "date": "2008-06-06",
+   "cls": "abrupt",
+   "E1": -0.226,
+   "new leg": true
+  },
+  {
+   "index": "S&P 500",
+   "date": "2021-01-27",
+   "cls": "abrupt",
+   "E1": -0.051,
+   "new leg": false
+  },
+  {
+   "index": "S&P 500",
+   "date": "2022-08-26",
+   "cls": "abrupt",
+   "E1": -0.038,
+   "new leg": true
+  },
+  {
+   "index": "Nasdaq-100",
+   "date": "1991-11-15",
+   "cls": "abrupt",
+   "E1": -0.196,
+   "new leg": false
+  },
+  {
+   "index": "Nasdaq-100",
+   "date": "2009-01-20",
+   "cls": "abrupt",
+   "E1": -0.454,
+   "new leg": true
+  },
+  {
+   "index": "Nasdaq-100",
+   "date": "2020-06-11",
+   "cls": "abrupt",
+   "E1": -0.581,
+   "new leg": false
+  },
+  {
+   "index": "Nasdaq-100",
+   "date": "2020-10-28",
+   "cls": "abrupt",
+   "E1": -0.08,
+   "new leg": false
+  },
+  {
+   "index": "Nasdaq-100",
+   "date": "2022-09-13",
+   "cls": "abrupt",
+   "E1": -0.06,
+   "new leg": true
+  },
+  {
+   "index": "SOX",
+   "date": "2009-01-20",
+   "cls": "abrupt",
+   "E1": -0.332,
+   "new leg": true
+  },
+  {
+   "index": "SOX",
+   "date": "2020-06-11",
+   "cls": "abrupt",
+   "E1": -0.667,
+   "new leg": false
+  },
+  {
+   "index": "SOX",
+   "date": "2025-01-27",
+   "cls": "abrupt",
+   "E1": -0.209,
+   "new leg": true
+  }
+ ],
+ "(2) coupled multiverse joint p H1 (mean z = 1.01)": 0.0805,
+ "(2) specs positive H1": "18 of 18",
+ "(2) coupled multiverse joint p H3 (mean z = -0.89)": 0.8735,
+ "(2) specs positive H3": "3 of 18",
+ "(3) O4 decay exponents, cluster bootstrap over dates": {
+  "S&P": {
+   "alpha build-up": 0.326,
+   "alpha abrupt": 0.33,
+   "abrupt minus build-up": 0.004,
+   "90% CI of difference": [
+    -0.256,
+    0.414
+   ],
+   "P(difference > 0)": 0.529
+  },
+  "NDX+SOX": {
+   "alpha build-up": 0.286,
+   "alpha abrupt": 0.619,
+   "abrupt minus build-up": 0.332,
+   "90% CI of difference": [
+    -0.144,
+    1.199
+   ],
+   "P(difference > 0)": 0.807
+  }
+ }
+}

@@ -7,16 +7,21 @@ Read this first, then LESSONS.md.
 
 ## Where we are
 * **Program:** laws-first (PROGRAM.md, revision 2026-11-06). The theory is FOUNDATION.md: 16 laws in three layers.
-* **Current task:** the M3 signature test. The owner said go on 2026-11-06.
-  * **Papers read in full** (cards in memory/papers/): Marcaccioli 2021, Sornette–Malevergne–Muzy 2002, Sornette–Helmstetter 2003, Patzelt–Bouchaud 2018, Muhle-Karbe 2026.
-  * **Reading queue after M3:** Tóth 2011; Sato–Kanazawa 2024; Maitrier 2025; Cont–Kukanov–Stoikov 2014; Kyle–Obizhaeva 2016; Benzaquen 2016; Hartzmark–Solomon 2025; Gabaix–Koijen. Get the text from arxiv.org/pdf/<id> with pdftotext.
-  * **Key design input from the cards:** the self-made vs news gap needs long memory (Sornette & Helmstetter). Our aftershock study says the memory is a power law for NDX and SOX, but unresolved for the S&P. So predict a bigger gap in NDX and SOX.
-* **Next:** pre-register M3 in `2026-11-06-signature-test/`, push, run, report.
+* **Last task done:** the M3 signature test (`2026-11-06-signature-test/`).
+  * H1 (fade) passes narrowly: p 0.049, corrected joint p 0.08.
+  * H2 (memory condition) not established, but in the predicted direction.
+  * H3 (second legs) fails.
+  * Live forecast logged: the Nov 5 shock is build-up in all three indices; score around 2027-03-16.
+* **Papers read in full** (cards in memory/papers/): Marcaccioli 2021, Sornette–Malevergne–Muzy 2002, Sornette–Helmstetter 2003, Patzelt–Bouchaud 2018, Muhle-Karbe 2026.
+* **Reading queue:** Tóth 2011; Sato–Kanazawa 2024; Maitrier 2025; Cont–Kukanov–Stoikov 2014; Kyle–Obizhaeva 2016; Benzaquen 2016; Hartzmark–Solomon 2025; Gabaix–Koijen. Get the text from arxiv.org/pdf/<id> with pdftotext.
+  * **Before M1, read:** Kyle–Obizhaeva 2016, Benzaquen et al. 2016, Ané–Geman 2000.
+* **Next (waiting for the owner's go):** PROGRAM step 2, the M1 clock law (free). Alternative: the M3 rerun on 1-minute bars.
 
 ## Waiting on the owner
 1. About $100 of order-flow data, for the fast-layer laws and the close.
 
 ## Scheduled scoring
+* M3 live forecast (Nov 5 shock): score after day 89, around 2027-03-16.
 * Aftershock forecasts: 2026-11-13, 2026-12-07, 2027-02-05.
 * Year-end forecast: 2026-11-13.
 * Overdue: EV1 and TP1 (due Nov 5); live-read LR1 (due Nov 6 close).
