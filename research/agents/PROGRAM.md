@@ -126,6 +126,11 @@ The review of arXiv:2601.23172 above says the paper "explains the forced-flows f
 * **Status.** The erratum is in the forced-flows README. Closing-auction data in step 3 would settle the question.
 
 ### Progress log
+* **2026-11-06, agenda #4 (crash law, S4) done**, at the owner's request after reading the papers in full.
+  * Square root (normal or pre-shock liquidity) cannot make index shocks: it needs more selling than the day's whole volume.
+  * Linear (KO) can, but it over-predicts the one known forced flow (the Nov 5 close).
+  * So crash days are a liquidity regime change, or news.
+  * Next: the decisive measurement, ES/NQ signed flow on selloff vs calm days (about $25–35, approval needed). Agenda items 1, 2, 3 and 5 are still waiting.
 * **2026-11-06, step 1 (M3) done.**
   * The signature predicts how long the volatility lasts (weakly; most clearly in long-memory NDX and SOX), not second legs.
   * Next: step 2 (M1 clock law, free), waiting for the owner's go. Optional M3 follow-up: rerun on the 1-minute bars we hold, for power.

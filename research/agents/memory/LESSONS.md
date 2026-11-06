@@ -2,6 +2,10 @@
 Each entry: what went wrong → the rule that prevents it. Read this at the start of every session.
 
 ## 2026-11-06
+* **Proxy failure caught by a pre-registered cross-check.** ^GSPC share volume × index level is not a dollar-volume series across decades: it was 8× too low in 1987 against Kyle–Obizhaeva's documented $10.2bn.
+  → For any constructed series that enters a law, pre-register a cross-check against an independent documented value, and a fallback.
+* **A main hypothesis can be guaranteed by its own definitions.** HB1 (the square-root law needs impossible selling) follows from the shock threshold. I said so in the pre-registration, and the informative hypothesis became HB2.
+  → Before pre-registering, ask whether the definitions already force the answer. If they do, label it as a baseline, not as evidence.
 * **I read the literature through the owner's questions:** M3 because of the signature idea, F4 because of absorption. I ignored the field's own central claims and open questions.
   → The literature sets the agenda: measure the field's core laws on our market and look for where they fail. The owner's questions are food for thought, to be re-posed as sub-questions of the laws. I lead the brainstorm and propose the order.
 * **The owner rated the M3 signature test low-value.** It mostly confirmed volatility clustering, which traders already know. The part that could have been useful (second legs) failed.

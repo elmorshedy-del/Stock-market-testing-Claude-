@@ -110,3 +110,99 @@ python prep.py    # Yahoo ^GSPC (with volume) and ^STOXX50E, FRED GDPDEF -> data
 python test.py    # Parts A-C -> out/crash.json, out/days.csv
 python figure.py  # out/crash_law.png
 ```
+
+---
+
+## Results (run 2026-11-06 on data to the 2026-11-05 close)
+**Deviation from the pre-registration, reported:**
+* The whole-market dollar-volume proxy (^GSPC share volume × index level) **failed its cross-check**. It gave $1.3bn for Sep–Oct 1987 against KO's NYSE $10.20bn (ratio 0.13).
+* As pre-registered, LIN therefore uses KO's whole-market anchors: $20.57bn in Oct 1987 and $293bn in May 2010, log-linear in time and extended beyond the anchors.
+* The proxy re-scaled at both anchors is reported as a sensitivity.
+* Nothing else changed.
+
+### Part A: the five crashes
+* **A1: replicates.** Our LIN gives 46.51 / 16.73 / 6.27 / 10.78 / 0.61% against KO's 46.43 / 16.77 / 6.27 / 10.79 / 0.61%. SQRT gives 1987 = 1.33% (KO: 1.3%).
+
+| Crash | Actual | LIN | SQRT | SQRT-now | Sale needed, LIN | Sale needed, SQRT-now | SQRT-now sale as % of a day's volume |
+|---|---|---|---|---|---|---|---|
+| 1929 | 25% | 46.5% | 3.9% | 6.9% | 0.46× | 13× | 3,492% |
+| 1987 | 32% | 16.7% | 1.3% | 1.7% | 2.1× | 373× | 24,952% |
+| Soros, Oct 22 1987 | 22% | 6.3% | 1.6% | 1.4% | 3.8× | 242× | 554% (in 6 minutes) |
+| SocGen 2008 | 9.44% | 10.8% | 0.70% | 0.62% | 0.87× | 232× | 6,427% |
+| Flash crash 2010 | 5.12% | 0.61% | 0.16% | 0.24% | 8.7× | 473× | 706% (in 20 minutes) |
+
+"Sale needed" is the multiple of the documented sale that would produce the actual fall.
+
+* **A2: the week-before liquidity state hardly helps.** σ in the 5 sessions before each event was 0.9–1.75× KO's σ, so SQRT-now is 0.9–1.8× SQRT.
+  * My prediction (1.5–4× higher) was too optimistic.
+  * The square-root law with the pre-event state still needs 13–473× the documented selling, i.e. 5.5 to 250 days of total volume squeezed into windows of minutes to days. That is physically impossible.
+* **A3:** LIN needs 0.5–3.8× the documented sale for the four slower events. For the flash crash it needs 8.7×, i.e. 13% of a day's volume in 20 minutes, near the limit of what traded. KO also say speed is the problem there.
+
+### Part B: the volume bound, 54 S&P shock days (1955-09-26 to 2026-11-05)
+* **HB1 (baseline) holds, 54/54.** SQRT needs net selling of 1.7–60× the day's entire volume (median 8.3×). With Y = 0.9 it is worse (median 15×).
+* **HB2 holds, 54/54.** With the week-before σ and volume, SQRT-now still needs 1.4–113× the day's volume (median 8.4×).
+  * By M3 class, median: build-up 5.2×, mid 9.2×, abrupt 12.8×.
+  * In the direction the liquidity-state theory predicts (stressed build-ups need less), but nowhere near feasible. My predicted 70–80% was too low; it is 100%.
+* **HB3 holds.** LIN needs ≤ 25% of the day's volume on 80% of days (90% CI 70–89%); median 14%.
+
+  | Sensitivity | Share of days ≤ 25% |
+  |---|---|
+  | k ± 2 s.e. | 76–80% |
+  | volume ×3 / ÷3 | 87% / 63% |
+  | proxy re-scaled at both anchors | 63% |
+
+  * The worst days are the 1950s–60s (small market, so lower LIN sensitivity), up to 63% of the day's volume.
+* **Nov 5, 2026:** SQRT needs 24× the day's volume, SQRT-now 7.0×, LIN 9.2%.
+* **Caveat on HB1/HB2:** the bound treats the day's net selling as one aggregate flow. Donier & Bonart find the market responds to the square root of total imbalance, which supports this. If instead a day's selling came as k independent bursts with liquidity fully refilling between them, the bound loosens by √k: about 3× for 10 bursts, 10× for 100.
+
+### Part C: leveraged-ETF tipping point (descriptive)
+* **Feedback gain** (extra fall caused by leveraged-ETF rebalancing ÷ initial fall):
+
+  | Market boundary | Linear law | Square root |
+  |---|---|---|
+  | S&P complex alone | 0.07 | 0.02–0.05 |
+  | Nasdaq-100 complex alone | 0.60 | 0.08–0.19 |
+  | Semis complex alone | **3.1–3.3: runaway** | 0.30–0.66 |
+  | Whole market | 0.61 (amplifies any fall 2.6×) | 0.06–0.13 |
+
+  * Whole-market leveraged-ETF selling is $15.7bn per 1% S&P fall: 1.7% of total stock + futures volume (about $923bn/day).
+* **Nov 5 close check** (move predicted from the known rebalancing flow, 15:30 → close):
+
+  | | Actual | Square root | Linear |
+  |---|---|---|---|
+  | Whole market (S&P) | −0.30% | −0.23% | −2.0% |
+  | Nasdaq-100 | −0.66% | −0.43% | −3.3% |
+  | Semis | −1.46% | −1.91% | −23.9% |
+
+  * The known forced flow moved prices about as the square root predicts. Linear over-predicts by 5–16×.
+  * Caveat: if swap dealers hedged during the day, the close is the wrong window. Linear on the whole market would then not be ruled out (it would be −2.0% of the day's −4.4%).
+* **The linear law with semis as its own market predicts a runaway** (gain above 3, −24% at one close). Neither happened, so that version is ruled out. My Part C prediction was right.
+
+### Verdict (by the pre-registered interpretation rule)
+* **HB1, HB2 and HB3 all hold.** So order flow can make index crashes only if the price response at crash scale is about linear, or liquidity breaks during the day. The normal or week-before square-root law cannot. This is robust: 54/54 days, the 1955–2026 span, and both values of Y.
+* **But "about linear" is not a fixed law either.** On the one forced flow we can compute exactly, the Nov 5 close, prices followed the square root and the linear law over-predicted 5–16×.
+* **The reading that fits both:**
+  * calm, deep markets (and the close) respond in the square-root way;
+  * crash days need a response roughly 10× more sensitive than the week before showed. That is a regime change within the day, Donier & Bonart's "liquidity breakdown". KO's linear law describes that broken regime as an average.
+  * The alternative this test cannot exclude: the falls are mostly news, with prices moving without trading.
+* **S4 status:** still contested, but sharper. Crash size is not a fixed function of the selling. The decisive unknown is how the response per unit of selling changes inside a crash day.
+
+### What this means for a trader
+* **Normal-time liquidity math understates crash moves by about 10×.** That covers square-root impact, "it's only X% of volume", and the forced-flow sizes we computed. The week before does not reveal it: even build-up shocks needed 5× the day's volume under the square-root law.
+* **Leveraged-ETF feedback is small while liquidity holds** (square-root gain about 0.1). If liquidity breaks and the linear law takes over, the same flows could amplify an S&P fall about 2.6× (whole-market gain 0.61).
+  * The danger is regime-dependent, so the thing to watch is whether liquidity has broken: price moving far per unit of selling.
+  * The size of the flow alone does not tell you.
+
+### Next (Part D, needs approval to buy data)
+* **Data:** ES and NQ trades with aggressor side on the selloff days (2024-08-05, 2025-04-03/04/07, 2026-11-05) and about 5 calm days. We already hold ES trades for one calm day (2026-10-27, `2026-11-04-deferred-days/data`). About $25–35 at the $2.82/day quote; I will get an exact quote first.
+* **Measure:** price response per unit of signed volume, minute by minute.
+* **What it decides:**
+  * whether liquidity breaks (response jumps);
+  * whether it is giant sellers (huge imbalance, normal response);
+  * whether it is news (moves without imbalance);
+  * and whether the break comes before the fall, which would be an early warning.
+
+Files:
+* `prep.py` → `data/` (gitignored);
+* `test.py` → `out/crash.json`, `out/days.csv`;
+* `figure.py` → `out/crash_law.png`.

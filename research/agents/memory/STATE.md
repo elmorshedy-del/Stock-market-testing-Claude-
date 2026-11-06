@@ -1,5 +1,5 @@
 # Working memory (overwrite at the end of every task)
-**Updated:** 2026-11-06.
+**Updated:** 2026-11-06 (after the crash-law test).
 Read this first, then LESSONS.md.
 * Theory: [FOUNDATION.md](../FOUNDATION.md)
 * Plan: [PROGRAM.md](../PROGRAM.md)
@@ -7,15 +7,15 @@ Read this first, then LESSONS.md.
 
 ## Where we are
 * **Program:** laws-first (PROGRAM.md, revision 2026-11-06). The theory is FOUNDATION.md: 16 laws in three layers.
-* **Current task:** test #4, the crash law (owner approved on 2026-11-06 once the full papers were read).
-  * All seven crash-law papers read in full, with cards: KO2023, KO2016, Benzaquen 2016, Bucci 2019 and 2020, Donier–Bouchaud 2015, Donier–Bonart 2015.
-  * **What the reading changed:**
-    * KO's crash sizes need linear impact for giant sales. Their own data favour square root (exponent 0.57 ± 0.04), and their theory excludes market risk.
-    * In the physics, impact is linear only for slow selling; fast selling is square root; liquidity breaks under sustained pressure.
-    * Rival theory: thin buyers after run-ups.
-    * **So #4 is now: giant sellers (linear law) or thin liquidity (square root + liquidity state)?**
-  * Next step: pre-register #4, push, run on free data. Then ask the owner about the decisive paid step: ES/NQ signed flow on selloff days vs normal days, about $34.
-* **Previous task:** the M3 signature test (`2026-11-06-signature-test/`).
+* **Last task done:** test #4, the crash law (`2026-11-06-crash-law/`, pre-registered @ 77fea8a). The owner approved it once the papers were read in full.
+  * All seven crash-law papers read in full, with cards.
+  * **Results:**
+    * Kyle–Obizhaeva's five crashes replicate.
+    * Volume bound: the square-root law needs more one-sided selling than the day's whole volume on 54/54 S&P shock days (median 8.3×; 8.4× with the week-before state). The linear law needs ≤ 25% on 80%.
+    * But the Nov 5 close (known leveraged-ETF flow) followed the square root, and linear over-predicted 5–16×.
+    * Verdict: crash days are a liquidity regime change (sensitivity about 10× higher), or news.
+  * **Next, needs approval:** Part D, ES/NQ trades with aggressor side on 5 selloff days (2024-08-05, 2025-04-03/04/07, 2026-11-05) plus calm days, about $25–35. Get an exact Databento quote first. We already hold ES trades for 2026-10-27 (calm).
+* **Before that:** the M3 signature test (`2026-11-06-signature-test/`).
   * H1 (fade) passes narrowly: p 0.049, corrected joint p 0.08.
   * H2 (memory condition) not established, but in the predicted direction.
   * H3 (second legs) fails.
@@ -35,7 +35,9 @@ Read this first, then LESSONS.md.
   * Items 1–3 and 5 need tick data. Get a quote before spending.
 
 ## Waiting on the owner
-1. About $100 of order-flow data, for the fast-layer laws and the close.
+1. **Approval for crash-law Part D:** ES/NQ signed trades, about $25–35. Quote first.
+2. About $100 of order-flow data, for the fast-layer laws and the close.
+3. Which agenda item comes next: 1 (how mechanical), 2 (0DTE/gamma), 3 (AI cross-impact) or 5 (distance to instability). The crash result points to 5 and 1.
 
 ## Scheduled scoring
 * M3 live forecast (Nov 5 shock): score after day 89, around 2027-03-16.

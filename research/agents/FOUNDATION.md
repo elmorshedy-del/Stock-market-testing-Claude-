@@ -254,6 +254,18 @@ Almost every stylized fact we have tested so far sits inside this picture: fat t
   * **F6: addition.** Isolated, uninformed metaorders revert to about zero permanent impact (Bitcoin, all trader IDs).
 
 ## Test log (our own measurements of the laws; newest first)
+* **2026-11-06, S4 crash-law test** (`2026-11-06-crash-law/`, pre-registered @ 77fea8a).
+  * **Replication:** Kyle–Obizhaeva's five crash predictions reproduce within 0.1 pp.
+  * **Volume bound:** on all 54 S&P shock days (1955–2026), the square-root law (Y = 1.21) needs net selling of 1.7–60× the day's whole volume (median 8.3×).
+    * With the week-before σ and volume: 1.4–113× (median 8.4×; build-up 5.2×, abrupt 12.8×).
+    * The linear law needs ≤ 25% of the day's volume on 80% (median 14%).
+  * **Known forced flow** (Nov 5 close, leveraged-ETF rebalancing): the square root fit (−0.23% vs −0.30%); linear over-predicted 5–16×. Linear with semis as their own market implies a runaway.
+  * **S4 grade: contested, sharpened.** Crash size is not a fixed function of selling.
+    * The normal and pre-shock square-root law cannot produce index shocks from order flow.
+    * The linear law can, but it fails on a known calm-regime flow.
+    * So the response per unit of selling must jump during crash days (liquidity breakdown), or the falls are news.
+  * **F1:** consistent in the calm regime (the Nov 5 close).
+  * **M4/F4:** the crash regime looks like an intraday liquidity phase change; not yet measured directly (needs signed ES/NQ flow).
 * **2026-11-06, M3 signature test** (`2026-11-06-signature-test/`, pre-registered @ f04844b; 101 down shocks across S&P, NDX and SOX).
   * **Fade (H1):** build-up shocks fade more slowly. Median persistence 0.32 vs 0.15, p = 0.049, corrected joint p across 18 specifications = 0.08. Weakly supported; largely shared with plain volatility clustering.
   * **Memory condition (H2):** the gaps rise as memory lengthens (S&P +0.10, NDX +0.37, SOX +0.56). The S&P decay exponents are identical (0.33 vs 0.33); NDX+SOX differ (0.29 vs 0.62). Not significant.

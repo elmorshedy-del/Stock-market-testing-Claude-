@@ -1,0 +1,295 @@
+{
+ "pre-registered at": "77fea8a",
+ "Part A": [
+  {
+   "event": "1929 crash",
+   "actual %": 25.0,
+   "Q % of ADV": 265.41,
+   "LIN %": 46.51,
+   "KO published LIN %": 46.43,
+   "replicates (|diff| <= 0.3pp)": true,
+   "SQRT %": 3.94,
+   "SQRT-now %": 6.89,
+   "sigma now / KO sigma": 1.75,
+   "volume now / normal": 1.0,
+   "state window": "1929-10-17..1929-10-23",
+   "LIN sale needed (x documented)": 0.46,
+   "SQRT sale needed (x documented)": 40.3,
+   "SQRT-now sale needed (x documented)": 13.2,
+   "SQRT-now sale needed (% of ADV)": 3491.9
+  },
+  {
+   "event": "1987 crash",
+   "actual %": 32.0,
+   "Q % of ADV": 66.84,
+   "LIN %": 16.73,
+   "KO published LIN %": 16.77,
+   "replicates (|diff| <= 0.3pp)": true,
+   "SQRT %": 1.33,
+   "SQRT-now %": 1.66,
+   "sigma now / KO sigma": 1.24,
+   "volume now / normal": 1.0,
+   "state window": "1987-10-08..1987-10-14",
+   "LIN sale needed (x documented)": 2.11,
+   "SQRT sale needed (x documented)": 576.0,
+   "SQRT-now sale needed (x documented)": 373.3,
+   "SQRT-now sale needed (% of ADV)": 24952.3
+  },
+  {
+   "event": "1987 Soros",
+   "actual %": 22.0,
+   "Q % of ADV": 2.29,
+   "LIN %": 6.27,
+   "KO published LIN %": 6.27,
+   "replicates (|diff| <= 0.3pp)": true,
+   "SQRT %": 1.58,
+   "SQRT-now %": 1.41,
+   "sigma now / KO sigma": 1.43,
+   "volume now / normal": 2.53,
+   "state window": "1987-10-15..1987-10-21",
+   "LIN sale needed (x documented)": 3.84,
+   "SQRT sale needed (x documented)": 194.5,
+   "SQRT-now sale needed (x documented)": 241.8,
+   "SQRT-now sale needed (% of ADV)": 553.8
+  },
+  {
+   "event": "2008 SocGen",
+   "actual %": 9.44,
+   "Q % of ADV": 27.7,
+   "LIN %": 10.78,
+   "KO published LIN %": 10.79,
+   "replicates (|diff| <= 0.3pp)": true,
+   "SQRT %": 0.7,
+   "SQRT-now %": 0.62,
+   "sigma now / KO sigma": 0.89,
+   "volume now / normal": 1.0,
+   "state window": "2008-01-14..2008-01-18",
+   "LIN sale needed (x documented)": 0.87,
+   "SQRT sale needed (x documented)": 182.2,
+   "SQRT-now sale needed (x documented)": 232.0,
+   "SQRT-now sale needed (% of ADV)": 6426.5
+  },
+  {
+   "event": "2010 flash crash",
+   "actual %": 5.12,
+   "Q % of ADV": 1.49,
+   "LIN %": 0.61,
+   "KO published LIN %": 0.61,
+   "replicates (|diff| <= 0.3pp)": true,
+   "SQRT %": 0.16,
+   "SQRT-now %": 0.24,
+   "sigma now / KO sigma": 1.58,
+   "volume now / normal": 1.13,
+   "state window": "2010-04-29..2010-05-05",
+   "LIN sale needed (x documented)": 8.65,
+   "SQRT sale needed (x documented)": 1052.0,
+   "SQRT-now sale needed (x documented)": 473.3,
+   "SQRT-now sale needed (% of ADV)": 706.0
+  }
+ ],
+ "Part B cross-check": {
+  "proxy stock $vol Sep15-Oct14 1987 ($bn, nominal)": 1.3,
+  "KO NYSE ($bn)": 10.2,
+  "ratio": 0.13,
+  "within 2x": false,
+  "action": "FAILED -> pre-registered fallback: PV from KO's 1987 and 2010 whole-market anchors, log-linear in time"
+ },
+ "Part B": {
+  "n days": 54,
+  "dates span": [
+   "1955-09-26",
+   "2026-11-05"
+  ],
+  "HB1 F_sqrt > 1": {
+   "share": 1.0,
+   "90% CI": [
+    1.0,
+    1.0
+   ]
+  },
+  "HB2 F_now > 1": {
+   "share": 1.0,
+   "90% CI": [
+    1.0,
+    1.0
+   ]
+  },
+  "HB3 F_lin <= 0.25": {
+   "share": 0.796,
+   "90% CI": [
+    0.704,
+    0.889
+   ]
+  },
+  "medians": {
+   "F_sqrt": 8.309,
+   "F_now": 8.397,
+   "F_sqrt (Y=0.9)": 14.968,
+   "F_now (Y=0.9)": 15.128,
+   "F_lin": 0.139,
+   "F_lin (k-2se)": 0.164,
+   "F_lin (k+2se)": 0.121,
+   "F_lin (proxy, 2 anchors)": 0.158,
+   "F_lin (PVx3)": 0.097,
+   "F_lin (PV/3)": 0.201
+  },
+  "sensitivity shares": {
+   "F_sqrt>1 (Y=0.9)": 1.0,
+   "F_now>1 (Y=0.9)": 1.0,
+   "F_lin<=0.25 (k-2se)": 0.759,
+   "F_lin<=0.25 (k+2se)": 0.796,
+   "F_lin<=0.25 (PVx3)": 0.87,
+   "F_lin<=0.25 (PV/3)": 0.63,
+   "F_lin<=0.25 (proxy, 2 anchors)": 0.63
+  },
+  "by M3 class (median F_now / share F_now>1 / median sigma_now/sigma_norm)": {
+   "abrupt": [
+    12.82,
+    1.0,
+    0.78,
+    18
+   ],
+   "build-up": [
+    5.23,
+    1.0,
+    1.36,
+    18
+   ],
+   "mid": [
+    9.19,
+    1.0,
+    0.85,
+    18
+   ]
+  },
+  "verdicts": {
+   "HB1 (baseline)": true,
+   "HB2": true,
+   "HB3": true
+  }
+ },
+ "Part C": {
+  "complex boundary": {
+   "SPX": {
+    "psi": 0.237,
+    "sigma %": 0.81,
+    "daily $vol $bn": 507.1,
+    "x=1%": {
+     "LETF sale % of complex volume": 0.24,
+     "LIN gain": 0.07,
+     "SQRT gain": 0.05
+    },
+    "x=3%": {
+     "LETF sale % of complex volume": 0.71,
+     "LIN gain": 0.07,
+     "SQRT gain": 0.03
+    },
+    "x=5%": {
+     "LETF sale % of complex volume": 1.19,
+     "LIN gain": 0.07,
+     "SQRT gain": 0.02
+    }
+   },
+   "NDX": {
+    "psi": 1.104,
+    "sigma %": 1.46,
+    "daily $vol $bn": 309.7,
+    "x=1%": {
+     "LETF sale % of complex volume": 1.1,
+     "LIN gain": 0.61,
+     "SQRT gain": 0.19
+    },
+    "x=3%": {
+     "LETF sale % of complex volume": 3.31,
+     "LIN gain": 0.6,
+     "SQRT gain": 0.11
+    },
+    "x=5%": {
+     "LETF sale % of complex volume": 5.52,
+     "LIN gain": 0.6,
+     "SQRT gain": 0.08
+    }
+   },
+   "SEMIS": {
+    "psi": 2.647,
+    "sigma %": 3.38,
+    "daily $vol $bn": 128.3,
+    "x=1%": {
+     "LETF sale % of complex volume": 2.65,
+     "LIN gain": 3.27,
+     "SQRT gain": 0.66
+    },
+    "x=3%": {
+     "LETF sale % of complex volume": 7.94,
+     "LIN gain": 3.17,
+     "SQRT gain": 0.38
+    },
+    "x=5%": {
+     "LETF sale % of complex volume": 13.23,
+     "LIN gain": 3.07,
+     "SQRT gain": 0.3
+    }
+   }
+  },
+  "whole-market boundary": {
+   "S&P fall 1%": {
+    "LETF sale $bn": 15.7,
+    "% of market volume": 1.7,
+    "LIN gain": 0.61,
+    "SQRT gain": 0.13
+   },
+   "S&P fall 3%": {
+    "LETF sale $bn": 47.1,
+    "% of market volume": 5.1,
+    "LIN gain": 0.61,
+    "SQRT gain": 0.07
+   },
+   "S&P fall 5%": {
+    "LETF sale $bn": 78.5,
+    "% of market volume": 8.5,
+    "LIN gain": 0.61,
+    "SQRT gain": 0.06
+   },
+   "assumptions": {
+    "market $vol = SPX constituents x 1.82 ($bn)": 923.0,
+    "market sigma %": 0.81,
+    "complex betas (Nov 5 moves / SPX)": {
+     "SPX": 1.0,
+     "NDX": 1.47,
+     "SEMIS": 2.79
+    }
+   }
+  },
+  "Nov 5 check (predicted close move % from the LETF flow vs actual 15:30->close)": {
+   "SPX": {
+    "actual": -0.3,
+    "LIN complex": -0.29,
+    "SQRT complex": -0.1
+   },
+   "NDX": {
+    "actual": -0.66,
+    "LIN complex": -3.29,
+    "SQRT complex": -0.43
+   },
+   "SEMIS": {
+    "actual": -1.46,
+    "LIN complex": -23.95,
+    "SQRT complex": -1.91
+   },
+   "whole market (3 complexes summed)": {
+    "actual SPX": -0.3,
+    "LIN market": -2.0,
+    "SQRT market": -0.23,
+    "LETF sale % of market volume": 5.6
+   }
+  }
+ },
+ "constants": {
+  "k": 5.0,
+  "k s.e.": 0.38,
+  "Y (KO Eq.17)": 1.208,
+  "Y alt": 0.9,
+  "c (proxy scale)": 0.02302248029619611,
+  "g 2026": 0.608
+ }
+}
