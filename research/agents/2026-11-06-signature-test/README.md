@@ -114,3 +114,13 @@ python test.py       # everything above -> out/signature.json, out/figure
 ### Next for M3
 * **More power for H2:** run the same test on the 1-minute bars we already hold (SPY and QQQ, 2020–26). There are many more shocks there, but intraday memory has to be measured first.
 * **Separate the theory from plain clustering:** simulate each index's fitted memory model, then check whether the model alone reproduces the class gaps.
+
+### The owner's interpretation (2026-11-06), and how it fits
+**Owner:** "A one-off shock is shaken off quickly, while a deeper shock carries volatility as investors keep reassessing."
+
+**How it fits:**
+* **It matches the physics.** Sornette's "self-made" shock is the build-up of many small bad news items. That is a deep issue being repriced piece by piece, so the fundamental and physical readings describe one mechanism.
+* **It matches the cross-index pattern.** The gap is clearest in Nasdaq-100 and chips, which are concentrated in one theme (AI), so doubt there keeps being repriced. It is weakest in the diversified S&P.
+* **One correction to the intuition:** reassessment raises volatility in both directions. Deep shocks did not bring more lower lows (50% vs 53%). They brought bigger swings, including sharp rallies.
+
+**A possible test** (logged, not run): if reassessment drives the slow fade, the gap should be larger for shocks concentrated in one sector or theme than for broad shocks, and volatility should stay elevated on scheduled news days (earnings, CPI) after build-up shocks.
