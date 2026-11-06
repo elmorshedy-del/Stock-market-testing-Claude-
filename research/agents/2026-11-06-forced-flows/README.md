@@ -53,3 +53,76 @@
 
 ## Better data, cost to be quoted and approved first
 Closing-auction imbalance messages (Databento `imbalance` schema) would measure the forced flow directly instead of inferring it.
+
+## Results (run 2026-11-06, before the open)
+Files:
+* `ff_fetch.py` → `data/` (gitignored: leveraged-ETF quotes, daily and 5-minute bars);
+* `ff_test.py` → `out/ff.json`;
+* `figure.py` → `out/physics_next.png` (shared with the aftershocks study).
+
+### Data correction before any result was read
+* **The first run hit two data problems:**
+  * Yahoo's daily closes for SOXX on 2026-11-02 to 11-04 came back about 3 times too high (453–465, against 150–155 in the 5-minute bars). That produced a fake −70.7% semis day.
+  * A 20-session warm-up gap dropped 20 sessions from each index complex.
+* **Fixes:**
+  * Daily closes are overwritten by each day's last 5-minute close. That matches the official close wherever both exist (0 mismatches over 1% for SPY, QQQ and every stock).
+  * Rolling windows need only 15 of 20 sessions.
+* The first-run numbers are not results. The final sample is 660 observations: 11 underlyings × 60 sessions.
+
+### H-FF1 FAILS: out-of-sample correlation of the flow predictor with the 15:30→close move = -0.09 (90% CI -0.30 to +0.11, one-sided p 0.76)
+### H-FF2 FAILS: out-of-sample R² flow -0.043 vs momentum -0.028 (ΔR² -0.014, p 0.67); neither beats zero
+### H-FF3 FAILS: Spearman ρ between leveraged intensity ψ and end-of-day momentum = +0.12 (direction as predicted), permutation p 0.36, 11 underlyings
+
+| underlying | ψ = ΣL(L−1)A / daily $ volume | end-of-day momentum slope | corr(R, r) |
+|---|---|---|---|
+| SEMIS | 2.65 | +0.031 | +0.20 |
+| NDX | 1.10 | +0.011 | +0.07 |
+| MSTR | 0.99 | +0.017 | +0.13 |
+| COIN | 0.89 | -0.015 | -0.10 |
+| TSLA | 0.79 | -0.033 | -0.23 |
+| MU | 0.55 | +0.051 | +0.29 |
+| NVDA | 0.46 | +0.014 | +0.07 |
+| PLTR | 0.36 | -0.002 | -0.01 |
+| AMD | 0.31 | +0.033 | +0.20 |
+| SPX | 0.24 | -0.021 | -0.15 |
+| AVGO | 0.16 | +0.014 | +0.07 |
+
+* **Constant-asset sensitivity:** same verdicts (correlation -0.09, ΔR² -0.014).
+* **Fitted impact constant:** Y = 0.188 in-sample and 0.077 on all sessions. The textbook value is about 0.5–1.
+* **My prediction was wrong:** I expected H-FF1 to pass.
+
+### Descriptive: the Nov 5 close
+| complex | full-day move | forced close rebalancing | % of a normal day's $ volume | actual 15:30→close |
+|---|---|---|---|---|
+| SEMIS | -12.3% | $27.93bn | 21.8% | -1.46% |
+| NDX | -6.5% | $18.83bn | 6.1% | -0.66% |
+| SPX | -4.4% | $4.97bn | 1.0% | -0.30% |
+| MU | -17.5% | $1.63bn | 6.7% | -2.97% |
+| TSLA | -10.8% | $1.18bn | 8.2% | +0.27% |
+| NVDA | -9.3% | $0.88bn | 4.0% | -0.82% |
+| AMD | -17.3% | $0.46bn | 3.6% | -2.34% |
+| MSTR | -9.2% | $0.22bn | 8.5% | -0.05% |
+| PLTR | -9.7% | $0.15bn | 2.9% | +0.08% |
+| AVGO | -10.5% | $0.11bn | 1.5% | -1.24% |
+| COIN | -9.7% | $0.10bn | 6.8% | -0.80% |
+
+* The semis figure assumes Yahoo's net assets are from after the Nov 5 drop. If they predate it, the forced selling is about $21bn, or 17% of a normal day's volume, instead of $28bn.
+
+### Exploratory (not pre-registered)
+* **The textbook constant Y = 1 on big days** (|move by 15:30| ≥ 2.5%):
+  * 230 observations on 56 days;
+  * correlation 0.08, same sign 52%;
+  * average continuation +0.04% actual vs +0.66% predicted.
+* **Single days:** Nov 5 fit for semis (−1.49% predicted, −1.46% actual). Oct 30 went the other way (−1.33% predicted, +1.10% actual).
+* **Next-morning reversal:** the correlation of the flow predictor with the next day's first 5 minutes is +0.03. No transient impact is measurable.
+
+### Reading
+* **The identity is exact and the flows are big, but the price doesn't move when the flow hits.** The likeliest reasons:
+  * the flow is public arithmetic, so anticipating traders and liquidity providers position earlier;
+  * swap dealers hedge through the day.
+* **So where a low forms** probably depends on forced selling nobody can compute in advance: margin calls, volatility-target and CTA deleveraging, redemptions. Scheduled flows are priced early.
+* **Direct measurement** would need closing-auction imbalance data. Databento cost quotes from 2026-11-06, nothing purchased:
+  * Nasdaq imbalance for the 10 Nasdaq-listed names, last 60 sessions: $0.53; Jan 2024 to now: $6.29.
+  * SPY imbalance on NYSE Arca, Jan 2024 to now: $9.38.
+  * 1-minute bars, Jan 2024 to now: $3.62 for the 10 names plus $0.41 for SPY.
+  * Full extension: about $19.70.

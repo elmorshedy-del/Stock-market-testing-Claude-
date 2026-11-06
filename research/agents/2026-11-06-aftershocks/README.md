@@ -98,3 +98,18 @@ Out-of-sample log-likelihood gain over a constant rate, 2008–2026:
 | next 63 sessions | 6.44 [1–14] | 6.92 | 2027-02-05 |
 
 * **Read:** the model sees one shock, not a storm. The storm signature would be more big days within the next two weeks, because each one raises the odds of the next.
+
+## Addendum (exploratory, after the results; logged before the outcome)
+**Shock size matters.** This is seismology's productivity law, which the unmarked Hawkes model ignores because it treats a 4.5% day like a 1.7% day. Below are S&P shocks of 6–10 times the 5-year median (Nov 5 was 7.8×) with no shock of 6× or more in the prior 21 sessions. Big-day rate per session; the normal rate is 11%:
+
+| era | n | next session | sessions 2–5 | sessions 6–21 | sessions 22–63 |
+|---|---|---|---|---|---|
+| 1955–2007 | 52 | 35% | 26% | 23% | 17% |
+| 2008–2026 | 23 | 30% | 44% | 29% | 24% |
+
+* **Mainshock aftershock curves by era:**
+  * before 2008 (21 mainshocks): 43% at lag 1, falling to 13% at lags 64–120;
+  * 2008 on (11): 64%, falling to 19%.
+  * Fear has lingered more strongly since 2008.
+* **Second forecast, logged now and scored with the first on 2026-12-07.** The size-conditioned analog expects 5.0 (pre-2008 rates) to 6.7 (post-2008 rates) S&P big days in the next 21 sessions. That compares with 2.4 [0–6] from the pre-registered Hawkes model and 2.3 at the constant rate.
+* **Next model:** ETAS (epidemic-type aftershock sequence), the standard earthquake model, in which the triggering grows with shock size.

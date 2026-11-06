@@ -1,0 +1,334 @@
+{
+ "main": {
+  "n in/oos": [
+   330,
+   330
+  ],
+  "Y (in-sample impact constant)": 0.188,
+  "beta momentum (in-sample)": 0.0275,
+  "H-FF1 oos corr(x, r)": -0.091,
+  "H-FF1 one-sided p": 0.757,
+  "H-FF1 90% CI": [
+   -0.304,
+   0.113
+  ],
+  "oos R2 flow": -0.0425,
+  "oos R2 momentum": -0.0281,
+  "H-FF2 dR2 (flow - momentum)": -0.0144,
+  "H-FF2 one-sided p": 0.6653
+ },
+ "sensitivity: constant AUM": {
+  "n in/oos": [
+   330,
+   330
+  ],
+  "Y (in-sample impact constant)": 0.233,
+  "beta momentum (in-sample)": 0.0275,
+  "H-FF1 oos corr(x, r)": -0.088,
+  "H-FF1 one-sided p": 0.7585,
+  "H-FF1 90% CI": [
+   -0.3,
+   0.115
+  ],
+  "oos R2 flow": -0.0425,
+  "oos R2 momentum": -0.0281,
+  "H-FF2 dR2 (flow - momentum)": -0.0144,
+  "H-FF2 one-sided p": 0.674
+ },
+ "H-FF3 per underlying": [
+  {
+   "u": "SEMIS",
+   "end-of-day momentum slope b": 0.031,
+   "psi = sum L(L-1)A / V": 2.6466,
+   "n": 60,
+   "corr(R, r)": 0.203
+  },
+  {
+   "u": "NDX",
+   "end-of-day momentum slope b": 0.0114,
+   "psi = sum L(L-1)A / V": 1.1036,
+   "n": 60,
+   "corr(R, r)": 0.075
+  },
+  {
+   "u": "MSTR",
+   "end-of-day momentum slope b": 0.0174,
+   "psi = sum L(L-1)A / V": 0.9859,
+   "n": 60,
+   "corr(R, r)": 0.126
+  },
+  {
+   "u": "COIN",
+   "end-of-day momentum slope b": -0.015,
+   "psi = sum L(L-1)A / V": 0.8854,
+   "n": 60,
+   "corr(R, r)": -0.096
+  },
+  {
+   "u": "TSLA",
+   "end-of-day momentum slope b": -0.0329,
+   "psi = sum L(L-1)A / V": 0.7886,
+   "n": 60,
+   "corr(R, r)": -0.235
+  },
+  {
+   "u": "MU",
+   "end-of-day momentum slope b": 0.0507,
+   "psi = sum L(L-1)A / V": 0.5472,
+   "n": 60,
+   "corr(R, r)": 0.288
+  },
+  {
+   "u": "NVDA",
+   "end-of-day momentum slope b": 0.0142,
+   "psi = sum L(L-1)A / V": 0.4559,
+   "n": 60,
+   "corr(R, r)": 0.069
+  },
+  {
+   "u": "PLTR",
+   "end-of-day momentum slope b": -0.0017,
+   "psi = sum L(L-1)A / V": 0.3553,
+   "n": 60,
+   "corr(R, r)": -0.011
+  },
+  {
+   "u": "AMD",
+   "end-of-day momentum slope b": 0.0325,
+   "psi = sum L(L-1)A / V": 0.3083,
+   "n": 60,
+   "corr(R, r)": 0.201
+  },
+  {
+   "u": "SPX",
+   "end-of-day momentum slope b": -0.0214,
+   "psi = sum L(L-1)A / V": 0.2374,
+   "n": 60,
+   "corr(R, r)": -0.148
+  },
+  {
+   "u": "AVGO",
+   "end-of-day momentum slope b": 0.0138,
+   "psi = sum L(L-1)A / V": 0.1604,
+   "n": 60,
+   "corr(R, r)": 0.072
+  }
+ ],
+ "H-FF3 Spearman rho": 0.118,
+ "H-FF3 one-sided permutation p": 0.3641,
+ "Y (all 60 sessions)": 0.077,
+ "Nov 5 decomposition": [
+  {
+   "u": "SEMIS",
+   "full-day move %": -12.27,
+   "forced close rebalancing $bn": -27.93,
+   "as % of daily $ volume": 21.77,
+   "predicted 15:30->close %": -0.11,
+   "actual 15:30->close %": -1.46
+  },
+  {
+   "u": "NDX",
+   "full-day move %": -6.47,
+   "forced close rebalancing $bn": -18.83,
+   "as % of daily $ volume": 6.08,
+   "predicted 15:30->close %": -0.03,
+   "actual 15:30->close %": -0.66
+  },
+  {
+   "u": "SPX",
+   "full-day move %": -4.4,
+   "forced close rebalancing $bn": -4.97,
+   "as % of daily $ volume": 0.98,
+   "predicted 15:30->close %": -0.01,
+   "actual 15:30->close %": -0.3
+  },
+  {
+   "u": "MU",
+   "full-day move %": -17.48,
+   "forced close rebalancing $bn": -1.63,
+   "as % of daily $ volume": 6.65,
+   "predicted 15:30->close %": -0.07,
+   "actual 15:30->close %": -2.97
+  },
+  {
+   "u": "TSLA",
+   "full-day move %": -10.8,
+   "forced close rebalancing $bn": -1.18,
+   "as % of daily $ volume": 8.23,
+   "predicted 15:30->close %": -0.05,
+   "actual 15:30->close %": 0.27
+  },
+  {
+   "u": "NVDA",
+   "full-day move %": -9.33,
+   "forced close rebalancing $bn": -0.88,
+   "as % of daily $ volume": 3.96,
+   "predicted 15:30->close %": -0.03,
+   "actual 15:30->close %": -0.82
+  },
+  {
+   "u": "AMD",
+   "full-day move %": -17.28,
+   "forced close rebalancing $bn": -0.46,
+   "as % of daily $ volume": 3.65,
+   "predicted 15:30->close %": -0.06,
+   "actual 15:30->close %": -2.34
+  },
+  {
+   "u": "MSTR",
+   "full-day move %": -9.22,
+   "forced close rebalancing $bn": -0.22,
+   "as % of daily $ volume": 8.51,
+   "predicted 15:30->close %": -0.1,
+   "actual 15:30->close %": -0.05
+  },
+  {
+   "u": "PLTR",
+   "full-day move %": -9.73,
+   "forced close rebalancing $bn": -0.15,
+   "as % of daily $ volume": 2.86,
+   "predicted 15:30->close %": -0.04,
+   "actual 15:30->close %": 0.08
+  },
+  {
+   "u": "AVGO",
+   "full-day move %": -10.49,
+   "forced close rebalancing $bn": -0.11,
+   "as % of daily $ volume": 1.52,
+   "predicted 15:30->close %": -0.02,
+   "actual 15:30->close %": -1.24
+  },
+  {
+   "u": "COIN",
+   "full-day move %": -9.74,
+   "forced close rebalancing $bn": -0.1,
+   "as % of daily $ volume": 6.82,
+   "predicted 15:30->close %": -0.09,
+   "actual 15:30->close %": -0.8
+  }
+ ],
+ "exploratory: corr(x, next-morning first-5-min vs close)": 0.029,
+ "today's 15:30 rule: predicted 15:30->close % given the move so far": {
+  "AMD": {
+   "-5% by 15:30": -0.04,
+   "-3% by 15:30": -0.03,
+   "-2% by 15:30": -0.02,
+   "-1% by 15:30": -0.02,
+   "+1% by 15:30": 0.02,
+   "+2% by 15:30": 0.02,
+   "+3% by 15:30": 0.03,
+   "psi": 0.212,
+   "sigma %": 4.67
+  },
+  "NVDA": {
+   "-5% by 15:30": -0.02,
+   "-3% by 15:30": -0.02,
+   "-2% by 15:30": -0.01,
+   "-1% by 15:30": -0.01,
+   "+1% by 15:30": 0.01,
+   "+2% by 15:30": 0.01,
+   "+3% by 15:30": 0.02,
+   "psi": 0.424,
+   "sigma %": 2.08
+  },
+  "MSTR": {
+   "-5% by 15:30": -0.08,
+   "-3% by 15:30": -0.06,
+   "-2% by 15:30": -0.05,
+   "-1% by 15:30": -0.03,
+   "+1% by 15:30": 0.03,
+   "+2% by 15:30": 0.05,
+   "+3% by 15:30": 0.06,
+   "psi": 0.922,
+   "sigma %": 4.63
+  },
+  "SEMIS": {
+   "-5% by 15:30": -0.08,
+   "-3% by 15:30": -0.06,
+   "-2% by 15:30": -0.05,
+   "-1% by 15:30": -0.03,
+   "+1% by 15:30": 0.03,
+   "+2% by 15:30": 0.05,
+   "+3% by 15:30": 0.06,
+   "psi": 1.774,
+   "sigma %": 3.38
+  },
+  "MU": {
+   "-5% by 15:30": -0.04,
+   "-3% by 15:30": -0.03,
+   "-2% by 15:30": -0.03,
+   "-1% by 15:30": -0.02,
+   "+1% by 15:30": 0.02,
+   "+2% by 15:30": 0.03,
+   "+3% by 15:30": 0.03,
+   "psi": 0.38,
+   "sigma %": 4.08
+  },
+  "TSLA": {
+   "-5% by 15:30": -0.04,
+   "-3% by 15:30": -0.03,
+   "-2% by 15:30": -0.02,
+   "-1% by 15:30": -0.02,
+   "+1% by 15:30": 0.02,
+   "+2% by 15:30": 0.02,
+   "+3% by 15:30": 0.03,
+   "psi": 0.762,
+   "sigma %": 2.43
+  },
+  "NDX": {
+   "-5% by 15:30": -0.02,
+   "-3% by 15:30": -0.02,
+   "-2% by 15:30": -0.02,
+   "-1% by 15:30": -0.01,
+   "+1% by 15:30": 0.01,
+   "+2% by 15:30": 0.02,
+   "+3% by 15:30": 0.02,
+   "psi": 0.939,
+   "sigma %": 1.46
+  },
+  "PLTR": {
+   "-5% by 15:30": -0.03,
+   "-3% by 15:30": -0.02,
+   "-2% by 15:30": -0.02,
+   "-1% by 15:30": -0.01,
+   "+1% by 15:30": 0.01,
+   "+2% by 15:30": 0.02,
+   "+3% by 15:30": 0.02,
+   "psi": 0.294,
+   "sigma %": 3.26
+  },
+  "SPX": {
+   "-5% by 15:30": -0.01,
+   "-3% by 15:30": -0.01,
+   "-2% by 15:30": -0.0,
+   "-1% by 15:30": -0.0,
+   "+1% by 15:30": 0.0,
+   "+2% by 15:30": 0.0,
+   "+3% by 15:30": 0.01,
+   "psi": 0.223,
+   "sigma %": 0.81
+  },
+  "AVGO": {
+   "-5% by 15:30": -0.02,
+   "-3% by 15:30": -0.01,
+   "-2% by 15:30": -0.01,
+   "-1% by 15:30": -0.01,
+   "+1% by 15:30": 0.01,
+   "+2% by 15:30": 0.01,
+   "+3% by 15:30": 0.01,
+   "psi": 0.145,
+   "sigma %": 2.77
+  },
+  "COIN": {
+   "-5% by 15:30": -0.06,
+   "-3% by 15:30": -0.05,
+   "-2% by 15:30": -0.04,
+   "-1% by 15:30": -0.03,
+   "+1% by 15:30": 0.03,
+   "+2% by 15:30": 0.04,
+   "+3% by 15:30": 0.05,
+   "psi": 0.701,
+   "sigma %": 4.42
+  }
+ }
+}
