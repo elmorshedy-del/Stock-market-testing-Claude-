@@ -15,7 +15,9 @@ Read this first, then LESSONS.md.
 * **Papers read in full** (cards in memory/papers/): Marcaccioli 2021, Sornette–Malevergne–Muzy 2002, Sornette–Helmstetter 2003, Patzelt–Bouchaud 2018, Muhle-Karbe 2026.
 * **Reading queue:** Tóth 2011; Sato–Kanazawa 2024; Maitrier 2025; Cont–Kukanov–Stoikov 2014; Kyle–Obizhaeva 2016; Benzaquen 2016; Hartzmark–Solomon 2025; Gabaix–Koijen. Get the text from arxiv.org/pdf/<id> with pdftotext.
   * **Before M1, read:** Kyle–Obizhaeva 2016, Benzaquen et al. 2016, Ané–Geman 2000.
-* **Next (waiting for the owner's go):** PROGRAM step 2, the M1 clock law (free). Alternative: the M3 rerun on 1-minute bars.
+* **Next (proposed to the owner, waiting):** deprioritize M1, which likely confirms what traders know. Go to direction-relevant mechanics:
+  1. A free absorption pilot (F4) on the ES/TSLA days we hold: find pinned episodes and look at what happened after each.
+  2. The paid wide test: absorption follow-through on ES/NQ, plus the close (S2: auction imbalance, expiry hedge unwinds). About $100.
 
 ## Waiting on the owner
 1. About $100 of order-flow data, for the fast-layer laws and the close.

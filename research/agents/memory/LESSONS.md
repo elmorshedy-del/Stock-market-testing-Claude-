@@ -2,6 +2,8 @@
 Each entry: what went wrong → the rule that prevents it. Read this at the start of every session.
 
 ## 2026-11-06
+* **The owner rated the M3 signature test low-value.** It mostly confirmed volatility clustering, which traders already know. The part that could have been useful (second legs) failed.
+  → Before running a test, ask: is the answer unknown to a trader, and would it change a trade? Volatility-only tests rarely pass. Edge in direction must come from flow mechanics (who is forced to trade, where liquidity sits), not from price-history signatures.
 * **Multiverse joint p.** I permuted each specification independently, so the joint p came out under 0.001; coupled permutations gave 0.08.
   → Couple permutations across specifications: one random rank per event, shared by every specification. Otherwise the joint p is too optimistic.
 * **A pre-registered drop rule can bias one class.** All 13 shocks dropped for E1 ≤ 0 were abrupt shocks.
