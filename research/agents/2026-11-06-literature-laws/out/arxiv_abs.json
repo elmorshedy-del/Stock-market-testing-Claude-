@@ -1,0 +1,283 @@
+[
+ {
+  "query": "Anomalous price impact and the critical nature of liquidity in financial markets",
+  "id": "1105.1694v3",
+  "title": "Anomalous price impact and the critical nature of liquidity in financial markets",
+  "year": "2011",
+  "authors": [
+   "Bence Toth",
+   "Yves Lemperiere",
+   "Cyril Deremble",
+   "Joachim de Lataillade",
+   "Julien Kockelkoren"
+  ],
+  "abstract": "We propose a dynamical theory of market liquidity that predicts that the average supply/demand profile is V-shaped and {\\it vanishes} around the current price. This result is generic, and only relies on mild assumptions about the order flow and on the fact that prices are (to a first approximation) diffusive. This naturally accounts for two striking stylized facts: first, large metaorders have to be fragmented in order to be digested by the liquidity funnel, leading to long-memory in the sign of the order flow. Second, the anomalously small local liquidity induces a breakdown of linear response and a diverging impact of small orders, explaining the \"square-root\" impact law, for which we provide additional empirical support. Finally, we test our arguments quantitatively using a numerical model of order flow based on the same minimal ingredients."
+ },
+ {
+  "query": "A theory of power-law distributions in financial market fluctuations",
+  "error": "no hit"
+ },
+ {
+  "query": "Theory for long memory in supply and demand",
+  "id": "cond-mat/0412708v2",
+  "title": "A theory for long-memory in supply and demand",
+  "year": "2004",
+  "authors": [
+   "F. Lillo",
+   "Szabolcs Mike",
+   "J. Doyne Farmer"
+  ],
+  "abstract": "Recent empirical studies have demonstrated long-memory in the signs of orders to buy or sell in financial markets [2, 19]. We show how this can be caused by delays in market clearing. Under the common practice of order splitting, large orders are broken up into pieces and executed incrementally. If the size of such large orders is power law distributed, this gives rise to power law decaying autocorrelations in the signs of executed orders. More specifically, we show that if the cumulative distribution of large orders of volume v is proportional to v to the power -alpha and the size of executed orders is constant, the autocorrelation of order signs as a function of the lag tau is asymptotically proportional to tau to the power -(alpha - 1). This is a long-memory process when alpha < 2. With a few caveats, this gives a good match to the data. A version of the model also shows long-memory fluctuations in order execution rates, which may be relevant for explaining the long-memory of price diffusion rates."
+ },
+ {
+  "query": "Critical reflexivity in financial markets: a Hawkes process analysis",
+  "id": "1302.1405v2",
+  "title": "Critical reflexivity in financial markets: a Hawkes process analysis",
+  "year": "2013",
+  "authors": [
+   "Stephen J. Hardiman",
+   "Nicolas Bercot",
+   "Jean-Philippe Bouchaud"
+  ],
+  "abstract": "We model the arrival of mid-price changes in the E-Mini S&P futures contract as a self-exciting Hawkes process. Using several estimation methods, we find that the Hawkes kernel is power-law with a decay exponent close to -1.15 at short times, less than approximately 10^3 seconds, and crosses over to a second power-law regime with a larger decay exponent of approximately -1.45 for longer times scales in the range [10^3, 10^6] seconds. More importantly, we find that the Hawkes kernel integrates to unity independently of the analysed period, from 1998 to 2011. This suggests that markets are and have always been close to criticality, challenging a recent study which indicates that reflexivity (endogeneity) has increased in recent years as a result of increased automation of trading. However, we note that the scale over which market events are correlated has decreased steadily over time with the emergence of higher frequency trading."
+ },
+ {
+  "query": "Quantifying reflexivity in financial markets: towards a prediction of flash crashes",
+  "id": "1201.3572v2",
+  "title": "Quantifying reflexivity in financial markets: towards a prediction of flash crashes",
+  "year": "2012",
+  "authors": [
+   "Vladimir Filimonov",
+   "Didier Sornette"
+  ],
+  "abstract": "We introduce a new measure of activity of financial markets that provides a direct access to their level of endogeneity. This measure quantifies how much of price changes are due to endogenous feedback processes, as opposed to exogenous news. For this, we calibrate the self-excited conditional Poisson Hawkes model, which combines in a natural and parsimonious way exogenous influences with self-excited dynamics, to the E-mini S&P 500 futures contracts traded in the Chicago Mercantile Exchange from 1998 to 2010. We find that the level of endogeneity has increased significantly from 1998 to 2010, with only 70% in 1998 to less than 30% since 2007 of the price changes resulting from some revealed exogenous information. Analogous to nuclear plant safety concerned with avoiding \"criticality\", our measure provides a direct quantification of the distance of the financial market to a critical state defined precisely as the limit of diverging trading activity in absence of any external driving."
+ },
+ {
+  "query": "Market dynamics immediately before and after financial shocks: quantifying the Omori, productivity and Bath laws",
+  "id": "1006.1882v2",
+  "title": "Market dynamics immediately before and after financial shocks: quantifying the Omori, productivity and Bath laws",
+  "year": "2010",
+  "authors": [
+   "Alexander M. Petersen",
+   "Fengzhong Wang",
+   "Shlomo Havlin",
+   "H. Eugene Stanley"
+  ],
+  "abstract": "We study the cascading dynamics immediately before and immediately after 219 market shocks. We define the time of a market shock T_{c} to be the time for which the market volatility V(T_{c}) has a peak that exceeds a predetermined threshold. The cascade of high volatility \"aftershocks\" triggered by the \"main shock\" is quantitatively similar to earthquakes and solar flares, which have been described by three empirical laws --- the Omori law, the productivity law, and the Bath law. We analyze the most traded 531 stocks in U.S. markets during the two-year period 2001-2002 at the 1-minute time resolution. We find quantitative relations between (i) the \"main shock\" magnitude M \\equiv \\log V(T_{c}) occurring at the time T_{c} of each of the 219 \"volatility quakes\" analyzed, and (ii) the parameters quantifying the decay of volatility aftershocks as well as the volatility preshocks. We also find that stocks with larger trading activity react more strongly and more quickly to market shocks than stocks with smaller trading activity. Our findings characterize the typical volatility response conditional on M, both at the market and the individual stock scale. We argue that there is potential utility in these three statistical quantitative relations with applications in option pricing and volatility trading."
+ },
+ {
+  "query": "Power-law relaxation in a complex system: Omori law after a financial market crash",
+  "id": "cond-mat/0111257v2",
+  "title": "Power law relaxation in a complex system: Omori law after a financial market crash",
+  "year": "2001",
+  "authors": [
+   "Fabrizio Lillo",
+   "Rosario N. Mantegna"
+  ],
+  "abstract": "We study the relaxation dynamics of a financial market just after the occurrence of a crash by investigating the number of times the absolute value of an index return is exceeding a given threshold value. We show that the empirical observation of a power law evolution of the number of events exceeding the selected threshold (a behavior known as the Omori law in geophysics) is consistent with the simultaneous occurrence of (i) a return probability density function characterized by a power law asymptotic behavior and (ii) a power law relaxation decay of its typical scale. Our empirical observation cannot be explained within the framework of simple and widespread stochastic volatility models."
+ },
+ {
+  "query": "Relation between bid-ask spread, impact and volatility in order-driven markets",
+  "error": "no hit"
+ },
+ {
+  "query": "The predictive power of zero intelligence in financial markets",
+  "id": "cond-mat/0309233v2",
+  "title": "The Predictive Power of Zero Intelligence in Financial Markets",
+  "year": "2003",
+  "authors": [
+   "J. Doyne Farmer",
+   "Paolo Patelli",
+   "Ilija I. Zovko"
+  ],
+  "abstract": "Standard models in economics stress the role of intelligent agents who maximize utility. However, there may be situations where, for some purposes, constraints imposed by market institutions dominate intelligent agent behavior. We use data from the London Stock Exchange to test a simple model in which zero intelligence agents place orders to trade at random. The model treats the statistical mechanics of order placement, price formation, and the accumulation of revealed supply and demand within the context of the continuous double auction, and yields simple laws relating order arrival rates to statistical properties of the market. We test the validity of these laws in explaining the cross-sectional variation for eleven stocks. The model explains 96% of the variance of the bid-ask spread, and 76% of the variance of the price diffusion rate, with only one free parameter. We also study the market impact function, describing the response of quoted prices to the arrival of new orders. The non-dimensional coordinates dictated by the model approximately collapse data from different stocks onto a single curve. This work is important from a practical point of view because it demonstrates the existence of simple laws relating prices to order flows, and in a broader context, because it suggests that there are circumstances where institutions are more important than strategic considerations."
+ },
+ {
+  "query": "The price impact of order book events",
+  "id": "1011.6402v3",
+  "title": "The Price Impact of Order Book Events",
+  "year": "2010",
+  "authors": [
+   "Rama Cont",
+   "Arseniy Kukanov",
+   "Sasha Stoikov"
+  ],
+  "abstract": "We study the price impact of order book events - limit orders, market orders and cancelations - using the NYSE TAQ data for 50 U.S. stocks. We show that, over short time intervals, price changes are mainly driven by the order flow imbalance, defined as the imbalance between supply and demand at the best bid and ask prices. Our study reveals a linear relation between order flow imbalance and price changes, with a slope inversely proportional to the market depth. These results are shown to be robust to seasonality effects, and stable across time scales and across stocks. We argue that this linear price impact model, together with a scaling argument, implies the empirically observed \"square-root\" relation between price changes and trading volume. However, the relation between price changes and trade volume is found to be noisy and less robust than the one based on order flow imbalance."
+ },
+ {
+  "query": "Universal scaling and nonlinearity of aggregate price impact in financial markets",
+  "id": "1706.04163v2",
+  "title": "Universal scaling and nonlinearity of aggregate price impact in financial markets",
+  "year": "2017",
+  "authors": [
+   "Felix Patzelt",
+   "Jean-Philippe Bouchaud"
+  ],
+  "abstract": "How and why stock prices move is a centuries-old question still not answered conclusively. More recently, attention shifted to higher frequencies, where trades are processed piecewise across different timescales. Here we reveal that price impact has a universal non-linear shape for trades aggregated on any intra-day scale. Its shape varies little across instruments, but drastically different master curves are obtained for order-volume and -sign impact. The scaling is largely determined by the relevant Hurst exponents. We further show that extreme order flow imbalance is not associated with large returns. To the contrary, it is observed when the price is \"pinned\" to a particular level. Prices move only when there is sufficient balance in the local order flow. In fact, the probability that a trade changes the mid-price falls to zero with increasing (absolute) order-sign bias along an arc-shaped curve for all intra-day scales. Our findings challenge the widespread assumption of linear aggregate impact. They imply that market dynamics on all intra-day timescales are shaped by correlations and bilateral adaptation in the flows of liquidity provision and taking."
+ },
+ {
+  "query": "Crossover from linear to square-root market impact",
+  "id": "1811.05230v1",
+  "title": "Crossover from linear to square-Root market impact",
+  "year": "2018",
+  "authors": [
+   "Fr\u00e9d\u00e9ric Bucci",
+   "Michael Benzaquen",
+   "Fabrizio Lillo",
+   "Jean-Philippe Bouchaud"
+  ],
+  "abstract": "Using a large database of 8 million institutional trades executed in the U.S. equity market, we establish a clear crossover between a linear market impact regime and a square-root regime as a function of the volume of the order. Our empirical results are remarkably well explained by a recently proposed dynamical theory of liquidity that makes specific predictions about the scaling function describing this crossover. Allowing at least two characteristic time scales for the liquidity (`fast' and `slow') enables one to reach quantitative agreement with the data."
+ },
+ {
+  "query": "Memory effects in stock price dynamics: evidences of technical trading",
+  "id": "1110.5197v1",
+  "title": "Memory effects in stock price dynamics: evidences of technical trading",
+  "year": "2011",
+  "authors": [
+   "Federico Garzarelli",
+   "Matthieu Cristelli",
+   "Andrea Zaccaria",
+   "Luciano Pietronero"
+  ],
+  "abstract": "Technical trading represents a class of investment strategies for Financial Markets based on the analysis of trends and recurrent patterns of price time series. According standard economical theories these strategies should not be used because they cannot be profitable. On the contrary it is well-known that technical traders exist and operate on different time scales. In this paper we investigate if technical trading produces detectable signals in price time series and if some kind of memory effect is introduced in the price dynamics. In particular we focus on a specific figure called supports and resistances. We first develop a criterion to detect the potential values of supports and resistances. As a second step, we show that memory effects in the price dynamics are associated to these selected values. In fact we show that prices more likely re-bounce than cross these values. Such an effect is a quantitative evidence of the so-called self-fulfilling prophecy that is the self-reinforcement of agents' belief and sentiment about future stock prices' behavior."
+ },
+ {
+  "query": "Stock price jumps: news and volume play a minor role",
+  "id": "0803.1769v1",
+  "title": "Stock price jumps: news and volume play a minor role",
+  "year": "2008",
+  "authors": [
+   "Armand Joulin",
+   "Augustin Lefevre",
+   "Daniel Grunberg",
+   "Jean-Philippe Bouchaud"
+  ],
+  "abstract": "In order to understand the origin of stock price jumps, we cross-correlate high-frequency time series of stock returns with different news feeds. We find that neither idiosyncratic news nor market wide news can explain the frequency and amplitude of price jumps. We find that the volatility patterns around jumps and around news are quite different: jumps are followed by increased volatility, whereas news tend on average to be followed by lower volatility levels. The shape of the volatility relaxation is also markedly different in the two cases. Finally, we provide direct evidence that large transaction volumes are_not_ responsible for large price jumps. We conjecture that most price jumps are induced by order flow fluctuations close to the point of vanishing liquidity."
+ },
+ {
+  "query": "Time reversal invariance in finance",
+  "id": "0708.4022v1",
+  "title": "Time reversal invariance in finance",
+  "year": "2007",
+  "authors": [
+   "Gilles Zumbach"
+  ],
+  "abstract": "Time reversal invariance can be summarized as follows: no difference can be measured if a sequence of events is run forward or backward in time. Because price time series are dominated by a randomness that hides possible structures and orders, the existence of time reversal invariance requires care to be investigated. Different statistics are constructed with the property to be zero for time series which are time reversal invariant; they all show that high-frequency empirical foreign exchange prices are not invariant. The same statistics are applied to mathematical processes that should mimic empirical prices. Monte Carlo simulations show that only some ARCH processes with a multi-timescales structure can reproduce the empirical findings. A GARCH(1,1) process can only reproduce some asymmetry. On the other hand, all the stochastic volatility type processes are time reversal invariant. This clear difference related to the process structures gives some strong selection criterion for processes."
+ },
+ {
+  "query": "Leverage effect in financial markets: the retarded volatility model",
+  "error": "no hit"
+ },
+ {
+  "query": "Fluctuations and response in financial markets: the subtle nature of random price changes",
+  "id": "cond-mat/0307332v2",
+  "title": "Fluctuations and response in financial markets: the subtle nature of `random' price changes",
+  "year": "2003",
+  "authors": [
+   "Jean-Philippe Bouchaud",
+   "Yuval Gefen",
+   "Marc Potters",
+   "Matthieu Wyart"
+  ],
+  "abstract": "Using Trades and Quotes data from the Paris stock market, we show that the random walk nature of traded prices results from a very delicate interplay between two opposite tendencies: long-range correlated market orders that lead to super-diffusion (or persistence), and mean reverting limit orders that lead to sub-diffusion (or anti-persistence). We define and study a model where the price, at any instant, is the result of the impact of all past trades, mediated by a non constant `propagator' in time that describes the response of the market to a single trade. Within this model, the market is shown to be, in a precise sense, at a critical point, where the price is purely diffusive and the average response function almost constant. We find empirically, and discuss theoretically, a fluctuation-response relation. We also discuss the fraction of truly informed market orders, that correctly anticipate short term moves, and find that it is quite small."
+ },
+ {
+  "query": "Why is equity order flow so persistent",
+  "error": "no hit"
+ },
+ {
+  "query": "A fully consistent, minimal model for non-linear market impact",
+  "id": "1412.0141v4",
+  "title": "A fully consistent, minimal model for non-linear market impact",
+  "year": "2014",
+  "authors": [
+   "Jonathan Donier",
+   "Julius Bonart",
+   "Iacopo Mastromatteo",
+   "Jean-Philippe Bouchaud"
+  ],
+  "abstract": "We propose a minimal theory of non-linear price impact based on a linear (latent) order book approximation, inspired by diffusion-reaction models and general arguments. Our framework allows one to compute the average price trajectory in the presence of a meta-order, that consistently generalizes previously proposed propagator models. We account for the universally observed square-root impact law, and predict non-trivial trajectories when trading is interrupted or reversed. We prove that our framework is free of price manipulation, and that prices can be made diffusive (albeit with a generic short-term mean-reverting contribution). Our model suggests that prices can be decomposed into a transient \"mechanical\" impact component and a permanent \"informational\" component."
+ },
+ {
+  "query": "Exogenous and endogenous price jumps belong to different dynamical classes",
+  "id": "2106.07040v1",
+  "title": "Exogenous and Endogenous Price Jumps Belong to Different Dynamical Classes",
+  "year": "2021",
+  "authors": [
+   "Riccardo Marcaccioli",
+   "Jean-Philippe Bouchaud",
+   "Michael Benzaquen"
+  ],
+  "abstract": "Synchronising a database of stock specific news with 5 years worth of order book data on 300 stocks, we show that abnormal price movements following news releases (exogenous) exhibit markedly different dynamical features from those arising spontaneously (endogenous). On average, large volatility fluctuations induced by exogenous events occur abruptly and are followed by a decaying power-law relaxation, while endogenous price jumps are characterized by progressively accelerating growth of volatility, also followed by a power-law relaxation, but slower than for exogenous jumps. Remarkably, our results are reminiscent of what is observed in different contexts, namely Amazon book sales and YouTube views. Finally, we show that fitting power-laws to {\\it individual} volatility profiles allows one to classify large events into endogenous and exogenous dynamical classes, without relying on the news feed."
+ },
+ {
+  "query": "Endogenous versus exogenous shocks in systems with memory",
+  "error": "no hit"
+ },
+ {
+  "query": "Volatility fingerprints of large shocks: endogenous versus exogenous",
+  "id": "cond-mat/0204626v1",
+  "title": "Volatility fingerprints of large shocks: Endogeneous versus exogeneous",
+  "year": "2002",
+  "authors": [
+   "D. Sornette",
+   "Y. Malevergne",
+   "J. F. Muzy"
+  ],
+  "abstract": "Finance is about how the continuous stream of news gets incorporated into prices. But not all news have the same impact. Can one distinguish the effects of the Sept. 11, 2001 attack or of the coup against Gorbachev on Aug., 19, 1991 from financial crashes such as Oct. 1987 as well as smaller volatility bursts? Using a parsimonious autoregressive process with long-range memory defined on the logarithm of the volatility, we predict strikingly different response functions of the price volatility to great external shocks compared to what we term endogeneous shocks, i.e., which result from the cooperative accumulation of many small shocks. These predictions are remarkably well-confirmed empirically on a hierarchy of volatility shocks. Our theory allows us to classify two classes of events (endogeneous and exogeneous) with specific signatures and characteristic precursors for the endogeneous class. It also explains the origin of endogeneous shocks as the coherent accumulations of tiny bad news, and thus unify all previous explanations of large crashes including Oct. 1987."
+ },
+ {
+  "query": "Comment on two-phase behaviour of financial markets",
+  "id": "cond-mat/0304514v1",
+  "title": "Comment on: \"Two-phase behaviour of financial markets\"",
+  "year": "2003",
+  "authors": [
+   "M. Potters",
+   "J-P Bouchaud"
+  ],
+  "abstract": "In a recent article [Nature 421, 130 (2003)], Plerou, Gopikrishnan and Stanley report some evidence for an intriguing two-phase behavior of financial markets when studying the distribution of volume imbalance conditional to the local intensity of its fluctuations. We show here that this apparent phase transition is a generic consequence of the conditioning and exists even in the absence of any non trivial collective phenomenon."
+ },
+ {
+  "query": "Intraday trading invariance in the E-mini S&P 500 futures market",
+  "error": "no hit"
+ },
+ {
+  "query": "Large bets and stock market crashes",
+  "error": "no hit"
+ },
+ {
+  "query": "The Inelastic Market Hypothesis: A Microstructural Interpretation",
+  "id": "2108.00242v5",
+  "title": "The Inelastic Market Hypothesis: A Microstructural Interpretation",
+  "year": "2021",
+  "authors": [
+   "Jean-Philippe Bouchaud"
+  ],
+  "abstract": "We attempt to reconcile Gabaix and Koijen's (GK) recent Inelastic Market Hypothesis (IMH) with the order-driven view of markets that emerged within the microstructure literature in the past 20 years. We review the most salient empirical facts and arguments that give credence to the idea that market price fluctuations are mostly due to order flow, whether informed or non-informed. We show that the Latent Liquidity Theory of price impact makes a precise prediction for GK's multiplier $M$, which measures by how many dollars, on average, the market value of a company goes up if one buys one dollar worth of its stocks. Our central result is that $M$ is of order unity, as found by GK, and increases with the volatility of the stock and decreases with the fraction of the market cap. traded daily. We discuss several empirical results suggesting that the lion's share of volatility is due to trading activity. We argue that the IMH holds for all asset classes, beyond the case of stock markets considered by GK."
+ },
+ {
+  "query": "Volatility is rough",
+  "id": "1410.3394v1",
+  "title": "Volatility is rough",
+  "year": "2014",
+  "authors": [
+   "Jim Gatheral",
+   "Thibault Jaisson",
+   "Mathieu Rosenbaum"
+  ],
+  "abstract": "Estimating volatility from recent high frequency data, we revisit the question of the smoothness of the volatility process. Our main result is that log-volatility behaves essentially as a fractional Brownian motion with Hurst exponent H of order 0.1, at any reasonable time scale. This leads us to adopt the fractional stochastic volatility (FSV) model of Comte and Renault. We call our model Rough FSV (RFSV) to underline that, in contrast to FSV, H<1/2. We demonstrate that our RFSV model is remarkably consistent with financial time series data; one application is that it enables us to obtain improved forecasts of realized volatility. Furthermore, we find that although volatility is not long memory in the RFSV model, classical statistical procedures aiming at detecting volatility persistence tend to conclude the presence of long memory in data generated from it. This sheds light on why long memory of volatility has been widely accepted as a stylized fact. Finally, we provide a quantitative market microstructure-based foundation for our findings, relating the roughness of volatility to high frequency trading and order splitting."
+ },
+ {
+  "query": "Impact is not just volatility",
+  "id": "1905.04569v1",
+  "title": "Impact is not just volatility",
+  "year": "2019",
+  "authors": [
+   "Fr\u00e9d\u00e9ric Bucci",
+   "Iacopo Mastromatteo",
+   "Michael Benzaquen",
+   "Jean-Philippe Bouchaud"
+  ],
+  "abstract": "The notion of market impact is subtle and sometimes misinterpreted. Here we argue that impact should not be misconstrued as volatility. In particular, the so-called ``square-root impact law'', which states that impact grows as the square-root of traded volume, has nothing to do with price diffusion, i.e. that typical price changes grow as the square-root of time. We rationalise empirical findings on impact and volatility by introducing a simple scaling argument and confronting it to data."
+ }
+]

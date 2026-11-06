@@ -126,3 +126,14 @@ Files:
   * SPY imbalance on NYSE Arca, Jan 2024 to now: $9.38.
   * 1-minute bars, Jan 2024 to now: $3.62 for the 10 names plus $0.41 for SPY.
   * Full extension: about $19.70.
+
+## Erratum (2026-11-06, after the literature review)
+The interpretation "scheduled flows are priced early" (above, and in the INDEX row) is probably wrong.
+* **Contrary evidence.**
+  * Hartzmark & Solomon (2025, American Economic Review) find that predictable dividend-reinvestment flows still move the whole market on the day they are paid, with a multiplier of about 1.9.
+  * Garcia-Ares, Vasquez, Pearson & Amaya (2026, SSRN 7330098) find that unwinding the hedges of expiring index options moves the last 30 minutes: about 6 bp per one standard deviation of dealers' 3:30 pm delta.
+* **Likelier explanations for our null.**
+  * Our flows were estimated from a formula, not observed.
+  * Leveraged-ETF rebalancing may be executed by swap dealers before 15:30.
+  * Closing liquidity is very deep.
+* **Status.** The test result (H-FF1/2/3 fail) stands; only the explanation changes. Closing-auction imbalance data would measure the flow directly. See FOUNDATION.md, law S2.

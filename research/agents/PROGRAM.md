@@ -74,3 +74,53 @@ Read: the main text (Sections 1–5) and the data appendix. The reference list a
 **Additions.**
 * **Strength.** Volume roughness, measured at 5–12 s bins (mean 0.239–0.293), implies H0 = 0.739–0.793. This matches the signed-flow estimate: a genuine cross-check on the paper's own data.
 * **Scope.** All the evidence sits between 5 seconds and 80 minutes. Nothing is shown at daily or weekly scales, which is where our medium layer works.
+
+## Revision 2026-11-06: laws first (supersedes the order of work above)
+**Why.** The owner's critique: we have been testing statistical patterns against history instead of establishing the laws that produce them. The literature already holds a set of laws that come with mechanisms; they are in [FOUNDATION.md](FOUNDATION.md), drawn from about 75 verified papers. From now on:
+* the program measures those laws on our instruments, and tests the owner's ideas as extensions of them;
+* a test with no law behind it is out of scope.
+
+**The three layers stay. Each layer now holds named laws.**
+
+| Layer | Laws |
+|---|---|
+| Slow: cause | S1 inelastic markets · S2 forced and hedging flows · S3 investor size · S4 crash size in business time |
+| Medium: energy and rhythm | M1 business-time clock · M2 self-excitation · M3 signature (self-made vs news shocks) · M4 liquidity feedback and up/down asymmetry |
+| Fast: mechanics | F1 square-root impact · F2 imbalance ÷ depth · F3 flow memory · F4 liquidity geometry (absorption) · F5 levels · F6 decay (exhaustion) · F7 spread |
+| Constraint | C1 efficiency: predictable drift gets traded away |
+
+**Rule for every step:**
+* pre-register;
+* measure the law's constant with its error;
+* compare it with the published value;
+* then test the owner's extension.
+
+A failed replication is a result.
+
+### Revised order of work
+1. **M3 signature law (free; proposed first, waiting for the owner's go).**
+   * Classify past shocks as self-made or news-driven, using only data from before each shock.
+   * Test whether self-made shocks relax more slowly and more often start a new leg.
+   * This answers the question the pause analysis left open: 28 of 54 down shocks had a new leg, but which ones?
+   * Data: daily S&P (1950–), NDX, SOX; intraday data where we hold it.
+2. **M1 clock law (free).**
+   * Measure legs and pauses on a volume clock and on the calendar, and check whether regimes collapse onto one curve on the volume clock.
+   * Data: daily volume, plus the 1-minute bars we already hold.
+3. **Fast-layer laws on ES/NQ and the semis (paid; owner approval; about $100 as quoted).**
+   * F1: impact of reconstructed big orders.
+   * F2: imbalance ÷ depth.
+   * F4: pinned episodes, i.e. absorption: does the break come when the passive side is used up?
+   * F5: depth-adjusted break hazard at levels.
+   * S2 at the close: auction imbalance, and dealer delta going into expiry.
+4. **Integrate.**
+   * Build the daily three-layer reading from the measured constants: branching ratio, clock speed, impact coefficient, gamma sign.
+   * Score it live.
+
+The daily reading (old step 1) continues as a by-product, not as research.
+
+### Correction
+The review of arXiv:2601.23172 above says the paper "explains the forced-flows failure" because predictable flow is priced early. That explanation is probably wrong.
+* **Evidence against it.**
+  * Predictable flows still move prices on the day (Hartzmark & Solomon 2025).
+  * Expiry hedge unwinds move the last 30 minutes (Garcia-Ares et al. 2026).
+* **Status.** The erratum is in the forced-flows README. Closing-auction data in step 3 would settle the question.
