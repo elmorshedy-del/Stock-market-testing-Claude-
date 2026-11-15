@@ -1,0 +1,1565 @@
+{
+ "rows": [
+  {
+   "id": "2026-10-15-channel-reversion-macro",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "Monthly channels: a fall from the top to the lower line is not beyond a random walk; none of 13 macro variables passes"
+  },
+  {
+   "id": "2026-10-15-channel-reversion-round2",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "Nothing passes on 93 fresh stocks or the S&P since 1928; distance in volatility units beats channel position"
+  },
+  {
+   "id": "2026-10-15-sp-multivariate",
+   "era": "studies",
+   "book": "RISK",
+   "mech": "HIST",
+   "ev": "L",
+   "next": "park",
+   "note": "momentum/RSI flags 10% corrections (AUC 0.68); watch forward only",
+   "result": "inconclusive (stack fails); extends"
+  },
+  {
+   "id": "2026-10-16-dealer-sign",
+   "era": "studies",
+   "book": "SIZE",
+   "mech": "POS",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "Call gamma damps the next day's range (TSLA, MSFT, NVDA, SPY, QQQ); put gamma amplifies it in SPY/QQQ"
+  },
+  {
+   "id": "2026-10-16-flip-during-bursts",
+   "era": "studies",
+   "book": "TIME",
+   "mech": "POS",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "descriptive; two hypotheses"
+  },
+  {
+   "id": "2026-10-16-gaps-and-walls",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "POS",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "TSLA opens, highs and lows land on top open-interest strikes no more than on equally round strikes"
+  },
+  {
+   "id": "2026-10-16-named-moves-gamma",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "POS",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "descriptive; corrects the negative-gamma-trend view"
+  },
+  {
+   "id": "2026-10-16-owner-channel-gamma",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "The owner's TSLA channel tracks its gamma state; lines are drawn in hindsight (descriptive)"
+  },
+  {
+   "id": "2026-10-16-pierce-and-reclaim",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "POS",
+   "ev": "N",
+   "next": "close",
+   "note": "the full setup itself reproduced (39% vs 17%)",
+   "result": "Dipping below the flip and closing back above it is not the full setup (23% up vs 28% down)"
+  },
+  {
+   "id": "2026-10-16-spcx-tsla-lead-lag",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "MACRO",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "inconclusive, leaning no"
+  },
+  {
+   "id": "2026-10-16-spy-channel",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "The owner's SPY channel tracks the S&P gamma cycle (descriptive)"
+  },
+  {
+   "id": "2026-10-16-spy-intraday-levels",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "FLOW",
+   "ev": "L",
+   "next": "park",
+   "note": "one day; needs signed option trades (TODO T1)",
+   "result": "Signed 0DTE option flow led SPY's next 5 minutes on one day (p 0.027); turns no closer to option levels than to round strikes"
+  },
+  {
+   "id": "2026-10-16-spy-intraday-multiday",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "FLOW",
+   "ev": "D",
+   "next": "park",
+   "note": "not run; moved to another thread",
+   "result": "not run (owner's choice)"
+  },
+  {
+   "id": "2026-10-16-technical-indicators",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "L",
+   "next": "rule",
+   "note": "keep only the RSI washout; the rest is closed",
+   "result": "TSLA RSI in its bottom tenth \u2192 up-burst within 10 sessions 57% vs 40% (p 0.001); 143 of 144 other indicator statistics fail"
+  },
+  {
+   "id": "2026-10-17-channel-microstructure",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "lines drawable objectively; no edge at them (T1, T2 fail)"
+  },
+  {
+   "id": "2026-10-24-forced-flow",
+   "era": "studies",
+   "book": "EXIT",
+   "mech": "FORCED",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "Moves made on low dealer-gamma days are given back (\u221218% in 10 sessions); high-gamma moves extend (+8%). p 0.002, both halves, 5 of 6 tickers"
+  },
+  {
+   "id": "2026-10-24-kronos-tsla",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "L",
+   "next": "close",
+   "note": "mostly 50-day reversion",
+   "result": "small fails; base passes direction but is mostly 50-day reversion; no volatility skill"
+  },
+  {
+   "id": "2026-10-24-spx-year-analogs",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "rhymes exist; no predictive skill"
+  },
+  {
+   "id": "2026-10-25-aapl-decoupling",
+   "era": "studies",
+   "book": "RISK",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "US/AAPL-only, unconfirmed (H1 out-of-sample fails)"
+  },
+  {
+   "id": "2026-10-25-aapl-quirks",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "MACRO",
+   "ev": "L",
+   "next": "close",
+   "note": "not something the owner trades",
+   "result": "2 quirks survive; 10 explanations fail"
+  },
+  {
+   "id": "2026-10-25-channel-correction-theory",
+   "era": "studies",
+   "book": "TIME",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "breadth separator was best-of-26; its live call failed Nov 5",
+   "result": "Live call FAILED: S&P closed 7,353.73 (<= 7,427.98) before a new high above 7,818.93"
+  },
+  {
+   "id": "2026-10-25-intraday-hours",
+   "era": "studies",
+   "book": "TIME",
+   "mech": "HIST",
+   "ev": "L",
+   "next": "close",
+   "note": "",
+   "result": "AAPL bid is the first hour, not the close; last-hour patterns die; 'open personality' confirmed"
+  },
+  {
+   "id": "2026-10-25-momentum-reversal",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "L",
+   "next": "close",
+   "note": "real but about 1 bp/week net",
+   "result": "real but regime-specific: momentum in calm bull markets, reversal in high-vol/below-trend; stock phase irrelevant"
+  },
+  {
+   "id": "2026-10-25-order-flow",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "FLOW",
+   "ev": "N",
+   "next": "park",
+   "note": "minute-bar signing was backwards; needs trade-level data (T1)",
+   "result": "signed minute-bar option flow is backwards (unusable); unsigned flow adds nothing to breadth"
+  },
+  {
+   "id": "2026-10-25-spy-channel-reversion",
+   "era": "studies",
+   "book": "TIME",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "nothing passes; AAPL decoupling is the lead"
+  },
+  {
+   "id": "2026-10-25-spy-gamma-levels",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "POS",
+   "ev": "N",
+   "next": "ref",
+   "note": "the map is used daily",
+   "result": "The SPY levels map (flip, walls, pocket); the flip does not separate bought dips from corrections (AUC 0.47)"
+  },
+  {
+   "id": "2026-10-26-ladder-status",
+   "era": "studies",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "SPY on R1+R2 (78% vs 58% leg odds, spread not naked calls); TSLA freed but above flip (bigger moves both ways)"
+  },
+  {
+   "id": "2026-10-26-positioning-tests",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "POS",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "Day highs stall just under round numbers and lows just above (p 2e-15); the correlation rule holds only in true short gamma"
+  },
+  {
+   "id": "2026-10-26-tsla-gap-states",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "FORCED",
+   "ev": "L",
+   "next": "park",
+   "note": "",
+   "result": "breakaway gaps fill less (55% vs 69%, p 0.04); flip-crossing untestable (15 events)"
+  },
+  {
+   "id": "2026-10-27-flip-wicks",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "POS",
+   "ev": "L",
+   "next": "rule",
+   "note": "weak",
+   "result": "The pre-open flip is a stall level (highs stop there 42% vs 38%; joint p < 0.002), but the primary test failed; no closing pin"
+  },
+  {
+   "id": "2026-10-27-flow-physics",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "FLOW",
+   "ev": "L",
+   "next": "refine",
+   "note": "feeds the liquidity pilot; the closing-imbalance feed costs about $20",
+   "result": "Closing imbalance predicts the last 10 minutes (\u03c1 0.37); SPY looked liquidity-led, TSLA flow-led (16 days)"
+  },
+  {
+   "id": "2026-10-27-live-read",
+   "era": "studies",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "SPY pinned 0.36% under its flip on a narrow AI rally; TSLA accepted above the 400 call wall"
+  },
+  {
+   "id": "2026-10-28-gap-teardown",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "FORCED",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "T2 null (nothing before the open separates VF from SC, Holm p >= 0.42 for 10 measures); T3 first-5-min delta and absorption pass but add nothing beyond the 5-min\u2026"
+  },
+  {
+   "id": "2026-10-28-live-read",
+   "era": "studies",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "SPY closed above its pre-open flip (771.60) for the first time since Oct 21; R6 on (VIX 16.83); TSLA still deeply freed after Friday"
+  },
+  {
+   "id": "2026-10-28-open-fade",
+   "era": "studies",
+   "book": "EXIT",
+   "mech": "FORCED",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "no predictor passes for TSLA; panel extended-run fade real 2000-19, gone since 2020"
+  },
+  {
+   "id": "2026-10-28-tsla-freed-dpi",
+   "era": "studies",
+   "book": "SIZE",
+   "mech": "POS",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "deep freed after Oct 30 is mechanical (55% of near-price OI expires this week); TSLA DPI back to the 75th pctile"
+  },
+  {
+   "id": "2026-10-29-calendar-mechanics",
+   "era": "studies",
+   "book": "EXIT",
+   "mech": "FORCED",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "Earnings-reaction gap-ups fade in the first hour (\u22120.31\u03c3; violent fades 25% vs 15%), confirmed out of sample (Holm 0.031)"
+  },
+  {
+   "id": "2026-10-29-gap-context",
+   "era": "studies",
+   "book": "EXIT",
+   "mech": "FORCED",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "no context passes (Holm p >= 0.46); F2 passes but flips sign with the unit (artifact); context shifts VF/SC odds by a few points at most"
+  },
+  {
+   "id": "2026-10-29-house-of-cards",
+   "era": "studies",
+   "book": "EXIT",
+   "mech": "FORCED",
+   "ev": "N",
+   "next": "close",
+   "note": "replaced by forced-flow's gamma definition, which is robust",
+   "result": "leans as predicted everywhere but H6; nothing survives Holm (best: gap-day open->close after a forced run -0.13 sigma, raw p 0.03, Holm 0.20); forced index rallies\u2026"
+  },
+  {
+   "id": "2026-10-30-live-read",
+   "era": "studies",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "fails: cushion +0.27 pts (p 0.37), override +0.37 (p 0.35), Holm 0.71; TSLA falls ~2x the S&P on those days whatever its own gamma"
+  },
+  {
+   "id": "2026-10-30-permanence",
+   "era": "studies",
+   "book": "EXIT",
+   "mech": "FORCED",
+   "ev": "N",
+   "next": "close",
+   "note": "one lead (call-skew richening, \u03c1 \u22120.20) is parked",
+   "result": "daily stock footprints unchanged across eras (never worked); option-linked effects differ by era; ERRATUM: 09:35 rule is 61% (4 names) / 55% (others), not 72%, and\u2026"
+  },
+  {
+   "id": "2026-10-31-week-review",
+   "era": "studies",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "D2 fails: after record divergences S&P +0.8% vs +0.8% base (p 0.52), up-leg 40% vs 50%. Friday: SPY flushed to 750.36 (put wall, called 750-754), GEX $5.6bn ->\u2026"
+  },
+  {
+   "id": "2026-11-01-friday-narrative",
+   "era": "studies",
+   "book": "SIZE",
+   "mech": "FLOW",
+   "ev": "L",
+   "next": "ref",
+   "note": "one day; a template for case studies",
+   "result": "C1 fail (selling z -2.9 but reactive: price led flow), C2 pass (persistent flow, higher impact), C3a untestable (top-10 book ~10c deep; alt: no thicker book at 750),\u2026"
+  },
+  {
+   "id": "2026-11-01-gamma-phase-diagram",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "POS",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "The prior day's call wall is a soft ceiling (the high stops there 43% vs 31%; QQQ too); distance to the flip scales the move (z \u2248 7)"
+  },
+  {
+   "id": "2026-11-01-informed-flow",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "FLOW",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "no one to piggyback: asset managers chase price (+0.39) and are mildly contrarian (-0.72%/sd, Holm 0.16; gone in R2); DIX price-independent but no forecast; credit\u2026"
+  },
+  {
+   "id": "2026-11-01-july-october-forensics",
+   "era": "studies",
+   "book": "TIME",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "timing yes, pattern no: same weekday calendar exactly 13 weeks apart (opex Fri, VIX-expiry Wed + TSLA/IBM night, FOMC Wed, Fri month-end) and same state (VIX ~15 at a\u2026"
+  },
+  {
+   "id": "2026-11-01-july-october-machine",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "D",
+   "next": "close",
+   "note": "score its forecasts once (MC1)",
+   "result": "same machine down, half the turn: gauges overlay for 13 sessions, split exactly at the megacap reports (July beats -> turn; October misses -> extension). October runs\u2026"
+  },
+  {
+   "id": "2026-11-01-rsi-gamma-precedents",
+   "era": "studies",
+   "book": "SIZE",
+   "mech": "POS",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "Friday's selling was news-led and hedge-amplified, not mainly expiring gamma: ~$28bn hedge selling into the low, 29% from the Oct 30 expiry, 71% later puts (gamma +\u2026"
+  },
+  {
+   "id": "2026-11-01-wall-short",
+   "era": "studies",
+   "book": "PRICE",
+   "mech": "POS",
+   "ev": "N",
+   "next": "refine",
+   "note": "shorting shares failed; the option version (sell a call spread at the wall, GW5) is untested",
+   "result": "fails: T1 +0.040%/trade (n 42, p 0.24), QQQ -0.017%, wall vs placebo +0.08 pts (p 0.058), 2022 = +5.0 of +6.0% total"
+  },
+  {
+   "id": "2026-11-01-yearend-forecast",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "D",
+   "next": "rule",
+   "note": "base rates only; scoring continues Nov 30 and Dec 31",
+   "result": "13-week analog has no predictive power (next-20 corr +0.05, p 0.13; Octobers -0.00), excluded. Base rates: P(SPY > 755.69) 63% Nov 13, 70% Nov 30, 78% Dec 31 (median\u2026"
+  },
+  {
+   "id": "2026-11-02-election-vol",
+   "era": "studies",
+   "book": "PRICE",
+   "mech": "MACRO",
+   "ev": "L",
+   "next": "close",
+   "note": "event passed; score EV1 once",
+   "result": "SPY null: results day priced 1.08% vs ~1.0% normal (excess 17-20% of variance by registered/coded baseline, 31% ex-Monday; <= 0.11 vol pts of IV30); election <= 0.2\u2026"
+  },
+  {
+   "id": "2026-11-02-hft-papers",
+   "era": "studies",
+   "book": "THEORY",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "list is mostly ML trading bots, crypto and power trading; few top-journal microstructure papers. Useful: Ni-Pearson-Poteshman-White RFS (hedging changes vol),\u2026"
+  },
+  {
+   "id": "2026-11-02-live-read",
+   "era": "studies",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "SPY 758.6 pre-mkt, flip 766.4 (was 774 on stale OI), put wall 750, call wall 800, pocket 730-745 (-$21bn/1%); TSLA 402.2, 6% above flip, long gamma, call wall 400\u2026"
+  },
+  {
+   "id": "2026-11-02-note-check",
+   "era": "studies",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "facts mostly right (GOOGL -12.6%, INTC -28.6%, S&P -1.82%, defensives +10% in Oct); NDX -6% overstated (QQQ -4.8%); AAPL reports Mon Nov 2 = erratum for our\u2026"
+  },
+  {
+   "id": "2026-11-02-orb-gamma",
+   "era": "studies",
+   "book": "PRICE",
+   "mech": "HIST",
+   "ev": "L",
+   "next": "rule",
+   "note": "forward paper log only (OG2); no more backtests",
+   "result": "5-minute opening-range breakout: fails on SPY; TSLA passes out of sample (+29.5 bp/day, p 0.018); no exit rule improves it"
+  },
+  {
+   "id": "2026-11-02-polymarket-fed",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "MACRO",
+   "ev": "L",
+   "next": "close",
+   "note": "",
+   "result": "established: hawkish shift -> same-day falls in utilities (-1.7%/+5bp, Holm 0.000), REITs (-0.9), mREITs (-1.25), homebuilders (-2.2), TLT (-0.8); dollar +0.5;\u2026"
+  },
+  {
+   "id": "2026-11-02-tsla-breaking-point",
+   "era": "studies",
+   "book": "EXIT",
+   "mech": "POS",
+   "ev": "N",
+   "next": "park",
+   "note": "composite top score (BP1) not built",
+   "result": "no single gauge separates tops (Holm >= 0.51; all signs as predicted)"
+  },
+  {
+   "id": "2026-11-02-tsla-options-signal",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "POS",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "no: none passes (Holm 0.95), none improves 2023-26 OOS forecasts beyond momentum + gamma"
+  },
+  {
+   "id": "2026-11-02-tsla-politics",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "MACRO",
+   "ev": "N",
+   "next": "close",
+   "note": "score TP1 once",
+   "result": "Paxton (TX Senate) +1.9%/+10 pts (p 0.025, Holm 0.175) = lean 'red is better'; Paxton 52->29% maps to ~-4% of TSLA's +27.9% own move. Only Holm pass: TX governor\u2026"
+  },
+  {
+   "id": "2026-11-02-tsla-wall-flow",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "POS",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "next wall 420 (strongest gamma above spot, +20.4k new calls); owner's 430 inside the 420-440 band (minor strike); then 440-455 (440 +26.7k new calls, total gamma\u2026"
+  },
+  {
+   "id": "2026-11-04-deferred-days",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "FLOW",
+   "ev": "L",
+   "next": "ref",
+   "note": "closing imbalance confirmed on a second day; exhaustion from bars failed again",
+   "result": "Oct 27's late drop = closing-auction sell imbalance (net \u2248 -$1.55bn at 15:50; SPY sell; all 10 names fell into the close; A5 still passes, \u03c1 +0.356 on 270); A4\u2026"
+  },
+  {
+   "id": "2026-11-04-msft-read",
+   "era": "studies",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "a map and state check, not a test"
+  },
+  {
+   "id": "2026-11-04-post-election-map",
+   "era": "studies",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "a map, not a test"
+  },
+  {
+   "id": "2026-11-05-2000-lens",
+   "era": "studies",
+   "book": "RISK",
+   "mech": "HIST",
+   "ev": "D",
+   "next": "close",
+   "note": "",
+   "result": "Rhymes: rotation out of capex-boom tech into defensives while average stock holds; chips peak -> lower high -> collapse (SOX -36% in 97 sessions vs ~-20% in 2000);\u2026"
+  },
+  {
+   "id": "2026-11-05-ai-rotation",
+   "era": "studies",
+   "book": "TIME",
+   "mech": "MACRO",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "a map, not a test"
+  },
+  {
+   "id": "2026-11-05-channel-physics",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "H-T1 FAILS (3y variance ratio 0.77 / 1.00 / 0.64 for SPX / NDX / SOX, all inside random-walk ranges). H-T2 FAILS (channel position predicts no 1-12m return; slight\u2026"
+  },
+  {
+   "id": "2026-11-05-channels-deep",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "H-P2 FAILS (7 of 20 finished setups became bears, 35% > 30%; narrow 1 of 1). H-P3 FAILS (bears are not rarer in Nov-Dec: 3 of 12, p 0.87; zigzag 5 of 27, p 0.71). P1\u2026"
+  },
+  {
+   "id": "2026-11-05-liquidity-cycle",
+   "era": "studies",
+   "book": "SIZE",
+   "mech": "FLOW",
+   "ev": "N",
+   "next": "refine",
+   "note": "a daily proxy failed; needs real depth and trades (liquidity pilot)",
+   "result": "Q1 fails (thinness adds no OOS R\u00b2 for SPY or TSLA; 'liquidity-led' is not predictive). Q2: order beats chance (52% vs 33%, partly by construction); THIN phase: range\u2026"
+  },
+  {
+   "id": "2026-11-05-macro-trigger",
+   "era": "studies",
+   "book": "SIZE",
+   "mech": "MACRO",
+   "ev": "L",
+   "next": "refine",
+   "note": "re-pose as a pricing test: is the release-day implied move too low when gamma is low?",
+   "result": "Low gamma makes the S&P's reaction per unit of data surprise bigger (Holm 0.047); relief asymmetry and follow-through fail"
+  },
+  {
+   "id": "2026-11-05-november-cycle",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "L",
+   "next": "close",
+   "note": "",
+   "result": "P1 fails (weak-start Novembers' rest of month +0.97% vs other months +1.11%, p 0.53); P2 passes (bull months: days 1-4 +7.9 bp/day over the rest, both eras =\u2026"
+  },
+  {
+   "id": "2026-11-05-regime-compare",
+   "era": "studies",
+   "book": "RISK",
+   "mech": "HIST",
+   "ev": "D",
+   "next": "close",
+   "note": "",
+   "result": "Not 2022 (no inflation spiral; Fed already at 3.88; real 10y already 2.6-2.8; credit calm; AI suppliers' EPS still rising: NVDA next FY +24% in 90d). Not a clean\u2026"
+  },
+  {
+   "id": "2026-11-05-speed-extremes",
+   "era": "studies",
+   "book": "TIME",
+   "mech": "VOL",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "H1 fails (SOX p 0.05 adj 0.10; NDX 0.18). Extreme yes (TSM -4.2\u03c3, TSLA -3.9\u03c3, QQQ -4.3\u03c3, SPY -4.8\u03c3 today; LRCX/AMAT/TSM/SOX 20-day \u22640.3 pct). Indicates a bounce, not\u2026"
+  },
+  {
+   "id": "2026-11-05-two-day-thesis",
+   "era": "studies",
+   "book": "RISK",
+   "mech": "MACRO",
+   "ev": "L",
+   "next": "ref",
+   "note": "",
+   "result": "Thesis v5: same relative shock, different level. AI build-out basket lost 9.0% (Wed) and 9.7% (Thu) vs the rest of the S&P; the rest was +3.2% with an oil/peace\u2026"
+  },
+  {
+   "id": "2026-11-05-unwind-low",
+   "era": "studies",
+   "book": "TIME",
+   "mech": "VOL",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "insufficient evidence to call a July-29-type low; leans bounce, not bottom"
+  },
+  {
+   "id": "2026-11-06-aftershocks",
+   "era": "studies",
+   "book": "SIZE",
+   "mech": "VOL",
+   "ev": "R",
+   "next": "rule",
+   "note": "the volatility clock; scoring continues Dec 7 and Feb 5",
+   "result": "Big-move days cluster: each triggers 0.87\u20130.95 more; about 9 in 10 big days are aftershocks"
+  },
+  {
+   "id": "2026-11-06-crash-law",
+   "era": "studies",
+   "book": "RISK",
+   "mech": "FLOW",
+   "ev": "R",
+   "next": "refine",
+   "note": "its Part D is the liquidity pilot",
+   "result": "Normal-liquidity impact cannot make an index crash (needs more selling than the day's volume on 54 of 54 days); the response to selling must jump"
+  },
+  {
+   "id": "2026-11-06-forced-flows",
+   "era": "studies",
+   "book": "DIR",
+   "mech": "FORCED",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "H-FF1/2/3 FAIL (out-of-sample corr -0.09; flow and momentum both lose to zero; leveraged-intensity rank \u03c1 +0.12, p 0.36). Flows are large (Nov 5 semis \u2248 $21\u201328bn =\u2026"
+  },
+  {
+   "id": "2026-11-06-liquidity-landscape",
+   "era": "studies",
+   "book": "LEVEL",
+   "mech": "FLOW",
+   "ev": "D",
+   "next": "refine",
+   "note": "a plan only; becomes the liquidity pilot",
+   "result": "nothing tested yet"
+  },
+  {
+   "id": "2026-11-06-literature-laws",
+   "era": "studies",
+   "book": "THEORY",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "16 laws in three layers, each with a mechanism and an evidence grade. Established: square-root impact (exponent 1/2 for every Tokyo stock and trader; mechanical, not\u2026"
+  },
+  {
+   "id": "2026-11-06-paper-unified-flow",
+   "era": "studies",
+   "book": "THEORY",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "Strong idea, thin support for its key condition. One number, H0 (memory of slow 'core' order flow), sets volume roughness, the impact exponent and volatility\u2026"
+  },
+  {
+   "id": "2026-11-06-signature-test",
+   "era": "studies",
+   "book": "TIME",
+   "mech": "VOL",
+   "ev": "L",
+   "next": "close",
+   "note": "its live forecast is scored around March 2027",
+   "result": "H1 passes narrowly: build-up shocks fade more slowly (persistence 0.32 vs 0.15, p 0.049; all 18 specifications positive, corrected joint p 0.08; all 13 dropped shocks\u2026"
+  },
+  {
+   "id": "\u00a71 computing the lines",
+   "era": "founding",
+   "book": "BUILD",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "Channel lines drawn by an algorithm"
+  },
+  {
+   "id": "\u00a72 why channels look respected",
+   "era": "founding",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "The lower line is roughly the 50-day average drawn as a straight line"
+  },
+  {
+   "id": "\u00a73 do lines matter beyond chance",
+   "era": "founding",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "Across 40 stocks and about 2,000 touches, rejection at lines is within random-path noise"
+  },
+  {
+   "id": "\u00a74 predicting breakouts",
+   "era": "founding",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "L",
+   "next": "close",
+   "note": "later channel tests found no tradable edge",
+   "result": "Walk-forward model, out-of-sample AUC 0.62: counter-trend lines break 62%, with-trend 46%"
+  },
+  {
+   "id": "\u00a74b level hopping",
+   "era": "founding",
+   "book": "LEVEL",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "it said on Oct 2 that the options edge is realized vs implied volatility; never followed up",
+   "result": "Levels carry almost no information beyond volatility"
+  },
+  {
+   "id": "\u00a74c MSFT's two up-weeks",
+   "era": "founding",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a74d what frees the market",
+   "era": "founding",
+   "book": "SIZE",
+   "mech": "POS",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "Low S&P dealer gamma is the variable that matters for big up-legs; calendar and VIX triggers alone barely do"
+  },
+  {
+   "id": "\u00a74e earnings and positioning",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "FORCED",
+   "ev": "L",
+   "next": "refine",
+   "note": "re-pose as a pricing test (EQ1: straddle P&L by positioning)",
+   "result": "How crowded a stock is going into earnings shapes the drift after (690 reactions, 38 stocks)"
+  },
+  {
+   "id": "\u00a74f gamma release + vol crush rule",
+   "era": "founding",
+   "book": "PRICE",
+   "mech": "POS",
+   "ev": "L",
+   "next": "refine",
+   "note": "re-run with real option prices; forward log",
+   "result": "Out of sample 2019\u201326: 15 trades, 73% hit, S&P +2.9% a trade; calls lumpy and not beyond the 95th percentile of random entries"
+  },
+  {
+   "id": "\u00a74g era check",
+   "era": "founding",
+   "book": "BUILD",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "End-of-day gamma cannot see same-day (0DTE) positions"
+  },
+  {
+   "id": "\u00a74h the gamma path",
+   "era": "founding",
+   "book": "TIME",
+   "mech": "POS",
+   "ev": "L",
+   "next": "rule",
+   "note": "",
+   "result": "Gamma builds into monthly expiry and drops about 17 percentile points on expiry day"
+  },
+  {
+   "id": "\u00a74i the entry ladder",
+   "era": "founding",
+   "book": "TIME",
+   "mech": "POS",
+   "ev": "L",
+   "next": "refine",
+   "note": "real option prices and a forward log (F2); most rung intervals overlap the base",
+   "result": "P(up-leg within 20 days) 65\u201379% on the rungs vs 50\u201358% any day. Naked calls bought early lose; call spreads gain 10\u201318%; naked calls pay only after the vol crush (R7)"
+  },
+  {
+   "id": "\u00a74j multiverse on S&P gamma",
+   "era": "founding",
+   "book": "SIZE",
+   "mech": "POS",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "Joint p < 0.003 over 216 specifications: low gamma predicts that a big move starts, not a higher average return"
+  },
+  {
+   "id": "\u00a74k S&P gamma for TSLA",
+   "era": "founding",
+   "book": "SIZE",
+   "mech": "POS",
+   "ev": "N",
+   "next": "close",
+   "note": "use each stock's own positioning",
+   "result": "S&P gamma says nothing about TSLA (joint p 0.74)"
+  },
+  {
+   "id": "\u00a74l TSLA bursts, event by event",
+   "era": "founding",
+   "book": "TIME",
+   "mech": "POS",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a74m TSLA today",
+   "era": "founding",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a74n TSLA Q4 catch-ups",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "D",
+   "next": "close",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a74o TSLA option regimes",
+   "era": "founding",
+   "book": "TIME",
+   "mech": "FORCED",
+   "ev": "L",
+   "next": "park",
+   "note": "",
+   "result": "Monday up-bursts are more common (weekly-expiry mechanics); corrected in \u00a74ac"
+  },
+  {
+   "id": "\u00a74p after the leg: the reset",
+   "era": "founding",
+   "book": "EXIT",
+   "mech": "POS",
+   "ev": "L",
+   "next": "refine",
+   "note": "test the reset as an exit rule in option P&L",
+   "result": "Legs end as gamma rebuilds to pinned levels; a reset precedes the next leg"
+  },
+  {
+   "id": "\u00a74q scorecard",
+   "era": "founding",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "Oct 1\u20138: 6 calls held, 3 partly, 1 missed"
+  },
+  {
+   "id": "\u00a74r free data, tested",
+   "era": "founding",
+   "book": "BUILD",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "Gamma rebuilt from open interest is trustworthy"
+  },
+  {
+   "id": "\u00a74s TSLA's own gamma",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "POS",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "Freed (little open interest near the price) \u2192 up-bursts 3.8\u00d7 with controls (p < 0.001); below its flip moves get bigger and are snap-backs"
+  },
+  {
+   "id": "\u00a74t TSLA up-bursts, one by one",
+   "era": "founding",
+   "book": "TIME",
+   "mech": "POS",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a74u today vs past run-ups",
+   "era": "founding",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a74v the named TSLA moves",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "POS",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a74w TSLA full setup",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "POS",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "Freed + below its own flip: 39% up-bursts vs 17% down within 3 sessions (reproduced)"
+  },
+  {
+   "id": "\u00a74x analog outlook",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "D",
+   "next": "close",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a74y the mechanics that push price",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "FORCED",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": "A list of flows that can be computed before they happen"
+  },
+  {
+   "id": "\u00a74z multiverse on own positioning",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "POS",
+   "ev": "R",
+   "next": "rule",
+   "note": "",
+   "result": "Own-positioning up-legs +27 points, beyond luck in 89% of specifications (joint p < 0.003)"
+  },
+  {
+   "id": "\u00a74aa is MSFT held back",
+   "era": "founding",
+   "book": "TIME",
+   "mech": "POS",
+   "ev": "L",
+   "next": "park",
+   "note": "",
+   "result": "'Freed' means S&P dealers short gamma, not thin open interest at SPY's price"
+  },
+  {
+   "id": "\u00a74ab TimesFM",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "HIST",
+   "ev": "N",
+   "next": "close",
+   "note": "",
+   "result": "A price-series model adds nothing; the edges are in structure"
+  },
+  {
+   "id": "\u00a74ac named moves, day by day",
+   "era": "founding",
+   "book": "DIR",
+   "mech": "POS",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a74ad the edge lab",
+   "era": "founding",
+   "book": "BUILD",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "use it as the power check before any test",
+   "result": "Detection limits: how big an edge must be before a backtest can see it"
+  },
+  {
+   "id": "\u00a74ae update Oct 15",
+   "era": "founding",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": ""
+  },
+  {
+   "id": "\u00a75 MU snapshot",
+   "era": "founding",
+   "book": "DESK",
+   "mech": "-",
+   "ev": "D",
+   "next": "ref",
+   "note": "",
+   "result": ""
+  }
+ ],
+ "tally": {
+  "SIZE": {
+   "R": 4,
+   "L": 2,
+   "N": 2,
+   "D": 2
+  },
+  "LEVEL": {
+   "R": 2,
+   "L": 2,
+   "N": 9,
+   "D": 5
+  },
+  "DIR": {
+   "R": 3,
+   "L": 11,
+   "N": 10,
+   "D": 9
+  },
+  "TIME": {
+   "R": 0,
+   "L": 6,
+   "N": 5,
+   "D": 4
+  },
+  "PRICE": {
+   "R": 0,
+   "L": 3,
+   "N": 1,
+   "D": 0
+  },
+  "EXIT": {
+   "R": 2,
+   "L": 1,
+   "N": 5,
+   "D": 0
+  },
+  "RISK": {
+   "R": 1,
+   "L": 2,
+   "N": 1,
+   "D": 2
+  },
+  "DESK": {
+   "R": 0,
+   "L": 0,
+   "N": 0,
+   "D": 15
+  },
+  "THEORY": {
+   "R": 0,
+   "L": 0,
+   "N": 0,
+   "D": 3
+  },
+  "BUILD": {
+   "R": 0,
+   "L": 0,
+   "N": 0,
+   "D": 4
+  }
+ },
+ "next": {
+  "SIZE": {
+   "rule": 4,
+   "refine": 2,
+   "park": 0,
+   "close": 1,
+   "ref": 3
+  },
+  "LEVEL": {
+   "rule": 3,
+   "refine": 1,
+   "park": 0,
+   "close": 9,
+   "ref": 5
+  },
+  "DIR": {
+   "rule": 5,
+   "refine": 2,
+   "park": 4,
+   "close": 17,
+   "ref": 5
+  },
+  "TIME": {
+   "rule": 1,
+   "refine": 1,
+   "park": 2,
+   "close": 7,
+   "ref": 4
+  },
+  "PRICE": {
+   "rule": 1,
+   "refine": 2,
+   "park": 0,
+   "close": 1,
+   "ref": 0
+  },
+  "EXIT": {
+   "rule": 2,
+   "refine": 1,
+   "park": 1,
+   "close": 4,
+   "ref": 0
+  },
+  "RISK": {
+   "rule": 0,
+   "refine": 1,
+   "park": 1,
+   "close": 3,
+   "ref": 1
+  },
+  "DESK": {
+   "rule": 0,
+   "refine": 0,
+   "park": 0,
+   "close": 0,
+   "ref": 15
+  },
+  "THEORY": {
+   "rule": 0,
+   "refine": 0,
+   "park": 0,
+   "close": 0,
+   "ref": 3
+  },
+  "BUILD": {
+   "rule": 0,
+   "refine": 0,
+   "park": 0,
+   "close": 0,
+   "ref": 4
+  }
+ },
+ "grid": {
+  "POS": {
+   "SIZE": {
+    "R": 3,
+    "L": 0,
+    "N": 1,
+    "D": 2
+   },
+   "LEVEL": {
+    "R": 2,
+    "L": 1,
+    "N": 2,
+    "D": 1
+   },
+   "DIR": {
+    "R": 3,
+    "L": 0,
+    "N": 2,
+    "D": 3
+   },
+   "TIME": {
+    "R": 0,
+    "L": 3,
+    "N": 0,
+    "D": 3
+   },
+   "PRICE": {
+    "R": 0,
+    "L": 1,
+    "N": 1,
+    "D": 0
+   },
+   "EXIT": {
+    "R": 0,
+    "L": 1,
+    "N": 1,
+    "D": 0
+   },
+   "RISK": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   }
+  },
+  "FLOW": {
+   "SIZE": {
+    "R": 0,
+    "L": 1,
+    "N": 1,
+    "D": 0
+   },
+   "LEVEL": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 1
+   },
+   "DIR": {
+    "R": 0,
+    "L": 3,
+    "N": 2,
+    "D": 1
+   },
+   "TIME": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "PRICE": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "EXIT": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "RISK": {
+    "R": 1,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   }
+  },
+  "FORCED": {
+   "SIZE": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "LEVEL": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "DIR": {
+    "R": 0,
+    "L": 2,
+    "N": 2,
+    "D": 1
+   },
+   "TIME": {
+    "R": 0,
+    "L": 1,
+    "N": 0,
+    "D": 0
+   },
+   "PRICE": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "EXIT": {
+    "R": 2,
+    "L": 0,
+    "N": 4,
+    "D": 0
+   },
+   "RISK": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   }
+  },
+  "VOL": {
+   "SIZE": {
+    "R": 1,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "LEVEL": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "DIR": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "TIME": {
+    "R": 0,
+    "L": 1,
+    "N": 2,
+    "D": 0
+   },
+   "PRICE": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "EXIT": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "RISK": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   }
+  },
+  "HIST": {
+   "SIZE": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "LEVEL": {
+    "R": 0,
+    "L": 1,
+    "N": 7,
+    "D": 3
+   },
+   "DIR": {
+    "R": 0,
+    "L": 4,
+    "N": 2,
+    "D": 4
+   },
+   "TIME": {
+    "R": 0,
+    "L": 1,
+    "N": 3,
+    "D": 0
+   },
+   "PRICE": {
+    "R": 0,
+    "L": 1,
+    "N": 0,
+    "D": 0
+   },
+   "EXIT": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "RISK": {
+    "R": 0,
+    "L": 1,
+    "N": 1,
+    "D": 2
+   }
+  },
+  "MACRO": {
+   "SIZE": {
+    "R": 0,
+    "L": 1,
+    "N": 0,
+    "D": 0
+   },
+   "LEVEL": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "DIR": {
+    "R": 0,
+    "L": 2,
+    "N": 2,
+    "D": 0
+   },
+   "TIME": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 1
+   },
+   "PRICE": {
+    "R": 0,
+    "L": 1,
+    "N": 0,
+    "D": 0
+   },
+   "EXIT": {
+    "R": 0,
+    "L": 0,
+    "N": 0,
+    "D": 0
+   },
+   "RISK": {
+    "R": 0,
+    "L": 1,
+    "N": 0,
+    "D": 0
+   }
+  }
+ },
+ "n": 116
+}
