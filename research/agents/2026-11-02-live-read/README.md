@@ -571,3 +571,28 @@ S1, S2, S7 and T1–T4 are unchanged.
 * **Descriptive.** The event count is small, so no rule is claimed.
 
 * **GD cancelled** (22:08 ET) at the owner's request, before any data was computed. The owner wanted a judgement call, not another base-rate table. Nothing was run.
+
+## Scored (LR1), 2026-11-15, late
+The week: SPY closed 752.10, 754.35, 766.81, 733.00, 735.29 (high 775.64, low 732.71). TSLA closed 403.82, 398.50, 385.19, 343.69, 358.22 (high 414.23, low 338.15). VIX's lowest close was 16.61.
+
+| # | Happened? | Options-implied map | My call |
+|---|---|---|---|
+| S1 Mon close > 755.72 | no | 65% | 65% |
+| S2 Mon close in 751–766 | yes | 68% | 70% |
+| S3 trades ≥ 766.4 by Fri | yes | 62% | 65% |
+| S4 Fri close ≥ 766.4 | no | 32% | 35% |
+| S5 trades ≤ 750 by Fri | yes | 60% | 50% |
+| S6 Fri close > 755.72 | no | 56% | 60% |
+| S7 Fri close ≤ 740.6 | yes | 15% | 12% |
+| S8 VIX close ≤ 16.5 on any day | no | – | 25% |
+| T1 Mon close > 399.81 | yes | 59% | 62% |
+| T2 Mon close in 395–410 | yes | – | 60% |
+| T3 trades ≥ 420 by Fri | no | 46% | 45% |
+| T4 Fri close ≥ 420 | no | 24% | 20% |
+| T5 trades ≤ 380 by Fri | yes | 37% | 30% |
+| T6 Fri close > 399.81 | no | 52% | 57% |
+
+* **Brier score on the 12 forecasts with a benchmark** (lower is better): options-implied map 0.256, my calls 0.279, coin flip 0.250. On all 14 my calls score 0.255.
+* **My adjustments lost to the unadjusted options odds.** They leaned up (S5, S6, T5, T6) in a week that crashed.
+* **Scenarios:** SPY's "flush" (22%) happened and went deeper than "tests ~740": Friday closed at 735.29, inside the mapped 730–745 pocket. TSLA finished far outside every listed scenario (358 against a worst case of 372–390).
+* One week, with correlated outcomes: weak evidence. Logged in `2026-11-15-audit/`.

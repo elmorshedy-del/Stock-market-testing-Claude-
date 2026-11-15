@@ -135,3 +135,8 @@ Out-of-sample log-likelihood gain over a constant rate, 2008–2026:
   * the gap before the new leg ranged from 1 session (2022-04-29, 2022-08-26) to 43 (2022-03-07, after an 11% bounce);
   * COVID: 6 sessions with a 6% bounce, then −24%.
 * **Reading.** The owner's "digest, then follow-through" pattern holds: most continuations paused first. A quiet stretch lowers the odds of another leg only gradually: about 1 in 3 after a week, 1 in 4 after two weeks, 1 in 10 after four.
+
+## Scored: the 5-session forecast (scored 2026-11-15)
+* **Window:** Nov 6, 9, 10, 11 and 12. **Big days** (|return| ≥ 1.71%): **1**, on Nov 9 (+2.35%).
+* **Forecast:** Hawkes 0.63 (range 0–2); constant rate 0.55. The outcome fits both, so this window does not separate them.
+* Next scores: 2026-12-07 (21 sessions; Hawkes 2.4, analog 5.0–6.7) and 2027-02-05.

@@ -1,6 +1,16 @@
 # Lessons (append only, newest first)
 Each entry: what went wrong → the rule that prevents it. Read this at the start of every session.
 
+## 2026-11-15 (from the audit)
+* **Forecasts were logged and then not scored on time; five studies never reached INDEX.md; the to-do list reached 79 open items against 7 closed.**
+  → Score on the due date before any new work. A study is not finished until it has an INDEX row and a playbook line. Cap the backlog.
+* **My adjustments to the options-implied odds lost to the unadjusted odds** (0.279 vs 0.256 Brier, 12 forecasts).
+  → Quote the market's odds as the default. Deviate only where a proven rule applies, and keep the deviation's own score.
+* **Three jobs (live desk, edge hunt, science) ran in one stream,** so each interrupted the others and the goal moved three times.
+  → Label every piece of work with its lane. A desk read may add one backlog line; it may not start a test.
+* **I took the working memory as the whole record.** The owner pointed out that the thread is much older (it began Oct 2) and that work sits in other repositories.
+  → For any audit or summary, start from the full log, the transcript and the commit history by session tag, not from STATE.md.
+
 ## 2026-11-06
 * **Proxy failure caught by a pre-registered cross-check.** ^GSPC share volume × index level is not a dollar-volume series across decades: it was 8× too low in 1987 against Kyle–Obizhaeva's documented $10.2bn.
   → For any constructed series that enters a law, pre-register a cross-check against an independent documented value, and a fallback.

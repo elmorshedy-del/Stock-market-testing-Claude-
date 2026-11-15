@@ -82,3 +82,9 @@
 | Fri Nov 13 | 764 | 751–778 | 734–794 | | | |
 | Mon Nov 30 | 769 | 754–784 | 732–801 | | | |
 | Thu Dec 31 | 783 | 757–804 | 740–820 | | | |
+
+## Scored: Nov 13 checkpoint (scored 2026-11-15)
+* SPY closed at **754.37** on Fri Nov 13, against a forecast median of 764 and a 25–75% band of 751–778.
+* It sits at about the 31st percentile (interpolated between the 25% and 50% bands), **inside the 25–75% band**.
+* The path was not smooth: the Nov 5 close of 733.00 was just below the 10% band for Nov 13 (734).
+* One date; nothing can be concluded yet. Next checkpoints: Nov 30 and Dec 31.

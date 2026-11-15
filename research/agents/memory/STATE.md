@@ -1,12 +1,25 @@
 # Working memory (overwrite at the end of every task)
-**Updated:** 2026-11-06 (after the crash-law test).
+**Updated:** 2026-11-15 (after the audit).
 Read this first, then LESSONS.md.
 * Theory: [FOUNDATION.md](../FOUNDATION.md)
 * Plan: [PROGRAM.md](../PROGRAM.md)
 * Study log: [INDEX.md](../INDEX.md)
 
 ## Where we are
-* **Program:** laws-first (PROGRAM.md, revision 2026-11-06). The theory is FOUNDATION.md: 16 laws in three layers.
+* **AUDIT DONE 2026-11-15** (`2026-11-15-audit/`). **A proposal is waiting for the owner. Do not start new tests until they answer.**
+  * **Scope:** this thread began 2026-10-02 (the founding report `research/microstructure/REPORT.md`, then 81 studies). `Market_Data` main holds our option data; its `analysis/*` branches are another session's. `TeslaQuant` has no commits from this thread.
+  * **Tally:** 55 tests → 7 robust, 19 leans, 29 nulls; 26 studies with no test. Every robust result is in dealer positioning, forced flows, or big-move physics.
+  * **Forward record:** my adjusted calls 0.279 vs the options-implied odds 0.256 (12 forecasts, week of Nov 2). Level calls did better.
+  * **Proposed purpose:** each day know the market's state and what it makes likely (how big, where, how fast); turn it into entry and exit rules for SPY and TSLA calls; score live against the options market's odds.
+  * **Proposed theory:** three state variables: positioning (measured), liquidity (not measured), forced flow (partly).
+  * **Proposed path:**
+    * step 0: consolidate (purpose page, SPY playbook, scoreboard, to-do list from 79 to about 10);
+    * step 1: prove or drop the traded rules in real option prices, and start a daily forward log;
+    * step 2: measure liquidity from ES/NQ signed trades (about $35 first, quote first);
+    * step 3: forced-flow calendar.
+    * Parked: channels, indicators, analogs, politics, quirks, law replications that change no decision.
+  * **Proposed method:** seven operating rules (three lanes; a gate before every test; look first; pre-register in the owner's units; one home for conclusions; a scoreboard; a weekly review). They are in the audit README.
+* **Program on file (until the owner decides):** laws-first (PROGRAM.md, revision 2026-11-06). The theory is FOUNDATION.md: 16 laws in three layers.
 * **Last task done:** test #4, the crash law (`2026-11-06-crash-law/`, pre-registered @ 77fea8a). The owner approved it once the papers were read in full.
   * All seven crash-law papers read in full, with cards.
   * **Results:**
@@ -35,16 +48,16 @@ Read this first, then LESSONS.md.
   * Items 1–3 and 5 need tick data. Get a quote before spending.
 
 ## Waiting on the owner
-1. **Approval for crash-law Part D:** ES/NQ signed trades, about $25–35. Quote first.
+0. **The audit's four decisions:** the purpose sentence; go-ahead for step 0; the step 2 budget (about $35, quote first); whether to cross-check the other thread's SPY work in `Market_Data`.
+1. **Approval for crash-law Part D:** ES/NQ signed trades, about $25–35. Quote first. (This is now step 2 of the proposed path.)
 2. About $100 of order-flow data, for the fast-layer laws and the close.
 3. Which agenda item comes next: 1 (how mechanical), 2 (0DTE/gamma), 3 (AI cross-impact) or 5 (distance to instability). The crash result points to 5 and 1.
 
 ## Scheduled scoring
 * M3 live forecast (Nov 5 shock): score after day 89, around 2027-03-16.
-* Aftershock forecasts: 2026-11-13, 2026-12-07, 2027-02-05.
-* Year-end forecast: 2026-11-13.
-* Overdue: EV1 and TP1 (due Nov 5); live-read LR1 (due Nov 6 close).
-* CPI on Nov 10.
+* Aftershock forecasts: 2026-11-13 scored (1 big day vs 0.63 forecast); next 2026-12-07, 2027-02-05.
+* Year-end forecast: Nov 13 scored (754.37, inside 25–75%); next Nov 30, Dec 31.
+* LR1 scored 2026-11-15. **Still overdue: EV1 and TP1.** Open: F2–F6. The ladder call (R2 on Oct 20) is due about Nov 17.
 
 ## Reminders
 * The owner should rotate the ThetaData key.
