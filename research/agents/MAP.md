@@ -122,7 +122,7 @@ A call buyer makes money when the move that happens is bigger, sooner or more on
 ## The queue (in order)
 | Step | Question it serves | What | Data and cost | The decision it changes | Stop rule |
 |---|---|---|---|---|---|
-| **1. Is the state priced?** | 5 | Realized move ÷ implied move over 1, 5 and 20 sessions, by gamma state and by ladder rung. First reproduce the known gamma → range result, and settle which gamma measure to trust (N1) | Free: GEX, DIX and VIX since 2011; SPY end-of-day option quotes since Dec 2022 (`Market_Data`). TSLA needs its chains re-pulled | When to own naked calls, when to use spreads, when to stand aside | If the ratio is flat across states, gamma knowledge is for levels and exits only |
+| **1. Is the state priced?** | 5 | **Derivation first** (a one-page note for the owner, before any data): option prices lean on recent realized volatility and on fear, while positioning is forward-looking. So options should be cheapest where positioning changes with no price move (after a big expiry clears the open interest near the price), and dearest after a selloff, when low gamma and high fear arrive together. It should fail if implied volatility already rises across the expiry. **Then the test:** realized move ÷ implied move over 1, 5 and 20 sessions, by gamma state and by ladder rung. First reproduce the known gamma → range result, and settle which gamma measure to trust (N1) | Free: GEX, DIX and VIX since 2011; SPY end-of-day option quotes since Dec 2022 (`Market_Data`). TSLA needs its chains re-pulled | When to own naked calls, when to use spreads, when to stand aside | If the ratio is flat across states, gamma knowledge is for levels and exits only |
 | **2. Structure and exit table** | 5, 6 | For each traded setup (ladder rungs incl. R7, gamma release, TSLA full setup): naked call vs spread, with three exits (at the call wall, fixed days, first volatility-crush day), against the same trade on random days. Real bid and ask | Free; same data | A default structure and exit per setup | Few events mean wide intervals. If nothing beats random entry, the setups become context, not trades |
 | **3. Daily state card and scoreboard** | all | One standard card each morning for SPY and TSLA: state, the market's odds, levels, flags for proven rules only. Scored automatically. Three forecasters: the market, the playbook, the owner | Build. Starts now and runs alongside | Replaces ad hoc live reads; gives rare setups their forward evidence | Review at 50 trading days |
 | **4. Your own fills** (optional) | 6 | Split your trade P&L into direction, option price change, time decay and exit timing | Your broker export | Which question to work on first | |
@@ -145,10 +145,12 @@ TODO.md is kept as the record. New work is queued here, not there.
 
 ## Operating rules
 1. **Three lanes, never mixed:** desk (the daily card), test (one at a time), build.
-2. **A gate before every test:**
-   * which of the seven questions it serves;
-   * which decision it changes;
+2. **A gate before every test, with the derivation first** (owner, 2026-11-15: ideas built from fundamentals beat brute statistics, because you know why they work and when they will fail):
+   * **the mechanism:** who is forced to trade, who takes the other side, and why the price has not already adjusted;
+   * **the derived prediction, written before any data is touched:** the sign, a rough size, and the condition under which it should vanish or flip;
+   * which of the seven questions it serves, and which decision it changes;
    * whether the test has the power to see the effect.
+   * A test with no mechanism is not run. A surprise found in the data is labelled exploratory until a mechanism predicts a second, independent footprint (METHOD.md rules 2 and 13).
 3. **Look first:** 5–10 individual cases before any statistics. No pooling across regimes or eras.
 4. **Fix the rules before running.** Report in odds, levels and option P&L.
 5. **One home for conclusions:** a line in this map and in the catalog. Otherwise it does not exist.
