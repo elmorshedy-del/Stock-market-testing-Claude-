@@ -134,3 +134,10 @@ The review of arXiv:2601.23172 above says the paper "explains the forced-flows f
 * **2026-11-06, step 1 (M3) done.**
   * The signature predicts how long the volatility lasts (weakly; most clearly in long-memory NDX and SOX), not second legs.
   * Next: step 2 (M1 clock law, free), waiting for the owner's go. Optional M3 follow-up: rerun on the 1-minute bars we hold, for power.
+
+
+## Revision 2026-11-15: the map replaces the order of work
+* The audit (`2026-11-15-audit/`) found that "laws first" was drifting into replication of the academic literature. Its two tests changed no trade.
+* The owner asked for the work to be recategorized into a new architecture. That is [MAP.md](MAP.md): one purpose, seven questions a call buyer asks, every study filed under one of them ([CATALOG.md](CATALOG.md)), and a ranked queue.
+* **The order of work is now the queue in MAP.md.** Step 1 is "is the state priced?": realized against implied move, by gamma state.
+* FOUNDATION.md stays as the theory reference. The law-by-law order above is retired: a law is tested only when a queue step needs it.

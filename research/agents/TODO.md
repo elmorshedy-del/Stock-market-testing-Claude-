@@ -4,6 +4,8 @@ Open leads, grouped by what unblocks them. Source: [2026-10-26-ladder-status](20
 When a lead is run, move it to **Done** with a link to its folder and INDEX row.
 Every test is pre-registered in its own folder before it runs.
 
+> **2026-11-15:** this list is now a record. Its 76 live items were triaged in [MAP.md](MAP.md) ("What happens to the old to-do list"): 14 folded into the queue, 9 merged into the liquidity pilot, 11 under the earnings step, 3 on the bench, 31 parked, 8 closed. New work is queued in MAP.md.
+
 ## Blocked on data the owner is getting
 
 ### ThetaData Options Standard ($80/mo; tick trades + every NBBO quote)
