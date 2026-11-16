@@ -1,5 +1,5 @@
 # Working memory (overwrite at the end of every task)
-**Updated:** 2026-11-16 (queue step 1: papers read, derivation sent to the owner; no data touched).
+**Updated:** 2026-11-16, later (the owner rejected the step-1 direction; a model of the price from the mechanism is written and sent; no data touched).
 **Entry point for the work: [MAP.md](../MAP.md).** It replaces PROGRAM.md's order of work.
 Read this first, then LESSONS.md.
 * Theory: [FOUNDATION.md](../FOUNDATION.md)
@@ -7,6 +7,16 @@ Read this first, then LESSONS.md.
 * Study log: [INDEX.md](../INDEX.md)
 
 ## Where we are
+* **REDIRECT 2026-11-16: the owner wants a model of what moves the price, built from the mechanism.**
+  * Their words on the step-1 derivation: "This isn't really the kind of research I want." Asked what missed (four options, several allowed), they chose **"Not from first principles"** and **"Wrong subject"**. They did not choose "effects too small" or "too much reading".
+  * My reading (mine, not theirs): the product must be a model, with equations and one formula tested across calm days, selloffs and expiries. Papers are inputs. Option pricing and trade structure is not the subject.
+  * **Sent:** `2026-11-16-price-law/` (README and `out/price_law.png`). Three postulates → one equation.
+    * Law A (linear impact): move = push ÷ (liquidity + G); constant multiplier 1/(1 − n), n = −G/L; runaway at L + G = 0.
+    * Law B (square-root impact, my algebra): move = ½[√(m\*² + 4m₀²) − s·m\*], m\* = Y²σ²|G|/V, controlled by γ = |G|σ/V. Fixed amount, floor at m\* under negative gamma, pinning under positive gamma, no runaway unless capacity collapses. Checked numerically.
+    * First estimate: γ ≈ 1% for the S&P, so the mechanical effect is a few percent at most. Inputs are rough; one paper's level would make it 100× larger if read literally (unit to check).
+  * **Waiting for the owner's challenge.** If they agree, the first steps are: measure γ for SPY and TSLA; look at ten days (quiet and large, low and high gamma); then register the test that separates Law A from Law B.
+  * **Not yet in the model:** time (hedging delay → momentum or reversal), G as a function of price (levels), and capacity that responds to the move (the crash equation).
+  * **The MAP's queue steps 1 and 2 are on hold** (a note is in MAP.md). The step-1 pricing derivation below is kept as a record only.
 * **QUEUE STEP 1, 2026-11-16: the derivation is written and sent; waiting for the owner's challenge** (`2026-11-16-is-it-priced/`). The owner said "Do it" to: read the papers in full, then send a one-page derivation **before any data is touched**. Nothing is pre-registered and nothing has been run.
   * **Seven papers read in full, with cards:** Gârleanu–Pedersen–Poteshman 2009; Ni–Pearson–Poteshman–White (2006 draft); Barbon–Buraschi 2021; Amaya et al. 2025; Adams et al. 2026; Dew-Becker–Giglio 2026; Garcia-Ares–Muravyev 2025.
   * **The derived judgement:** an option is cheap or dear mainly because of who is on the other side. The dealer whose hedging makes moves bigger in low gamma also sets the price and charges for it. So options should be **dearer** in low gamma (after a selloff) and fair or cheap in high gamma. The founding ladder table (§4i) already showed this.
@@ -73,7 +83,7 @@ Read this first, then LESSONS.md.
   * Items 1–3 and 5 need tick data. Get a quote before spending.
 
 ## Waiting on the owner
-0. **The owner's challenge to the step-1 derivation,** and approval of the proposed order (calibrate → ten cases → expiry test on SPY and TSLA → state question inside the structure table). Also still open: whether to start the daily state card now.
+0. **The owner's reaction to the price-law model** (`2026-11-16-price-law/`): is this the kind of research they want, and may I measure γ and look at ten days? The earlier step-1 pricing work is set aside.
 0b. **Optional:** the owner's broker export of fills (queue step 4).
 0c. Still open from the audit: the purpose sentence (accept or edit); the liquidity-pilot budget (about $35); whether to cross-check the other thread's SPY work in `Market_Data`.
 1. **Approval for crash-law Part D:** ES/NQ signed trades, about $25–35. Quote first. (This is now step 2 of the proposed path.)

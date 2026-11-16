@@ -121,6 +121,9 @@ A call buyer makes money when the move that happens is bigger, sooner or more on
 * **Gap:** a liquidity gauge, and whether it warns before the fall.
 
 ## The queue (in order)
+> **2026-11-16: the owner rejected the direction of steps 1 and 2.** On seeing the step-1 derivation they said "This isn't really the kind of research I want", and named two reasons: it was not from first principles, and option pricing and trade structure is the wrong subject. They want a model of what moves the price itself, built from the mechanism, with one formula tested across calm days, selloffs and expiries.
+> The replacement is [2026-11-16-price-law](2026-11-16-price-law/) (derived, waiting for their challenge). **Do not run anything in the table below until the owner has reacted to it.** The table is kept as a record.
+
 | Step | Question it serves | What | Data and cost | The decision it changes | Stop rule |
 |---|---|---|---|---|---|
 | **1. Is the state priced?** | 5 | **Derivation first** (a one-page note for the owner, before any data): option prices lean on recent realized volatility and on fear, while positioning is forward-looking. So options should be cheapest where positioning changes with no price move (after a big expiry clears the open interest near the price), and dearest after a selloff, when low gamma and high fear arrive together. It should fail if implied volatility already rises across the expiry. **Then the test:** realized move ÷ implied move over 1, 5 and 20 sessions, by gamma state and by ladder rung. First reproduce the known gamma → range result, and settle which gamma measure to trust (N1) | Free: GEX, DIX and VIX since 2011; SPY end-of-day option quotes since Dec 2022 (`Market_Data`). TSLA needs its chains re-pulled | When to own naked calls, when to use spreads, when to stand aside | If the ratio is flat across states, gamma knowledge is for levels and exits only |

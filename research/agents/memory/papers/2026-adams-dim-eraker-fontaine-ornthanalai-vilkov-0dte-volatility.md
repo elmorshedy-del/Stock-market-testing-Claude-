@@ -47,6 +47,7 @@
   * An average effect of −7% says nothing about the tail. The days we care most about are the ones where gamma is negative, about 12% of intervals.
   * Only one exchange's SPX options. SPY options, E-mini options and over-the-counter positions are outside.
   * The exception Tuesdays and Thursdays are month-ends, quarter-ends and days next to holidays. The diff-in-diff helps, but those days are not ordinary days.
+  * **The level of net gamma needs a unit check.** "About 1% of S&P 500 shares per 1% move", read literally, is several hundred billion dollars per 1%, about a hundred times public estimates and far more than the order-flow response the paper itself measures. Use the signs and relative sizes; do not use the level until the unit is confirmed.
   * Date fixed effects remove the day's volatility level. As in Amaya et al., the estimate is the within-day part.
 
 ## What it means for us

@@ -66,3 +66,15 @@ Each entry: what went wrong → the rule that prevents it. Read this at the star
   → Look for a change in positioning on a known date with no price move (an expiry) before trusting a state sort.
 * **Record which version of a paper was read.** Ni et al. was the 2006 draft; Dim–Eraker–Vilkov is now inside Adams et al. 2026.
   → The card's first line states the version; the foundation cites it that way.
+
+## 2026-11-16, later (the owner rejected the step-1 derivation)
+* **What happened.** I delivered a "derivation" that was a summary of seven empirical papers, one line of algebra, and predictions about when options are cheap or dear. The owner: "This isn't really the kind of research I want." Asked what missed, they chose "Not from first principles" and "Wrong subject", and not "effects too small" or "too much reading".
+* **Why it missed (my reading).**
+  * They had said, in the black-body message, that work derived from understanding beats statistics on history. Seven papers of regressions are statistics on history, even when read in full.
+  * As "consultant" I had steered the work toward pricing and trade structure. They accepted the map but that subject was mine, not theirs. Their subject is what moves the price.
+  → **The product is a model:** postulates, equations, a closed-form result, and predictions sharp enough for one formula to be tested across calm days, selloffs and expiries. A literature summary is never the deliverable; papers supply the postulates and the constants.
+  → **A derivation means algebra.** If the page has no equation that could be wrong, it is not a derivation.
+  → **Start with an order-of-magnitude estimate from the formula** before any data. It can overturn a belief by arithmetic alone.
+  → **When the owner approves a plan with a short "go on" or "do it", that is not agreement with every part of it.** State the subject of the next piece of work in one line before starting, so a mismatch shows up early.
+* **Asking worked.** One question with concrete options resolved in one tap what another long page would have guessed at.
+
