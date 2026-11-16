@@ -3,6 +3,13 @@ Write a card right after reading a paper, before doing anything else; long sessi
 
 | Read | Paper | Laws | Card |
 |---|---|---|---|
+| 2026-11-16 | Gârleanu, Pedersen & Poteshman (2009). Demand-based option pricing. RFS 22(10). doi:10.1093/rfs/hhp005 | S2 (price side); PRICE | [card](2009-garleanu-pedersen-poteshman-demand-based-option-pricing.md) |
+| 2026-11-16 | Dew-Becker & Giglio (2026). The decline of the S&P 500 variance risk premium. Working paper, 2 June 2026 | S2 (price side); PRICE | [card](2026-dew-becker-giglio-decline-variance-risk-premium.md) |
+| 2026-11-16 | Garcia-Ares & Muravyev (2025). Option returns: a tale of the expiration rollover day. Working paper | S2; PRICE, TIME | [card](2025-garcia-ares-muravyev-expiration-rollover.md) |
+| 2026-11-16 | Adams, Dim, Eraker, Fontaine, Ornthanalai & Vilkov (2026). Do S&P 500 options increase market volatility? Evidence from 0DTEs. Working paper (subsumes SSRN 4692190) | S2; SIZE, TIME | [card](2026-adams-dim-eraker-fontaine-ornthanalai-vilkov-0dte-volatility.md) |
+| 2026-11-16 | Amaya, Garcia-Ares, Pearson & Vasquez (2025). 0DTE index options and market volatility: how large is their impact? Working paper | S2; SIZE | [card](2025-amaya-garcia-ares-pearson-vasquez-0dte-volatility.md) |
+| 2026-11-16 | Barbon & Buraschi (2021). Gamma fragility. Working paper, SSRN 3725454 | S2, F4; SIZE, RISK | [card](2021-barbon-buraschi-gamma-fragility.md) |
+| 2026-11-16 | Ni, Pearson, Poteshman & White (2021). Does option trading have a pervasive impact on underlying stock prices? RFS 34(4). doi:10.1093/rfs/hhaa082 (**2006 working-paper draft read**, not the published version) | S2; SIZE | [card](2021-ni-pearson-poteshman-white-pervasive-impact.md) |
 | 2026-11-06 | Kyle & Obizhaeva (2016). Market microstructure invariance: empirical hypotheses. Econometrica 84(4). doi:10.3982/ecta10486 (with supplement) | M1, F1, F7, S4 | [card](2016-kyle-obizhaeva-invariance.md) |
 | 2026-11-06 | Benzaquen, Donier & Bouchaud (2016). Unravelling the trading invariance hypothesis. Market Microstructure and Liquidity. arXiv:1602.03011 | M1, S4, F7 | [card](2016-benzaquen-donier-bouchaud-invariance.md) |
 | 2026-11-06 | Bucci, Lillo, Bouchaud & Benzaquen (2020). Are trading invariants really invariant? Trading costs matter. Quant. Finance. arXiv:1902.03457 | M1, S4, F7 | [card](2020-bucci-lillo-bouchaud-benzaquen-invariants.md) |

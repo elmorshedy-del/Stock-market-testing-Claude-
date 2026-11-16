@@ -100,6 +100,7 @@ A call buyer makes money when the move that happens is bigger, sooner or more on
   * Election premium: small in SPY, present in TSLA (election-vol).
   * TSLA 5-minute breakout: +29.5 bp a day out of sample; no exit rule improves it (orb-gamma).
   * Shorting shares at the wall fails; the option version is untested (wall-short, GW5).
+* **From the literature** (cards dated 2026-11-16): index options are no longer overpriced on average (since about 2012); option prices carry a charge that rises when dealers are short; single-stock options get cheaper on monthly roll days.
 * **Next:** queue steps 1, 2 and 6.
 
 ### 6. When to get out?
@@ -128,6 +129,12 @@ A call buyer makes money when the move that happens is bigger, sooner or more on
 | **4. Your own fills** (optional) | 6 | Split your trade P&L into direction, option price change, time decay and exit timing | Your broker export | Which question to work on first | |
 | **5. Liquidity pilot** | 7, 2 | ES/NQ trades with buyer/seller side: 3 floors, 5 selloff days, 5 calm days. Look first, then measure the move per unit of selling by minute | About $35, quote first | Whether a liquidity gauge is worth building | Stop buying data if selloff and calm days look alike and floors show no absorption |
 | **6. Earnings: is the move priced, given positioning?** | 5, 3 | Straddle P&L by pre-report state (EQ0, EQ1) | Free after a chain re-pull | Own or sell the earnings move | Only if step 1's method works |
+
+**Step 1 revised 2026-11-16, after the reading** ([derivation](2026-11-16-is-it-priced/); waiting for the owner's challenge; no data touched).
+* **The hypothesis in the table above was half wrong.** Seven papers read in full say an option is cheap or dear mainly because of who is on the other side, and the dealer who makes the move bigger also sets the price.
+* **Corrected sign:** buying options is a worse deal when dealers are short gamma (after a selloff) and fair or better when they are long (calm). The founding ladder table already showed this.
+* **New, better-powered test:** the price of a fixed option across each monthly expiry, Thursday close to Monday close. It falls where customers write options and should rise where they buy calls. The sign for TSLA is unknown.
+* **Proposed order inside step 1:** calibrate our measures against the papers' baselines; look at ten cases; the expiry test on SPY and TSLA; then the state question goes into step 2's structure table, because as a ratio test it is underpowered.
 
 **On the bench** (one decisive test each, later): ND1 (unconfirmed low); GW1 and GW2 (TSLA's call wall; wall size as a dose).
 

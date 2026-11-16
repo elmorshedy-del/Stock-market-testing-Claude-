@@ -216,6 +216,19 @@ Almost every stylized fact we have tested so far sits inside this picture: fat t
 ---
 
 ## Full-reading log (appended as papers are read in full; cards in memory/papers/)
+* **2026-11-16, S2 (dealer hedging) and its price side: seven papers read in full** for queue step 1 (`2026-11-16-is-it-priced/`).
+  * **S2, dealer hedging: confirmed, with sizes and three corrections to the bullets above.**
+    * Ni, Pearson, Poteshman & White: one standard deviation of dealer gamma ↔ about 12% of a stock's daily absolute return (1990–2001, true positions). I read the 2006 draft, not the published 2021 paper.
+    * "Dim, Eraker & Vilkov 2024" and "Adams, Fontaine & Ornthanalai 2024" are now one paper (Adams et al. 2026). The effect is −61 bp of annualized 10-minute volatility (about 7%) on 0DTE days, and it comes from positions built on **earlier** days, not from 0DTE trading.
+    * Amaya et al. (author order corrected): the +3.3 and +6.4 point maxima come from a 2020–2023 window with no crash, and from a model that removes each day's volatility level first. They are lower bounds on the total effect.
+    * Barbon & Buraschi: the effect scales with illiquidity, so it is a flow divided by capacity. Their index result rests on an assumed sign.
+  * **A claim the 16 laws do not yet state: who holds the option sets its price.**
+    * Dealers charge for risk they cannot hedge, in proportion to their inventory (Gârleanu, Pedersen & Poteshman 2009).
+    * The S&P 500 option premium vanished around 2012 when dealers stopped being net short (Dew-Becker & Giglio 2026).
+    * Single-stock option prices fall on roll days, the third Friday and the Monday after (Garcia-Ares & Muravyev 2025).
+    * Proposed as the price side of S2. Grade: Established that it exists (three independent datasets); sizes depend on the regime.
+  * **Sign warning for all our gamma work:** with true positions, customers in short-dated S&P options sell at the money on both sides, and market makers are long gamma in 88% of intervals (2018–2024). The public GEX convention (customers sell calls, buy puts) is wrong at the short end.
+  * **Still not read in full:** Baltussen, Da, Lammers & Martens (2021), cited above from its abstract.
 * **2026-11-06, M3 (Marcaccioli et al. 2021), read in full.**
   * **Confirmed.** Self-made jumps are preceded by about 75 minutes of volatility and trend build-up, and relax more slowly (exponent 0.40 vs 0.68 for news). Volatility after news undershoots the baseline. Only about 1% of jumps were news-related. Single-event classification reaches out-of-sample AUC 0.72.
   * **Scope limit missed from the abstract:** market-wide and sector-wide events were removed. So M3 is untested on index-level shocks, and our M3 test is an extension, not a replication.

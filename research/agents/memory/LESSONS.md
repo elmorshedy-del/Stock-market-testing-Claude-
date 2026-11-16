@@ -54,3 +54,15 @@ Each entry: what went wrong → the rule that prevents it. Read this at the star
   * Keys never go in files.
   * Licensed data stays out of git.
   * No model names in commits.
+
+## 2026-11-16 (step 1: reading before the derivation)
+* **A hypothesis I wrote into the plan before reading was half wrong.** I put "options are cheapest after expiry because positioning clears" into MAP.md on Nov 15. The papers gave a different cause (writers re-selling) and a sign that flips with who the customers are.
+  → Put a hypothesis in a plan only as a question. Write the derivation after the reading, and say plainly what changed.
+* **I nearly quoted an effect size I had not derived** ("8% of implied volatility per standard deviation"). The paper gives 1.7 points on average and half a standard deviation per standard deviation.
+  → Every number in a derivation is either copied from the card or labelled as my own arithmetic, with the arithmetic shown.
+* **The power check changed the plan before any data.** The state question as a ratio test can detect a gap of 0.14–0.21; the literature implies 0.05–0.15. The expiry test is well powered.
+  → Do the power check from the papers' effect sizes while deriving, and let it order the tests.
+* **Low gamma and "after a selloff" arrive together.** A sort on gamma alone cannot tell positioning from fear.
+  → Look for a change in positioning on a known date with no price move (an expiry) before trusting a state sort.
+* **Record which version of a paper was read.** Ni et al. was the 2006 draft; Dim–Eraker–Vilkov is now inside Adams et al. 2026.
+  → The card's first line states the version; the foundation cites it that way.
