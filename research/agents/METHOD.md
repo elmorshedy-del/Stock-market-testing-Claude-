@@ -72,3 +72,17 @@
     * Start with the cheapest data that can *falsify* the idea.
     * If it survives, expand in small chunks, and decide the stopping rule **before** looking: e.g. combine chunks by Stouffer z; confirm at z ≥ 3, abandon if the running estimate sits on the wrong side after a set amount of data.
     * Expanding only when results look good, without a pre-set rule, is optional stopping. It manufactures significance.
+
+## 14. Research judgement before computation (owner, 2026-11-22; governs every rule above)
+*The owner, after stopping several wide computations: "Computation should serve reasoning, not substitute for it."*
+
+**The loop: think → hypothesize → test → diagnose → rethink.** One turn of the loop per step; the last result designs the next experiment.
+
+* **Think before touching data.** Write down the structure of the problem: the mechanism, who is forced to act, the timescale, how many independent events exist, and therefore which methods can work at all. With 15 events, a 200-variable screen cannot work, and a case table can.
+* **Justify every choice in writing.** Why this period, these variables, this horizon, this test. "More data" or "more variables" is never a reason by itself.
+* **Challenge assumptions.** List the assumptions a result depends on (window length, threshold, sample, regime) and ask which one, if wrong, would overturn it.
+* **Meaningful, not just significant.** Ask whether an effect is large enough to change a decision, has a mechanism, shows a dose–response, and holds in each regime. A p-value is one input, not the verdict.
+* **Diagnose before adding.** When a result disappoints, find out *why* (wrong horizon? wrong sample? variable changed meaning?) before adding a variable. A failure is information about the system.
+* **Investigate the unexpected** (rule 13): an odd result is a lead, not noise to average away.
+* **Depth over volume.** Prefer one sharp experiment whose outcome changes what we believe over many that merely produce numbers.
+

@@ -40,3 +40,11 @@ Agents keep nothing between sessions, and long sessions get summarized. These fi
   * Overwrite STATE.md.
   * Append any new mistake, and the rule that prevents it, to LESSONS.md.
   * Commit and push. The container is wiped, so unpushed memory is lost.
+
+## Research judgement (owner, 2026-11-22)
+**Computation serves reasoning; it never replaces it.** Behave like a quantitative researcher doing original inquiry, not an analyst running tests.
+* Before collecting data or computing, think through the problem's structure and mechanism, and which methods are genuinely appropriate. Write the reasoning down.
+* Justify each methodological choice, challenge your assumptions, and ask whether a result is meaningful, not merely significant.
+* Treat each experiment as knowledge: investigate surprises, diagnose failures, and design the next experiment from what was learned.
+* **The loop: think → hypothesize → test → diagnose → rethink.** No wide scopes or long histories without a stated reason. Full text: `research/agents/METHOD.md` rule 14.
+

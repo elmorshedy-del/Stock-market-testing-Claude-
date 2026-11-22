@@ -80,3 +80,11 @@
   * Know whether calls or shares are the better tool after the crush.
 * **The tests:** TODO EQ0–EQ7. The highest value is EQ1 (straddle P&L by pre-report positioning).
 * **Don't contradict what's tested:** earnings gap-ups fade in the first hour on average (calendar-mechanics B2). Moves made on low dealer gamma fade on average (forced-flow). EQ2/EQ3 ask when those averages break, as in July.
+
+## Research judgement (owner, 2026-11-22)
+* "Do not approach this as a brute-force statistical exercise. Before collecting data or running computations, think deeply about the problem's structure, the underlying mechanisms, and which research methods are genuinely appropriate."
+* "Exercise independent scientific judgment at every stage. Justify your methodological choices, challenge your assumptions, and question whether the results are meaningful rather than merely statistically significant."
+* "Treat every experiment as a source of knowledge. Investigate unexpected results, diagnose failures, identify methodological weaknesses, and use those insights to design more intelligent subsequent experiments."
+* "Prioritize depth of reasoning, methodological rigor, and discovery over computational volume. The principle is: think → hypothesize → test → diagnose → rethink."
+* Written into `CLAUDE.md` and `METHOD.md` rule 14.
+
