@@ -7,16 +7,18 @@ Read this first, then LESSONS.md.
 * Study log: [INDEX.md](../INDEX.md)
 
 ## Where we are
-* **2026-11-22, LATEST: the vulnerability study, done the scientist's way** (`2026-11-22-vulnerability/`).
-  * **The owner's strongest feedback yet:** "For the million time stop this wide scope that you do without any clear reasoning"; "U always go back to a century and you don't know why"; "Stop being a computer that just computes and be a scientist". Then a full research brief: combine economic reasoning with data-driven exploration; linear, nonlinear, conditional and interaction effects; stability across regimes; diagnose failures; iterate.
-  * **Their actual question:** inside the post-2009 bull market, when do rates, Fed expectations, inflation, valuation, corporate debt and breadth **together** make the market vulnerable to a correction? Would it have flagged October 2026?
-  * **Steps so far (each small, reasoned, frozen before testing):**
-    1. cases since 2010, including the non-events;
-    2. conditional frequencies 2010–26;
-    3. the frozen rule on 1976–2009: **failed**, diagnosed (2y − Fed funds changes meaning at the zero bound);
-    4. regime-consistent measures: **only "2-year up 50bp+ in 6 months" holds in both eras** (lifts 1.9 and 1.7; weak p).
-  * **2026:** that signal was on from May, +109bp by September (most since 2022, NOT the most since 2010; my message erred, corrected); the cushion was −0.09 (thinnest since 2010).
-  * **Proposed step 5 (not run):** inside months when the vulnerable state is on, what separates the times it cracked from the false alarms (2016–17, 2023)? Case-based first, then a frozen test. Alternative: a small cross-era model (fit on one era, test on the other).
+* **2026-11-22, LATEST: the vulnerability study, steps 1–6, done the scientist's way** (`2026-11-22-vulnerability/`, README "What I now believe").
+  * **Governing rule added by the owner:** think → hypothesize → test → diagnose → rethink. Computation serves reasoning (`CLAUDE.md`; `METHOD.md` rule 14; `OWNER_NOTES.md`).
+  * **Their question:** inside the post-2009 bull market, when do rates, Fed expectations, inflation, valuation, debt and breadth together make the market vulnerable to a correction? Would it have flagged October 2026?
+  * **Finding:** the **danger state** is fast tightening priced (2-year, or 1-year before 1976, up 50bp+ in 6 months) while headline CPI is at 3% or more. Near highs, the 6-month odds of a 7%+ fall are 50% vs 16% (1976–2026, in-sample) and 78% vs 28% (1954–76, independent, p 0.004, but only ~3 episodes).
+  * It was on every month-end May–October 2026; the top came on 6 October. It missed 2018 (CPI below 3%).
+  * **Failed or overturned:**
+    * step 3's rule (2y − Fed funds changes meaning at the zero bound);
+    * step 4's "holds in both eras" (the old era pooled a strong 1976–89 effect with nothing in 1990–2009);
+    * step 6's "harmless when inflation is low" (1954–66 low-inflation tightening still preceded corrections).
+  * **Next (proposed to the owner, not run):**
+    * (a) timing: inside the danger state, what turns it into a crack (breadth, credit, the forced-selling gauges from the cross-asset study)?
+    * (b) confirmation on other countries; only partly independent, since markets fall together.
 * **2026-11-22, latest: THE DISCOVERY SYSTEM** (`DISCOVERY.md`; passes 1–2 in `2026-11-22-discovery/`).
   * **The owner's words, in order:**
     1. "this is u zooming in too much maybe the state of how things get triggered are on bigger scales. I think how things correlate here needs more careful statistical analysis";

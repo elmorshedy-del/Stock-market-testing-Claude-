@@ -108,3 +108,12 @@ Each entry: what went wrong → the rule that prevents it. Read this at the star
 * **I claimed an extreme without checking the chart** ("+109bp, the highest since 2010"; 2022 was +220bp).
   → Check any "highest since" claim against the full series before saying it.
 
+## 2026-11-22, late (steps 5–6 of the vulnerability study)
+* **I accepted "holds in both eras" from an era split chosen for data reasons (the 2-year starts in 1976).** Splitting 1976–2009 showed the effect lived entirely in 1976–89 and was absent in 1990–2009.
+  → Before accepting a cross-era claim, look at sub-periods inside each era. A pooled era can hide a regime where the effect is zero.
+* **My episode test (a correction within episode + 6 months) had no power:** corrections near highs come every 10–12 months, so random windows score 75–80%.
+  → Compute the chance baseline of any hit-rate test before trusting it. When events are frequent, use horizon-specific odds against a matched baseline, not "did something happen in a long window".
+* **A helper covered the wrong range:** the peak list started in 1975, so the 1954–76 listing printed "none".
+  → When reusing a helper on a new period, check that its inputs cover that period.
+* **A frozen two-part hypothesis can half-fail.** Report the frozen verdict ("not supported") first, then what each half showed. Never relabel it as supported.
+
