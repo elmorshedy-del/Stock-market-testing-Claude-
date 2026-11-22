@@ -40,3 +40,47 @@
 
 ## Results
 To be appended below this line after the run, without editing anything above.
+
+## Pass 1 results (2026-11-22; appended, nothing above edited)
+**Audit before results:** the strongest return predictors in the screen were weekly changes in the Chicago Fed NFCI.
+* That index is re-estimated every week, so its past values are revised.
+* It did not exist before 2011, so earlier values are backcast.
+* It therefore fails the point-in-time rule.
+* **Deviation:** models were run with all features (ALL) and without NFCI (CLEAN). CLEAN is the valid one.
+
+**Screen** (1,130 feature × target pairs):
+* 181 pass FDR at q = 0.10; 148 also keep the same sign in all three decades.
+* Most measure the same thing: current stress (VIX level, realized volatility, credit spreads, distance from the 52-week high).
+* The crash and drawdown links are carried mostly by the 2000s; in the 1990s the correlations are near zero.
+
+**Models** (CLEAN, out of sample 2000–2019, ~1,030 weeks; skill = 1 − error ÷ benchmark error):
+| Target | Model vs pre-registered benchmark | Chance 95th pct | p vs chance | Added benchmark (linear on VIX + 20d and 63d realized vol) vs pre-registered | Model vs added benchmark |
+|---|---|---|---|---|---|
+| vol4 | +0.108 | −0.201 | 0.024 | **+0.257** | −0.200 |
+| mdd13 | −0.450 | +0.026 | 0.78 | **+0.112** | −0.632 |
+| crash13 | −0.190 (AUC 0.60) | −0.050 | 0.83 | **+0.076** (AUC 0.58) | −0.287 |
+| ret4 | −0.376 | −0.045 | 1.00 | −0.026 | −0.341 |
+| ret13 | −0.662 | −0.073 | 0.98 | −0.068 | −0.556 |
+
+* The 182-feature boosted model, untuned by design, is beaten by a three-variable linear model on every target. It overfits: about 1,000 weekly rows with overlapping targets give far fewer independent observations.
+* Returns are not predictable by anything here, as expected beforehand.
+* The ALL set (with NFCI) did better on vol4 (+0.18), consistent with NFCI's look-ahead.
+
+**Lead and lag** (PCMCI, weekly changes, lags 1–4 weeks, FDR q < 0.01):
+* 10 links in 1990–2019, 1 in 1990–2004, 8 in 2005–2019; **none appears in both halves.**
+* The strongest (stocks lead the Baa spread by 1–2 weeks; the S&P leads the Nikkei by a week) are likely artifacts: stale compilation of Moody's yields, and trading hours that do not overlap.
+
+## Pass 2 protocol (written after pass 1, before pass 2 runs)
+* **Question:** does anything add to the current-stress model?
+* **Benchmark S:** linear regression (logistic for crash13) on VIX level and 20-day and 63-day realized volatility, refit in each fold.
+* **Targets:** vol4, mdd13, crash13. Returns are dropped; pass 1 settled them.
+* **Nested selection, inside each walk-forward fold, on training rows only:**
+  1. fit S;
+  2. take the residual (for crash13, the outcome minus S's probability);
+  3. rank every CLEAN feature by |Spearman| with that residual;
+  4. keep the top 10.
+* **Two incremental models per fold:**
+  1. ridge (or L2 logistic), α = 1.0 on standardized inputs, using S's inputs plus the 10 selected features;
+  2. a small LightGBM (4 leaves, at least 80 rows per leaf, 200 trees, learning rate 0.03) on the same 13 inputs, which can capture environment-dependent effects.
+* **Skill** against S in the same fold. **Null:** 40 circular shifts of the target; S and the selection are redone under each shift. A model counts only if it beats the null's 95th percentile **and** S.
+* **Reported:** how often each feature is selected across the 20 folds, as a measure of stability.

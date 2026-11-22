@@ -1,0 +1,151 @@
+{
+ "1990-2019": {
+  "n_weeks": 1556,
+  "links": [
+   {
+    "from": "VIX",
+    "to": "VIX",
+    "lag_weeks": 1,
+    "partial_corr": -0.181,
+    "q": 2.7310494441098177e-10
+   },
+   {
+    "from": "S&P",
+    "to": "Credit spread",
+    "lag_weeks": 1,
+    "partial_corr": -0.172,
+    "q": 1.5838644863192478e-09
+   },
+   {
+    "from": "Credit spread",
+    "to": "Credit spread",
+    "lag_weeks": 1,
+    "partial_corr": 0.125,
+    "q": 9.124882013111137e-05
+   },
+   {
+    "from": "Oil",
+    "to": "Oil",
+    "lag_weeks": 1,
+    "partial_corr": -0.118,
+    "q": 0.0002589424128198884
+   },
+   {
+    "from": "S&P",
+    "to": "Credit spread",
+    "lag_weeks": 2,
+    "partial_corr": -0.116,
+    "q": 0.00031102238600747635
+   },
+   {
+    "from": "S&P",
+    "to": "Nikkei",
+    "lag_weeks": 1,
+    "partial_corr": 0.114,
+    "q": 0.000350834493000491
+   },
+   {
+    "from": "Nikkei",
+    "to": "Nikkei",
+    "lag_weeks": 1,
+    "partial_corr": -0.109,
+    "q": 0.0008196455104185572
+   },
+   {
+    "from": "Credit spread",
+    "to": "Yen",
+    "lag_weeks": 1,
+    "partial_corr": 0.107,
+    "q": 0.00105363092393274
+   },
+   {
+    "from": "Credit spread",
+    "to": "VIX",
+    "lag_weeks": 1,
+    "partial_corr": 0.104,
+    "q": 0.0017297825400866703
+   },
+   {
+    "from": "Credit spread",
+    "to": "S&P",
+    "lag_weeks": 1,
+    "partial_corr": -0.095,
+    "q": 0.005778693187459511
+   }
+  ]
+ },
+ "1990-2004": {
+  "n_weeks": 776,
+  "links": [
+   {
+    "from": "Oil",
+    "to": "Oil",
+    "lag_weeks": 1,
+    "partial_corr": -0.167,
+    "q": 0.0011196197604630858
+   }
+  ]
+ },
+ "2005-2019": {
+  "n_weeks": 780,
+  "links": [
+   {
+    "from": "S&P",
+    "to": "Credit spread",
+    "lag_weeks": 1,
+    "partial_corr": -0.184,
+    "q": 9.228397714215533e-05
+   },
+   {
+    "from": "Credit spread",
+    "to": "Credit spread",
+    "lag_weeks": 1,
+    "partial_corr": 0.178,
+    "q": 0.0001294712321932479
+   },
+   {
+    "from": "VIX",
+    "to": "Curve",
+    "lag_weeks": 3,
+    "partial_corr": 0.156,
+    "q": 0.0015791790251418556
+   },
+   {
+    "from": "S&P",
+    "to": "Yen",
+    "lag_weeks": 2,
+    "partial_corr": -0.153,
+    "q": 0.0015791790251418556
+   },
+   {
+    "from": "Credit spread",
+    "to": "Nikkei",
+    "lag_weeks": 1,
+    "partial_corr": -0.152,
+    "q": 0.0015791790251418556
+   },
+   {
+    "from": "Oil",
+    "to": "Credit spread",
+    "lag_weeks": 1,
+    "partial_corr": -0.146,
+    "q": 0.002594848214590704
+   },
+   {
+    "from": "Credit spread",
+    "to": "VIX",
+    "lag_weeks": 1,
+    "partial_corr": 0.138,
+    "q": 0.005951028181560221
+   },
+   {
+    "from": "S&P",
+    "to": "Credit spread",
+    "lag_weeks": 2,
+    "partial_corr": -0.137,
+    "q": 0.005951028181560221
+   }
+  ]
+ },
+ "in_both_halves": []
+}
