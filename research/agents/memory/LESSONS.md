@@ -97,3 +97,14 @@ Each entry: what went wrong → the rule that prevents it. Read this at the star
 * **Audit the data before the result.** NFCI looked like the best return predictor, but its history is revised and backcast.
   → Check the vintage and point-in-time status of every macro series before including it.
 
+## 2026-11-22, evening (the owner's sharpest correction)
+* **What happened.** I kept launching wide computations (226 variables, decades of data, many targets) without stating why. The owner stopped five runs in a row: "stop this wide scope... without any clear reasoning", "you always go back to a century and you don't know why", "be a scientist".
+  → **Before every computation, say in a few lines why this scope, why this period, why these variables, and what result would change the next step.** One small step at a time; the last result chooses the next.
+  → **With few events (about 15 corrections), start from cases**: what kind of event each was, and the non-events. Hypotheses come from cases; tests come after, with frozen rules.
+  → **Older history is used only to test a specific frozen hypothesis**, with the reason stated. Never to search.
+  → **Confirm the target in one line before building.** I built "danger at any time, 1990–2019" when the owner meant "correction onset inside the post-2009 bull, including October 2026".
+* **Regimes change the meaning of variables.** 2y − Fed funds and the real Fed funds rate flip sign between the zero-bound era and normal times.
+  → Require a relationship to hold in each regime before trusting it; diagnose sign flips by economic meaning.
+* **I claimed an extreme without checking the chart** ("+109bp, the highest since 2010"; 2022 was +220bp).
+  → Check any "highest since" claim against the full series before saying it.
+

@@ -57,3 +57,8 @@ All are point-in-time at the Friday close; CAPE and CPI are lagged one month.
 
 ## Results
 To be appended below this line after the run, without editing anything above.
+
+## Status: interrupted by the owner (2026-11-22), superseded by `../2026-11-22-vulnerability/`
+* Partial lens 1 only (`out/lens1.csv`), with 2026 outcomes labelled where the fall had already happened.
+* Breadth (RSP/SPY, 13-week change) was the strongest variable: AUC 0.26 for 10%+ corrections (p 0.006; right in 8 of 9 episodes), but it missed the multiple-testing bar (0.003).
+* The combined lens did not finish. Nothing here is used as evidence.

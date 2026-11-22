@@ -7,6 +7,16 @@ Read this first, then LESSONS.md.
 * Study log: [INDEX.md](../INDEX.md)
 
 ## Where we are
+* **2026-11-22, LATEST: the vulnerability study, done the scientist's way** (`2026-11-22-vulnerability/`).
+  * **The owner's strongest feedback yet:** "For the million time stop this wide scope that you do without any clear reasoning"; "U always go back to a century and you don't know why"; "Stop being a computer that just computes and be a scientist". Then a full research brief: combine economic reasoning with data-driven exploration; linear, nonlinear, conditional and interaction effects; stability across regimes; diagnose failures; iterate.
+  * **Their actual question:** inside the post-2009 bull market, when do rates, Fed expectations, inflation, valuation, corporate debt and breadth **together** make the market vulnerable to a correction? Would it have flagged October 2026?
+  * **Steps so far (each small, reasoned, frozen before testing):**
+    1. cases since 2010, including the non-events;
+    2. conditional frequencies 2010–26;
+    3. the frozen rule on 1976–2009: **failed**, diagnosed (2y − Fed funds changes meaning at the zero bound);
+    4. regime-consistent measures: **only "2-year up 50bp+ in 6 months" holds in both eras** (lifts 1.9 and 1.7; weak p).
+  * **2026:** that signal was on from May, +109bp by September (most since 2022, NOT the most since 2010; my message erred, corrected); the cushion was −0.09 (thinnest since 2010).
+  * **Proposed step 5 (not run):** inside months when the vulnerable state is on, what separates the times it cracked from the false alarms (2016–17, 2023)? Case-based first, then a frozen test. Alternative: a small cross-era model (fit on one era, test on the other).
 * **2026-11-22, latest: THE DISCOVERY SYSTEM** (`DISCOVERY.md`; passes 1–2 in `2026-11-22-discovery/`).
   * **The owner's words, in order:**
     1. "this is u zooming in too much maybe the state of how things get triggered are on bigger scales. I think how things correlate here needs more careful statistical analysis";
