@@ -84,3 +84,30 @@ To be appended below this line after the run, without editing anything above.
   2. a small LightGBM (4 leaves, at least 80 rows per leaf, 200 trees, learning rate 0.03) on the same 13 inputs, which can capture environment-dependent effects.
 * **Skill** against S in the same fold. **Null:** 40 circular shifts of the target; S and the selection are redone under each shift. A model counts only if it beats the null's 95th percentile **and** S.
 * **Reported:** how often each feature is selected across the 20 folds, as a measure of stability.
+
+## Pass 2 results (appended)
+| Target | Ridge: skill added over S | Chance 95th pct | p | Small trees: skill added over S | Chance 95th pct | p |
+|---|---|---|---|---|---|---|
+| vol4 | −0.079 | +0.073 | 0.49 | −0.233 | +0.173 | 0.98 |
+| mdd13 | −0.323 | −0.027 | 0.54 | −0.307 | +0.124 | 0.85 |
+| crash13 | −0.349 | −0.069 | 0.61 | −0.206 | +0.082 | 0.81 |
+
+* **Nothing adds to the current-stress model.** Every incremental model is worse than S out of sample and inside the chance band.
+* **Chance alone reaches positive "skill" here** (up to +0.17), because slow variables can fit a slow target by accident. Without the time-shift null, a positive in-sample or even walk-forward number would have looked like a finding.
+* **Most-selected variables** (chosen from the past only, in each of 20 folds):
+  * vol4: CAPE level (19), oil vs its 3-year range (16), stock–credit correlation (12);
+  * mdd13: stock–credit correlation (19), dollar/yen distance from its 52-week high (19);
+  * crash13: VIX vs its 3-year range, 252-day realized vol and the VIX 52-week speed (20 each). All three are more stress measures.
+
+## Candidate list for the lockbox
+* **One:** the three-variable stress model S (VIX level, 20-day and 63-day realized volatility), predicting 4-week volatility, 13-week drawdown and the odds of a fall of 10% or more.
+* No discovered variable survived. **The lockbox stays sealed** until the owner decides whether to spend it on S.
+
+## In the owner's units (1990–2019, weekly; overlapping weeks, so the effective sample is smaller)
+| VIX at the Friday close | <13 | 13–16 | 16–20 | 20–25 | 25–30 | 30+ |
+|---|---|---|---|---|---|---|
+| Weeks followed by a fall of 10%+ within 13 weeks | 2% | 6% | 19% | 22% | 18% | 27% |
+| Median realized volatility over the next 4 weeks | 8% | 10% | 13% | 17% | 21% | 30% |
+
+**Files:** `features.py`, `screen.py` → `out/screen.csv`; `model.py` → `out/models.json`, `out/oos_*.csv`; `pass2.py` → `out/pass2.json`;
+`leadlag.py` → `out/leadlag.json`; `explain.py` (written, not run: there was no model worth explaining); `figure.py` → `out/discovery.png`.

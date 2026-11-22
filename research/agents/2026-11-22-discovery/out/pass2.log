@@ -1,0 +1,15 @@
+
+== vol4 (129s)
+   ridge skill vs S -0.079   null 95th +0.073   p 0.488   passes False
+   boost skill vs S -0.233   null 95th +0.173   p 0.976   passes False
+   most often selected (folds of 20): {'CAPE|level': 19, 'OIL|z3y': 16, 'OIL|chg4w': 12, 'corr(SPX,CREDIT)|52w': 12, 'SPXvol|252d': 11, 'CREDIT|z3y': 11, 'corr(SPX,NIKKEI)|52w chg13w': 10, 'CAPE|chg13w': 9, 'NIKKEI|chg13w': 9, 'NIKKEI|speed13w': 9, 'OIL|speed4w': 9, 'corr(SPX,DXY)|52w': 9, 'CAPE|speed13w': 8, 'EXCESS_EY|level': 8, 'USDJPY|z3y': 7, 'DXY|z3y': 5, 'CREDIT|level': 5, 'corr(SPX,CREDIT)|13w': 5, 'corr(SPX,BONDS)|13w': 5, 'corr(SPX,YEN)|52w': 3}
+
+== mdd13 (128s)
+   ridge skill vs S -0.323   null 95th -0.027   p 0.537   passes False
+   boost skill vs S -0.307   null 95th +0.124   p 0.854   passes False
+   most often selected (folds of 20): {'corr(SPX,CREDIT)|52w': 19, 'USDJPY|from52wHigh': 19, 'USDJPY|chg52w': 13, 'CAPE|level': 13, 'CURVE|chg52w': 12, 'CURVE|speed52w': 12, 'USDJPY|speed52w': 10, 'VIX-minus-realized20d': 8, 'corr(SPX,YEN)|13w': 7, 'OIL|z3y': 7, 'CURVE|z3y': 7, 'USDJPY|z3y': 6, 'DXY|z3y': 6, 'absorption|chg13w': 6, 'SPXvol|ratio20/252': 6, 'OIL|from52wHigh': 6, 'corr(SPX,NIKKEI)|52w chg13w': 5, 'DXY|speed52w': 4, 'corr(SPX,BONDS)|52w': 4, 'corr(SPX,OIL)|52w': 4}
+
+== crash13 (199s)
+   ridge skill vs S -0.349   null 95th -0.069   p 0.610   passes False
+   boost skill vs S -0.206   null 95th +0.082   p 0.805   passes False
+   most often selected (folds of 20): {'VIX|z3y': 20, 'SPXvol|252d': 20, 'VIX|speed52w': 20, 'SPX|from52wHigh': 19, 'VIX|chg52w': 16, 'SPXvol|ratio20/252': 11, 'corr(SPX,DXY)|52w': 10, 'US2Y|z3y': 9, 'CURVE|speed13w': 8, 'CREDIT|z3y': 7, 'corr(SPX,NIKKEI)|52w': 6, 'CURVE|chg13w': 6, 'USDJPY|from52wHigh': 6, 'SPX|z3y': 6, 'corr(SPX,DXY)|13w': 5, 'NIKKEI|z3y': 5, 'CAPE|chg52w': 4, 'corr(SPX,YEN)|52w': 4, 'VIX|speed13w': 3, 'CURVE|speed52w': 3}

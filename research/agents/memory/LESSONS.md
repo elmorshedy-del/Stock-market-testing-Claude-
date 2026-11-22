@@ -85,3 +85,15 @@ Each entry: what went wrong → the rule that prevents it. Read this at the star
   → Look for the turning point of each driver before averaging over a window.
 * **Check an instrument on known cases first.** The fingerprint table caught 3 of 4 known episodes and exposed a missing case (Treasuries sold in a funding crisis). I left the miss in the record instead of rewriting the table after seeing it.
 
+## 2026-11-22, later (the discovery system)
+* **The owner wants a system, not a sequence of clever ideas.** Three messages in a row pushed from "zoomed in" to "careful statistics" to "a rigorous system like scientists and ML experts use".
+  → For any search for relationships, follow DISCOVERY.md: the protocol and the lockbox are committed before results; every candidate counted; chance measured by rerunning the whole search on time-shifted targets.
+* **My own claim from the same morning failed careful statistics.** The gold–stock correlation jump was mostly a volatility effect (Forbes–Rigobon).
+  → Any correlation compared across calm and stressed windows gets the volatility adjustment and a confidence interval.
+* **Walk-forward is not enough on its own.** Slow variables produced walk-forward "skill" up to +0.17 against time-shifted targets.
+  → Only skill above the time-shift null's 95th percentile counts.
+* **A big flexible model loses to a three-variable one** when the effective sample is small (overlapping weekly targets).
+  → Always include a strong simple benchmark; report the model against it.
+* **Audit the data before the result.** NFCI looked like the best return predictor, but its history is revised and backcast.
+  → Check the vintage and point-in-time status of every macro series before including it.
+

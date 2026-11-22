@@ -7,6 +7,20 @@ Read this first, then LESSONS.md.
 * Study log: [INDEX.md](../INDEX.md)
 
 ## Where we are
+* **2026-11-22, latest: THE DISCOVERY SYSTEM** (`DISCOVERY.md`; passes 1–2 in `2026-11-22-discovery/`).
+  * **The owner's words, in order:**
+    1. "this is u zooming in too much maybe the state of how things get triggered are on bigger scales. I think how things correlate here needs more careful statistical analysis";
+    2. "I meant it could be how fast they moved or how certain variables moved together in certain environments... How do mathematicians and scientists and ml experts surface relationships... You should work like them";
+    3. "There must a rigorous system we follow to surface relationships. And predictors".
+  * **System:** eight stages (fix the question; point-in-time data; sealed lockbox; a systematic feature library; several lenses; chance from time-shifted reruns, purged walk-forward, FDR; stability; mechanism then confirmation).
+  * **Result:** one dependable predictor, current stress (VIX + recent realized vol). Nothing among 182 clean weekly variables adds to it; returns unpredictable; weekly lead–lag unstable. NFCI excluded (not point-in-time).
+  * **Lockbox 2020+ still sealed.** Candidate list = the stress model only. Ask the owner before opening.
+  * **Tools:** the scratchpad venv312 now has lightgbm 4.7, shap 0.54, dcor 0.7 and tigramite (PCMCI). A container reset loses them: reinstall with pip.
+  * **Proposed next passes (owner's choice):**
+    1. the same system on daily data with positioning (GEX, DIX 2011+) and TSLA, where our only robust results live;
+    2. intraday ES/NQ data around extreme days (about $4.60 for Nov 5 and 20);
+    3. symbolic regression for the compact law linking stress to danger.
+* **Interrupted and superseded:** `2026-11-22-correlation-regimes/` (descriptive; README written).
 * **2026-11-22: CROSS-ASSET STUDY DONE AND SENT** (`2026-11-22-cross-asset/`). The owner pasted an Arabic newsletter article (stocks, gold and bitcoin falling together; yields, yen carry, tech borrowing, deleveraging, no Fed rescue) and wrote "We never rly had these variables studied and integrated in our research."
   * **Market:** S&P 6,910 on Nov 20 (−8.6% from Nov 13; −11.6% from the Oct 6 peak). VIX 35.9 (highest close of the episode). Gold 3,515, bitcoin about 59k, NVDA 125.5 (−47.5% from peak), SOX −36%. 10y 4.91%.
   * **Findings:** phase 1 (Sep 3–Oct 5) = real-rate shock (10y +54bp; 2y +50; term premium +22; breakevens flat). Phase 2 (Oct 6–Nov 20) = dollar-funded forced selling of everything except Treasuries. Yen carry not visible. Gold's fall unexplained by yields in phase 2 (−16.3% vs +2.0%). Nov 5 = sector shock (gold up); Nov 20 = forced selling (gold −4.6%).

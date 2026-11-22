@@ -267,6 +267,10 @@ Almost every stylized fact we have tested so far sits inside this picture: fat t
   * **F6: addition.** Isolated, uninformed metaorders revert to about zero permanent impact (Bitcoin, all trader IDs).
 
 ## Test log (our own measurements of the laws; newest first)
+* **2026-11-22, discovery passes 1–2** (`2026-11-22-discovery/`; protocol committed first).
+  * **M2 (volatility clustering), confirmed as the dominant predictable quantity:** VIX + 20-day and 63-day realized vol forecast 4-week volatility (skill +0.26 against persistence), 13-week drawdown (+0.11) and the odds of a fall of 10%+ (Brier skill +0.08) out of sample 2000–2019.
+  * **Nothing else adds** among 182 point-in-time weekly variables (speeds, accelerations, co-movements, macro levels, an absorption ratio), with selection nested inside folds and chance measured by time-shifted reruns. Returns not predictable at 4 or 13 weeks.
+  * **C-XA (common holders), caution:** the gold–stock correlation jump of Oct–Nov 2026 is mostly a volatility effect (Forbes–Rigobon adjusted p 0.19). The gold-against-yields evidence is unaffected.
 * **2026-11-22, cross-asset fingerprints** (`2026-11-22-cross-asset/`; not pre-registered).
   * **S2 extended across assets:** a leveraged holder of several assets sells each in proportion to its holding after any loss (flow into j = w_j(λ−1)λE·r_p), so co-held assets fall together regardless of their own news. In Oct 6 – Nov 20 2026: gold fell 16% while real yields fell; on the 8 worst S&P days gold −12.8% against +1.4% predicted; gold–S&P correlation 0.11 → 0.46.
   * **Sign fingerprints of five mechanisms** (rate shock, growth scare, yen-carry unwind, dollar-funded forced selling, loss of trust in US assets) identified 3 of 4 known episodes; the 2020 dash for cash was missed because the table had no case where Treasuries are sold too.
