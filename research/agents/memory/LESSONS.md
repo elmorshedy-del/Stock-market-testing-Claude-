@@ -78,3 +78,10 @@ Each entry: what went wrong → the rule that prevents it. Read this at the star
   → **When the owner approves a plan with a short "go on" or "do it", that is not agreement with every part of it.** State the subject of the next piece of work in one line before starting, so a mismatch shows up early.
 * **Asking worked.** One question with concrete options resolved in one tap what another long page would have guessed at.
 
+## 2026-11-22 (cross-asset study)
+* **A pasted article's numbers can be right while its causes are wrong.** Every price figure checked out; the main cause (rising yields) did not fit the timing, because yields fell during the selloff itself.
+  → Check the claims one by one against data, separately for the numbers and for the causes, and say which held.
+* **Phases change the answer.** Pooled over Sep–Nov the story looked like "yields up, everything down". Split at the yield peak, the two halves have different mechanisms.
+  → Look for the turning point of each driver before averaging over a window.
+* **Check an instrument on known cases first.** The fingerprint table caught 3 of 4 known episodes and exposed a missing case (Treasuries sold in a funding crisis). I left the miss in the record instead of rewriting the table after seeing it.
+

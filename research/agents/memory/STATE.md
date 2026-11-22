@@ -7,6 +7,12 @@ Read this first, then LESSONS.md.
 * Study log: [INDEX.md](../INDEX.md)
 
 ## Where we are
+* **2026-11-22: CROSS-ASSET STUDY DONE AND SENT** (`2026-11-22-cross-asset/`). The owner pasted an Arabic newsletter article (stocks, gold and bitcoin falling together; yields, yen carry, tech borrowing, deleveraging, no Fed rescue) and wrote "We never rly had these variables studied and integrated in our research."
+  * **Market:** S&P 6,910 on Nov 20 (−8.6% from Nov 13; −11.6% from the Oct 6 peak). VIX 35.9 (highest close of the episode). Gold 3,515, bitcoin about 59k, NVDA 125.5 (−47.5% from peak), SOX −36%. 10y 4.91%.
+  * **Findings:** phase 1 (Sep 3–Oct 5) = real-rate shock (10y +54bp; 2y +50; term premium +22; breakevens flat). Phase 2 (Oct 6–Nov 20) = dollar-funded forced selling of everything except Treasuries. Yen carry not visible. Gold's fall unexplained by yields in phase 2 (−16.3% vs +2.0%). Nov 5 = sector shock (gold up); Nov 20 = forced selling (gold −4.6%).
+  * **Model added:** flow into asset j from a leveraged common holder = w_j(λ−1)λE·r_p → r_j = news_j + k_j·r_p.
+  * **Forecast F-XA1:** gold outperforms SOX from the Nov 20 close to the Dec 22 close, 60%. Watch W-XA1: yen +2% in 3 sessions with the Nikkei −5%.
+  * **Waiting for approval:** ES/NQ trades for Nov 5 and Nov 20, about $4.60 (quote 2026-11-22; top of book for Nov 4, 5, 19, 20 about $29). This answers the owner's Nov 16 question ("explain Nov 5 on a microstructure level"), which was interrupted.
 * **REDIRECT 2026-11-16: the owner wants a model of what moves the price, built from the mechanism.**
   * Their words on the step-1 derivation: "This isn't really the kind of research I want." Asked what missed (four options, several allowed), they chose **"Not from first principles"** and **"Wrong subject"**. They did not choose "effects too small" or "too much reading".
   * My reading (mine, not theirs): the product must be a model, with equations and one formula tested across calm days, selloffs and expiries. Papers are inputs. Option pricing and trade structure is not the subject.
@@ -91,6 +97,7 @@ Read this first, then LESSONS.md.
 3. Which agenda item comes next: 1 (how mechanical), 2 (0DTE/gamma), 3 (AI cross-impact) or 5 (distance to instability). The crash result points to 5 and 1.
 
 ## Scheduled scoring
+* **F-XA1** (gold vs SOX, Nov 20 → Dec 22 close, 60%): score on 2026-12-22.
 * M3 live forecast (Nov 5 shock): score after day 89, around 2027-03-16.
 * Aftershock forecasts: 2026-11-13 scored (1 big day vs 0.63 forecast); next 2026-12-07, 2027-02-05.
 * Year-end forecast: Nov 13 scored (754.37, inside 25–75%); next Nov 30, Dec 31.

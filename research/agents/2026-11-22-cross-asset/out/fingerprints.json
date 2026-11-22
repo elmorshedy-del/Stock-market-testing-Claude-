@@ -1,0 +1,411 @@
+{
+ "episodes": {
+  "2020 dash for cash": {
+   "start": "2020-02-21",
+   "end": "2020-03-18",
+   "known": "forced selling of everything for dollars",
+   "days": 18,
+   "moves": {
+    "STOCKS": -28.15,
+    "BONDS": -2.49,
+    "GOLD": -10.17,
+    "USD": 1.91,
+    "YEN": 4.26,
+    "CREDIT": -17.37,
+    "BTC": -45.92,
+    "NIKKEI": -28.48,
+    "SILVER": -36.64,
+    "NDX": -24.05,
+    "US10Y_bp": -20.5,
+    "VIX_pts": 59.37
+   },
+   "signs": {
+    "STOCKS": -1,
+    "BONDS": -1,
+    "GOLD": -1,
+    "USD": 1,
+    "YEN": 1,
+    "CREDIT": -1,
+    "BTC": -1
+   },
+   "match": {
+    "Discount-rate shock": 0.86,
+    "Growth scare": 0.71,
+    "Yen-carry unwind": 0.67,
+    "Dollar-funded deleveraging": 0.71,
+    "Loss of trust in US assets": 0.67
+   },
+   "best": "Discount-rate shock"
+  },
+  "2022 rate shock": {
+   "start": "2022-01-03",
+   "end": "2022-06-16",
+   "known": "Fed hiking cycle, real yields up",
+   "days": 114,
+   "moves": {
+    "STOCKS": -23.55,
+    "BONDS": -22.58,
+    "GOLD": 2.77,
+    "USD": 7.68,
+    "YEN": -13.05,
+    "CREDIT": -15.12,
+    "BTC": -56.13,
+    "NIKKEI": -8.2,
+    "SILVER": -4.05,
+    "NDX": -32.57,
+    "US10Y_bp": 167.9,
+    "VIX_pts": 16.35
+   },
+   "signs": {
+    "STOCKS": -1,
+    "BONDS": -1,
+    "GOLD": 0,
+    "USD": 1,
+    "YEN": -1,
+    "CREDIT": -1,
+    "BTC": -1
+   },
+   "match": {
+    "Discount-rate shock": 0.86,
+    "Growth scare": 0.57,
+    "Yen-carry unwind": 0.5,
+    "Dollar-funded deleveraging": 0.71,
+    "Loss of trust in US assets": 0.5
+   },
+   "best": "Discount-rate shock"
+  },
+  "2024 yen-carry unwind": {
+   "start": "2024-07-31",
+   "end": "2024-08-05",
+   "known": "BoJ hike, yen-funded positions closed",
+   "days": 3,
+   "moves": {
+    "STOCKS": -6.08,
+    "BONDS": 4.21,
+    "GOLD": 0.74,
+    "USD": -1.35,
+    "YEN": 2.71,
+    "CREDIT": -1.68,
+    "BTC": -16.45,
+    "NIKKEI": -19.55,
+    "SILVER": -5.91,
+    "NDX": -7.58,
+    "US10Y_bp": -32.4,
+    "VIX_pts": 22.21
+   },
+   "signs": {
+    "STOCKS": -1,
+    "BONDS": 1,
+    "GOLD": 0,
+    "USD": -1,
+    "YEN": 1,
+    "CREDIT": -1,
+    "BTC": -1
+   },
+   "match": {
+    "Discount-rate shock": 0.43,
+    "Growth scare": 0.71,
+    "Yen-carry unwind": 1.0,
+    "Dollar-funded deleveraging": 0.57,
+    "Loss of trust in US assets": 0.67
+   },
+   "best": "Yen-carry unwind"
+  },
+  "2025 tariff shock": {
+   "start": "2025-04-02",
+   "end": "2025-04-11",
+   "known": "tariffs; US bonds and dollar sold together",
+   "days": 7,
+   "moves": {
+    "STOCKS": -5.42,
+    "BONDS": -4.97,
+    "GOLD": 2.48,
+    "USD": -3.88,
+    "YEN": 2.87,
+    "CREDIT": -2.68,
+    "BTC": 1.11,
+    "NIKKEI": -5.99,
+    "SILVER": -7.75,
+    "NDX": -4.55,
+    "US10Y_bp": 29.7,
+    "VIX_pts": 16.05
+   },
+   "signs": {
+    "STOCKS": -1,
+    "BONDS": -1,
+    "GOLD": 1,
+    "USD": -1,
+    "YEN": 1,
+    "CREDIT": -1,
+    "BTC": 0
+   },
+   "match": {
+    "Discount-rate shock": 0.43,
+    "Growth scare": 0.57,
+    "Yen-carry unwind": 0.67,
+    "Dollar-funded deleveraging": 0.29,
+    "Loss of trust in US assets": 1.0
+   },
+   "best": "Loss of trust in US assets"
+  },
+  "2026 phase 1 (Sep 3 - Oct 5)": {
+   "start": "2026-09-03",
+   "end": "2026-10-05",
+   "known": "?",
+   "days": 21,
+   "moves": {
+    "STOCKS": 0.34,
+    "BONDS": -6.04,
+    "GOLD": -8.44,
+    "USD": 3.2,
+    "YEN": -1.46,
+    "CREDIT": -2.82,
+    "BTC": 5.56,
+    "NIKKEI": 8.93,
+    "SILVER": -9.11,
+    "NDX": 5.41,
+    "US10Y_bp": 54.9,
+    "VIX_pts": 1.2
+   },
+   "signs": {
+    "STOCKS": 0,
+    "BONDS": -1,
+    "GOLD": -1,
+    "USD": 1,
+    "YEN": -1,
+    "CREDIT": -1,
+    "BTC": 0
+   },
+   "match": {
+    "Discount-rate shock": 0.71,
+    "Growth scare": 0.29,
+    "Yen-carry unwind": 0.17,
+    "Dollar-funded deleveraging": 0.57,
+    "Loss of trust in US assets": 0.33
+   },
+   "best": "Discount-rate shock"
+  },
+  "2026 phase 2 (Oct 6 - Nov 20)": {
+   "start": "2026-10-06",
+   "end": "2026-11-20",
+   "known": "?",
+   "days": 33,
+   "moves": {
+    "STOCKS": -11.62,
+    "BONDS": 5.4,
+    "GOLD": -16.04,
+    "USD": 1.94,
+    "YEN": -0.88,
+    "CREDIT": -1.22,
+    "BTC": -31.28,
+    "NIKKEI": -20.16,
+    "SILVER": -32.91,
+    "NDX": -19.84,
+    "US10Y_bp": -35.7,
+    "VIX_pts": 20.88
+   },
+   "signs": {
+    "STOCKS": -1,
+    "BONDS": 1,
+    "GOLD": -1,
+    "USD": 1,
+    "YEN": 0,
+    "CREDIT": 0,
+    "BTC": -1
+   },
+   "match": {
+    "Discount-rate shock": 0.57,
+    "Growth scare": 0.57,
+    "Yen-carry unwind": 0.5,
+    "Dollar-funded deleveraging": 0.71,
+    "Loss of trust in US assets": 0.17
+   },
+   "best": "Dollar-funded deleveraging"
+  }
+ },
+ "gold_model": {
+  "const": 0.10426760448450599,
+  "per_bp_real": -0.022048875663456223,
+  "per_pct_usd": -1.0691603922549087,
+  "resid_sd": 1.1745407132849655
+ },
+ "worst_days": [
+  {
+   "index": "2026-11-05",
+   "actual": "0.99",
+   "predicted_from_yields_and_dollar": "0.15",
+   "dreal_bp": "-4.0",
+   "gap_in_sd": "0.7"
+  },
+  {
+   "index": "2026-11-20",
+   "actual": "-4.62",
+   "predicted_from_yields_and_dollar": "0.2",
+   "dreal_bp": "0.0",
+   "gap_in_sd": "-4.1"
+  },
+  {
+   "index": "2026-11-19",
+   "actual": "-1.51",
+   "predicted_from_yields_and_dollar": "0.06",
+   "dreal_bp": "0.0",
+   "gap_in_sd": "-1.3"
+  },
+  {
+   "index": "2026-11-16",
+   "actual": "-0.86",
+   "predicted_from_yields_and_dollar": "-0.06",
+   "dreal_bp": "1.0",
+   "gap_in_sd": "-0.7"
+  },
+  {
+   "index": "2026-10-30",
+   "actual": "-3.29",
+   "predicted_from_yields_and_dollar": "0.34",
+   "dreal_bp": "-3.0",
+   "gap_in_sd": "-3.1"
+  },
+  {
+   "index": "2026-10-22",
+   "actual": "-2.16",
+   "predicted_from_yields_and_dollar": "0.55",
+   "dreal_bp": "-12.0",
+   "gap_in_sd": "-2.3"
+  },
+  {
+   "index": "2026-10-14",
+   "actual": "-1.66",
+   "predicted_from_yields_and_dollar": "-0.19",
+   "dreal_bp": "-4.0",
+   "gap_in_sd": "-1.3"
+  },
+  {
+   "index": "2026-10-16",
+   "actual": "0.26",
+   "predicted_from_yields_and_dollar": "0.36",
+   "dreal_bp": "-4.0",
+   "gap_in_sd": "-0.1"
+  }
+ ],
+ "deleveraging_sign_share": {
+  "STOCKS": 1.0,
+  "BONDS": 0.875,
+  "GOLD": 0.75,
+  "USD": 0.5,
+  "YEN": 0.125,
+  "CREDIT": 0.875,
+  "BTC": 1.0
+ },
+ "correlations": [
+  {
+   "period": "2023-01..2026-08",
+   "asset": "GOLD",
+   "corr_all": 0.11,
+   "corr_down_days": 0.03,
+   "corr_up_days": 0.07,
+   "n": 918
+  },
+  {
+   "period": "2023-01..2026-08",
+   "asset": "BTC",
+   "corr_all": 0.32,
+   "corr_down_days": 0.22,
+   "corr_up_days": 0.25,
+   "n": 918
+  },
+  {
+   "period": "2023-01..2026-08",
+   "asset": "BONDS",
+   "corr_all": 0.12,
+   "corr_down_days": -0.02,
+   "corr_up_days": 0.1,
+   "n": 918
+  },
+  {
+   "period": "phase 2",
+   "asset": "GOLD",
+   "corr_all": 0.46,
+   "corr_down_days": 0.16,
+   "corr_up_days": 0.44,
+   "n": 34
+  },
+  {
+   "period": "phase 2",
+   "asset": "BTC",
+   "corr_all": 0.68,
+   "corr_down_days": 0.5,
+   "corr_up_days": 0.06,
+   "n": 34
+  },
+  {
+   "period": "phase 2",
+   "asset": "BONDS",
+   "corr_all": -0.19,
+   "corr_down_days": -0.31,
+   "corr_up_days": 0.13,
+   "n": 34
+  }
+ ],
+ "mechanisms": {
+  "Discount-rate shock": {
+   "why": "real yields rise (inflation, fiscal, term premium); every asset is re-priced at a higher rate",
+   "sign": [
+    -1,
+    -1,
+    -1,
+    1,
+    -1,
+    -1,
+    -1
+   ]
+  },
+  "Growth scare": {
+   "why": "earnings fear; money moves from risk to safety, no one is forced",
+   "sign": [
+    -1,
+    1,
+    1,
+    1,
+    1,
+    -1,
+    -1
+   ]
+  },
+  "Yen-carry unwind": {
+   "why": "borrowers in yen buy yen back to repay; the funding currency jumps",
+   "sign": [
+    -1,
+    1,
+    0,
+    -1,
+    1,
+    -1,
+    -1
+   ]
+  },
+  "Dollar-funded deleveraging": {
+   "why": "levered holders sell what they can, not what they want, and repay dollars",
+   "sign": [
+    -1,
+    1,
+    -1,
+    1,
+    -1,
+    -1,
+    -1
+   ]
+  },
+  "Loss of trust in US assets": {
+   "why": "foreigners sell US stocks, bonds and dollars together and buy gold",
+   "sign": [
+    -1,
+    -1,
+    1,
+    -1,
+    1,
+    -1,
+    0
+   ]
+  }
+ }
+}

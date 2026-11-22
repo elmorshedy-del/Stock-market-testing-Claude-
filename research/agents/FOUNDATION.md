@@ -267,6 +267,10 @@ Almost every stylized fact we have tested so far sits inside this picture: fat t
   * **F6: addition.** Isolated, uninformed metaorders revert to about zero permanent impact (Bitcoin, all trader IDs).
 
 ## Test log (our own measurements of the laws; newest first)
+* **2026-11-22, cross-asset fingerprints** (`2026-11-22-cross-asset/`; not pre-registered).
+  * **S2 extended across assets:** a leveraged holder of several assets sells each in proportion to its holding after any loss (flow into j = w_j(λ−1)λE·r_p), so co-held assets fall together regardless of their own news. In Oct 6 – Nov 20 2026: gold fell 16% while real yields fell; on the 8 worst S&P days gold −12.8% against +1.4% predicted; gold–S&P correlation 0.11 → 0.46.
+  * **Sign fingerprints of five mechanisms** (rate shock, growth scare, yen-carry unwind, dollar-funded forced selling, loss of trust in US assets) identified 3 of 4 known episodes; the 2020 dash for cash was missed because the table had no case where Treasuries are sold too.
+  * Proposed as a law candidate, **C-XA: contagion through common holders.** Grade: Supported in one episode, by prices only; positions not observed.
 * **2026-11-06, S4 crash-law test** (`2026-11-06-crash-law/`, pre-registered @ 77fea8a).
   * **Replication:** Kyle–Obizhaeva's five crash predictions reproduce within 0.1 pp.
   * **Volume bound:** on all 54 S&P shock days (1955–2026), the square-root law (Y = 1.21) needs net selling of 1.7–60× the day's whole volume (median 8.3×).

@@ -121,6 +121,8 @@ A call buyer makes money when the move that happens is bigger, sooner or more on
 * **Gap:** a liquidity gauge, and whether it warns before the fall.
 
 ## The queue (in order)
+> **2026-11-22: two layers added to the state** ([2026-11-22-cross-asset](2026-11-22-cross-asset/)). A rate layer (real yield split into expected policy and term premium; hikes priced; high-yield spread) and a common-holder layer (forced selling across assets; gauges: gold's move minus what yields and the dollar predict, the bonds-up-gold-down count, and the funding currency). The owner flagged these variables as never studied.
+
 > **2026-11-16: the owner rejected the direction of steps 1 and 2.** On seeing the step-1 derivation they said "This isn't really the kind of research I want", and named two reasons: it was not from first principles, and option pricing and trade structure is the wrong subject. They want a model of what moves the price itself, built from the mechanism, with one formula tested across calm days, selloffs and expiries.
 > The replacement is [2026-11-16-price-law](2026-11-16-price-law/) (derived, waiting for their challenge). **Do not run anything in the table below until the owner has reacted to it.** The table is kept as a record.
 
